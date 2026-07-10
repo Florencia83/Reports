@@ -24,9 +24,8 @@ function todayStr() {
 }
 function monthStartEnd(month) {
   const [y, m] = month.split('-').map(Number);
-  const from = `${y}-${String(m).padStart(2, '0')}-01`;
-  const now = new Date();
-  const to = todayStr();
+  const from = `${y}-${String(m).padStart(2, '0')}-01T00:00:00Z`;
+  const to = todayStr() + 'T23:59:59Z';
   return { from, to };
 }
 
@@ -73,7 +72,6 @@ async function rampOpexMTD(token, from, to) {
   do {
     const url = new URL('https://api.ramp.com/developer/v1/transactions');
     url.searchParams.set('from_date', from);
-    url.searchParams.set('to_date', to);
     url.searchParams.set('page_size', '100');
     if (start) url.searchParams.set('start', start);
     const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
@@ -83,7 +81,11 @@ async function rampOpexMTD(token, from, to) {
     start = json.page && json.page.next ? new URL(json.page.next).searchParams.get('start') : null;
   } while (start);
 
-  const rmOnly = all.filter(t => {
+  // to_date is unreliable per Ramp — filter client-side on the real field
+  const toTime = new Date(to).getTime();
+  const inRange = all.filter(t => new Date(t.user_transaction_time).getTime() <= toTime);
+
+  const rmOnly = inRange.filter(t => {
     const holder = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
     return RM_TEAM.some(n => n.toLowerCase() === holder.toLowerCase());
   });

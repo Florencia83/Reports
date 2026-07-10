@@ -26,9 +26,9 @@ function targetMonth() {
 
 function monthRange(month) {
   const [y, m] = month.split('-').map(Number);
-  const from = `${y}-${String(m).padStart(2, '0')}-01`;
+  const from = `${y}-${String(m).padStart(2, '0')}-01T00:00:00Z`;
   const lastDay = new Date(y, m, 0).getDate();
-  const to = `${y}-${String(m).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+  const to = `${y}-${String(m).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}T23:59:59Z`;
   return { from, to };
 }
 
@@ -52,7 +52,6 @@ async function fetchAllTransactions(token, from, to) {
   do {
     const url = new URL('https://api.ramp.com/developer/v1/transactions');
     url.searchParams.set('from_date', from);
-    url.searchParams.set('to_date', to);
     url.searchParams.set('page_size', '100');
     if (start) url.searchParams.set('start', start);
     const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
@@ -61,7 +60,9 @@ async function fetchAllTransactions(token, from, to) {
     all.push(...(json.data || []));
     start = json.page && json.page.next ? new URL(json.page.next).searchParams.get('start') : null;
   } while (start);
-  return all;
+  // to_date is unreliable per Ramp — filter client-side on the real field
+  const toTime = new Date(to).getTime();
+  return all.filter(t => new Date(t.user_transaction_time).getTime() <= toTime);
 }
 
 function unitFromMemo(memo) {
