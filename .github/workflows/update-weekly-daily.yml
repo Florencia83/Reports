@@ -1,0 +1,36 @@
+name: Update Weekly Update MTD data (daily)
+
+on:
+  schedule:
+    - cron: '43 8 * * *'  # every day, 08:43 UTC
+  workflow_dispatch: {}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pull MTD budget + opex
+        env:
+          APPFOLIO_CLIENT_ID: ${{ secrets.APPFOLIO_CLIENT_ID }}
+          APPFOLIO_CLIENT_SECRET: ${{ secrets.APPFOLIO_CLIENT_SECRET }}
+          RAMP_CLIENT_ID: ${{ secrets.RAMP_CLIENT_ID }}
+          RAMP_CLIENT_SECRET: ${{ secrets.RAMP_CLIENT_SECRET }}
+        run: node scripts/update-weekly-data.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "florencia-reports-bot"
+          git config user.email "actions@github.com"
+          git add data/weekly-mtd.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Automated Weekly Update MTD refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi
