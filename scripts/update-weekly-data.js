@@ -30,9 +30,9 @@ function monthStartEnd(month) {
 }
 
 async function appfolioPortfolioMTD(month) {
-  const cid = process.env.APPFOLIO_CLIENT_ID;
-  const secret = process.env.APPFOLIO_CLIENT_SECRET;
-  const auth = Buffer.from(`${cid}:${secret}`).toString('base64');
+  const user = process.env.APPFOLIO_USERNAME;
+  const pass = process.env.APPFOLIO_PASSWORD;
+  const auth = Buffer.from(`${user}:${pass}`).toString('base64');
   const body = {
     period_from: month, period_to: month,
     comparison_period_from: month, comparison_period_to: month,
