@@ -65,7 +65,7 @@ function targetMonth() {
 
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
-async function fetchBudget(propertyId, month) {
+async function fetchBudget(propertyId, month, attempt = 1) {
   const cid = process.env.APPFOLIO_CLIENT_ID;
   const secret = process.env.APPFOLIO_CLIENT_SECRET;
   const auth = Buffer.from(`${cid}:${secret}`).toString('base64');
@@ -82,6 +82,12 @@ async function fetchBudget(propertyId, month) {
     headers: { 'Content-Type': 'application/json', Authorization: `Basic ${auth}` },
     body: JSON.stringify(body),
   });
+  if (res.status === 429 && attempt <= 4) {
+    const backoff = 5000 * attempt;
+    console.log(`Rate limited on property ${propertyId}, retrying in ${backoff}ms (attempt ${attempt})`);
+    await sleep(backoff);
+    return fetchBudget(propertyId, month, attempt + 1);
+  }
   if (!res.ok) {
     const text = await res.text();
     throw new Error(`AppFolio ${propertyId} -> ${res.status}: ${text.slice(0, 300)}`);
@@ -98,6 +104,7 @@ function extractAccount(rows, accountNumber) {
 async function pullAppfolioBudget(month) {
   const grouped = {}; // group key -> { name, units, repairsBudget, repairsActual, groundsBudget, groundsActual }
   const ids = Object.keys(PROPERTIES);
+  let failures = 0;
   for (let i = 0; i < ids.length; i++) {
     const id = ids[i];
     const meta = PROPERTIES[id];
@@ -113,9 +120,14 @@ async function pullAppfolioBudget(month) {
       grouped[key].groundsBudget += grounds.budget || 0;
       grouped[key].groundsActual += grounds.actual || 0;
     } catch (err) {
+      failures++;
       console.error('Failed for property', id, meta.name, err.message);
     }
-    await sleep(400); // avoid rate limiting
+    await sleep(2500); // AppFolio rate-limits aggressively — space calls well apart
+  }
+  const failureRate = failures / ids.length;
+  if (failureRate > 0.1) {
+    throw new Error(`Too many AppFolio calls failed (${failures}/${ids.length}) — aborting without writing, to avoid overwriting good data with a partial pull.`);
   }
   return grouped;
 }
@@ -148,6 +160,23 @@ async function main() {
   const avgRepairs = totalUnits ? portfolioRepairsActual / totalUnits : 0;
   const avgGrounds = totalUnits ? portfolioGroundsActual / totalUnits : 0;
 
+  // Never write an all-zero result over existing data — if every account came back
+  // empty, something upstream broke silently rather than the portfolio really being $0.
+  if (portfolioRepairsBudget === 0 && portfolioRepairsActual === 0 && portfolioGroundsBudget === 0 && portfolioGroundsActual === 0) {
+    throw new Error('All pulled values are zero — refusing to write, likely an upstream failure.');
+  }
+
+  const outPath = path.join(DATA_DIR, `pl-budget-${month}.json`);
+  let priorNarrativeRepairs = [];
+  let priorNarrativeGrounds = [];
+  if (fs.existsSync(outPath)) {
+    try {
+      const prior = JSON.parse(fs.readFileSync(outPath, 'utf8'));
+      priorNarrativeRepairs = prior.narrative_repairs || [];
+      priorNarrativeGrounds = prior.narrative_grounds || [];
+    } catch (e) { /* ignore unparseable prior file */ }
+  }
+
   const budgetJson = {
     month, label: monthLabel(month),
     generated_at: todayStr(),
@@ -159,12 +188,14 @@ async function main() {
       grounds: { budget: round2(portfolioGroundsBudget), actual: round2(portfolioGroundsActual), variance_pct: pctVar(portfolioGroundsBudget, portfolioGroundsActual) },
     },
     repairs, grounds,
-    narrative_repairs: [],
-    narrative_grounds: [],
+    // Narrative is authored by Florencia, never generated here — carry forward
+    // whatever was already in the file so this script can't silently erase it.
+    narrative_repairs: priorNarrativeRepairs,
+    narrative_grounds: priorNarrativeGrounds,
   };
 
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(path.join(DATA_DIR, `pl-budget-${month}.json`), JSON.stringify(budgetJson, null, 2));
+  fs.writeFileSync(outPath, JSON.stringify(budgetJson, null, 2));
   console.log('Wrote pl-budget-' + month + '.json');
 
   await updateManifest(month, true);

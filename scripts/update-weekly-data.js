@@ -112,6 +112,10 @@ async function main() {
   ]);
   const opex = await rampOpexMTD(token, from, to);
 
+  if (!portfolio.budget && !portfolio.actual && opex.length === 0) {
+    throw new Error('AppFolio and Ramp both returned nothing — likely an upstream failure, refusing to write.');
+  }
+
   const pct = portfolio.budget ? Math.round((portfolio.actual / portfolio.budget) * 1000) / 10 : null;
 
   const json = {

@@ -80,6 +80,12 @@ async function main() {
   const all = await fetchAllTransactions(token, from, to);
   console.log('Total transactions in range:', all.length);
 
+  // A whole month with zero Ramp transactions company-wide is implausible —
+  // treat it as an upstream failure rather than silently writing an empty file.
+  if (all.length === 0) {
+    throw new Error('Fetched zero transactions for the month — likely an API/auth issue, not truly zero spend. Refusing to write.');
+  }
+
   const items = all.filter(t => {
     const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
     if (!RM_TEAM.some(name => holderName.toLowerCase() === name.toLowerCase())) return false;
