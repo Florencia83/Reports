@@ -1,0 +1,128 @@
+{
+  "month": "2026-06",
+  "label": "June 2026",
+  "generated_at": "2026-07-10",
+  "source": "Ramp (Appliances category, R&M team cardholders)",
+  "items": [
+    {
+      "unit": "c313-4",
+      "amount": 184.38,
+      "cardholder": "Justin Gutierrez",
+      "appliance": "Fan replacement"
+    },
+    {
+      "unit": "h731-C",
+      "amount": 730.96,
+      "cardholder": "Wade Hippen",
+      "appliance": "Air conditioner replacement"
+    },
+    {
+      "unit": "h731-C",
+      "amount": 51.05,
+      "cardholder": "Wade Hippen",
+      "appliance": "Air conditioner disposal"
+    },
+    {
+      "unit": "j312-3112",
+      "amount": 531.34,
+      "cardholder": "Wade Hippen",
+      "appliance": "Dishwasher and installation supplies"
+    },
+    {
+      "unit": "k308-316-A",
+      "amount": 587.51,
+      "cardholder": "Wade Hippen",
+      "appliance": "Washing machine replacement"
+    },
+    {
+      "unit": "kn47-k1-H103",
+      "amount": 983.55,
+      "cardholder": "Isaac Chavez",
+      "appliance": "PTAC unit replacement for turn team"
+    },
+    {
+      "unit": "s129-3",
+      "amount": 490.49,
+      "cardholder": "Justin Gutierrez",
+      "appliance": "Dishwasher replacement"
+    },
+    {
+      "unit": "kn47-k1-L206",
+      "amount": 331.29,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Dishwasher replacement"
+    },
+    {
+      "unit": "kn47-k1-H201",
+      "amount": 716.69,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Fridge replacement"
+    },
+    {
+      "unit": "kn47-k1-M105",
+      "amount": 716.69,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Fridge replacement"
+    },
+    {
+      "unit": "m608-1",
+      "amount": 809.92,
+      "cardholder": "Wade Hippen",
+      "appliance": "Range replacement"
+    },
+    {
+      "unit": "o155-Oak-B4",
+      "amount": 761.91,
+      "cardholder": "Wade Hippen",
+      "appliance": "Fridge replacement"
+    },
+    {
+      "unit": "o155-Oak-B4",
+      "amount": 27.61,
+      "cardholder": "Wade Hippen",
+      "appliance": "Fridge disposal"
+    },
+    {
+      "unit": "o155-Oak-D5",
+      "amount": 152.58,
+      "cardholder": "Wade Hippen",
+      "appliance": "Dehumidifier after leak"
+    },
+    {
+      "unit": "ps91-3",
+      "amount": 716.68,
+      "cardholder": "Jared Miller",
+      "appliance": "Range replacement"
+    },
+    {
+      "unit": "ps25-C18",
+      "amount": 552.14,
+      "cardholder": "Jared Miller",
+      "appliance": "Washer replacement"
+    },
+    {
+      "unit": "ps25-E33",
+      "amount": 662.58,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Stove replacement"
+    },
+    {
+      "unit": "rl16-D08",
+      "amount": 646.27,
+      "cardholder": "Jared Miller",
+      "appliance": "AC replacement"
+    },
+    {
+      "unit": "rl16-C15",
+      "amount": 440.62,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Dishwasher replacement"
+    },
+    {
+      "unit": "w226-1",
+      "amount": 76.29,
+      "cardholder": "Wade Hippen",
+      "appliance": "Dehumidifier after leak"
+    }
+  ]
+}

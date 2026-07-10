@@ -1,0 +1,56 @@
+{
+  "month": "2026-05",
+  "label": "May 2026",
+  "generated_at": "2026-06-10",
+  "source": "Email report (manual) — no $ amount provided",
+  "items": [
+    {
+      "property": "K3",
+      "unit": "K204",
+      "amount": null,
+      "appliance": "Washing machine"
+    },
+    {
+      "property": "PS91",
+      "unit": "7",
+      "amount": null,
+      "appliance": "Oven"
+    },
+    {
+      "property": "PS91",
+      "unit": "6",
+      "amount": null,
+      "appliance": "Oven"
+    },
+    {
+      "property": "K308",
+      "unit": "3",
+      "amount": null,
+      "appliance": "Fridge"
+    },
+    {
+      "property": "TC68",
+      "unit": "b32",
+      "amount": null,
+      "appliance": "Washer-dryer"
+    },
+    {
+      "property": "RL16",
+      "unit": "d20",
+      "amount": null,
+      "appliance": "Oven"
+    },
+    {
+      "property": "K2",
+      "unit": "c108",
+      "amount": null,
+      "appliance": "Dishwasher"
+    },
+    {
+      "property": "K2",
+      "unit": "b203",
+      "amount": null,
+      "appliance": "AC"
+    }
+  ]
+}

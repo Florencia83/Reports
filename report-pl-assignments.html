@@ -133,246 +133,120 @@ footer a { color: var(--ink-soft); }
     </div>
     <div class="masthead-meta">
       <div class="month-picker" style="margin-bottom:6px;">
-        <select id="month-select" onchange="showMonth(this.value)">
-          <option value="2026-06">June 2026</option>
-          <option value="2026-05">May 2026</option>
-          <option value="2026-04">April 2026</option>
-        </select>
+        <select id="month-select"></select>
       </div>
-      <span id="sent-label">Sent 2026-07-10</span>
+      <span id="sent-label"></span>
     </div>
   </div>
 
-  <div class="month-panel" data-month="2026-06">
-    <section>
-      <p class="section-label">Portfolio Summary</p>
-      <div class="stat-row">
-        <div class="stat"><p class="stat-label">R&amp;M-Repairs Budget</p><p class="stat-value">$67,104.23</p></div>
-        <div class="stat"><p class="stat-label">R&amp;M-Repairs Actual</p><p class="stat-value bad">$92,250.85</p></div>
-        <div class="stat"><p class="stat-label">Repairs Variance</p><p class="stat-value bad">+37.5%</p></div>
-        <div class="stat"><p class="stat-label">R&amp;M-Grounds Budget</p><p class="stat-value">$29,086.14</p></div>
-        <div class="stat"><p class="stat-label">R&amp;M-Grounds Actual</p><p class="stat-value bad">$42,425.90</p></div>
-        <div class="stat"><p class="stat-label">Grounds Variance</p><p class="stat-value bad">+45.9%</p></div>
-      </div>
-    </section>
-
-    <section>
-      <p class="section-label">R&amp;M &mdash; Repairs</p>
-      <div class="avg-callout">
-        <span class="avg-label">Average Repairs / Unit / Mo (June)</span>
-        <span class="avg-value">$87.61</span>
-      </div>
-      <div class="table-wrap"><table><tr><th>Property</th><th class="num">Budget</th><th class="num">Actual $/Unit</th><th class="detail">Detail</th></tr><tr><td class="prop">W117</td><td class="num">$414.70</td><td class="num bad">$472.39</td><td class="detail">Ceiling repair, lock replacement, fan replacement, repairs after move in</td></tr>
-<tr><td class="prop">RL21</td><td class="num">$1113.80</td><td class="num bad">$242.95</td><td class="detail">Plumbing repair multiple times due to clogging and flood; ceiling repair; AC installation</td></tr>
-<tr><td class="prop">HL65</td><td class="num">$499.20</td><td class="num bad">$289.81</td><td class="detail">Multiple repairs at the property</td></tr>
-<tr><td class="prop">C313</td><td class="num">$2114.87</td><td class="num bad">$217.85</td><td class="detail">High volume of repairs; front gate not working; plumbing repairs; damaged oven</td></tr>
-<tr><td class="prop">MS43</td><td class="num">$730.00</td><td class="num bad">$186.77</td><td class="detail">Electrical repair for an emergency</td></tr>
-<tr><td class="prop">C302</td><td class="num">$814.60</td><td class="num bad">$183.02</td><td class="detail">Dishwasher pump, window replacement, fan replacement, electrician for a breaker, faucet replacement</td></tr>
-<tr><td class="prop">Kn47</td><td class="num">$22438.80</td><td class="num bad">$157.15</td><td class="detail">Washer repair, signage, admin time, general repairs, plumbing, locks, appliance replacements</td></tr>
-<tr><td class="prop">K308</td><td class="num">$290.90</td><td class="num bad">$135.69</td><td class="detail">Washer replacement, exterior water spigot replacement</td></tr>
-<tr><td class="prop">M405</td><td class="num">$1090.30</td><td class="num bad">$124.13</td><td class="detail">Drain pipe repair, window repair, bake element replacement</td></tr>
-<tr><td class="prop">RL16</td><td class="num">$7873.60</td><td class="num good">$87.38</td><td class="detail"></td></tr>
-<tr><td class="prop">TC68</td><td class="num">$7323.00</td><td class="num good">$82.40</td><td class="detail"></td></tr>
-<tr><td class="prop">O155-Oak</td><td class="num">$5249.80</td><td class="num good">$82.26</td><td class="detail"></td></tr>
-<tr><td class="prop">J312</td><td class="num">$586.16</td><td class="num good">$81.89</td><td class="detail"></td></tr>
-<tr><td class="prop">V202</td><td class="num">$407.70</td><td class="num good">$79.89</td><td class="detail"></td></tr>
-<tr><td class="prop">H731</td><td class="num">$421.90</td><td class="num good">$69.01</td><td class="detail"></td></tr>
-<tr><td class="prop">PS91</td><td class="num">$678.70</td><td class="num good">$68.45</td><td class="detail"></td></tr>
-<tr><td class="prop">B101</td><td class="num">$670.30</td><td class="num good">$59.59</td><td class="detail"></td></tr>
-<tr><td class="prop">K104-LeFevre</td><td class="num">$3085.80</td><td class="num good">$55.24</td><td class="detail"></td></tr>
-<tr><td class="prop">S129</td><td class="num">$1215.10</td><td class="num good">$53.16</td><td class="detail"></td></tr>
-<tr><td class="prop">A916</td><td class="num">$514.80</td><td class="num good">$51.09</td><td class="detail"></td></tr>
-<tr><td class="prop">P705</td><td class="num">$1120.20</td><td class="num good">$50.49</td><td class="detail"></td></tr>
-<tr><td class="prop">L912</td><td class="num">—</td><td class="num good">$45.36</td><td class="detail"></td></tr>
-<tr><td class="prop">PS25</td><td class="num">$2428.10</td><td class="num good">$44.26</td><td class="detail"></td></tr>
-<tr><td class="prop">M221</td><td class="num">$679.50</td><td class="num good">$42.40</td><td class="detail"></td></tr>
-<tr><td class="prop">S300</td><td class="num">$574.70</td><td class="num good">$29.10</td><td class="detail"></td></tr>
-<tr><td class="prop">TC34</td><td class="num">$1456.30</td><td class="num good">$28.72</td><td class="detail"></td></tr>
-<tr><td class="prop">W226</td><td class="num">$545.50</td><td class="num good">$28.30</td><td class="detail"></td></tr>
-<tr><td class="prop">E328</td><td class="num">$242.40</td><td class="num good">$24.27</td><td class="detail"></td></tr>
-<tr><td class="prop">A511</td><td class="num">$355.30</td><td class="num good">$19.53</td><td class="detail"></td></tr>
-<tr><td class="prop">W225</td><td class="num">no budget</td><td class="num good">$17.97</td><td class="detail"></td></tr>
-<tr><td class="prop">M608</td><td class="num">$449.00</td><td class="num good">$17.16</td><td class="detail"></td></tr>
-<tr><td class="prop">PS17</td><td class="num">$731.00</td><td class="num good">$2.07</td><td class="detail"></td></tr>
-<tr><td class="prop">A210</td><td class="num">$443.90</td><td class="num good">$0.60</td><td class="detail"></td></tr>
-<tr><td class="prop">MS22</td><td class="num">$315.60</td><td class="num good">$0.60</td><td class="detail"></td></tr>
-<tr><td class="prop">H604</td><td class="num">—</td><td class="num ">$0.00</td><td class="detail"></td></tr>
-<tr><td class="prop">HL73</td><td class="num">$228.80</td><td class="num ">$0.00</td><td class="detail"></td></tr>
-<tr><td class="prop">O155-Elm</td><td class="num">—</td><td class="num ">$0.00</td><td class="detail"></td></tr></table></div>
-      <div class="callout finance" style="margin-top:16px;">
-        <div class="prose">
-          <p>Overall, the R&amp;M budget is running over this month. R&amp;M-Repairs came in at $92,250.85 against a $67,104.23 budget, 37.5% over. Looking into what's driving that, most of it is explainable: these are documented issues, not signs of waste or neglect. Appliances account for a large portion of these expenses, which I find normal, as they tend to start failing or breaking during the hot season.</p>
-          <p>Some categorizations were incorrect, and I'm still working through this with the team. I found landscaping bills and sprinkler repairs categorized as R&amp;M. These numbers also don't reflect the full amount spent, since monthly contractor payments (Pest Control) aren't currently included. Moving forward, monthly payments and Pest Control invoices will be categorized as R&amp;M and tied to a work order.</p>
-          <p>The overage size is concentrated in a few properties, suggesting this is not a portfolio spending-control problem. Some budgeted amounts may be set too low, but it's also expected that costs will rise seasonally through the summer.</p>
-          <p>Plumbing repairs represent a significant portion of the spending. I'd suggest that when onboarding a new team member in Tri-Cities and Spokane, we specifically look for someone with plumbing experience.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <p class="section-label">R&amp;M &mdash; Grounds</p>
-      <div class="avg-callout">
-        <span class="avg-label">Average Grounds / Unit / Mo</span>
-        <span class="avg-value">$40.29</span>
-      </div>
-      <div class="table-wrap"><table><tr><th>Property</th><th class="num">Budget</th><th class="num">Actual $/Unit</th><th class="detail">Detail</th></tr><tr><td class="prop">E328</td><td class="num">$322.00</td><td class="num bad">$100.99</td><td class="detail">Sprinkler replacement and labor hours</td></tr>
-<tr><td class="prop">K308</td><td class="num">$127.60</td><td class="num bad">$88.85</td><td class="detail">Sprinklers replacement, waste management, labor hours</td></tr>
-<tr><td class="prop">V202</td><td class="num">$605.30</td><td class="num bad">$77.15</td><td class="detail">Supplies for irrigation system, labor hours</td></tr>
-<tr><td class="prop">K104</td><td class="num">$1542.90</td><td class="num bad">$76.14</td><td class="detail">Irrigation system repairs, hoses replacement</td></tr>
-<tr><td class="prop">MS22</td><td class="num">$157.80</td><td class="num bad">$75.00</td><td class="detail">Spring cleanup, storm-damaged tree cleanup</td></tr>
-<tr><td class="prop">RL16</td><td class="num">$248.30</td><td class="num bad">$62.45</td><td class="detail">Pool maintenance, labor hours</td></tr>
-<tr><td class="prop">W226</td><td class="num">$2722.80</td><td class="num bad">$61.76</td><td class="detail">Irrigation leak repair, supplies for lawn maintenance</td></tr>
-<tr><td class="prop">O155-Oak</td><td class="num">$3619.90</td><td class="num bad">$60.10</td><td class="detail">Waste management, supplies for lawn maintenance</td></tr>
-<tr><td class="prop">H731</td><td class="num">$329.71</td><td class="num bad">$59.91</td><td class="detail">Labor hours</td></tr>
-<tr><td class="prop">A511</td><td class="num">$253.80</td><td class="num bad">$56.28</td><td class="detail">Irrigation system maintenance</td></tr>
-<tr><td class="prop">P705</td><td class="num">$560.10</td><td class="num bad">$51.61</td><td class="detail">Irrigation system repairs, supplies for lawn maintenance</td></tr>
-<tr><td class="prop">PS17</td><td class="num">$365.50</td><td class="num bad">$48.15</td><td class="detail">Labor hours, in-house lawn maintenance</td></tr>
-<tr><td class="prop">KN47</td><td class="num">$6585.00</td><td class="num bad">$46.33</td><td class="detail">Pool maintenance, in-house maintenance</td></tr>
-<tr><td class="prop">A210</td><td class="num">$221.90</td><td class="num bad">$44.96</td><td class="detail">Waste management, labor hours, supplies for lawn maintenance</td></tr>
-<tr><td class="prop">HL73</td><td class="num">$114.40</td><td class="num bad">$44.69</td><td class="detail">Searching</td></tr>
-<tr><td class="prop">M221</td><td class="num">$339.80</td><td class="num bad">$43.67</td><td class="detail">Irrigation system repair, labor hours</td></tr>
-<tr><td class="prop">A916</td><td class="num">$257.40</td><td class="num good">$39.72</td><td class="detail"></td></tr>
-<tr><td class="prop">PS91</td><td class="num">$339.40</td><td class="num good">$38.58</td><td class="detail"></td></tr>
-<tr><td class="prop">M608</td><td class="num">$224.50</td><td class="num good">$33.42</td><td class="detail"></td></tr>
-<tr><td class="prop">PS25</td><td class="num">$1214.10</td><td class="num good">$33.30</td><td class="detail"></td></tr>
-<tr><td class="prop">W117</td><td class="num">$207.30</td><td class="num good">$33.73</td><td class="detail"></td></tr>
-<tr><td class="prop">HL65</td><td class="num">$249.80</td><td class="num good">$30.42</td><td class="detail"></td></tr>
-<tr><td class="prop">J312</td><td class="num">$329.71</td><td class="num good">$29.88</td><td class="detail"></td></tr>
-<tr><td class="prop">C302</td><td class="num">$407.30</td><td class="num good">$29.63</td><td class="detail"></td></tr>
-<tr><td class="prop">M405</td><td class="num">$545.20</td><td class="num good">$29.24</td><td class="detail"></td></tr>
-<tr><td class="prop">C313</td><td class="num">$892.83</td><td class="num good">$28.14</td><td class="detail"></td></tr>
-<tr><td class="prop">TC34</td><td class="num">$394.60</td><td class="num good">$26.95</td><td class="detail">Grounds handled in house</td></tr>
-<tr><td class="prop">S300</td><td class="num">$287.40</td><td class="num good">$24.25</td><td class="detail"></td></tr>
-<tr><td class="prop">TC68</td><td class="num">$5132.10</td><td class="num good">$23.96</td><td class="detail">Handled by outside landscaping company; expense to be tied to a work order going forward</td></tr>
-<tr><td class="prop">S129</td><td class="num">$202.50</td><td class="num good">$19.30</td><td class="detail"></td></tr>
-<tr><td class="prop">B101</td><td class="num">$335.20</td><td class="num good">$18.13</td><td class="detail"></td></tr>
-<tr><td class="prop">W225</td><td class="num">—</td><td class="num good">$1.00</td><td class="detail"></td></tr>
-<tr><td class="prop">RL21</td><td class="num">$222.80</td><td class="num good">$0.48</td><td class="detail"></td></tr>
-<tr><td class="prop">H604</td><td class="num">—</td><td class="num ">$0.00</td><td class="detail"></td></tr>
-<tr><td class="prop">L912</td><td class="num">—</td><td class="num ">$0.00</td><td class="detail"></td></tr>
-<tr><td class="prop">L925</td><td class="num">—</td><td class="num ">$0.00</td><td class="detail"></td></tr>
-<tr><td class="prop">ms43</td><td class="num">$365.00</td><td class="num ">$0.00</td><td class="detail"></td></tr>
-<tr><td class="prop">O155-Elm</td><td class="num">—</td><td class="num ">$0.00</td><td class="detail"></td></tr></table></div>
-      <div class="callout finance" style="margin-top:16px;">
-        <div class="prose">
-          <p>Grounds came in at $42,425.90 against a $29,086.14 budget &mdash; 45.9% over. As with Repairs, most of these expenses are verifiable work. A few landscaping-related charges are currently miscoded into Repairs instead of Grounds. This means true spend is probably a bit higher than what's listed.</p>
-          <p>At hl73 I could not find a related work order, or Ramp expense to justify the charge. This shows we still need to ensure the documentation process is being followed.</p>
-          <p>This overage is mostly due to the extra team members we added, and it appears across several properties rather than just one. We're also seeing an increase in some properties due to the seasonal shift into summer, which requires keeping irrigation systems updated and pools properly maintained.</p>
-          <p>Operationally, the properties in Spokane are actually in better shape than they were before. Previously, the route couldn't be completed by a single person, and coverage was falling short. By adding a team member, we're now able to complete the full route, fix irrigation as needed, and the grounds visibly look much better across the properties.</p>
-          <p>We're seeing the same pattern in Tri-Cities: we've increased labor at the properties, and the results show the grass is getting greener and better looking, and the irrigation systems are working properly, with issues fixed as needed. We also see an increase in the budget for properties that have a pool, as the summer season requires daily maintenance. Pool upkeep during these months adds a recurring cost that isn't present the rest of the year.</p>
-          <p>In Tacoma, at tc68 the grounds are being taken care of by a landscaping company; these expenses were not included in the current period. Moving forward, this expense will be tied to a work order and included in the spent budget. At tc34 the grounds are being taken care of in house.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <p class="section-label">Appliances Breakdown &mdash; R&amp;M Team Members</p>
-      <div class="table-wrap"><table><tr><th>Unit</th><th class="num">Amount</th><th>Cardholder</th><th class="detail">Appliance</th></tr><tr><td class="prop">c313-4</td><td class="num">$184.38</td><td>Justin Gutierrez</td><td class="detail">Fan replacement</td></tr>
-<tr><td class="prop">h731-C</td><td class="num">$730.96</td><td>Wade Hippen</td><td class="detail">Air conditioner replacement</td></tr>
-<tr><td class="prop">h731-C</td><td class="num">$51.05</td><td>Wade Hippen</td><td class="detail">Air conditioner disposal</td></tr>
-<tr><td class="prop">j312-3112</td><td class="num">$531.34</td><td>Wade Hippen</td><td class="detail">Dishwasher and installation supplies</td></tr>
-<tr><td class="prop">k308-316-A</td><td class="num">$587.51</td><td>Wade Hippen</td><td class="detail">Washing machine replacement</td></tr>
-<tr><td class="prop">kn47-k1-H103</td><td class="num">$983.55</td><td>Isaac Chavez</td><td class="detail">PTAC unit replacement for turn team</td></tr>
-<tr><td class="prop">s129-3</td><td class="num">$490.49</td><td>Justin Gutierrez</td><td class="detail">Dishwasher replacement</td></tr>
-<tr><td class="prop">kn47-k1-L206</td><td class="num">$331.29</td><td>Jaxson Lakins</td><td class="detail">Dishwasher replacement</td></tr>
-<tr><td class="prop">kn47-k1-H201</td><td class="num">$716.69</td><td>Jaxson Lakins</td><td class="detail">Fridge replacement</td></tr>
-<tr><td class="prop">kn47-k1-M105</td><td class="num">$716.69</td><td>Jaxson Lakins</td><td class="detail">Fridge replacement</td></tr>
-<tr><td class="prop">m608-1</td><td class="num">$809.92</td><td>Wade Hippen</td><td class="detail">Range replacement</td></tr>
-<tr><td class="prop">o155-Oak-B4</td><td class="num">$761.91</td><td>Wade Hippen</td><td class="detail">Fridge replacement</td></tr>
-<tr><td class="prop">o155-Oak-B4</td><td class="num">$27.61</td><td>Wade Hippen</td><td class="detail">Fridge disposal</td></tr>
-<tr><td class="prop">o155-Oak-D5</td><td class="num">$152.58</td><td>Wade Hippen</td><td class="detail">Dehumidifier after leak</td></tr>
-<tr><td class="prop">ps91-3</td><td class="num">$716.68</td><td>Jared Miller</td><td class="detail">Range replacement</td></tr>
-<tr><td class="prop">ps25-C18</td><td class="num">$552.14</td><td>Jared Miller</td><td class="detail">Washer replacement</td></tr>
-<tr><td class="prop">ps25-E33</td><td class="num">$662.58</td><td>Jaxson Lakins</td><td class="detail">Stove replacement</td></tr>
-<tr><td class="prop">rl16-D08</td><td class="num">$646.27</td><td>Jared Miller</td><td class="detail">AC replacement</td></tr>
-<tr><td class="prop">rl16-C15</td><td class="num">$440.62</td><td>Jaxson Lakins</td><td class="detail">Dishwasher replacement</td></tr>
-<tr><td class="prop">w226-1</td><td class="num">$76.29</td><td>Wade Hippen</td><td class="detail">Dehumidifier after leak</td></tr></table></div>
-    </section>
-  </div>
-
-  <div class="month-panel" data-month="2026-05" style="display:none;">
-    <section>
-      <div class="callout" style="font-size:12.5px;">
-        This month's email only listed properties above average &mdash; no budget column or full property list was included, so this view can't show below-average properties or budget vs. actual the way June can.
-      </div>
-    </section>
-
-    <section>
-      <p class="section-label">R&amp;M &mdash; Repairs (above average)</p>
-      <div class="avg-callout">
-        <span class="avg-label">Average Repairs / Unit / Mo (May)</span>
-        <span class="avg-value">$126</span>
-      </div>
-      <div class="table-wrap"><table><tr><th>Property</th><th class="num">Value</th><th class="detail">Detail</th></tr><tr><td class="prop">L925</td><td class="num bad">577</td><td class="detail">Install pickets around lower deck; replace rotted deck boards on upper deck; Veracity Gutter and Roof Cleaning</td></tr>
-<tr><td class="prop">K308</td><td class="num bad">567</td><td class="detail">Window replacement</td></tr>
-<tr><td class="prop">Ps17</td><td class="num bad">212</td><td class="detail">Replace bath faucet; wall under sink replacement</td></tr>
-<tr><td class="prop">Rl16</td><td class="num bad">198</td><td class="detail">Change door knobs in laundry rooms; fire inspections; drywall repairs after leak repairs</td></tr>
-<tr><td class="prop">W226</td><td class="num bad">189</td><td class="detail">Different seals and linoleum repair; locks replacement in laundry rooms</td></tr>
-<tr><td class="prop">E328</td><td class="num bad">184</td><td class="detail">Sprinklers repair and labor hours</td></tr>
-<tr><td class="prop">Kn47</td><td class="num bad">169</td><td class="detail">PTAC replacement (HVAC and portable AC); Pro Fire LLC corrections after inspection; labor hours and other diverse repairs</td></tr>
-<tr><td class="prop">M608</td><td class="num bad">169</td><td class="detail">Still trying to find info — will send a follow up</td></tr>
-<tr><td class="prop">L912</td><td class="num bad">167</td><td class="detail">Back flow valve replacement — Bulldog Rooter ($1,800)</td></tr>
-<tr><td class="prop">O155</td><td class="num bad">165</td><td class="detail">Water heater parts replacement — pump, cartridge</td></tr>
-<tr><td class="prop">K104</td><td class="num bad">159</td><td class="detail">Pest control (wasps/bees, in house); sprinkler heads repair</td></tr>
-<tr><td class="prop">Hl65</td><td class="num bad">147</td><td class="detail">Old invoices from our handyman</td></tr>
-<tr><td class="prop">Ps25</td><td class="num bad">143</td><td class="detail">Mark parking lot and numbers</td></tr>
-<tr><td class="prop">S300</td><td class="num bad">139</td><td class="detail">Faucet replacement</td></tr>
-<tr><td class="prop">M405</td><td class="num bad">127</td><td class="detail">Main sewage pipe leak</td></tr></table></div>
-    </section>
-
-    <section>
-      <p class="section-label">R&amp;M &mdash; Grounds (above average)</p>
-      <div class="avg-callout">
-        <span class="avg-label">Average Grounds / Unit / Mo (May)</span>
-        <span class="avg-value">$1,150</span>
-      </div>
-      <div class="callout" style="font-size:12.5px; margin-bottom:14px;">
-        As sent &mdash; these values are far larger than June's per-unit Grounds figures, so they most likely reflect property-level totals rather than a true per-unit average. Worth double-checking with the original spreadsheet before comparing across months.
-      </div>
-      <div class="table-wrap"><table><tr><th>Property</th><th class="num">Value</th><th class="detail">Detail</th></tr><tr><td class="prop">Kn47</td><td class="num bad">10512</td><td class="detail">Pool supplies for opening; Heritage Landscaping irrigation startup; labor hours: Jared 12, Hannah 78, Reynaldo 32; +$2,000 purchases (Rey Leonidas)</td></tr>
-<tr><td class="prop">Rl16</td><td class="num bad">5577</td><td class="detail">Pool supplies for opening; monthly security; labor hours: Jared 31, Hannah 32, Reynaldo 10</td></tr>
-<tr><td class="prop">K104</td><td class="num bad">4734</td><td class="detail">Waste management; repairs/maintenance; labor hours: David 42, Alex 38</td></tr>
-<tr><td class="prop">Ps25</td><td class="num bad">3864</td><td class="detail">Pool supplies for opening; labor hours: Jared 28, Hannah 17, Reynaldo 4</td></tr>
-<tr><td class="prop">O155</td><td class="num bad">1724</td><td class="detail">Pressure washing; labor hours: David 13, Alex 6, Wade 5</td></tr>
-<tr><td class="prop">V202</td><td class="num bad">1286</td><td class="detail">Repairs and maintenance; irrigation setup; labor hours: David 13, Alex 9</td></tr>
-<tr><td class="prop">K308</td><td class="num bad">1281</td><td class="detail">Irrigation setup; tree removal; labor hours: David 11, Alex 10</td></tr>
-<tr><td class="prop">Tc68</td><td class="num bad">1263</td><td class="detail">Waste management; box truck rent; materials; labor hours: 8</td></tr></table></div>
-    </section>
-
-    <section>
-      <p class="section-label">Appliances Breakdown</p>
-      <div class="table-wrap"><table><tr><th>Property</th><th>Unit</th><th class="detail">Appliance</th></tr><tr><td class="prop">K3</td><td>K204</td><td class="detail">Washing machine</td></tr>
-<tr><td class="prop">PS91</td><td>7</td><td class="detail">Oven</td></tr>
-<tr><td class="prop">PS91</td><td>6</td><td class="detail">Oven</td></tr>
-<tr><td class="prop">K308</td><td>3</td><td class="detail">Fridge</td></tr>
-<tr><td class="prop">TC68</td><td>b32</td><td class="detail">Washer-dryer</td></tr>
-<tr><td class="prop">RL16</td><td>d20</td><td class="detail">Oven</td></tr>
-<tr><td class="prop">K2</td><td>c108</td><td class="detail">Dishwasher</td></tr>
-<tr><td class="prop">K2</td><td>b203</td><td class="detail">AC</td></tr></table></div>
-    </section>
-  </div>
-
-  <div class="month-panel" data-month="2026-04" style="display:none;">
-    <section>
-      <div class="callout" style="font-size:13px;">
-        No P&amp;L Assignments report was sent for April 2026.
-      </div>
-    </section>
+  <div id="content-root">
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft);">Loading&hellip;</p>
   </div>
 
   <footer>
     <span><a href="index.html">&larr; Back to Florencia Reports</a></span>
-    <span>Updated 2026-07-10</span>
+    <span id="updated-label">Updated 2026-07-10</span>
   </footer>
 </div>
 
 <script>
-function showMonth(month) {
-  document.querySelectorAll('.month-panel').forEach(function(p) {
-    p.style.display = (p.getAttribute('data-month') === month) ? '' : 'none';
-  });
-  var sentLabel = document.getElementById('sent-label');
-  var sentByMonth = { '2026-06': 'Sent 2026-07-10', '2026-05': 'Sent 2026-06-10', '2026-04': 'No report sent' };
-  sentLabel.textContent = sentByMonth[month] || '';
+function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+function vsAvgClass(v, avg) { if (v === null || v === undefined || v === 0) return ''; return v > avg ? 'bad' : 'good'; }
+
+function renderTable(rows, avg) {
+  var head = '<tr><th>Property</th><th class="num">Budget</th><th class="num">Actual $/Unit</th><th class="detail">Detail</th></tr>';
+  var body = rows.map(function(r) {
+    var cls = vsAvgClass(r.actual_per_unit, avg);
+    return '<tr><td class="prop">' + r.property + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + money(r.actual_per_unit) + '</td><td class="detail">' + (r.detail || '') + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
+
+function renderAppliancesTable(items) {
+  var head = '<tr><th>Unit</th><th class="num">Amount</th><th>Cardholder</th><th class="detail">Appliance</th></tr>';
+  var body = items.map(function(r) {
+    return '<tr><td class="prop">' + (r.unit || r.property) + '</td><td class="num">' + money(r.amount) + '</td><td>' + (r.cardholder || '&mdash;') + '</td><td class="detail">' + r.appliance + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+function renderNarrative(paragraphs) {
+  if (!paragraphs || !paragraphs.length) {
+    return '<div class="callout" style="font-size:12.5px;">No narrative added yet for this month.</div>';
+  }
+  return '<div class="callout finance" style="margin-top:16px;"><div class="prose">' + paragraphs.map(function(p) { return '<p>' + p + '</p>'; }).join('') + '</div></div>';
+}
+
+function renderPortfolioSummary(portfolio) {
+  if (!portfolio || !portfolio.repairs) {
+    return '<div class="callout" style="font-size:12.5px;">Portfolio totals not available for this month (partial data only).</div>';
+  }
+  var r = portfolio.repairs, g = portfolio.grounds;
+  return '<div class="stat-row">' +
+    '<div class="stat"><p class="stat-label">R&amp;M-Repairs Budget</p><p class="stat-value">' + money(r.budget) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">R&amp;M-Repairs Actual</p><p class="stat-value bad">' + money(r.actual) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Repairs Variance</p><p class="stat-value bad">+' + r.variance_pct + '%</p></div>' +
+    '<div class="stat"><p class="stat-label">R&amp;M-Grounds Budget</p><p class="stat-value">' + money(g.budget) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">R&amp;M-Grounds Actual</p><p class="stat-value bad">' + money(g.actual) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Grounds Variance</p><p class="stat-value bad">+' + g.variance_pct + '%</p></div>' +
+    '</div>';
+}
+
+function renderMonth(budgetData, appliancesData) {
+  var root = document.getElementById('content-root');
+  var html = '';
+
+  html += '<section><p class="section-label">Portfolio Summary</p>' + renderPortfolioSummary(budgetData.portfolio) + '</section>';
+
+  if (!budgetData.complete) {
+    html += '<section><div class="callout" style="font-size:12.5px;">This month only listed properties above average &mdash; no budget column or full property list was included, so this view can\'t show below-average properties or budget vs. actual the way a complete month can.' + (budgetData.note ? ' ' + budgetData.note : '') + '</div></section>';
+  }
+
+  html += '<section><p class="section-label">R&amp;M &mdash; Repairs' + (budgetData.complete ? '' : ' (above average)') + '</p>' +
+    '<div class="avg-callout"><span class="avg-label">Average Repairs / Unit / Mo</span><span class="avg-value">$' + budgetData.averages.repairs_per_unit + '</span></div>' +
+    renderTable(budgetData.repairs, budgetData.averages.repairs_per_unit) +
+    renderNarrative(budgetData.narrative_repairs) +
+    '</section>';
+
+  html += '<section><p class="section-label">R&amp;M &mdash; Grounds' + (budgetData.complete ? '' : ' (above average)') + '</p>' +
+    '<div class="avg-callout"><span class="avg-label">Average Grounds / Unit / Mo</span><span class="avg-value">$' + budgetData.averages.grounds_per_unit.toLocaleString() + '</span></div>' +
+    renderTable(budgetData.grounds, budgetData.averages.grounds_per_unit) +
+    renderNarrative(budgetData.narrative_grounds) +
+    '</section>';
+
+  html += '<section><p class="section-label">Appliances Breakdown &mdash; R&amp;M Team Members</p>' + renderAppliancesTable(appliancesData.items) + '</section>';
+
+  root.innerHTML = html;
+  document.getElementById('sent-label').textContent = 'Data as of ' + budgetData.generated_at;
+  document.getElementById('updated-label').textContent = 'Updated ' + budgetData.generated_at;
+}
+
+var manifestCache = null;
+var ts = Date.now();
+
+function loadMonth(key) {
+  Promise.all([
+    fetch('./data/pl-budget-' + key + '.json?_=' + ts).then(function(r) { return r.json(); }),
+    fetch('./data/pl-appliances-' + key + '.json?_=' + ts).then(function(r) { return r.json(); }),
+  ]).then(function(results) {
+    renderMonth(results[0], results[1]);
+  }).catch(function(err) {
+    document.getElementById('content-root').innerHTML = '<div class="callout" style="font-size:13px;">Could not load data for this month: ' + err.message + '</div>';
+  });
+}
+
+fetch('./data/pl-manifest.json?_=' + ts).then(function(r) { return r.json(); }).then(function(manifest) {
+  manifestCache = manifest;
+  var select = document.getElementById('month-select');
+  manifest.months.forEach(function(m, i) {
+    var opt = document.createElement('option');
+    opt.value = m.key;
+    opt.textContent = m.label;
+    select.appendChild(opt);
+  });
+  select.addEventListener('change', function() { loadMonth(this.value); });
+  loadMonth(manifest.months[0].key);
+}).catch(function(err) {
+  document.getElementById('content-root').innerHTML = '<div class="callout" style="font-size:13px;">Could not load report manifest: ' + err.message + '</div>';
+});
 </script>

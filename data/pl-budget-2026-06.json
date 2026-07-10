@@ -1,0 +1,491 @@
+{
+  "month": "2026-06",
+  "label": "June 2026",
+  "generated_at": "2026-07-10",
+  "source": "AppFolio Budget Comparative Report (per property)",
+  "complete": true,
+  "averages": {
+    "repairs_per_unit": 87.61,
+    "grounds_per_unit": 40.29
+  },
+  "portfolio": {
+    "repairs": {
+      "budget": 67104.23,
+      "actual": 92250.85,
+      "variance_pct": 37.5
+    },
+    "grounds": {
+      "budget": 29086.14,
+      "actual": 42425.9,
+      "variance_pct": 45.9
+    }
+  },
+  "repairs": [
+    {
+      "property": "W117",
+      "budget": 414.7,
+      "actual_per_unit": 472.39,
+      "detail": "Ceiling repair, lock replacement, fan replacement, repairs after move in"
+    },
+    {
+      "property": "RL21",
+      "budget": 1113.8,
+      "actual_per_unit": 242.95,
+      "detail": "Plumbing repair multiple times due to clogging and flood; ceiling repair; AC installation"
+    },
+    {
+      "property": "HL65",
+      "budget": 499.2,
+      "actual_per_unit": 289.81,
+      "detail": "Multiple repairs at the property"
+    },
+    {
+      "property": "C313",
+      "budget": 2114.87,
+      "actual_per_unit": 217.85,
+      "detail": "High volume of repairs; front gate not working; plumbing repairs; damaged oven"
+    },
+    {
+      "property": "MS43",
+      "budget": 730,
+      "actual_per_unit": 186.77,
+      "detail": "Electrical repair for an emergency"
+    },
+    {
+      "property": "C302",
+      "budget": 814.6,
+      "actual_per_unit": 183.02,
+      "detail": "Dishwasher pump, window replacement, fan replacement, electrician for a breaker, faucet replacement"
+    },
+    {
+      "property": "Kn47",
+      "budget": 22438.8,
+      "actual_per_unit": 157.15,
+      "detail": "Washer repair, signage, admin time, general repairs, plumbing, locks, appliance replacements"
+    },
+    {
+      "property": "K308",
+      "budget": 290.9,
+      "actual_per_unit": 135.69,
+      "detail": "Washer replacement, exterior water spigot replacement"
+    },
+    {
+      "property": "M405",
+      "budget": 1090.3,
+      "actual_per_unit": 124.13,
+      "detail": "Drain pipe repair, window repair, bake element replacement"
+    },
+    {
+      "property": "RL16",
+      "budget": 7873.6,
+      "actual_per_unit": 87.38,
+      "detail": ""
+    },
+    {
+      "property": "TC68",
+      "budget": 7323,
+      "actual_per_unit": 82.4,
+      "detail": ""
+    },
+    {
+      "property": "O155-Oak",
+      "budget": 5249.8,
+      "actual_per_unit": 82.26,
+      "detail": ""
+    },
+    {
+      "property": "J312",
+      "budget": 586.16,
+      "actual_per_unit": 81.89,
+      "detail": ""
+    },
+    {
+      "property": "V202",
+      "budget": 407.7,
+      "actual_per_unit": 79.89,
+      "detail": ""
+    },
+    {
+      "property": "H731",
+      "budget": 421.9,
+      "actual_per_unit": 69.01,
+      "detail": ""
+    },
+    {
+      "property": "PS91",
+      "budget": 678.7,
+      "actual_per_unit": 68.45,
+      "detail": ""
+    },
+    {
+      "property": "B101",
+      "budget": 670.3,
+      "actual_per_unit": 59.59,
+      "detail": ""
+    },
+    {
+      "property": "K104-LeFevre",
+      "budget": 3085.8,
+      "actual_per_unit": 55.24,
+      "detail": ""
+    },
+    {
+      "property": "S129",
+      "budget": 1215.1,
+      "actual_per_unit": 53.16,
+      "detail": ""
+    },
+    {
+      "property": "A916",
+      "budget": 514.8,
+      "actual_per_unit": 51.09,
+      "detail": ""
+    },
+    {
+      "property": "P705",
+      "budget": 1120.2,
+      "actual_per_unit": 50.49,
+      "detail": ""
+    },
+    {
+      "property": "L912",
+      "budget": null,
+      "actual_per_unit": 45.36,
+      "detail": ""
+    },
+    {
+      "property": "PS25",
+      "budget": 2428.1,
+      "actual_per_unit": 44.26,
+      "detail": ""
+    },
+    {
+      "property": "M221",
+      "budget": 679.5,
+      "actual_per_unit": 42.4,
+      "detail": ""
+    },
+    {
+      "property": "S300",
+      "budget": 574.7,
+      "actual_per_unit": 29.1,
+      "detail": ""
+    },
+    {
+      "property": "TC34",
+      "budget": 1456.3,
+      "actual_per_unit": 28.72,
+      "detail": ""
+    },
+    {
+      "property": "W226",
+      "budget": 545.5,
+      "actual_per_unit": 28.3,
+      "detail": ""
+    },
+    {
+      "property": "E328",
+      "budget": 242.4,
+      "actual_per_unit": 24.27,
+      "detail": ""
+    },
+    {
+      "property": "A511",
+      "budget": 355.3,
+      "actual_per_unit": 19.53,
+      "detail": ""
+    },
+    {
+      "property": "W225",
+      "budget": null,
+      "actual_per_unit": 17.97,
+      "detail": ""
+    },
+    {
+      "property": "M608",
+      "budget": 449,
+      "actual_per_unit": 17.16,
+      "detail": ""
+    },
+    {
+      "property": "PS17",
+      "budget": 731,
+      "actual_per_unit": 2.07,
+      "detail": ""
+    },
+    {
+      "property": "A210",
+      "budget": 443.9,
+      "actual_per_unit": 0.6,
+      "detail": ""
+    },
+    {
+      "property": "MS22",
+      "budget": 315.6,
+      "actual_per_unit": 0.6,
+      "detail": ""
+    },
+    {
+      "property": "H604",
+      "budget": null,
+      "actual_per_unit": 0,
+      "detail": ""
+    },
+    {
+      "property": "HL73",
+      "budget": 228.8,
+      "actual_per_unit": 0,
+      "detail": ""
+    },
+    {
+      "property": "O155-Elm",
+      "budget": null,
+      "actual_per_unit": 0,
+      "detail": ""
+    }
+  ],
+  "grounds": [
+    {
+      "property": "E328",
+      "budget": 322,
+      "actual_per_unit": 100.99,
+      "detail": "Sprinkler replacement and labor hours"
+    },
+    {
+      "property": "K308",
+      "budget": 127.6,
+      "actual_per_unit": 88.85,
+      "detail": "Sprinklers replacement, waste management, labor hours"
+    },
+    {
+      "property": "V202",
+      "budget": 605.3,
+      "actual_per_unit": 77.15,
+      "detail": "Supplies for irrigation system, labor hours"
+    },
+    {
+      "property": "K104",
+      "budget": 1542.9,
+      "actual_per_unit": 76.14,
+      "detail": "Irrigation system repairs, hoses replacement"
+    },
+    {
+      "property": "MS22",
+      "budget": 157.8,
+      "actual_per_unit": 75,
+      "detail": "Spring cleanup, storm-damaged tree cleanup"
+    },
+    {
+      "property": "RL16",
+      "budget": 248.3,
+      "actual_per_unit": 62.45,
+      "detail": "Pool maintenance, labor hours"
+    },
+    {
+      "property": "W226",
+      "budget": 2722.8,
+      "actual_per_unit": 61.76,
+      "detail": "Irrigation leak repair, supplies for lawn maintenance"
+    },
+    {
+      "property": "O155-Oak",
+      "budget": 3619.9,
+      "actual_per_unit": 60.1,
+      "detail": "Waste management, supplies for lawn maintenance"
+    },
+    {
+      "property": "H731",
+      "budget": 329.71,
+      "actual_per_unit": 59.91,
+      "detail": "Labor hours"
+    },
+    {
+      "property": "A511",
+      "budget": 253.8,
+      "actual_per_unit": 56.28,
+      "detail": "Irrigation system maintenance"
+    },
+    {
+      "property": "P705",
+      "budget": 560.1,
+      "actual_per_unit": 51.61,
+      "detail": "Irrigation system repairs, supplies for lawn maintenance"
+    },
+    {
+      "property": "PS17",
+      "budget": 365.5,
+      "actual_per_unit": 48.15,
+      "detail": "Labor hours, in-house lawn maintenance"
+    },
+    {
+      "property": "KN47",
+      "budget": 6585,
+      "actual_per_unit": 46.33,
+      "detail": "Pool maintenance, in-house maintenance"
+    },
+    {
+      "property": "A210",
+      "budget": 221.9,
+      "actual_per_unit": 44.96,
+      "detail": "Waste management, labor hours, supplies for lawn maintenance"
+    },
+    {
+      "property": "HL73",
+      "budget": 114.4,
+      "actual_per_unit": 44.69,
+      "detail": "Searching"
+    },
+    {
+      "property": "M221",
+      "budget": 339.8,
+      "actual_per_unit": 43.67,
+      "detail": "Irrigation system repair, labor hours"
+    },
+    {
+      "property": "A916",
+      "budget": 257.4,
+      "actual_per_unit": 39.72,
+      "detail": ""
+    },
+    {
+      "property": "PS91",
+      "budget": 339.4,
+      "actual_per_unit": 38.58,
+      "detail": ""
+    },
+    {
+      "property": "M608",
+      "budget": 224.5,
+      "actual_per_unit": 33.42,
+      "detail": ""
+    },
+    {
+      "property": "PS25",
+      "budget": 1214.1,
+      "actual_per_unit": 33.3,
+      "detail": ""
+    },
+    {
+      "property": "W117",
+      "budget": 207.3,
+      "actual_per_unit": 33.73,
+      "detail": ""
+    },
+    {
+      "property": "HL65",
+      "budget": 249.8,
+      "actual_per_unit": 30.42,
+      "detail": ""
+    },
+    {
+      "property": "J312",
+      "budget": 329.71,
+      "actual_per_unit": 29.88,
+      "detail": ""
+    },
+    {
+      "property": "C302",
+      "budget": 407.3,
+      "actual_per_unit": 29.63,
+      "detail": ""
+    },
+    {
+      "property": "M405",
+      "budget": 545.2,
+      "actual_per_unit": 29.24,
+      "detail": ""
+    },
+    {
+      "property": "C313",
+      "budget": 892.83,
+      "actual_per_unit": 28.14,
+      "detail": ""
+    },
+    {
+      "property": "TC34",
+      "budget": 394.6,
+      "actual_per_unit": 26.95,
+      "detail": "Grounds handled in house"
+    },
+    {
+      "property": "S300",
+      "budget": 287.4,
+      "actual_per_unit": 24.25,
+      "detail": ""
+    },
+    {
+      "property": "TC68",
+      "budget": 5132.1,
+      "actual_per_unit": 23.96,
+      "detail": "Handled by outside landscaping company; expense to be tied to a work order going forward"
+    },
+    {
+      "property": "S129",
+      "budget": 202.5,
+      "actual_per_unit": 19.3,
+      "detail": ""
+    },
+    {
+      "property": "B101",
+      "budget": 335.2,
+      "actual_per_unit": 18.13,
+      "detail": ""
+    },
+    {
+      "property": "W225",
+      "budget": null,
+      "actual_per_unit": 1,
+      "detail": ""
+    },
+    {
+      "property": "RL21",
+      "budget": 222.8,
+      "actual_per_unit": 0.48,
+      "detail": ""
+    },
+    {
+      "property": "H604",
+      "budget": null,
+      "actual_per_unit": 0,
+      "detail": ""
+    },
+    {
+      "property": "L912",
+      "budget": null,
+      "actual_per_unit": 0,
+      "detail": ""
+    },
+    {
+      "property": "L925",
+      "budget": null,
+      "actual_per_unit": 0,
+      "detail": ""
+    },
+    {
+      "property": "ms43",
+      "budget": 365,
+      "actual_per_unit": 0,
+      "detail": ""
+    },
+    {
+      "property": "O155-Elm",
+      "budget": null,
+      "actual_per_unit": 0,
+      "detail": ""
+    }
+  ],
+  "narrative_repairs": [
+    "Overall, the R&M budget is running over this month. R&M-Repairs came in at $92,250.85 against a $67,104.23 budget, 37.5% over. Looking into what's driving that, most of it is explainable: these are documented issues, not signs of waste or neglect. Appliances account for a large portion of these expenses, which I find normal, as they tend to start failing or breaking during the hot season.",
+    "Some categorizations were incorrect, and I'm still working through this with the team. I found landscaping bills and sprinkler repairs categorized as R&M. These numbers also don't reflect the full amount spent, since monthly contractor payments (Pest Control) aren't currently included. Moving forward, monthly payments and Pest Control invoices will be categorized as R&M and tied to a work order.",
+    "The overage size is concentrated in a few properties, suggesting this is not a portfolio spending-control problem. Some budgeted amounts may be set too low, but it's also expected that costs will rise seasonally through the summer.",
+    "Plumbing repairs represent a significant portion of the spending. I'd suggest that when onboarding a new team member in Tri-Cities and Spokane, we specifically look for someone with plumbing experience."
+  ],
+  "narrative_grounds": [
+    "Grounds came in at $42,425.90 against a $29,086.14 budget — 45.9% over. As with Repairs, most of these expenses are verifiable work. A few landscaping-related charges are currently miscoded into Repairs instead of Grounds. This means true spend is probably a bit higher than what's listed.",
+    "At hl73 I could not find a related work order, or Ramp expense to justify the charge. This shows we still need to ensure the documentation process is being followed.",
+    "This overage is mostly due to the extra team members we added, and it appears across several properties rather than just one. We're also seeing an increase in some properties due to the seasonal shift into summer, which requires keeping irrigation systems updated and pools properly maintained.",
+    "Operationally, the properties in Spokane are actually in better shape than they were before. Previously, the route couldn't be completed by a single person, and coverage was falling short. By adding a team member, we're now able to complete the full route, fix irrigation as needed, and the grounds visibly look much better across the properties.",
+    "We're seeing the same pattern in Tri-Cities: we've increased labor at the properties, and the results show the grass is getting greener and better looking, and the irrigation systems are working properly, with issues fixed as needed. We also see an increase in the budget for properties that have a pool, as the summer season requires daily maintenance. Pool upkeep during these months adds a recurring cost that isn't present the rest of the year.",
+    "In Tacoma, at tc68 the grounds are being taken care of by a landscaping company; these expenses were not included in the current period. Moving forward, this expense will be tied to a work order and included in the spent budget. At tc34 the grounds are being taken care of in house."
+  ]
+}

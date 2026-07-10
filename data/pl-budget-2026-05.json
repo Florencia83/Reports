@@ -1,0 +1,160 @@
+{
+  "month": "2026-05",
+  "label": "May 2026",
+  "generated_at": "2026-06-10",
+  "source": "Email report (manual) — above-average properties only, no budget column provided",
+  "complete": false,
+  "note": "Grounds figures are far larger than June's per-unit scale and likely reflect property totals rather than true per-unit averages — unconfirmed against the original spreadsheet.",
+  "averages": {
+    "repairs_per_unit": 126,
+    "grounds_per_unit": 1150
+  },
+  "portfolio": {
+    "repairs": null,
+    "grounds": null
+  },
+  "repairs": [
+    {
+      "property": "L925",
+      "budget": null,
+      "actual_per_unit": 577,
+      "detail": "Install pickets around lower deck; replace rotted deck boards on upper deck; Veracity Gutter and Roof Cleaning"
+    },
+    {
+      "property": "K308",
+      "budget": null,
+      "actual_per_unit": 567,
+      "detail": "Window replacement"
+    },
+    {
+      "property": "Ps17",
+      "budget": null,
+      "actual_per_unit": 212,
+      "detail": "Replace bath faucet; wall under sink replacement"
+    },
+    {
+      "property": "Rl16",
+      "budget": null,
+      "actual_per_unit": 198,
+      "detail": "Change door knobs in laundry rooms; fire inspections; drywall repairs after leak repairs"
+    },
+    {
+      "property": "W226",
+      "budget": null,
+      "actual_per_unit": 189,
+      "detail": "Different seals and linoleum repair; locks replacement in laundry rooms"
+    },
+    {
+      "property": "E328",
+      "budget": null,
+      "actual_per_unit": 184,
+      "detail": "Sprinklers repair and labor hours"
+    },
+    {
+      "property": "Kn47",
+      "budget": null,
+      "actual_per_unit": 169,
+      "detail": "PTAC replacement (HVAC and portable AC); Pro Fire LLC corrections after inspection; labor hours and other diverse repairs"
+    },
+    {
+      "property": "M608",
+      "budget": null,
+      "actual_per_unit": 169,
+      "detail": "Still trying to find info — will send a follow up"
+    },
+    {
+      "property": "L912",
+      "budget": null,
+      "actual_per_unit": 167,
+      "detail": "Back flow valve replacement — Bulldog Rooter ($1,800)"
+    },
+    {
+      "property": "O155",
+      "budget": null,
+      "actual_per_unit": 165,
+      "detail": "Water heater parts replacement — pump, cartridge"
+    },
+    {
+      "property": "K104",
+      "budget": null,
+      "actual_per_unit": 159,
+      "detail": "Pest control (wasps/bees, in house); sprinkler heads repair"
+    },
+    {
+      "property": "Hl65",
+      "budget": null,
+      "actual_per_unit": 147,
+      "detail": "Old invoices from our handyman"
+    },
+    {
+      "property": "Ps25",
+      "budget": null,
+      "actual_per_unit": 143,
+      "detail": "Mark parking lot and numbers"
+    },
+    {
+      "property": "S300",
+      "budget": null,
+      "actual_per_unit": 139,
+      "detail": "Faucet replacement"
+    },
+    {
+      "property": "M405",
+      "budget": null,
+      "actual_per_unit": 127,
+      "detail": "Main sewage pipe leak"
+    }
+  ],
+  "grounds": [
+    {
+      "property": "Kn47",
+      "budget": null,
+      "actual_per_unit": 10512,
+      "detail": "Pool supplies for opening; Heritage Landscaping irrigation startup; labor hours: Jared 12, Hannah 78, Reynaldo 32; +$2,000 purchases (Rey Leonidas)"
+    },
+    {
+      "property": "Rl16",
+      "budget": null,
+      "actual_per_unit": 5577,
+      "detail": "Pool supplies for opening; monthly security; labor hours: Jared 31, Hannah 32, Reynaldo 10"
+    },
+    {
+      "property": "K104",
+      "budget": null,
+      "actual_per_unit": 4734,
+      "detail": "Waste management; repairs/maintenance; labor hours: David 42, Alex 38"
+    },
+    {
+      "property": "Ps25",
+      "budget": null,
+      "actual_per_unit": 3864,
+      "detail": "Pool supplies for opening; labor hours: Jared 28, Hannah 17, Reynaldo 4"
+    },
+    {
+      "property": "O155",
+      "budget": null,
+      "actual_per_unit": 1724,
+      "detail": "Pressure washing; labor hours: David 13, Alex 6, Wade 5"
+    },
+    {
+      "property": "V202",
+      "budget": null,
+      "actual_per_unit": 1286,
+      "detail": "Repairs and maintenance; irrigation setup; labor hours: David 13, Alex 9"
+    },
+    {
+      "property": "K308",
+      "budget": null,
+      "actual_per_unit": 1281,
+      "detail": "Irrigation setup; tree removal; labor hours: David 11, Alex 10"
+    },
+    {
+      "property": "Tc68",
+      "budget": null,
+      "actual_per_unit": 1263,
+      "detail": "Waste management; box truck rent; materials; labor hours: 8"
+    }
+  ],
+  "narrative_repairs": [],
+  "narrative_grounds": []
+}
