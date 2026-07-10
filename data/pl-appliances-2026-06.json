@@ -2,175 +2,127 @@
   "month": "2026-06",
   "label": "June 2026",
   "generated_at": "2026-07-10",
-  "source": "Ramp (heuristic keyword match on R&M team cardholder transactions) — automated",
+  "source": "Ramp (Appliances category, R&M team cardholders)",
   "items": [
     {
-      "unit": "HD Supply Facilities Maintenance",
-      "amount": 9.84,
-      "cardholder": "isaac chavez",
-      "appliance": "PTAC unit replacement for turn team"
+      "unit": "c313-4",
+      "amount": 184.38,
+      "cardholder": "Justin Gutierrez",
+      "appliance": "Fan replacement"
     },
     {
-      "unit": "PayRange",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "appliance": "Purchase for laundry equipment troubleshooting."
-    },
-    {
-      "unit": "PayRange",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "appliance": "Purchase for laundry equipment troubleshooting."
-    },
-    {
-      "unit": "The Home Depot",
-      "amount": 6.46,
-      "cardholder": "Jared Miller",
-      "appliance": "new ac"
-    },
-    {
-      "unit": "PayRange",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "appliance": "Purchase for laundry equipment troubleshooting."
-    },
-    {
-      "unit": "Reliable Parts",
-      "amount": 0.41,
+      "unit": "h731-C",
+      "amount": 730.96,
       "cardholder": "Wade Hippen",
-      "appliance": "oven bake element replacement"
+      "appliance": "Air conditioner replacement"
     },
     {
-      "unit": "Lowe's",
-      "amount": 5.31,
+      "unit": "h731-C",
+      "amount": 51.05,
+      "cardholder": "Wade Hippen",
+      "appliance": "Air conditioner disposal"
+    },
+    {
+      "unit": "j312-3112",
+      "amount": 531.34,
       "cardholder": "Wade Hippen",
       "appliance": "Dishwasher and installation supplies"
     },
     {
-      "unit": "Conoco",
-      "amount": 0.03,
+      "unit": "k308-316-A",
+      "amount": 587.51,
       "cardholder": "Wade Hippen",
-      "appliance": "windshield washer fluid"
+      "appliance": "Washing machine replacement"
     },
     {
-      "unit": "The Home Depot",
-      "amount": 0.1,
-      "cardholder": "Wade Hippen",
-      "appliance": "dishwasher cleaner for maintenance"
+      "unit": "kn47-k1-H103",
+      "amount": 983.55,
+      "cardholder": "Isaac Chavez",
+      "appliance": "PTAC unit replacement for turn team"
     },
     {
-      "unit": "Reliable Parts",
-      "amount": 1.23,
-      "cardholder": "Wade Hippen",
-      "appliance": "dishwasher repair parts"
+      "unit": "s129-3",
+      "amount": 490.49,
+      "cardholder": "Justin Gutierrez",
+      "appliance": "Dishwasher replacement"
     },
     {
-      "unit": "Sunshine Disposal & Recycling",
-      "amount": 0.51,
-      "cardholder": "Wade Hippen",
-      "appliance": "air conditioner disposal"
+      "unit": "kn47-k1-L206",
+      "amount": 331.29,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Dishwasher replacement"
     },
     {
-      "unit": "Lowe's",
-      "amount": 1.53,
-      "cardholder": "Wade Hippen",
-      "appliance": "dehumidifiers for tenant after waterleak"
+      "unit": "kn47-k1-H201",
+      "amount": 716.69,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Fridge replacement"
     },
     {
-      "unit": "Ace Hardware",
-      "amount": 7.31,
-      "cardholder": "Wade Hippen",
-      "appliance": "air conditioner replacement"
+      "unit": "kn47-k1-M105",
+      "amount": 716.69,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Fridge replacement"
     },
     {
-      "unit": "True Value",
-      "amount": 0.14,
-      "cardholder": "Wade Hippen",
-      "appliance": "air conditioner cleaning spray"
-    },
-    {
-      "unit": "True Value",
-      "amount": 0.32,
-      "cardholder": "Wade Hippen",
-      "appliance": "air conditioner filter replacement"
-    },
-    {
-      "unit": "Reliable Parts",
-      "amount": -1.65,
-      "cardholder": "Wade Hippen",
-      "appliance": "Refund for dishwasher motor replacement parts"
-    },
-    {
-      "unit": "Reliable Parts",
-      "amount": 2.32,
-      "cardholder": "Wade Hippen",
-      "appliance": "washer timer replacement"
-    },
-    {
-      "unit": "Lowe's",
-      "amount": 0.76,
-      "cardholder": "Wade Hippen",
-      "appliance": "dehumidifier for tenant"
-    },
-    {
-      "unit": "Ace Hardware",
-      "amount": 0.39,
-      "cardholder": "Wade Hippen",
-      "appliance": "air conditioner cleaning supplies"
-    },
-    {
-      "unit": "Lowe's",
-      "amount": 8.1,
+      "unit": "m608-1",
+      "amount": 809.92,
       "cardholder": "Wade Hippen",
       "appliance": "Range replacement"
     },
     {
-      "unit": "Reliable Parts",
-      "amount": 3.04,
+      "unit": "o155-Oak-B4",
+      "amount": 761.91,
       "cardholder": "Wade Hippen",
-      "appliance": "dishwasher motor replacement parts"
+      "appliance": "Fridge replacement"
     },
     {
-      "unit": "The Home Depot",
-      "amount": 0.57,
+      "unit": "o155-Oak-B4",
+      "amount": 27.61,
       "cardholder": "Wade Hippen",
-      "appliance": "air conditioner support for tenant"
+      "appliance": "Fridge disposal"
     },
     {
-      "unit": "PayRange",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "appliance": "Purchase for laundry equipment troubleshooting."
+      "unit": "o155-Oak-D5",
+      "amount": 152.58,
+      "cardholder": "Wade Hippen",
+      "appliance": "Dehumidifier after leak"
     },
     {
-      "unit": "Reliable Parts",
-      "amount": 0.52,
-      "cardholder": "Wade Hippen",
-      "appliance": "oven bake element replacement"
+      "unit": "ps91-3",
+      "amount": 716.68,
+      "cardholder": "Jared Miller",
+      "appliance": "Range replacement"
     },
     {
-      "unit": "PayRange",
-      "amount": 0.25,
-      "cardholder": "Wade Hippen",
-      "appliance": "PayRange maintenance service"
+      "unit": "ps25-C18",
+      "amount": 552.14,
+      "cardholder": "Jared Miller",
+      "appliance": "Washer replacement"
     },
     {
-      "unit": "Reliable Parts",
-      "amount": 1.92,
-      "cardholder": "Wade Hippen",
-      "appliance": "Whirlpool washer replacement timer"
+      "unit": "ps25-E33",
+      "amount": 662.58,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Stove replacement"
     },
     {
-      "unit": "Spokane Waste To Energy",
-      "amount": 0.28,
-      "cardholder": "Wade Hippen",
-      "appliance": "refrigerator disposal"
+      "unit": "rl16-D08",
+      "amount": 646.27,
+      "cardholder": "Jared Miller",
+      "appliance": "AC replacement"
     },
     {
-      "unit": "Lowe's",
-      "amount": 7.62,
+      "unit": "rl16-C15",
+      "amount": 440.62,
+      "cardholder": "Jaxson Lakins",
+      "appliance": "Dishwasher replacement"
+    },
+    {
+      "unit": "w226-1",
+      "amount": 76.29,
       "cardholder": "Wade Hippen",
-      "appliance": "replacement refrigerator"
+      "appliance": "Dehumidifier after leak"
     }
   ]
 }
