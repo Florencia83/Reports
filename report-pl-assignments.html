@@ -151,7 +151,7 @@ footer a { color: var(--ink-soft); }
 
 <script>
 function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
-function vsAvgClass(v, avg) { if (v === null || v === undefined || v === 0) return ''; return v > avg ? 'bad' : 'good'; }
+function vsAvgClass(v, avg) { if (v === null || v === undefined) return ''; return v > avg ? 'bad' : 'good'; }
 
 function renderTable(rows, avg) {
   var head = '<tr><th>Property</th><th class="num">Budget</th><th class="num">Actual $/Unit</th><th class="detail">Detail</th></tr>';
