@@ -7,6 +7,12 @@
 // NOTE: appliance detection is a heuristic (keyword match on merchant/memo/accounting
 // category), not a clean Ramp category filter — Ramp has no single "Appliances" category.
 // Spot-check the output against Ramp directly if a month looks off.
+//
+// Property/unit comes from the QuickBooks "Property" field synced into Ramp as an
+// accounting_categories entry with tracking_category_remote_id "QuickbooksDepartment"
+// (Ramp's own field name for it is "Department" — QuickBooks calls it "Property").
+// category_name format: "kn47 (245):kn47-k1-D101" (prop:unit) or "m405 (26)" (prop only,
+// no unit set). Not every transaction has one (e.g. postage/non-property expenses).
 
 const fs = require('fs');
 const path = require('path');
@@ -65,10 +71,22 @@ async function fetchAllTransactions(token, from, to) {
   return all.filter(t => new Date(t.user_transaction_time).getTime() <= toTime);
 }
 
-function unitFromMemo(memo) {
-  if (!memo) return null;
-  const m = memo.match(/\b([a-z]{1,3}\d{2,4}(-[a-zA-Z0-9]+)*)\b/i);
-  return m ? m[1] : null;
+function extractPropUnit(categories) {
+  const dept = (categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksDepartment');
+  if (!dept || !dept.category_name) return { prop: null, unit: null };
+  const [propPart, unitPart] = dept.category_name.split(':');
+  const propMatch = propPart.match(/^([a-z0-9-]+)\s*\(/i);
+  const prop = (propMatch ? propMatch[1] : propPart).trim().toLowerCase();
+  return { prop, unit: unitPart ? unitPart.trim() : null };
+}
+
+// Property code prefixes map to physical area — RL/PS/KN = Richland/Pasco/Kennewick
+// (Tri-Cities), TC = Tacoma, everything else is Spokane.
+function areaForProp(prop) {
+  if (!prop) return 'Unassigned';
+  if (/^(rl|ps|kn)/.test(prop)) return 'Tri-Cities';
+  if (/^tc/.test(prop)) return 'Tacoma';
+  return 'Spokane';
 }
 
 async function main() {
@@ -86,35 +104,28 @@ async function main() {
     throw new Error('Fetched zero transactions for the month — likely an API/auth issue, not truly zero spend. Refusing to write.');
   }
 
-  // TEMPORARY DEBUG: dump raw accounting_categories for R&M team transactions so we
-  // can confirm whether Ramp's synced "Property"/"Job" QuickBooks fields are
-  // populated per-transaction (not just configured as options). Remove once confirmed.
-  const rmTeamTx = all.filter(t => {
-    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
-    return RM_TEAM.some(name => holderName.toLowerCase() === name.toLowerCase());
-  });
-  console.log(`DEBUG: ${rmTeamTx.length} R&M team transactions this month. accounting_categories for first 8:`);
-  rmTeamTx.slice(0, 8).forEach((t, i) => {
-    console.log(`DEBUG [${i}] merchant=${t.merchant_name} memo=${JSON.stringify(t.memo)} accounting_categories=${JSON.stringify(t.accounting_categories)}`);
-  });
-
   const items = all.filter(t => {
     const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
     if (!RM_TEAM.some(name => holderName.toLowerCase() === name.toLowerCase())) return false;
     const categoryNames = (t.accounting_categories || []).map(c => c.category_name || '').join(' ');
     const haystack = `${t.merchant_name || ''} ${t.memo || ''} ${categoryNames}`;
     return APPLIANCE_KEYWORDS.test(haystack);
-  }).map(t => ({
-    unit: unitFromMemo(t.memo) || t.merchant_name,
-    amount: Math.round((t.amount / (t.minor_unit_conversion_rate || 100)) * 100) / 100,
-    cardholder: t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : null,
-    appliance: t.memo || t.merchant_name,
-  }));
+  }).map(t => {
+    const { prop, unit } = extractPropUnit(t.accounting_categories);
+    return {
+      prop, unit,
+      area: areaForProp(prop),
+      amount: Math.round((t.amount / (t.minor_unit_conversion_rate || 100)) * 100) / 100,
+      cardholder: t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : null,
+      merchant: t.merchant_name || '',
+      appliance: t.memo || t.merchant_name,
+    };
+  });
 
   const json = {
     month, label: monthLabel(month),
     generated_at: todayStr(),
-    source: 'Ramp (heuristic keyword match on R&M team cardholder transactions) — automated',
+    source: 'Ramp (heuristic keyword match on R&M team cardholder transactions; property/unit from QuickBooks-synced Department field) — automated',
     items,
   };
 

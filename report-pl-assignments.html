@@ -116,6 +116,9 @@ td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); f
 .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 6px; }
 .stat-value { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums; margin: 0; }
 
+.area-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 18px 0 8px; }
+.area-label:first-child { margin-top: 0; }
+
 .tag { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
 .tag.maintenance { background: var(--maint-tint); color: var(--maint-ink); }
 .tag.finance { background: var(--finance-tint); color: var(--finance-ink); }
@@ -162,12 +165,29 @@ function renderTable(rows, avg) {
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
+var AREA_ORDER = ['Tri-Cities', 'Tacoma', 'Spokane', 'Unassigned'];
+
 function renderAppliancesTable(items) {
-  var head = '<tr><th>Unit</th><th class="num">Amount</th><th>Cardholder</th><th class="detail">Appliance</th></tr>';
-  var body = items.map(function(r) {
-    return '<tr><td class="prop">' + (r.unit || r.property) + '</td><td class="num">' + money(r.amount) + '</td><td>' + (r.cardholder || '&mdash;') + '</td><td class="detail">' + r.appliance + '</td></tr>';
-  }).join('');
-  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+  var groups = {};
+  items.forEach(function(r) {
+    var area = r.area || 'Unassigned';
+    (groups[area] = groups[area] || []).push(r);
+  });
+  var html = '';
+  AREA_ORDER.forEach(function(area) {
+    var rows = groups[area];
+    if (!rows || !rows.length) return;
+    rows.sort(function(a, b) { return (a.prop || '').localeCompare(b.prop || ''); });
+    var head = '<tr><th>Property / Unit</th><th class="num">Amount</th><th>Cardholder</th><th class="detail">Description</th></tr>';
+    var body = rows.map(function(r) {
+      var propUnit = r.unit ? r.unit.toUpperCase() : (r.prop ? r.prop.toUpperCase() : '&mdash;');
+      var desc = (r.merchant ? '<b>' + r.merchant + '</b> &mdash; ' : '') + (r.appliance || '');
+      return '<tr><td class="prop">' + propUnit + '</td><td class="num">' + money(r.amount) + '</td><td>' + (r.cardholder || '&mdash;') + '</td><td class="detail">' + desc + '</td></tr>';
+    }).join('');
+    html += '<p class="area-label">' + area + ' &mdash; ' + rows.length + '</p><div class="table-wrap">' +
+      '<table>' + head + body + '</table></div>';
+  });
+  return html || '<div class="callout" style="font-size:12.5px;">No appliance purchases this month.</div>';
 }
 
 function renderNarrative(paragraphs) {
