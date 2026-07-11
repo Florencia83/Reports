@@ -68,19 +68,19 @@ h1 { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: clamp(22px,
 .section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
 section { margin-bottom: clamp(28px, 4vh, 44px); }
 
-.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); box-shadow: var(--shadow); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-top: 3px solid var(--finance-ink); border-radius: 3px; background: var(--surface); box-shadow: var(--shadow); }
 table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
-th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th, td { padding: 8px 12px; text-align: left; border-right: 1px solid var(--line); white-space: nowrap; }
+th:last-child, td:last-child { border-right: none; }
 th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; background: var(--paper); }
 td.num, th.num { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; text-align: right; }
 td.detail, th.detail { white-space: normal; min-width: 220px; color: var(--ink-soft); }
-tr:last-child td { border-bottom: none; }
 tr.total td { font-weight: 600; background: var(--paper); }
 td.prop { font-weight: 600; }
-td.num.bad { color: var(--bad); font-weight: 500; }
-td.num.good { color: var(--good); font-weight: 500; }
+td.num.bad { background: color-mix(in srgb, var(--bad) 18%, var(--surface)); font-weight: 500; }
+td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); font-weight: 500; }
 
-.avg-callout { display: flex; align-items: baseline; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 12px 16px; box-shadow: var(--shadow); margin-bottom: 14px; }
+.avg-callout { display: flex; align-items: baseline; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--finance-ink); border-radius: 3px; padding: 12px 16px; box-shadow: var(--shadow); margin-bottom: 14px; }
 .avg-callout .avg-label { font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
 .avg-callout .avg-value { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums; color: var(--ink); }
 
@@ -110,11 +110,11 @@ td.num.good { color: var(--good); font-weight: 500; }
 .callout.maintenance { border-left-color: var(--maint-ink); }
 
 .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 14px 16px; box-shadow: var(--shadow); }
+.stat { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--finance-ink); border-radius: 3px; padding: 14px 16px; box-shadow: var(--shadow); }
+.stat.bad { background: color-mix(in srgb, var(--bad) 12%, var(--surface)); border-top-color: var(--bad); }
+.stat.good { background: color-mix(in srgb, var(--good) 12%, var(--surface)); border-top-color: var(--good); }
 .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 6px; }
 .stat-value { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums; margin: 0; }
-.stat-value.bad { color: var(--bad); }
-.stat-value.good { color: var(--good); }
 
 .tag { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
 .tag.maintenance { background: var(--maint-tint); color: var(--maint-ink); }
@@ -182,13 +182,17 @@ function renderPortfolioSummary(portfolio) {
     return '<div class="callout" style="font-size:12.5px;">Portfolio totals not available for this month (partial data only).</div>';
   }
   var r = portfolio.repairs, g = portfolio.grounds;
+  var rCls = r.variance_pct > 0 ? 'bad' : 'good';
+  var gCls = g.variance_pct > 0 ? 'bad' : 'good';
+  var rSign = r.variance_pct > 0 ? '+' : '';
+  var gSign = g.variance_pct > 0 ? '+' : '';
   return '<div class="stat-row">' +
     '<div class="stat"><p class="stat-label">R&amp;M-Repairs Budget</p><p class="stat-value">' + money(r.budget) + '</p></div>' +
-    '<div class="stat"><p class="stat-label">R&amp;M-Repairs Actual</p><p class="stat-value bad">' + money(r.actual) + '</p></div>' +
-    '<div class="stat"><p class="stat-label">Repairs Variance</p><p class="stat-value bad">+' + r.variance_pct + '%</p></div>' +
+    '<div class="stat ' + rCls + '"><p class="stat-label">R&amp;M-Repairs Actual</p><p class="stat-value">' + money(r.actual) + '</p></div>' +
+    '<div class="stat ' + rCls + '"><p class="stat-label">Repairs Variance</p><p class="stat-value">' + rSign + r.variance_pct + '%</p></div>' +
     '<div class="stat"><p class="stat-label">R&amp;M-Grounds Budget</p><p class="stat-value">' + money(g.budget) + '</p></div>' +
-    '<div class="stat"><p class="stat-label">R&amp;M-Grounds Actual</p><p class="stat-value bad">' + money(g.actual) + '</p></div>' +
-    '<div class="stat"><p class="stat-label">Grounds Variance</p><p class="stat-value bad">+' + g.variance_pct + '%</p></div>' +
+    '<div class="stat ' + gCls + '"><p class="stat-label">R&amp;M-Grounds Actual</p><p class="stat-value">' + money(g.actual) + '</p></div>' +
+    '<div class="stat ' + gCls + '"><p class="stat-label">Grounds Variance</p><p class="stat-value">' + gSign + g.variance_pct + '%</p></div>' +
     '</div>';
 }
 
