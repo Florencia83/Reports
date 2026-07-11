@@ -23,14 +23,15 @@ jobs:
         run: node scripts/update-weekly-data.js
 
       - name: Commit and push if changed
-        shell: 'C:\Program Files\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}'
         run: |
           git config user.name "florencia-reports-bot"
           git config user.email "actions@github.com"
           git add data/weekly-mtd.json
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Automated Weekly Update MTD refresh $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No changes to commit"
+          } else {
+            $today = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd')
+            git commit -m "Automated Weekly Update MTD refresh $today"
             git push
-          fi
+          }
