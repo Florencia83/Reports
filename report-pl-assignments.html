@@ -55,7 +55,14 @@
 * { box-sizing: border-box; }
 html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
 body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
-.wrap { max-width: 1040px; margin: 0 auto; }
+.wrap { max-width: 680px; margin: 0 auto; }
+
+@page { size: A4; margin: 18mm; }
+@media print {
+  body { padding: 0; }
+  .wrap { max-width: none; }
+  .month-picker, footer { display: none; }
+}
 
 .masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
 .masthead-id { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
