@@ -142,6 +142,20 @@ async function main() {
   console.log('Pulling AppFolio budget/actual for', month);
   const grouped = await pullAppfolioBudget(month);
 
+  // "detail" is authored by Florencia per property, never generated here —
+  // carry forward whatever was already in the file so this script can't
+  // silently erase it (AppFolio has no equivalent field to repopulate it from).
+  const outPathForDetail = path.join(DATA_DIR, `pl-budget-${month}.json`);
+  const priorRepairsDetail = {};
+  const priorGroundsDetail = {};
+  if (fs.existsSync(outPathForDetail)) {
+    try {
+      const prior = JSON.parse(fs.readFileSync(outPathForDetail, 'utf8'));
+      (prior.repairs || []).forEach(r => { if (r.detail) priorRepairsDetail[r.property] = r.detail; });
+      (prior.grounds || []).forEach(g => { if (g.detail) priorGroundsDetail[g.property] = g.detail; });
+    } catch (e) { /* ignore unparseable prior file */ }
+  }
+
   const repairs = [];
   const grounds = [];
   let portfolioRepairsBudget = 0, portfolioRepairsActual = 0, portfolioGroundsBudget = 0, portfolioGroundsActual = 0;
@@ -150,8 +164,9 @@ async function main() {
   Object.values(grouped).forEach(p => {
     const repairsPerUnit = p.units ? p.repairsActual / p.units : 0;
     const groundsPerUnit = p.units ? p.groundsActual / p.units : 0;
-    repairs.push({ property: p.name.toUpperCase(), budget: p.repairsBudget || null, actual_per_unit: round2(repairsPerUnit), detail: '' });
-    grounds.push({ property: p.name.toUpperCase(), budget: p.groundsBudget || null, actual_per_unit: round2(groundsPerUnit), detail: '' });
+    const propName = p.name.toUpperCase();
+    repairs.push({ property: propName, budget: p.repairsBudget || null, actual_per_unit: round2(repairsPerUnit), detail: priorRepairsDetail[propName] || '' });
+    grounds.push({ property: propName, budget: p.groundsBudget || null, actual_per_unit: round2(groundsPerUnit), detail: priorGroundsDetail[propName] || '' });
     portfolioRepairsBudget += p.repairsBudget;
     portfolioRepairsActual += p.repairsActual;
     portfolioGroundsBudget += p.groundsBudget;
