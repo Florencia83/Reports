@@ -185,7 +185,11 @@ function renderAppliancesTable(items) {
   var html = '';
   AREA_ORDER.forEach(function(area) {
     var rows = groups[area];
-    if (!rows || !rows.length) return;
+    if (!rows || !rows.length) {
+      if (area === 'Unassigned') return;
+      html += '<p class="area-label">' + area + ' &mdash; 0</p><div class="callout" style="font-size:12.5px;">No appliance purchases this month.</div>';
+      return;
+    }
     rows.sort(function(a, b) { return (a.prop || '').localeCompare(b.prop || ''); });
     var head = '<tr><th>Property / Unit</th><th class="num">Amount</th><th>Cardholder</th><th class="detail">Description</th></tr>';
     var body = rows.map(function(r) {
