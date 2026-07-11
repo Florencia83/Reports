@@ -23,6 +23,7 @@ jobs:
         run: node scripts/update-weekly-data.js
 
       - name: Commit and push if changed
+        shell: bash
         run: |
           git config user.name "florencia-reports-bot"
           git config user.email "actions@github.com"
