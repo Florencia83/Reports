@@ -1,0 +1,40 @@
+{
+  "month": "2026-07",
+  "generated_at": "2026-07-11",
+  "source": "AppFolio (budget/actual MTD, accrual) + Ramp (opex by category, R&M team) — automated",
+  "budget_vs_spent_mtd": {
+    "budget": 450668.52,
+    "actual": 3590,
+    "pct_spent": 0.8
+  },
+  "operational_expenses": [
+    {
+      "category": "Office",
+      "amount": 32.02
+    },
+    {
+      "category": "General Merchandise",
+      "amount": 16.27
+    },
+    {
+      "category": "Government Services",
+      "amount": 3.03
+    },
+    {
+      "category": "Internet and Phone",
+      "amount": 0.1
+    },
+    {
+      "category": "Fuel and Gas",
+      "amount": 3.15
+    },
+    {
+      "category": "Professional Services",
+      "amount": 0.72
+    },
+    {
+      "category": "Medical",
+      "amount": 10.5
+    }
+  ]
+}
