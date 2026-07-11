@@ -165,8 +165,8 @@ async function main() {
     const repairsPerUnit = p.units ? p.repairsActual / p.units : 0;
     const groundsPerUnit = p.units ? p.groundsActual / p.units : 0;
     const propName = p.name.toUpperCase();
-    repairs.push({ property: propName, budget: p.repairsBudget || null, actual_per_unit: round2(repairsPerUnit), detail: priorRepairsDetail[propName] || '' });
-    grounds.push({ property: propName, budget: p.groundsBudget || null, actual_per_unit: round2(groundsPerUnit), detail: priorGroundsDetail[propName] || '' });
+    repairs.push({ property: propName, units: p.units, budget: p.repairsBudget || null, actual_per_unit: round2(repairsPerUnit), detail: priorRepairsDetail[propName] || '' });
+    grounds.push({ property: propName, units: p.units, budget: p.groundsBudget || null, actual_per_unit: round2(groundsPerUnit), detail: priorGroundsDetail[propName] || '' });
     portfolioRepairsBudget += p.repairsBudget;
     portfolioRepairsActual += p.repairsActual;
     portfolioGroundsBudget += p.groundsBudget;

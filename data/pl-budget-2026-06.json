@@ -25,229 +25,267 @@
       "property": "W117",
       "budget": 414.6,
       "actual_per_unit": 472.39,
-      "detail": "Ceiling repair, lock replacement, fan replacement, repairs after move in"
+      "detail": "Ceiling repair, lock replacement, fan replacement, repairs after move in",
+      "units": 10
     },
     {
       "property": "HL65",
       "budget": 499.2,
       "actual_per_unit": 289.81,
-      "detail": "Multiple repairs at the property"
+      "detail": "Multiple repairs at the property",
+      "units": 10
     },
     {
       "property": "RL21",
       "budget": 1113.8,
       "actual_per_unit": 242.95,
-      "detail": "Plumbing repair multiple times due to clogging and flood; ceiling repair; AC installation"
+      "detail": "Plumbing repair multiple times due to clogging and flood; ceiling repair; AC installation",
+      "units": 22
     },
     {
       "property": "C313",
       "budget": 2114.87,
       "actual_per_unit": 217.85,
-      "detail": "High volume of repairs; front gate not working; plumbing repairs; damaged oven"
+      "detail": "High volume of repairs; front gate not working; plumbing repairs; damaged oven",
+      "units": 40
     },
     {
       "property": "MS43",
       "budget": 730,
       "actual_per_unit": 186.77,
-      "detail": "Electrical repair for an emergency"
+      "detail": "Electrical repair for an emergency",
+      "units": 15
     },
     {
       "property": "C302",
       "budget": 814.6,
       "actual_per_unit": 183.02,
-      "detail": "Dishwasher pump, window replacement, fan replacement, electrician for a breaker, faucet replacement"
+      "detail": "Dishwasher pump, window replacement, fan replacement, electrician for a breaker, faucet replacement",
+      "units": 14
     },
     {
       "property": "K308",
       "budget": 290.9,
       "actual_per_unit": 135.69,
-      "detail": "Washer replacement, exterior water spigot replacement"
+      "detail": "Washer replacement, exterior water spigot replacement",
+      "units": 6
     },
     {
       "property": "M405",
       "budget": 1090.3,
       "actual_per_unit": 124.13,
-      "detail": "Drain pipe repair, window repair, bake element replacement"
+      "detail": "Drain pipe repair, window repair, bake element replacement",
+      "units": 26
     },
     {
       "property": "KN47",
       "budget": 22438.8,
       "actual_per_unit": 99.66,
-      "detail": "Washer repair, signage, admin time, general repairs, plumbing, locks, appliance replacements"
+      "detail": "Washer repair, signage, admin time, general repairs, plumbing, locks, appliance replacements",
+      "units": 246
     },
     {
       "property": "RL16",
       "budget": 7873.6,
       "actual_per_unit": 87.38,
-      "detail": ""
+      "detail": "",
+      "units": 96
     },
     {
       "property": "TC68",
       "budget": 7323,
       "actual_per_unit": 82.4,
-      "detail": ""
+      "detail": "",
+      "units": 108
     },
     {
       "property": "O155-OAK",
       "budget": 5249.8,
       "actual_per_unit": 82.26,
-      "detail": ""
+      "detail": "",
+      "units": 31
     },
     {
       "property": "J312",
       "budget": 586.16,
       "actual_per_unit": 81.89,
-      "detail": ""
+      "detail": "",
+      "units": 18
     },
     {
       "property": "V202",
       "budget": 407.7,
       "actual_per_unit": 79.89,
-      "detail": ""
+      "detail": "",
+      "units": 16
     },
     {
       "property": "H731",
       "budget": 421.9,
       "actual_per_unit": 69.01,
-      "detail": ""
+      "detail": "",
+      "units": 8
     },
     {
       "property": "PS91",
       "budget": 678.7,
       "actual_per_unit": 68.45,
-      "detail": ""
+      "detail": "",
+      "units": 14
     },
     {
       "property": "B101",
       "budget": 670.3,
       "actual_per_unit": 57.59,
-      "detail": ""
+      "detail": "",
+      "units": 17
     },
     {
       "property": "K104-LEFEVRE",
       "budget": 3085.8,
       "actual_per_unit": 55.24,
-      "detail": ""
+      "detail": "",
+      "units": 60
     },
     {
       "property": "S129",
       "budget": 1215.1,
       "actual_per_unit": 53.16,
-      "detail": ""
+      "detail": "",
+      "units": 20
     },
     {
       "property": "A916",
       "budget": 514.8,
       "actual_per_unit": 51.09,
-      "detail": ""
+      "detail": "",
+      "units": 12
     },
     {
       "property": "P705",
       "budget": 1120.2,
       "actual_per_unit": 50.49,
-      "detail": ""
+      "detail": "",
+      "units": 20
     },
     {
       "property": "L912",
       "budget": null,
       "actual_per_unit": 45.36,
-      "detail": ""
+      "detail": "",
+      "units": 9
     },
     {
       "property": "PS25",
       "budget": 2428.1,
       "actual_per_unit": 44.26,
-      "detail": ""
+      "detail": "",
+      "units": 44
     },
     {
       "property": "M221",
       "budget": 679.5,
       "actual_per_unit": 42.4,
-      "detail": ""
+      "detail": "",
+      "units": 14
     },
     {
       "property": "S300",
       "budget": 574.7,
       "actual_per_unit": 29.1,
-      "detail": ""
+      "detail": "",
+      "units": 14
     },
     {
       "property": "TC34",
       "budget": 1456.3,
       "actual_per_unit": 28.72,
-      "detail": ""
+      "detail": "",
+      "units": 24
     },
     {
       "property": "W226",
       "budget": 545.5,
       "actual_per_unit": 28.3,
-      "detail": ""
+      "detail": "",
+      "units": 11
     },
     {
       "property": "E328",
       "budget": 242.4,
       "actual_per_unit": 24.27,
-      "detail": ""
+      "detail": "",
+      "units": 7
     },
     {
       "property": "A511",
       "budget": 355.3,
       "actual_per_unit": 19.53,
-      "detail": ""
+      "detail": "",
+      "units": 10
     },
     {
       "property": "W225",
       "budget": null,
       "actual_per_unit": 17.87,
-      "detail": ""
+      "detail": "",
+      "units": 36
     },
     {
       "property": "M608",
       "budget": 449,
       "actual_per_unit": 17.16,
-      "detail": ""
+      "detail": "",
+      "units": 9
     },
     {
       "property": "PS17",
       "budget": 731,
       "actual_per_unit": 2.07,
-      "detail": ""
+      "detail": "",
+      "units": 18
     },
     {
       "property": "A210",
       "budget": 443.9,
       "actual_per_unit": 0.6,
-      "detail": ""
+      "detail": "",
+      "units": 10
     },
     {
       "property": "MS22",
       "budget": 315.6,
       "actual_per_unit": 0.6,
-      "detail": ""
+      "detail": "",
+      "units": 8
     },
     {
       "property": "H604",
       "budget": null,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 1
     },
     {
       "property": "L925",
       "budget": null,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 2
     },
     {
       "property": "HL73",
       "budget": 228.8,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 6
     },
     {
       "property": "O155-ELM",
       "budget": null,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 21
     }
   ],
   "grounds": [
@@ -255,229 +293,267 @@
       "property": "E328",
       "budget": 322,
       "actual_per_unit": 100.99,
-      "detail": "Sprinkler replacement and labor hours"
+      "detail": "Sprinkler replacement and labor hours",
+      "units": 7
     },
     {
       "property": "K308",
       "budget": 127.6,
       "actual_per_unit": 88.85,
-      "detail": "Sprinklers replacement, waste management, labor hours"
+      "detail": "Sprinklers replacement, waste management, labor hours",
+      "units": 6
     },
     {
       "property": "V202",
       "budget": 605.3,
       "actual_per_unit": 77.15,
-      "detail": "Supplies for irrigation system, labor hours"
+      "detail": "Supplies for irrigation system, labor hours",
+      "units": 16
     },
     {
       "property": "K104-LEFEVRE",
       "budget": 1542.9,
       "actual_per_unit": 76.14,
-      "detail": "Irrigation system repairs, hoses replacement"
+      "detail": "Irrigation system repairs, hoses replacement",
+      "units": 60
     },
     {
       "property": "MS22",
       "budget": 157.8,
       "actual_per_unit": 75,
-      "detail": "Spring cleanup, storm-damaged tree cleanup"
+      "detail": "Spring cleanup, storm-damaged tree cleanup",
+      "units": 8
     },
     {
       "property": "RL16",
       "budget": 2531.4,
       "actual_per_unit": 62.45,
-      "detail": "Pool maintenance, labor hours"
+      "detail": "Pool maintenance, labor hours",
+      "units": 96
     },
     {
       "property": "W226",
       "budget": 272.8,
       "actual_per_unit": 61.76,
-      "detail": "Irrigation leak repair, supplies for lawn maintenance"
+      "detail": "Irrigation leak repair, supplies for lawn maintenance",
+      "units": 11
     },
     {
       "property": "O155-OAK",
       "budget": 3619.9,
       "actual_per_unit": 60.1,
-      "detail": "Waste management, supplies for lawn maintenance"
+      "detail": "Waste management, supplies for lawn maintenance",
+      "units": 31
     },
     {
       "property": "H731",
       "budget": 211,
       "actual_per_unit": 59.91,
-      "detail": "Labor hours"
+      "detail": "Labor hours",
+      "units": 8
     },
     {
       "property": "A511",
       "budget": 253.8,
       "actual_per_unit": 56.28,
-      "detail": "Irrigation system maintenance"
+      "detail": "Irrigation system maintenance",
+      "units": 10
     },
     {
       "property": "P705",
       "budget": 560.1,
       "actual_per_unit": 51.61,
-      "detail": "Irrigation system repairs, supplies for lawn maintenance"
+      "detail": "Irrigation system repairs, supplies for lawn maintenance",
+      "units": 20
     },
     {
       "property": "PS17",
       "budget": 365.5,
       "actual_per_unit": 48.15,
-      "detail": "Labor hours, in-house lawn maintenance"
+      "detail": "Labor hours, in-house lawn maintenance",
+      "units": 18
     },
     {
       "property": "KN47",
       "budget": 6233,
       "actual_per_unit": 46.33,
-      "detail": "Pool maintenance, in-house maintenance"
+      "detail": "Pool maintenance, in-house maintenance",
+      "units": 246
     },
     {
       "property": "A210",
       "budget": 221.9,
       "actual_per_unit": 44.96,
-      "detail": "Waste management, labor hours, supplies for lawn maintenance"
+      "detail": "Waste management, labor hours, supplies for lawn maintenance",
+      "units": 10
     },
     {
       "property": "HL73",
       "budget": 114.4,
       "actual_per_unit": 44.89,
-      "detail": "Searching"
+      "detail": "Searching",
+      "units": 6
     },
     {
       "property": "M221",
       "budget": 339.8,
       "actual_per_unit": 43.67,
-      "detail": "Irrigation system repair, labor hours"
+      "detail": "Irrigation system repair, labor hours",
+      "units": 14
     },
     {
       "property": "A916",
       "budget": 257.4,
       "actual_per_unit": 39.72,
-      "detail": ""
+      "detail": "",
+      "units": 12
     },
     {
       "property": "PS91",
       "budget": 339.4,
       "actual_per_unit": 38.58,
-      "detail": ""
+      "detail": "",
+      "units": 14
     },
     {
       "property": "W117",
       "budget": 207.3,
       "actual_per_unit": 33.73,
-      "detail": ""
+      "detail": "",
+      "units": 10
     },
     {
       "property": "M608",
       "budget": 224.5,
       "actual_per_unit": 33.42,
-      "detail": ""
+      "detail": "",
+      "units": 9
     },
     {
       "property": "PS25",
       "budget": 1214.1,
       "actual_per_unit": 33.3,
-      "detail": ""
+      "detail": "",
+      "units": 44
     },
     {
       "property": "HL65",
       "budget": 249.6,
       "actual_per_unit": 30.42,
-      "detail": ""
+      "detail": "",
+      "units": 10
     },
     {
       "property": "J312",
       "budget": 329.71,
       "actual_per_unit": 29.89,
-      "detail": ""
+      "detail": "",
+      "units": 18
     },
     {
       "property": "C302",
       "budget": 407.3,
       "actual_per_unit": 29.63,
-      "detail": ""
+      "detail": "",
+      "units": 14
     },
     {
       "property": "M405",
       "budget": 545.2,
       "actual_per_unit": 29.24,
-      "detail": ""
+      "detail": "",
+      "units": 26
     },
     {
       "property": "C313",
       "budget": 892.83,
       "actual_per_unit": 28.14,
-      "detail": ""
+      "detail": "",
+      "units": 40
     },
     {
       "property": "TC34",
       "budget": 394.6,
       "actual_per_unit": 26.95,
-      "detail": "Grounds handled in house"
+      "detail": "Grounds handled in house",
+      "units": 24
     },
     {
       "property": "S300",
       "budget": 287.4,
       "actual_per_unit": 24.25,
-      "detail": ""
+      "detail": "",
+      "units": 14
     },
     {
       "property": "TC68",
       "budget": 5132.1,
       "actual_per_unit": 23.96,
-      "detail": "Handled by outside landscaping company; expense to be tied to a work order going forward"
+      "detail": "Handled by outside landscaping company; expense to be tied to a work order going forward",
+      "units": 108
     },
     {
       "property": "S129",
       "budget": 202.5,
       "actual_per_unit": 19.3,
-      "detail": ""
+      "detail": "",
+      "units": 20
     },
     {
       "property": "B101",
       "budget": 335.2,
       "actual_per_unit": 18.13,
-      "detail": ""
+      "detail": "",
+      "units": 17
     },
     {
       "property": "W225",
       "budget": null,
       "actual_per_unit": 1,
-      "detail": ""
+      "detail": "",
+      "units": 36
     },
     {
       "property": "RL21",
       "budget": 222.8,
       "actual_per_unit": 0.48,
-      "detail": ""
+      "detail": "",
+      "units": 22
     },
     {
       "property": "H604",
       "budget": null,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 1
     },
     {
       "property": "MS43",
       "budget": 365,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 15
     },
     {
       "property": "L925",
       "budget": null,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 2
     },
     {
       "property": "L912",
       "budget": null,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 9
     },
     {
       "property": "O155-ELM",
       "budget": null,
       "actual_per_unit": 0,
-      "detail": ""
+      "detail": "",
+      "units": 21
     }
   ],
   "narrative_repairs": [

@@ -117,7 +117,8 @@ td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); f
 .callout.finance { border-left-color: var(--finance-ink); }
 .callout.maintenance { border-left-color: var(--maint-ink); }
 
-.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 480px) { .stat-row { grid-template-columns: 1fr; } }
 .stat { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--finance-ink); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); }
 .stat.bad { background: color-mix(in srgb, var(--bad) 12%, var(--surface)); border-top-color: var(--bad); }
 .stat.good { background: color-mix(in srgb, var(--good) 12%, var(--surface)); border-top-color: var(--good); }
@@ -165,10 +166,10 @@ function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Num
 function vsAvgClass(v, avg) { if (v === null || v === undefined) return ''; return v > avg ? 'bad' : 'good'; }
 
 function renderTable(rows, avg) {
-  var head = '<tr><th>Property</th><th class="num">Budget</th><th class="num">Actual $/Unit</th><th class="detail">Detail</th></tr>';
+  var head = '<tr><th>Property</th><th class="num">Units</th><th class="num">Budget</th><th class="num">Actual $/Unit</th><th class="detail">Detail</th></tr>';
   var body = rows.map(function(r) {
     var cls = vsAvgClass(r.actual_per_unit, avg);
-    return '<tr><td class="prop">' + r.property + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + money(r.actual_per_unit) + '</td><td class="detail">' + (r.detail || '') + '</td></tr>';
+    return '<tr><td class="prop">' + r.property + '</td><td class="num">' + (r.units != null ? r.units : '&mdash;') + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + money(r.actual_per_unit) + '</td><td class="detail">' + (r.detail || '') + '</td></tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
