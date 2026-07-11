@@ -86,10 +86,22 @@ async function main() {
     throw new Error('Fetched zero transactions for the month — likely an API/auth issue, not truly zero spend. Refusing to write.');
   }
 
+  // TEMPORARY DEBUG: dump raw accounting_categories for R&M team transactions so we
+  // can confirm whether Ramp's synced "Property"/"Job" QuickBooks fields are
+  // populated per-transaction (not just configured as options). Remove once confirmed.
+  const rmTeamTx = all.filter(t => {
+    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
+    return RM_TEAM.some(name => holderName.toLowerCase() === name.toLowerCase());
+  });
+  console.log(`DEBUG: ${rmTeamTx.length} R&M team transactions this month. accounting_categories for first 8:`);
+  rmTeamTx.slice(0, 8).forEach((t, i) => {
+    console.log(`DEBUG [${i}] merchant=${t.merchant_name} memo=${JSON.stringify(t.memo)} accounting_categories=${JSON.stringify(t.accounting_categories)}`);
+  });
+
   const items = all.filter(t => {
     const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
     if (!RM_TEAM.some(name => holderName.toLowerCase() === name.toLowerCase())) return false;
-    const categoryNames = (t.accounting_categories || []).map(c => c.name || '').join(' ');
+    const categoryNames = (t.accounting_categories || []).map(c => c.category_name || '').join(' ');
     const haystack = `${t.merchant_name || ''} ${t.memo || ''} ${categoryNames}`;
     return APPLIANCE_KEYWORDS.test(haystack);
   }).map(t => ({
