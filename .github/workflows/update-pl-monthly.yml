@@ -27,7 +27,7 @@ jobs:
         run: node scripts/update-ramp-appliances.js
 
       - name: Commit and push if changed
-        shell: bash
+        shell: 'C:\Program Files\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}'
         run: |
           git config user.name "florencia-reports-bot"
           git config user.email "actions@github.com"
