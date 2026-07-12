@@ -349,7 +349,11 @@ function materialsByProperty(records) {
   return out;
 }
 function over300List(records) {
-  return records.filter(r => r.amount > 300 && r.isRmTeam)
+  // Same roster as Operational Expenses (OPEX_TEAM), not the narrower repair-only
+  // RM_TEAM -- otherwise a real >$300 purchase by grounds staff or Florencia herself
+  // (e.g. her $868.99 stove) silently drops off this table even though it counts
+  // toward Operational Expenses (found 2026-07-19).
+  return records.filter(r => r.amount > 300 && r.isOpexTeam)
     .map(r => ({ date: r.date, ref: r.ref, property: r.property ? r.property.toUpperCase() : null, cardholder: r.cardholder, amount: Math.round(r.amount * 100) / 100 }))
     .sort((a, b) => b.amount - a.amount);
 }
@@ -520,12 +524,13 @@ async function main() {
   console.log('Opex (team + r203) scoped total:', opex.scopedTotal, '| in the 5 buckets:', opex.buckets.reduce((s, b) => s + b.amount, 0).toFixed(2), '| uncategorized (Turn/CapEx/etc, expected):', opex.uncategorized);
 
   const outPath = path.join(DATA_DIR, `weekly-${weekStart}.json`);
-  let priorKpis = null, priorNarrative = null, priorPriorities = null;
+  let priorKpis = null, priorNarrative = null, priorNarrative2 = null, priorPriorities = null;
   if (fs.existsSync(outPath)) {
     try {
       const prior = JSON.parse(fs.readFileSync(outPath, 'utf8'));
       priorKpis = prior.kpis || null;
       priorNarrative = prior.narrative || null;
+      priorNarrative2 = prior.narrative_2 || null;
       priorPriorities = prior.priorities_next_week || null;
     } catch (e) { /* ignore unparseable prior file */ }
   }
@@ -570,6 +575,7 @@ async function main() {
     ramp_purchases_over_300: weekOver300,
     operational_expenses: opex.buckets,
     narrative: priorNarrative,
+    narrative_2: priorNarrative2,
     priorities_next_week: priorPriorities,
   };
 

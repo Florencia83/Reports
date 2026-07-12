@@ -220,6 +220,13 @@
       "amount": 2080.17
     },
     {
+      "date": "2026-07-10",
+      "ref": "TXYYLKAB",
+      "property": "HL65",
+      "cardholder": "Florencia Sola",
+      "amount": 868.99
+    },
+    {
       "date": "2026-07-08",
       "ref": "TZ4G8AZ",
       "property": "TC34",
@@ -264,5 +271,6 @@
     }
   ],
   "narrative": null,
+  "narrative_2": null,
   "priorities_next_week": null
 }
