@@ -56,7 +56,11 @@ async function pmLogin() {
   const sc = () => Object.entries(jar).map(([k, v]) => k + '=' + v).join('; ');
   const r1 = await httpreq('GET', PM_BASE + '/login/?next=/', { 'User-Agent': 'Mozilla/5.0' }); add(r1.headers);
   const csrf1 = (r1.body.match(/name="csrfmiddlewaretoken"\s+value="([^"]+)"/) || [])[1];
-  const bd = new URLSearchParams({ csrfmiddlewaretoken: csrf1, email: process.env.PROPERTYMELD_EMAIL, password: process.env.PROPERTYMELD_PASSWORD }).toString();
+  const pmEmail = (process.env.PROPERTYMELD_EMAIL || '').trim();
+  const pmPassword = (process.env.PROPERTYMELD_PASSWORD || '').trim();
+  console.log(`DEBUG: PROPERTYMELD_EMAIL length=${pmEmail.length} starts='${pmEmail.slice(0,2)}' ends='${pmEmail.slice(-2)}'`);
+  console.log(`DEBUG: PROPERTYMELD_PASSWORD length=${pmPassword.length}`);
+  const bd = new URLSearchParams({ csrfmiddlewaretoken: csrf1, email: pmEmail, password: pmPassword }).toString();
   const r2 = await httpreq('POST', PM_BASE + '/login/?next=/', { 'User-Agent': 'Mozilla/5.0', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': Buffer.byteLength(bd), 'Referer': PM_BASE + '/login/?next=/', 'Cookie': sc() }, bd); add(r2.headers);
   if (r2.body && /Invalid username\/password/.test(r2.body)) throw new Error('PropertyMeld login rejected — check PROPERTYMELD_EMAIL/PASSWORD secrets');
   const r3 = await httpreq('GET', PM_BASE + '/' + PM_MGMT + '/m/' + PM_MGMT + '/dashboard/', { 'User-Agent': 'Mozilla/5.0', 'Cookie': sc() }); add(r3.headers);
