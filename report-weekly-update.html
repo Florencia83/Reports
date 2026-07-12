@@ -64,11 +64,13 @@ body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
   .week-picker, footer { display: none; }
 }
 
-.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
-.masthead-id { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+.masthead-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); }
+.masthead-id { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0; display: flex; align-items: center; gap: 8px; }
 .masthead-id a { color: var(--ink-soft); text-decoration: none; }
 .masthead-id a:hover { color: var(--accent); }
 h1 { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 30px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0; line-height: 1.05; text-wrap: balance; }
+.masthead-range { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; color: var(--ink-soft); margin: 6px 0 0; }
 .masthead-meta { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; color: var(--ink-soft); text-align: right; line-height: 1.6; }
 .masthead-meta strong { color: var(--ink); font-weight: 500; }
 
@@ -84,6 +86,7 @@ th { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; letter-sp
 td.num, th.num { font-family: 'Manrope', system-ui, sans-serif; font-variant-numeric: tabular-nums; text-align: right; }
 td.detail, th.detail { white-space: normal; min-width: 220px; }
 td.detail { color: var(--ink-soft); }
+#by-tech-container td.detail, #by-tech-container th.detail { min-width: 0; max-width: 140px; }
 tr:last-child td { border-bottom: none; }
 tr.total td { font-weight: 600; background: var(--paper); }
 .week-picker { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; }
@@ -136,17 +139,18 @@ footer a { color: var(--ink-soft); }
 </style>
 
 <div class="wrap">
-  <div class="masthead">
-    <div>
-      <p class="masthead-id"><a href="index.html">&larr; Reports - R&amp;M/Grounds</a> &middot; <span class="tag maintenance">Maintenance</span></p>
-      <h1>Maintenance Service Weekly Update</h1>
-    </div>
+  <div class="masthead-top">
+    <p class="masthead-id"><a href="index.html">&larr; Reports - R&amp;M/Grounds</a> &middot; <span class="tag maintenance">Maintenance</span></p>
     <div class="masthead-meta">
       <div class="week-picker" style="margin-bottom:6px;">
         <select id="week-select"></select>
       </div>
       <span id="sent-label"></span>
     </div>
+  </div>
+  <div class="masthead">
+    <h1>Maintenance Service Weekly Update</h1>
+    <p class="masthead-range" id="range-label"></p>
   </div>
 
   <section>
@@ -347,6 +351,7 @@ function renderWeek(data) {
 
   renderMtdSections();
 
+  document.getElementById('range-label').textContent = data.label;
   document.getElementById('sent-label').textContent = 'Data as of ' + data.generated_at;
   document.getElementById('updated-label').textContent = 'Updated ' + data.generated_at;
 }
