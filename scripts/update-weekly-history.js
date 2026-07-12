@@ -470,22 +470,34 @@ async function main() {
   ]);
   console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length);
 
-  // ---- Per-week file ----
-  const weekMelds = melds.filter(m => m.completion_date >= weekStart && m.completion_date <= weekEnd);
-  const weekLaborByRef = sumByRef(inRange(laborRecords, weekStart, weekEnd));
-  const weekMaterialsByRef = materialsByRef(inRange(rampRecords, weekStart, weekEnd));
+  // Month-to-date records, computed once here and reused below both for Top 10 Work
+  // Orders and for the Monthly Budget/Cost by Property section further down.
+  const monthLaborRecords = inRange(laborRecords, monthStart, todayStr);
+  const monthRampRecords = inRange(rampRecords, monthStart, todayStr);
 
-  const rows = weekMelds.map(m => {
-    const lab = weekLaborByRef[m.ref] || { hours: 0, cost: 0 };
-    const mat = weekMaterialsByRef[m.ref] || 0;
+  // Top 10 Work Orders and Maintenance Team KPI's are both month-to-date, not just
+  // this week -- a job completed earlier in the month should still show up (Florencia
+  // asked for this 2026-07-19 after a real repair completed July 2 was invisible in a
+  // week-scoped view).
+  const monthMelds = melds.filter(m => m.completion_date >= monthStart && m.completion_date <= todayStr);
+  const monthLaborByRef = sumByRef(monthLaborRecords);
+  const monthMaterialsByRef = materialsByRef(monthRampRecords);
+  const monthRows = monthMelds.map(m => {
+    const lab = monthLaborByRef[m.ref] || { hours: 0, cost: 0 };
+    const mat = monthMaterialsByRef[m.ref] || 0;
     return { ...m, laborCost: lab.cost, materialsCost: mat, totalCost: lab.cost + mat };
   });
 
-  const topWorkOrders = [...rows].sort((a, b) => b.totalCost - a.totalCost).slice(0, 10)
-    .map(r => ({ ref: r.ref, brief: r.brief, cost: Math.round(r.totalCost * 100) / 100 }));
+  const topWorkOrders = [...monthRows].sort((a, b) => b.totalCost - a.totalCost).slice(0, 10)
+    .map(r => ({
+      ref: r.ref, brief: r.brief,
+      labor: Math.round(r.laborCost * 100) / 100,
+      materials: Math.round(r.materialsCost * 100) / 100,
+      cost: Math.round(r.totalCost * 100) / 100,
+    }));
 
   const byTechMap = {};
-  rows.forEach(r => { if (r.tech) (byTechMap[r.tech] = byTechMap[r.tech] || []).push(r); });
+  monthRows.forEach(r => { if (r.tech) (byTechMap[r.tech] = byTechMap[r.tech] || []).push(r); });
   const byTechnician = Object.entries(byTechMap).map(([name, list]) => {
     const totalLabor = list.reduce((s, r) => s + r.laborCost, 0);
     const totalCostSum = list.reduce((s, r) => s + r.totalCost, 0);
@@ -546,6 +558,7 @@ async function main() {
     week_start: weekStart,
     week_end: dstr(sunday),
     label: weekLabel(monday, sunday),
+    month_label: monthName(today.getMonth()) + ' ' + today.getFullYear(),
     generated_at: todayStr,
     complete: weekEnd === dstr(sunday),
     source: 'Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.',
@@ -575,9 +588,6 @@ async function main() {
 
   // ---- Month-to-date file: Monthly Budget + Cost by Property ----
   const month = todayStr.slice(0, 7);
-  const monthLaborRecords = inRange(laborRecords, monthStart, todayStr);
-  const monthRampRecords = inRange(rampRecords, monthStart, todayStr);
-
   const laborMTD = totalCost(monthLaborRecords);
   const materialsMTD = materialsBudgetTotal(monthRampRecords);
   const totalActual = laborMTD + materialsMTD;

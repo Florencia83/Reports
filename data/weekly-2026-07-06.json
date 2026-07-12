@@ -2,6 +2,7 @@
   "week_start": "2026-07-06",
   "week_end": "2026-07-12",
   "label": "July 6 – 12, 2026",
+  "month_label": "July 2026",
   "generated_at": "2026-07-12",
   "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
@@ -60,92 +61,127 @@
     {
       "ref": "TVJCXAV",
       "brief": "The pump lost its prime its no longer working.",
+      "labor": 0,
+      "materials": 3202.01,
       "cost": 3202.01
+    },
+    {
+      "ref": "T3LAL2Q",
+      "brief": "No Hot Water In Home",
+      "labor": 66.67,
+      "materials": 2365.3,
+      "cost": 2431.97
     },
     {
       "ref": "TGZT14D",
       "brief": "Leak in crawl space",
+      "labor": 151.25,
+      "materials": 2141.22,
       "cost": 2292.47
+    },
+    {
+      "ref": "TZQE4L",
+      "brief": "see list below",
+      "labor": 98.1,
+      "materials": 925.73,
+      "cost": 1023.83
+    },
+    {
+      "ref": "TU292CMB",
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 445.9,
+      "cost": 445.9
     },
     {
       "ref": "TV2UB2Q",
       "brief": "D - Maintenance (clone)",
+      "labor": 0,
+      "materials": 305.63,
       "cost": 305.63
     },
     {
       "ref": "TL23LGN",
       "brief": "roof leak (clone)",
+      "labor": 190.54,
+      "materials": 101,
       "cost": 291.54
+    },
+    {
+      "ref": "TPM69YT",
+      "brief": "The Bathroom Fan Motor Went Completely Out Again",
+      "labor": 66.15,
+      "materials": 159.12,
+      "cost": 225.27
     },
     {
       "ref": "TY2TQQ1",
       "brief": "tenant stated water will not turn off in shower",
+      "labor": 78.75,
+      "materials": 140.24,
       "cost": 218.99
     },
     {
-      "ref": "TNQQRICB",
-      "brief": "C - Paint Prep / Paint (clone)",
-      "cost": 167.84
-    },
-    {
-      "ref": "TINK08F",
-      "brief": "No Water Is Coming Out Of The Shower",
-      "cost": 163.32
-    },
-    {
-      "ref": "TY21EEFB",
-      "brief": "new blinds",
-      "cost": 162.01
-    },
-    {
-      "ref": "TKDZTUK",
-      "brief": "No Water Pressure When Sing Is On Cold",
-      "cost": 161.38
-    },
-    {
-      "ref": "TEZZTLB",
-      "brief": "Crawl space insulation repair",
-      "cost": 143.26
+      "ref": "TDCM4JR",
+      "brief": "No Hot Water Heater Not Heating (clone)",
+      "labor": 184.17,
+      "materials": 12.54,
+      "cost": 196.71
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 39,
-      "avg_cost_per_wo": 24.15,
-      "total_labor_cost": 637.64,
-      "avg_resident_rating": 5,
+      "wo_count": 62,
+      "avg_cost_per_wo": 31.09,
+      "total_labor_cost": 904.5,
+      "avg_resident_rating": 4,
+      "comments": [
+        {
+          "ref": "TT8VWDQ",
+          "text": "Bee hive in bedroom window still active"
+        }
+      ]
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 25,
+      "avg_cost_per_wo": 239.83,
+      "total_labor_cost": 1005.42,
+      "avg_resident_rating": 4.5,
+      "comments": [
+        {
+          "ref": "TH8Y2DHB",
+          "text": "The work was fine, and Justin was very conscientious.  A little adjustment is needed.  The door does not open and  move smoothly.  I think the cotton muffling is impeding it."
+        }
+      ]
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 23,
+      "avg_cost_per_wo": 53.17,
+      "total_labor_cost": 721.2,
+      "avg_resident_rating": null,
       "comments": []
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 15,
-      "avg_cost_per_wo": 22,
-      "total_labor_cost": 180.9,
-      "avg_resident_rating": null,
-      "comments": []
-    },
-    {
-      "name": "Jaxson Lakins",
-      "wo_count": 14,
-      "avg_cost_per_wo": 51.65,
-      "total_labor_cost": 420,
-      "avg_resident_rating": null,
-      "comments": []
-    },
-    {
-      "name": "Justin Gutierrez",
-      "wo_count": 13,
-      "avg_cost_per_wo": 230.18,
-      "total_labor_cost": 502.08,
+      "wo_count": 20,
+      "avg_cost_per_wo": 83.15,
+      "total_labor_cost": 300.15,
       "avg_resident_rating": 5,
-      "comments": []
+      "comments": [
+        {
+          "ref": "TZ95XDDB",
+          "text": "Thank you! I wasn't expecting the cleaning until today but it was cleaned yesterday Instead! I hope with no added stress to the Maintenance man! The patio looks great! Its been so long since Ive been able to use my space, i cant wait to enjoy it!"
+        }
+      ]
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 12,
-      "avg_cost_per_wo": 291.7,
-      "total_labor_cost": 298.35,
+      "wo_count": 19,
+      "avg_cost_per_wo": 188.28,
+      "total_labor_cost": 375.3,
       "avg_resident_rating": null,
       "comments": []
     }
