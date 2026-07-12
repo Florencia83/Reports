@@ -102,11 +102,6 @@ function extractAccount(rows, accountNumber) {
 }
 
 async function pullAppfolioBudget(month) {
-  const dcid = (process.env.APPFOLIO_CLIENT_ID || '');
-  const dsecret = (process.env.APPFOLIO_CLIENT_SECRET || '');
-  console.log(`DEBUG: APPFOLIO_CLIENT_ID length=${dcid.length} starts='${dcid.slice(0,2)}' ends='${dcid.slice(-2)}'`);
-  console.log(`DEBUG: APPFOLIO_CLIENT_SECRET length=${dsecret.length} starts='${dsecret.slice(0,2)}' ends='${dsecret.slice(-2)}'`);
-
   const grouped = {}; // group key -> { name, units, repairsBudget, repairsActual, groundsBudget, groundsActual }
   const ids = Object.keys(PROPERTIES);
   let failures = 0;

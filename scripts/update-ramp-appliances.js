@@ -1,12 +1,15 @@
 // Pulls Ramp transactions for the target month from known R&M team cardholders,
-// filters to appliance-related purchases, and writes data/pl-appliances-{month}.json.
+// filters to appliance purchases, and writes data/pl-appliances-{month}.json.
 //
 // Required env vars: RAMP_CLIENT_ID, RAMP_CLIENT_SECRET
 // Optional: TARGET_MONTH (YYYY-MM) — defaults to last month relative to today.
 //
-// NOTE: appliance detection is a heuristic (keyword match on merchant/memo/accounting
-// category), not a clean Ramp category filter — Ramp has no single "Appliances" category.
-// Spot-check the output against Ramp directly if a month looks off.
+// Appliance detection is the real Ramp GL account (CapEX - Appliance, category_id
+// 59000/59002), not a keyword heuristic -- confirmed live 2026-07-19 for the Weekly
+// Update's Operational Expenses (scripts/update-weekly-history.js) and ported here.
+// A keyword match on merchant/memo used to be the only signal, which silently pulled
+// in ordinary R&M-Material repair parts whose memo happened to mention an appliance
+// (e.g. a $65 dryer belt) -- confirmed with Florencia against her own Ramp count.
 //
 // Property/unit comes from the QuickBooks "Property" field synced into Ramp as an
 // accounting_categories entry with tracking_category_remote_id "QuickbooksDepartment"
@@ -20,7 +23,7 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, '..', 'data');
 
 const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller'];
-const APPLIANCE_KEYWORDS = /fridge|refrigerator|washer|dryer|dishwasher|oven|range|stove|dehumidifier|ptac|air condition|\bac\b|microwave|freezer/i;
+const APPLIANCE_GL_IDS = ['59000', '59002']; // CapEX - Appliance
 
 function targetMonth() {
   if (process.env.TARGET_MONTH) return process.env.TARGET_MONTH;
@@ -109,9 +112,8 @@ async function main() {
     // that breaks exact-string roster matching -- collapse/trim (found 2026-07-19).
     const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}`.trim().replace(/\s+/g, ' ') : '';
     if (!RM_TEAM.some(name => holderName.toLowerCase() === name.toLowerCase())) return false;
-    const categoryNames = (t.accounting_categories || []).map(c => c.category_name || '').join(' ');
-    const haystack = `${t.merchant_name || ''} ${t.memo || ''} ${categoryNames}`;
-    return APPLIANCE_KEYWORDS.test(haystack);
+    const gl = (t.accounting_categories || []).find(c => c.tracking_category_remote_type === 'GL_ACCOUNT');
+    return gl && APPLIANCE_GL_IDS.includes(gl.category_id);
   }).map(t => {
     const { prop, unit } = extractPropUnit(t.accounting_categories);
     return {
@@ -130,7 +132,7 @@ async function main() {
   const json = {
     month, label: monthLabel(month),
     generated_at: todayStr(),
-    source: 'Ramp (heuristic keyword match on R&M team cardholder transactions; property/unit from QuickBooks-synced Department field) — automated',
+    source: 'Ramp (CapEX - Appliance GL account, R&M team cardholder transactions; property/unit from QuickBooks-synced Department field) — automated',
     items,
   };
 

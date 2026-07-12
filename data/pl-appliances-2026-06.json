@@ -1,104 +1,86 @@
 {
   "month": "2026-06",
   "label": "June 2026",
-  "generated_at": "2026-07-11",
-  "source": "Ramp (heuristic keyword match on R&M team cardholder transactions; property/unit from QuickBooks-synced Department field) — automated",
+  "generated_at": "2026-07-12",
+  "source": "Ramp (CapEX - Appliance GL account, R&M team cardholder transactions; property/unit from QuickBooks-synced Department field) — automated",
   "items": [
+    {
+      "prop": "ps25",
+      "unit": "ps25-E33",
+      "area": "Tri-Cities",
+      "amount": 662.58,
+      "cardholder": "Jaxson Lakins ",
+      "merchant": "Fred's Appliance",
+      "appliance": "Purchased stove to replace broken one"
+    },
+    {
+      "prop": "ps25",
+      "unit": "ps25-C18",
+      "area": "Tri-Cities",
+      "amount": 552.14,
+      "cardholder": "Jared Miller",
+      "merchant": "Fred's Appliance",
+      "appliance": "New appliance for team member"
+    },
     {
       "prop": "kn47",
       "unit": "kn47-k1-H103",
       "area": "Tri-Cities",
-      "amount": 9.84,
+      "amount": 983.55,
       "cardholder": "isaac chavez",
       "merchant": "HD Supply Facilities Maintenance",
       "appliance": "PTAC unit replacement for turn team"
     },
     {
       "prop": "rl16",
-      "unit": null,
-      "area": "Tri-Cities",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "merchant": "PayRange",
-      "appliance": "Purchase for laundry equipment troubleshooting."
-    },
-    {
-      "prop": "kn47",
-      "unit": null,
-      "area": "Tri-Cities",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "merchant": "PayRange",
-      "appliance": "Purchase for laundry equipment troubleshooting."
-    },
-    {
-      "prop": "rl16",
       "unit": "rl16-D08",
       "area": "Tri-Cities",
-      "amount": 6.46,
+      "amount": 646.27,
       "cardholder": "Jared Miller",
       "merchant": "The Home Depot",
       "appliance": "new ac"
     },
     {
-      "prop": "kn47",
-      "unit": null,
+      "prop": "ps91",
+      "unit": "ps91-3",
       "area": "Tri-Cities",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "merchant": "PayRange",
-      "appliance": "Purchase for laundry equipment troubleshooting."
-    },
-    {
-      "prop": "c313",
-      "unit": "c313-25",
-      "area": "Spokane",
-      "amount": 0.41,
-      "cardholder": "Wade Hippen",
-      "merchant": "Reliable Parts",
-      "appliance": "oven bake element replacement"
+      "amount": 716.68,
+      "cardholder": "Jared Miller",
+      "merchant": "Fred's Appliance",
+      "appliance": "New appliance for unit"
     },
     {
       "prop": "j312",
       "unit": "j312-3112",
       "area": "Spokane",
-      "amount": 5.31,
+      "amount": 531.34,
       "cardholder": "Wade Hippen",
       "merchant": "Lowe's",
       "appliance": "Dishwasher and installation supplies"
     },
     {
-      "prop": "r203",
-      "unit": null,
-      "area": "Spokane",
-      "amount": 0.03,
-      "cardholder": "Wade Hippen",
-      "merchant": "Conoco",
-      "appliance": "windshield washer fluid"
+      "prop": "rl16",
+      "unit": "rl16-C15",
+      "area": "Tri-Cities",
+      "amount": 440.62,
+      "cardholder": "Jaxson Lakins ",
+      "merchant": "Fred's Appliance",
+      "appliance": "Purchased dishwasher to replace broken one"
     },
     {
       "prop": "s129",
-      "unit": "s129-6",
+      "unit": "s129-3",
       "area": "Spokane",
-      "amount": 0.1,
-      "cardholder": "Wade Hippen",
-      "merchant": "The Home Depot",
-      "appliance": "dishwasher cleaner for maintenance"
-    },
-    {
-      "prop": "s129",
-      "unit": "s129-5",
-      "area": "Spokane",
-      "amount": 1.23,
-      "cardholder": "Wade Hippen",
-      "merchant": "Reliable Parts",
-      "appliance": "dishwasher repair parts"
+      "amount": 490.49,
+      "cardholder": "Justin  Gutierrez ",
+      "merchant": "Lowe's",
+      "appliance": "General maintenance hardware and materials"
     },
     {
       "prop": "h731",
       "unit": "h731-C",
       "area": "Spokane",
-      "amount": 0.51,
+      "amount": 51.05,
       "cardholder": "Wade Hippen",
       "merchant": "Sunshine Disposal & Recycling",
       "appliance": "air conditioner disposal"
@@ -107,7 +89,7 @@
       "prop": "o155",
       "unit": "o155-Oak-D5",
       "area": "Spokane",
-      "amount": 1.53,
+      "amount": 152.58,
       "cardholder": "Wade Hippen",
       "merchant": "Lowe's",
       "appliance": "dehumidifiers for tenant after waterleak"
@@ -116,133 +98,79 @@
       "prop": "h731",
       "unit": "h731-C",
       "area": "Spokane",
-      "amount": 7.31,
+      "amount": 730.96,
       "cardholder": "Wade Hippen",
       "merchant": "Ace Hardware",
       "appliance": "air conditioner replacement"
     },
     {
-      "prop": "k104",
-      "unit": "k104-524-8",
-      "area": "Spokane",
-      "amount": 0.14,
-      "cardholder": "Wade Hippen",
-      "merchant": "True Value",
-      "appliance": "air conditioner cleaning spray"
-    },
-    {
-      "prop": "k104",
-      "unit": "k104-524-8",
-      "area": "Spokane",
-      "amount": 0.32,
-      "cardholder": "Wade Hippen",
-      "merchant": "True Value",
-      "appliance": "air conditioner filter replacement"
-    },
-    {
-      "prop": "c302",
-      "unit": "c302-14",
-      "area": "Spokane",
-      "amount": -1.65,
-      "cardholder": "Wade Hippen",
-      "merchant": "Reliable Parts",
-      "appliance": "Refund for dishwasher motor replacement parts"
-    },
-    {
       "prop": "k308",
       "unit": "k308-316-A",
       "area": "Spokane",
-      "amount": 2.32,
+      "amount": 587.51,
       "cardholder": "Wade Hippen",
-      "merchant": "Reliable Parts",
-      "appliance": "washer timer replacement"
+      "merchant": "Lowe's",
+      "appliance": "washing machine replacement"
+    },
+    {
+      "prop": "kn47",
+      "unit": "kn47-k1-M105",
+      "area": "Tri-Cities",
+      "amount": 716.69,
+      "cardholder": "Jaxson Lakins ",
+      "merchant": "Fred's Appliance",
+      "appliance": "Purchased fridge to replace broken one"
+    },
+    {
+      "prop": "c313",
+      "unit": "c313-4",
+      "area": "Spokane",
+      "amount": 184.38,
+      "cardholder": "Justin  Gutierrez ",
+      "merchant": "The Home Depot",
+      "appliance": "General maintenance hardware and materials"
     },
     {
       "prop": "w226",
       "unit": "w226-1",
       "area": "Spokane",
-      "amount": 0.76,
+      "amount": 76.29,
       "cardholder": "Wade Hippen",
       "merchant": "Lowe's",
       "appliance": "dehumidifier for tenant"
     },
     {
-      "prop": "h731",
-      "unit": "h731-C",
-      "area": "Spokane",
-      "amount": 0.39,
-      "cardholder": "Wade Hippen",
-      "merchant": "Ace Hardware",
-      "appliance": "air conditioner cleaning supplies"
+      "prop": "kn47",
+      "unit": "kn47-k1-H201",
+      "area": "Tri-Cities",
+      "amount": 716.69,
+      "cardholder": "Jaxson Lakins ",
+      "merchant": "Fred's Appliance",
+      "appliance": "Purchased fridge to replace broken one"
     },
     {
       "prop": "m608",
       "unit": "m608-1",
       "area": "Spokane",
-      "amount": 8.1,
+      "amount": 809.92,
       "cardholder": "Wade Hippen",
       "merchant": "Lowe's",
       "appliance": "Range replacement"
     },
     {
-      "prop": "c302",
-      "unit": "c302-14",
-      "area": "Spokane",
-      "amount": 3.04,
-      "cardholder": "Wade Hippen",
-      "merchant": "Reliable Parts",
-      "appliance": "dishwasher motor replacement parts"
-    },
-    {
-      "prop": "k104",
-      "unit": "k104-519-104",
-      "area": "Spokane",
-      "amount": 0.57,
-      "cardholder": "Wade Hippen",
-      "merchant": "The Home Depot",
-      "appliance": "air conditioner support for tenant"
-    },
-    {
-      "prop": "rl16",
-      "unit": null,
+      "prop": "kn47",
+      "unit": "kn47-k1-L206",
       "area": "Tri-Cities",
-      "amount": 0.1,
-      "cardholder": "isaac chavez",
-      "merchant": "PayRange",
-      "appliance": "Purchase for laundry equipment troubleshooting."
-    },
-    {
-      "prop": "m405",
-      "unit": "m405-8",
-      "area": "Spokane",
-      "amount": 0.52,
-      "cardholder": "Wade Hippen",
-      "merchant": "Reliable Parts",
-      "appliance": "oven bake element replacement"
-    },
-    {
-      "prop": "w226",
-      "unit": null,
-      "area": "Spokane",
-      "amount": 0.25,
-      "cardholder": "Wade Hippen",
-      "merchant": "PayRange",
-      "appliance": "PayRange maintenance service"
-    },
-    {
-      "prop": "p705",
-      "unit": "p705-10",
-      "area": "Spokane",
-      "amount": 1.92,
-      "cardholder": "Wade Hippen",
-      "merchant": "Reliable Parts",
-      "appliance": "Whirlpool washer replacement timer"
+      "amount": 331.29,
+      "cardholder": "Jaxson Lakins ",
+      "merchant": "Fred's Appliance",
+      "appliance": "Purchased dishwasher from Fred appliance to replace broken one"
     },
     {
       "prop": "o155",
       "unit": "o155-Oak-B4",
       "area": "Spokane",
-      "amount": 0.28,
+      "amount": 27.61,
       "cardholder": "Wade Hippen",
       "merchant": "Spokane Waste To Energy",
       "appliance": "refrigerator disposal"
@@ -251,7 +179,7 @@
       "prop": "o155",
       "unit": "o155-Oak-B4",
       "area": "Spokane",
-      "amount": 7.62,
+      "amount": 761.91,
       "cardholder": "Wade Hippen",
       "merchant": "Lowe's",
       "appliance": "replacement refrigerator"
