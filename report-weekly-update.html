@@ -54,7 +54,14 @@
 * { box-sizing: border-box; }
 html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
 body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
-.wrap { max-width: 1040px; margin: 0 auto; }
+.wrap { max-width: 680px; margin: 0 auto; }
+
+@page { size: A4; margin: 18mm; }
+@media print {
+  body { padding: 0; }
+  .wrap { max-width: none; }
+  .week-picker, footer { display: none; }
+}
 
 .masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
 .masthead-id { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
@@ -90,6 +97,7 @@ tr.total td { font-weight: 600; background: var(--paper); }
 }
 .week-picker select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 td.ref { font-family: 'Space Mono', monospace; font-weight: 700; color: var(--maint-ink); }
+td.num.bad { background: color-mix(in srgb, var(--bad) 18%, var(--surface)); font-weight: 500; }
 .rating-tag { font-family: 'Space Mono', monospace; }
 .rating-tag.good { color: var(--good); font-weight: 700; }
 .rating-tag.na { color: var(--ink-soft); }
@@ -149,28 +157,8 @@ footer a { color: var(--ink-soft); }
   </section>
 
   <section>
-    <p class="section-label" id="by-tech-label">By Technician</p>
+    <p class="section-label" id="by-tech-label">Maintenance Team KPI's</p>
     <div id="by-tech-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
-  </section>
-
-  <section>
-    <p class="section-label" id="ramp300-label">Ramp Purchases Over $300 &mdash; Maintenance Service Team</p>
-    <div id="ramp300-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
-  </section>
-
-  <section>
-    <p class="section-label" id="cost-by-property-label">Cost by Property</p>
-    <div id="cost-by-property-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
-  </section>
-
-  <section>
-    <p class="section-label">Monthly Budget vs Spent &mdash; MTD</p>
-    <div id="budget-vs-spent-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
-  </section>
-
-  <section>
-    <p class="section-label">Operational Expenses &mdash; MTD</p>
-    <div id="opex-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
   </section>
 
   <section id="narrative-section" style="display:none;">
@@ -179,17 +167,28 @@ footer a { color: var(--ink-soft); }
   </section>
 
   <section>
-    <p class="section-label">What I'm Working On Next Week</p>
-    <div id="priorities-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+    <p class="section-label">Monthly Budget</p>
+    <div id="budget-vs-spent-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
   </section>
 
   <section>
-    <p class="section-label">Priorities Next Week</p>
-    <div class="prose" style="font-size:14px;">
-      <p>1 &mdash; Automate Tri-Cities scheduling<br>
-      2 &mdash; Onboarding a new team member to the Spokane team<br>
-      3 &mdash; Find a handyman for Missoula</p>
-    </div>
+    <p class="section-label">Operational Expenses &mdash; MTD</p>
+    <div id="opex-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
+
+  <section>
+    <p class="section-label">Cost by Property &mdash; Over Budget (MTD)</p>
+    <div id="cost-by-property-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
+
+  <section>
+    <p class="section-label" id="ramp300-label">Ramp Purchases Over $300 &mdash; Maintenance Service Team</p>
+    <div id="ramp300-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
+
+  <section>
+    <p class="section-label">What I'm Working On Next Week</p>
+    <div id="priorities-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
   </section>
 
   <footer>
@@ -228,48 +227,58 @@ function renderByTechnician(items) {
 
 function renderKpis(kpis) {
   if (!kpis || !kpis.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not added yet.</p>';
-  var head = '<tr><th>KPI</th><th>Achieving (Goal)</th><th>Performing</th><th>Actual</th></tr>';
+  var head = '<tr><th>KPI</th><th class="num">Q1 Average</th><th class="num">Q2 Average</th><th class="num">Last 30 Days</th><th class="num">Last 7 Days</th></tr>';
   var body = kpis.map(function(k) {
-    return '<tr><td>' + esc(k.metric) + '</td><td>' + (k.goal || '&mdash;') + '</td><td>' + (k.performing || '&mdash;') + '</td><td>' + (k.actual || '&mdash;') + '</td></tr>';
+    return '<tr><td>' + esc(k.metric) + '</td><td class="num">' + (k.q1 != null ? k.q1 : '&mdash;') + '</td><td class="num">' + (k.q2 != null ? k.q2 : '&mdash;') + '</td><td class="num">' + (k.last_30 != null ? k.last_30 : '&mdash;') + '</td><td class="num">' + (k.last_7 != null ? k.last_7 : '&mdash;') + '</td></tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
 function renderRamp300(items) {
   if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No purchases over $300 this week.</p>';
-  var head = '<tr><th>Date</th><th>Merchant</th><th>Cardholder</th><th class="num">Amount</th><th class="detail">Memo</th></tr>';
+  var head = '<tr><th>W.O.</th><th>Property</th><th>Cardholder</th><th class="num">Amount</th></tr>';
   var body = items.map(function(p) {
-    return '<tr><td>' + esc(p.date) + '</td><td>' + esc(p.merchant) + '</td><td>' + esc(p.cardholder) + '</td><td class="num">' + money(p.amount) + '</td><td class="detail">' + esc(p.memo) + '</td></tr>';
+    return '<tr><td class="ref">' + (esc(p.ref) || '&mdash;') + '</td><td class="ref">' + (esc(p.property) || '&mdash;') + '</td><td>' + esc(p.cardholder) + '</td><td class="num">' + money(p.amount) + '</td></tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
 function renderCostByProperty(items) {
-  if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No property costs this week yet.</p>';
-  var head = '<tr><th>Property</th><th class="num">Cost</th></tr>';
+  if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No properties over budget this month.</p>';
+  var head = '<tr><th>Property</th><th class="num">Labor</th><th class="num">Materials</th><th class="num">Total</th><th class="num">Budget</th><th class="num">Over Budget</th></tr>';
   var body = items.map(function(p) {
-    return '<tr><td class="ref">' + esc(p.property) + '</td><td class="num">' + money(p.cost) + '</td></tr>';
+    return '<tr><td class="ref">' + esc(p.property) + '</td><td class="num">' + money(p.labor) + '</td><td class="num">' + money(p.materials) + '</td><td class="num">' + money(p.cost) + '</td><td class="num">' + money(p.budget) + '</td><td class="num bad">+' + p.pct_over_budget + '%</td></tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
-function renderBudgetVsSpent(mtd) {
-  if (!mtd || !mtd.budget_vs_spent_mtd) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not available.</p>';
-  var b = mtd.budget_vs_spent_mtd;
+function renderMonthlyBudget(mtd) {
+  if (!mtd || !mtd.monthly_budget) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not available.</p>';
+  var b = mtd.monthly_budget;
+  var varClass = b.variance != null && b.variance < 0 ? 'bad' : 'good';
   return '<div class="stat-row">' +
     '<div class="stat"><p class="stat-label">Budget</p><p class="stat-value">' + money(b.budget) + '</p></div>' +
-    '<div class="stat"><p class="stat-label">Actual</p><p class="stat-value">' + money(b.actual) + '</p></div>' +
-    '<div class="stat"><p class="stat-label">Budget Spent</p><p class="stat-value ' + (b.pct_spent > 100 ? 'bad' : 'good') + '">' + (b.pct_spent != null ? b.pct_spent + '%' : '&mdash;') + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Labor</p><p class="stat-value">' + money(b.labor) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Materials</p><p class="stat-value">' + money(b.materials) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Total Actual</p><p class="stat-value">' + money(b.total_actual) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Variance</p><p class="stat-value ' + varClass + '">' + money(b.variance) + '</p></div>' +
     '</div>';
 }
 
 function renderOpex(mtd) {
   if (!mtd || !mtd.operational_expenses || !mtd.operational_expenses.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not available.</p>';
-  var head = '<tr><th>Category</th><th class="num">Amount</th></tr>';
-  var body = mtd.operational_expenses.map(function(e) {
-    return '<tr><td>' + esc(e.category) + '</td><td class="num">' + money(e.amount) + '</td></tr>';
-  }).join('');
-  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+  var byCat = {};
+  mtd.operational_expenses.forEach(function(e) { byCat[e.category] = e.amount; });
+  function group(cats) {
+    var head = '<tr><th>Category</th><th class="num">Amount</th></tr>';
+    var body = cats.map(function(c) {
+      return '<tr><td>' + esc(c) + '</td><td class="num">' + money(byCat[c]) + '</td></tr>';
+    }).join('');
+    return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+  }
+  return group(['Auto', 'Supplies and Tools', 'Appliances']) +
+    '<div style="height:16px;"></div>' +
+    group(['Grounds', 'Maintenance']);
 }
 
 function renderNarrativeGroup(g) {
@@ -311,27 +320,29 @@ function renderPriorities(items) {
 var ts = Date.now();
 var mtdData = null;
 
+function renderMtdSections() {
+  if (!mtdData) return;
+  document.getElementById('budget-vs-spent-container').innerHTML = renderMonthlyBudget(mtdData);
+  document.getElementById('opex-container').innerHTML = renderOpex(mtdData);
+  document.getElementById('cost-by-property-container').innerHTML = renderCostByProperty(mtdData.cost_by_property);
+}
+
 function renderWeek(data) {
   document.getElementById('top-wo-label').textContent = 'Top 10 Work Orders — ' + data.label;
-  document.getElementById('by-tech-label').textContent = 'By Technician — ' + data.label;
+  document.getElementById('by-tech-label').textContent = 'Maintenance Team KPI\'s — ' + data.label;
   document.getElementById('ramp300-label').textContent = 'Ramp Purchases Over $300 — Maintenance Service Team — ' + data.label;
-  document.getElementById('cost-by-property-label').textContent = 'Cost by Property — ' + data.label;
 
   document.getElementById('kpis-container').innerHTML = renderKpis(data.kpis);
   document.getElementById('top-wo-container').innerHTML = renderTopWorkOrders(data.top_work_orders);
   document.getElementById('by-tech-container').innerHTML = renderByTechnician(data.by_technician);
   document.getElementById('ramp300-container').innerHTML = renderRamp300(data.ramp_purchases_over_300);
-  document.getElementById('cost-by-property-container').innerHTML = renderCostByProperty(data.cost_by_property);
   document.getElementById('priorities-container').innerHTML = renderPriorities(data.priorities_next_week);
 
   var n = renderNarrative(data.narrative);
   document.getElementById('narrative-section').style.display = n.visible ? '' : 'none';
   document.getElementById('narrative-container').innerHTML = n.html;
 
-  if (mtdData) {
-    document.getElementById('budget-vs-spent-container').innerHTML = renderBudgetVsSpent(mtdData);
-    document.getElementById('opex-container').innerHTML = renderOpex(mtdData);
-  }
+  renderMtdSections();
 
   document.getElementById('sent-label').textContent = 'Data as of ' + data.generated_at;
   document.getElementById('updated-label').textContent = 'Updated ' + data.generated_at;
@@ -343,7 +354,7 @@ function loadWeek(key) {
   });
 }
 
-fetch('./data/weekly-mtd.json?_=' + ts).then(function(r) { return r.json(); }).then(function(data) { mtdData = data; }).catch(function() {});
+fetch('./data/weekly-mtd.json?_=' + ts).then(function(r) { return r.json(); }).then(function(data) { mtdData = data; renderMtdSections(); }).catch(function() {});
 
 fetch('./data/weekly-manifest.json?_=' + ts).then(function(r) { return r.json(); }).then(function(manifest) {
   var select = document.getElementById('week-select');

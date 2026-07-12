@@ -1,44 +1,35 @@
 {
   "month": "2026-07",
   "generated_at": "2026-07-12",
-  "source": "AppFolio (budget/actual MTD, accrual) + Ramp (opex by category, R&M team) — automated",
-  "budget_vs_spent_mtd": {
-    "budget": 450668.52,
-    "actual": 3740,
-    "pct_spent": 0.8
+  "source": "AppFolio (R&M - Repairs budget, monthly + per-property) + QBT (labor) + Ramp (materials/opex by category) — automated",
+  "monthly_budget": {
+    "budget": 67267.78,
+    "labor": 4420.11,
+    "materials": 60.08,
+    "total_actual": 4480.19,
+    "variance": 62787.59
   },
   "operational_expenses": [
     {
-      "category": "Car services",
-      "amount": 0.44
+      "category": "Auto",
+      "amount": 5.68
     },
     {
-      "category": "Office",
-      "amount": 32.02
+      "category": "Supplies and Tools",
+      "amount": 0.61
     },
     {
-      "category": "General Merchandise",
-      "amount": 16.27
+      "category": "Appliances",
+      "amount": 13.8
     },
     {
-      "category": "Government Services",
-      "amount": 3.03
+      "category": "Grounds",
+      "amount": 3.37
     },
     {
-      "category": "Internet and Phone",
-      "amount": 0.1
-    },
-    {
-      "category": "Fuel and Gas",
-      "amount": 3.15
-    },
-    {
-      "category": "Professional Services",
-      "amount": 0.72
-    },
-    {
-      "category": "Medical",
-      "amount": 10.5
+      "category": "Maintenance",
+      "amount": 59.47
     }
-  ]
+  ],
+  "cost_by_property": []
 }

@@ -7,43 +7,61 @@
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": null,
+      "last_30": 13.17,
+      "last_7": 12.48
+    },
+    {
       "metric": "Emergency Work Order Completion Time",
-      "goal": null,
-      "performing": null,
-      "actual": null
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
     },
     {
       "metric": "Work Order Resident Satisfaction",
-      "goal": null,
-      "performing": null,
-      "actual": null
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
     },
     {
       "metric": "Avg Vendor Completion Time",
-      "goal": null,
-      "performing": null,
-      "actual": null
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
     },
     {
       "metric": "Avg Speed of Repair",
-      "goal": null,
-      "performing": null,
-      "actual": null
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
     },
     {
       "metric": "Time to Assignment",
-      "goal": null,
-      "performing": null,
-      "actual": null
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
     },
     {
       "metric": "Time to Schedule",
-      "goal": null,
-      "performing": null,
-      "actual": null
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
     }
   ],
   "top_work_orders": [
+    {
+      "ref": "TL23LGN",
+      "brief": "roof leak (clone)",
+      "cost": 191.55
+    },
     {
       "ref": "TGZT14D",
       "brief": "Leak in crawl space",
@@ -53,6 +71,11 @@
       "ref": "TWXFPV2",
       "brief": "Coded lock indicator light doesn't light up. Please check batteries, they may be dead.",
       "cost": 100
+    },
+    {
+      "ref": "TZQE4L",
+      "brief": "see list below",
+      "cost": 98.1
     },
     {
       "ref": "TKDZTUK",
@@ -70,180 +93,64 @@
       "cost": 77.18
     },
     {
-      "ref": "T2M94U8",
-      "brief": "Our Dryer Fuse Went Out So I Have Wet Clothes That Are Not Drying",
-      "cost": 51.86
+      "ref": "TIT9N0GB",
+      "brief": "07/06 - Attend Follow Up - Units H105/106/107/108/205/206/207/208",
+      "cost": 71.1
     },
     {
-      "ref": "TK8PI3G",
-      "brief": "Garbage Disposal And Front Door Door Knob",
-      "cost": 50.86
+      "ref": "T3W7BCU",
+      "brief": "07/06 -Attend 1st Treatment - Units D27/28/29/23/24-E31/34",
+      "cost": 67.95
     },
     {
-      "ref": "TQWF5LL",
-      "brief": "Smoke detector ",
-      "cost": 50.22
-    },
-    {
-      "ref": "TE5918V",
-      "brief": "Kitchen Sink Is Leaking",
-      "cost": 47.33
-    },
-    {
-      "ref": "TZPKA2H",
-      "brief": "Resident is not happy he Needs mail and laundry room key",
-      "cost": 41.67
+      "ref": "TF6NPGP",
+      "brief": "Meet Pye Barker For B & C building fire alarm repairs",
+      "cost": 58.95
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 35,
-      "avg_cost_per_wo": 11.25,
-      "total_labor_cost": 391.86,
-      "avg_resident_rating": 5,
-      "comments": []
-    },
-    {
-      "name": "Justin Gutierrez",
-      "wo_count": 9,
-      "avg_cost_per_wo": 53.07,
-      "total_labor_cost": 454.17,
+      "wo_count": 39,
+      "avg_cost_per_wo": 16.43,
+      "total_labor_cost": 637.64,
       "avg_resident_rating": 5,
       "comments": []
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 9,
-      "avg_cost_per_wo": 7.62,
-      "total_labor_cost": 67.05,
+      "wo_count": 15,
+      "avg_cost_per_wo": 12.16,
+      "total_labor_cost": 180.9,
       "avg_resident_rating": null,
       "comments": []
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 6,
-      "avg_cost_per_wo": 31.25,
-      "total_labor_cost": 186.4,
+      "wo_count": 14,
+      "avg_cost_per_wo": 30.22,
+      "total_labor_cost": 420,
       "avg_resident_rating": null,
       "comments": []
     },
     {
+      "name": "Justin Gutierrez",
+      "wo_count": 13,
+      "avg_cost_per_wo": 40.54,
+      "total_labor_cost": 502.08,
+      "avg_resident_rating": 5,
+      "comments": []
+    },
+    {
       "name": "Isaac Chavez",
-      "wo_count": 5,
-      "avg_cost_per_wo": 9.72,
-      "total_labor_cost": 48.6,
+      "wo_count": 12,
+      "avg_cost_per_wo": 27.53,
+      "total_labor_cost": 298.35,
       "avg_resident_rating": null,
       "comments": []
     }
   ],
   "ramp_purchases_over_300": [],
-  "cost_by_property": [
-    {
-      "property": "M5X2 FUND III LLC",
-      "cost": 1193.98
-    },
-    {
-      "property": "M5X2 FUND IV",
-      "cost": 1137.58
-    },
-    {
-      "property": "PALOUSE HOMES",
-      "cost": 753.77
-    },
-    {
-      "property": "M5X2 FUND I LLC",
-      "cost": 345.39
-    },
-    {
-      "property": "B & P INVESTMENTS 6 LLC",
-      "cost": 95.83
-    },
-    {
-      "property": "M5X2 FUND II LLC",
-      "cost": 76.25
-    },
-    {
-      "property": "KN47",
-      "cost": 47.8
-    },
-    {
-      "property": "TC68",
-      "cost": 44.09
-    },
-    {
-      "property": "J312",
-      "cost": 26.38
-    },
-    {
-      "property": "TC34",
-      "cost": 19.22
-    },
-    {
-      "property": "RL16",
-      "cost": 12.91
-    },
-    {
-      "property": "L912",
-      "cost": 12.5
-    },
-    {
-      "property": "R203",
-      "cost": 10.59
-    },
-    {
-      "property": "PS25",
-      "cost": 9.37
-    },
-    {
-      "property": "HL65",
-      "cost": 8.69
-    },
-    {
-      "property": "W225",
-      "cost": 3.38
-    },
-    {
-      "property": "C313",
-      "cost": 3.37
-    },
-    {
-      "property": "V202",
-      "cost": 2.87
-    },
-    {
-      "property": "M221",
-      "cost": 1.4
-    },
-    {
-      "property": "PS17",
-      "cost": 1.37
-    },
-    {
-      "property": "K104",
-      "cost": 1.33
-    },
-    {
-      "property": "EX",
-      "cost": 1.31
-    },
-    {
-      "property": "O155",
-      "cost": 0.86
-    },
-    {
-      "property": "C302",
-      "cost": 0.66
-    },
-    {
-      "property": "PS91",
-      "cost": 0.2
-    },
-    {
-      "property": "RL21",
-      "cost": 0.04
-    }
-  ],
   "narrative": null,
   "priorities_next_week": null
 }
