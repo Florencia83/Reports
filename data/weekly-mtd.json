@@ -11,36 +11,12 @@
   },
   "cost_by_property": [
     {
-      "property": "J312",
-      "labor": 229.58,
-      "materials": 2650.56,
-      "cost": 2880.14,
-      "budget": 587.62,
-      "pct_over_budget": 390.1
-    },
-    {
       "property": "B101",
       "labor": 66.67,
-      "materials": 2398.47,
-      "cost": 2465.14,
+      "materials": 2365.3,
+      "cost": 2431.97,
       "budget": 671.7,
-      "pct_over_budget": 267
-    },
-    {
-      "property": "HL65",
-      "labor": 0,
-      "materials": 868.99,
-      "cost": 868.99,
-      "budget": 500.4,
-      "pct_over_budget": 73.7
-    },
-    {
-      "property": "TC34",
-      "labor": 149.85,
-      "materials": 1945.79,
-      "cost": 2095.64,
-      "budget": 1459.9,
-      "pct_over_budget": 43.5
+      "pct_over_budget": 262.1
     }
   ]
 }

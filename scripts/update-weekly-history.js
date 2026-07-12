@@ -333,9 +333,19 @@ function materialsByRef(records) {
   records.forEach(r => { if (!r.ref) return; out[r.ref] = (out[r.ref] || 0) + r.amount; });
   return out;
 }
+// Only R&M-Material/Contractor + Supplies and Tools count toward a property's R&M -
+// Repairs budget comparison -- Turn/CapEx/Grounds spend on that property is a different
+// budget line entirely. Same GL scope as materialsBudgetTotal (and matches LeeRoy's
+// RM_GLS in his equivalent report). Missing this filter is why Cost by Property showed
+// properties as wildly over budget when a Turn-Material purchase happened to share
+// their Department code (found 2026-07-19, e.g. a $557.85 Home Depot Turn charge
+// coded to j312's Department).
 function materialsByProperty(records) {
   const out = {};
-  records.forEach(r => { if (!r.property) return; out[r.property] = (out[r.property] || 0) + r.amount; });
+  records.forEach(r => {
+    if (!r.property || !MATERIALS_GL_IDS.includes(r.glId)) return;
+    out[r.property] = (out[r.property] || 0) + r.amount;
+  });
   return out;
 }
 function over300List(records) {
