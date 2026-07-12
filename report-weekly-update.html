@@ -76,6 +76,26 @@ td.num, th.num { font-family: 'Space Mono', monospace; font-variant-numeric: tab
 td.detail, th.detail { white-space: normal; min-width: 220px; color: var(--ink-soft); }
 tr:last-child td { border-bottom: none; }
 tr.total td { font-weight: 600; background: var(--paper); }
+.week-picker { font-family: 'Space Mono', monospace; font-size: 12px; }
+.week-picker select {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.week-picker select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+td.ref { font-family: 'Space Mono', monospace; font-weight: 700; color: var(--maint-ink); }
+.rating-tag { font-family: 'Space Mono', monospace; }
+.rating-tag.good { color: var(--good); font-weight: 700; }
+.rating-tag.na { color: var(--ink-soft); }
+.comment-block { padding: 4px 0 2px; }
+.comment-block .cref { font-family: 'Space Mono', monospace; font-size: 10.5px; color: var(--maint-ink); font-weight: 700; margin-right: 6px; }
+
 .pill { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; display: inline-block; }
 .pill.bad { background: color-mix(in srgb, var(--bad) 16%, var(--surface)); color: var(--bad); }
 .pill.warn { background: color-mix(in srgb, var(--warn) 16%, var(--surface)); color: var(--warn); }
@@ -111,8 +131,10 @@ footer a { color: var(--ink-soft); }
       <h1>Maintenance Service Weekly Update</h1>
     </div>
     <div class="masthead-meta">
-      <strong>06/29 &ndash; 07/05</strong><br>
-      2026
+      <div class="week-picker" style="margin-bottom:6px;">
+        <select id="week-select"></select>
+      </div>
+      <span id="sent-label"></span>
     </div>
   </div>
 
@@ -127,7 +149,7 @@ footer a { color: var(--ink-soft); }
     <p class="section-label">Tacoma</p>
     <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px;">
       <div class="callout maintenance">
-        <p style="font-family:'Oswald',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--maint-ink);">Maintenance Service</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--maint-ink);">Maintenance Service</p>
         <div class="prose" style="font-size:13.5px;">
           <p><strong>Operations Review:</strong> We are currently reinforcing purchase requirements, approval processes, and time-entry categorizations. This is essential to ensure correct documentation for work orders and turns.</p>
           <p><strong>Performance Update:</strong> This transition has been a major challenge. Technicians were not used to following structured procedures and pushed back against management when asked for results. Initially, the backlog was a constant issue and all of Jonas's KPIs were in red. However, we have successfully cleared the backlog. Jonas has shown willingness to learn, and is now following instructions, adhering to approval workflows, and documenting Melds correctly.</p>
@@ -135,7 +157,7 @@ footer a { color: var(--ink-soft); }
         </div>
       </div>
       <div class="callout finance">
-        <p style="font-family:'Oswald',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--finance-ink);">Grounds</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--finance-ink);">Grounds</p>
         <div class="prose" style="font-size:13.5px;">
           <p><strong>Operations Review:</strong> The grounds in Tacoma continue to be managed by professional landscapers.</p>
           <p><strong>Performance Update:</strong> The recurring Melds rely entirely on Jonas to add photos of the completed work and monitor the irrigation systems.</p>
@@ -149,7 +171,7 @@ footer a { color: var(--ink-soft); }
     <p class="section-label">Spokane</p>
     <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px;">
       <div class="callout maintenance">
-        <p style="font-family:'Oswald',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--maint-ink);">Maintenance Service</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--maint-ink);">Maintenance Service</p>
         <div class="prose" style="font-size:13.5px;">
           <p><strong>Operations Review:</strong> Following Wade's resignation 10 days ago, I stepped in to support Justin with daily coordination, timely approvals, and fast response times.</p>
           <p><strong>Performance Update:</strong> Working closely with Justin has shown me that he is highly accountable. Over the past few days, he has received numerous messages from residents via Property Meld thanking him for his dedication and quick resolution of their issues.</p>
@@ -157,7 +179,7 @@ footer a { color: var(--ink-soft); }
         </div>
       </div>
       <div class="callout finance">
-        <p style="font-family:'Oswald',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--finance-ink);">Grounds</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--finance-ink);">Grounds</p>
         <div class="prose" style="font-size:13.5px;">
           <p><strong>Operations Review:</strong> Grounds maintenance successfully remains with David and Alexander.</p>
           <p><strong>Performance Update:</strong> Both guys have quickly adapted to our documentation processes, they complete consistent time entries, request necessary approvals, and keep up-to-date with lawn care and irrigation across all properties.</p>
@@ -171,7 +193,7 @@ footer a { color: var(--ink-soft); }
     <p class="section-label">Tri-Cities</p>
     <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px;">
       <div class="callout maintenance">
-        <p style="font-family:'Oswald',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--maint-ink);">Maintenance Service</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--maint-ink);">Maintenance Service</p>
         <div class="prose" style="font-size:13.5px;">
           <p><strong>Operations Review:</strong> This team is overseen by Isaac, who maintains professional communication and effectively coordinates repairs and escalations.</p>
           <p><strong>Performance Update:</strong> Both Jaxson and Jared remain highly accountable despite heavy workloads. Jared acts as our dedicated pool attendant, taking full ownership of cleaning, safety compliance, and licensing. Jaxson is a fast, multitasking technician who is very transparent and consistently provides the necessary context to complete work orders in time.</p>
@@ -179,7 +201,7 @@ footer a { color: var(--ink-soft); }
         </div>
       </div>
       <div class="callout finance">
-        <p style="font-family:'Oswald',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--finance-ink);">Grounds</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif; font-weight:600; text-transform:uppercase; font-size:13px; letter-spacing:0.04em; margin:0 0 8px; color:var(--finance-ink);">Grounds</p>
         <div class="prose" style="font-size:13.5px;">
           <p><strong>Operations Review:</strong> Hannah's compliance with our procedures is excellent. Reynaldo and I worked closely on the documentation process over the last couple of weeks.</p>
           <p><strong>Performance Update:</strong> Reynaldo has successfully adapted to the new system and is executing the documentation process well. We are still working on the communication process and accountability to keep the lawns and irrigation systems up to date.</p>
@@ -198,20 +220,13 @@ footer a { color: var(--ink-soft); }
   </section>
 
   <section>
-    <p class="section-label">Costs by Work Order &mdash; MTD &mdash; Over $300</p>
-    <div class="table-wrap"><table>
-    <tr><th>Work Order</th><th class="detail">Note</th></tr>
-    <tr><td>Water heater replacement</td><td class="detail">Total will be updated when the invoice is paid and categorized.</td></tr>
-<tr><td>Attend Pest Control Inspections</td><td class="detail"></td></tr>
-<tr><td>Dishwasher installation and adjustment</td><td class="detail"></td></tr>
-<tr><td>Annual Fire Alarm Inspection attendance</td><td class="detail"></td></tr>
-<tr><td>Burnt elements from 3 water heaters at the property</td><td class="detail">Total will be updated when the invoice is paid and categorized.</td></tr>
-<tr><td>Bathroom fan replaced</td><td class="detail"></td></tr>
-<tr><td>Follow up inspection attendance</td><td class="detail"></td></tr>
-<tr><td>Drywall repair and paint</td><td class="detail"></td></tr>
-<tr><td>Several issues after move in</td><td class="detail"></td></tr>
-<tr><td>Anode rod in water heater replacement</td><td class="detail"></td></tr>
-  </table></div>
+    <p class="section-label" id="top-wo-label">Top 10 Work Orders</p>
+    <div id="top-wo-container"><p class="empty" style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
+
+  <section>
+    <p class="section-label" id="by-tech-label">By Technician</p>
+    <div id="by-tech-container"><p class="empty" style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
   </section>
 
   <section>
@@ -248,6 +263,64 @@ footer a { color: var(--ink-soft); }
 
   <footer>
     <span><a href="index.html">&larr; Back to Reports</a></span>
-    <span>Updated 2026-07-06</span>
+    <span id="updated-label">Updated 2026-07-06</span>
   </footer>
 </div>
+
+<script>
+function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+function renderTopWorkOrders(items) {
+  if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No completed work orders this week yet.</p>';
+  var head = '<tr><th>Meld Ref</th><th class="num">Cost</th><th class="detail">Description</th></tr>';
+  var body = items.map(function(w) {
+    return '<tr><td class="ref">' + esc(w.ref) + '</td><td class="num">' + money(w.cost) + '</td><td class="detail">' + esc(w.brief) + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+function renderByTechnician(items) {
+  if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No completed work orders assigned to a technician this week yet.</p>';
+  var head = '<tr><th>Name</th><th class="num">W.O.\'s</th><th class="num">Avg Cost/W.O.</th><th class="num">Total Labor</th><th class="num">Rating</th><th class="detail">Comments</th></tr>';
+  var body = items.map(function(t) {
+    var ratingHtml = t.avg_resident_rating != null
+      ? '<span class="rating-tag good">' + t.avg_resident_rating.toFixed(2) + '</span>'
+      : '<span class="rating-tag na">n/a</span>';
+    var commentsHtml = (t.comments && t.comments.length)
+      ? t.comments.map(function(c) { return '<div class="comment-block"><span class="cref">' + esc(c.ref) + '</span>' + esc(c.text) + '</div>'; }).join('')
+      : '<span style="color:var(--ink-soft); font-style:italic;">No comments this week</span>';
+    return '<tr><td class="ref">' + esc(t.name) + '</td><td class="num">' + t.wo_count + '</td><td class="num">' + money(t.avg_cost_per_wo) + '</td><td class="num">' + money(t.total_labor_cost) + '</td><td class="num">' + ratingHtml + '</td><td class="detail">' + commentsHtml + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+var ts = Date.now();
+
+function loadWeek(key) {
+  fetch('./data/weekly-' + key + '.json?_=' + ts).then(function(r) { return r.json(); }).then(function(data) {
+    document.getElementById('top-wo-label').textContent = 'Top 10 Work Orders — ' + data.label;
+    document.getElementById('by-tech-label').textContent = 'By Technician — ' + data.label;
+    document.getElementById('top-wo-container').innerHTML = renderTopWorkOrders(data.top_work_orders);
+    document.getElementById('by-tech-container').innerHTML = renderByTechnician(data.by_technician);
+    document.getElementById('sent-label').textContent = 'Data as of ' + data.generated_at;
+    document.getElementById('updated-label').textContent = 'Updated ' + data.generated_at;
+  }).catch(function(err) {
+    document.getElementById('top-wo-container').innerHTML = '<div class="callout" style="font-size:13px;">Could not load data for this week: ' + err.message + '</div>';
+  });
+}
+
+fetch('./data/weekly-manifest.json?_=' + ts).then(function(r) { return r.json(); }).then(function(manifest) {
+  var select = document.getElementById('week-select');
+  manifest.weeks.forEach(function(w) {
+    var opt = document.createElement('option');
+    opt.value = w.key;
+    opt.textContent = w.label;
+    select.appendChild(opt);
+  });
+  select.addEventListener('change', function() { loadWeek(this.value); });
+  if (manifest.weeks.length) loadWeek(manifest.weeks[0].key);
+}).catch(function(err) {
+  document.getElementById('top-wo-container').innerHTML = '<div class="callout" style="font-size:13px;">Could not load week manifest: ' + err.message + '</div>';
+});
+</script>

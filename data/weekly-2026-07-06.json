@@ -1,0 +1,104 @@
+{
+  "week_start": "2026-07-06",
+  "week_end": "2026-07-12",
+  "label": "July 6 – 12, 2026",
+  "generated_at": "2026-07-11",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "top_work_orders": [
+    {
+      "ref": "TGZT14D",
+      "brief": "Leak in crawl space",
+      "cost": 172.66
+    },
+    {
+      "ref": "TWXFPV2",
+      "brief": "Coded lock indicator light doesn't light up. Please check batteries, they may be dead.",
+      "cost": 100
+    },
+    {
+      "ref": "TKDZTUK",
+      "brief": "No Water Pressure When Sing Is On Cold",
+      "cost": 96.49
+    },
+    {
+      "ref": "TY2TQQ1",
+      "brief": "tenant stated water will not turn off in shower",
+      "cost": 80.15
+    },
+    {
+      "ref": "TINK08F",
+      "brief": "No Water Is Coming Out Of The Shower",
+      "cost": 77.18
+    },
+    {
+      "ref": "T2M94U8",
+      "brief": "Our Dryer Fuse Went Out So I Have Wet Clothes That Are Not Drying",
+      "cost": 51.86
+    },
+    {
+      "ref": "TK8PI3G",
+      "brief": "Garbage Disposal And Front Door Door Knob",
+      "cost": 50.86
+    },
+    {
+      "ref": "TQWF5LL",
+      "brief": "Smoke detector ",
+      "cost": 50.22
+    },
+    {
+      "ref": "TE5918V",
+      "brief": "Kitchen Sink Is Leaking",
+      "cost": 47.33
+    },
+    {
+      "ref": "TZPKA2H",
+      "brief": "Resident is not happy he Needs mail and laundry room key",
+      "cost": 41.67
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jared Miller",
+      "wo_count": 32,
+      "avg_cost_per_wo": 12.3,
+      "total_labor_cost": 391.86,
+      "avg_resident_rating": 5,
+      "comments": []
+    },
+    {
+      "name": "Jonas Hoard",
+      "wo_count": 10,
+      "avg_cost_per_wo": 7.75,
+      "total_labor_cost": 76.05,
+      "avg_resident_rating": null,
+      "comments": []
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 9,
+      "avg_cost_per_wo": 53.07,
+      "total_labor_cost": 454.17,
+      "avg_resident_rating": 5,
+      "comments": []
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 6,
+      "avg_cost_per_wo": 31.25,
+      "total_labor_cost": 186.4,
+      "avg_resident_rating": null,
+      "comments": []
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 5,
+      "avg_cost_per_wo": 9.72,
+      "total_labor_cost": 48.6,
+      "avg_resident_rating": null,
+      "comments": []
+    }
+  ],
+  "kpis": null,
+  "narrative": null
+}
