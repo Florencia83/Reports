@@ -22,11 +22,20 @@ jobs:
           RAMP_CLIENT_SECRET: ${{ secrets.RAMP_CLIENT_SECRET }}
         run: node scripts/update-weekly-data.js
 
+      - name: Pull weekly history (Property Meld + QBT + Ramp)
+        env:
+          PROPERTYMELD_EMAIL: ${{ secrets.PROPERTYMELD_EMAIL }}
+          PROPERTYMELD_PASSWORD: ${{ secrets.PROPERTYMELD_PASSWORD }}
+          QBT_TOKEN: ${{ secrets.QBT_TOKEN }}
+          RAMP_CLIENT_ID: ${{ secrets.RAMP_CLIENT_ID }}
+          RAMP_CLIENT_SECRET: ${{ secrets.RAMP_CLIENT_SECRET }}
+        run: node scripts/update-weekly-history.js
+
       - name: Commit and push if changed
         run: |
           git config user.name "florencia-reports-bot"
           git config user.email "actions@github.com"
-          git add data/weekly-mtd.json
+          git add data/weekly-mtd.json data/weekly-*.json
           git diff --staged --quiet
           if ($LASTEXITCODE -eq 0) {
             Write-Host "No changes to commit"
