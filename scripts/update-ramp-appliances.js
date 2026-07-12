@@ -105,7 +105,9 @@ async function main() {
   }
 
   const items = all.filter(t => {
-    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
+    // Some Ramp card_holder names carry stray whitespace (e.g. trailing/double spaces)
+    // that breaks exact-string roster matching -- collapse/trim (found 2026-07-19).
+    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}`.trim().replace(/\s+/g, ' ') : '';
     if (!RM_TEAM.some(name => holderName.toLowerCase() === name.toLowerCase())) return false;
     const categoryNames = (t.accounting_categories || []).map(c => c.category_name || '').join(' ');
     const haystack = `${t.merchant_name || ''} ${t.memo || ''} ${categoryNames}`;
@@ -115,7 +117,10 @@ async function main() {
     return {
       prop, unit,
       area: areaForProp(prop),
-      amount: Math.round((t.amount / (t.minor_unit_conversion_rate || 100)) * 100) / 100,
+      // t.amount is already in dollars -- do not divide by minor_unit_conversion_rate
+      // (that field applies to the nested line_items[].amount, not the top-level amount;
+      // confirmed live 2026-07-19, this was double-converting every figure by 100x).
+      amount: Math.round(t.amount * 100) / 100,
       cardholder: t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : null,
       merchant: t.merchant_name || '',
       appliance: t.memo || t.merchant_name,

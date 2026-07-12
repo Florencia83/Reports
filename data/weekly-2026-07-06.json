@@ -10,8 +10,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": null,
-      "last_30": 13.17,
-      "last_7": 12.48
+      "last_30": 56.79,
+      "last_7": 53.66
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -58,61 +58,61 @@
   ],
   "top_work_orders": [
     {
-      "ref": "TL23LGN",
-      "brief": "roof leak (clone)",
-      "cost": 191.55
+      "ref": "TVJCXAV",
+      "brief": "The pump lost its prime its no longer working.",
+      "cost": 3202.01
     },
     {
       "ref": "TGZT14D",
       "brief": "Leak in crawl space",
-      "cost": 172.66
+      "cost": 2292.47
     },
     {
-      "ref": "TWXFPV2",
-      "brief": "Coded lock indicator light doesn't light up. Please check batteries, they may be dead.",
-      "cost": 100
+      "ref": "TV2UB2Q",
+      "brief": "D - Maintenance (clone)",
+      "cost": 305.63
     },
     {
-      "ref": "TZQE4L",
-      "brief": "see list below",
-      "cost": 98.1
-    },
-    {
-      "ref": "TKDZTUK",
-      "brief": "No Water Pressure When Sing Is On Cold",
-      "cost": 96.49
+      "ref": "TL23LGN",
+      "brief": "roof leak (clone)",
+      "cost": 291.54
     },
     {
       "ref": "TY2TQQ1",
       "brief": "tenant stated water will not turn off in shower",
-      "cost": 80.15
+      "cost": 218.99
+    },
+    {
+      "ref": "TNQQRICB",
+      "brief": "C - Paint Prep / Paint (clone)",
+      "cost": 167.84
     },
     {
       "ref": "TINK08F",
       "brief": "No Water Is Coming Out Of The Shower",
-      "cost": 77.18
+      "cost": 163.32
     },
     {
-      "ref": "TIT9N0GB",
-      "brief": "07/06 - Attend Follow Up - Units H105/106/107/108/205/206/207/208",
-      "cost": 71.1
+      "ref": "TY21EEFB",
+      "brief": "new blinds",
+      "cost": 162.01
     },
     {
-      "ref": "T3W7BCU",
-      "brief": "07/06 -Attend 1st Treatment - Units D27/28/29/23/24-E31/34",
-      "cost": 67.95
+      "ref": "TKDZTUK",
+      "brief": "No Water Pressure When Sing Is On Cold",
+      "cost": 161.38
     },
     {
-      "ref": "TF6NPGP",
-      "brief": "Meet Pye Barker For B & C building fire alarm repairs",
-      "cost": 58.95
+      "ref": "TEZZTLB",
+      "brief": "Crawl space insulation repair",
+      "cost": 143.26
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
       "wo_count": 39,
-      "avg_cost_per_wo": 16.43,
+      "avg_cost_per_wo": 24.15,
       "total_labor_cost": 637.64,
       "avg_resident_rating": 5,
       "comments": []
@@ -120,7 +120,7 @@
     {
       "name": "Jonas Hoard",
       "wo_count": 15,
-      "avg_cost_per_wo": 12.16,
+      "avg_cost_per_wo": 22,
       "total_labor_cost": 180.9,
       "avg_resident_rating": null,
       "comments": []
@@ -128,7 +128,7 @@
     {
       "name": "Jaxson Lakins",
       "wo_count": 14,
-      "avg_cost_per_wo": 30.22,
+      "avg_cost_per_wo": 51.65,
       "total_labor_cost": 420,
       "avg_resident_rating": null,
       "comments": []
@@ -136,7 +136,7 @@
     {
       "name": "Justin Gutierrez",
       "wo_count": 13,
-      "avg_cost_per_wo": 40.54,
+      "avg_cost_per_wo": 230.18,
       "total_labor_cost": 502.08,
       "avg_resident_rating": 5,
       "comments": []
@@ -144,17 +144,53 @@
     {
       "name": "Isaac Chavez",
       "wo_count": 12,
-      "avg_cost_per_wo": 27.53,
+      "avg_cost_per_wo": 291.7,
       "total_labor_cost": 298.35,
       "avg_resident_rating": null,
       "comments": []
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-07-10",
+      "ref": "TVJCXAV",
+      "property": "KN47",
+      "cardholder": "isaac chavez",
+      "amount": 3202.01
+    },
+    {
+      "date": "2026-07-10",
+      "ref": "TGZT14D",
+      "property": "J312",
+      "cardholder": "Justin Gutierrez",
+      "amount": 2080.17
+    },
+    {
+      "date": "2026-07-08",
+      "ref": "TZ4G8AZ",
+      "property": "TC34",
+      "cardholder": "Jonas Hoard",
+      "amount": 734.1
+    },
+    {
+      "date": "2026-07-11",
+      "ref": null,
+      "property": null,
+      "cardholder": "Justin Gutierrez",
+      "amount": 657.27
+    },
+    {
+      "date": "2026-07-06",
+      "ref": "TBVKHBP",
+      "property": "TC34",
+      "cardholder": "Jonas Hoard",
+      "amount": 551.4
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 8.1
+      "amount": 1007.11
     },
     {
       "category": "Supplies and Tools",
@@ -162,15 +198,15 @@
     },
     {
       "category": "Appliances",
-      "amount": 5.51
+      "amount": 551.4
     },
     {
       "category": "Grounds",
-      "amount": 3.96
+      "amount": 396.42
     },
     {
       "category": "Maintenance",
-      "amount": 7.75
+      "amount": 3774.71
     }
   ],
   "narrative": null,

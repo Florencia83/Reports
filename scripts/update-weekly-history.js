@@ -47,14 +47,20 @@ const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Laki
 const OPEX_TEAM = ['Justin Gutierrez', 'Jared Miller', 'Jaxson Lakins', 'Jonas Hoard', 'Isaac Chavez',
   'Reynaldo Leonides', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall'];
 // Every real transaction from this team carries QuickbooksClass "r203" (Ridgeview
-// Repairs & Renewals LLC) -- confirmed live 2026-07-19, 100% match across a week of
-// team spend. Used as a belt-and-suspenders scope check for Operational Expenses.
+// Repairs & Renewals LLC) or a "r203:<sub-class>" child of it -- confirmed live
+// 2026-07-19 against a full week, then against team spend since April (1166 txns).
+// Used as the scope check for Operational Expenses; r202 (a different corp entity) and
+// anything unrelated is excluded.
 const OPEX_CLASS = 'r203';
 
-// Ramp's own chart-of-accounts GL category_id per bucket (confirmed live 2026-07-12
-// against real RM_TEAM transactions -- accounting_categories[] entries where
-// tracking_category_remote_type === 'GL_ACCOUNT'). Grounds/Maintenance are Material
-// only -- Contractor invoices are excluded from Operational Expenses on purpose.
+// GL account is the reliably-populated field on every transaction. QuickbooksClass
+// sub-values (e.g. "r203:Grounds", "r203:R&M-Hardware") exist but aren't consistently
+// filled in -- confirmed live 2026-07-19: real Grounds/R&M-Material transactions this
+// week all carried a bare "r203" class, no sub-class at all. So Grounds/Maintenance/
+// Appliances match on EITHER signal, whichever is actually present, instead of relying
+// on Class alone (same class taxonomy LeeRoy's reports repo uses in
+// buildAppliances/buildToolsSupplies, scripts/fetch-data.js, extended with a GL
+// fallback since Class coverage is incomplete for this portfolio).
 const GL_BUCKETS = {
   Auto: ['59100'],
   'Supplies and Tools': ['67800'],
@@ -62,6 +68,13 @@ const GL_BUCKETS = {
   Grounds: ['54002'],
   Maintenance: ['52002'],
 };
+// Appliances = CapEx-Appliance specifically (an asset purchase), not any R&M-Material
+// repair that happens to mention an appliance in its memo (e.g. a $65 dryer belt is a
+// repair part, correctly GL-coded as R&M - Material -- confirmed with Florencia
+// 2026-07-19 that those belong in Maintenance, not Appliances; no keyword fallback).
+const APPLIANCE_CLASSES = ['r203:capex appliances'];
+const GROUNDS_CLASS = 'r203:grounds';
+const RM_CLASS_PREFIX = 'r203:r&m-'; // Maintenance = every R&M-* sub-class (including R&M-Appliance)
 // "Materials" in the Monthly Budget stat card = R&M Material/Contractor + Supplies and
 // Tools, matching LeeRoy's rm_report.html GL set for the same team.
 const MATERIALS_GL_IDS = ['52002', '52003', '67800'];
@@ -254,9 +267,19 @@ async function fetchRampTransactions(fromStr, toStr) {
 
   const records = [];
   for (const t of inWindow) {
-    const amount = t.amount / (t.minor_unit_conversion_rate || 100);
+    // t.amount is already in dollars (decimal, e.g. 6.5) -- NOT minor units. Dividing by
+    // minor_unit_conversion_rate here would double-convert (confirmed live 2026-07-19
+    // against a real Home Depot receipt: top-level amount 6.5, vs the nested
+    // line_items[].amount.amount 650 + minor_unit_conversion_rate 100, which IS the
+    // cents/rate pair meant to be divided). This bug made every Ramp dollar figure in
+    // this script 100x too small.
+    const amount = t.amount;
     const date = t.user_transaction_time.slice(0, 10);
-    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
+    // Some Ramp card_holder names carry stray whitespace (e.g. "Jaxson Lakins " with a
+    // trailing space, "Justin  Gutierrez " with a double space) that breaks exact-string
+    // roster matching below -- collapse/trim so those still match (found 2026-07-19,
+    // was silently dropping real transactions from Operational Expenses).
+    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}`.trim().replace(/\s+/g, ' ') : '';
     const isRmTeam = RM_TEAM.some(n => n.toLowerCase() === holderName.toLowerCase());
 
     let ref = null;
@@ -320,12 +343,29 @@ function over300List(records) {
     .map(r => ({ date: r.date, ref: r.ref, property: r.property ? r.property.toUpperCase() : null, cardholder: r.cardholder, amount: Math.round(r.amount * 100) / 100 }))
     .sort((a, b) => b.amount - a.amount);
 }
+// Returns both the 5 named buckets AND a scoped/uncategorized total, so callers can log
+// how much of the team's real r203 spend falls outside the 5 buckets on purpose (Turn,
+// CapEx Discretionary, etc. -- confirmed live 2026-07-19, ~12% most weeks) vs silently
+// growing because a real category got missed.
 function opexByCategory(records) {
-  const scoped = records.filter(r => r.isOpexTeam && r.glId && r.classCode === OPEX_CLASS);
-  return Object.entries(GL_BUCKETS).map(([category, ids]) => ({
-    category,
-    amount: Math.round(scoped.filter(r => ids.includes(r.glId)).reduce((s, r) => s + r.amount, 0) * 100) / 100,
+  const scoped = records.filter(r => r.isOpexTeam && r.classCode &&
+    (r.classCode === OPEX_CLASS || r.classCode.startsWith(OPEX_CLASS + ':')));
+  const sum = list => Math.round(list.reduce((s, r) => s + r.amount, 0) * 100) / 100;
+
+  const matchers = {
+    Auto: r => GL_BUCKETS.Auto.includes(r.glId),
+    'Supplies and Tools': r => GL_BUCKETS['Supplies and Tools'].includes(r.glId),
+    Appliances: r => GL_BUCKETS.Appliances.includes(r.glId) || APPLIANCE_CLASSES.includes(r.classCode),
+    Grounds: r => GL_BUCKETS.Grounds.includes(r.glId) || r.classCode === GROUNDS_CLASS,
+    Maintenance: r => GL_BUCKETS.Maintenance.includes(r.glId) || r.classCode.startsWith(RM_CLASS_PREFIX),
+  };
+
+  const buckets = Object.entries(matchers).map(([category, matches]) => ({
+    category, amount: sum(scoped.filter(matches)),
   }));
+  const scopedTotal = sum(scoped);
+  const bucketedTotal = Math.round(buckets.reduce((s, b) => s + b.amount, 0) * 100) / 100;
+  return { buckets, scopedTotal, uncategorized: Math.round((scopedTotal - bucketedTotal) * 100) / 100 };
 }
 function materialsBudgetTotal(records) {
   return records.filter(r => r.isRmTeam && MATERIALS_GL_IDS.includes(r.glId)).reduce((s, r) => s + r.amount, 0);
@@ -452,7 +492,8 @@ async function main() {
   }).sort((a, b) => b.wo_count - a.wo_count);
 
   const weekOver300 = over300List(inRange(rampRecords, weekStart, weekEnd));
-  const weekOperationalExpenses = opexByCategory(inRange(rampRecords, weekStart, weekEnd));
+  const opex = opexByCategory(inRange(rampRecords, weekStart, weekEnd));
+  console.log('Opex (team + r203) scoped total:', opex.scopedTotal, '| in the 5 buckets:', opex.buckets.reduce((s, b) => s + b.amount, 0).toFixed(2), '| uncategorized (Turn/CapEx/etc, expected):', opex.uncategorized);
 
   const outPath = path.join(DATA_DIR, `weekly-${weekStart}.json`);
   let priorKpis = null, priorNarrative = null, priorPriorities = null;
@@ -502,7 +543,7 @@ async function main() {
     top_work_orders: topWorkOrders,
     by_technician: byTechnician,
     ramp_purchases_over_300: weekOver300,
-    operational_expenses: weekOperationalExpenses,
+    operational_expenses: opex.buckets,
     narrative: priorNarrative,
     priorities_next_week: priorPriorities,
   };
