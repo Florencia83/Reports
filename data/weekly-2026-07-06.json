@@ -136,9 +136,15 @@
       "avg_cost_per_wo": 31.09,
       "total_labor_cost": 904.5,
       "avg_resident_rating": 4,
-      "comments": [
+      "reviews": [
+        {
+          "ref": "TDIUJDW",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TT8VWDQ",
+          "rating": 3,
           "text": "Bee hive in bedroom window still active"
         }
       ]
@@ -149,9 +155,15 @@
       "avg_cost_per_wo": 239.83,
       "total_labor_cost": 1005.42,
       "avg_resident_rating": 4.5,
-      "comments": [
+      "reviews": [
+        {
+          "ref": "TEJ8NZ5",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TH8Y2DHB",
+          "rating": 4,
           "text": "The work was fine, and Justin was very conscientious.  A little adjustment is needed.  The door does not open and  move smoothly.  I think the cotton muffling is impeding it."
         }
       ]
@@ -162,7 +174,7 @@
       "avg_cost_per_wo": 53.17,
       "total_labor_cost": 721.2,
       "avg_resident_rating": null,
-      "comments": []
+      "reviews": []
     },
     {
       "name": "Jonas Hoard",
@@ -170,10 +182,16 @@
       "avg_cost_per_wo": 83.15,
       "total_labor_cost": 300.15,
       "avg_resident_rating": 5,
-      "comments": [
+      "reviews": [
         {
           "ref": "TZ95XDDB",
+          "rating": 5,
           "text": "Thank you! I wasn't expecting the cleaning until today but it was cleaned yesterday Instead! I hope with no added stress to the Maintenance man! The patio looks great! Its been so long since Ive been able to use my space, i cant wait to enjoy it!"
+        },
+        {
+          "ref": "TPM69YT",
+          "rating": 5,
+          "text": null
         }
       ]
     },
@@ -183,7 +201,7 @@
       "avg_cost_per_wo": 188.28,
       "total_labor_cost": 375.3,
       "avg_resident_rating": null,
-      "comments": []
+      "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
@@ -234,7 +252,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 551.4
+      "amount": 1420.39
     },
     {
       "category": "Grounds",

@@ -219,15 +219,20 @@ function renderTopWorkOrders(items) {
 
 function renderByTechnician(items) {
   if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No completed work orders assigned to a technician this week yet.</p>';
-  var head = '<tr><th>Name</th><th class="num">W.O.\'s</th><th class="num">Avg Cost/W.O.</th><th class="num">Total Labor</th><th class="num">Rating</th><th class="detail">Comments</th></tr>';
+  var head = '<tr><th>Name</th><th class="num">W.O.\'s</th><th class="num">Avg Cost/W.O.</th><th class="num">Total Labor</th><th class="num">Rating</th><th class="detail">Reviews</th></tr>';
   var body = items.map(function(t) {
     var ratingHtml = t.avg_resident_rating != null
       ? '<span class="rating-tag good">' + t.avg_resident_rating.toFixed(2) + '</span>'
       : '<span class="rating-tag na">n/a</span>';
-    var commentsHtml = (t.comments && t.comments.length)
-      ? t.comments.map(function(c) { return '<div class="comment-block"><span class="cref">' + esc(c.ref) + '</span>' + esc(c.text) + '</div>'; }).join('')
-      : '<span style="color:var(--ink-soft); font-style:italic;">No comments this week</span>';
-    return '<tr><td class="ref">' + esc(t.name) + '</td><td class="num">' + t.wo_count + '</td><td class="num">' + money(t.avg_cost_per_wo) + '</td><td class="num">' + money(t.total_labor_cost) + '</td><td class="num">' + ratingHtml + '</td><td class="detail">' + commentsHtml + '</td></tr>';
+    var reviewsHtml = (t.reviews && t.reviews.length)
+      ? t.reviews.map(function(c) {
+          var full = Math.round(c.rating);
+          var stars = '★'.repeat(full) + '☆'.repeat(Math.max(0, 5 - full));
+          var textHtml = c.text ? esc(c.text) : '<span style="color:var(--ink-soft); font-style:italic;">No comment left</span>';
+          return '<div class="comment-block"><span class="cref">' + esc(c.ref) + '</span>' + stars + ' &mdash; ' + textHtml + '</div>';
+        }).join('')
+      : '<span style="color:var(--ink-soft); font-style:italic;">No reviews this week</span>';
+    return '<tr><td class="ref">' + esc(t.name) + '</td><td class="num">' + t.wo_count + '</td><td class="num">' + money(t.avg_cost_per_wo) + '</td><td class="num">' + money(t.total_labor_cost) + '</td><td class="num">' + ratingHtml + '</td><td class="detail">' + reviewsHtml + '</td></tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }

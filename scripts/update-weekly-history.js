@@ -45,7 +45,7 @@ const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Laki
 // Wider roster for Operational Expenses -- maintenance (repair) + grounds team, since
 // that section covers team card spend broadly, not just repair work orders.
 const OPEX_TEAM = ['Justin Gutierrez', 'Jared Miller', 'Jaxson Lakins', 'Jonas Hoard', 'Isaac Chavez',
-  'Reynaldo Leonides', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall'];
+  'Reynaldo Leonides', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Florencia Sola'];
 // Every real transaction from this team carries QuickbooksClass "r203" (Ridgeview
 // Repairs & Renewals LLC) or a "r203:<sub-class>" child of it -- confirmed live
 // 2026-07-19 against a full week, then against team spend since April (1166 txns).
@@ -509,7 +509,9 @@ async function main() {
       avg_cost_per_wo: Math.round((totalCostSum / list.length) * 100) / 100,
       total_labor_cost: Math.round(totalLabor * 100) / 100,
       avg_resident_rating: avgRating != null ? Math.round(avgRating * 100) / 100 : null,
-      comments: list.filter(r => r.review).map(r => ({ ref: r.ref, text: r.review })),
+      // Every rated meld, not just ones with a written comment -- a tenant can leave a
+      // star rating alone with no text (Florencia asked to see those too, 2026-07-19).
+      reviews: rated.map(r => ({ ref: r.ref, rating: r.rating, text: r.review || null })),
     };
   }).sort((a, b) => b.wo_count - a.wo_count);
 
