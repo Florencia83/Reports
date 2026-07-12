@@ -1,0 +1,118 @@
+{
+  "week_start": "2026-06-29",
+  "week_end": "2026-07-05",
+  "label": "June 29 – July 5, 2026",
+  "generated_at": "2026-07-12",
+  "complete": true,
+  "source": "Property Meld (completed melds) + Ramp (materials) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "top_work_orders": [
+    {
+      "ref": "TDCM4JR",
+      "brief": "No Hot Water Heater Not Heating (clone)",
+      "cost": 184.29
+    },
+    {
+      "ref": "TLPN70R",
+      "brief": "Water Heater Needs Disinfecting. Still Smells Bad.",
+      "cost": 128.09
+    },
+    {
+      "ref": "T3LAL2Q",
+      "brief": "No Hot Water In Home",
+      "cost": 90.32
+    },
+    {
+      "ref": "TAPP03M",
+      "brief": "Stove Burners Is Not Heating",
+      "cost": 84.64
+    },
+    {
+      "ref": "TC65AVQ",
+      "brief": "open door between lower and upper unit- lock may need to be picked",
+      "cost": 83.91
+    },
+    {
+      "ref": "TPM69YT",
+      "brief": "The Bathroom Fan Motor Went Completely Out Again",
+      "cost": 67.74
+    },
+    {
+      "ref": "T3VXCDU",
+      "brief": "07/02 - Attend Follow up",
+      "cost": 63.2
+    },
+    {
+      "ref": "T68BPCX",
+      "brief": "Active Flooding Or Leaking",
+      "cost": 56.67
+    },
+    {
+      "ref": "TT8VWDQ",
+      "brief": "Repair List Of items reported ",
+      "cost": 56.02
+    },
+    {
+      "ref": "TGT9ZDL",
+      "brief": "The Kitchen Sink Drain Is Leaking",
+      "cost": 50.14
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jared Miller",
+      "wo_count": 34,
+      "avg_cost_per_wo": 7.51,
+      "total_labor_cost": 247.66,
+      "avg_resident_rating": 4.33,
+      "comments": [
+        {
+          "ref": "TT8VWDQ",
+          "text": "Bee hive in bedroom window still active"
+        }
+      ]
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 18,
+      "avg_cost_per_wo": 36.11,
+      "total_labor_cost": 615.83,
+      "avg_resident_rating": 5,
+      "comments": []
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 15,
+      "avg_cost_per_wo": 31.73,
+      "total_labor_cost": 472.4,
+      "avg_resident_rating": null,
+      "comments": []
+    },
+    {
+      "name": "Jonas Hoard",
+      "wo_count": 13,
+      "avg_cost_per_wo": 10.9,
+      "total_labor_cost": 138.6,
+      "avg_resident_rating": 5,
+      "comments": [
+        {
+          "ref": "TZ95XDDB",
+          "text": "Thank you! I wasn't expecting the cleaning until today but it was cleaned yesterday Instead! I hope with no added stress to the Maintenance man! The patio looks great! Its been so long since Ive been able to use my space, i cant wait to enjoy it!"
+        },
+        {
+          "ref": "T45LGA4",
+          "text": "I am so glad everything went smoothly thank you"
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 9,
+      "avg_cost_per_wo": 4.6,
+      "total_labor_cost": 41.4,
+      "avg_resident_rating": null,
+      "comments": []
+    }
+  ],
+  "kpis": null,
+  "narrative": null
+}

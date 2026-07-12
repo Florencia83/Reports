@@ -218,7 +218,9 @@ function weekLabel(startD, endD) {
 
 async function main() {
   const today = new Date();
-  const monday = mondayOf(today);
+  // TARGET_WEEK_START (YYYY-MM-DD, must be a Monday) lets this backfill a past week
+  // on demand -- normally unset, and the script just targets the current week.
+  const monday = process.env.TARGET_WEEK_START ? new Date(process.env.TARGET_WEEK_START + 'T00:00:00') : mondayOf(today);
   const sunday = new Date(monday); sunday.setDate(monday.getDate() + 6);
   const weekStart = dstr(monday);
   const weekEnd = dstr(today) < dstr(sunday) ? dstr(today) : dstr(sunday);
