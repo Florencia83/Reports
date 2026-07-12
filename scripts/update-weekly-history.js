@@ -1,10 +1,10 @@
 // Daily refresh of the Weekly Update report's data:
 // - Per-week file (data/weekly-{monday}.json): Top 10 Work Orders, By Technician, Ramp
-//   Purchases Over $300 (with meld ref + property), KPIs.
+//   Purchases Over $300 (with meld ref + property), Operational Expenses by category
+//   (this week, maintenance + grounds team), KPIs.
 // - Month-to-date file (data/weekly-mtd.json): Monthly Budget (Labor/Materials/Total
-//   Actual/Variance vs AppFolio's "R&M - Repairs" budget), Operational Expenses by
-//   category, Cost by Property (MTD, over-budget-only, vs each property's own AppFolio
-//   R&M - Repairs budget).
+//   Actual/Variance vs AppFolio's "R&M - Repairs" budget), Cost by Property (MTD,
+//   over-budget-only, vs each property's own AppFolio R&M - Repairs budget).
 //
 // Cost = Ramp materials (matched to a meld by its reference ID in the Customer/Job
 // accounting category) + QBT labor (hours x wage, matched to a meld by the leaf jobcode
@@ -39,18 +39,28 @@ const pmIdToTech = {}; TECHS.forEach(t => pmIdToTech[t.pmId] = t);
 const qbtIdToTech = {}; TECHS.forEach(t => qbtIdToTech[t.qbtId] = t);
 
 // Same R&M team roster used by update-ramp-appliances.js, for the >$300 purchases list
-// and the Operational Expenses / Monthly Budget category totals.
+// and the Monthly Budget Labor/Materials totals -- repair techs only (Wade resigned).
 const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard'];
+
+// Wider roster for Operational Expenses -- maintenance (repair) + grounds team, since
+// that section covers team card spend broadly, not just repair work orders.
+const OPEX_TEAM = ['Justin Gutierrez', 'Jared Miller', 'Jaxson Lakins', 'Jonas Hoard', 'Isaac Chavez',
+  'Reynaldo Leonides', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall'];
+// Every real transaction from this team carries QuickbooksClass "r203" (Ridgeview
+// Repairs & Renewals LLC) -- confirmed live 2026-07-19, 100% match across a week of
+// team spend. Used as a belt-and-suspenders scope check for Operational Expenses.
+const OPEX_CLASS = 'r203';
 
 // Ramp's own chart-of-accounts GL category_id per bucket (confirmed live 2026-07-12
 // against real RM_TEAM transactions -- accounting_categories[] entries where
-// tracking_category_remote_type === 'GL_ACCOUNT').
+// tracking_category_remote_type === 'GL_ACCOUNT'). Grounds/Maintenance are Material
+// only -- Contractor invoices are excluded from Operational Expenses on purpose.
 const GL_BUCKETS = {
   Auto: ['59100'],
   'Supplies and Tools': ['67800'],
   Appliances: ['59000', '59002'],
-  Grounds: ['54002', '54003'],
-  Maintenance: ['52002', '52003'], // R&M - Material + R&M - Contractor
+  Grounds: ['54002'],
+  Maintenance: ['52002'],
 };
 // "Materials" in the Monthly Budget stat card = R&M Material/Contractor + Supplies and
 // Tools, matching LeeRoy's rm_report.html GL set for the same team.
@@ -269,10 +279,13 @@ async function fetchRampTransactions(fromStr, toStr) {
     }
 
     const glCat = (t.accounting_categories || []).find(c => c.tracking_category_remote_type === 'GL_ACCOUNT');
+    const classCat = (t.accounting_categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksClass');
+    const isOpexTeam = OPEX_TEAM.some(n => n.toLowerCase() === holderName.toLowerCase());
 
     records.push({
-      date, ref, property, amount, cardholder: holderName, isRmTeam,
+      date, ref, property, amount, cardholder: holderName, isRmTeam, isOpexTeam,
       glId: glCat ? glCat.category_id : null,
+      classCode: classCat && classCat.category_name ? classCat.category_name.toLowerCase() : null,
     });
   }
   return records;
@@ -308,10 +321,10 @@ function over300List(records) {
     .sort((a, b) => b.amount - a.amount);
 }
 function opexByCategory(records) {
-  const rm = records.filter(r => r.isRmTeam && r.glId);
+  const scoped = records.filter(r => r.isOpexTeam && r.glId && r.classCode === OPEX_CLASS);
   return Object.entries(GL_BUCKETS).map(([category, ids]) => ({
     category,
-    amount: Math.round(rm.filter(r => ids.includes(r.glId)).reduce((s, r) => s + r.amount, 0) * 100) / 100,
+    amount: Math.round(scoped.filter(r => ids.includes(r.glId)).reduce((s, r) => s + r.amount, 0) * 100) / 100,
   }));
 }
 function materialsBudgetTotal(records) {
@@ -439,6 +452,7 @@ async function main() {
   }).sort((a, b) => b.wo_count - a.wo_count);
 
   const weekOver300 = over300List(inRange(rampRecords, weekStart, weekEnd));
+  const weekOperationalExpenses = opexByCategory(inRange(rampRecords, weekStart, weekEnd));
 
   const outPath = path.join(DATA_DIR, `weekly-${weekStart}.json`);
   let priorKpis = null, priorNarrative = null, priorPriorities = null;
@@ -488,6 +502,7 @@ async function main() {
     top_work_orders: topWorkOrders,
     by_technician: byTechnician,
     ramp_purchases_over_300: weekOver300,
+    operational_expenses: weekOperationalExpenses,
     narrative: priorNarrative,
     priorities_next_week: priorPriorities,
   };
@@ -507,7 +522,7 @@ async function main() {
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log('Updated weekly-manifest.json');
 
-  // ---- Month-to-date file: Monthly Budget + Operational Expenses + Cost by Property ----
+  // ---- Month-to-date file: Monthly Budget + Cost by Property ----
   const month = todayStr.slice(0, 7);
   const monthLaborRecords = inRange(laborRecords, monthStart, todayStr);
   const monthRampRecords = inRange(rampRecords, monthStart, todayStr);
@@ -523,8 +538,6 @@ async function main() {
     total_actual: Math.round(totalActual * 100) / 100,
     variance: rmRepairsBudget != null ? Math.round((rmRepairsBudget - totalActual) * 100) / 100 : null,
   };
-
-  const operationalExpenses = opexByCategory(monthRampRecords);
 
   const laborByPropMTD = sumByProperty(monthLaborRecords);
   const materialsByPropMTD = materialsByProperty(monthRampRecords);
@@ -552,16 +565,15 @@ async function main() {
   // A whole month with zero budget data AND zero R&M spend is implausible -- treat it
   // as an upstream failure (AppFolio/Ramp/QBT auth or outage) rather than silently
   // overwriting the last good weekly-mtd.json with empty figures.
-  if (rmRepairsBudget == null && totalActual === 0 && operationalExpenses.every(e => e.amount === 0)) {
+  if (rmRepairsBudget == null && totalActual === 0) {
     throw new Error('AppFolio, QBT, and Ramp all returned nothing for the month — likely an upstream failure, refusing to write weekly-mtd.json.');
   }
 
   const mtdJson = {
     month,
     generated_at: todayStr,
-    source: 'AppFolio (R&M - Repairs budget, monthly + per-property) + QBT (labor) + Ramp (materials/opex by category) — automated',
+    source: 'AppFolio (R&M - Repairs budget, monthly + per-property) + QBT (labor + Ramp materials) — automated',
     monthly_budget: monthlyBudget,
-    operational_expenses: operationalExpenses,
     cost_by_property: costByProperty,
   };
   fs.writeFileSync(path.join(DATA_DIR, 'weekly-mtd.json'), JSON.stringify(mtdJson, null, 2));

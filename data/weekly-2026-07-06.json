@@ -151,6 +151,28 @@
     }
   ],
   "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 8.1
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 5.51
+    },
+    {
+      "category": "Grounds",
+      "amount": 3.96
+    },
+    {
+      "category": "Maintenance",
+      "amount": 7.75
+    }
+  ],
   "narrative": null,
   "priorities_next_week": null
 }

@@ -179,7 +179,7 @@ footer a { color: var(--ink-soft); }
   </section>
 
   <section>
-    <p class="section-label">Operational Expenses &mdash; MTD</p>
+    <p class="section-label" id="opex-label">Operational Expenses</p>
     <div id="opex-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
   </section>
 
@@ -272,10 +272,10 @@ function renderMonthlyBudget(mtd) {
     '</div>';
 }
 
-function renderOpex(mtd) {
-  if (!mtd || !mtd.operational_expenses || !mtd.operational_expenses.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not available.</p>';
+function renderOpex(items) {
+  if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not available.</p>';
   var byCat = {};
-  mtd.operational_expenses.forEach(function(e) { byCat[e.category] = e.amount; });
+  items.forEach(function(e) { byCat[e.category] = e.amount; });
   function group(cats) {
     var head = '<tr><th>Category</th><th class="num">Amount</th></tr>';
     var body = cats.map(function(c) {
@@ -330,18 +330,19 @@ var mtdData = null;
 function renderMtdSections() {
   if (!mtdData) return;
   document.getElementById('budget-vs-spent-container').innerHTML = renderMonthlyBudget(mtdData);
-  document.getElementById('opex-container').innerHTML = renderOpex(mtdData);
   document.getElementById('cost-by-property-container').innerHTML = renderCostByProperty(mtdData.cost_by_property);
 }
 
 function renderWeek(data) {
   document.getElementById('top-wo-label').textContent = 'Top 10 Work Orders — ' + data.label;
   document.getElementById('by-tech-label').textContent = 'Maintenance Team KPI\'s — ' + data.label;
+  document.getElementById('opex-label').textContent = 'Operational Expenses — ' + data.label;
   document.getElementById('ramp300-label').textContent = 'Ramp Purchases Over $300 — Maintenance Service Team — ' + data.label;
 
   document.getElementById('kpis-container').innerHTML = renderKpis(data.kpis);
   document.getElementById('top-wo-container').innerHTML = renderTopWorkOrders(data.top_work_orders);
   document.getElementById('by-tech-container').innerHTML = renderByTechnician(data.by_technician);
+  document.getElementById('opex-container').innerHTML = renderOpex(data.operational_expenses);
   document.getElementById('ramp300-container').innerHTML = renderRamp300(data.ramp_purchases_over_300);
   document.getElementById('priorities-container').innerHTML = renderPriorities(data.priorities_next_week);
 

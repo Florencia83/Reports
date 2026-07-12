@@ -1,7 +1,7 @@
 {
   "month": "2026-07",
   "generated_at": "2026-07-12",
-  "source": "AppFolio (R&M - Repairs budget, monthly + per-property) + QBT (labor) + Ramp (materials/opex by category) — automated",
+  "source": "AppFolio (R&M - Repairs budget, monthly + per-property) + QBT (labor + Ramp materials) — automated",
   "monthly_budget": {
     "budget": 67267.78,
     "labor": 4420.11,
@@ -9,27 +9,5 @@
     "total_actual": 4480.19,
     "variance": 62787.59
   },
-  "operational_expenses": [
-    {
-      "category": "Auto",
-      "amount": 5.68
-    },
-    {
-      "category": "Supplies and Tools",
-      "amount": 0.61
-    },
-    {
-      "category": "Appliances",
-      "amount": 13.8
-    },
-    {
-      "category": "Grounds",
-      "amount": 3.37
-    },
-    {
-      "category": "Maintenance",
-      "amount": 59.47
-    }
-  ],
   "cost_by_property": []
 }
