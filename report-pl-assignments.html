@@ -65,11 +65,13 @@ body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
   .month-picker, footer { display: none; }
 }
 
-.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
-.masthead-id { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+.masthead-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); }
+.masthead-id { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0; display: flex; align-items: center; gap: 8px; }
 .masthead-id a { color: var(--ink-soft); text-decoration: none; }
 .masthead-id a:hover { color: var(--accent); }
 h1 { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 30px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0; line-height: 1.05; text-wrap: balance; }
+.masthead-range { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; color: var(--ink-soft); margin: 6px 0 0; }
 .masthead-meta { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; color: var(--ink-soft); text-align: right; line-height: 1.6; }
 .masthead-meta strong { color: var(--ink); font-weight: 500; }
 
@@ -140,17 +142,18 @@ footer a { color: var(--ink-soft); }
 </style>
 
 <div class="wrap">
-  <div class="masthead">
-    <div>
-      <p class="masthead-id"><a href="index.html">&larr; Reports</a> &middot; <span class="tag finance">Finance</span></p>
-      <h1>P&amp;L Assignments &mdash; R&amp;M / Grounds / Appliances</h1>
-    </div>
+  <div class="masthead-top">
+    <p class="masthead-id"><a href="index.html">&larr; Reports</a> &middot; <span class="tag finance">Finance</span></p>
     <div class="masthead-meta">
       <div class="month-picker" style="margin-bottom:6px;">
         <select id="month-select"></select>
       </div>
       <span id="sent-label"></span>
     </div>
+  </div>
+  <div class="masthead">
+    <h1>P&amp;L Assignments &mdash; R&amp;M / Grounds / Appliances</h1>
+    <p class="masthead-range" id="range-label"></p>
   </div>
 
   <div id="content-root">
@@ -256,6 +259,7 @@ function renderMonth(budgetData, appliancesData) {
   html += '<section><p class="section-label">Appliances Breakdown &mdash; R&amp;M Team Members</p>' + renderAppliancesTable(appliancesData.items) + '</section>';
 
   root.innerHTML = html;
+  document.getElementById('range-label').textContent = budgetData.label;
   document.getElementById('sent-label').textContent = 'Data as of ' + budgetData.generated_at;
   document.getElementById('updated-label').textContent = 'Updated ' + budgetData.generated_at;
 }
