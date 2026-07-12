@@ -1,6 +1,8 @@
 // Daily refresh of the per-week history for the Weekly Update report:
 // - Top 10 Work Orders by cost (last completed melds this week)
 // - Per-technician breakdown (avg cost/WO, total labor cost, avg resident rating, comments)
+// - Ramp purchases over $300 for the R&M team this week
+// - Cost by property this week (Ramp materials + QBT labor, same convention as above)
 //
 // Runs daily. Always targets the CURRENT week (Monday through today) so that by the
 // time a week ends (Sunday), its file is already complete -- Monday morning it's ready
@@ -35,6 +37,9 @@ const TECHS = [
 ];
 const pmIdToTech = {}; TECHS.forEach(t => pmIdToTech[t.pmId] = t);
 const qbtIdToTech = {}; TECHS.forEach(t => qbtIdToTech[t.qbtId] = t);
+
+// Same R&M team roster used by update-ramp-appliances.js, for the >$300 purchases list.
+const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard'];
 
 const PM_BASE = 'https://app.propertymeld.com', PM_MGMT = '2975';
 
@@ -108,19 +113,32 @@ async function fetchPmCompletedMelds(weekStart, weekEnd) {
   return melds;
 }
 
+async function qbtFetchWithRetry(url, headers, attempt = 1) {
+  const res = await fetch(url, { headers });
+  if (!res.ok && attempt <= 4 && (res.status === 429 || res.status >= 500)) {
+    const backoff = 2000 * attempt;
+    console.log(`QBT ${res.status} on ${url}, retrying in ${backoff}ms (attempt ${attempt})`);
+    await new Promise(r => setTimeout(r, backoff));
+    return qbtFetchWithRetry(url, headers, attempt + 1);
+  }
+  if (!res.ok) throw new Error(`QBT request failed: ${res.status} ${await res.text()} (${url})`);
+  return res.json();
+}
+
 async function fetchQbtLabor(weekStart, weekEnd) {
   const headers = { Authorization: `Bearer ${process.env.QBT_TOKEN}` };
   const jobcodes = {};
   let jcPage = 1;
   while (true) {
-    const res = await fetch(`https://rest.tsheets.com/api/v1/jobcodes?active=both&supplemental_data=no&page=${jcPage}`, { headers });
-    const j = await res.json();
+    const j = await qbtFetchWithRetry(`https://rest.tsheets.com/api/v1/jobcodes?active=both&supplemental_data=no&page=${jcPage}`, headers);
     const rows = Object.values(j.results?.jobcodes || {});
     if (!rows.length) break;
     rows.forEach(jc => { jobcodes[jc.id] = jc; });
     if (!j.more) break;
     jcPage++;
+    await new Promise(r => setTimeout(r, 150));
   }
+  console.log('QBT jobcodes fetched:', Object.keys(jobcodes).length);
 
   function jcPath(id, cache) {
     if (cache[id]) return cache[id];
@@ -133,8 +151,7 @@ async function fetchQbtLabor(weekStart, weekEnd) {
   const timesheets = [];
   let page = 1;
   while (true) {
-    const res = await fetch(`https://rest.tsheets.com/api/v1/timesheets?start_date=${weekStart}&end_date=${weekEnd}&page=${page}`, { headers });
-    const j = await res.json();
+    const j = await qbtFetchWithRetry(`https://rest.tsheets.com/api/v1/timesheets?start_date=${weekStart}&end_date=${weekEnd}&page=${page}`, headers);
     const rows = Object.values(j.results?.timesheets || {});
     if (!rows.length) break;
     timesheets.push(...rows);
@@ -143,6 +160,7 @@ async function fetchQbtLabor(weekStart, weekEnd) {
   }
 
   const laborByRef = {};
+  const laborByProperty = {};
   const jcCache = {};
   for (const ts of timesheets) {
     if (ts.type !== 'regular') continue;
@@ -152,13 +170,20 @@ async function fetchQbtLabor(weekStart, weekEnd) {
     if (!/r&m|repair|maintenance/i.test(cls)) continue;
     const p = jcPath(ts.jobcode_id, jcCache);
     const ref = p.length ? p[p.length - 1] : null;
-    if (!ref || !/^T[A-Z0-9]{5,}/i.test(ref)) continue;
     const hrs = ts.duration / 3600;
+    const cost = hrs * tech.wage;
+    if (p.length) {
+      const prop = p[0].toLowerCase();
+      if (!laborByProperty[prop]) laborByProperty[prop] = { hours: 0, cost: 0 };
+      laborByProperty[prop].hours += hrs;
+      laborByProperty[prop].cost += cost;
+    }
+    if (!ref || !/^T[A-Z0-9]{5,}/i.test(ref)) continue;
     if (!laborByRef[ref]) laborByRef[ref] = { hours: 0, cost: 0 };
     laborByRef[ref].hours += hrs;
-    laborByRef[ref].cost += hrs * tech.wage;
+    laborByRef[ref].cost += cost;
   }
-  return laborByRef;
+  return { laborByRef, laborByProperty };
 }
 
 async function fetchRampMaterials(weekStart, weekEnd) {
@@ -189,15 +214,41 @@ async function fetchRampMaterials(weekStart, weekEnd) {
   const inWindow = all.filter(t => new Date(t.user_transaction_time).getTime() <= toTime);
 
   const materialsByRef = {};
+  const materialsByProperty = {};
+  const over300 = [];
   for (const t of inWindow) {
-    const dept = (t.accounting_categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksCustomer');
-    if (!dept || !dept.category_name) continue;
-    const parts = dept.category_name.split(':');
-    const ref = parts[parts.length - 1].trim();
-    if (!/^T[A-Z0-9]{5,}/i.test(ref)) continue;
-    materialsByRef[ref] = (materialsByRef[ref] || 0) + t.amount / (t.minor_unit_conversion_rate || 100);
+    const amount = t.amount / (t.minor_unit_conversion_rate || 100);
+
+    const custDept = (t.accounting_categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksCustomer');
+    if (custDept && custDept.category_name) {
+      const parts = custDept.category_name.split(':');
+      const ref = parts[parts.length - 1].trim();
+      if (/^T[A-Z0-9]{5,}/i.test(ref)) materialsByRef[ref] = (materialsByRef[ref] || 0) + amount;
+    }
+
+    // Property comes from the QuickBooks "Property" field synced as QuickbooksDepartment
+    // (same convention as update-ramp-appliances.js): "propcode (id):propcode-unit".
+    const propDept = (t.accounting_categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksDepartment');
+    if (propDept && propDept.category_name) {
+      const propPart = propDept.category_name.split(':')[0];
+      const m = propPart.match(/^([a-z0-9-]+)\s*\(/i);
+      const prop = (m ? m[1] : propPart).trim().toLowerCase();
+      if (prop) materialsByProperty[prop] = (materialsByProperty[prop] || 0) + amount;
+    }
+
+    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}` : '';
+    if (amount > 300 && RM_TEAM.some(n => n.toLowerCase() === holderName.toLowerCase())) {
+      over300.push({
+        date: t.user_transaction_time.slice(0, 10),
+        merchant: t.merchant_name || '',
+        cardholder: holderName,
+        amount: Math.round(amount * 100) / 100,
+        memo: (t.memo || '').trim(),
+      });
+    }
   }
-  return materialsByRef;
+  over300.sort((a, b) => b.amount - a.amount);
+  return { materialsByRef, materialsByProperty, over300 };
 }
 
 function mondayOf(d) {
@@ -226,18 +277,25 @@ async function main() {
   const weekEnd = dstr(today) < dstr(sunday) ? dstr(today) : dstr(sunday);
   console.log('Refreshing weekly history for', weekStart, 'to', weekEnd);
 
-  const [melds, labor, materials] = await Promise.all([
+  const [melds, { laborByRef, laborByProperty }, { materialsByRef, materialsByProperty, over300 }] = await Promise.all([
     fetchPmCompletedMelds(weekStart, weekEnd),
     fetchQbtLabor(weekStart, weekEnd),
     fetchRampMaterials(weekStart, weekEnd),
   ]);
-  console.log('PM completed melds:', melds.length, '| QBT labor refs:', Object.keys(labor).length, '| Ramp material refs:', Object.keys(materials).length);
+  console.log('PM completed melds:', melds.length, '| QBT labor refs:', Object.keys(laborByRef).length, '| Ramp material refs:', Object.keys(materialsByRef).length);
 
   const rows = melds.map(m => {
-    const lab = labor[m.ref] || { hours: 0, cost: 0 };
-    const mat = materials[m.ref] || 0;
+    const lab = laborByRef[m.ref] || { hours: 0, cost: 0 };
+    const mat = materialsByRef[m.ref] || 0;
     return { ...m, laborCost: lab.cost, materialsCost: mat, totalCost: lab.cost + mat };
   });
+
+  const propKeys = new Set([...Object.keys(laborByProperty), ...Object.keys(materialsByProperty)]);
+  const costByProperty = [...propKeys].map(prop => {
+    const lab = laborByProperty[prop] || { cost: 0 };
+    const mat = materialsByProperty[prop] || 0;
+    return { property: prop.toUpperCase(), cost: Math.round((lab.cost + mat) * 100) / 100 };
+  }).filter(p => p.cost > 0).sort((a, b) => b.cost - a.cost);
 
   const topWorkOrders = [...rows].sort((a, b) => b.totalCost - a.totalCost).slice(0, 10)
     .map(r => ({ ref: r.ref, brief: r.brief, cost: Math.round(r.totalCost * 100) / 100 }));
@@ -260,14 +318,25 @@ async function main() {
   }).sort((a, b) => b.wo_count - a.wo_count);
 
   const outPath = path.join(DATA_DIR, `weekly-${weekStart}.json`);
-  let priorKpis = null, priorNarrative = null;
+  let priorKpis = null, priorNarrative = null, priorPriorities = null;
   if (fs.existsSync(outPath)) {
     try {
       const prior = JSON.parse(fs.readFileSync(outPath, 'utf8'));
       priorKpis = prior.kpis || null;
       priorNarrative = prior.narrative || null;
+      priorPriorities = prior.priorities_next_week || null;
     } catch (e) { /* ignore unparseable prior file */ }
   }
+
+  const KPI_METRICS = [
+    'Emergency Work Order Completion Time',
+    'Work Order Resident Satisfaction',
+    'Avg Vendor Completion Time',
+    'Avg Speed of Repair',
+    'Time to Assignment',
+    'Time to Schedule',
+  ];
+  const kpis = priorKpis || KPI_METRICS.map(metric => ({ metric, goal: null, performing: null, actual: null }));
 
   const json = {
     week_start: weekStart,
@@ -275,12 +344,17 @@ async function main() {
     label: weekLabel(monday, sunday),
     generated_at: dstr(today),
     complete: weekEnd === dstr(sunday),
-    source: 'Property Meld (completed melds) + Ramp (materials) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.',
+    source: 'Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.',
+    // Never generated automatically -- carried forward so this script can't erase them.
+    // kpis always keeps the 6-metric skeleton (values null) until Florencia pastes in
+    // numbers from Property Meld's Sigma-powered Insights tab.
+    kpis,
     top_work_orders: topWorkOrders,
     by_technician: byTechnician,
-    // Never generated automatically -- carried forward so this script can't erase them.
-    kpis: priorKpis,
+    ramp_purchases_over_300: over300,
+    cost_by_property: costByProperty,
     narrative: priorNarrative,
+    priorities_next_week: priorPriorities,
   };
 
   fs.mkdirSync(DATA_DIR, { recursive: true });
