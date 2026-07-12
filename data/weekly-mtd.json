@@ -1,13 +1,17 @@
 {
   "month": "2026-07",
-  "generated_at": "2026-07-11",
+  "generated_at": "2026-07-12",
   "source": "AppFolio (budget/actual MTD, accrual) + Ramp (opex by category, R&M team) — automated",
   "budget_vs_spent_mtd": {
     "budget": 450668.52,
-    "actual": 3590,
+    "actual": 3740,
     "pct_spent": 0.8
   },
   "operational_expenses": [
+    {
+      "category": "Car services",
+      "amount": 0.44
+    },
     {
       "category": "Office",
       "amount": 32.02

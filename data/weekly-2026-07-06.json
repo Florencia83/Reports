@@ -2,9 +2,47 @@
   "week_start": "2026-07-06",
   "week_end": "2026-07-12",
   "label": "July 6 – 12, 2026",
-  "generated_at": "2026-07-11",
-  "complete": false,
-  "source": "Property Meld (completed melds) + Ramp (materials) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "generated_at": "2026-07-12",
+  "complete": true,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "goal": null,
+      "performing": null,
+      "actual": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "goal": null,
+      "performing": null,
+      "actual": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "goal": null,
+      "performing": null,
+      "actual": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "goal": null,
+      "performing": null,
+      "actual": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "goal": null,
+      "performing": null,
+      "actual": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "goal": null,
+      "performing": null,
+      "actual": null
+    }
+  ],
   "top_work_orders": [
     {
       "ref": "TGZT14D",
@@ -60,18 +98,10 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 32,
-      "avg_cost_per_wo": 12.3,
+      "wo_count": 35,
+      "avg_cost_per_wo": 11.25,
       "total_labor_cost": 391.86,
       "avg_resident_rating": 5,
-      "comments": []
-    },
-    {
-      "name": "Jonas Hoard",
-      "wo_count": 10,
-      "avg_cost_per_wo": 7.75,
-      "total_labor_cost": 76.05,
-      "avg_resident_rating": null,
       "comments": []
     },
     {
@@ -80,6 +110,14 @@
       "avg_cost_per_wo": 53.07,
       "total_labor_cost": 454.17,
       "avg_resident_rating": 5,
+      "comments": []
+    },
+    {
+      "name": "Jonas Hoard",
+      "wo_count": 9,
+      "avg_cost_per_wo": 7.62,
+      "total_labor_cost": 67.05,
+      "avg_resident_rating": null,
       "comments": []
     },
     {
@@ -99,6 +137,113 @@
       "comments": []
     }
   ],
-  "kpis": null,
-  "narrative": null
+  "ramp_purchases_over_300": [],
+  "cost_by_property": [
+    {
+      "property": "M5X2 FUND III LLC",
+      "cost": 1193.98
+    },
+    {
+      "property": "M5X2 FUND IV",
+      "cost": 1137.58
+    },
+    {
+      "property": "PALOUSE HOMES",
+      "cost": 753.77
+    },
+    {
+      "property": "M5X2 FUND I LLC",
+      "cost": 345.39
+    },
+    {
+      "property": "B & P INVESTMENTS 6 LLC",
+      "cost": 95.83
+    },
+    {
+      "property": "M5X2 FUND II LLC",
+      "cost": 76.25
+    },
+    {
+      "property": "KN47",
+      "cost": 47.8
+    },
+    {
+      "property": "TC68",
+      "cost": 44.09
+    },
+    {
+      "property": "J312",
+      "cost": 26.38
+    },
+    {
+      "property": "TC34",
+      "cost": 19.22
+    },
+    {
+      "property": "RL16",
+      "cost": 12.91
+    },
+    {
+      "property": "L912",
+      "cost": 12.5
+    },
+    {
+      "property": "R203",
+      "cost": 10.59
+    },
+    {
+      "property": "PS25",
+      "cost": 9.37
+    },
+    {
+      "property": "HL65",
+      "cost": 8.69
+    },
+    {
+      "property": "W225",
+      "cost": 3.38
+    },
+    {
+      "property": "C313",
+      "cost": 3.37
+    },
+    {
+      "property": "V202",
+      "cost": 2.87
+    },
+    {
+      "property": "M221",
+      "cost": 1.4
+    },
+    {
+      "property": "PS17",
+      "cost": 1.37
+    },
+    {
+      "property": "K104",
+      "cost": 1.33
+    },
+    {
+      "property": "EX",
+      "cost": 1.31
+    },
+    {
+      "property": "O155",
+      "cost": 0.86
+    },
+    {
+      "property": "C302",
+      "cost": 0.66
+    },
+    {
+      "property": "PS91",
+      "cost": 0.2
+    },
+    {
+      "property": "RL21",
+      "cost": 0.04
+    }
+  ],
+  "narrative": null,
+  "priorities_next_week": null
 }
