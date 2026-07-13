@@ -10,45 +10,45 @@
 
 
 :root {
-  --paper: #edf1f3;
+  --paper: #eef2f5;
   --surface: #ffffff;
-  --ink: #17212a;
-  --ink-soft: #57626c;
-  --line: #d7dee3;
-  --accent: #c8631f;
+  --ink: #16232e;
+  --ink-soft: #54666f;
+  --line: #d7e0e5;
+  --accent: #205a8c;
   --accent-ink: #ffffff;
-  --maint-tint: #f7e8dc;
-  --maint-ink: #8a4315;
-  --finance-tint: #e1eee7;
-  --finance-ink: #2f6e58;
-  --good: #2f6e58;
-  --warn: #a8641a;
-  --bad: #b13b2f;
-  --violet: #8a7ab8;
-  --shadow: 0 1px 2px rgba(23,33,42,0.06), 0 6px 20px rgba(23,33,42,0.05);
+  --maint-tint: #e4ecf3;
+  --maint-ink: #1f4d75;
+  --finance-tint: #e1efe9;
+  --finance-ink: #128a63;
+  --good: #128a63;
+  --warn: #b8791f;
+  --bad: #b23b3b;
+  --violet: #4a6f92;
+  --shadow: 0 1px 2px rgba(22,35,46,0.06), 0 6px 20px rgba(22,35,46,0.05);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #10161c; --surface: #171f27; --ink: #e7ecef; --ink-soft: #93a0aa; --line: #2a343d;
-    --accent: #e2915a; --accent-ink: #17212a; --maint-tint: #2c2115; --maint-ink: #eab087;
-    --finance-tint: #142822; --finance-ink: #7fc4a6;
-    --good: #7fc4a6; --warn: #e0a75e; --bad: #e0796a;
+    --paper: #0e161d; --surface: #16212b; --ink: #e6edf1; --ink-soft: #8fa0aa; --line: #263340;
+    --accent: #6fa8d8; --accent-ink: #0e161d; --maint-tint: #152534; --maint-ink: #8fc0e8;
+    --finance-tint: #122921; --finance-ink: #6fbf9e;
+    --good: #6fbf9e; --warn: #e0a75e; --bad: #e08585;
     --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
   }
 }
 :root[data-theme="dark"] {
-  --paper: #10161c; --surface: #171f27; --ink: #e7ecef; --ink-soft: #93a0aa; --line: #2a343d;
-  --accent: #e2915a; --accent-ink: #17212a; --maint-tint: #2c2115; --maint-ink: #eab087;
-  --finance-tint: #142822; --finance-ink: #7fc4a6;
-  --good: #7fc4a6; --warn: #e0a75e; --bad: #e0796a;
+  --paper: #0e161d; --surface: #16212b; --ink: #e6edf1; --ink-soft: #8fa0aa; --line: #263340;
+  --accent: #6fa8d8; --accent-ink: #0e161d; --maint-tint: #152534; --maint-ink: #8fc0e8;
+  --finance-tint: #122921; --finance-ink: #6fbf9e;
+  --good: #6fbf9e; --warn: #e0a75e; --bad: #e08585;
   --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
 }
 :root[data-theme="light"] {
-  --paper: #edf1f3; --surface: #ffffff; --ink: #17212a; --ink-soft: #57626c; --line: #d7dee3;
-  --accent: #c8631f; --accent-ink: #ffffff; --maint-tint: #f7e8dc; --maint-ink: #8a4315;
-  --finance-tint: #e1eee7; --finance-ink: #2f6e58;
-  --good: #2f6e58; --warn: #a8641a; --bad: #b13b2f;
-  --shadow: 0 1px 2px rgba(23,33,42,0.06), 0 6px 20px rgba(23,33,42,0.05);
+  --paper: #eef2f5; --surface: #ffffff; --ink: #16232e; --ink-soft: #54666f; --line: #d7e0e5;
+  --accent: #205a8c; --accent-ink: #ffffff; --maint-tint: #e4ecf3; --maint-ink: #1f4d75;
+  --finance-tint: #e1efe9; --finance-ink: #128a63;
+  --good: #128a63; --warn: #b8791f; --bad: #b23b3b;
+  --shadow: 0 1px 2px rgba(22,35,46,0.06), 0 6px 20px rgba(22,35,46,0.05);
 }
 
 
@@ -219,7 +219,7 @@ function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</
 // being copy-pasted into Google Docs, which drops external <style> rules but keeps
 // inline styles -- otherwise white header text turns invisible on a white cell
 // (found 2026-07-19).
-function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' style="background:#8a7ab8;color:#ffffff;">' + text + '</th>'; }
+function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' style="background:#4a6f92;color:#ffffff;">' + text + '</th>'; }
 
 function renderTopWorkOrders(items) {
   if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No completed work orders this month yet.</p>';
