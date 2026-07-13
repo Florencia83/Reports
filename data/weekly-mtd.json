@@ -4,10 +4,10 @@
   "source": "AppFolio (R&M - Repairs budget, monthly + per-property) + QBT (labor + Ramp materials) — automated",
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 4574.01,
-    "materials": 11877.46,
-    "total_actual": 16451.47,
-    "variance": 50816.31
+    "labor": 4709.57,
+    "materials": 11893.08,
+    "total_actual": 16602.65,
+    "variance": 50665.13
   },
   "cost_by_property": [
     {
