@@ -265,16 +265,21 @@ var KPI_THRESHOLDS = {
   'Time to Schedule': { direction: 'lower', baseline: 1.6, goal: 1, performing: 0.8 }
 };
 
+// Colored by which band the value sits closest to (midpoints between performing/goal
+// and goal/baseline), not by strict "must fully reach performing" cutoffs -- a value
+// a hair past the performing mark but still nearer to it than to goal should read green.
 function kpiColorClass(metric, value) {
   var t = KPI_THRESHOLDS[metric];
   if (!t || value == null) return '';
+  var midGood = (t.performing + t.goal) / 2;
+  var midWarn = (t.goal + t.baseline) / 2;
   if (t.direction === 'lower') {
-    if (value <= t.performing) return 'good';
-    if (value <= t.goal) return 'warn';
+    if (value <= midGood) return 'good';
+    if (value <= midWarn) return 'warn';
     return 'bad';
   }
-  if (value >= t.performing) return 'good';
-  if (value >= t.goal) return 'warn';
+  if (value >= midGood) return 'good';
+  if (value >= midWarn) return 'warn';
   return 'bad';
 }
 
