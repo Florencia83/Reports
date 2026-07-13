@@ -53,14 +53,15 @@
 
 
 * { box-sizing: border-box; }
-html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
+html, body { background: var(--maint-tint); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
 body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
-.wrap { max-width: 680px; margin: 0 auto; }
+.wrap { max-width: 680px; margin: 0 auto; background: var(--surface); border-radius: 20px; padding: clamp(20px, 4vh, 36px) clamp(20px, 5vw, 36px); box-shadow: var(--shadow); }
 
 @page { size: A4; margin: 18mm; }
 @media print {
+  html, body { background: var(--surface); }
   body { padding: 0; }
-  .wrap { max-width: none; }
+  .wrap { max-width: none; background: none; border-radius: 0; padding: 0; box-shadow: none; }
   .week-picker, footer { display: none; }
 }
 
