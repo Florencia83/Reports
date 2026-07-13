@@ -87,6 +87,8 @@ td.num, th.num { font-family: 'Manrope', system-ui, sans-serif; font-variant-num
 td.detail, th.detail { white-space: normal; min-width: 220px; }
 td.detail { color: var(--ink-soft); }
 #by-tech-container td.detail, #by-tech-container th.detail { min-width: 0; max-width: 140px; }
+#top-wo-container td.detail, #top-wo-container th.detail { min-width: 0; max-width: 170px; }
+td.prop, th.prop { white-space: normal; max-width: 90px; }
 #by-tech-container td, #by-tech-container th { border-bottom: 1px solid var(--violet); }
 #opex-container td, #opex-container th { border-bottom: 1px solid var(--violet); }
 tr:last-child td { border-bottom: none; }
@@ -225,9 +227,12 @@ function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' 
 
 function renderTopWorkOrders(items) {
   if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No completed work orders this month yet.</p>';
-  var head = '<tr>' + th('Meld Ref') + th('Property') + th('Labor', 'num') + th('Materials', 'num') + th('Cost', 'num') + th('Description', 'detail') + '</tr>';
+  var head = '<tr>' + th('Meld Ref') + th('Property', 'prop') + th('Labor', 'num') + th('Materials', 'num') + th('Cost', 'num') + th('Description', 'detail') + '</tr>';
   var body = items.map(function(w) {
-    return '<tr><td class="ref">' + esc(w.ref) + '</td><td>' + (w.property ? esc(w.property.toUpperCase()) : '&mdash;') + '</td><td class="num">' + money(w.labor) + '</td><td class="num">' + money(w.materials) + '</td><td class="num">' + money(w.cost) + '</td><td class="detail">' + esc(w.brief) + '</td></tr>';
+    // Strip parenthetical annotations like "(multi-family)" -- just the property
+    // code, not the full Ramp/QBT category text, so the column stays narrow.
+    var prop = w.property ? w.property.replace(/\s*\([^)]*\)\s*$/, '').toUpperCase() : null;
+    return '<tr><td class="ref">' + esc(w.ref) + '</td><td class="prop">' + (prop || '&mdash;') + '</td><td class="num">' + money(w.labor) + '</td><td class="num">' + money(w.materials) + '</td><td class="num">' + money(w.cost) + '</td><td class="detail">' + esc(w.brief) + '</td></tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
@@ -371,7 +376,7 @@ function renderNarrative(narrative) {
     return { visible: true, html: html };
   }
   if (Array.isArray(narrative) && narrative.length) {
-    return { visible: true, html: '<div class="prose" style="font-size:14px;">' + narrative.map(function(p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>' };
+    return { visible: true, html: '<div class="callout prose" style="font-size:14px;">' + narrative.map(function(p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>' };
   }
   return { visible: false, html: '' };
 }
