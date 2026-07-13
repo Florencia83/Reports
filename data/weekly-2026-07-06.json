@@ -3,7 +3,7 @@
   "week_end": "2026-07-12",
   "label": "July 6 – 12, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-12",
+  "generated_at": "2026-07-13",
   "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": null,
-      "last_30": 56.79,
-      "last_7": 53.66
+      "last_30": 56.94,
+      "last_7": 56.34
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -60,20 +60,23 @@
   "top_work_orders": [
     {
       "ref": "TVJCXAV",
-      "brief": "The pump lost its prime its no longer working.",
+      "property": "kn47",
+      "brief": "The irrigation pump overheated and flipped when turning it on.",
       "labor": 0,
       "materials": 3202.01,
       "cost": 3202.01
     },
     {
       "ref": "T3LAL2Q",
-      "brief": "No Hot Water In Home",
+      "property": "b101",
+      "brief": "Water heater had heating elements broken",
       "labor": 66.67,
       "materials": 2365.3,
       "cost": 2431.97
     },
     {
       "ref": "TGZT14D",
+      "property": "l912 (multi-family)",
       "brief": "Leak in crawl space",
       "labor": 151.25,
       "materials": 2141.22,
@@ -81,59 +84,66 @@
     },
     {
       "ref": "TZQE4L",
-      "brief": "see list below",
-      "labor": 98.1,
+      "property": "tc68",
+      "brief": "Water heater replacement",
+      "labor": 148.5,
       "materials": 925.73,
-      "cost": 1023.83
+      "cost": 1074.23
     },
     {
       "ref": "TU292CMB",
-      "brief": "Daily Pool Maintenance",
+      "property": "kn47",
+      "brief": "Updating requirements for pool at KN47",
       "labor": 0,
       "materials": 445.9,
       "cost": 445.9
     },
     {
-      "ref": "TV2UB2Q",
-      "brief": "D - Maintenance (clone)",
-      "labor": 0,
-      "materials": 305.63,
-      "cost": 305.63
-    },
-    {
       "ref": "TL23LGN",
-      "brief": "roof leak (clone)",
+      "property": "rl16",
+      "brief": "Repairs after leak",
       "labor": 190.54,
       "materials": 101,
       "cost": 291.54
     },
     {
       "ref": "TPM69YT",
-      "brief": "The Bathroom Fan Motor Went Completely Out Again",
+      "property": "tc68",
+      "brief": "Bathroom fan replacement",
       "labor": 66.15,
       "materials": 159.12,
       "cost": 225.27
     },
     {
       "ref": "TY2TQQ1",
-      "brief": "tenant stated water will not turn off in shower",
+      "property": "m221",
+      "brief": "Shower valve cartridge replacement",
       "labor": 78.75,
       "materials": 140.24,
       "cost": 218.99
     },
     {
       "ref": "TDCM4JR",
-      "brief": "No Hot Water Heater Not Heating (clone)",
+      "property": "j312",
+      "brief": "Water heater replacement",
       "labor": 184.17,
       "materials": 12.54,
       "cost": 196.71
+    },
+    {
+      "ref": "TEZZTLB",
+      "property": "l912",
+      "brief": "Crawl space insulation repair",
+      "labor": 0,
+      "materials": 191.13,
+      "cost": 191.13
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 62,
-      "avg_cost_per_wo": 31.09,
+      "wo_count": 65,
+      "avg_cost_per_wo": 30.46,
       "total_labor_cost": 904.5,
       "avg_resident_rating": 4,
       "reviews": [
@@ -171,7 +181,7 @@
     {
       "name": "Jaxson Lakins",
       "wo_count": 23,
-      "avg_cost_per_wo": 53.17,
+      "avg_cost_per_wo": 53.34,
       "total_labor_cost": 721.2,
       "avg_resident_rating": null,
       "reviews": []
@@ -179,8 +189,8 @@
     {
       "name": "Jonas Hoard",
       "wo_count": 20,
-      "avg_cost_per_wo": 83.15,
-      "total_labor_cost": 300.15,
+      "avg_cost_per_wo": 87.85,
+      "total_labor_cost": 394.2,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -270,7 +280,15 @@
       "amount": 3774.71
     }
   ],
-  "narrative": null,
+  "narrative": [
+    "This week's metrics stayed stable, except for Average Speed of Repair. This number is affected by Spokane having only one technician and around 100 work orders, which is generating a backlog.",
+    "In the Top 10 Work Orders, plumbing repairs make up the highest amounts, along with the repair at L912 which was completed today.",
+    "The technicians performed well according to the ratings from the residents. Justin Gutierrez has the highest average cost per work order, showing a pattern of plumbing repairs in Spokane, which matches the fact that he's the only technician in that area, handling all the emergency and high-priority work orders."
+  ],
   "narrative_2": null,
-  "priorities_next_week": null
+  "priorities_next_week": [
+    "Tri-Cities automated scheduling",
+    "TC34 Grounds",
+    "Work Orders for every bill in Ramp"
+  ]
 }

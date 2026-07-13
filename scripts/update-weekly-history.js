@@ -333,6 +333,15 @@ function materialsByRef(records) {
   records.forEach(r => { if (!r.ref) return; out[r.ref] = (out[r.ref] || 0) + r.amount; });
   return out;
 }
+// Either source can carry a ref's property (QBT jobcode path or Ramp QuickbooksDepartment) --
+// take whichever is found first, labor checked first since it's the more complete source
+// (every completed meld gets a timesheet, not every meld has a Ramp purchase).
+function propertyByRef(laborRecords, rampRecords) {
+  const out = {};
+  laborRecords.forEach(r => { if (r.ref && r.property && !out[r.ref]) out[r.ref] = r.property; });
+  rampRecords.forEach(r => { if (r.ref && r.property && !out[r.ref]) out[r.ref] = r.property; });
+  return out;
+}
 // Only R&M-Material/Contractor + Supplies and Tools count toward a property's R&M -
 // Repairs budget comparison -- Turn/CapEx/Grounds spend on that property is a different
 // budget line entirely. Same GL scope as materialsBudgetTotal (and matches LeeRoy's
@@ -486,6 +495,7 @@ async function main() {
   const monthMelds = melds.filter(m => m.completion_date >= monthStart && m.completion_date <= todayStr);
   const monthLaborByRef = sumByRef(monthLaborRecords);
   const monthMaterialsByRef = materialsByRef(monthRampRecords);
+  const monthPropertyByRef = propertyByRef(monthLaborRecords, monthRampRecords);
   const monthRows = monthMelds.map(m => {
     const lab = monthLaborByRef[m.ref] || { hours: 0, cost: 0 };
     const mat = monthMaterialsByRef[m.ref] || 0;
@@ -494,7 +504,7 @@ async function main() {
 
   const topWorkOrders = [...monthRows].sort((a, b) => b.totalCost - a.totalCost).slice(0, 10)
     .map(r => ({
-      ref: r.ref, brief: r.brief,
+      ref: r.ref, property: monthPropertyByRef[r.ref] || null, brief: r.brief,
       labor: Math.round(r.laborCost * 100) / 100,
       materials: Math.round(r.materialsCost * 100) / 100,
       cost: Math.round(r.totalCost * 100) / 100,
