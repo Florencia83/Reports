@@ -176,9 +176,10 @@ async function qbtFetchWithRetry(url, headers, attempt = 1) {
   return res.json();
 }
 
-// Returns raw per-timesheet-entry records (not pre-aggregated) so callers can slice by
-// any date sub-range (this week / month-to-date / last 7 / last 30) without refetching.
-async function fetchQbtLabor(fromStr, toStr) {
+// Jobcodes have no date range of their own (they're the hierarchy, not the time
+// entries), so fetch them exactly once per run and hand the cache to every call of
+// fetchQbtLaborForRange below -- avoids re-paging all ~15k jobcodes per date window.
+async function fetchQbtJobcodes() {
   const headers = { Authorization: `Bearer ${process.env.QBT_TOKEN}` };
   const jobcodes = {};
   let jcPage = 1;
@@ -192,6 +193,13 @@ async function fetchQbtLabor(fromStr, toStr) {
     await new Promise(r => setTimeout(r, 150));
   }
   console.log('QBT jobcodes fetched:', Object.keys(jobcodes).length);
+  return jobcodes;
+}
+
+// Returns raw per-timesheet-entry records (not pre-aggregated) so callers can slice by
+// any date sub-range (this week / month-to-date / last 7 / last 30) without refetching.
+async function fetchQbtLaborForRange(jobcodes, fromStr, toStr) {
+  const headers = { Authorization: `Bearer ${process.env.QBT_TOKEN}` };
 
   function jcPath(id, cache) {
     if (cache[id]) return cache[id];
@@ -474,11 +482,15 @@ async function main() {
   const broadStart = [monthStart, last30Start, weekStart].sort()[0];
   console.log('Refreshing weekly history for', weekStart, 'to', weekEnd, '| broad fetch from', broadStart, 'to', todayStr);
 
+  // Jobcodes have no date range -- fetch once, reuse for every QBT labor pull below
+  // (broad window here, plus the Q1/Q2 backfill windows further down if needed).
+  const jobcodes = await fetchQbtJobcodes();
+
   // One fetch pass wide enough to cover the current week, month-to-date, and the last
   // 30/7 day rolling windows -- everything below just slices this in memory.
   const [melds, laborRecords, rampRecords] = await Promise.all([
     fetchPmCompletedMelds(broadStart, todayStr),
-    fetchQbtLabor(broadStart, todayStr),
+    fetchQbtLaborForRange(jobcodes, broadStart, todayStr),
     fetchRampTransactions(broadStart, todayStr),
   ]);
   console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length);
@@ -560,16 +572,55 @@ async function main() {
     ? priorKpis
     : KPI_METRICS.map(metric => ({ metric, q1: null, q2: null, last_30: null, last_7: null }));
 
-  function avgWoCost(fromStr, toStr) {
+  // Average Work Order Cost = (sum of QBT labor cost + Ramp materials cost, matched to
+  // each meld by its reference ID) / (number of melds completed in the window). Logs
+  // its inputs so the result is checkable against PM/QBT/Ramp directly, not just trusted.
+  function avgWoCostFor(melds, laborRecords, rampRecords, fromStr, toStr, label) {
     const inR = melds.filter(m => m.completion_date >= fromStr && m.completion_date <= toStr);
-    if (!inR.length) return null;
+    if (!inR.length) { console.log(`avgWoCost[${label}]: 0 melds completed ${fromStr}..${toStr} -- null`); return null; }
     const labByRef = sumByRef(inRange(laborRecords, fromStr, toStr));
     const matByRef = materialsByRef(inRange(rampRecords, fromStr, toStr));
-    const total = inR.reduce((s, m) => s + (labByRef[m.ref] ? labByRef[m.ref].cost : 0) + (matByRef[m.ref] || 0), 0);
-    return Math.round((total / inR.length) * 100) / 100;
+    const totalLabor = inR.reduce((s, m) => s + (labByRef[m.ref] ? labByRef[m.ref].cost : 0), 0);
+    const totalMaterials = inR.reduce((s, m) => s + (matByRef[m.ref] || 0), 0);
+    // A real week/quarter with real completed melds never has $0 labor AND $0
+    // materials -- that combination means an upstream fetch silently came back
+    // empty (same failure mode as the weekly-mtd.json guard below), not a real
+    // average of zero. Refuse to report it rather than write a false $0.
+    if (totalLabor === 0 && totalMaterials === 0) {
+      console.log(`avgWoCost[${label}]: WARNING -- ${inR.length} melds completed but $0 labor and $0 materials matched (${laborRecords.length} labor records, ${rampRecords.length} ramp records fetched for this window) -- treating as a failed fetch, not writing a false $0 average`);
+      return null;
+    }
+    const avg = Math.round(((totalLabor + totalMaterials) / inR.length) * 100) / 100;
+    console.log(`avgWoCost[${label}]: ${inR.length} melds, labor $${totalLabor.toFixed(2)} + materials $${totalMaterials.toFixed(2)} = $${(totalLabor + totalMaterials).toFixed(2)} total -> avg $${avg}`);
+    return avg;
   }
-  kpis[0].last_30 = avgWoCost(last30Start, todayStr);
-  kpis[0].last_7 = avgWoCost(last7Start, todayStr);
+  kpis[0].last_30 = avgWoCostFor(melds, laborRecords, rampRecords, last30Start, todayStr, 'last_30');
+  kpis[0].last_7 = avgWoCostFor(melds, laborRecords, rampRecords, last7Start, todayStr, 'last_7');
+
+  // Q1/Q2 (calendar quarters, matching the other 6 manually-pasted KPIs) are closed,
+  // immutable history once the quarter ends -- compute once and never touch again
+  // (kpis[0].q1/q2 come from priorKpis above, so a non-null value here means an
+  // earlier run already did this and it's just being carried forward untouched).
+  if (kpis[0].q1 == null) {
+    console.log('Backfilling Average Work Order Cost Q1 2026 (Jan-Mar)...');
+    const [q1Melds, q1Labor, q1Ramp] = await Promise.all([
+      fetchPmCompletedMelds('2026-01-01', '2026-03-31'),
+      fetchQbtLaborForRange(jobcodes, '2026-01-01', '2026-03-31'),
+      fetchRampTransactions('2026-01-01', '2026-03-31'),
+    ]);
+    console.log('Q1 raw fetch: melds', q1Melds.length, '| labor records', q1Labor.length, '| ramp records', q1Ramp.length);
+    kpis[0].q1 = avgWoCostFor(q1Melds, q1Labor, q1Ramp, '2026-01-01', '2026-03-31', 'q1');
+  }
+  if (kpis[0].q2 == null) {
+    console.log('Backfilling Average Work Order Cost Q2 2026 (Apr-Jun)...');
+    const [q2Melds, q2Labor, q2Ramp] = await Promise.all([
+      fetchPmCompletedMelds('2026-04-01', '2026-06-30'),
+      fetchQbtLaborForRange(jobcodes, '2026-04-01', '2026-06-30'),
+      fetchRampTransactions('2026-04-01', '2026-06-30'),
+    ]);
+    console.log('Q2 raw fetch: melds', q2Melds.length, '| labor records', q2Labor.length, '| ramp records', q2Ramp.length);
+    kpis[0].q2 = avgWoCostFor(q2Melds, q2Labor, q2Ramp, '2026-04-01', '2026-06-30', 'q2');
+  }
 
   const weekJson = {
     week_start: weekStart,
