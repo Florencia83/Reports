@@ -106,6 +106,8 @@ tr.total td { font-weight: 600; background: var(--paper); }
 .week-picker select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 td.ref { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; color: var(--maint-ink); }
 td.num.bad { background: color-mix(in srgb, var(--bad) 18%, var(--surface)); font-weight: 500; }
+td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); font-weight: 500; }
+td.num.warn { background: color-mix(in srgb, var(--warn) 18%, var(--surface)); font-weight: 500; }
 .rating-tag { font-family: 'Manrope', system-ui, sans-serif; }
 .rating-tag.good { color: var(--good); font-weight: 700; }
 .rating-tag.na { color: var(--ink-soft); }
@@ -250,11 +252,42 @@ function renderByTechnician(items) {
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
+// Goal bands per KPI, set by Florencia (not from any API) -- "lower" metrics are
+// good when small (times), "higher" metrics are good when large (satisfaction).
+// performing = best/stretch level, goal = achieving/target level, baseline = starting
+// reference (shown to her elsewhere, not itself a color boundary here).
+var KPI_THRESHOLDS = {
+  'Emergency Work Order Completion Time': { direction: 'lower', baseline: 1.6, goal: 1, performing: 0.8 },
+  'Work Order Resident Satisfaction': { direction: 'higher', baseline: 3.8, goal: 4.4, performing: 4.7 },
+  'Avg Vendor Completion Time': { direction: 'lower', baseline: 7, goal: 4, performing: 3 },
+  'Avg Speed of Repair': { direction: 'lower', baseline: 6, goal: 4, performing: 2 },
+  'Time to Assignment': { direction: 'lower', baseline: 2, goal: 1, performing: 0.6 },
+  'Time to Schedule': { direction: 'lower', baseline: 1.6, goal: 1, performing: 0.8 }
+};
+
+function kpiColorClass(metric, value) {
+  var t = KPI_THRESHOLDS[metric];
+  if (!t || value == null) return '';
+  if (t.direction === 'lower') {
+    if (value <= t.performing) return 'good';
+    if (value <= t.goal) return 'warn';
+    return 'bad';
+  }
+  if (value >= t.performing) return 'good';
+  if (value >= t.goal) return 'warn';
+  return 'bad';
+}
+
+function kpiCell(metric, value) {
+  var cls = kpiColorClass(metric, value);
+  return '<td class="num' + (cls ? ' ' + cls : '') + '">' + (value != null ? value : '&mdash;') + '</td>';
+}
+
 function renderKpis(kpis) {
   if (!kpis || !kpis.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not added yet.</p>';
   var head = '<tr>' + th('KPI') + th('Q1 Average', 'num') + th('Q2 Average', 'num') + th('Last 30 Days', 'num') + th('Last 7 Days', 'num') + '</tr>';
   var body = kpis.map(function(k) {
-    return '<tr><td>' + esc(k.metric) + '</td><td class="num">' + (k.q1 != null ? k.q1 : '&mdash;') + '</td><td class="num">' + (k.q2 != null ? k.q2 : '&mdash;') + '</td><td class="num">' + (k.last_30 != null ? k.last_30 : '&mdash;') + '</td><td class="num">' + (k.last_7 != null ? k.last_7 : '&mdash;') + '</td></tr>';
+    return '<tr><td>' + esc(k.metric) + '</td>' + kpiCell(k.metric, k.q1) + kpiCell(k.metric, k.q2) + kpiCell(k.metric, k.last_30) + kpiCell(k.metric, k.last_7) + '</tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }

@@ -16,45 +16,45 @@
     },
     {
       "metric": "Emergency Work Order Completion Time",
-      "q1": null,
-      "q2": null,
-      "last_30": null,
-      "last_7": null
+      "q1": 0.8,
+      "q2": 0.4,
+      "last_30": 0.5,
+      "last_7": 0.9
     },
     {
       "metric": "Work Order Resident Satisfaction",
-      "q1": null,
-      "q2": null,
-      "last_30": null,
-      "last_7": null
+      "q1": 4.21,
+      "q2": 4.6,
+      "last_30": 4.4,
+      "last_7": 5
     },
     {
       "metric": "Avg Vendor Completion Time",
-      "q1": null,
-      "q2": null,
-      "last_30": null,
+      "q1": 18.7,
+      "q2": 38.9,
+      "last_30": 7.2,
       "last_7": null
     },
     {
       "metric": "Avg Speed of Repair",
-      "q1": null,
-      "q2": null,
-      "last_30": null,
-      "last_7": null
+      "q1": 9.2,
+      "q2": 15.6,
+      "last_30": 6.9,
+      "last_7": 6.1
     },
     {
       "metric": "Time to Assignment",
-      "q1": null,
-      "q2": null,
-      "last_30": null,
-      "last_7": null
+      "q1": 0.3,
+      "q2": 1.31,
+      "last_30": 0,
+      "last_7": 0.1
     },
     {
       "metric": "Time to Schedule",
-      "q1": null,
-      "q2": null,
-      "last_30": null,
-      "last_7": null
+      "q1": 0.4,
+      "q2": 1.7,
+      "last_30": 0.3,
+      "last_7": 0.6
     }
   ],
   "top_work_orders": [
