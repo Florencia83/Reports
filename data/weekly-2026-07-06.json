@@ -283,7 +283,7 @@
   "narrative": [
     "This week's metrics stayed stable, except for Average Speed of Repair. This number is affected by Spokane having only one technician and around 100 work orders, which is generating a backlog.",
     "Avg Vendor Completion Time has been decreasing recently, from a Q2 average of 38.9 days to 7.2 days over the last 30 days.",
-    "In the Top 10 Work Orders, plumbing repairs make up the highest amounts, along with the repair at L912 which was completed today.",
+    "In the Top 10 Work Orders, excluding the irrigation pump, plumbing repairs make up the highest amounts, along with the repair at L912 which was completed today.",
     "The technicians performed well according to the ratings from the residents. Justin Gutierrez has the highest average cost per work order, showing a pattern of plumbing repairs in Spokane, which matches the fact that he's the only technician in that area, handling all the emergency and high-priority work orders."
   ],
   "narrative_2": null,
