@@ -85,8 +85,12 @@ tr:last-child td { border-bottom: none; }
 td.svc { font-family: 'Manrope', system-ui, sans-serif; white-space: normal; min-width: 220px; }
 td.cad { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; color: var(--ink-soft); white-space: nowrap; }
 td.occ { text-align: center; }
-tr.prop-divider td { background: var(--grounds-tint); color: var(--grounds-ink); font-family: 'Space Mono', monospace; font-weight: 700; font-size: 14.5px; letter-spacing: 0.05em; padding: 10px 12px; border-right: none; border-top: 3px solid var(--grounds-ink); border-bottom: 2px solid var(--grounds-ink); }
-tr.emp-divider td { background: color-mix(in srgb, var(--violet) 9%, var(--surface)); color: var(--ink-soft); font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 12px; border-right: none; border-top: 2px solid var(--violet); border-bottom: 2px solid var(--violet); }
+/* box-shadow (not border) for the top/bottom divider lines -- border-collapse picks only
+   one winning border per shared row edge (width/style tie-break, browser-dependent), which
+   made the top line inconsistently thinner/invisible vs the bottom. An inset box-shadow
+   paints on both edges of this cell regardless of what the neighboring row declares. */
+tr.prop-divider td { background: var(--grounds-tint); color: var(--grounds-ink); font-family: 'Space Mono', monospace; font-weight: 700; font-size: 14.5px; letter-spacing: 0.05em; padding: 10px 12px; border: none; box-shadow: inset 0 2px 0 0 var(--grounds-ink), inset 0 -2px 0 0 var(--grounds-ink); }
+tr.emp-divider td { background: color-mix(in srgb, var(--violet) 9%, var(--surface)); color: var(--ink-soft); font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 12px; border: none; box-shadow: inset 0 2px 0 0 var(--violet), inset 0 -2px 0 0 var(--violet); }
 a.occ-link { text-decoration: none; color: inherit; }
 
 .pill { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 10px; display: inline-block; white-space: nowrap; }
