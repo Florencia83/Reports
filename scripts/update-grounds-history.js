@@ -73,19 +73,20 @@ const GROUNDS_REGISTRY = {
   163430: { area: 'Tri-Cities', property: 'PS91', title: 'Lawn Service', cadence: 'Weekly' },
   112136: { area: 'Tri-Cities', property: 'PS91', title: 'Grounds Cleanup', cadence: 'Weekly' },
 
-  // ---- Tacoma: TC68 (Jonas assigned in PM; several sub-services actually vendor-run) ----
-  178924: { area: 'Tacoma', property: 'TC68', title: 'Lawn mowing & edging', cadence: 'Weekly', vendor: 'Lawn Care vendor' },
+  // ---- Tacoma: TC68 (vendor-executed, but Jonas checks/verifies each one and the office
+  // corroborates -- Florencia 2026-07-15: show these under Jonas, don't drop as vendor-only) ----
+  178924: { area: 'Tacoma', property: 'TC68', title: 'Lawn mowing & edging', cadence: 'Weekly' },
   178925: { area: 'Tacoma', property: 'TC68', title: 'Pet waste removal', cadence: 'Weekly' },
-  178932: { area: 'Tacoma', property: 'TC68', title: 'Internal Office / Clubhouse Cleaning', cadence: 'Bi-Weekly', vendor: 'Vendor' },
+  178932: { area: 'Tacoma', property: 'TC68', title: 'Internal Office / Clubhouse Cleaning', cadence: 'Bi-Weekly' },
   178936: { area: 'Tacoma', property: 'TC68', title: 'Litter pickup', cadence: 'Bi-Weekly' },
-  178939: { area: 'Tacoma', property: 'TC68', title: 'Irrigation zone adjustments', cadence: 'Quarterly', vendor: 'Lawn Care vendor' },
-  178941: { area: 'Tacoma', property: 'TC68', title: 'Bed weeding (manual & chemical)', cadence: 'Monthly', vendor: 'Lawn Care vendor' },
+  178939: { area: 'Tacoma', property: 'TC68', title: 'Irrigation zone adjustments', cadence: 'Quarterly' },
+  178941: { area: 'Tacoma', property: 'TC68', title: 'Bed weeding (manual & chemical)', cadence: 'Monthly' },
   178945: { area: 'Tacoma', property: 'TC68', title: 'Lighting checks', cadence: 'Monthly' },
-  178947: { area: 'Tacoma', property: 'TC68', title: 'Fertilization (spring/fall)', cadence: 'Bi-Annual', vendor: 'Lawn Care vendor' },
-  178950: { area: 'Tacoma', property: 'TC68', title: 'Irrigation startup', cadence: 'Annual', vendor: 'Lawn Care vendor' },
-  178953: { area: 'Tacoma', property: 'TC68', title: 'Irrigation winterization', cadence: 'Annual', vendor: 'Lawn Care vendor' },
-  178955: { area: 'Tacoma', property: 'TC68', title: 'Tree pruning', cadence: 'Annual', vendor: 'Vendor (TBD)' },
-  178958: { area: 'Tacoma', property: 'TC68', title: 'Pressure washing', cadence: 'Annual', vendor: 'Lawn Care vendor' },
+  178947: { area: 'Tacoma', property: 'TC68', title: 'Fertilization (spring/fall)', cadence: 'Bi-Annual' },
+  178950: { area: 'Tacoma', property: 'TC68', title: 'Irrigation startup', cadence: 'Annual' },
+  178953: { area: 'Tacoma', property: 'TC68', title: 'Irrigation winterization', cadence: 'Annual' },
+  178955: { area: 'Tacoma', property: 'TC68', title: 'Tree pruning', cadence: 'Annual' },
+  178958: { area: 'Tacoma', property: 'TC68', title: 'Pressure washing', cadence: 'Annual' },
 
   // ---- Spokane (David Sanchez + Alexander Overall, shared across the whole portfolio) ----
   161264: { area: 'Spokane', property: 'V202', title: 'Lawn service', cadence: 'Weekly' },
