@@ -1,0 +1,1976 @@
+{
+  "generated_at": "2026-07-14",
+  "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
+  "areas": [
+    {
+      "area": "Tri-Cities",
+      "properties": [
+        {
+          "property": "KN47 K1",
+          "employees": [
+            {
+              "employee": "Hannah Deckard",
+              "recurring": [
+                {
+                  "recurring_id": 153870,
+                  "title": "Litter pickup",
+                  "cadence": "Every 3 days",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153870/",
+                  "occurrences": [
+                    {
+                      "ref": "T4GYWKLB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-06"
+                    },
+                    {
+                      "ref": "TZL922LB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-13"
+                    },
+                    {
+                      "ref": "T0KCU3Q",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-20"
+                    },
+                    {
+                      "ref": "TG9Q3FV",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-27"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 151567,
+                  "title": "Fitness Center Walkthrough",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/151567/",
+                  "occurrences": [
+                    {
+                      "ref": "TBE1ZHJB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-11"
+                    },
+                    {
+                      "ref": "TREYQB9",
+                      "status": "COMPLETED",
+                      "date": "2026-06-15"
+                    },
+                    {
+                      "ref": "T2GM8MAB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-25"
+                    },
+                    {
+                      "ref": "TMF4FBN",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-24"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 123679,
+                  "title": "Open dumpsters for pickup / area cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/123679/",
+                  "occurrences": [
+                    {
+                      "ref": "T00NLGG",
+                      "status": "COMPLETED",
+                      "date": "2026-06-25"
+                    },
+                    {
+                      "ref": "TJJPN2J",
+                      "status": "COMPLETED",
+                      "date": "2026-07-02"
+                    },
+                    {
+                      "ref": "TK1IF7GB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "T3Q9GFJ",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-23"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 151568,
+                  "title": "Pet waste removal",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/151568/",
+                  "occurrences": [
+                    {
+                      "ref": "T3N4FYM",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "T6KNDL2",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "TN296C8",
+                      "status": "COMPLETED",
+                      "date": "2026-07-06"
+                    },
+                    {
+                      "ref": "T9CQVHV",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-20"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 151570,
+                  "title": "Laundry room cleaning",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/151570/",
+                  "occurrences": [
+                    {
+                      "ref": "TJ6H5WFB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-25"
+                    },
+                    {
+                      "ref": "T9RRFGD",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TVGJYXBB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "T19VTH5",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-23"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 119264,
+                  "title": "Lighting checks",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/119264/",
+                  "occurrences": [
+                    {
+                      "ref": "TRRYKHC",
+                      "status": "COMPLETED",
+                      "date": "2026-04-13"
+                    },
+                    {
+                      "ref": "T9RNL6FB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-26"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Isaac chavez",
+              "recurring": [
+                {
+                  "recurring_id": 153951,
+                  "title": "Irrigation startup and zone adjustments",
+                  "cadence": "Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153951/",
+                  "occurrences": [
+                    {
+                      "ref": "TT7X7NC",
+                      "status": "COMPLETED",
+                      "date": "2026-06-03"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Jared Miller",
+              "recurring": [
+                {
+                  "recurring_id": 153868,
+                  "title": "Daily Pool Maintenance",
+                  "cadence": "Daily",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153868/",
+                  "occurrences": [
+                    {
+                      "ref": "TYBUMIK",
+                      "status": "COMPLETED",
+                      "date": "2026-07-12"
+                    },
+                    {
+                      "ref": "TBYE81V",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    },
+                    {
+                      "ref": "TI8CVEG",
+                      "status": "COMPLETED",
+                      "date": "2026-07-14"
+                    },
+                    {
+                      "ref": "TB74K08",
+                      "status": "PENDING",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Reynaldo Leonides",
+              "recurring": [
+                {
+                  "recurring_id": 163425,
+                  "title": "General Landscaping Maintenance",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163425/",
+                  "occurrences": [
+                    {
+                      "ref": "T9P9LC9",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "TFKHIWK",
+                      "status": "COMPLETED",
+                      "date": "2026-07-06"
+                    },
+                    {
+                      "ref": "TU3DVIY",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    },
+                    {
+                      "ref": "TNFL1IU",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-20"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153787,
+                  "title": "Lawn mowing & edging / exterior landscaping",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153787/",
+                  "occurrences": [
+                    {
+                      "ref": "TN2YWVI",
+                      "status": "COMPLETED",
+                      "date": "2026-06-26"
+                    },
+                    {
+                      "ref": "TIQVAHIB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TP98H5P",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "TQHZJCZ",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153788,
+                  "title": "Spray rock beds / walkways / curb edges",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153788/",
+                  "occurrences": [
+                    {
+                      "ref": "TG6QKCM",
+                      "status": "COMPLETED",
+                      "date": "2026-05-27"
+                    },
+                    {
+                      "ref": "TCYE1L0",
+                      "status": "COMPLETED",
+                      "date": "2026-06-17"
+                    },
+                    {
+                      "ref": "TKEEARDB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "T2AJEPLB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153944,
+                  "title": "Bed weeding (manual & chemical)",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153944/",
+                  "occurrences": [
+                    {
+                      "ref": "TW78VQN",
+                      "status": "COMPLETED",
+                      "date": "2026-04-13"
+                    },
+                    {
+                      "ref": "TJ5FJ2V",
+                      "status": "COMPLETED",
+                      "date": "2026-06-17"
+                    },
+                    {
+                      "ref": "TIGWEWK",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153945,
+                  "title": "Irrigation leak inspections",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153945/",
+                  "occurrences": [
+                    {
+                      "ref": "TNLC940",
+                      "status": "COMPLETED",
+                      "date": "2026-04-10"
+                    },
+                    {
+                      "ref": "T0QB43LB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-17"
+                    },
+                    {
+                      "ref": "T2EK5DQ",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "PS17",
+          "employees": [
+            {
+              "employee": "Hannah Deckard",
+              "recurring": [
+                {
+                  "recurring_id": 112135,
+                  "title": "Grounds Cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/112135/",
+                  "occurrences": [
+                    {
+                      "ref": "TQ7QUX2",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "TYZYUFC",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "T814X90",
+                      "status": "COMPLETED",
+                      "date": "2026-07-07"
+                    },
+                    {
+                      "ref": "TV0T2RY",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-21"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 164484,
+                  "title": "Litter pickup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/164484/",
+                  "occurrences": [
+                    {
+                      "ref": "TTA8WZY",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "TGAJW9GB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "T61ZMD7",
+                      "status": "COMPLETED",
+                      "date": "2026-07-07"
+                    },
+                    {
+                      "ref": "TUW4KWJ",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-21"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 138046,
+                  "title": "Weekly garbage taken out",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/138046/",
+                  "occurrences": [
+                    {
+                      "ref": "TQ6N79EB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "TYDFWDF",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TI805N",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "TFRQ34C",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-21"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Reynaldo Leonides",
+              "recurring": [
+                {
+                  "recurring_id": 163429,
+                  "title": "Lawn Service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163429/",
+                  "occurrences": [
+                    {
+                      "ref": "TM6W281",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TNT0F9U",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "T21WA2IB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-17"
+                    },
+                    {
+                      "ref": "TBKNR3BB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-24"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "PS25",
+          "employees": [
+            {
+              "employee": "Hannah Deckard",
+              "recurring": [
+                {
+                  "recurring_id": 112134,
+                  "title": "Grounds Cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/112134/",
+                  "occurrences": [
+                    {
+                      "ref": "TIGKFWGB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TAUVGLCB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TF5WWGD",
+                      "status": "COMPLETED",
+                      "date": "2026-07-07"
+                    },
+                    {
+                      "ref": "T8NNFJLB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-21"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Jared Miller",
+              "recurring": [
+                {
+                  "recurring_id": 180223,
+                  "title": "Daily Pool Maintenance",
+                  "cadence": "Daily",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/180223/",
+                  "occurrences": [
+                    {
+                      "ref": "T3Q2RDF",
+                      "status": "COMPLETED",
+                      "date": "2026-07-12"
+                    },
+                    {
+                      "ref": "TABA3IZ",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    },
+                    {
+                      "ref": "TA6N77C",
+                      "status": "COMPLETED",
+                      "date": "2026-07-14"
+                    },
+                    {
+                      "ref": "TIVF8BDB",
+                      "status": "PENDING",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Reynaldo Leonides",
+              "recurring": [
+                {
+                  "recurring_id": 163427,
+                  "title": "Lawn Service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163427/",
+                  "occurrences": [
+                    {
+                      "ref": "TQQD26M",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TAZLHQDB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "T78L37JB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-17"
+                    },
+                    {
+                      "ref": "TG0BX53",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-24"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "PS91",
+          "employees": [
+            {
+              "employee": "Hannah Deckard",
+              "recurring": [
+                {
+                  "recurring_id": 112136,
+                  "title": "Grounds Cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/112136/",
+                  "occurrences": [
+                    {
+                      "ref": "TQHXKEH",
+                      "status": "COMPLETED",
+                      "date": "2026-06-25"
+                    },
+                    {
+                      "ref": "T733F3HB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TY4WZKKB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-07"
+                    },
+                    {
+                      "ref": "TPN0PTCB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-21"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Reynaldo Leonides",
+              "recurring": [
+                {
+                  "recurring_id": 163430,
+                  "title": "Lawn Service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163430/",
+                  "occurrences": [
+                    {
+                      "ref": "T07PZ2I",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "T429ANX",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TQD9R4N",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-17"
+                    },
+                    {
+                      "ref": "T1YJRQHB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-24"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "RL16",
+          "employees": [
+            {
+              "employee": "Hannah Deckard",
+              "recurring": [
+                {
+                  "recurring_id": 115088,
+                  "title": "Exterior staircases",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/115088/",
+                  "occurrences": [
+                    {
+                      "ref": "TX7NBV4",
+                      "status": "COMPLETED",
+                      "date": "2026-05-26"
+                    },
+                    {
+                      "ref": "T541Y2JB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-10"
+                    },
+                    {
+                      "ref": "TWA6W4L",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "T5CPNZM",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 112038,
+                  "title": "Grounds Cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/112038/",
+                  "occurrences": [
+                    {
+                      "ref": "TR0IM3EB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "T3XKZ4H",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "TJX6KJW",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "TZTUZUJB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-22"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 114790,
+                  "title": "Grounds Cleanup (2)",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/114790/",
+                  "occurrences": [
+                    {
+                      "ref": "TT3R6GHB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TUEN987",
+                      "status": "COMPLETED",
+                      "date": "2026-07-02"
+                    },
+                    {
+                      "ref": "T0FVHXK",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "TMG5GDDB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-22"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Jared Miller",
+              "recurring": [
+                {
+                  "recurring_id": 180224,
+                  "title": "Daily Pool Maintenance",
+                  "cadence": "Daily",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/180224/",
+                  "occurrences": [
+                    {
+                      "ref": "T5YTXEI",
+                      "status": "COMPLETED",
+                      "date": "2026-07-12"
+                    },
+                    {
+                      "ref": "T4B8XL5",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    },
+                    {
+                      "ref": "TI8M96H",
+                      "status": "PENDING",
+                      "date": "2026-07-13"
+                    },
+                    {
+                      "ref": "TZ7YR5",
+                      "status": "PENDING",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Reynaldo Leonides",
+              "recurring": [
+                {
+                  "recurring_id": 163426,
+                  "title": "General Lawn Maintenance",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163426/",
+                  "occurrences": [
+                    {
+                      "ref": "T0IL6CR",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TN2CJ7LB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "T4DG6N2",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    },
+                    {
+                      "ref": "TZ529FG",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-23"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "RL21",
+          "employees": [
+            {
+              "employee": "Reynaldo Leonides",
+              "recurring": [
+                {
+                  "recurring_id": 166100,
+                  "title": "Exterior Landscaping (return lawn service)",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/166100/",
+                  "occurrences": [
+                    {
+                      "ref": "TEGTFEKB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-26"
+                    },
+                    {
+                      "ref": "TY98WMN",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TF16P3GB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TGWI58IB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 163428,
+                  "title": "Lawn Service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163428/",
+                  "occurrences": [
+                    {
+                      "ref": "TI5M073",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TYQ7FBK",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TGW3P9X",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    },
+                    {
+                      "ref": "TDDV3HGB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-23"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "Spokane",
+      "properties": [
+        {
+          "property": "A210",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161270,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161270/",
+                  "occurrences": [
+                    {
+                      "ref": "TCE8LAMB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-22"
+                    },
+                    {
+                      "ref": "TUJQG1G",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "TCX0E7BB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "TUEWWFX",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "A511",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161272,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161272/",
+                  "occurrences": [
+                    {
+                      "ref": "T975ZAN",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "TKEJEXF",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "T76JGI8",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "T5UQKVV",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "A916",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161276,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161276/",
+                  "occurrences": [
+                    {
+                      "ref": "T2HX5AJB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "TN2M3RY",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TQK8ZCK",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "TQKJW5T",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "B101",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161278,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161278/",
+                  "occurrences": [
+                    {
+                      "ref": "TFBK1IH",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "T1ENYM8",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TXUGY47",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "TQTMYAD",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "C302",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161289,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161289/",
+                  "occurrences": [
+                    {
+                      "ref": "TTYU2UE",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TALQVYK",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "TEN4INR",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TKB7QQ7",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "C313",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161291,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161291/",
+                  "occurrences": [
+                    {
+                      "ref": "TJM4GTCB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-25"
+                    },
+                    {
+                      "ref": "TAFZC4AB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-02"
+                    },
+                    {
+                      "ref": "TLW32FBB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TW2THLU",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "E328",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161286,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161286/",
+                  "occurrences": [
+                    {
+                      "ref": "T2188HC",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "T9WYV7C",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "TR7BJH8",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TKAMWGC",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "H731",
+          "employees": [
+            {
+              "employee": "David Sanchez",
+              "recurring": [
+                {
+                  "recurring_id": 163904,
+                  "title": "Lawn service (bi-weekly)",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163904/",
+                  "occurrences": [
+                    {
+                      "ref": "TLCY3BV",
+                      "status": "COMPLETED",
+                      "date": "2026-05-28"
+                    },
+                    {
+                      "ref": "T52Q3W4",
+                      "status": "COMPLETED",
+                      "date": "2026-06-09"
+                    },
+                    {
+                      "ref": "TP1L8VK",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TLB1DXG",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 179920,
+                  "title": "Lawn service (weekly)",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/179920/",
+                  "occurrences": [
+                    {
+                      "ref": "TAIZBF9",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TEQ5M1R",
+                      "status": "COMPLETED",
+                      "date": "2026-07-02"
+                    },
+                    {
+                      "ref": "TDYEH2G",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "TE5Z93J",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "J312",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161271,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161271/",
+                  "occurrences": [
+                    {
+                      "ref": "TW2VDTU",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "T8ZF35DB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TW4L5EE",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "TPQ5U8L",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "K104-BROWER EVEN",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 167333,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/167333/",
+                  "occurrences": [
+                    {
+                      "ref": "TJRZ4QDB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-26"
+                    },
+                    {
+                      "ref": "TM6X9XEB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TEEW06G",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TNNGFTCB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-17"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "K104-LEFEVRE",
+          "employees": [
+            {
+              "employee": "David Sanchez",
+              "recurring": [
+                {
+                  "recurring_id": 166878,
+                  "title": "Weekly mowing",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/166878/",
+                  "occurrences": [
+                    {
+                      "ref": "TDRVVEB",
+                      "status": "COMPLETED",
+                      "date": "2026-05-30"
+                    },
+                    {
+                      "ref": "TE03CEFB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-05"
+                    },
+                    {
+                      "ref": "TDUBHJAB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-26"
+                    },
+                    {
+                      "ref": "TC0H7NP",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "K308",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 164381,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/164381/",
+                  "occurrences": [
+                    {
+                      "ref": "TPDWPIGB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-03"
+                    },
+                    {
+                      "ref": "TBRYVN8",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    },
+                    {
+                      "ref": "TTW3D1LB",
+                      "status": "PENDING",
+                      "date": "2026-07-14"
+                    },
+                    {
+                      "ref": "TC2QX9V",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-17"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "L912",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161281,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161281/",
+                  "occurrences": [
+                    {
+                      "ref": "TJJRXYEB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TJMVNAX",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TH49A5L",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "TLKB2Q7",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "M221",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161277,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161277/",
+                  "occurrences": [
+                    {
+                      "ref": "TQ2HFFU",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "TRA7HRBB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "T3REJZ0",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "T1ZGR3N",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "M405",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161280,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161280/",
+                  "occurrences": [
+                    {
+                      "ref": "TI5HXPX",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "T133G4E",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TZ39RBJB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "T2H2PMN",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "M608",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161279,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161279/",
+                  "occurrences": [
+                    {
+                      "ref": "TEG8KPX",
+                      "status": "COMPLETED",
+                      "date": "2026-06-23"
+                    },
+                    {
+                      "ref": "TR8ULDL",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TXWEU91",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "TMVDJDW",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "O155-OAK",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 162927,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/162927/",
+                  "occurrences": [
+                    {
+                      "ref": "TCQ9DW5",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "T3AY56MB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "T22G4AP",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    },
+                    {
+                      "ref": "TAI2RX9",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-23"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "P705",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161267,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161267/",
+                  "occurrences": [
+                    {
+                      "ref": "T56YP1AB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-22"
+                    },
+                    {
+                      "ref": "TRIYBHF",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "T0LXJ5MB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-08"
+                    },
+                    {
+                      "ref": "TNZLMYIB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "S129",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161265,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161265/",
+                  "occurrences": [
+                    {
+                      "ref": "TZ4YLU",
+                      "status": "COMPLETED",
+                      "date": "2026-06-22"
+                    },
+                    {
+                      "ref": "TIDT5PHB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "T5D6Y4M",
+                      "status": "COMPLETED",
+                      "date": "2026-07-07"
+                    },
+                    {
+                      "ref": "T4PBPBU",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "S300",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161266,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161266/",
+                  "occurrences": [
+                    {
+                      "ref": "T9619P2",
+                      "status": "COMPLETED",
+                      "date": "2026-06-22"
+                    },
+                    {
+                      "ref": "T7YN3J5",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "TEFICJCB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-07"
+                    },
+                    {
+                      "ref": "TB47H8IB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "V202",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161264,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161264/",
+                  "occurrences": [
+                    {
+                      "ref": "TK5IJGCB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-22"
+                    },
+                    {
+                      "ref": "T15M4NFB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "TMPLLK9",
+                      "status": "COMPLETED",
+                      "date": "2026-07-07"
+                    },
+                    {
+                      "ref": "TQT2EP",
+                      "status": "COMPLETED",
+                      "date": "2026-07-13"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "W117",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161282,
+                  "title": "Lawn service",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161282/",
+                  "occurrences": [
+                    {
+                      "ref": "TYA8VF1",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TIYY3BCB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "TXQDADH",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "T5F0W26",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "W226",
+          "employees": [
+            {
+              "employee": "David Sanchez & Alexander Overall",
+              "recurring": [
+                {
+                  "recurring_id": 161284,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/161284/",
+                  "occurrences": [
+                    {
+                      "ref": "TCZX1PJB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TUPQN0K",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "TKT3ZUIB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-09"
+                    },
+                    {
+                      "ref": "T5DJUVLB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "Tacoma",
+      "properties": [
+        {
+          "property": "TC68",
+          "employees": [
+            {
+              "employee": "Jonas Hoard",
+              "recurring": [
+                {
+                  "recurring_id": 178924,
+                  "title": "Lawn mowing & edging",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178924/",
+                  "occurrences": [
+                    {
+                      "ref": "TMN30G3",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "T4WYKGKB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TJCTH22",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TGIIXRH",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 178925,
+                  "title": "Pet waste removal",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178925/",
+                  "occurrences": [
+                    {
+                      "ref": "TDLMIC9",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TDPJ09C",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "T603A8BB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "T0R2KJQ",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 178932,
+                  "title": "Internal Office / Clubhouse Cleaning",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178932/",
+                  "occurrences": [
+                    {
+                      "ref": "TG759WT",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "T03DYFHB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TQ0M9MM",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 178936,
+                  "title": "Litter pickup",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178936/",
+                  "occurrences": [
+                    {
+                      "ref": "TWHEX17",
+                      "status": "COMPLETED",
+                      "date": "2026-06-25"
+                    },
+                    {
+                      "ref": "TGQ9IH0",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TVM066D",
+                      "status": "COMPLETED",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "T983LAY",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-16"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 178941,
+                  "title": "Bed weeding (manual & chemical)",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178941/",
+                  "occurrences": [
+                    {
+                      "ref": "TKZTWTMB",
+                      "status": "COMPLETED",
+                      "date": "2026-06-17"
+                    },
+                    {
+                      "ref": "TKE9PG4",
+                      "status": "COMPLETED",
+                      "date": "2026-07-06"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 178945,
+                  "title": "Lighting checks",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178945/",
+                  "occurrences": [
+                    {
+                      "ref": "TH2RQC8",
+                      "status": "COMPLETED",
+                      "date": "2026-06-29"
+                    },
+                    {
+                      "ref": "TUJH6XDB",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-14"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 178947,
+                  "title": "Fertilization (spring/fall)",
+                  "cadence": "Bi-Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178947/",
+                  "occurrences": [
+                    {
+                      "ref": "TTVBPLQ",
+                      "status": "COMPLETED",
+                      "date": "2026-06-17"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

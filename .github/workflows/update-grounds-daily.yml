@@ -1,0 +1,35 @@
+name: Update Grounds data (daily)
+
+on:
+  schedule:
+    - cron: '50 8 * * *'  # every day, 08:50 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull Grounds recurring meld status (Property Meld)
+        env:
+          PROPERTYMELD_EMAIL: ${{ secrets.PROPERTYMELD_EMAIL }}
+          PROPERTYMELD_PASSWORD: ${{ secrets.PROPERTYMELD_PASSWORD }}
+        run: node scripts/update-grounds-history.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "florencia-reports-bot"
+          git config user.email "actions@github.com"
+          git add data/grounds.json
+          git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No changes to commit"
+          } else {
+            $today = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd')
+            git commit -m "Automated Grounds data refresh $today"
+            git push
+          }
