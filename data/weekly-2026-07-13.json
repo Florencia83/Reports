@@ -3,7 +3,7 @@
   "week_end": "2026-07-19",
   "label": "July 13 – 19, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-13",
+  "generated_at": "2026-07-14",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 48.29,
-      "last_30": 57.95,
-      "last_7": 56.44
+      "last_30": 62.34,
+      "last_7": 52.05
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -75,12 +75,28 @@
       "cost": 2431.97
     },
     {
+      "ref": "TVU0H5AB",
+      "property": "tc68",
+      "brief": "D - Maintenance",
+      "labor": 0,
+      "materials": 2341.41,
+      "cost": 2341.41
+    },
+    {
       "ref": "TGZT14D",
       "property": "l912 (multi-family)",
       "brief": "Leak in crawl space",
       "labor": 151.25,
       "materials": 2141.22,
       "cost": 2292.47
+    },
+    {
+      "ref": "T670I9J",
+      "property": "kn47",
+      "brief": "D - Maintenance",
+      "labor": 0,
+      "materials": 1248.81,
+      "cost": 1248.81
     },
     {
       "ref": "TZQE4L",
@@ -99,6 +115,14 @@
       "cost": 445.9
     },
     {
+      "ref": "TZAKAQE",
+      "property": "kn47",
+      "brief": "C - Paint Prep / Paint",
+      "labor": 0,
+      "materials": 342.89,
+      "cost": 342.89
+    },
+    {
       "ref": "TV2UB2Q",
       "property": "tc68",
       "brief": "D - Maintenance (clone)",
@@ -110,41 +134,17 @@
       "ref": "TCYJLQAB",
       "property": "rl16",
       "brief": "OCCUPIED UNITS INSPECTION",
-      "labor": 297.34,
+      "labor": 293.59,
       "materials": 0,
-      "cost": 297.34
-    },
-    {
-      "ref": "TL23LGN",
-      "property": "rl16",
-      "brief": "roof leak (clone)",
-      "labor": 190.54,
-      "materials": 101,
-      "cost": 291.54
-    },
-    {
-      "ref": "TPM69YT",
-      "property": "tc68",
-      "brief": "The Bathroom Fan Motor Went Completely Out Again",
-      "labor": 66.15,
-      "materials": 159.12,
-      "cost": 225.27
-    },
-    {
-      "ref": "TY2TQQ1",
-      "property": "m221",
-      "brief": "tenant stated water will not turn off in shower",
-      "labor": 78.75,
-      "materials": 140.24,
-      "cost": 218.99
+      "cost": 293.59
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 69,
-      "avg_cost_per_wo": 29.18,
-      "total_labor_cost": 933.06,
+      "wo_count": 76,
+      "avg_cost_per_wo": 29.11,
+      "total_labor_cost": 1068.48,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -160,10 +160,29 @@
       ]
     },
     {
+      "name": "Jaxson Lakins",
+      "wo_count": 32,
+      "avg_cost_per_wo": 45.64,
+      "total_labor_cost": 942.4,
+      "avg_resident_rating": 4.5,
+      "reviews": [
+        {
+          "ref": "TZXD0MLB",
+          "rating": 4,
+          "text": "Good job Jaxson"
+        },
+        {
+          "ref": "T64GCHLB",
+          "rating": 5,
+          "text": "Good job Jaxson"
+        }
+      ]
+    },
+    {
       "name": "Justin Gutierrez",
-      "wo_count": 26,
-      "avg_cost_per_wo": 232.19,
-      "total_labor_cost": 1046.67,
+      "wo_count": 28,
+      "avg_cost_per_wo": 223.69,
+      "total_labor_cost": 1192.5,
       "avg_resident_rating": 4.5,
       "reviews": [
         {
@@ -179,18 +198,18 @@
       ]
     },
     {
-      "name": "Jaxson Lakins",
-      "wo_count": 23,
-      "avg_cost_per_wo": 53.34,
-      "total_labor_cost": 721.2,
+      "name": "Isaac Chavez",
+      "wo_count": 24,
+      "avg_cost_per_wo": 165.64,
+      "total_labor_cost": 773.29,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 21,
-      "avg_cost_per_wo": 84.76,
-      "total_labor_cost": 417.15,
+      "wo_count": 23,
+      "avg_cost_per_wo": 78.22,
+      "total_labor_cost": 436.05,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -204,14 +223,6 @@
           "text": null
         }
       ]
-    },
-    {
-      "name": "Isaac Chavez",
-      "wo_count": 20,
-      "avg_cost_per_wo": 193.73,
-      "total_labor_cost": 672.64,
-      "avg_resident_rating": null,
-      "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
@@ -226,7 +237,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 0
+      "amount": 210.95
     },
     {
       "category": "Supplies and Tools",
@@ -238,11 +249,11 @@
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 96.51
     },
     {
       "category": "Maintenance",
-      "amount": 15.62
+      "amount": 134.31
     }
   ],
   "narrative": null,
