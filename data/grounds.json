@@ -205,47 +205,6 @@
               ]
             },
             {
-              "employee": "Octavio M",
-              "recurring": [
-                {
-                  "recurring_id": 153951,
-                  "title": "Irrigation startup and zone adjustments",
-                  "cadence": "Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153951/",
-                  "occurrences": [
-                    {
-                      "ref": "T3ZQYFJB",
-                      "status": "CANCELED",
-                      "date": "2026-03-20"
-                    },
-                    {
-                      "ref": "TGB69MDB",
-                      "status": "CANCELED",
-                      "date": "2026-03-20"
-                    },
-                    {
-                      "ref": "TT7X7NC",
-                      "status": "COMPLETED",
-                      "date": "2026-06-03"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 153953,
-                  "title": "Tree pruning",
-                  "cadence": "Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153953/",
-                  "occurrences": [
-                    {
-                      "ref": "TEKBBMJ",
-                      "status": "CANCELED",
-                      "date": "2026-03-20"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "employee": "Reynaldo Leonides",
               "recurring": [
                 {
@@ -387,12 +346,7 @@
                       "date": "2026-07-15"
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "employee": "Reynaldo Leonides & Octavio M",
-              "recurring": [
+                },
                 {
                   "recurring_id": 153950,
                   "title": "Fertilization (spring/fall)",
@@ -408,6 +362,49 @@
                       "ref": "TMPTU1LB",
                       "status": "COULD NOT COMPLETE",
                       "date": "2026-06-10"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153951,
+                  "title": "Irrigation startup and zone adjustments",
+                  "cadence": "Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153951/",
+                  "occurrences": [
+                    {
+                      "ref": "T3ZQYFJB",
+                      "status": "CANCELED",
+                      "date": "2026-03-20"
+                    },
+                    {
+                      "ref": "TGB69MDB",
+                      "status": "CANCELED",
+                      "date": "2026-03-20"
+                    },
+                    {
+                      "ref": "TT7X7NC",
+                      "status": "COMPLETED",
+                      "date": "2026-06-03"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153952,
+                  "title": "Irrigation winterization",
+                  "cadence": "Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153952/",
+                  "occurrences": []
+                },
+                {
+                  "recurring_id": 153953,
+                  "title": "Tree pruning",
+                  "cadence": "Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153953/",
+                  "occurrences": [
+                    {
+                      "ref": "TEKBBMJ",
+                      "status": "CANCELED",
+                      "date": "2026-03-20"
                     }
                   ]
                 }
@@ -1218,39 +1215,6 @@
           "property": "H731",
           "employees": [
             {
-              "employee": "David Sanchez",
-              "recurring": [
-                {
-                  "recurring_id": 163904,
-                  "title": "Lawn service (bi-weekly)",
-                  "cadence": "Bi-Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163904/",
-                  "occurrences": [
-                    {
-                      "ref": "TLCY3BV",
-                      "status": "COMPLETED",
-                      "date": "2026-05-28"
-                    },
-                    {
-                      "ref": "T52Q3W4",
-                      "status": "COMPLETED",
-                      "date": "2026-06-09"
-                    },
-                    {
-                      "ref": "TP1L8VK",
-                      "status": "COMPLETED",
-                      "date": "2026-06-30"
-                    },
-                    {
-                      "ref": "TLB1DXG",
-                      "status": "SCHEDULED",
-                      "date": "2026-07-15"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "employee": "David Sanchez & Alexander Overall",
               "recurring": [
                 {
@@ -1276,6 +1240,34 @@
                     },
                     {
                       "ref": "TE5Z93J",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 163904,
+                  "title": "Lawn service (bi-weekly)",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163904/",
+                  "occurrences": [
+                    {
+                      "ref": "TLCY3BV",
+                      "status": "COMPLETED",
+                      "date": "2026-05-28"
+                    },
+                    {
+                      "ref": "T52Q3W4",
+                      "status": "COMPLETED",
+                      "date": "2026-06-09"
+                    },
+                    {
+                      "ref": "TP1L8VK",
+                      "status": "COMPLETED",
+                      "date": "2026-06-30"
+                    },
+                    {
+                      "ref": "TLB1DXG",
                       "status": "SCHEDULED",
                       "date": "2026-07-15"
                     }
@@ -1867,34 +1859,6 @@
               "employee": "Jonas Hoard",
               "recurring": [
                 {
-                  "recurring_id": 178924,
-                  "title": "Lawn mowing & edging",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178924/",
-                  "occurrences": [
-                    {
-                      "ref": "TMN30G3",
-                      "status": "COMPLETED",
-                      "date": "2026-06-24"
-                    },
-                    {
-                      "ref": "T4WYKGKB",
-                      "status": "COMPLETED",
-                      "date": "2026-06-30"
-                    },
-                    {
-                      "ref": "TJCTH22",
-                      "status": "COMPLETED",
-                      "date": "2026-07-10"
-                    },
-                    {
-                      "ref": "TGIIXRH",
-                      "status": "SCHEDULED",
-                      "date": "2026-07-16"
-                    }
-                  ]
-                },
-                {
                   "recurring_id": 178925,
                   "title": "Pet waste removal",
                   "cadence": "Weekly",
@@ -1919,34 +1883,6 @@
                       "ref": "T0R2KJQ",
                       "status": "SCHEDULED",
                       "date": "2026-07-16"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 178932,
-                  "title": "Internal Office / Clubhouse Cleaning",
-                  "cadence": "Bi-Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178932/",
-                  "occurrences": [
-                    {
-                      "ref": "T5VH6H2",
-                      "status": "CANCELED",
-                      "date": "2026-06-16"
-                    },
-                    {
-                      "ref": "TG759WT",
-                      "status": "COMPLETED",
-                      "date": "2026-06-30"
-                    },
-                    {
-                      "ref": "T03DYFHB",
-                      "status": "COMPLETED",
-                      "date": "2026-06-30"
-                    },
-                    {
-                      "ref": "TQ0M9MM",
-                      "status": "SCHEDULED",
-                      "date": "2026-07-15"
                     }
                   ]
                 },
@@ -1979,24 +1915,6 @@
                   ]
                 },
                 {
-                  "recurring_id": 178941,
-                  "title": "Bed weeding (manual & chemical)",
-                  "cadence": "Monthly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178941/",
-                  "occurrences": [
-                    {
-                      "ref": "TKZTWTMB",
-                      "status": "COMPLETED",
-                      "date": "2026-06-17"
-                    },
-                    {
-                      "ref": "TKE9PG4",
-                      "status": "COMPLETED",
-                      "date": "2026-07-06"
-                    }
-                  ]
-                },
-                {
                   "recurring_id": 178945,
                   "title": "Lighting checks",
                   "cadence": "Monthly",
@@ -2011,32 +1929,6 @@
                       "ref": "TUJH6XDB",
                       "status": "SCHEDULED",
                       "date": "2026-07-14"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 178939,
-                  "title": "Irrigation zone adjustments",
-                  "cadence": "Quarterly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178939/",
-                  "occurrences": [
-                    {
-                      "ref": "TIQ06Z7",
-                      "status": "CANCELED",
-                      "date": "2026-06-16"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 178947,
-                  "title": "Fertilization (spring/fall)",
-                  "cadence": "Bi-Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178947/",
-                  "occurrences": [
-                    {
-                      "ref": "TTVBPLQ",
-                      "status": "COMPLETED",
-                      "date": "2026-06-17"
                     }
                   ]
                 }

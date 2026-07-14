@@ -240,33 +240,39 @@ async function main() {
   relevant.forEach(m => { (byRecurId[m.recurring_meld] = byRecurId[m.recurring_meld] || []).push(m); });
 
   const missing = Object.keys(GROUNDS_REGISTRY).filter(rid => !byRecurId[rid]);
-  if (missing.length) console.log(`No live instances found for ${missing.length} registered series (likely low-cadence, not currently due): ${missing.join(', ')}`);
+  if (missing.length) console.log(`No live occurrence history for ${missing.length} registered series (likely low-cadence, not currently due): ${missing.join(', ')}`);
 
-  // area -> property -> employee -> [ recurring rows ]. Vendor-only and truly-unassigned
-  // series are dropped entirely here (Florencia, 2026-07-14: only wants series with a real
-  // in-house person confirmed live) rather than shown with a placeholder employee.
+  // area -> property -> employee -> [ recurring rows ]. Employee is read from each series'
+  // live recurring-meld template (current assignment in PM right now), NOT derived from past
+  // occurrences -- occurrence-level servicer data is locked once a meld closes (PM: "Closed
+  // Status Melds can not be edited"), so a stale/wrong historical assignment could never be
+  // corrected in the report even after Florencia fixed it in PM (found 2026-07-15 via kn47
+  // Tree Pruning still showing Octavio after being reassigned to Rey at the template level).
+  // Vendor-only and truly-unassigned series are dropped entirely (Florencia, 2026-07-14: only
+  // wants series with a real in-house person confirmed live) rather than shown with a
+  // placeholder employee.
   const areaMap = {};
   let skippedNoEmployee = 0;
   for (const [ridStr, meta] of Object.entries(GROUNDS_REGISTRY)) {
     const rid = Number(ridStr);
+
+    // Registry `vendor` annotations are reconciled against Florencia's manual tracking sheet
+    // and take priority over PM's live template -- PM's recurring-meld template lists a
+    // default in-house agent (e.g. Jonas Hoard) on several TC68 series even though the actual
+    // work is vendor-run (confirmed 2026-07-15: PM has no maintenance_vendor field populated
+    // for these, so there's no live signal to detect vendor-run status other than her sheet).
+    if (meta.vendor) { skippedNoEmployee++; continue; }
+
     const instances = (byRecurId[rid] || []).slice().sort((a, b) => occDate(b).localeCompare(occDate(a)));
     const recentInstances = instances.slice(0, 4);
 
-    // Employee = most common live in_house_servicer name across the displayed last-4
-    // occurrences (not the full fetch history) so a past reassignment doesn't dilute the
-    // currently-visible crew. Some series (e.g. Spokane's David + Alexander) are jointly
-    // assigned on every instance -- show every name tied for the top occurrence count,
-    // not just one, so a real 2-person crew doesn't silently read as a single name.
-    const nameCounts = {};
-    recentInstances.forEach(m => (m.in_house_servicers || []).forEach(s => {
-      if (!s.agent) return;
-      const n = `${s.agent.first_name} ${s.agent.last_name}`.trim();
-      nameCounts[n] = (nameCounts[n] || 0) + 1;
-    }));
-    const maxCount = Math.max(0, ...Object.values(nameCounts));
-    const topNames = Object.entries(nameCounts).filter(([, c]) => c === maxCount).map(([n]) => n);
-    if (!topNames.length) { skippedNoEmployee++; continue; }
-    const employee = topNames.join(' & ');
+    const tr = await pmGet(`/api/melds/recurring/${rid}/`, sc, csrf);
+    if (tr.status !== 200) { console.log(`Could not fetch recurring template ${rid} (HTTP ${tr.status}) -- skipping.`); skippedNoEmployee++; continue; }
+    const template = JSON.parse(tr.body);
+    const names = (template.maintenance || []).map(a => a.name).filter(Boolean);
+    if (!names.length) { skippedNoEmployee++; continue; }
+    const employee = names.join(' & ');
+    await new Promise(res => setTimeout(res, 80));
 
     const last4 = recentInstances.slice().reverse().map(m => {
       const info = occurrenceInfo(m);
