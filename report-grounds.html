@@ -152,7 +152,7 @@ function fmtDate(iso) {
 
 function pillFor(occ) {
   if (!occ) return '<span class="pill empty">&mdash;</span>';
-  var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], PENDING: ['warn', 'Pending'] };
+  var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], PENDING: ['warn', 'Pending'], 'COULD NOT COMPLETE': ['bad', 'Could Not Complete'] };
   var m = map[occ.status] || ['empty', occ.status];
   var dateStr = fmtDate(occ.date);
   return '<span class="pill ' + m[0] + '">' + m[1] + (dateStr ? ' &middot; ' + dateStr : '') + '</span>';

@@ -144,14 +144,21 @@ async function pmGet(p, sc, csrf) {
     { 'User-Agent': 'Mozilla/5.0', 'Cookie': sc(), 'X-CSRFToken': csrf, 'Accept': 'application/json', 'Referer': PM_BASE + '/' + PM_MGMT + '/m/' + PM_MGMT + '/' }, null);
 }
 
-const OPEN_STATUSES = ['PENDING_ASSIGNMENT', 'PENDING_MORE_MANAGEMENT_AVAILABILITY', 'PENDING_COMPLETION', 'PENDING_VENDOR'];
+const OPEN_STATUSES = ['PENDING_ASSIGNMENT', 'PENDING_MORE_MANAGEMENT_AVAILABILITY', 'PENDING_COMPLETION', 'PENDING_VENDOR', 'PENDING_MORE_VENDOR_AVAILABILITY'];
+// Statuses PM considers terminal-but-not-completed. Confirmed live 2026-07-14 via the full
+// distinct-status enumeration on the account -- these were previously never fetched at all
+// (only OPEN_STATUSES + COMPLETED were queried), so a meld could silently vanish from the
+// report instead of showing as Canceled/Could Not Complete (caught via a May gap in kn47's
+// bed-weeding/irrigation series: both months' melds were MAINTENANCE_COULD_NOT_COMPLETE).
+const CANCELED_STATUSES = ['MANAGER_CANCELED', 'TENANT_CANCELED'];
+const COULD_NOT_COMPLETE_STATUSES = ['VENDOR_COULD_NOT_COMPLETE', 'MAINTENANCE_COULD_NOT_COMPLETE'];
 // Wide enough to reliably surface 4 real occurrences even for the least-frequent
 // registered cadence (annual) -- a 150-day completed-meld lookback covers roughly 5
 // months of history, which in practice is the only way to catch quarterly/annual
 // series that don't currently have an open instance.
 const COMPLETED_LOOKBACK_DAYS = 150;
 
-async function fetchAllMelds(sc, csrf, status, cutoffStr) {
+async function fetchAllMelds(sc, csrf, status, cutoffStr, dateField) {
   const out = [];
   let offset = 0;
   while (true) {
@@ -161,9 +168,9 @@ async function fetchAllMelds(sc, csrf, status, cutoffStr) {
     const rows = d.results || [];
     if (!rows.length) break;
     out.push(...rows);
-    if (status === 'COMPLETED' && cutoffStr) {
+    if (cutoffStr && dateField) {
       // Results come back newest-first; stop paging once we're past the lookback window.
-      const oldestThisPage = rows[rows.length - 1].completion_date;
+      const oldestThisPage = rows[rows.length - 1][dateField];
       if (oldestThisPage && oldestThisPage.slice(0, 10) < cutoffStr) break;
     }
     if (!d.next || rows.length < 200) break;
@@ -182,11 +189,14 @@ function latestEvent(m) {
 }
 
 function occurrenceInfo(m) {
-  if (m.manager_cancelled || m.tenant_canceller) {
-    return { status: 'CANCELED', date: (m.updated || m.created || '').slice(0, 10) };
+  if (m.manager_cancelled || m.tenant_canceller || CANCELED_STATUSES.includes(m.status)) {
+    return { status: 'CANCELED', date: (m.manager_cancelled || m.tenant_canceller || m.updated || m.created || '').slice(0, 10) };
   }
   if (m.status === 'COMPLETED') {
     return { status: 'COMPLETED', date: (m.completion_date || '').slice(0, 10) };
+  }
+  if (COULD_NOT_COMPLETE_STATUSES.includes(m.status)) {
+    return { status: 'COULD NOT COMPLETE', date: (m.completion_date || m.updated || '').slice(0, 10) };
   }
   const ev = latestEvent(m);
   if (ev) return { status: 'SCHEDULED', date: (ev.dtstart || '').slice(0, 10) };
@@ -206,7 +216,13 @@ async function main() {
   for (const s of OPEN_STATUSES) {
     all.push(...await fetchAllMelds(sc, csrf, s));
   }
-  all.push(...await fetchAllMelds(sc, csrf, 'COMPLETED', cutoffStr));
+  all.push(...await fetchAllMelds(sc, csrf, 'COMPLETED', cutoffStr, 'completion_date'));
+  for (const s of COULD_NOT_COMPLETE_STATUSES) {
+    all.push(...await fetchAllMelds(sc, csrf, s, cutoffStr, 'completion_date'));
+  }
+  for (const s of CANCELED_STATUSES) {
+    all.push(...await fetchAllMelds(sc, csrf, s, cutoffStr, 'updated'));
+  }
 
   const seen = new Set();
   all = all.filter(m => { if (seen.has(m.id)) return false; seen.add(m.id); return true; });
