@@ -80,34 +80,29 @@ html, body {
   font-family: 'Manrope', system-ui, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 body {
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px);
+  padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px;
 }
 .wrap {
   max-width: 960px;
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-.masthead {
-  border-bottom: 3px solid var(--ink);
-  padding-bottom: 16px;
-  margin-bottom: clamp(20px, 4vh, 36px);
+.email-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: clamp(20px, 4vh, 36px) clamp(20px, 5vw, 36px);
+  box-shadow: var(--shadow);
+}
+
+.masthead-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 16px;
+  align-items: flex-start;
   flex-wrap: wrap;
-  flex-shrink: 0;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 .masthead-id {
   font-family: 'Manrope', system-ui, sans-serif;
@@ -116,16 +111,21 @@ body {
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 500;
-  margin: 0 0 6px;
+  margin: 0;
+}
+.masthead {
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 16px;
+  margin-bottom: clamp(20px, 4vh, 32px);
 }
 h1 {
   font-family: 'Manrope', system-ui, sans-serif;
   font-weight: 700;
-  font-size: clamp(20px, 2.6vw, 26px);
+  font-size: clamp(22px, 3vw, 30px);
   letter-spacing: 0.01em;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1.02;
+  line-height: 1.05;
   text-wrap: balance;
 }
 .masthead-meta {
@@ -156,13 +156,11 @@ h1 {
   background: var(--line);
 }
 .content {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: clamp(24px, 5vh, 48px);
-  min-height: 0;
+  gap: clamp(24px, 4vh, 40px);
 }
+.content section:last-child { margin-bottom: 0; }
 
 .grid {
   display: grid;
@@ -257,7 +255,7 @@ h1 {
 .card:hover .card-foot svg { transform: translateX(3px); }
 
 footer {
-  margin-top: clamp(20px, 4vh, 36px);
+  margin-top: clamp(24px, 4vh, 40px);
   padding-top: 16px;
   border-top: 1px solid var(--line);
   font-family: 'Manrope', system-ui, sans-serif;
@@ -267,21 +265,21 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
-  flex-shrink: 0;
 }
 footer a { color: var(--ink-soft); }
 </style>
 
 <div class="wrap">
-  <div class="masthead">
-    <div>
-      <p class="masthead-id">m5x2 &middot; Property Operations</p>
-      <h1>Reports</h1>
-    </div>
+  <div class="masthead-top">
+    <p class="masthead-id">m5x2 &middot; Property Operations</p>
     <div class="masthead-meta">
       Maintained by <strong>Florencia Sola</strong><br>
       3 active reports
     </div>
+  </div>
+  <div class="email-card">
+  <div class="masthead">
+    <h1>Reports</h1>
   </div>
 
   <div class="content">
@@ -332,6 +330,7 @@ footer a { color: var(--ink-soft); }
         </a>
       </div>
     </section>
+  </div>
   </div>
 
   <footer>
