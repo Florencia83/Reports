@@ -41,8 +41,10 @@ const GROUNDS_REGISTRY = {
   153950: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Fertilization (spring/fall)', cadence: 'Bi-Annual' },
   153951: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Irrigation startup and zone adjustments', cadence: 'Annual' },
   153952: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Irrigation winterization', cadence: 'Annual' },
-  153953: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Tree pruning', cadence: 'Annual', vendor: 'Tree vendor' },
-  153955: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Spot pressure washing', cadence: 'Annual' },
+  153953: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Tree pruning', cadence: 'Annual' },
+  // 153955 (Spot pressure washing) intentionally excluded per Florencia 2026-07-15 -- not a
+  // series she wants tracked on this report (was Jared Miller & Austin Mulder, both instances
+  // canceled; unrelated to the kn47 grounds crew scope).
   153868: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Daily Pool Maintenance', cadence: 'Daily' },
 
   // ---- Tri-Cities: RL16 (Rey + Hannah) ----

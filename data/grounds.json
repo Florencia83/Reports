@@ -158,11 +158,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/119264/",
                   "occurrences": [
                     {
-                      "ref": "TJEGHFCB",
-                      "status": "COMPLETED",
-                      "date": "2026-02-06"
-                    },
-                    {
                       "ref": "TRRYKHC",
                       "status": "COMPLETED",
                       "date": "2026-04-13"
@@ -204,29 +199,6 @@
                       "ref": "TB74K08",
                       "status": "PENDING",
                       "date": "2026-07-14"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "employee": "Jared Miller & Austin Mulder",
-              "recurring": [
-                {
-                  "recurring_id": 153955,
-                  "title": "Spot pressure washing",
-                  "cadence": "Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153955/",
-                  "occurrences": [
-                    {
-                      "ref": "TN5885J",
-                      "status": "CANCELED",
-                      "date": "2026-02-03"
-                    },
-                    {
-                      "ref": "T6Q7KP5",
-                      "status": "CANCELED",
-                      "date": "2026-03-02"
                     }
                   ]
                 }
