@@ -3,7 +3,7 @@
   "week_end": "2026-07-19",
   "label": "July 13 – 19, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-07-15",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 48.29,
-      "last_30": 62.34,
-      "last_7": 52.05
+      "last_30": 54.64,
+      "last_7": 59.43
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -75,14 +75,6 @@
       "cost": 2431.97
     },
     {
-      "ref": "TVU0H5AB",
-      "property": "tc68",
-      "brief": "D - Maintenance",
-      "labor": 0,
-      "materials": 2341.41,
-      "cost": 2341.41
-    },
-    {
       "ref": "TGZT14D",
       "property": "l912 (multi-family)",
       "brief": "Leak in crawl space",
@@ -91,20 +83,20 @@
       "cost": 2292.47
     },
     {
-      "ref": "T670I9J",
-      "property": "kn47",
-      "brief": "D - Maintenance",
-      "labor": 0,
-      "materials": 1248.81,
-      "cost": 1248.81
-    },
-    {
       "ref": "TZQE4L",
       "property": "tc68",
       "brief": "see list below",
       "labor": 148.5,
       "materials": 925.73,
       "cost": 1074.23
+    },
+    {
+      "ref": "TRPALKHB",
+      "property": "kn47",
+      "brief": "D - Maintenance",
+      "labor": 0,
+      "materials": 459.22,
+      "cost": 459.22
     },
     {
       "ref": "TU292CMB",
@@ -137,14 +129,22 @@
       "labor": 293.59,
       "materials": 0,
       "cost": 293.59
+    },
+    {
+      "ref": "TL23LGN",
+      "property": "rl16",
+      "brief": "roof leak (clone)",
+      "labor": 190.54,
+      "materials": 101,
+      "cost": 291.54
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 76,
-      "avg_cost_per_wo": 29.11,
-      "total_labor_cost": 1068.48,
+      "wo_count": 84,
+      "avg_cost_per_wo": 30.98,
+      "total_labor_cost": 1221.1,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -161,9 +161,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 32,
-      "avg_cost_per_wo": 45.64,
-      "total_labor_cost": 942.4,
+      "wo_count": 33,
+      "avg_cost_per_wo": 45.92,
+      "total_labor_cost": 956,
       "avg_resident_rating": 4.5,
       "reviews": [
         {
@@ -180,9 +180,9 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 28,
-      "avg_cost_per_wo": 223.69,
-      "total_labor_cost": 1192.5,
+      "wo_count": 30,
+      "avg_cost_per_wo": 212.91,
+      "total_labor_cost": 1316.67,
       "avg_resident_rating": 4.5,
       "reviews": [
         {
@@ -198,17 +198,9 @@
       ]
     },
     {
-      "name": "Isaac Chavez",
-      "wo_count": 24,
-      "avg_cost_per_wo": 165.64,
-      "total_labor_cost": 773.29,
-      "avg_resident_rating": null,
-      "reviews": []
-    },
-    {
       "name": "Jonas Hoard",
-      "wo_count": 23,
-      "avg_cost_per_wo": 78.22,
+      "wo_count": 25,
+      "avg_cost_per_wo": 85.67,
       "total_labor_cost": 436.05,
       "avg_resident_rating": 5,
       "reviews": [
@@ -223,9 +215,24 @@
           "text": null
         }
       ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 24,
+      "avg_cost_per_wo": 165.64,
+      "total_labor_cost": 773.29,
+      "avg_resident_rating": null,
+      "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
+    {
+      "date": "2026-07-14",
+      "ref": null,
+      "property": "KN47",
+      "cardholder": "isaac chavez",
+      "amount": 983.55
+    },
     {
       "date": "2026-07-13",
       "ref": "TG2L0PLB",
@@ -237,7 +244,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 210.95
+      "amount": 513.17
     },
     {
       "category": "Supplies and Tools",
@@ -245,15 +252,15 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 983.55
     },
     {
       "category": "Grounds",
-      "amount": 96.51
+      "amount": 367.58
     },
     {
       "category": "Maintenance",
-      "amount": 134.31
+      "amount": 632.58
     }
   ],
   "narrative": null,
