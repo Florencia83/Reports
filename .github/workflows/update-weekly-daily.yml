@@ -36,5 +36,6 @@ jobs:
           } else {
             $today = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd')
             git commit -m "Automated Weekly Update MTD refresh $today"
+            git pull --rebase origin main
             git push
           }

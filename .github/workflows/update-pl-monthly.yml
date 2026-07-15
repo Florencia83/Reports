@@ -37,5 +37,6 @@ jobs:
           } else {
             $today = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd')
             git commit -m "Automated P&L data refresh $today"
+            git pull --rebase origin main
             git push
           }

@@ -1,0 +1,221 @@
+<style>
+
+:root {
+  --paper: #eef2f5;
+  --surface: #ffffff;
+  --ink: #16232e;
+  --ink-soft: #54666f;
+  --line: #d7e0e5;
+  --accent: #205a8c;
+  --accent-ink: #ffffff;
+  --maint-tint: #e4ecf3;
+  --maint-ink: #1f4d75;
+  --finance-tint: #e1efe9;
+  --finance-ink: #128a63;
+  --good: #128a63;
+  --warn: #9c8400;
+  --bad: #b23b3b;
+  --violet: #4a6f92;
+  --shadow: 0 1px 2px rgba(22,35,46,0.06), 0 6px 20px rgba(22,35,46,0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0e161d; --surface: #16212b; --ink: #e6edf1; --ink-soft: #8fa0aa; --line: #263340;
+    --accent: #6fa8d8; --accent-ink: #0e161d; --maint-tint: #152534; --maint-ink: #8fc0e8;
+    --finance-tint: #122921; --finance-ink: #6fbf9e;
+    --good: #6fbf9e; --warn: #e0a75e; --bad: #e08585;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e161d; --surface: #16212b; --ink: #e6edf1; --ink-soft: #8fa0aa; --line: #263340;
+  --accent: #6fa8d8; --accent-ink: #0e161d; --maint-tint: #152534; --maint-ink: #8fc0e8;
+  --finance-tint: #122921; --finance-ink: #6fbf9e;
+  --good: #6fbf9e; --warn: #e0a75e; --bad: #e08585;
+  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+}
+:root[data-theme="light"] {
+  --paper: #eef2f5; --surface: #ffffff; --ink: #16232e; --ink-soft: #54666f; --line: #d7e0e5;
+  --accent: #205a8c; --accent-ink: #ffffff; --maint-tint: #e4ecf3; --maint-ink: #1f4d75;
+  --finance-tint: #e1efe9; --finance-ink: #128a63;
+  --good: #128a63; --warn: #9c8400; --bad: #b23b3b;
+  --shadow: 0 1px 2px rgba(22,35,46,0.06), 0 6px 20px rgba(22,35,46,0.05);
+}
+
+* { box-sizing: border-box; }
+html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
+body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+
+@page { size: A4; margin: 18mm; }
+@media print {
+  body { padding: 0; }
+  .wrap { max-width: none; }
+  footer { display: none; }
+  details { }
+}
+
+.masthead-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); }
+.masthead-id { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0; display: flex; align-items: center; gap: 8px; }
+.masthead-id a { color: var(--ink-soft); text-decoration: none; }
+.masthead-id a:hover { color: var(--accent); }
+h1 { font-weight: 700; font-size: clamp(20px, 3vw, 28px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0; line-height: 1.1; text-wrap: balance; }
+.masthead-range { font-size: 13px; color: var(--ink-soft); margin: 6px 0 0; }
+.masthead-meta { font-size: 12px; color: var(--ink-soft); text-align: right; line-height: 1.6; }
+
+.section-label { font-weight: 500; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+section { margin-bottom: clamp(28px, 4vh, 44px); }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+th, td { padding: 8px 12px; text-align: left; border-right: 1px solid var(--violet); white-space: nowrap; }
+th:last-child, td:last-child { border-right: none; }
+th { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; font-weight: 500; background: var(--violet); }
+td.num, th.num { font-variant-numeric: tabular-nums; text-align: right; }
+td.detail, th.detail { white-space: normal; min-width: 220px; }
+td.detail { color: var(--ink-soft); }
+tr.total td { font-weight: 600; background: var(--paper); }
+td.prop { font-weight: 700; }
+td.num.bad { background: color-mix(in srgb, var(--bad) 18%, var(--surface)); font-weight: 500; }
+td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); font-weight: 500; }
+td.num.warn { background: color-mix(in srgb, var(--warn) 18%, var(--surface)); font-weight: 500; }
+
+.pill { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; display: inline-block; }
+.pill.bad { background: color-mix(in srgb, var(--bad) 16%, var(--surface)); color: var(--bad); }
+.pill.warn { background: color-mix(in srgb, var(--warn) 16%, var(--surface)); color: var(--warn); }
+.pill.good { background: color-mix(in srgb, var(--good) 16%, var(--surface)); color: var(--good); }
+
+.callout { border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 14px 14px 0; padding: 14px 18px; box-shadow: var(--shadow); font-size: 13px; line-height: 1.6; }
+.callout.finance { border-left-color: var(--finance-ink); }
+.callout.bad { border-left-color: var(--bad); }
+.prose p + p { margin-top: 10px; }
+
+.tag { font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
+.tag.finance { background: var(--finance-tint); color: var(--finance-ink); }
+
+details.prop-detail { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); margin-bottom: 14px; overflow: hidden; }
+details.prop-detail > summary { list-style: none; cursor: pointer; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+details.prop-detail > summary::-webkit-details-marker { display: none; }
+details.prop-detail > summary::after { content: '+'; font-size: 18px; color: var(--ink-soft); margin-left: auto; }
+details.prop-detail[open] > summary::after { content: '\2212'; }
+.summary-left { display: flex; align-items: baseline; gap: 10px; }
+.summary-left .pname { font-weight: 700; font-size: 15px; }
+.summary-nums { display: flex; gap: 18px; font-size: 12px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.summary-nums b { color: var(--ink); font-weight: 600; }
+.detail-body { padding: 0 18px 18px; }
+.sub-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 14px 0 8px; }
+.sub-label:first-child { margin-top: 0; }
+.no-data { font-size: 12px; color: var(--ink-soft); font-style: italic; padding: 4px 0; }
+
+footer { margin-top: clamp(24px, 4vh, 40px); padding-top: 16px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--ink-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+footer a { color: var(--ink-soft); }
+</style>
+
+<div class="wrap">
+  <div class="masthead-top">
+    <p class="masthead-id"><a href="index.html">&larr; Reports</a> &middot; <span class="tag finance">Finance</span></p>
+    <div class="masthead-meta">June 2026</div>
+  </div>
+  <div class="masthead">
+    <h1>Financial Detail &mdash; R&amp;M Repairs Gap</h1>
+    <p class="masthead-range">Ramp + QBT itemized backup vs. the AppFolio bill, per property. Sorted by least to most justified.</p>
+  </div>
+
+  <section>
+    <p class="section-label">Where the numbers come from</p>
+    <div class="callout finance">
+      <div class="prose" style="display:flex; gap:28px; flex-wrap:wrap;">
+        <span><b>AppFolio Bills</b></span>
+        <span><b>Ramp expenses</b></span>
+        <span><b>Labor hours</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">Summary</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Property</th><th class="num">Ramp</th><th class="num">Labor</th><th class="num">AppFolio Bill</th><th class="num">% Reconciled</th><th>Created By</th></tr>
+        <tbody id="summary-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">Itemized detail per property</p>
+    <div id="detail-root"></div>
+  </section>
+
+  <footer>
+    <span><a href="index.html">&larr; Back to Reports</a></span>
+    <span>Built from Ramp + QBT (TSheets) + AppFolio, June 2026</span>
+  </footer>
+</div>
+
+<script>
+var DATA = [{"property":"RL21","code":"rl21","creator":"Hanzhao","appfolio_total":5344.88,"ramp_total":99.77,"labor_total":230.15,"pct_justified":6.2,"ramp_items":[{"date":"2026-06-30","merchant":"The Home Depot","amount":63.88,"memo":"Purchased weather stripping for front door"},{"date":"2026-06-20","merchant":"Ace Hardware","amount":35.89,"memo":"Repair and maintenance materials TJZKEPT"}],"labor_items":[{"name":"jaxson lakins","hours":5.4,"wage":24,"cost":130},{"name":"Isaac Chavez","hours":1.9,"wage":27,"cost":52.2},{"name":"Jared Miller","hours":1.3,"wage":28.09,"cost":37.45},{"name":"Maria Florencia Sola","hours":1.1,"wage":10,"cost":10.5},{"name":"Outright Clean LLC","hours":0.4,"wage":null,"cost":null}]},{"property":"W117","code":"w117","appfolio_total":4723.92,"ramp_total":45.81,"labor_total":471,"pct_justified":10.9,"ramp_items":[{"date":"2026-06-15","merchant":"Ace Hardware","amount":45.81,"memo":"door knob replacement for unit"}],"labor_items":[{"name":"Wade Hippen","hours":11.5,"wage":28.44,"cost":326.59},{"name":"Justin Gutierrez","hours":4.6,"wage":25,"cost":114.58},{"name":"Maria Florencia Sola","hours":3,"wage":10,"cost":29.83},{"name":"Outright Clean LLC","hours":0.7,"wage":null,"cost":null}]},{"property":"V202","code":"v202","appfolio_total":1278.25,"ramp_total":22.81,"labor_total":86.88,"pct_justified":8.6,"ramp_items":[{"date":"2026-06-24","merchant":"Sunshine Disposal & Recycling","amount":22.81,"memo":"dump run debris disposal"}],"labor_items":[{"name":"Maria Florencia Sola","hours":3,"wage":10,"cost":30},{"name":"Wade Hippen","hours":2,"wage":28.44,"cost":56.88}]},{"property":"C313","code":"c313","appfolio_total":8714.13,"ramp_total":546.58,"labor_total":907.43,"pct_justified":16.7,"ramp_items":[{"date":"2026-06-03","merchant":"Grainger Industrial Supply","amount":77.78,"memo":"gate opener remote"},{"date":"2026-06-15","merchant":"The Home Depot","amount":76.34,"memo":"blower for removing dust"},{"date":"2026-06-08","merchant":"The Home Depot","amount":70.87,"memo":"gutter cleaning supplies"},{"date":"2026-06-23","merchant":"The Home Depot","amount":57.78,"memo":"General maintenance hardware and materials"},{"date":"2026-06-10","merchant":"The Home Depot","amount":51.86,"memo":"General maintenance hardware and materials"},{"date":"2026-06-10","merchant":"Lowe's","amount":49.27,"memo":"rain gutter clean out"},{"date":"2026-06-18","merchant":"Reliable Parts","amount":41.35,"memo":"oven bake element replacement"},{"date":"2026-06-02","merchant":"Grainger Industrial Supply","amount":38.89,"memo":"c313 gate remote"},{"date":"2026-06-19","merchant":"Walmart","amount":31.58,"memo":"replacement cord for drain auger"},{"date":"2026-06-18","merchant":"The Home Depot","amount":25.92,"memo":"drain clog clean-up supplies"},{"date":"2026-06-04","merchant":"The Home Depot","amount":14.05,"memo":"flower replacement for tenant"},{"date":"2026-06-10","merchant":"Ace Hardware","amount":10.89,"memo":"Duplicate keys for new tenant"}],"labor_items":[{"name":"Justin Gutierrez","hours":17.3,"wage":25,"cost":432.5},{"name":"Wade Hippen","hours":12.4,"wage":28.44,"cost":353.6},{"name":"Maria Florencia Sola","hours":12.1,"wage":10,"cost":121.33},{"name":"Outright Clean LLC","hours":4.3,"wage":null,"cost":null}]},{"property":"KN47","code":"kn47","appfolio_total":24516.28,"ramp_total":4028.41,"labor_total":7374.22,"pct_justified":46.5,"ramp_items":[{"date":"2026-06-04","merchant":"Heritage Professional Landscaping","amount":704.48,"memo":"Landscaping contractor service Ridgeview"},{"date":"2026-06-18","merchant":"FASTSIGNS","amount":372.08,"memo":"Property signage for exterior of building"},{"date":"2026-06-20","merchant":"Empire Electric USA","amount":369.92,"memo":"kn47 R&M contractor"},{"date":"2026-06-30","merchant":"The Home Depot","amount":209.07,"memo":"Maintenance repair materials purchase"},{"date":"2026-06-20","merchant":"Empire Electric USA","amount":190.4,"memo":"kn47-k1-D20 R&M contractor kitchen power"},{"date":"2026-06-29","merchant":"GE Appliances","amount":189.61,"memo":"Purchased parts for washer"},{"date":"2026-06-15","merchant":"Ace Hardware","amount":163.19,"memo":"Repair and maintenance materials for meld TD1P4GP (not synced)"},{"date":"2026-06-23","merchant":"The Home Depot","amount":135.97,"memo":"Nondiscretionary shop supplies"},{"date":"2026-06-18","merchant":"Warehouse-Lighting","amount":121.46,"memo":"Light Cover For exterior lights"},{"date":"2026-06-23","merchant":"Ace Hardware","amount":115.38,"memo":"Purchased items to clean mold, re caulk tub, replace shower cartridge.meld#TEYEKJM"},{"date":"2026-06-12","merchant":"Ace Hardware","amount":114.85,"memo":"pool chems"},{"date":"2026-06-30","merchant":"Dependable Appliance","amount":104.02,"memo":"Purchased parts for appliance repair"},{"date":"2026-06-24","merchant":"Dependable Appliance","amount":92.78,"memo":"Purchased fridge evaporator motor to replace broke one meld#TY521PH"},{"date":"2026-06-01","merchant":"The Home Depot","amount":88.12,"memo":"Purchased room to room fan to replace broken one"},{"date":"2026-06-16","merchant":"The Home Depot","amount":85.95,"memo":"R&M supplies purchase"},{"date":"2026-06-05","merchant":"The Home Depot","amount":80.44,"memo":"R&M supplies purchase"},{"date":"2026-06-23","merchant":"The Home Depot","amount":77.25,"memo":"Purchased closet door to replace broken one"},{"date":"2026-06-23","merchant":"The Home Depot","amount":64.17,"memo":"Purchased shower cartridge to replace faulty one meld#TEYEKJM"},{"date":"2026-06-23","merchant":"The Home Depot","amount":48.93,"memo":"Nondiscretionary shop supplies"},{"date":"2026-06-16","merchant":"Ace Hardware","amount":45.67,"memo":"Purchased dishwasher supply line and elbow"},{"date":"2026-06-16","merchant":"Ace Hardware","amount":45.67,"memo":"Purchased texture for drywall repair and filter for shop vac to clean up drywall dust"},{"date":"2026-06-10","merchant":"Ace Hardware","amount":45.66,"memo":"Purchased wood filler to repair chipped countertop and purchased towel rack to replace broken one"},{"date":"2026-06-29","merchant":"The Home Depot","amount":43.37,"memo":"Purchased shower cartridge and handle to replace broken one"},{"date":"2026-06-04","merchant":"Ace Hardware","amount":40.78,"memo":"Repair and maintenance materials"},{"date":"2026-06-25","merchant":"Ace Hardware","amount":36.97,"memo":"Purchased materials to make window screen"},{"date":"2026-06-30","merchant":"The Home Depot","amount":33.34,"memo":"Repair and maintenance supplies"},{"date":"2026-06-26","merchant":"The Home Depot","amount":27.18,"memo":"Purchased drip pans to replace broken ones meld#TBYTPCF"},{"date":"2026-06-22","merchant":"Ace Hardware","amount":26.09,"memo":"Purchased aerator for kitchen faucet and flapper for toilet"},{"date":"2026-06-11","merchant":"The Home Depot","amount":25.72,"memo":"Purchased striker plates to help secure front door and purchased mailbox lock to replace the broken one"},{"date":"2026-06-18","merchant":"Ace Hardware","amount":25.01,"memo":"Purchased dishwasher supply line to replace old copper one"},{"date":"2026-06-19","merchant":"Amazon","amount":24.59,"memo":"R&M supplies purchase"},{"date":"2026-06-08","merchant":"The Home Depot","amount":23.9,"memo":"Purchased new closet track to replace broken one"},{"date":"2026-06-30","merchant":"Ace Hardware","amount":21.75,"memo":"Repair and maintenance materials"},{"date":"2026-06-02","merchant":"Ace Hardware","amount":21.75,"memo":"Purchased doorknob from ace hardware to replace broken one"},{"date":"2026-06-18","merchant":"Ace Hardware","amount":20.66,"memo":"toilet repair kit"},{"date":"2026-06-12","merchant":"Ace Hardware","amount":20.66,"memo":"Repair and maintenance materials"},{"date":"2026-06-08","merchant":"The Home Depot","amount":18.47,"memo":"Purchased range hood filter to replace broken one"},{"date":"2026-06-01","merchant":"Ace Hardware","amount":17.39,"memo":"Purchased ac cleaner to clean ptac meld#TG7VYEH"},{"date":"2026-06-12","merchant":"Ace Hardware","amount":16.95,"memo":"Purchased air freshener to make apartment smell better"},{"date":"2026-06-18","merchant":"The Home Depot","amount":16.3,"memo":"R&M supplies purchase"},{"date":"2026-06-15","merchant":"Ace Hardware","amount":14.13,"memo":"Purchased caulking to caulk tub"},{"date":"2026-06-19","merchant":"The Home Depot","amount":13.78,"memo":"Purchased mailbox lock to replace lock with no keys"},{"date":"2026-06-04","merchant":"Ace Hardware","amount":13.05,"memo":"Purchased tub stopper to replace broken one"},{"date":"2026-06-30","merchant":"Ace Hardware","amount":11.41,"memo":"Purchased light bulb to replace burnt out one"},{"date":"2026-06-23","merchant":"Ace Hardware","amount":10.87,"memo":"Repair and maintenance materials"},{"date":"2026-06-22","merchant":"PayRange","amount":10,"memo":"Purchase for laundry equipment troubleshooting."},{"date":"2026-06-18","merchant":"PayRange","amount":10,"memo":"Purchase for laundry equipment troubleshooting."},{"date":"2026-06-11","merchant":"PayRange","amount":10,"memo":"Put money in PayRange account to test machines"},{"date":"2026-06-29","merchant":"The Home Depot","amount":7.49,"memo":"Purchased splash guards for tub"},{"date":"2026-06-22","merchant":"Ace Hardware","amount":1.73,"memo":"sink repair kit"}],"labor_items":[{"name":"jaxson lakins","hours":111.4,"wage":24,"cost":2673.6},{"name":"Isaac Chavez","hours":109.4,"wage":27,"cost":2953.8},{"name":"Maria Florencia Sola","hours":99.2,"wage":10,"cost":991.67},{"name":"Jared Miller","hours":26.9,"wage":28.09,"cost":755.15},{"name":"Outright Clean LLC","hours":20.3,"wage":null,"cost":null},{"name":"Juan Valenciano","hours":15.7,"wage":null,"cost":null}]},{"property":"RL16","code":"rl16","appfolio_total":8388.9,"ramp_total":1059.53,"labor_total":3456.65,"pct_justified":53.8,"ramp_items":[{"date":"2026-06-04","merchant":"The Home Depot","amount":105.85,"memo":"R&M supplies purchase for meld TXKBD0G"},{"date":"2026-06-12","merchant":"Ace Hardware","amount":93.52,"memo":"Purchased smart lock deadbolts to replace broken locks on maintenance storage rooms, and electrical rooms"},{"date":"2026-06-03","merchant":"HD Supply Facilities Maintenance","amount":86.02,"memo":"General repair maintenance materials"},{"date":"2026-06-03","merchant":"HD Supply Facilities Maintenance","amount":86.02,"memo":"General repair maintenance materials"},{"date":"2026-06-24","merchant":"The Home Depot","amount":67.65,"memo":"Purchased bathroom sink to replace one with a hole in it"},{"date":"2026-06-23","merchant":"Ace Hardware","amount":65.26,"memo":"Purchase deadbolt and doorknob to replace because tenant lost keys"},{"date":"2026-06-30","merchant":"USPS","amount":50,"memo":"mail lock replacement"},{"date":"2026-06-25","merchant":"USPS","amount":50,"memo":"Paid for usps to replace mailbox lock"},{"date":"2026-06-26","merchant":"Walmart","amount":43.43,"memo":"general maintenance tools"},{"date":"2026-06-02","merchant":"Ace Hardware","amount":35.89,"memo":"Repair and maintenance materials"},{"date":"2026-06-23","merchant":"Ace Hardware","amount":35.88,"memo":"Purchased wax ring to replace old one and gloves"},{"date":"2026-06-09","merchant":"Ace Hardware","amount":32.61,"memo":"Purchased multiple materials to fix issues after leak"},{"date":"2026-06-12","merchant":"Ace Hardware","amount":28.92,"memo":"Purchased texture for drywall repair and gang box cover to cover old smoke alarm hole"},{"date":"2026-06-17","merchant":"Ace Hardware","amount":27.19,"memo":"Purchased dishwasher supply line and elbow"},{"date":"2026-06-26","merchant":"Ace Hardware","amount":27.18,"memo":"Maintenance materials for plunger and drain gel purchase"},{"date":"2026-06-18","merchant":"The Home Depot","amount":27.18,"memo":"Purchased exhaust fan to replace broken one"},{"date":"2026-06-02","merchant":"The Home Depot","amount":27.18,"memo":"Purchased exhaust fan to replace broken on Iâd D building laundry room"},{"date":"2026-06-18","merchant":"The Home Depot","amount":26.09,"memo":"Repair and maintenance materials"},{"date":"2026-06-15","merchant":"Ace Hardware","amount":21.75,"memo":"Purchased gang box cover for the pools pump emergency shut off button"},{"date":"2026-06-02","merchant":"Pro Fire","amount":20.67,"memo":"Paid pro fire for fire extinguisher service inspection"},{"date":"2026-06-18","merchant":"Ace Hardware","amount":16.29,"memo":"Had copyâs of keys made for fire marshals"},{"date":"2026-06-29","merchant":"Ace Hardware","amount":13.03,"memo":"Repair and maintenance materials meld TH1IMZD"},{"date":"2026-06-18","merchant":"Ace Hardware","amount":12.14,"memo":"Purchased outlet cover plates to replace missing ones in laundry rooms"},{"date":"2026-06-05","merchant":"Ace Hardware","amount":10.87,"memo":"Repair and maintenance materials"},{"date":"2026-06-25","merchant":"PayRange","amount":10,"memo":"Purchase for laundry equipment troubleshooting."},{"date":"2026-06-03","merchant":"PayRange","amount":10,"memo":"Purchase for laundry equipment troubleshooting."},{"date":"2026-06-15","merchant":"Ace Hardware","amount":9.7,"memo":"Repair and maintenance materials"},{"date":"2026-06-05","merchant":"Ace Hardware","amount":9.35,"memo":"Repair and maintenance materials"},{"date":"2026-06-17","merchant":"Walgreens","amount":8.77,"memo":"Cleaning supplies for grounds"},{"date":"2026-06-16","merchant":"Ace Hardware","amount":1.09,"memo":"Purchased longer screws for gang box cover over pool shut off button"}],"labor_items":[{"name":"jaxson lakins","hours":62.1,"wage":24,"cost":1490.8},{"name":"Isaac Chavez","hours":35.9,"wage":27,"cost":970.65},{"name":"Jared Miller","hours":33.3,"wage":28.09,"cost":935.87},{"name":"Outright Clean LLC","hours":9.7,"wage":null,"cost":null},{"name":"Maria Florencia Sola","hours":5.9,"wage":10,"cost":59.33}]},{"property":"J312","code":"j312","appfolio_total":1473.99,"ramp_total":564.21,"labor_total":576.83,"pct_justified":77.4,"ramp_items":[{"date":"2026-06-27","merchant":"Roto-Rooter","amount":518.4,"memo":"Professional plumbing repair services for property maintenance"},{"date":"2026-06-10","merchant":"Ace Hardware","amount":45.81,"memo":"lock replacement for tenant"}],"labor_items":[{"name":"Justin Gutierrez","hours":18.3,"wage":25,"cost":458.33},{"name":"Wade Hippen","hours":4.2,"wage":28.44,"cost":118.5},{"name":"Outright Clean LLC","hours":2.1,"wage":null,"cost":null}]},{"property":"M405","code":"m405","appfolio_total":3227.4,"ramp_total":2193.01,"labor_total":441.28,"pct_justified":81.6,"ramp_items":[{"date":"2026-06-04","merchant":"Division One Plumbing","amount":1840,"memo":"M405-7 Plumbing repair project"},{"date":"2026-06-11","merchant":"The Home Depot","amount":223.09,"memo":"General maintenance hardware and materials"},{"date":"2026-06-05","merchant":"The Home Depot","amount":69.74,"memo":"General maintenance hardware and materials"},{"date":"2026-06-02","merchant":"Reliable Parts","amount":52.2,"memo":"oven bake element replacement"},{"date":"2026-06-30","merchant":"Night Owl Security Products","amount":3.99,"memo":""},{"date":"2026-06-30","merchant":"Night Owl Security Products","amount":3.99,"memo":""}],"labor_items":[{"name":"Justin Gutierrez","hours":8.4,"wage":25,"cost":209.58},{"name":"Wade Hippen","hours":7.4,"wage":28.44,"cost":209.03},{"name":"Outright Clean LLC","hours":6.2,"wage":null,"cost":null},{"name":"Maria Florencia Sola","hours":2.3,"wage":10,"cost":22.67}]},{"property":"K104-Lefevre","code":"k104","appfolio_total":3314.25,"ramp_total":2025.27,"labor_total":903.74,"pct_justified":88.4,"ramp_items":[{"date":"2026-06-24","merchant":"Ace Hardware","amount":730.96,"memo":"R&M contractor supplies"},{"date":"2026-06-10","merchant":"The Home Depot","amount":261.6,"memo":"General maintenance hardware and materials"},{"date":"2026-06-12","merchant":"Ace Hardware","amount":101.66,"memo":"R&M contractor supplies"},{"date":"2026-06-30","merchant":"Ace Hardware","amount":99,"memo":"Repair and maintenance materials"},{"date":"2026-06-16","merchant":"Lowe's","amount":83.91,"memo":"Interior door replacement amd door knobs"},{"date":"2026-06-25","merchant":"Ace Hardware","amount":69.79,"memo":"Repair and maintenance materials for property upkeep"},{"date":"2026-06-04","merchant":"The Home Depot","amount":56.67,"memo":"air conditioner support for tenant"},{"date":"2026-06-01","merchant":"True Value","amount":53.44,"memo":"drain repair supplies"},{"date":"2026-06-16","merchant":"Ace Hardware","amount":45.81,"memo":"timer replacememt for sprinklers"},{"date":"2026-06-02","merchant":"Ace Hardware","amount":45.8,"memo":"Plumbing"},{"date":"2026-06-03","merchant":"Ace Hardware","amount":42.52,"memo":"R&M contractor supplies"},{"date":"2026-06-09","merchant":"Ace Hardware","amount":41.44,"memo":"stair tread safety equipment"},{"date":"2026-06-03","merchant":"Ace Hardware","amount":40.36,"memo":"Repair and maintenance materials"},{"date":"2026-06-12","merchant":"True Value","amount":36.53,"memo":"GFCI outlet replacement"},{"date":"2026-06-12","merchant":"True Value","amount":32.14,"memo":"air conditioner filter replacement"},{"date":"2026-06-22","merchant":"True Value","amount":31.63,"memo":"2-stroke fuel for chainsaw"},{"date":"2026-06-04","merchant":"Ace Hardware","amount":30.53,"memo":"garage door repair"},{"date":"2026-06-03","merchant":"Ace Hardware","amount":30.53,"memo":"R&M materials and tools"},{"date":"2026-06-26","merchant":"True Value","amount":29.66,"memo":"R&M materials and tools"},{"date":"2026-06-02","merchant":"True Value","amount":29.42,"memo":"caulking supplies for bath tub"},{"date":"2026-06-25","merchant":"True Value","amount":26.16,"memo":"R&M materials and tools"},{"date":"2026-06-10","merchant":"True Value","amount":22.9,"memo":"R&M materials and tools"},{"date":"2026-06-23","merchant":"Ace Hardware","amount":22.54,"memo":"R&M materials and tools"},{"date":"2026-06-01","merchant":"True Value","amount":20.71,"memo":"cleaning supplies for drain"},{"date":"2026-06-04","merchant":"Ace Hardware","amount":17.76,"memo":"R&M materials and tools"},{"date":"2026-06-12","merchant":"True Value","amount":14.17,"memo":"air conditioner cleaning spray"},{"date":"2026-06-10","merchant":"True Value","amount":7.63,"memo":"R&M materials and tools"}],"labor_items":[{"name":"Wade Hippen","hours":17.5,"wage":28.44,"cost":498.65},{"name":"Maria Florencia Sola","hours":11.7,"wage":10,"cost":117.17},{"name":"Justin Gutierrez","hours":11.5,"wage":25,"cost":287.92},{"name":"Outright Clean LLC","hours":3.8,"wage":null,"cost":null}]},{"property":"HL65","code":"hl65","appfolio_total":2898.05,"ramp_total":2805.2,"labor_total":63,"pct_justified":99,"ramp_items":[{"date":"2026-06-19","merchant":"DSR Construction & Handyman Services","amount":2805.2,"memo":"DSR handyman services"}],"labor_items":[{"name":"Maria Florencia Sola","hours":6.3,"wage":10,"cost":63},{"name":"Outright Clean LLC","hours":4,"wage":null,"cost":null}]}];
+
+function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+var PROPERTY_ORDER = ['w117', 'hl65', 'rl21', 'c313', 'm405', 'kn47', 'rl16', 'j312', 'v202', 'k104'];
+DATA.sort(function(a, b) { return PROPERTY_ORDER.indexOf(a.code) - PROPERTY_ORDER.indexOf(b.code); });
+
+function pctClass(p) { if (p < 30) return 'bad'; if (p < 70) return 'warn'; return 'good'; }
+function pctPill(p) { return '<span class="pill ' + pctClass(p) + '">' + p + '%</span>'; }
+
+function billNote(d) {
+  return d.creator ? '<b>' + d.creator + '</b>' : '<i>Not confirmed</i>';
+}
+
+function renderSummary() {
+  var body = DATA.map(function(d) {
+    return '<tr><td class="prop">' + d.property + '</td>' +
+      '<td class="num">' + money(d.ramp_total) + '</td>' +
+      '<td class="num">' + money(d.labor_total) + '</td>' +
+      '<td class="num">' + money(d.appfolio_total) + '</td>' +
+      '<td class="num ' + pctClass(d.pct_justified) + '">' + d.pct_justified + '%</td>' +
+      '<td>' + billNote(d) + '</td></tr>';
+  }).join('');
+  document.getElementById('summary-body').innerHTML = body;
+}
+
+function renderRampTable(items) {
+  if (!items.length) return '<p class="no-data">No Ramp card transactions found.</p>';
+  var head = '<tr><th>Date</th><th>Merchant</th><th class="num">Amount</th><th class="detail">Memo</th></tr>';
+  var body = items.map(function(t) {
+    return '<tr><td>' + t.date + '</td><td>' + t.merchant + '</td><td class="num">' + money(t.amount) + '</td><td class="detail">' + (t.memo || '&mdash;') + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+function renderLaborTable(items) {
+  if (!items.length) return '<p class="no-data">No QBT hours logged.</p>';
+  var head = '<tr><th>Name</th><th class="num">Hours</th><th class="num">Wage</th><th class="num">Cost</th></tr>';
+  var body = items.map(function(p) {
+    return '<tr><td>' + p.name + '</td><td class="num">' + p.hours + 'h</td><td class="num">' + (p.wage != null ? money(p.wage) + '/h' : '<i>no wage on file</i>') + '</td><td class="num">' + (p.cost != null ? money(p.cost) : '&mdash;') + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+function renderDetail() {
+  var html = DATA.map(function(d) {
+    return '<details class="prop-detail">' +
+      '<summary><div class="summary-left"><span class="pname">' + d.property + '</span>' + pctPill(d.pct_justified) + '</div>' +
+      '<div class="summary-nums">' +
+        '<span>Ramp <b>' + money(d.ramp_total) + '</b></span>' +
+        '<span>Labor <b>' + money(d.labor_total) + '</b></span>' +
+        '<span>AppFolio <b>' + money(d.appfolio_total) + '</b></span>' +
+      '</div></summary>' +
+      '<div class="detail-body">' +
+        '<p class="sub-label">Ramp &mdash; ' + d.ramp_items.length + ' transactions</p>' + renderRampTable(d.ramp_items) +
+        '<p class="sub-label">QBT Labor &mdash; ' + d.labor_items.length + ' people</p>' + renderLaborTable(d.labor_items) +
+      '</div></details>';
+  }).join('');
+  document.getElementById('detail-root').innerHTML = html;
+}
+
+renderSummary();
+renderDetail();
+</script>
