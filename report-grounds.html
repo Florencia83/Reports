@@ -100,12 +100,13 @@ a.occ-link { text-decoration: none; color: inherit; }
 .prop-bar-fill { height: 100%; border-radius: 3px; }
 .prop-bar-pct { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: normal; min-width: 30px; text-align: right; }
 
-.pill { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 10px; display: inline-block; white-space: nowrap; }
+.pill { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 500; padding: 3px 8px; border-radius: 10px; display: inline-block; white-space: nowrap; text-align: center; line-height: 1.35; }
 .pill.bad { background: color-mix(in srgb, var(--bad) 16%, var(--surface)); color: var(--bad); }
 .pill.warn { background: color-mix(in srgb, var(--warn) 16%, var(--surface)); color: var(--warn); }
 .pill.good { background: color-mix(in srgb, var(--good) 16%, var(--surface)); color: var(--good); }
 .pill.info { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); color: var(--accent); }
 .pill.empty { background: none; color: var(--ink-soft); opacity: .4; }
+.pill-date { display: block; font-size: 9px; font-weight: 400; opacity: .75; }
 
 .tag { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
 .tag.grounds { background: var(--grounds-tint); color: var(--grounds-ink); }
@@ -162,7 +163,7 @@ function pillFor(occ) {
   var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], PENDING: ['warn', 'Pending'], 'COULD NOT COMPLETE': ['bad', 'Missed'] };
   var m = map[occ.status] || ['empty', occ.status];
   var dateStr = fmtDate(occ.date);
-  return '<span class="pill ' + m[0] + '">' + m[1] + (dateStr ? ' &middot; ' + dateStr : '') + '</span>';
+  return '<span class="pill ' + m[0] + '">' + m[1] + (dateStr ? '<span class="pill-date">' + dateStr + '</span>' : '') + '</span>';
 }
 
 function renderRecurringRow(r) {
