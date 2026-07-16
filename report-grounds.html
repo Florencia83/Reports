@@ -84,7 +84,8 @@ th { font-family: 'Manrope', system-ui, sans-serif; font-size: 9.5px; letter-spa
 tr:last-child td { border-bottom: none; }
 td.svc { font-family: 'Manrope', system-ui, sans-serif; white-space: normal; min-width: 190px; }
 td.cad { font-family: 'Manrope', system-ui, sans-serif; font-size: 9px; color: var(--ink-soft); white-space: nowrap; }
-td.occ { text-align: center; }
+td.occ { text-align: center; white-space: normal; }
+td.occ .pill { white-space: normal; }
 /* box-shadow (not border) for the top/bottom divider lines -- border-collapse picks only
    one winning border per shared row edge (width/style tie-break, browser-dependent), which
    made the top line inconsistently thinner/invisible vs the bottom. An inset box-shadow
@@ -158,7 +159,7 @@ function fmtDate(iso) {
 
 function pillFor(occ) {
   if (!occ) return '<span class="pill empty">&mdash;</span>';
-  var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], PENDING: ['warn', 'Pending'], 'COULD NOT COMPLETE': ['bad', 'Could Not Complete'] };
+  var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], PENDING: ['warn', 'Pending'], 'COULD NOT COMPLETE': ['bad', 'Missed'] };
   var m = map[occ.status] || ['empty', occ.status];
   var dateStr = fmtDate(occ.date);
   return '<span class="pill ' + m[0] + '">' + m[1] + (dateStr ? ' &middot; ' + dateStr : '') + '</span>';
@@ -177,11 +178,20 @@ function renderRecurringRow(r) {
   return '<tr><td class="svc">' + esc(r.title) + '</td><td class="cad">' + esc(r.cadence || '') + '</td>' + cells + '</tr>';
 }
 
+function todayStr() {
+  var d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
 function completionPct(p) {
   var total = 0, completed = 0;
+  var today = todayStr();
   p.employees.forEach(function(e) {
     e.recurring.forEach(function(r) {
       (r.occurrences || []).forEach(function(occ) {
+        // Not-yet-due occurrences (scheduled today or later) aren't a completion failure --
+        // skip them entirely so they don't drag the % down before their date even arrives.
+        if (occ.status === 'SCHEDULED' && occ.date >= today) return;
         total++;
         if (occ.status === 'COMPLETED') completed++;
       });
