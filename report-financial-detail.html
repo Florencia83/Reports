@@ -126,8 +126,16 @@ footer a { color: var(--ink-soft); }
   </div>
   <div class="masthead">
     <h1>Financial Detail</h1>
-    <p class="masthead-range">Ramp + QBT itemized backup vs. the AppFolio bill, per property. Sorted by least to most justified.</p>
+    <p class="masthead-range">Ramp + QBT itemized backup vs. the AppFolio bill, per property.</p>
   </div>
+
+  <section>
+    <div class="callout warn">
+      <div class="prose">
+        <p>In the past month, some vendor bills weren&rsquo;t categorized, so they weren&rsquo;t being tracked in our reports. That&rsquo;s the main reason these budgets read as over &mdash; the spend was real, it just wasn&rsquo;t tied to a property yet. We&rsquo;re now reviewing the categorization process for every bill so it gets included in the budget reporting going forward.</p>
+      </div>
+    </div>
+  </section>
 
   <section>
     <p class="section-label">R&amp;M Repairs &mdash; Summary</p>
@@ -140,7 +148,7 @@ footer a { color: var(--ink-soft); }
     </div>
     <div class="table-wrap">
       <table>
-        <tr><th>Property</th><th class="num">Ramp</th><th class="num">Labor</th><th class="num">% Reconciled</th><th class="num">AppFolio Bill</th></tr>
+        <tr><th>Property</th><th class="num">Ramp</th><th class="num">Labor</th><th class="num">AppFolio Bill</th></tr>
         <tbody id="summary-body"></tbody>
       </table>
     </div>
@@ -150,15 +158,15 @@ footer a { color: var(--ink-soft); }
     <p class="section-label">R&amp;M Repairs &mdash; Property by property</p>
     <div class="callout bad">
       <ul>
-        <li><b>rl21 &mdash; <span class="pill bad">8.7%</span> reconciled.</b> What&rsquo;s logged is light and ordinary: weather stripping and general repair materials ($99.77 in Ramp), plus $367.13 in labor spread across jaxson lakins, Isaac Chavez, and Jared Miller &mdash; a few hours each, nothing unusual. Against a $5,344.88 bill, that leaves most of it unaccounted for in this table. Pest control is why: rl21 is on Eden&rsquo;s cockroach program across all 22 units this month, and that spend doesn&rsquo;t flow through Ramp transactions or QBT labor at all.</li>
-        <li><b>w117 &mdash; <span class="pill bad">16.8%</span> reconciled.</b> Similarly light &mdash; a $45.81 door knob replacement, and $745.59 in labor mostly from Wade Hippen (11.5h) and Justin Gutierrez (4.6h). Against a $4,723.92 bill, that&rsquo;s a small fraction. Pest control is the main reason: w117 started a bed bug treatment across 4 units this month, invoiced the same way as rl21&rsquo;s.</li>
-        <li><b>c313 &mdash; <span class="pill warn">24.9%</span> reconciled.</b> This one has real breadth: gate opener remotes, gutter cleaning, an oven bake element, a drain auger repair, and new-tenant key duplication &mdash; the ordinary mix of an active property, plus $1,621.23 in labor (mostly Justin Gutierrez and Wade Hippen). That covers about a quarter of the $8,714.13 bill. A bed bug treatment across 6 units this month accounts for some of the rest, though at this size it&rsquo;s worth confirming against the actual invoice once it&rsquo;s in hand rather than assuming it explains all of it.</li>
-        <li><b>kn47 &mdash; <span class="pill warn">66.9%</span> reconciled, the best-documented of the four above.</b> kn47 is two large buildings, so the itemized list below is genuinely long &mdash; washer, appliance, lock, and plumbing repairs, signage, admin time &mdash; and it&rsquo;s backed by 300+ real labor hours. That adds up to $16,411 of the $24,516 bill. The remaining ~$8,100 is Eden&rsquo;s cockroach treatment across roughly 32 units (K1 and K2, both switched off Point Pest this month), and doesn&rsquo;t show up in Ramp transactions or QBT labor. A couple of the itemized repairs are pest-adjacent rather than pure wear &mdash; the mold/shower-cartridge fix on meld #TEYEKJM was needed because of the same leak conditions the pest treatment was addressing in that unit.</li>
-        <li><b>m405 &mdash; <span class="pill good">102.6%</span> reconciled.</b> One $1,840 Division One Plumbing invoice for a M405-7 plumbing repair project, fully accounted for.</li>
-        <li><b>hl65 &mdash; <span class="pill good">109.3%</span> reconciled.</b> One $2,805.20 DSR Construction &amp; Handyman invoice &mdash; a single large job on a property built in 1890, fully accounted for.</li>
-        <li><b>ms43 &mdash; <span class="pill bad">14.2%</span> reconciled.</b> Only a $390 Redcliffe Electric repair is logged against a $2,801.55 bill &mdash; worth a direct look at what else was billed here in June.</li>
-        <li><b>c302 &mdash; <span class="pill good">101.8%</span> reconciled.</b> Electrical, a dishwasher motor replacement, and several move-in repairs &mdash; ordinary turnover-adjacent spend, fully accounted for.</li>
-        <li><b>k308 &mdash; <span class="pill good">98.3%</span> reconciled.</b> A washer timer replacement and an exterior spigot repair, fully accounted for.</li>
+        <li><b>rl21.</b> What&rsquo;s logged is light and ordinary: weather stripping and general repair materials ($99.77 in Ramp), plus $367.13 in labor spread across jaxson lakins, Isaac Chavez, and Jared Miller &mdash; a few hours each, nothing unusual. Against a $5,344.88 bill, that leaves most of it unaccounted for in this table. Pest control is why: rl21 is on Eden&rsquo;s cockroach program across all 22 units this month, and that spend doesn&rsquo;t flow through Ramp transactions or QBT labor at all.</li>
+        <li><b>w117.</b> Similarly light &mdash; a $45.81 door knob replacement, and $745.59 in labor mostly from Wade Hippen (11.5h) and Justin Gutierrez (4.6h). Against a $4,723.92 bill, that&rsquo;s a small fraction. Pest control is the main reason: w117 started a bed bug treatment across 4 units this month, invoiced the same way as rl21&rsquo;s.</li>
+        <li><b>c313.</b> This one has real breadth: gate opener remotes, gutter cleaning, an oven bake element, a drain auger repair, and new-tenant key duplication &mdash; the ordinary mix of an active property, plus $1,621.23 in labor (mostly Justin Gutierrez and Wade Hippen). That covers about a quarter of the $8,714.13 bill. A bed bug treatment across 6 units this month accounts for some of the rest, though at this size it&rsquo;s worth confirming against the actual invoice once it&rsquo;s in hand rather than assuming it explains all of it.</li>
+        <li><b>kn47</b>, the best-documented of the four above. kn47 is two large buildings, so the itemized list below is genuinely long &mdash; washer, appliance, lock, and plumbing repairs, signage, admin time &mdash; and it&rsquo;s backed by 300+ real labor hours. That adds up to $16,411 of the $24,516 bill. The remaining ~$8,100 is Eden&rsquo;s cockroach treatment across roughly 32 units (K1 and K2, both switched off Point Pest this month), and doesn&rsquo;t show up in Ramp transactions or QBT labor. A couple of the itemized repairs are pest-adjacent rather than pure wear &mdash; the mold/shower-cartridge fix on meld #TEYEKJM was needed because of the same leak conditions the pest treatment was addressing in that unit.</li>
+        <li><b>m405.</b> One $1,840 Division One Plumbing invoice for a M405-7 plumbing repair project, fully accounted for.</li>
+        <li><b>hl65.</b> One $2,805.20 DSR Construction &amp; Handyman invoice &mdash; a single large job on a property built in 1890, fully accounted for.</li>
+        <li><b>ms43.</b> Only a $390 Redcliffe Electric repair is logged against a $2,801.55 bill &mdash; worth a direct look at what else was billed here in June.</li>
+        <li><b>c302.</b> Electrical, a dishwasher motor replacement, and several move-in repairs &mdash; ordinary turnover-adjacent spend, fully accounted for.</li>
+        <li><b>k308.</b> A washer timer replacement and an exterior spigot repair, fully accounted for.</li>
       </ul>
     </div>
   </section>
@@ -190,7 +198,7 @@ footer a { color: var(--ink-soft); }
     <p class="section-label">Grounds &mdash; Summary</p>
     <div class="table-wrap">
       <table>
-        <tr><th>Property</th><th class="num">Ramp</th><th class="num">Labor</th><th class="num">% Reconciled</th><th class="num">AppFolio Bill</th></tr>
+        <tr><th>Property</th><th class="num">Ramp</th><th class="num">Labor</th><th class="num">AppFolio Bill</th></tr>
         <tbody id="grounds-summary-body"></tbody>
       </table>
     </div>
@@ -227,8 +235,8 @@ footer a { color: var(--ink-soft); }
       <div class="callout bad">
         <h3>Still open</h3>
         <div class="prose">
-          <p><b>ms22 &mdash; <span class="pill bad">0%</span> reconciled.</b> A $600 bill with zero Ramp spend and zero labor logged against it.</p>
-          <p><b>m221 &mdash; <span class="pill bad">32.1%</span> reconciled.</b> $196 of labor logged against a $611 bill, no materials.</p>
+          <p><b>ms22.</b> A $600 bill with zero Ramp spend and zero labor logged against it.</p>
+          <p><b>m221.</b> $196 of labor logged against a $611 bill, no materials.</p>
           <p>rl16, v202, k104-Lefevre, and j312 all show real R&amp;M repairs spend in the P&amp;L this month, but each runs at or below the portfolio&rsquo;s $87.61/unit repairs average &mdash; their Grounds numbers above are the ones worth this level of detail.</p>
           <p>Broader next step: keep working on assigning a property and work order to every invoice as it comes in, so spend like this reconciles cleanly going forward.</p>
         </div>
@@ -254,16 +262,11 @@ function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Num
 var PROPERTY_ORDER = ["w117","hl65","rl21","c313","ms43","c302","k308","m405","kn47"];
 DATA.sort(function(a, b) { return PROPERTY_ORDER.indexOf(a.code) - PROPERTY_ORDER.indexOf(b.code); });
 
-function pctClass(p) { if (p == null) return ''; if (p < 30) return 'bad'; if (p < 70) return 'warn'; return 'good'; }
-function pctPill(p) { return p == null ? '<span class="pill">N/A</span>' : '<span class="pill ' + pctClass(p) + '">' + p + '%</span>'; }
-function pctCell(p) { return p == null ? 'N/A (no Grounds spend)' : p + '%'; }
-
 function renderSummary(data, elId) {
   var body = data.map(function(d) {
     return '<tr><td class="prop">' + d.property + '</td>' +
       '<td class="num">' + money(d.ramp_total) + '</td>' +
       '<td class="num">' + money(d.labor_total) + '</td>' +
-      '<td class="num ' + pctClass(d.pct_justified) + '">' + pctCell(d.pct_justified) + '</td>' +
       '<td class="num">' + money(d.appfolio_total) + '</td></tr>';
   }).join('');
   document.getElementById(elId).innerHTML = body;
@@ -290,7 +293,7 @@ function renderLaborTable(items) {
 function renderDetail(data, elId) {
   var html = data.map(function(d) {
     return '<details class="prop-detail">' +
-      '<summary><div class="summary-left"><span class="pname">' + d.property + '</span>' + pctPill(d.pct_justified) + '</div>' +
+      '<summary><div class="summary-left"><span class="pname">' + d.property + '</span></div>' +
       '<div class="summary-nums">' +
         '<span>Ramp <b>' + money(d.ramp_total) + '</b></span>' +
         '<span>Labor <b>' + money(d.labor_total) + '</b></span>' +
