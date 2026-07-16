@@ -3,7 +3,7 @@
   "week_end": "2026-07-19",
   "label": "July 13 – 19, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-15",
+  "generated_at": "2026-07-16",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 48.29,
-      "last_30": 54.64,
-      "last_7": 59.43
+      "last_30": 55.74,
+      "last_7": 61.69
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -67,6 +67,14 @@
       "cost": 3202.01
     },
     {
+      "ref": "TEZZTLB",
+      "property": "l912 (multi-family)",
+      "brief": "Crawl space insulation repair",
+      "labor": 117.92,
+      "materials": 2560.14,
+      "cost": 2678.06
+    },
+    {
       "ref": "T3LAL2Q",
       "property": "b101",
       "brief": "No Hot Water In Home",
@@ -78,9 +86,9 @@
       "ref": "TGZT14D",
       "property": "l912 (multi-family)",
       "brief": "Leak in crawl space",
-      "labor": 151.25,
+      "labor": 90.42,
       "materials": 2141.22,
-      "cost": 2292.47
+      "cost": 2231.64
     },
     {
       "ref": "TZQE4L",
@@ -95,8 +103,8 @@
       "property": "kn47",
       "brief": "D - Maintenance",
       "labor": 0,
-      "materials": 459.22,
-      "cost": 459.22
+      "materials": 476.13,
+      "cost": 476.13
     },
     {
       "ref": "TU292CMB",
@@ -129,23 +137,15 @@
       "labor": 293.59,
       "materials": 0,
       "cost": 293.59
-    },
-    {
-      "ref": "TL23LGN",
-      "property": "rl16",
-      "brief": "roof leak (clone)",
-      "labor": 190.54,
-      "materials": 101,
-      "cost": 291.54
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
       "wo_count": 84,
-      "avg_cost_per_wo": 30.98,
-      "total_labor_cost": 1221.1,
-      "avg_resident_rating": 4,
+      "avg_cost_per_wo": 31.83,
+      "total_labor_cost": 1292.3,
+      "avg_resident_rating": 4.33,
       "reviews": [
         {
           "ref": "TDIUJDW",
@@ -156,14 +156,33 @@
           "ref": "TT8VWDQ",
           "rating": 3,
           "text": "Bee hive in bedroom window still active"
+        },
+        {
+          "ref": "TV3HC42",
+          "rating": 5,
+          "text": "Outstanding!!!"
+        }
+      ]
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 35,
+      "avg_cost_per_wo": 255.47,
+      "total_labor_cost": 1416.25,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "TEJ8NZ5",
+          "rating": 5,
+          "text": null
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 33,
-      "avg_cost_per_wo": 45.92,
-      "total_labor_cost": 956,
+      "wo_count": 35,
+      "avg_cost_per_wo": 47.09,
+      "total_labor_cost": 1028.4,
       "avg_resident_rating": 4.5,
       "reviews": [
         {
@@ -179,29 +198,10 @@
       ]
     },
     {
-      "name": "Justin Gutierrez",
-      "wo_count": 30,
-      "avg_cost_per_wo": 212.91,
-      "total_labor_cost": 1316.67,
-      "avg_resident_rating": 4.5,
-      "reviews": [
-        {
-          "ref": "TEJ8NZ5",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TH8Y2DHB",
-          "rating": 4,
-          "text": "The work was fine, and Justin was very conscientious.  A little adjustment is needed.  The door does not open and  move smoothly.  I think the cotton muffling is impeding it."
-        }
-      ]
-    },
-    {
       "name": "Jonas Hoard",
-      "wo_count": 25,
-      "avg_cost_per_wo": 85.67,
-      "total_labor_cost": 436.05,
+      "wo_count": 28,
+      "avg_cost_per_wo": 78.82,
+      "total_labor_cost": 501.3,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -218,17 +218,24 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 24,
-      "avg_cost_per_wo": 165.64,
-      "total_labor_cost": 773.29,
+      "wo_count": 27,
+      "avg_cost_per_wo": 151.77,
+      "total_labor_cost": 895.69,
       "avg_resident_rating": null,
       "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
     {
+      "date": "2026-07-15",
+      "ref": "TEZZTLB",
+      "property": "L912",
+      "cardholder": "Justin Gutierrez",
+      "amount": 2235.46
+    },
+    {
       "date": "2026-07-14",
-      "ref": null,
+      "ref": "TN9CQ32",
       "property": "KN47",
       "cardholder": "isaac chavez",
       "amount": 983.55
@@ -244,11 +251,11 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 513.17
+      "amount": 643.07
     },
     {
       "category": "Supplies and Tools",
-      "amount": 0
+      "amount": 44.56
     },
     {
       "category": "Appliances",
@@ -256,11 +263,11 @@
     },
     {
       "category": "Grounds",
-      "amount": 367.58
+      "amount": 469.35
     },
     {
       "category": "Maintenance",
-      "amount": 632.58
+      "amount": 3417.31
     }
   ],
   "narrative": null,
