@@ -1554,6 +1554,44 @@
           ]
         },
         {
+          "property": "O155-ELM",
+          "employees": [
+            {
+              "employee": "David Sanchez",
+              "recurring": [
+                {
+                  "recurring_id": 162926,
+                  "title": "Lawn service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/162926/",
+                  "occurrences": [
+                    {
+                      "ref": "TTP3UE3",
+                      "status": "COMPLETED",
+                      "date": "2026-06-24"
+                    },
+                    {
+                      "ref": "TZUXW7I",
+                      "status": "COMPLETED",
+                      "date": "2026-07-01"
+                    },
+                    {
+                      "ref": "TNYXUX5",
+                      "status": "PENDING",
+                      "date": "2026-07-10"
+                    },
+                    {
+                      "ref": "TH5WFFCB",
+                      "status": "COMPLETED",
+                      "date": "2026-07-15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "property": "O155-OAK",
           "employees": [
             {
@@ -1767,8 +1805,8 @@
                     },
                     {
                       "ref": "T5F0W26",
-                      "status": "SCHEDULED",
-                      "date": "2026-07-15"
+                      "status": "COMPLETED",
+                      "date": "2026-07-16"
                     },
                     {
                       "ref": "TUDBMQI",
