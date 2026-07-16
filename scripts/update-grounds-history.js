@@ -108,8 +108,9 @@ const GROUNDS_REGISTRY = {
   161289: { area: 'Spokane', property: 'C302', title: 'Lawn service', cadence: 'Weekly' },
   161291: { area: 'Spokane', property: 'C313', title: 'Lawn service', cadence: 'Weekly' },
   162927: { area: 'Spokane', property: 'O155-OAK', title: 'Lawn service', cadence: 'Weekly' },
-  163904: { area: 'Spokane', property: 'H731', title: 'Lawn service (bi-weekly)', cadence: 'Bi-Weekly' },
-  179920: { area: 'Spokane', property: 'H731', title: 'Lawn service (weekly)', cadence: 'Weekly' },
+  163904: { area: 'Spokane', property: 'H731', title: 'Lawn service', cadence: 'Bi-Weekly' },
+  // 179920 removed 2026-07-16 -- was a duplicate recurrence firing every 7 days on the
+  // same property/slot as 163904 (should only be bi-weekly). Florencia deleted it in PM.
   164381: { area: 'Spokane', property: 'K308', title: 'Lawn service', cadence: 'Weekly' },
   166878: { area: 'Spokane', property: 'K104-LEFEVRE', title: 'Weekly mowing', cadence: 'Weekly' },
   167333: { area: 'Spokane', property: 'K104-BROWER EVEN', title: 'Lawn service', cadence: 'Weekly' },
