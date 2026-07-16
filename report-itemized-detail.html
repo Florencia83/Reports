@@ -1,0 +1,268 @@
+<style>
+
+:root {
+  --paper: #eef2f5;
+  --surface: #ffffff;
+  --ink: #16232e;
+  --ink-soft: #54666f;
+  --line: #d7e0e5;
+  --accent: #205a8c;
+  --accent-ink: #ffffff;
+  --maint-tint: #e4ecf3;
+  --maint-ink: #1f4d75;
+  --finance-tint: #e1efe9;
+  --finance-ink: #128a63;
+  --good: #128a63;
+  --warn: #9c8400;
+  --bad: #b23b3b;
+  --violet: #4a6f92;
+  --shadow: 0 1px 2px rgba(22,35,46,0.06), 0 6px 20px rgba(22,35,46,0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0e161d; --surface: #16212b; --ink: #e6edf1; --ink-soft: #8fa0aa; --line: #263340;
+    --accent: #6fa8d8; --accent-ink: #0e161d; --maint-tint: #152534; --maint-ink: #8fc0e8;
+    --finance-tint: #122921; --finance-ink: #6fbf9e;
+    --good: #6fbf9e; --warn: #e0a75e; --bad: #e08585;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e161d; --surface: #16212b; --ink: #e6edf1; --ink-soft: #8fa0aa; --line: #263340;
+  --accent: #6fa8d8; --accent-ink: #0e161d; --maint-tint: #152534; --maint-ink: #8fc0e8;
+  --finance-tint: #122921; --finance-ink: #6fbf9e;
+  --good: #6fbf9e; --warn: #e0a75e; --bad: #e08585;
+  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+}
+:root[data-theme="light"] {
+  --paper: #eef2f5; --surface: #ffffff; --ink: #16232e; --ink-soft: #54666f; --line: #d7e0e5;
+  --accent: #205a8c; --accent-ink: #ffffff; --maint-tint: #e4ecf3; --maint-ink: #1f4d75;
+  --finance-tint: #e1efe9; --finance-ink: #128a63;
+  --good: #128a63; --warn: #9c8400; --bad: #b23b3b;
+  --shadow: 0 1px 2px rgba(22,35,46,0.06), 0 6px 20px rgba(22,35,46,0.05);
+}
+
+* { box-sizing: border-box; }
+html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
+body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+
+@page { size: A4; margin: 18mm; }
+@media print {
+  body { padding: 0; }
+  .wrap { max-width: none; }
+  footer, .picker-row { display: none; }
+}
+
+.masthead-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); }
+.masthead-id { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0; display: flex; align-items: center; gap: 8px; }
+.masthead-id a { color: var(--ink-soft); text-decoration: none; }
+.masthead-id a:hover { color: var(--accent); }
+h1 { font-weight: 700; font-size: clamp(20px, 3vw, 28px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0; line-height: 1.1; text-wrap: balance; }
+.masthead-range { font-size: 13px; color: var(--ink-soft); margin: 6px 0 0; }
+.masthead-meta { font-size: 12px; color: var(--ink-soft); text-align: right; line-height: 1.6; }
+
+.picker-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; margin-bottom: clamp(20px, 3vh, 28px); font-size: 12px; }
+.picker-field { display: flex; flex-direction: column; gap: 4px; }
+.picker-field label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+.picker-field select, .picker-field input[type="date"] {
+  font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; padding: 6px 10px;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink);
+}
+.picker-field select:focus-visible, .picker-field input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.picker-reset { font-size: 12px; color: var(--accent); background: none; border: none; cursor: pointer; padding: 6px 0; font-family: inherit; }
+.picker-reset:hover { text-decoration: underline; }
+
+.section-label { font-weight: 500; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+section { margin-bottom: clamp(28px, 4vh, 44px); }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+th, td { padding: 8px 12px; text-align: left; border-right: 1px solid var(--violet); white-space: nowrap; }
+th:last-child, td:last-child { border-right: none; }
+th { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; font-weight: 500; background: var(--violet); }
+td.num, th.num { font-variant-numeric: tabular-nums; text-align: right; }
+td.detail, th.detail { white-space: normal; min-width: 220px; }
+td.detail { color: var(--ink-soft); }
+
+.callout { border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 14px 14px 0; padding: 14px 18px; box-shadow: var(--shadow); font-size: 13px; line-height: 1.6; }
+.callout.finance { border-left-color: var(--finance-ink); }
+.prose p + p { margin-top: 10px; }
+
+.tag { font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
+.tag.finance { background: var(--finance-tint); color: var(--finance-ink); }
+
+details.prop-detail { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); margin-bottom: 14px; overflow: hidden; }
+details.prop-detail > summary { list-style: none; cursor: pointer; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+details.prop-detail > summary::-webkit-details-marker { display: none; }
+details.prop-detail > summary::after { content: '+'; font-size: 18px; color: var(--ink-soft); margin-left: auto; }
+details.prop-detail[open] > summary::after { content: '\2212'; }
+.summary-left { display: flex; align-items: baseline; gap: 10px; }
+.summary-left .pname { font-weight: 700; font-size: 15px; }
+.summary-nums { display: flex; gap: 18px; font-size: 12px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.summary-nums b { color: var(--ink); font-weight: 600; }
+.detail-body { padding: 0 18px 18px; }
+.sub-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 14px 0 8px; }
+.sub-label:first-child { margin-top: 0; }
+.no-data { font-size: 12px; color: var(--ink-soft); font-style: italic; padding: 4px 0; }
+
+footer { margin-top: clamp(24px, 4vh, 40px); padding-top: 16px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--ink-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+footer a { color: var(--ink-soft); }
+</style>
+
+<div class="wrap">
+  <div class="masthead-top">
+    <p class="masthead-id"><a href="index.html">&larr; Reports</a> &middot; <span class="tag finance">Finance</span></p>
+    <div class="masthead-meta" id="updated-label"></div>
+  </div>
+  <div class="masthead">
+    <h1>Itemized Detail</h1>
+    <p class="masthead-range">Every Ramp transaction and QBT labor entry per property, R&amp;M Repairs and Grounds &mdash; the raw ledger behind <a href="report-financial-detail.html">Financial Detail</a>.</p>
+  </div>
+
+  <div class="picker-row">
+    <div class="picker-field">
+      <label for="month-select">Month</label>
+      <select id="month-select"></select>
+    </div>
+    <div class="picker-field">
+      <label for="from-date">From</label>
+      <input type="date" id="from-date">
+    </div>
+    <div class="picker-field">
+      <label for="to-date">To</label>
+      <input type="date" id="to-date">
+    </div>
+    <button class="picker-reset" id="reset-range">Reset to full month</button>
+  </div>
+
+  <div class="callout finance" style="margin-bottom: 24px;">
+    <div class="prose">
+      <p><b>AppFolio actual</b> is always the full month&rsquo;s figure &mdash; AppFolio&rsquo;s accrual report has no finer granularity than a full accounting period. The Ramp and Labor totals below narrow to whatever date range is selected above.</p>
+      <p><b>Wage</b> in every Labor table is the effective rate (QBT&rsquo;s base wage &times; 1.5), not the raw QBT wage &mdash; matching the convention used in <a href="report-financial-detail.html">Financial Detail</a>.</p>
+    </div>
+  </div>
+
+  <section>
+    <p class="section-label">R&amp;M Repairs</p>
+    <div id="repairs-root"></div>
+  </section>
+
+  <section>
+    <p class="section-label">Grounds</p>
+    <div id="grounds-root"></div>
+  </section>
+
+  <footer>
+    <span><a href="index.html">&larr; Back to Reports</a></span>
+    <span id="source-label">Built from Ramp + QBT (TSheets), vs. AppFolio actuals</span>
+  </footer>
+</div>
+
+<script>
+var currentData = null;
+
+function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+
+function renderRampTable(items) {
+  if (!items.length) return '<p class="no-data">No Ramp card transactions in this range.</p>';
+  var head = '<tr><th>Date</th><th>Merchant</th><th class="num">Amount</th><th class="detail">Memo</th></tr>';
+  var body = items.map(function(t) {
+    return '<tr><td>' + t.date + '</td><td>' + t.merchant + '</td><td class="num">' + money(t.amount) + '</td><td class="detail">' + (t.memo || '&mdash;') + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+function renderLaborTable(items) {
+  if (!items.length) return '<p class="no-data">No QBT hours logged in this range.</p>';
+  var head = '<tr><th>Date</th><th>Name</th><th class="num">Hours</th><th class="num">Wage</th><th class="num">Cost</th></tr>';
+  var body = items.map(function(p) {
+    return '<tr><td>' + p.date + '</td><td>' + p.name + '</td><td class="num">' + p.hours + 'h</td><td class="num">' + money(p.wage) + '/h</td><td class="num">' + money(p.cost) + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+// Filters a property's itemized entries to [from, to] (inclusive, YYYY-MM-DD strings)
+// and recomputes the visible Ramp/Labor totals from just those entries. AppFolio's
+// actual stays month-level regardless -- that report has no finer granularity.
+function filterProperty(d, from, to) {
+  var rampItems = d.ramp_items.filter(function(t) { return t.date >= from && t.date <= to; });
+  var laborItems = d.labor_items.filter(function(l) { return l.date >= from && l.date <= to; });
+  var rampTotal = rampItems.reduce(function(s, t) { return s + t.amount; }, 0);
+  var laborTotal = laborItems.reduce(function(s, l) { return s + l.cost; }, 0);
+  return { rampItems: rampItems, rampTotal: rampTotal, laborItems: laborItems, laborTotal: laborTotal };
+}
+
+function renderDivision(list, elId, from, to) {
+  var html = list.map(function(d) {
+    var narrowed = filterProperty(d, from, to);
+    return '<details class="prop-detail">' +
+      '<summary><div class="summary-left"><span class="pname">' + d.property + '</span></div>' +
+      '<div class="summary-nums">' +
+        '<span>Ramp <b>' + money(narrowed.rampTotal) + '</b></span>' +
+        '<span>Labor <b>' + money(narrowed.laborTotal) + '</b></span>' +
+        '<span>AppFolio <b>' + money(d.appfolio_actual) + '</b> <i>(month)</i></span>' +
+      '</div></summary>' +
+      '<div class="detail-body">' +
+        '<p class="sub-label">Ramp &mdash; ' + narrowed.rampItems.length + ' transactions</p>' + renderRampTable(narrowed.rampItems) +
+        '<p class="sub-label">QBT Labor (wage &times; 1.5) &mdash; ' + narrowed.laborItems.length + ' entries</p>' + renderLaborTable(narrowed.laborItems) +
+      '</div></details>';
+  }).join('');
+  document.getElementById(elId).innerHTML = html || '<p class="no-data">No properties with spend in this range.</p>';
+}
+
+function renderAll() {
+  if (!currentData) return;
+  var from = document.getElementById('from-date').value;
+  var to = document.getElementById('to-date').value;
+  renderDivision(currentData.repairs, 'repairs-root', from, to);
+  renderDivision(currentData.grounds, 'grounds-root', from, to);
+  document.getElementById('updated-label').textContent = 'Data as of ' + currentData.generated_at;
+}
+
+function daysInMonth(y, m) { return new Date(y, m, 0).getDate(); }
+
+function loadMonth(key) {
+  var ts = Date.now();
+  fetch('./data/itemized-' + key + '.json?_=' + ts).then(function(r) { return r.json(); }).then(function(data) {
+    currentData = data;
+    var parts = key.split('-'); var y = +parts[0], m = +parts[1];
+    var monthEnd = key + '-' + String(daysInMonth(y, m)).padStart(2, '0');
+    currentData._monthEnd = monthEnd;
+    var fromInput = document.getElementById('from-date'), toInput = document.getElementById('to-date');
+    fromInput.min = key + '-01'; fromInput.max = monthEnd;
+    toInput.min = key + '-01'; toInput.max = monthEnd;
+    fromInput.value = key + '-01'; toInput.value = monthEnd;
+    renderAll();
+  }).catch(function(err) {
+    document.getElementById('repairs-root').innerHTML = '<div class="callout" style="font-size:13px;">Could not load data for this month: ' + err.message + '</div>';
+    document.getElementById('grounds-root').innerHTML = '';
+  });
+}
+
+document.getElementById('from-date').addEventListener('change', renderAll);
+document.getElementById('to-date').addEventListener('change', renderAll);
+document.getElementById('reset-range').addEventListener('click', function() {
+  if (!currentData) return;
+  document.getElementById('from-date').value = currentData.month + '-01';
+  document.getElementById('to-date').value = currentData._monthEnd;
+  renderAll();
+});
+
+var ts0 = Date.now();
+fetch('./data/itemized-manifest.json?_=' + ts0).then(function(r) { return r.json(); }).then(function(manifest) {
+  var select = document.getElementById('month-select');
+  manifest.months.forEach(function(mo) {
+    var opt = document.createElement('option');
+    opt.value = mo.key;
+    opt.textContent = mo.label;
+    select.appendChild(opt);
+  });
+  select.addEventListener('change', function() { loadMonth(this.value); });
+  if (manifest.months.length) loadMonth(manifest.months[0].key);
+}).catch(function(err) {
+  document.getElementById('repairs-root').innerHTML = '<div class="callout" style="font-size:13px;">Could not load report manifest: ' + err.message + '</div>';
+});
+</script>

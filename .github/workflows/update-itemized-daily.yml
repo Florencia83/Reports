@@ -1,0 +1,39 @@
+name: Update Itemized Detail data (daily)
+
+on:
+  schedule:
+    - cron: '55 8 * * *'  # every day, 08:55 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull itemized Ramp + QBT detail vs AppFolio actuals
+        env:
+          QBT_TOKEN: ${{ secrets.QBT_TOKEN }}
+          RAMP_CLIENT_ID: ${{ secrets.RAMP_CLIENT_ID }}
+          RAMP_CLIENT_SECRET: ${{ secrets.RAMP_CLIENT_SECRET }}
+          APPFOLIO_CLIENT_ID: ${{ secrets.APPFOLIO_CLIENT_ID }}
+          APPFOLIO_CLIENT_SECRET: ${{ secrets.APPFOLIO_CLIENT_SECRET }}
+        run: node scripts/update-itemized-detail.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "florencia-reports-bot"
+          git config user.email "actions@github.com"
+          git add data/itemized-*.json
+          git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No changes to commit"
+          } else {
+            $today = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd')
+            git commit -m "Automated Itemized Detail refresh $today"
+            git pull --rebase origin main
+            git push
+          }

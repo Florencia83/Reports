@@ -1,0 +1,6815 @@
+{
+  "month": "2026-06",
+  "label": "June 2026",
+  "generated_at": "2026-07-16",
+  "complete": true,
+  "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
+  "labor_rate_multiplier": 1.5,
+  "repairs": [
+    {
+      "property": "KN47",
+      "code": "kn47",
+      "appfolio_actual": 24516.28,
+      "ramp_total": 4028.41,
+      "labor_total": 5923.43,
+      "ramp_items": [
+        {
+          "date": "2026-06-01",
+          "merchant": "The Home Depot",
+          "amount": 88.12,
+          "memo": "Purchased room to room fan to replace broken one"
+        },
+        {
+          "date": "2026-06-01",
+          "merchant": "Ace Hardware",
+          "amount": 17.39,
+          "memo": "Purchased ac cleaner to clean ptac meld#TG7VYEH"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "Ace Hardware",
+          "amount": 21.75,
+          "memo": "Purchased doorknob from ace hardware to replace broken one"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Ace Hardware",
+          "amount": 40.78,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Heritage Professional Landscaping",
+          "amount": 704.48,
+          "memo": "Landscaping contractor service Ridgeview"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Ace Hardware",
+          "amount": 13.05,
+          "memo": "Purchased tub stopper to replace broken one"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "The Home Depot",
+          "amount": 80.44,
+          "memo": "R&M supplies purchase"
+        },
+        {
+          "date": "2026-06-08",
+          "merchant": "The Home Depot",
+          "amount": 23.9,
+          "memo": "Purchased new closet track to replace broken one"
+        },
+        {
+          "date": "2026-06-08",
+          "merchant": "The Home Depot",
+          "amount": 18.47,
+          "memo": "Purchased range hood filter to replace broken one"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "Ace Hardware",
+          "amount": 45.66,
+          "memo": "Purchased wood filler to repair chipped countertop and purchased towel rack to replace broken one"
+        },
+        {
+          "date": "2026-06-11",
+          "merchant": "The Home Depot",
+          "amount": 25.72,
+          "memo": "Purchased striker plates to help secure front door and purchased mailbox lock to replace the broken one"
+        },
+        {
+          "date": "2026-06-11",
+          "merchant": "PayRange",
+          "amount": 10,
+          "memo": "Put money in PayRange account to test machines"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Ace Hardware",
+          "amount": 20.66,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Ace Hardware",
+          "amount": 114.85,
+          "memo": "pool chems"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Ace Hardware",
+          "amount": 16.95,
+          "memo": "Purchased air freshener to make apartment smell better"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Ace Hardware",
+          "amount": 14.13,
+          "memo": "Purchased caulking to caulk tub"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Ace Hardware",
+          "amount": 163.19,
+          "memo": "Repair and maintenance materials\nfor meld TD1P4GP (not synced)"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Ace Hardware",
+          "amount": 45.67,
+          "memo": "Purchased dishwasher supply line and elbow"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "The Home Depot",
+          "amount": 85.95,
+          "memo": "R&M supplies purchase"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Ace Hardware",
+          "amount": 45.67,
+          "memo": "Purchased texture for drywall repair and filter for shop vac to clean up drywall dust"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "PayRange",
+          "amount": 10,
+          "memo": "Purchase for laundry equipment troubleshooting."
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "The Home Depot",
+          "amount": 16.3,
+          "memo": "R&M supplies purchase"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "FASTSIGNS",
+          "amount": 372.08,
+          "memo": "Property signage for exterior of building"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Warehouse-Lighting",
+          "amount": 121.46,
+          "memo": "Light Cover For exterior lights"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Ace Hardware",
+          "amount": 20.66,
+          "memo": "toilet repair kit"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Ace Hardware",
+          "amount": 25.01,
+          "memo": "Purchased dishwasher supply line to replace old copper one"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "The Home Depot",
+          "amount": 13.78,
+          "memo": "Purchased mailbox lock to replace lock with no keys"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "Amazon",
+          "amount": 24.59,
+          "memo": "R&M supplies purchase"
+        },
+        {
+          "date": "2026-06-20",
+          "merchant": "Empire Electric USA",
+          "amount": 190.4,
+          "memo": "kn47-k1-D20 R&M contractor kitchen power"
+        },
+        {
+          "date": "2026-06-20",
+          "merchant": "Empire Electric USA",
+          "amount": 369.92,
+          "memo": "kn47 R&M contractor"
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "Ace Hardware",
+          "amount": 26.09,
+          "memo": "Purchased aerator for kitchen faucet and flapper for toilet"
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "PayRange",
+          "amount": 10,
+          "memo": "Purchase for laundry equipment troubleshooting."
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "Ace Hardware",
+          "amount": 1.73,
+          "memo": "sink repair kit"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 64.17,
+          "memo": "Purchased shower cartridge to replace faulty one meld#TEYEKJM"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 115.38,
+          "memo": "Purchased items to clean mold, re caulk tub, replace shower cartridge.meld#TEYEKJM"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 135.97,
+          "memo": "Nondiscretionary shop supplies"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 48.93,
+          "memo": "Nondiscretionary shop supplies"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 10.87,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 77.25,
+          "memo": "Purchased closet door to replace broken one"
+        },
+        {
+          "date": "2026-06-24",
+          "merchant": "Dependable Appliance",
+          "amount": 92.78,
+          "memo": "Purchased fridge evaporator motor to replace broke one meld#TY521PH"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "Ace Hardware",
+          "amount": 36.97,
+          "memo": "Purchased materials to make window screen"
+        },
+        {
+          "date": "2026-06-26",
+          "merchant": "The Home Depot",
+          "amount": 27.18,
+          "memo": "Purchased drip pans to replace broken ones meld#TBYTPCF"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "The Home Depot",
+          "amount": 43.37,
+          "memo": "Purchased shower cartridge and handle to replace broken one"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "The Home Depot",
+          "amount": 7.49,
+          "memo": "Purchased splash guards for tub"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "GE Appliances",
+          "amount": 189.61,
+          "memo": "Purchased parts for washer"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 209.07,
+          "memo": "Maintenance repair materials purchase"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 33.34,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Dependable Appliance",
+          "amount": 104.02,
+          "memo": "Purchased parts for appliance repair"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Ace Hardware",
+          "amount": 21.75,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Ace Hardware",
+          "amount": 11.41,
+          "memo": "Purchased light bulb to replace burnt out one"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Isaac Chavez",
+          "hours": 1.02,
+          "wage": 40.5,
+          "cost": 41.18
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Jaxson Lakins",
+          "hours": 8.32,
+          "wage": 36,
+          "cost": 299.4
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Jared Miller",
+          "hours": 0.78,
+          "wage": 42.135,
+          "cost": 33.01
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Jaxson Lakins",
+          "hours": 1.87,
+          "wage": 36,
+          "cost": 67.2
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Isaac Chavez",
+          "hours": 1.25,
+          "wage": 40.5,
+          "cost": 50.63
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jared Miller",
+          "hours": 1.87,
+          "wage": 42.135,
+          "cost": 78.65
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jaxson Lakins",
+          "hours": 5.85,
+          "wage": 36,
+          "cost": 210.6
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Isaac Chavez",
+          "hours": 6.08,
+          "wage": 40.5,
+          "cost": 246.38
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Jared Miller",
+          "hours": 3.98,
+          "wage": 42.135,
+          "cost": 167.84
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Jaxson Lakins",
+          "hours": 1.02,
+          "wage": 36,
+          "cost": 36.6
+        },
+        {
+          "date": "2026-06-07",
+          "name": "Jaxson Lakins",
+          "hours": 1.33,
+          "wage": 36,
+          "cost": 48
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Isaac Chavez",
+          "hours": 3.13,
+          "wage": 40.5,
+          "cost": 126.9
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Jaxson Lakins",
+          "hours": 6.07,
+          "wage": 36,
+          "cost": 218.4
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Jaxson Lakins",
+          "hours": 2.62,
+          "wage": 36,
+          "cost": 94.2
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Jaxson Lakins",
+          "hours": 4.5,
+          "wage": 36,
+          "cost": 162
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Isaac Chavez",
+          "hours": 0.88,
+          "wage": 40.5,
+          "cost": 35.78
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Jaxson Lakins",
+          "hours": 6.5,
+          "wage": 36,
+          "cost": 234
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jared Miller",
+          "hours": 1.77,
+          "wage": 42.135,
+          "cost": 74.44
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jaxson Lakins",
+          "hours": 2.05,
+          "wage": 36,
+          "cost": 73.8
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jared Miller",
+          "hours": 1.35,
+          "wage": 42.135,
+          "cost": 56.88
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jaxson Lakins",
+          "hours": 5.05,
+          "wage": 36,
+          "cost": 181.8
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jared Miller",
+          "hours": 3.22,
+          "wage": 42.135,
+          "cost": 135.53
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jaxson Lakins",
+          "hours": 4.38,
+          "wage": 36,
+          "cost": 157.8
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Jared Miller",
+          "hours": 1.43,
+          "wage": 42.135,
+          "cost": 60.39
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Jaxson Lakins",
+          "hours": 5.22,
+          "wage": 36,
+          "cost": 187.8
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Isaac Chavez",
+          "hours": 4.95,
+          "wage": 40.5,
+          "cost": 200.48
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jared Miller",
+          "hours": 1.37,
+          "wage": 42.135,
+          "cost": 57.58
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jared Miller",
+          "hours": 2.37,
+          "wage": 42.135,
+          "cost": 99.72
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jaxson Lakins",
+          "hours": 8.13,
+          "wage": 36,
+          "cost": 292.8
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Isaac Chavez",
+          "hours": 0.9,
+          "wage": 40.5,
+          "cost": 36.45
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jared Miller",
+          "hours": 2.25,
+          "wage": 42.135,
+          "cost": 94.8
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jaxson Lakins",
+          "hours": 3.77,
+          "wage": 36,
+          "cost": 135.6
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jared Miller",
+          "hours": 1.2,
+          "wage": 42.135,
+          "cost": 50.56
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jaxson Lakins",
+          "hours": 6.55,
+          "wage": 36,
+          "cost": 235.8
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Isaac Chavez",
+          "hours": 1.15,
+          "wage": 40.5,
+          "cost": 46.58
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jared Miller",
+          "hours": 0.38,
+          "wage": 42.135,
+          "cost": 16.15
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jaxson Lakins",
+          "hours": 2.78,
+          "wage": 36,
+          "cost": 100.2
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Isaac Chavez",
+          "hours": 0.48,
+          "wage": 40.5,
+          "cost": 19.58
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jaxson Lakins",
+          "hours": 6.9,
+          "wage": 36,
+          "cost": 248.4
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Isaac Chavez",
+          "hours": 6.82,
+          "wage": 40.5,
+          "cost": 276.08
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jared Miller",
+          "hours": 1.45,
+          "wage": 42.135,
+          "cost": 61.1
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jaxson Lakins",
+          "hours": 5.3,
+          "wage": 36,
+          "cost": 190.8
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Isaac Chavez",
+          "hours": 0.52,
+          "wage": 40.5,
+          "cost": 20.93
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jaxson Lakins",
+          "hours": 6.13,
+          "wage": 36,
+          "cost": 220.8
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Isaac Chavez",
+          "hours": 1.3,
+          "wage": 40.5,
+          "cost": 52.65
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jared Miller",
+          "hours": 4.13,
+          "wage": 42.135,
+          "cost": 174.16
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jaxson Lakins",
+          "hours": 5.92,
+          "wage": 36,
+          "cost": 213
+        }
+      ]
+    },
+    {
+      "property": "TC68",
+      "code": "tc68",
+      "appfolio_actual": 8899.01,
+      "ramp_total": 5164.63,
+      "labor_total": 2193.7,
+      "ramp_items": [
+        {
+          "date": "2026-06-01",
+          "merchant": "Insight Pest Solutions",
+          "amount": 219.7,
+          "memo": "pest"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "Sherwin-Williams",
+          "amount": 104.6,
+          "memo": "Paint for unit turn"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "RPW Headlamps",
+          "amount": 58.89,
+          "memo": "General building repair materials"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "The Home Depot",
+          "amount": 49.49,
+          "memo": "Essential building material purchase"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "The Home Depot",
+          "amount": 60.7,
+          "memo": "General maintenance supply tools"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "RPW Headlamps",
+          "amount": 27.82,
+          "memo": "Essential building material purchase"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "The Home Depot",
+          "amount": 230.24,
+          "memo": "Unit turn supply materials"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "The Home Depot",
+          "amount": 27.57,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "The Home Depot",
+          "amount": 635.31,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "The Home Depot",
+          "amount": 110.76,
+          "memo": "turn"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "The Home Depot",
+          "amount": -27.57,
+          "memo": "Refund for Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-09",
+          "merchant": "The Home Depot",
+          "amount": 164.04,
+          "memo": "drywall patch"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "The Home Depot",
+          "amount": 37.46,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "RPW Headlamps",
+          "amount": 58.89,
+          "memo": "Replacement building material purchase"
+        },
+        {
+          "date": "2026-06-11",
+          "merchant": "Tacoma Screw Products",
+          "amount": 1.25,
+          "memo": "stove"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "The Home Depot",
+          "amount": 61.75,
+          "memo": "General repair maintenance materials T9BXB9N"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "The Home Depot",
+          "amount": 42.17,
+          "memo": "Maintenance repair materials"
+        },
+        {
+          "date": "2026-06-20",
+          "merchant": "Insight Pest Solutions",
+          "amount": 661.3,
+          "memo": ""
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "The Home Depot",
+          "amount": 131.43,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "RPW Headlamps",
+          "amount": 52.18,
+          "memo": "appliance repair"
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "The Home Depot",
+          "amount": 49.64,
+          "memo": "bath hardware"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 219.68,
+          "memo": "r&m"
+        },
+        {
+          "date": "2026-06-24",
+          "merchant": "The Home Depot",
+          "amount": 46.2,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-24",
+          "merchant": "The Home Depot",
+          "amount": 40.68,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "The Home Depot",
+          "amount": 13.21,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "The Home Depot",
+          "amount": 94.62,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "The Home Depot",
+          "amount": 64.29,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-28",
+          "merchant": "Paypal",
+          "amount": 1575.86,
+          "memo": "Contractor service payment for unit maintenance"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "The Home Depot",
+          "amount": 44.52,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "The Home Depot",
+          "amount": 7.71,
+          "memo": "General repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "The Home Depot",
+          "amount": 49.29,
+          "memo": "Turn supplies and material"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "The Home Depot",
+          "amount": 153.46,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 22.87,
+          "memo": "Maintenance repair building materials"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 26.43,
+          "memo": "General repair and maintenance supplies for property"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 48.19,
+          "memo": "General repair and maintenance supplies for Ridgeview property"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Jonas Hoard",
+          "hours": 0.65,
+          "wage": 40.5,
+          "cost": 26.33
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Jonas Hoard",
+          "hours": 1.95,
+          "wage": 40.5,
+          "cost": 78.97
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Jonas Hoard",
+          "hours": 1.08,
+          "wage": 40.5,
+          "cost": 43.88
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jonas Hoard",
+          "hours": 0.68,
+          "wage": 40.5,
+          "cost": 27.68
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Jonas Hoard",
+          "hours": 2.93,
+          "wage": 40.5,
+          "cost": 118.8
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jonas Hoard",
+          "hours": 1.47,
+          "wage": 40.5,
+          "cost": 59.4
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jonas Hoard",
+          "hours": 3.82,
+          "wage": 40.5,
+          "cost": 154.57
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jonas Hoard",
+          "hours": 5.27,
+          "wage": 40.5,
+          "cost": 213.23
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jonas Hoard",
+          "hours": 7.55,
+          "wage": 40.5,
+          "cost": 305.77
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jonas Hoard",
+          "hours": 7.22,
+          "wage": 40.5,
+          "cost": 292.28
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jonas Hoard",
+          "hours": 4.45,
+          "wage": 40.5,
+          "cost": 180.23
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jonas Hoard",
+          "hours": 3.6,
+          "wage": 40.5,
+          "cost": 145.8
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jonas Hoard",
+          "hours": 4.98,
+          "wage": 40.5,
+          "cost": 201.83
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jonas Hoard",
+          "hours": 7.3,
+          "wage": 40.5,
+          "cost": 295.65
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jonas Hoard",
+          "hours": 1.22,
+          "wage": 40.5,
+          "cost": 49.28
+        }
+      ]
+    },
+    {
+      "property": "C313",
+      "code": "c313",
+      "appfolio_actual": 8714.13,
+      "ramp_total": 546.58,
+      "labor_total": 1200.13,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "Grainger Industrial Supply",
+          "amount": 38.89,
+          "memo": "c313 gate remote"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "Grainger Industrial Supply",
+          "amount": 77.78,
+          "memo": "gate opener remote"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "The Home Depot",
+          "amount": 14.05,
+          "memo": "flower replacement for tenant"
+        },
+        {
+          "date": "2026-06-08",
+          "merchant": "The Home Depot",
+          "amount": 70.87,
+          "memo": "gutter cleaning supplies"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "Ace Hardware",
+          "amount": 10.89,
+          "memo": "Duplicate keys for new tenant"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "Lowe's",
+          "amount": 49.27,
+          "memo": "rain gutter clean out"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "The Home Depot",
+          "amount": 51.86,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "The Home Depot",
+          "amount": 76.34,
+          "memo": "blower for removing dust"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "The Home Depot",
+          "amount": 25.92,
+          "memo": "drain clog clean-up supplies"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Reliable Parts",
+          "amount": 41.35,
+          "memo": "oven bake element replacement"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "Walmart",
+          "amount": 31.58,
+          "memo": "replacement cord for drain auger"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 57.78,
+          "memo": "General maintenance hardware and materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-03",
+          "name": "Justin Gutierrez",
+          "hours": 4.42,
+          "wage": 37.5,
+          "cost": 165.63
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Wade Hippen",
+          "hours": 0.8,
+          "wage": 42.660000000000004,
+          "cost": 34.13
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Wade Hippen",
+          "hours": 2.07,
+          "wage": 42.660000000000004,
+          "cost": 88.16
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Wade Hippen",
+          "hours": 3.93,
+          "wage": 42.660000000000004,
+          "cost": 167.8
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Justin Gutierrez",
+          "hours": 2.27,
+          "wage": 37.5,
+          "cost": 85
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Justin Gutierrez",
+          "hours": 2.28,
+          "wage": 37.5,
+          "cost": 85.63
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Wade Hippen",
+          "hours": 1.48,
+          "wage": 42.660000000000004,
+          "cost": 63.28
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Wade Hippen",
+          "hours": 1.12,
+          "wage": 42.660000000000004,
+          "cost": 47.64
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Wade Hippen",
+          "hours": 4.17,
+          "wage": 42.660000000000004,
+          "cost": 177.75
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Justin Gutierrez",
+          "hours": 1.3,
+          "wage": 37.5,
+          "cost": 48.75
+        },
+        {
+          "date": "2026-06-20",
+          "name": "Justin Gutierrez",
+          "hours": 0.98,
+          "wage": 37.5,
+          "cost": 36.88
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Justin Gutierrez",
+          "hours": 2.67,
+          "wage": 37.5,
+          "cost": 100
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Wade Hippen",
+          "hours": 0.87,
+          "wage": 42.660000000000004,
+          "cost": 36.97
+        },
+        {
+          "date": "2026-06-27",
+          "name": "Justin Gutierrez",
+          "hours": 0.42,
+          "wage": 37.5,
+          "cost": 15.63
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Justin Gutierrez",
+          "hours": 1.25,
+          "wage": 37.5,
+          "cost": 46.88
+        }
+      ]
+    },
+    {
+      "property": "RL16",
+      "code": "rl16",
+      "appfolio_actual": 8388.9,
+      "ramp_total": 1059.53,
+      "labor_total": 4437.56,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "The Home Depot",
+          "amount": 27.18,
+          "memo": "Purchased exhaust fan to replace broken on I’d D building laundry room"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "Pro Fire",
+          "amount": 20.67,
+          "memo": "Paid pro fire for fire extinguisher service inspection"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "Ace Hardware",
+          "amount": 35.89,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "PayRange",
+          "amount": 10,
+          "memo": "Purchase for laundry equipment troubleshooting."
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "HD Supply Facilities Maintenance",
+          "amount": 86.02,
+          "memo": "General repair maintenance materials"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "HD Supply Facilities Maintenance",
+          "amount": 86.02,
+          "memo": "General repair maintenance materials"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "The Home Depot",
+          "amount": 105.85,
+          "memo": "R&M supplies purchase for meld TXKBD0G"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "Ace Hardware",
+          "amount": 9.35,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "Ace Hardware",
+          "amount": 10.87,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-09",
+          "merchant": "Ace Hardware",
+          "amount": 32.61,
+          "memo": "Purchased multiple materials to fix issues after leak"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Ace Hardware",
+          "amount": 93.52,
+          "memo": "Purchased smart lock deadbolts to replace broken locks on maintenance storage rooms, and electrical rooms"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Ace Hardware",
+          "amount": 28.92,
+          "memo": "Purchased texture for drywall repair and gang box cover to cover old smoke alarm hole"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Ace Hardware",
+          "amount": 21.75,
+          "memo": "Purchased gang box cover for the pools pump emergency shut off button"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Ace Hardware",
+          "amount": 9.7,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Ace Hardware",
+          "amount": 1.09,
+          "memo": "Purchased longer screws for gang box cover over pool shut off button"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "Walgreens",
+          "amount": 8.77,
+          "memo": "Cleaning supplies for grounds"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "Ace Hardware",
+          "amount": 27.19,
+          "memo": "Purchased dishwasher supply line and elbow"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "The Home Depot",
+          "amount": 27.18,
+          "memo": "Purchased exhaust fan to replace broken one"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Ace Hardware",
+          "amount": 12.14,
+          "memo": "Purchased outlet cover plates to replace missing ones in laundry rooms"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "The Home Depot",
+          "amount": 26.09,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Ace Hardware",
+          "amount": 16.29,
+          "memo": "Had copy’s of keys made for fire marshals"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 65.26,
+          "memo": "Purchase deadbolt and doorknob to replace because tenant lost keys"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 35.88,
+          "memo": "Purchased wax ring to replace old one and gloves"
+        },
+        {
+          "date": "2026-06-24",
+          "merchant": "The Home Depot",
+          "amount": 67.65,
+          "memo": "Purchased bathroom sink to replace one with a hole in it"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "USPS",
+          "amount": 50,
+          "memo": "Paid for usps to replace mailbox lock"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "PayRange",
+          "amount": 10,
+          "memo": "Purchase for laundry equipment troubleshooting."
+        },
+        {
+          "date": "2026-06-26",
+          "merchant": "Walmart",
+          "amount": 43.43,
+          "memo": "general maintenance tools"
+        },
+        {
+          "date": "2026-06-26",
+          "merchant": "Ace Hardware",
+          "amount": 27.18,
+          "memo": "Maintenance materials for plunger and drain gel purchase"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "Ace Hardware",
+          "amount": 13.03,
+          "memo": "Repair and maintenance materials\nmeld TH1IMZD"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "USPS",
+          "amount": 50,
+          "memo": "mail lock replacement"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Isaac Chavez",
+          "hours": 0.73,
+          "wage": 40.5,
+          "cost": 29.7
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Jared Miller",
+          "hours": 0.6,
+          "wage": 42.135,
+          "cost": 25.28
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Jaxson Lakins",
+          "hours": 4.48,
+          "wage": 36,
+          "cost": 161.4
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Isaac Chavez",
+          "hours": 1.57,
+          "wage": 40.5,
+          "cost": 63.45
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Jaxson Lakins",
+          "hours": 6.72,
+          "wage": 36,
+          "cost": 241.8
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jared Miller",
+          "hours": 0.93,
+          "wage": 42.135,
+          "cost": 39.33
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jaxson Lakins",
+          "hours": 1.93,
+          "wage": 36,
+          "cost": 69.6
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Jared Miller",
+          "hours": 0.68,
+          "wage": 42.135,
+          "cost": 28.79
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Jaxson Lakins",
+          "hours": 4.53,
+          "wage": 36,
+          "cost": 163.2
+        },
+        {
+          "date": "2026-06-07",
+          "name": "Jaxson Lakins",
+          "hours": 1.4,
+          "wage": 36,
+          "cost": 50.4
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Jaxson Lakins",
+          "hours": 2.53,
+          "wage": 36,
+          "cost": 91.2
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Isaac Chavez",
+          "hours": 2.92,
+          "wage": 40.5,
+          "cost": 118.13
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Jaxson Lakins",
+          "hours": 5.25,
+          "wage": 36,
+          "cost": 189
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Jaxson Lakins",
+          "hours": 0.62,
+          "wage": 36,
+          "cost": 22.2
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Jaxson Lakins",
+          "hours": 1.03,
+          "wage": 36,
+          "cost": 37.2
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jared Miller",
+          "hours": 0.25,
+          "wage": 42.135,
+          "cost": 10.53
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jaxson Lakins",
+          "hours": 6.13,
+          "wage": 36,
+          "cost": 220.8
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jared Miller",
+          "hours": 2.37,
+          "wage": 42.135,
+          "cost": 99.72
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jaxson Lakins",
+          "hours": 2.18,
+          "wage": 36,
+          "cost": 78.6
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jared Miller",
+          "hours": 1.93,
+          "wage": 42.135,
+          "cost": 81.46
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jaxson Lakins",
+          "hours": 2.03,
+          "wage": 36,
+          "cost": 73.2
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Jared Miller",
+          "hours": 3.07,
+          "wage": 42.135,
+          "cost": 129.21
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Jaxson Lakins",
+          "hours": 1.8,
+          "wage": 36,
+          "cost": 64.8
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jared Miller",
+          "hours": 2.57,
+          "wage": 42.135,
+          "cost": 108.15
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jaxson Lakins",
+          "hours": 7.12,
+          "wage": 36,
+          "cost": 256.2
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Isaac Chavez",
+          "hours": 0.83,
+          "wage": 40.5,
+          "cost": 33.75
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jared Miller",
+          "hours": 0.75,
+          "wage": 42.135,
+          "cost": 31.6
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Isaac Chavez",
+          "hours": 1.83,
+          "wage": 40.5,
+          "cost": 74.25
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jaxson Lakins",
+          "hours": 3.03,
+          "wage": 36,
+          "cost": 109.2
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jaxson Lakins",
+          "hours": 3.82,
+          "wage": 36,
+          "cost": 137.4
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Isaac Chavez",
+          "hours": 6.17,
+          "wage": 40.5,
+          "cost": 249.75
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jared Miller",
+          "hours": 5.07,
+          "wage": 42.135,
+          "cost": 213.48
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jaxson Lakins",
+          "hours": 3.57,
+          "wage": 36,
+          "cost": 128.4
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Isaac Chavez",
+          "hours": 4.97,
+          "wage": 40.5,
+          "cost": 201.15
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jared Miller",
+          "hours": 4,
+          "wage": 42.135,
+          "cost": 168.54
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jaxson Lakins",
+          "hours": 0.62,
+          "wage": 36,
+          "cost": 22.2
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jared Miller",
+          "hours": 4.15,
+          "wage": 42.135,
+          "cost": 174.86
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jaxson Lakins",
+          "hours": 0.87,
+          "wage": 36,
+          "cost": 31.2
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Isaac Chavez",
+          "hours": 3.55,
+          "wage": 40.5,
+          "cost": 143.78
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jared Miller",
+          "hours": 4.15,
+          "wage": 42.135,
+          "cost": 174.86
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jared Miller",
+          "hours": 1.43,
+          "wage": 42.135,
+          "cost": 60.39
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jaxson Lakins",
+          "hours": 0.82,
+          "wage": 36,
+          "cost": 29.4
+        }
+      ]
+    },
+    {
+      "property": "RL21",
+      "code": "rl21",
+      "appfolio_actual": 5344.88,
+      "ramp_total": 99.77,
+      "labor_total": 304.21,
+      "ramp_items": [
+        {
+          "date": "2026-06-20",
+          "merchant": "Ace Hardware",
+          "amount": 35.89,
+          "memo": "Repair and maintenance materials\nTJZKEPT"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 63.88,
+          "memo": "Purchased weather stripping for front door"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-10",
+          "name": "Jaxson Lakins",
+          "hours": 1.38,
+          "wage": 36,
+          "cost": 49.8
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Jaxson Lakins",
+          "hours": 1.15,
+          "wage": 36,
+          "cost": 41.4
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jared Miller",
+          "hours": 0.73,
+          "wage": 42.135,
+          "cost": 30.9
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Isaac Chavez",
+          "hours": 0.68,
+          "wage": 40.5,
+          "cost": 27.68
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Isaac Chavez",
+          "hours": 0.48,
+          "wage": 40.5,
+          "cost": 19.58
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jaxson Lakins",
+          "hours": 0.52,
+          "wage": 36,
+          "cost": 18.6
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Isaac Chavez",
+          "hours": 0.77,
+          "wage": 40.5,
+          "cost": 31.05
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jaxson Lakins",
+          "hours": 2.37,
+          "wage": 36,
+          "cost": 85.2
+        }
+      ]
+    },
+    {
+      "property": "W117",
+      "code": "w117",
+      "appfolio_actual": 4723.92,
+      "ramp_total": 45.81,
+      "labor_total": 508.76,
+      "ramp_items": [
+        {
+          "date": "2026-06-15",
+          "merchant": "Ace Hardware",
+          "amount": 45.81,
+          "memo": "door knob replacement for unit"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-12",
+          "name": "Justin Gutierrez",
+          "hours": 2.1,
+          "wage": 37.5,
+          "cost": 78.75
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Wade Hippen",
+          "hours": 1.58,
+          "wage": 42.660000000000004,
+          "cost": 67.55
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Wade Hippen",
+          "hours": 3.47,
+          "wage": 42.660000000000004,
+          "cost": 147.89
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Wade Hippen",
+          "hours": 1.55,
+          "wage": 42.660000000000004,
+          "cost": 66.12
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Justin Gutierrez",
+          "hours": 1.68,
+          "wage": 37.5,
+          "cost": 63.13
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Wade Hippen",
+          "hours": 2,
+          "wage": 42.660000000000004,
+          "cost": 85.32
+        }
+      ]
+    },
+    {
+      "property": "K104",
+      "code": "k104",
+      "appfolio_actual": 3314.25,
+      "ramp_total": 2025.27,
+      "labor_total": 1033.99,
+      "ramp_items": [
+        {
+          "date": "2026-06-01",
+          "merchant": "True Value",
+          "amount": 53.44,
+          "memo": "drain repair supplies"
+        },
+        {
+          "date": "2026-06-01",
+          "merchant": "True Value",
+          "amount": 20.71,
+          "memo": "cleaning supplies for drain"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "True Value",
+          "amount": 29.42,
+          "memo": "caulking supplies for bath tub"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "Ace Hardware",
+          "amount": 45.8,
+          "memo": "Plumbing"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "Ace Hardware",
+          "amount": 42.52,
+          "memo": "R&M contractor supplies"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "Ace Hardware",
+          "amount": 30.53,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "Ace Hardware",
+          "amount": 40.36,
+          "memo": "Repair and maintenance materials"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Ace Hardware",
+          "amount": 30.53,
+          "memo": "garage door repair"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Ace Hardware",
+          "amount": 17.76,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "The Home Depot",
+          "amount": 56.67,
+          "memo": "air conditioner support for tenant"
+        },
+        {
+          "date": "2026-06-09",
+          "merchant": "Ace Hardware",
+          "amount": 41.44,
+          "memo": "stair tread safety equipment"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "True Value",
+          "amount": 7.63,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "The Home Depot",
+          "amount": 261.6,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "True Value",
+          "amount": 22.9,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "True Value",
+          "amount": 14.17,
+          "memo": "air conditioner cleaning spray"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "True Value",
+          "amount": 32.14,
+          "memo": "air conditioner filter replacement"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "True Value",
+          "amount": 36.53,
+          "memo": "GFCI outlet replacement"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Ace Hardware",
+          "amount": 101.66,
+          "memo": "R&M contractor supplies"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Ace Hardware",
+          "amount": 45.81,
+          "memo": "timer replacememt for sprinklers"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Lowe's",
+          "amount": 83.91,
+          "memo": "Interior door replacement amd door knobs"
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "True Value",
+          "amount": 31.63,
+          "memo": "2-stroke fuel for chainsaw"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 22.54,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-24",
+          "merchant": "Ace Hardware",
+          "amount": 730.96,
+          "memo": "R&M contractor supplies"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "True Value",
+          "amount": 26.16,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "Ace Hardware",
+          "amount": 69.79,
+          "memo": "Repair and maintenance materials for property upkeep"
+        },
+        {
+          "date": "2026-06-26",
+          "merchant": "True Value",
+          "amount": 29.66,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Ace Hardware",
+          "amount": 99,
+          "memo": "Repair and maintenance materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Wade Hippen",
+          "hours": 2.17,
+          "wage": 42.660000000000004,
+          "cost": 92.43
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Justin Gutierrez",
+          "hours": 2.98,
+          "wage": 37.5,
+          "cost": 111.88
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Wade Hippen",
+          "hours": 3.35,
+          "wage": 42.660000000000004,
+          "cost": 142.91
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Wade Hippen",
+          "hours": 2.25,
+          "wage": 42.660000000000004,
+          "cost": 95.99
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Wade Hippen",
+          "hours": 2.02,
+          "wage": 42.660000000000004,
+          "cost": 86.03
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Justin Gutierrez",
+          "hours": 4.48,
+          "wage": 37.5,
+          "cost": 168.13
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Wade Hippen",
+          "hours": 2.08,
+          "wage": 42.660000000000004,
+          "cost": 88.88
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Wade Hippen",
+          "hours": 3.67,
+          "wage": 42.660000000000004,
+          "cost": 156.42
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Justin Gutierrez",
+          "hours": 0.77,
+          "wage": 37.5,
+          "cost": 28.75
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Wade Hippen",
+          "hours": 1.47,
+          "wage": 42.660000000000004,
+          "cost": 62.57
+        }
+      ]
+    },
+    {
+      "property": "M405",
+      "code": "m405",
+      "appfolio_actual": 3227.4,
+      "ramp_total": 2193.01,
+      "labor_total": 843.56,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "Reliable Parts",
+          "amount": 52.2,
+          "memo": "oven bake element replacement"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Division One Plumbing",
+          "amount": 1840,
+          "memo": "M405-7 Plumbing repair project"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "The Home Depot",
+          "amount": 69.74,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-11",
+          "merchant": "The Home Depot",
+          "amount": 223.09,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Night Owl Security Products",
+          "amount": 3.99,
+          "memo": ""
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Night Owl Security Products",
+          "amount": 3.99,
+          "memo": ""
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Wade Hippen",
+          "hours": 2.03,
+          "wage": 42.660000000000004,
+          "cost": 86.74
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Wade Hippen",
+          "hours": 2.67,
+          "wage": 42.660000000000004,
+          "cost": 113.76
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Justin Gutierrez",
+          "hours": 5.85,
+          "wage": 37.5,
+          "cost": 219.38
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Wade Hippen",
+          "hours": 1.07,
+          "wage": 42.660000000000004,
+          "cost": 45.5
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Justin Gutierrez",
+          "hours": 3.93,
+          "wage": 37.5,
+          "cost": 147.5
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Justin Gutierrez",
+          "hours": 2.77,
+          "wage": 37.5,
+          "cost": 103.75
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Wade Hippen",
+          "hours": 1,
+          "wage": 42.660000000000004,
+          "cost": 42.66
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Justin Gutierrez",
+          "hours": 1.58,
+          "wage": 37.5,
+          "cost": 59.38
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Wade Hippen",
+          "hours": 0.58,
+          "wage": 42.660000000000004,
+          "cost": 24.89
+        }
+      ]
+    },
+    {
+      "property": "HL65",
+      "code": "hl65",
+      "appfolio_actual": 2898.05,
+      "ramp_total": 2805.2,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-19",
+          "merchant": "DSR Construction & Handyman Services",
+          "amount": 2805.2,
+          "memo": "DSR handyman services"
+        }
+      ],
+      "labor_items": []
+    },
+    {
+      "property": "MS43",
+      "code": "ms43",
+      "appfolio_actual": 2801.55,
+      "ramp_total": 390,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-29",
+          "merchant": "Redcliffe Electric",
+          "amount": 390,
+          "memo": "Electrical repair at Missoula"
+        }
+      ],
+      "labor_items": []
+    },
+    {
+      "property": "C302",
+      "code": "c302",
+      "appfolio_actual": 2562.33,
+      "ramp_total": 1457.16,
+      "labor_total": 966.57,
+      "ramp_items": [
+        {
+          "date": "2026-06-04",
+          "merchant": "Reliable Parts",
+          "amount": 303.8,
+          "memo": "dishwasher motor replacement parts"
+        },
+        {
+          "date": "2026-06-09",
+          "merchant": "Goodwill",
+          "amount": 11,
+          "memo": "towels for water clean up"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "Reliable Parts",
+          "amount": -165.23,
+          "memo": "Refund for dishwasher motor replacement parts"
+        },
+        {
+          "date": "2026-06-11",
+          "merchant": "Miller's Hardware",
+          "amount": 21.55,
+          "memo": "mailbox lock and key copy"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Ace Hardware",
+          "amount": 91.05,
+          "memo": "move-in repairs"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Miller's Hardware",
+          "amount": 25.07,
+          "memo": "shower neck replacement"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "The Home Depot",
+          "amount": 111.82,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-26",
+          "merchant": "The Home Depot",
+          "amount": 184.38,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Handyman Electric",
+          "amount": 597.87,
+          "memo": "Handyman electric"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 156.93,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 118.92,
+          "memo": "General maintenance hardware and materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Justin Gutierrez",
+          "hours": 0.95,
+          "wage": 37.5,
+          "cost": 35.63
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Wade Hippen",
+          "hours": 2.07,
+          "wage": 42.660000000000004,
+          "cost": 88.16
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Wade Hippen",
+          "hours": 2.68,
+          "wage": 42.660000000000004,
+          "cost": 114.47
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Wade Hippen",
+          "hours": 1.35,
+          "wage": 42.660000000000004,
+          "cost": 57.59
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Wade Hippen",
+          "hours": 1.75,
+          "wage": 42.660000000000004,
+          "cost": 74.66
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Wade Hippen",
+          "hours": 0.57,
+          "wage": 42.660000000000004,
+          "cost": 24.17
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Justin Gutierrez",
+          "hours": 1.8,
+          "wage": 37.5,
+          "cost": 67.5
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Justin Gutierrez",
+          "hours": 3.45,
+          "wage": 37.5,
+          "cost": 129.38
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Justin Gutierrez",
+          "hours": 1.63,
+          "wage": 37.5,
+          "cost": 61.25
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Justin Gutierrez",
+          "hours": 1.67,
+          "wage": 37.5,
+          "cost": 62.5
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Justin Gutierrez",
+          "hours": 2.62,
+          "wage": 37.5,
+          "cost": 98.13
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Justin Gutierrez",
+          "hours": 4.08,
+          "wage": 37.5,
+          "cost": 153.13
+        }
+      ]
+    },
+    {
+      "property": "O155",
+      "code": "o155",
+      "appfolio_actual": 2550.08,
+      "ramp_total": 730.12,
+      "labor_total": 947.88,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "M&L Supply.Co",
+          "amount": 399.5,
+          "memo": "General R&M material repair"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "The Home Depot",
+          "amount": 65.53,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "Ace Hardware",
+          "amount": 46.87,
+          "memo": "pest control bait and traps"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Ace Hardware",
+          "amount": 3.36,
+          "memo": "shower faucet repair"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 214.86,
+          "memo": "General maintenance hardware and materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-03",
+          "name": "Justin Gutierrez",
+          "hours": 2,
+          "wage": 37.5,
+          "cost": 75
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Justin Gutierrez",
+          "hours": 5.6,
+          "wage": 37.5,
+          "cost": 210
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Wade Hippen",
+          "hours": 1.88,
+          "wage": 42.660000000000004,
+          "cost": 80.34
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Justin Gutierrez",
+          "hours": 2.07,
+          "wage": 37.5,
+          "cost": 77.5
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Wade Hippen",
+          "hours": 0.58,
+          "wage": 42.660000000000004,
+          "cost": 24.89
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Wade Hippen",
+          "hours": 1.7,
+          "wage": 42.660000000000004,
+          "cost": 72.52
+        },
+        {
+          "date": "2026-06-13",
+          "name": "Wade Hippen",
+          "hours": 1.03,
+          "wage": 42.660000000000004,
+          "cost": 44.08
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Wade Hippen",
+          "hours": 1.55,
+          "wage": 42.660000000000004,
+          "cost": 66.12
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Justin Gutierrez",
+          "hours": 1.35,
+          "wage": 37.5,
+          "cost": 50.63
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Justin Gutierrez",
+          "hours": 2.57,
+          "wage": 37.5,
+          "cost": 96.25
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Wade Hippen",
+          "hours": 1.62,
+          "wage": 42.660000000000004,
+          "cost": 68.97
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Wade Hippen",
+          "hours": 1.03,
+          "wage": 42.660000000000004,
+          "cost": 44.08
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Justin Gutierrez",
+          "hours": 1,
+          "wage": 37.5,
+          "cost": 37.5
+        }
+      ]
+    },
+    {
+      "property": "PS25",
+      "code": "ps25",
+      "appfolio_actual": 1947.54,
+      "ramp_total": 530.86,
+      "labor_total": 910.79,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "Griggs Department Store",
+          "amount": 30.48,
+          "memo": "Purchased co2 detector to replace broken one"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "Ace Hardware",
+          "amount": 20.87,
+          "memo": "Purchased batteries to replaced used up ones in carbon monoxide detector"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "Griggs Department Store",
+          "amount": 57.68,
+          "memo": "Purchased light bulbs to replace burnt out ones"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Partselect.Com",
+          "amount": 262.94,
+          "memo": "Replacement appliance component parts"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "The Home Depot",
+          "amount": 28.22,
+          "memo": "R&M supplies purchase\nTZV5D5J"
+        },
+        {
+          "date": "2026-06-24",
+          "merchant": "Griggs Department Store",
+          "amount": 130.67,
+          "memo": "Purchased garbage disposal to replace broken one"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Jaxson Lakins",
+          "hours": 1.37,
+          "wage": 36,
+          "cost": 49.2
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Jaxson Lakins",
+          "hours": 1.1,
+          "wage": 36,
+          "cost": 39.6
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Jaxson Lakins",
+          "hours": 2.85,
+          "wage": 36,
+          "cost": 102.6
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Jaxson Lakins",
+          "hours": 1.3,
+          "wage": 36,
+          "cost": 46.8
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jared Miller",
+          "hours": 0.82,
+          "wage": 42.135,
+          "cost": 34.41
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jaxson Lakins",
+          "hours": 1.6,
+          "wage": 36,
+          "cost": 57.6
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Isaac Chavez",
+          "hours": 2.02,
+          "wage": 40.5,
+          "cost": 81.68
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Isaac Chavez",
+          "hours": 1.88,
+          "wage": 40.5,
+          "cost": 76.28
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jared Miller",
+          "hours": 0.63,
+          "wage": 42.135,
+          "cost": 26.69
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jared Miller",
+          "hours": 1.58,
+          "wage": 42.135,
+          "cost": 66.71
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jaxson Lakins",
+          "hours": 2.07,
+          "wage": 36,
+          "cost": 74.4
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Isaac Chavez",
+          "hours": 0.47,
+          "wage": 40.5,
+          "cost": 18.9
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jaxson Lakins",
+          "hours": 0.75,
+          "wage": 36,
+          "cost": 27
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jared Miller",
+          "hours": 1.97,
+          "wage": 42.135,
+          "cost": 82.87
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jaxson Lakins",
+          "hours": 2.6,
+          "wage": 36,
+          "cost": 93.6
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jared Miller",
+          "hours": 0.4,
+          "wage": 42.135,
+          "cost": 16.85
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jaxson Lakins",
+          "hours": 0.43,
+          "wage": 36,
+          "cost": 15.6
+        }
+      ]
+    },
+    {
+      "property": "J312",
+      "code": "j312",
+      "appfolio_actual": 1473.99,
+      "ramp_total": 564.21,
+      "labor_total": 374.67,
+      "ramp_items": [
+        {
+          "date": "2026-06-10",
+          "merchant": "Ace Hardware",
+          "amount": 45.81,
+          "memo": "lock replacement for tenant"
+        },
+        {
+          "date": "2026-06-27",
+          "merchant": "Roto-Rooter",
+          "amount": 518.4,
+          "memo": "Professional plumbing repair services for property maintenance"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Wade Hippen",
+          "hours": 1.08,
+          "wage": 42.660000000000004,
+          "cost": 46.22
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Wade Hippen",
+          "hours": 2,
+          "wage": 42.660000000000004,
+          "cost": 85.32
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Justin Gutierrez",
+          "hours": 1.57,
+          "wage": 37.5,
+          "cost": 58.75
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Justin Gutierrez",
+          "hours": 2.95,
+          "wage": 37.5,
+          "cost": 110.63
+        },
+        {
+          "date": "2026-06-27",
+          "name": "Justin Gutierrez",
+          "hours": 1.97,
+          "wage": 37.5,
+          "cost": 73.75
+        }
+      ]
+    },
+    {
+      "property": "V202",
+      "code": "v202",
+      "appfolio_actual": 1278.25,
+      "ramp_total": 22.81,
+      "labor_total": 85.32,
+      "ramp_items": [
+        {
+          "date": "2026-06-24",
+          "merchant": "Sunshine Disposal & Recycling",
+          "amount": 22.81,
+          "memo": "dump run debris disposal"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-24",
+          "name": "Wade Hippen",
+          "hours": 2,
+          "wage": 42.660000000000004,
+          "cost": 85.32
+        }
+      ]
+    },
+    {
+      "property": "S129",
+      "code": "s129",
+      "appfolio_actual": 1063.17,
+      "ramp_total": 516.18,
+      "labor_total": 565.23,
+      "ramp_items": [
+        {
+          "date": "2026-06-04",
+          "merchant": "Lowe's",
+          "amount": 148.17,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Peters Hardware",
+          "amount": 17.43,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "The Home Depot",
+          "amount": 9.79,
+          "memo": "dishwasher cleaner for maintenance"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Reliable Parts",
+          "amount": 123.07,
+          "memo": "dishwasher repair parts"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Advanced Fire Systems",
+          "amount": 150,
+          "memo": "fire extinguisher replacement"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Lowe's",
+          "amount": 67.72,
+          "memo": "emergency stair tread repair"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Wade Hippen",
+          "hours": 1.98,
+          "wage": 42.660000000000004,
+          "cost": 84.61
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Justin Gutierrez",
+          "hours": 2,
+          "wage": 37.5,
+          "cost": 75
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Justin Gutierrez",
+          "hours": 2,
+          "wage": 37.5,
+          "cost": 75
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Wade Hippen",
+          "hours": 1.98,
+          "wage": 42.660000000000004,
+          "cost": 84.61
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Wade Hippen",
+          "hours": 1.1,
+          "wage": 42.660000000000004,
+          "cost": 46.93
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Wade Hippen",
+          "hours": 2,
+          "wage": 42.660000000000004,
+          "cost": 85.32
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Wade Hippen",
+          "hours": 2.67,
+          "wage": 42.660000000000004,
+          "cost": 113.76
+        }
+      ]
+    },
+    {
+      "property": "P705",
+      "code": "p705",
+      "appfolio_actual": 1009.79,
+      "ramp_total": 397.77,
+      "labor_total": 580.06,
+      "ramp_items": [
+        {
+          "date": "2026-06-01",
+          "merchant": "Reliable Parts",
+          "amount": 42.39,
+          "memo": "power block replacememt"
+        },
+        {
+          "date": "2026-06-01",
+          "merchant": "Reliable Parts",
+          "amount": 191.88,
+          "memo": "Whirlpool washer replacement timer"
+        },
+        {
+          "date": "2026-06-20",
+          "merchant": "Advanced Fire Systems",
+          "amount": 163.5,
+          "memo": "p705 R&M contractor fire extinguisher"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Wade Hippen",
+          "hours": 3.08,
+          "wage": 42.660000000000004,
+          "cost": 131.54
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Justin Gutierrez",
+          "hours": 0.87,
+          "wage": 37.5,
+          "cost": 32.5
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Wade Hippen",
+          "hours": 1.9,
+          "wage": 42.660000000000004,
+          "cost": 81.05
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Wade Hippen",
+          "hours": 1.88,
+          "wage": 42.660000000000004,
+          "cost": 80.34
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Wade Hippen",
+          "hours": 1.13,
+          "wage": 42.660000000000004,
+          "cost": 48.35
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Justin Gutierrez",
+          "hours": 2.87,
+          "wage": 37.5,
+          "cost": 107.5
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Wade Hippen",
+          "hours": 0.73,
+          "wage": 42.660000000000004,
+          "cost": 31.28
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Justin Gutierrez",
+          "hours": 1.8,
+          "wage": 37.5,
+          "cost": 67.5
+        }
+      ]
+    },
+    {
+      "property": "B101",
+      "code": "b101",
+      "appfolio_actual": 979.01,
+      "ramp_total": 489.05,
+      "labor_total": 408.76,
+      "ramp_items": [
+        {
+          "date": "2026-06-08",
+          "merchant": "The Home Depot",
+          "amount": 30.52,
+          "memo": "CO alarm replacement"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "The Home Depot",
+          "amount": 136.9,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "The Home Depot",
+          "amount": 89.31,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "Ace Hardware",
+          "amount": 10.89,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "Ace Hardware",
+          "amount": 207.27,
+          "memo": "Repair and maintenance materials for property upkeep"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "Ace Hardware",
+          "amount": 14.16,
+          "memo": "R&M materials and tools"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-17",
+          "name": "Justin Gutierrez",
+          "hours": 2.78,
+          "wage": 37.5,
+          "cost": 104.38
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Justin Gutierrez",
+          "hours": 3.45,
+          "wage": 37.5,
+          "cost": 129.38
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Justin Gutierrez",
+          "hours": 2.67,
+          "wage": 37.5,
+          "cost": 100
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Justin Gutierrez",
+          "hours": 2,
+          "wage": 37.5,
+          "cost": 75
+        }
+      ]
+    },
+    {
+      "property": "PS91",
+      "code": "ps91",
+      "appfolio_actual": 958.31,
+      "ramp_total": 86.29,
+      "labor_total": 557.9,
+      "ramp_items": [
+        {
+          "date": "2026-06-22",
+          "merchant": "Lowe's",
+          "amount": 33.03,
+          "memo": "Purchased rubber couplers to fix broken cast iron pipe and purchased ptrap washers to replace broke ones"
+        },
+        {
+          "date": "2026-06-29",
+          "merchant": "The Home Depot",
+          "amount": 53.26,
+          "memo": "Purchased anode rod for water heater to replace old one"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-15",
+          "name": "Jared Miller",
+          "hours": 0.78,
+          "wage": 42.135,
+          "cost": 33.01
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jaxson Lakins",
+          "hours": 0.48,
+          "wage": 36,
+          "cost": 17.4
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Isaac Chavez",
+          "hours": 0.47,
+          "wage": 40.5,
+          "cost": 18.9
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jared Miller",
+          "hours": 2.48,
+          "wage": 42.135,
+          "cost": 104.64
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jared Miller",
+          "hours": 0.87,
+          "wage": 42.135,
+          "cost": 36.52
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jaxson Lakins",
+          "hours": 3.72,
+          "wage": 36,
+          "cost": 133.8
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Isaac Chavez",
+          "hours": 0.92,
+          "wage": 40.5,
+          "cost": 37.13
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jared Miller",
+          "hours": 1.32,
+          "wage": 42.135,
+          "cost": 55.48
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jaxson Lakins",
+          "hours": 3.17,
+          "wage": 36,
+          "cost": 114
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jared Miller",
+          "hours": 0.17,
+          "wage": 42.135,
+          "cost": 7.02
+        }
+      ]
+    },
+    {
+      "property": "K308",
+      "code": "k308",
+      "appfolio_actual": 814.12,
+      "ramp_total": 364.07,
+      "labor_total": 193.4,
+      "ramp_items": [
+        {
+          "date": "2026-06-09",
+          "merchant": "Reliable Parts",
+          "amount": 231.79,
+          "memo": "washer timer replacement"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 132.28,
+          "memo": "exterior spigot repair"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-09",
+          "name": "Wade Hippen",
+          "hours": 2.62,
+          "wage": 42.660000000000004,
+          "cost": 111.63
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Wade Hippen",
+          "hours": 1.92,
+          "wage": 42.660000000000004,
+          "cost": 81.77
+        }
+      ]
+    },
+    {
+      "property": "TC34",
+      "code": "tc34",
+      "appfolio_actual": 689.23,
+      "ramp_total": 266.18,
+      "labor_total": 396.91,
+      "ramp_items": [
+        {
+          "date": "2026-06-11",
+          "merchant": "The Home Depot",
+          "amount": 167.7,
+          "memo": "toilet repair"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "PayRange",
+          "amount": 25,
+          "memo": "Laundry machine repair materials"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "The Home Depot",
+          "amount": 29.63,
+          "memo": "Repair and maintenance supplies"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "The Home Depot",
+          "amount": 43.85,
+          "memo": "General repair maintenance materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Jonas Hoard",
+          "hours": 0.63,
+          "wage": 40.5,
+          "cost": 25.65
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Jonas Hoard",
+          "hours": 0.03,
+          "wage": 40.5,
+          "cost": 1.35
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jonas Hoard",
+          "hours": 2.9,
+          "wage": 40.5,
+          "cost": 117.45
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jonas Hoard",
+          "hours": 2.9,
+          "wage": 40.5,
+          "cost": 117.45
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jonas Hoard",
+          "hours": 0.38,
+          "wage": 40.5,
+          "cost": 15.53
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Jonas Hoard",
+          "hours": 2.33,
+          "wage": 40.5,
+          "cost": 94.5
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jonas Hoard",
+          "hours": 0.62,
+          "wage": 40.5,
+          "cost": 24.98
+        }
+      ]
+    },
+    {
+      "property": "W225",
+      "code": "w225",
+      "appfolio_actual": 643.3,
+      "ramp_total": 29,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-22",
+          "merchant": "Ace Hardware",
+          "amount": 29,
+          "memo": "Fasteners and screws for securing wall"
+        }
+      ],
+      "labor_items": []
+    },
+    {
+      "property": "A916",
+      "code": "a916",
+      "appfolio_actual": 613.09,
+      "ramp_total": 261.44,
+      "labor_total": 375.83,
+      "ramp_items": [
+        {
+          "date": "2026-06-05",
+          "merchant": "Ace Hardware",
+          "amount": 45.81,
+          "memo": "door closer for building rear door"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Ace Hardware",
+          "amount": 80.71,
+          "memo": "New toilet seat for tenant"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Ace Hardware",
+          "amount": 37.14,
+          "memo": "supplies for repairing roof"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Ace Hardware",
+          "amount": 70.84,
+          "memo": "R&M materials and tools"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "Ace Hardware",
+          "amount": 26.94,
+          "memo": "R&M materials and tools"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-05",
+          "name": "Wade Hippen",
+          "hours": 1.98,
+          "wage": 42.660000000000004,
+          "cost": 84.61
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Wade Hippen",
+          "hours": 1.25,
+          "wage": 42.660000000000004,
+          "cost": 53.33
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Wade Hippen",
+          "hours": 1.3,
+          "wage": 42.660000000000004,
+          "cost": 55.46
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Justin Gutierrez",
+          "hours": 1.85,
+          "wage": 37.5,
+          "cost": 69.38
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Wade Hippen",
+          "hours": 0.42,
+          "wage": 42.660000000000004,
+          "cost": 17.78
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Wade Hippen",
+          "hours": 2.23,
+          "wage": 42.660000000000004,
+          "cost": 95.27
+        }
+      ]
+    },
+    {
+      "property": "M221",
+      "code": "m221",
+      "appfolio_actual": 593.57,
+      "ramp_total": 368.19,
+      "labor_total": 176.41,
+      "ramp_items": [
+        {
+          "date": "2026-06-03",
+          "merchant": "The Home Depot",
+          "amount": 76.27,
+          "memo": "digital deadbolt replacement"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "The Home Depot",
+          "amount": 110.4,
+          "memo": "gravel to fill pot holes"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 181.52,
+          "memo": "General maintenance hardware and materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-10",
+          "name": "Wade Hippen",
+          "hours": 1.65,
+          "wage": 42.660000000000004,
+          "cost": 70.39
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Wade Hippen",
+          "hours": 1.65,
+          "wage": 42.660000000000004,
+          "cost": 70.39
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Justin Gutierrez",
+          "hours": 0.95,
+          "wage": 37.5,
+          "cost": 35.63
+        }
+      ]
+    },
+    {
+      "property": "C616",
+      "code": "c616",
+      "appfolio_actual": 584.4,
+      "ramp_total": 185.37,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-10",
+          "merchant": "Lowe's",
+          "amount": 19.66,
+          "memo": "T3KN9HIB-caulking supplies"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "Lowe's",
+          "amount": 16,
+          "memo": "TXHVVYP-soffit plugs"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "The Home Depot",
+          "amount": 149.71,
+          "memo": "TKI58CR-rot repair and oaint supplies"
+        }
+      ],
+      "labor_items": []
+    },
+    {
+      "property": "H731",
+      "code": "h731",
+      "appfolio_actual": 552.1,
+      "ramp_total": 75.76,
+      "labor_total": 244.59,
+      "ramp_items": [
+        {
+          "date": "2026-06-08",
+          "merchant": "Ace Hardware",
+          "amount": 39.24,
+          "memo": "air conditioner cleaning supplies"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Amazon",
+          "amount": 10.9,
+          "memo": "outlet adapters"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "The Home Depot",
+          "amount": 25.62,
+          "memo": "GFCI outlet replacement"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-08",
+          "name": "Wade Hippen",
+          "hours": 1.45,
+          "wage": 42.660000000000004,
+          "cost": 61.86
+        },
+        {
+          "date": "2026-06-13",
+          "name": "Wade Hippen",
+          "hours": 0.45,
+          "wage": 42.660000000000004,
+          "cost": 19.2
+        },
+        {
+          "date": "2026-06-14",
+          "name": "Wade Hippen",
+          "hours": 2,
+          "wage": 42.660000000000004,
+          "cost": 85.32
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Wade Hippen",
+          "hours": 1.83,
+          "wage": 42.660000000000004,
+          "cost": 78.21
+        }
+      ]
+    },
+    {
+      "property": "L912",
+      "code": "l912",
+      "appfolio_actual": 408.2,
+      "ramp_total": 192.87,
+      "labor_total": 234.21,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "The Home Depot",
+          "amount": 176.56,
+          "memo": "General maintenance hardware and materials"
+        },
+        {
+          "date": "2026-06-03",
+          "merchant": "Ace Hardware",
+          "amount": 16.31,
+          "memo": "Groundskeeping supplies and materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Justin Gutierrez",
+          "hours": 3.57,
+          "wage": 37.5,
+          "cost": 133.75
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Justin Gutierrez",
+          "hours": 0.65,
+          "wage": 37.5,
+          "cost": 24.38
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Wade Hippen",
+          "hours": 0.87,
+          "wage": 42.660000000000004,
+          "cost": 36.97
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Wade Hippen",
+          "hours": 0.92,
+          "wage": 42.660000000000004,
+          "cost": 39.11
+        }
+      ]
+    },
+    {
+      "property": "S300",
+      "code": "s300",
+      "appfolio_actual": 407.46,
+      "ramp_total": 130.02,
+      "labor_total": 226.81,
+      "ramp_items": [
+        {
+          "date": "2026-06-22",
+          "merchant": "Amazon",
+          "amount": 47.99,
+          "memo": "door handle replacement"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "American Lock & Key",
+          "amount": 82.03,
+          "memo": "Locksmith services for property maintenance"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-13",
+          "name": "Wade Hippen",
+          "hours": 1.52,
+          "wage": 42.660000000000004,
+          "cost": 64.7
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Wade Hippen",
+          "hours": 0.8,
+          "wage": 42.660000000000004,
+          "cost": 34.13
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Wade Hippen",
+          "hours": 1,
+          "wage": 42.660000000000004,
+          "cost": 42.66
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Wade Hippen",
+          "hours": 2,
+          "wage": 42.660000000000004,
+          "cost": 85.32
+        }
+      ]
+    },
+    {
+      "property": "W226",
+      "code": "w226",
+      "appfolio_actual": 311.34,
+      "ramp_total": 25,
+      "labor_total": 101.75,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "PayRange",
+          "amount": 25,
+          "memo": "PayRange maintenance service"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-03",
+          "name": "Justin Gutierrez",
+          "hours": 0.95,
+          "wage": 37.5,
+          "cost": 35.63
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Wade Hippen",
+          "hours": 1.55,
+          "wage": 42.660000000000004,
+          "cost": 66.12
+        }
+      ]
+    },
+    {
+      "property": "A511",
+      "code": "a511",
+      "appfolio_actual": 195.28,
+      "ramp_total": 56.15,
+      "labor_total": 140.07,
+      "ramp_items": [
+        {
+          "date": "2026-06-17",
+          "merchant": "Ace Hardware",
+          "amount": 56.15,
+          "memo": "shower handle repair"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-15",
+          "name": "Wade Hippen",
+          "hours": 1.13,
+          "wage": 42.660000000000004,
+          "cost": 48.35
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Wade Hippen",
+          "hours": 1.4,
+          "wage": 42.660000000000004,
+          "cost": 59.72
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Wade Hippen",
+          "hours": 0.75,
+          "wage": 42.660000000000004,
+          "cost": 32
+        }
+      ]
+    },
+    {
+      "property": "E328",
+      "code": "e328",
+      "appfolio_actual": 169.92,
+      "ramp_total": 43.06,
+      "labor_total": 277.51,
+      "ramp_items": [
+        {
+          "date": "2026-06-09",
+          "merchant": "Miller's Hardware",
+          "amount": 43.06,
+          "memo": "R&M contractor supplies"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-09",
+          "name": "Justin Gutierrez",
+          "hours": 1.17,
+          "wage": 37.5,
+          "cost": 43.75
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Justin Gutierrez",
+          "hours": 2.15,
+          "wage": 37.5,
+          "cost": 80.63
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Justin Gutierrez",
+          "hours": 2.67,
+          "wage": 37.5,
+          "cost": 100
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Justin Gutierrez",
+          "hours": 1.42,
+          "wage": 37.5,
+          "cost": 53.13
+        }
+      ]
+    },
+    {
+      "property": "M608",
+      "code": "m608",
+      "appfolio_actual": 154.41,
+      "ramp_total": 0,
+      "labor_total": 123.7,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-10",
+          "name": "Wade Hippen",
+          "hours": 0.72,
+          "wage": 42.660000000000004,
+          "cost": 30.57
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Justin Gutierrez",
+          "hours": 2.48,
+          "wage": 37.5,
+          "cost": 93.13
+        }
+      ]
+    },
+    {
+      "property": "L925",
+      "code": "l925",
+      "appfolio_actual": null,
+      "ramp_total": 0,
+      "labor_total": 124.38,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-30",
+          "name": "Justin Gutierrez",
+          "hours": 3.32,
+          "wage": 37.5,
+          "cost": 124.38
+        }
+      ]
+    }
+  ],
+  "grounds": [
+    {
+      "property": "KN47",
+      "code": "kn47",
+      "appfolio_actual": 11396.84,
+      "ramp_total": 1190.62,
+      "labor_total": 9282.64,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "Northwest Power Equipment",
+          "amount": 451.47,
+          "memo": "Grounds equipment parts"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "ULINE",
+          "amount": 25.37,
+          "memo": "returns"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "The Home Depot",
+          "amount": 69.87,
+          "memo": "Nondiscretionary shop supplies"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Lowe's",
+          "amount": 130.71,
+          "memo": "General repair maintenance materials"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "The Home Depot",
+          "amount": 51.83,
+          "memo": "Nondiscretionary shop supplies"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Lowe's",
+          "amount": 22.91,
+          "memo": "Maintenance repair supplies"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "Ace Hardware",
+          "amount": 94.62,
+          "memo": "landscape tools"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "Waste Management",
+          "amount": 63.84,
+          "memo": "Waste management grounds materials"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "Richland Energy Services",
+          "amount": 30,
+          "memo": "Garbage disposal usage fee"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "Richland Energy Services",
+          "amount": 30,
+          "memo": "Garbage disposal usage fees"
+        },
+        {
+          "date": "2026-06-20",
+          "merchant": "Duo Cleaning Compa",
+          "amount": 220,
+          "memo": "kn47-k1 office cleaning grounds contractor"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Hannah Deckard",
+          "hours": 9.42,
+          "wage": 33,
+          "cost": 310.75
+        },
+        {
+          "date": "2026-06-01",
+          "name": "Jared Miller",
+          "hours": 7.42,
+          "wage": 42.135,
+          "cost": 312.5
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Jared Miller",
+          "hours": 2.87,
+          "wage": 42.135,
+          "cost": 120.79
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Reynaldo Leonides",
+          "hours": 8.03,
+          "wage": 37.5,
+          "cost": 301.25
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Hannah Deckard",
+          "hours": 7.23,
+          "wage": 33,
+          "cost": 238.7
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jared Miller",
+          "hours": 0.7,
+          "wage": 42.135,
+          "cost": 29.49
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Reynaldo Leonides",
+          "hours": 6.88,
+          "wage": 37.5,
+          "cost": 258.13
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Hannah Deckard",
+          "hours": 7.37,
+          "wage": 33,
+          "cost": 243.1
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Jared Miller",
+          "hours": 3.38,
+          "wage": 42.135,
+          "cost": 142.56
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Reynaldo Leonides",
+          "hours": 0.55,
+          "wage": 37.5,
+          "cost": 20.63
+        },
+        {
+          "date": "2026-06-06",
+          "name": "Jared Miller",
+          "hours": 2.52,
+          "wage": 42.135,
+          "cost": 106.04
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Hannah Deckard",
+          "hours": 5.52,
+          "wage": 33,
+          "cost": 182.05
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Reynaldo Leonides",
+          "hours": 8.67,
+          "wage": 37.5,
+          "cost": 325
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Reynaldo Leonides",
+          "hours": 9.28,
+          "wage": 37.5,
+          "cost": 348.13
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Reynaldo Leonides",
+          "hours": 5.8,
+          "wage": 37.5,
+          "cost": 217.5
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Hannah Deckard",
+          "hours": 7.48,
+          "wage": 33,
+          "cost": 246.95
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Reynaldo Leonides",
+          "hours": 1.5,
+          "wage": 37.5,
+          "cost": 56.25
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jared Miller",
+          "hours": 4.88,
+          "wage": 42.135,
+          "cost": 205.76
+        },
+        {
+          "date": "2026-06-13",
+          "name": "Jared Miller",
+          "hours": 1.57,
+          "wage": 42.135,
+          "cost": 66.01
+        },
+        {
+          "date": "2026-06-14",
+          "name": "Jared Miller",
+          "hours": 1.05,
+          "wage": 42.135,
+          "cost": 44.24
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Hannah Deckard",
+          "hours": 7.18,
+          "wage": 33,
+          "cost": 237.05
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jared Miller",
+          "hours": 1.05,
+          "wage": 42.135,
+          "cost": 44.24
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Reynaldo Leonides",
+          "hours": 9.53,
+          "wage": 37.5,
+          "cost": 357.5
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jared Miller",
+          "hours": 0.72,
+          "wage": 42.135,
+          "cost": 30.2
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Reynaldo Leonides",
+          "hours": 9.68,
+          "wage": 37.5,
+          "cost": 363.13
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Jared Miller",
+          "hours": 1.55,
+          "wage": 42.135,
+          "cost": 65.31
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Reynaldo Leonides",
+          "hours": 9.63,
+          "wage": 37.5,
+          "cost": 361.25
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Hannah Deckard",
+          "hours": 7.63,
+          "wage": 33,
+          "cost": 251.9
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jared Miller",
+          "hours": 0.75,
+          "wage": 42.135,
+          "cost": 31.6
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Hannah Deckard",
+          "hours": 2.5,
+          "wage": 33,
+          "cost": 82.5
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jared Miller",
+          "hours": 0.8,
+          "wage": 42.135,
+          "cost": 33.71
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Reynaldo Leonides",
+          "hours": 1.28,
+          "wage": 37.5,
+          "cost": 48.13
+        },
+        {
+          "date": "2026-06-20",
+          "name": "Jared Miller",
+          "hours": 0.8,
+          "wage": 42.135,
+          "cost": 33.71
+        },
+        {
+          "date": "2026-06-21",
+          "name": "Jared Miller",
+          "hours": 0.75,
+          "wage": 42.135,
+          "cost": 31.6
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Hannah Deckard",
+          "hours": 6.65,
+          "wage": 33,
+          "cost": 219.45
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jared Miller",
+          "hours": 0.8,
+          "wage": 42.135,
+          "cost": 33.71
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Reynaldo Leonides",
+          "hours": 9.63,
+          "wage": 37.5,
+          "cost": 361.25
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Hannah Deckard",
+          "hours": 3.5,
+          "wage": 33,
+          "cost": 115.5
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jared Miller",
+          "hours": 0.82,
+          "wage": 42.135,
+          "cost": 34.41
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Reynaldo Leonides",
+          "hours": 6.52,
+          "wage": 37.5,
+          "cost": 244.38
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Hannah Deckard",
+          "hours": 0.52,
+          "wage": 33,
+          "cost": 17.05
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jared Miller",
+          "hours": 0.8,
+          "wage": 42.135,
+          "cost": 33.71
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Reynaldo Leonides",
+          "hours": 6.85,
+          "wage": 37.5,
+          "cost": 256.88
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Hannah Deckard",
+          "hours": 6.17,
+          "wage": 33,
+          "cost": 203.5
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jared Miller",
+          "hours": 0.82,
+          "wage": 42.135,
+          "cost": 34.41
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Reynaldo Leonides",
+          "hours": 8.05,
+          "wage": 37.5,
+          "cost": 301.88
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Hannah Deckard",
+          "hours": 6.93,
+          "wage": 33,
+          "cost": 228.8
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Reynaldo Leonides",
+          "hours": 7.93,
+          "wage": 37.5,
+          "cost": 297.5
+        },
+        {
+          "date": "2026-06-27",
+          "name": "Jared Miller",
+          "hours": 0.93,
+          "wage": 42.135,
+          "cost": 39.33
+        },
+        {
+          "date": "2026-06-28",
+          "name": "Jared Miller",
+          "hours": 1.3,
+          "wage": 42.135,
+          "cost": 54.78
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Hannah Deckard",
+          "hours": 7.93,
+          "wage": 33,
+          "cost": 261.8
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jared Miller",
+          "hours": 0.87,
+          "wage": 42.135,
+          "cost": 36.52
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Reynaldo Leonides",
+          "hours": 9.58,
+          "wage": 37.5,
+          "cost": 359.38
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jared Miller",
+          "hours": 0.83,
+          "wage": 42.135,
+          "cost": 35.11
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Reynaldo Leonides",
+          "hours": 9.75,
+          "wage": 37.5,
+          "cost": 365.63
+        }
+      ]
+    },
+    {
+      "property": "RL16",
+      "code": "rl16",
+      "appfolio_actual": 5995.1,
+      "ramp_total": 880.65,
+      "labor_total": 4664.17,
+      "ramp_items": [
+        {
+          "date": "2026-06-01",
+          "merchant": "Mirage Pool N Spa",
+          "amount": 295.5,
+          "memo": "Pool maintenance supplies"
+        },
+        {
+          "date": "2026-06-01",
+          "merchant": "Pye-Barker Fire & Safety",
+          "amount": 387.81,
+          "memo": "rl16 monthly security"
+        },
+        {
+          "date": "2026-06-02",
+          "merchant": "Energy Source Pools",
+          "amount": 89.98,
+          "memo": "Pool chemicals and maintenance supplies"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Energy Source Pools",
+          "amount": 81.29,
+          "memo": "Pool maintenance repair supplies"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Safeway",
+          "amount": 26.07,
+          "memo": "Water for shop use"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Jared Miller",
+          "hours": 3.12,
+          "wage": 42.135,
+          "cost": 131.32
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Jared Miller",
+          "hours": 2.47,
+          "wage": 42.135,
+          "cost": 103.93
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Hannah Deckard",
+          "hours": 8.02,
+          "wage": 33,
+          "cost": 264.55
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Jared Miller",
+          "hours": 6.52,
+          "wage": 42.135,
+          "cost": 274.58
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jared Miller",
+          "hours": 3.52,
+          "wage": 42.135,
+          "cost": 148.17
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Reynaldo Leonides",
+          "hours": 1.17,
+          "wage": 37.5,
+          "cost": 43.75
+        },
+        {
+          "date": "2026-06-05",
+          "name": "James Dunlap",
+          "hours": 2.55,
+          "wage": 34.5,
+          "cost": 87.98
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Jared Miller",
+          "hours": 1.92,
+          "wage": 42.135,
+          "cost": 80.76
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Reynaldo Leonides",
+          "hours": 6.95,
+          "wage": 37.5,
+          "cost": 260.63
+        },
+        {
+          "date": "2026-06-06",
+          "name": "Jared Miller",
+          "hours": 0.73,
+          "wage": 42.135,
+          "cost": 30.9
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Hannah Deckard",
+          "hours": 1.57,
+          "wage": 33,
+          "cost": 51.7
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Hannah Deckard",
+          "hours": 7.17,
+          "wage": 33,
+          "cost": 236.5
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Reynaldo Leonides",
+          "hours": 3.95,
+          "wage": 37.5,
+          "cost": 148.13
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Reynaldo Leonides",
+          "hours": 8.25,
+          "wage": 37.5,
+          "cost": 309.38
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jared Miller",
+          "hours": 0.55,
+          "wage": 42.135,
+          "cost": 23.17
+        },
+        {
+          "date": "2026-06-13",
+          "name": "Jared Miller",
+          "hours": 1.37,
+          "wage": 42.135,
+          "cost": 57.58
+        },
+        {
+          "date": "2026-06-14",
+          "name": "Jared Miller",
+          "hours": 1.13,
+          "wage": 42.135,
+          "cost": 47.75
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jared Miller",
+          "hours": 1.23,
+          "wage": 42.135,
+          "cost": 51.97
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jared Miller",
+          "hours": 0.92,
+          "wage": 42.135,
+          "cost": 38.62
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Hannah Deckard",
+          "hours": 8.43,
+          "wage": 33,
+          "cost": 278.3
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Jared Miller",
+          "hours": 1.7,
+          "wage": 42.135,
+          "cost": 71.63
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jared Miller",
+          "hours": 1.1,
+          "wage": 42.135,
+          "cost": 46.35
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Reynaldo Leonides",
+          "hours": 9.08,
+          "wage": 37.5,
+          "cost": 340.63
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Hannah Deckard",
+          "hours": 6.22,
+          "wage": 33,
+          "cost": 205.15
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jared Miller",
+          "hours": 1.15,
+          "wage": 42.135,
+          "cost": 48.46
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Reynaldo Leonides",
+          "hours": 8.43,
+          "wage": 37.5,
+          "cost": 316.25
+        },
+        {
+          "date": "2026-06-20",
+          "name": "Jared Miller",
+          "hours": 0.95,
+          "wage": 42.135,
+          "cost": 40.03
+        },
+        {
+          "date": "2026-06-21",
+          "name": "Jared Miller",
+          "hours": 1.12,
+          "wage": 42.135,
+          "cost": 47.05
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jared Miller",
+          "hours": 2.27,
+          "wage": 42.135,
+          "cost": 95.51
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jared Miller",
+          "hours": 0.8,
+          "wage": 42.135,
+          "cost": 33.71
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Reynaldo Leonides",
+          "hours": 3.27,
+          "wage": 37.5,
+          "cost": 122.5
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Hannah Deckard",
+          "hours": 4.52,
+          "wage": 33,
+          "cost": 149.05
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jared Miller",
+          "hours": 0.62,
+          "wage": 42.135,
+          "cost": 25.98
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Reynaldo Leonides",
+          "hours": 2.73,
+          "wage": 37.5,
+          "cost": 102.5
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jared Miller",
+          "hours": 1.2,
+          "wage": 42.135,
+          "cost": 50.56
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Reynaldo Leonides",
+          "hours": 1.02,
+          "wage": 37.5,
+          "cost": 38.13
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Hannah Deckard",
+          "hours": 2.1,
+          "wage": 33,
+          "cost": 69.3
+        },
+        {
+          "date": "2026-06-27",
+          "name": "Jared Miller",
+          "hours": 1.5,
+          "wage": 42.135,
+          "cost": 63.2
+        },
+        {
+          "date": "2026-06-28",
+          "name": "Jared Miller",
+          "hours": 0.97,
+          "wage": 42.135,
+          "cost": 40.73
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jared Miller",
+          "hours": 1.13,
+          "wage": 42.135,
+          "cost": 47.75
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jared Miller",
+          "hours": 0.95,
+          "wage": 42.135,
+          "cost": 40.03
+        }
+      ]
+    },
+    {
+      "property": "K104",
+      "code": "k104",
+      "appfolio_actual": 4568.47,
+      "ramp_total": 1369.89,
+      "labor_total": 1482.53,
+      "ramp_items": [
+        {
+          "date": "2026-06-04",
+          "merchant": "True Value",
+          "amount": 45.24,
+          "memo": "Grounds maintenance material supplies"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Ace Hardware",
+          "amount": 131,
+          "memo": "Grounds maintenance hardware materials"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "True Value",
+          "amount": 12.54,
+          "memo": "Grounds maintenance material supplies"
+        },
+        {
+          "date": "2026-06-05",
+          "merchant": "Ace Hardware",
+          "amount": 103,
+          "memo": "Grounds maintenance hardware materials"
+        },
+        {
+          "date": "2026-06-12",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 20.7,
+          "memo": "Waste management utility services"
+        },
+        {
+          "date": "2026-06-22",
+          "merchant": "North 40 Outfitters",
+          "amount": 22.86,
+          "memo": "Grounds maintenance material supplies"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "North 40 Outfitters",
+          "amount": 790.23,
+          "memo": "Property maintenance or renovation supplies"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "Ace Hardware",
+          "amount": 164.41,
+          "memo": "Nondiscretionary maintenance hardware for property upkeep"
+        },
+        {
+          "date": "2026-06-26",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 27.61,
+          "memo": "Waste management services"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "The Home Depot",
+          "amount": 52.3,
+          "memo": "Grounds maintenance materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-04",
+          "name": "David Sanchez",
+          "hours": 7.82,
+          "wage": 38.25,
+          "cost": 298.99
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Alexander Overall",
+          "hours": 6,
+          "wage": 36,
+          "cost": 216
+        },
+        {
+          "date": "2026-06-05",
+          "name": "David Sanchez",
+          "hours": 6.6,
+          "wage": 38.25,
+          "cost": 252.45
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 1.17,
+          "wage": 36,
+          "cost": 42
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 1.38,
+          "wage": 38.25,
+          "cost": 52.91
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Alexander Overall",
+          "hours": 2.6,
+          "wage": 36,
+          "cost": 93.6
+        },
+        {
+          "date": "2026-06-22",
+          "name": "David Sanchez",
+          "hours": 3.48,
+          "wage": 38.25,
+          "cost": 133.24
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Alexander Overall",
+          "hours": 3.97,
+          "wage": 36,
+          "cost": 142.8
+        },
+        {
+          "date": "2026-06-26",
+          "name": "David Sanchez",
+          "hours": 6.55,
+          "wage": 38.25,
+          "cost": 250.54
+        }
+      ]
+    },
+    {
+      "property": "TC68",
+      "code": "tc68",
+      "appfolio_actual": 2587.37,
+      "ramp_total": 91.9,
+      "labor_total": 579.15,
+      "ramp_items": [
+        {
+          "date": "2026-06-01",
+          "merchant": "The Home Depot",
+          "amount": 91.9,
+          "memo": "tools"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "Jonas Hoard",
+          "hours": 1.45,
+          "wage": 40.5,
+          "cost": 58.72
+        },
+        {
+          "date": "2026-06-03",
+          "name": "Jonas Hoard",
+          "hours": 1.25,
+          "wage": 40.5,
+          "cost": 50.63
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Jonas Hoard",
+          "hours": 2.63,
+          "wage": 40.5,
+          "cost": 106.65
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jonas Hoard",
+          "hours": 1.53,
+          "wage": 40.5,
+          "cost": 62.1
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jonas Hoard",
+          "hours": 0.37,
+          "wage": 40.5,
+          "cost": 14.85
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jonas Hoard",
+          "hours": 0.6,
+          "wage": 40.5,
+          "cost": 24.3
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jonas Hoard",
+          "hours": 3.17,
+          "wage": 40.5,
+          "cost": 128.25
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jonas Hoard",
+          "hours": 3.3,
+          "wage": 40.5,
+          "cost": 133.65
+        }
+      ]
+    },
+    {
+      "property": "O155",
+      "code": "o155",
+      "appfolio_actual": 1863.03,
+      "ramp_total": 374.77,
+      "labor_total": 926.95,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "SiteOne",
+          "amount": 46.18,
+          "memo": "Grounds maintenance material supplies"
+        },
+        {
+          "date": "2026-06-10",
+          "merchant": "The Home Depot",
+          "amount": 80.08,
+          "memo": "Grounds maintenance materials"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 27.61,
+          "memo": "Grounds maintenance waste disposal"
+        },
+        {
+          "date": "2026-06-19",
+          "merchant": "The Home Depot",
+          "amount": 103.9,
+          "memo": "grounds maintenance material"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 59,
+          "memo": "Hardware for grounds upkeep"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Ace Hardware",
+          "amount": 58,
+          "memo": "Hardware for grounds upkeep"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 2.4,
+          "wage": 36,
+          "cost": 86.4
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 2.42,
+          "wage": 38.25,
+          "cost": 92.44
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Alexander Overall",
+          "hours": 4.63,
+          "wage": 36,
+          "cost": 166.8
+        },
+        {
+          "date": "2026-06-10",
+          "name": "David Sanchez",
+          "hours": 5.2,
+          "wage": 38.25,
+          "cost": 198.9
+        },
+        {
+          "date": "2026-06-18",
+          "name": "David Sanchez",
+          "hours": 4.17,
+          "wage": 38.25,
+          "cost": 159.38
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Wade Hippen",
+          "hours": 1.4,
+          "wage": 42.660000000000004,
+          "cost": 59.72
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 2.77,
+          "wage": 38.25,
+          "cost": 105.82
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Alexander Overall",
+          "hours": 0.8,
+          "wage": 36,
+          "cost": 28.8
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 0.75,
+          "wage": 38.25,
+          "cost": 28.69
+        }
+      ]
+    },
+    {
+      "property": "PS25",
+      "code": "ps25",
+      "appfolio_actual": 1464.98,
+      "ramp_total": 0,
+      "labor_total": 1193.47,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Hannah Deckard",
+          "hours": 3.07,
+          "wage": 33,
+          "cost": 101.2
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Reynaldo Leonides",
+          "hours": 1.95,
+          "wage": 37.5,
+          "cost": 73.13
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Hannah Deckard",
+          "hours": 3.13,
+          "wage": 33,
+          "cost": 103.4
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Jared Miller",
+          "hours": 0.35,
+          "wage": 42.135,
+          "cost": 14.75
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Reynaldo Leonides",
+          "hours": 0.67,
+          "wage": 37.5,
+          "cost": 25
+        },
+        {
+          "date": "2026-06-13",
+          "name": "Jared Miller",
+          "hours": 0.52,
+          "wage": 42.135,
+          "cost": 21.77
+        },
+        {
+          "date": "2026-06-14",
+          "name": "Jared Miller",
+          "hours": 0.58,
+          "wage": 42.135,
+          "cost": 24.58
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Jared Miller",
+          "hours": 0.53,
+          "wage": 42.135,
+          "cost": 22.47
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Hannah Deckard",
+          "hours": 2.93,
+          "wage": 33,
+          "cost": 96.8
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Jared Miller",
+          "hours": 0.75,
+          "wage": 42.135,
+          "cost": 31.6
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Jared Miller",
+          "hours": 0.65,
+          "wage": 42.135,
+          "cost": 27.39
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Jared Miller",
+          "hours": 0.85,
+          "wage": 42.135,
+          "cost": 35.81
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Jared Miller",
+          "hours": 0.5,
+          "wage": 42.135,
+          "cost": 21.07
+        },
+        {
+          "date": "2026-06-20",
+          "name": "Jared Miller",
+          "hours": 0.53,
+          "wage": 42.135,
+          "cost": 22.47
+        },
+        {
+          "date": "2026-06-21",
+          "name": "Jared Miller",
+          "hours": 0.48,
+          "wage": 42.135,
+          "cost": 20.37
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Jared Miller",
+          "hours": 1.02,
+          "wage": 42.135,
+          "cost": 42.84
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Hannah Deckard",
+          "hours": 1.58,
+          "wage": 33,
+          "cost": 52.25
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Jared Miller",
+          "hours": 0.5,
+          "wage": 42.135,
+          "cost": 21.07
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Reynaldo Leonides",
+          "hours": 0.58,
+          "wage": 37.5,
+          "cost": 21.88
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Hannah Deckard",
+          "hours": 3.03,
+          "wage": 33,
+          "cost": 100.1
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Jared Miller",
+          "hours": 0.43,
+          "wage": 42.135,
+          "cost": 18.26
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Jared Miller",
+          "hours": 0.47,
+          "wage": 42.135,
+          "cost": 19.66
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Reynaldo Leonides",
+          "hours": 1.62,
+          "wage": 37.5,
+          "cost": 60.63
+        },
+        {
+          "date": "2026-06-27",
+          "name": "Jared Miller",
+          "hours": 0.6,
+          "wage": 42.135,
+          "cost": 25.28
+        },
+        {
+          "date": "2026-06-28",
+          "name": "Jared Miller",
+          "hours": 1.02,
+          "wage": 42.135,
+          "cost": 42.84
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Jared Miller",
+          "hours": 0.35,
+          "wage": 42.135,
+          "cost": 14.75
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Hannah Deckard",
+          "hours": 3.07,
+          "wage": 33,
+          "cost": 101.2
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Jared Miller",
+          "hours": 0.73,
+          "wage": 42.135,
+          "cost": 30.9
+        }
+      ]
+    },
+    {
+      "property": "V202",
+      "code": "v202",
+      "appfolio_actual": 1234.47,
+      "ramp_total": 295.09,
+      "labor_total": 909.75,
+      "ramp_items": [
+        {
+          "date": "2026-06-08",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 21.31,
+          "memo": "Waste management utility services"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "Ace Hardware",
+          "amount": 10.89,
+          "memo": "Grounds maintenance materials"
+        },
+        {
+          "date": "2026-06-17",
+          "merchant": "SiteOne",
+          "amount": 203.47,
+          "memo": "Grounds maintenance material supplies"
+        },
+        {
+          "date": "2026-06-30",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 59.42,
+          "memo": "dump run"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "David Sanchez",
+          "hours": 2,
+          "wage": 38.25,
+          "cost": 76.5
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 1.7,
+          "wage": 36,
+          "cost": 61.2
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 1.72,
+          "wage": 38.25,
+          "cost": 65.66
+        },
+        {
+          "date": "2026-06-09",
+          "name": "David Sanchez",
+          "hours": 0.68,
+          "wage": 38.25,
+          "cost": 26.14
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Alexander Overall",
+          "hours": 2.48,
+          "wage": 36,
+          "cost": 89.4
+        },
+        {
+          "date": "2026-06-12",
+          "name": "David Sanchez",
+          "hours": 2.97,
+          "wage": 38.25,
+          "cost": 113.48
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 1.25,
+          "wage": 36,
+          "cost": 45
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 1.25,
+          "wage": 38.25,
+          "cost": 47.81
+        },
+        {
+          "date": "2026-06-17",
+          "name": "David Sanchez",
+          "hours": 3.78,
+          "wage": 38.25,
+          "cost": 144.71
+        },
+        {
+          "date": "2026-06-18",
+          "name": "David Sanchez",
+          "hours": 2.88,
+          "wage": 38.25,
+          "cost": 110.29
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Alexander Overall",
+          "hours": 1.63,
+          "wage": 36,
+          "cost": 58.8
+        },
+        {
+          "date": "2026-06-22",
+          "name": "David Sanchez",
+          "hours": 1.85,
+          "wage": 38.25,
+          "cost": 70.76
+        }
+      ]
+    },
+    {
+      "property": "C313",
+      "code": "c313",
+      "appfolio_actual": 1125.64,
+      "ramp_total": 95.91,
+      "labor_total": 832.24,
+      "ramp_items": [
+        {
+          "date": "2026-06-03",
+          "merchant": "The Home Depot",
+          "amount": 80.35,
+          "memo": "ground maintenance material"
+        },
+        {
+          "date": "2026-06-26",
+          "merchant": "The Home Depot",
+          "amount": 15.56,
+          "memo": "Grounds maintenance materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-03",
+          "name": "Alexander Overall",
+          "hours": 3.8,
+          "wage": 36,
+          "cost": 136.8
+        },
+        {
+          "date": "2026-06-03",
+          "name": "David Sanchez",
+          "hours": 3.73,
+          "wage": 38.25,
+          "cost": 142.8
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Alexander Overall",
+          "hours": 0.52,
+          "wage": 36,
+          "cost": 18.6
+        },
+        {
+          "date": "2026-06-10",
+          "name": "David Sanchez",
+          "hours": 0.48,
+          "wage": 38.25,
+          "cost": 18.49
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Alexander Overall",
+          "hours": 2.27,
+          "wage": 36,
+          "cost": 81.6
+        },
+        {
+          "date": "2026-06-11",
+          "name": "David Sanchez",
+          "hours": 2.93,
+          "wage": 38.25,
+          "cost": 112.2
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Alexander Overall",
+          "hours": 1.07,
+          "wage": 36,
+          "cost": 38.4
+        },
+        {
+          "date": "2026-06-19",
+          "name": "David Sanchez",
+          "hours": 1.07,
+          "wage": 38.25,
+          "cost": 40.8
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Alexander Overall",
+          "hours": 0.7,
+          "wage": 36,
+          "cost": 25.2
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 0.7,
+          "wage": 38.25,
+          "cost": 26.78
+        },
+        {
+          "date": "2026-06-25",
+          "name": "David Sanchez",
+          "hours": 1.45,
+          "wage": 38.25,
+          "cost": 55.46
+        },
+        {
+          "date": "2026-06-26",
+          "name": "Alexander Overall",
+          "hours": 2,
+          "wage": 36,
+          "cost": 72
+        },
+        {
+          "date": "2026-06-26",
+          "name": "David Sanchez",
+          "hours": 1.65,
+          "wage": 38.25,
+          "cost": 63.11
+        }
+      ]
+    },
+    {
+      "property": "P705",
+      "code": "p705",
+      "appfolio_actual": 1032.22,
+      "ramp_total": 40.7,
+      "labor_total": 967.36,
+      "ramp_items": [
+        {
+          "date": "2026-06-29",
+          "merchant": "Ace Hardware",
+          "amount": 40.7,
+          "memo": "Nondiscretionary maintenance hardware"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "David Sanchez",
+          "hours": 2.98,
+          "wage": 38.25,
+          "cost": 114.11
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Alexander Overall",
+          "hours": 0.77,
+          "wage": 36,
+          "cost": 27.6
+        },
+        {
+          "date": "2026-06-05",
+          "name": "David Sanchez",
+          "hours": 0.87,
+          "wage": 38.25,
+          "cost": 33.15
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Alexander Overall",
+          "hours": 1.73,
+          "wage": 36,
+          "cost": 62.4
+        },
+        {
+          "date": "2026-06-09",
+          "name": "David Sanchez",
+          "hours": 1.83,
+          "wage": 38.25,
+          "cost": 70.13
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 1.5,
+          "wage": 36,
+          "cost": 54
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 1.5,
+          "wage": 38.25,
+          "cost": 57.38
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Alexander Overall",
+          "hours": 2.48,
+          "wage": 36,
+          "cost": 89.4
+        },
+        {
+          "date": "2026-06-22",
+          "name": "David Sanchez",
+          "hours": 2.63,
+          "wage": 38.25,
+          "cost": 100.73
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Alexander Overall",
+          "hours": 1.92,
+          "wage": 36,
+          "cost": 69
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 2.13,
+          "wage": 38.25,
+          "cost": 81.6
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Alexander Overall",
+          "hours": 2.82,
+          "wage": 36,
+          "cost": 101.4
+        },
+        {
+          "date": "2026-06-29",
+          "name": "David Sanchez",
+          "hours": 2.78,
+          "wage": 38.25,
+          "cost": 106.46
+        }
+      ]
+    },
+    {
+      "property": "L912",
+      "code": "l912",
+      "appfolio_actual": 952.25,
+      "ramp_total": 230.19,
+      "labor_total": 437.63,
+      "ramp_items": [
+        {
+          "date": "2026-06-01",
+          "merchant": "Waste Management",
+          "amount": 64.73,
+          "memo": "Waste management utility services"
+        },
+        {
+          "date": "2026-06-01",
+          "merchant": "Waste Management",
+          "amount": 64.73,
+          "memo": "Waste management utility services"
+        },
+        {
+          "date": "2026-06-01",
+          "merchant": "Waste Management",
+          "amount": 64.73,
+          "memo": "Waste management utility services"
+        },
+        {
+          "date": "2026-06-16",
+          "merchant": "Ace Hardware",
+          "amount": 36,
+          "memo": "Grounds maintenance hardware materials"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 1.37,
+          "wage": 36,
+          "cost": 49.2
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 2.87,
+          "wage": 38.25,
+          "cost": 109.65
+        },
+        {
+          "date": "2026-06-09",
+          "name": "David Sanchez",
+          "hours": 1.7,
+          "wage": 38.25,
+          "cost": 65.02
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 2.27,
+          "wage": 38.25,
+          "cost": 86.7
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Alexander Overall",
+          "hours": 0.72,
+          "wage": 36,
+          "cost": 25.8
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 0.77,
+          "wage": 38.25,
+          "cost": 29.33
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 0.9,
+          "wage": 36,
+          "cost": 32.4
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 1.03,
+          "wage": 38.25,
+          "cost": 39.53
+        }
+      ]
+    },
+    {
+      "property": "PS17",
+      "code": "ps17",
+      "appfolio_actual": 866.75,
+      "ramp_total": 0,
+      "labor_total": 798.56,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Hannah Deckard",
+          "hours": 2.3,
+          "wage": 33,
+          "cost": 75.9
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Reynaldo Leonides",
+          "hours": 2.42,
+          "wage": 37.5,
+          "cost": 90.63
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Hannah Deckard",
+          "hours": 2.42,
+          "wage": 33,
+          "cost": 79.75
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Reynaldo Leonides",
+          "hours": 5.08,
+          "wage": 37.5,
+          "cost": 190.63
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Hannah Deckard",
+          "hours": 4.15,
+          "wage": 33,
+          "cost": 136.95
+        },
+        {
+          "date": "2026-06-17",
+          "name": "Hannah Deckard",
+          "hours": 0.17,
+          "wage": 33,
+          "cost": 5.5
+        },
+        {
+          "date": "2026-06-18",
+          "name": "Hannah Deckard",
+          "hours": 0.15,
+          "wage": 33,
+          "cost": 4.95
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Hannah Deckard",
+          "hours": 2.68,
+          "wage": 33,
+          "cost": 88.55
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Reynaldo Leonides",
+          "hours": 0.43,
+          "wage": 37.5,
+          "cost": 16.25
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Hannah Deckard",
+          "hours": 0.68,
+          "wage": 33,
+          "cost": 22.55
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Hannah Deckard",
+          "hours": 2.63,
+          "wage": 33,
+          "cost": 86.9
+        }
+      ]
+    },
+    {
+      "property": "M405",
+      "code": "m405",
+      "appfolio_actual": 760.33,
+      "ramp_total": 0,
+      "labor_total": 215.97,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 0.3,
+          "wage": 36,
+          "cost": 10.8
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 0.62,
+          "wage": 38.25,
+          "cost": 23.59
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Alexander Overall",
+          "hours": 0.75,
+          "wage": 36,
+          "cost": 27
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 0.78,
+          "wage": 38.25,
+          "cost": 29.96
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Alexander Overall",
+          "hours": 2.2,
+          "wage": 36,
+          "cost": 79.2
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 0.3,
+          "wage": 38.25,
+          "cost": 11.48
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 0.5,
+          "wage": 36,
+          "cost": 18
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 0.42,
+          "wage": 38.25,
+          "cost": 15.94
+        }
+      ]
+    },
+    {
+      "property": "E328",
+      "code": "e328",
+      "appfolio_actual": 706.95,
+      "ramp_total": 0,
+      "labor_total": 441.57,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-03",
+          "name": "David Sanchez",
+          "hours": 1.83,
+          "wage": 38.25,
+          "cost": 70.13
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Alexander Overall",
+          "hours": 1.95,
+          "wage": 36,
+          "cost": 70.2
+        },
+        {
+          "date": "2026-06-10",
+          "name": "David Sanchez",
+          "hours": 1.07,
+          "wage": 38.25,
+          "cost": 40.8
+        },
+        {
+          "date": "2026-06-17",
+          "name": "David Sanchez",
+          "hours": 2.32,
+          "wage": 38.25,
+          "cost": 88.61
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Alexander Overall",
+          "hours": 1.55,
+          "wage": 36,
+          "cost": 55.8
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 1.57,
+          "wage": 38.25,
+          "cost": 59.93
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 1.47,
+          "wage": 38.25,
+          "cost": 56.1
+        }
+      ]
+    },
+    {
+      "property": "W226",
+      "code": "w226",
+      "appfolio_actual": 679.4,
+      "ramp_total": 76.26,
+      "labor_total": 397.24,
+      "ramp_items": [
+        {
+          "date": "2026-06-17",
+          "merchant": "Ace Hardware",
+          "amount": 26,
+          "memo": "Groundskeeping maintenance supplies"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Ace Hardware",
+          "amount": 4,
+          "memo": "Nondiscretionary maintenance hardware for general grounds upkeep/ TLZ2BPCB"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 25.56,
+          "memo": "dump run"
+        },
+        {
+          "date": "2026-06-25",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 20.7,
+          "memo": "dump run"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 0.8,
+          "wage": 36,
+          "cost": 28.8
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 0.95,
+          "wage": 38.25,
+          "cost": 36.34
+        },
+        {
+          "date": "2026-06-10",
+          "name": "Alexander Overall",
+          "hours": 0.58,
+          "wage": 36,
+          "cost": 21
+        },
+        {
+          "date": "2026-06-10",
+          "name": "David Sanchez",
+          "hours": 1.3,
+          "wage": 38.25,
+          "cost": 49.73
+        },
+        {
+          "date": "2026-06-17",
+          "name": "David Sanchez",
+          "hours": 3.58,
+          "wage": 38.25,
+          "cost": 137.06
+        },
+        {
+          "date": "2026-06-18",
+          "name": "David Sanchez",
+          "hours": 1.98,
+          "wage": 38.25,
+          "cost": 75.86
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 1.27,
+          "wage": 38.25,
+          "cost": 48.45
+        }
+      ]
+    },
+    {
+      "property": "TC34",
+      "code": "tc34",
+      "appfolio_actual": 646.89,
+      "ramp_total": 301.36,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-12",
+          "merchant": "U-Haul",
+          "amount": 114.36,
+          "memo": "truck for trash out"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Solid Waste",
+          "amount": 187,
+          "memo": "unit trash out"
+        }
+      ],
+      "labor_items": []
+    },
+    {
+      "property": "M221",
+      "code": "m221",
+      "appfolio_actual": 611.42,
+      "ramp_total": 0,
+      "labor_total": 195.8,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 0.42,
+          "wage": 36,
+          "cost": 15
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 0.43,
+          "wage": 38.25,
+          "cost": 16.58
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Wade Hippen",
+          "hours": 1.15,
+          "wage": 42.660000000000004,
+          "cost": 49.06
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 0.18,
+          "wage": 36,
+          "cost": 6.6
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 0.25,
+          "wage": 38.25,
+          "cost": 9.56
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Alexander Overall",
+          "hours": 0.63,
+          "wage": 36,
+          "cost": 22.8
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 0.75,
+          "wage": 38.25,
+          "cost": 28.69
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Alexander Overall",
+          "hours": 0.27,
+          "wage": 36,
+          "cost": 9.6
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 0.27,
+          "wage": 38.25,
+          "cost": 10.2
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 0.43,
+          "wage": 36,
+          "cost": 15.6
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 0.32,
+          "wage": 38.25,
+          "cost": 12.11
+        }
+      ]
+    },
+    {
+      "property": "A511",
+      "code": "a511",
+      "appfolio_actual": 562.83,
+      "ramp_total": 136.35,
+      "labor_total": 303.52,
+      "ramp_items": [
+        {
+          "date": "2026-06-30",
+          "merchant": "Ace Hardware",
+          "amount": 136.35,
+          "memo": "Nondiscretionary maintenance hardware"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 0.33,
+          "wage": 36,
+          "cost": 12
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 0.38,
+          "wage": 38.25,
+          "cost": 14.66
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 0.27,
+          "wage": 36,
+          "cost": 9.6
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 0.2,
+          "wage": 38.25,
+          "cost": 7.65
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 0.65,
+          "wage": 36,
+          "cost": 23.4
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 1.22,
+          "wage": 38.25,
+          "cost": 46.54
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Alexander Overall",
+          "hours": 1.02,
+          "wage": 36,
+          "cost": 36.6
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 0.93,
+          "wage": 38.25,
+          "cost": 35.7
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Alexander Overall",
+          "hours": 0.67,
+          "wage": 36,
+          "cost": 24
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 0.45,
+          "wage": 38.25,
+          "cost": 17.21
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 1,
+          "wage": 36,
+          "cost": 36
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 1.05,
+          "wage": 38.25,
+          "cost": 40.16
+        }
+      ]
+    },
+    {
+      "property": "PS91",
+      "code": "ps91",
+      "appfolio_actual": 540.08,
+      "ramp_total": 0,
+      "labor_total": 443.26,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Hannah Deckard",
+          "hours": 2.82,
+          "wage": 33,
+          "cost": 92.95
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Hannah Deckard",
+          "hours": 1.92,
+          "wage": 33,
+          "cost": 63.25
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Reynaldo Leonides",
+          "hours": 2.85,
+          "wage": 37.5,
+          "cost": 106.88
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Hannah Deckard",
+          "hours": 1.82,
+          "wage": 33,
+          "cost": 59.95
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Hannah Deckard",
+          "hours": 0.83,
+          "wage": 33,
+          "cost": 27.5
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Reynaldo Leonides",
+          "hours": 1.05,
+          "wage": 37.5,
+          "cost": 39.38
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Hannah Deckard",
+          "hours": 1.62,
+          "wage": 33,
+          "cost": 53.35
+        }
+      ]
+    },
+    {
+      "property": "J312",
+      "code": "j312",
+      "appfolio_actual": 537.93,
+      "ramp_total": 0,
+      "labor_total": 525.5,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 1.12,
+          "wage": 36,
+          "cost": 40.2
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 1.13,
+          "wage": 38.25,
+          "cost": 43.35
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 1.68,
+          "wage": 36,
+          "cost": 60.6
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 1.63,
+          "wage": 38.25,
+          "cost": 62.48
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 1.35,
+          "wage": 36,
+          "cost": 48.6
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 1.3,
+          "wage": 38.25,
+          "cost": 49.73
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Alexander Overall",
+          "hours": 0.9,
+          "wage": 36,
+          "cost": 32.4
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 0.9,
+          "wage": 38.25,
+          "cost": 34.43
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Alexander Overall",
+          "hours": 0.87,
+          "wage": 36,
+          "cost": 31.2
+        },
+        {
+          "date": "2026-06-29",
+          "name": "David Sanchez",
+          "hours": 1.38,
+          "wage": 38.25,
+          "cost": 52.91
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 0.52,
+          "wage": 36,
+          "cost": 18.6
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 1.33,
+          "wage": 38.25,
+          "cost": 51
+        }
+      ]
+    },
+    {
+      "property": "K308",
+      "code": "k308",
+      "appfolio_actual": 533.07,
+      "ramp_total": 0,
+      "labor_total": 461.75,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-05",
+          "name": "Alexander Overall",
+          "hours": 1.1,
+          "wage": 36,
+          "cost": 39.6
+        },
+        {
+          "date": "2026-06-05",
+          "name": "David Sanchez",
+          "hours": 1.08,
+          "wage": 38.25,
+          "cost": 41.44
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Alexander Overall",
+          "hours": 1.13,
+          "wage": 36,
+          "cost": 40.8
+        },
+        {
+          "date": "2026-06-12",
+          "name": "David Sanchez",
+          "hours": 1.9,
+          "wage": 38.25,
+          "cost": 72.68
+        },
+        {
+          "date": "2026-06-25",
+          "name": "Alexander Overall",
+          "hours": 3.35,
+          "wage": 36,
+          "cost": 120.6
+        },
+        {
+          "date": "2026-06-25",
+          "name": "David Sanchez",
+          "hours": 3.83,
+          "wage": 38.25,
+          "cost": 146.63
+        }
+      ]
+    },
+    {
+      "property": "H731",
+      "code": "h731",
+      "appfolio_actual": 479.28,
+      "ramp_total": 0,
+      "labor_total": 402.45,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-09",
+          "name": "Alexander Overall",
+          "hours": 2.9,
+          "wage": 36,
+          "cost": 104.4
+        },
+        {
+          "date": "2026-06-09",
+          "name": "David Sanchez",
+          "hours": 2.73,
+          "wage": 38.25,
+          "cost": 104.55
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Alexander Overall",
+          "hours": 0.77,
+          "wage": 36,
+          "cost": 27.6
+        },
+        {
+          "date": "2026-06-19",
+          "name": "David Sanchez",
+          "hours": 0.75,
+          "wage": 38.25,
+          "cost": 28.69
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Alexander Overall",
+          "hours": 1.07,
+          "wage": 36,
+          "cost": 38.4
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 2.58,
+          "wage": 38.25,
+          "cost": 98.81
+        }
+      ]
+    },
+    {
+      "property": "A916",
+      "code": "a916",
+      "appfolio_actual": 476.63,
+      "ramp_total": 11.39,
+      "labor_total": 304.02,
+      "ramp_items": [
+        {
+          "date": "2026-06-02",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 11.39,
+          "memo": "Waste management utility services"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "David Sanchez",
+          "hours": 1.5,
+          "wage": 38.25,
+          "cost": 57.38
+        },
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 1.15,
+          "wage": 36,
+          "cost": 41.4
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 1.35,
+          "wage": 38.25,
+          "cost": 51.64
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 0.25,
+          "wage": 36,
+          "cost": 9
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 0.25,
+          "wage": 38.25,
+          "cost": 9.56
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 0.73,
+          "wage": 38.25,
+          "cost": 28.05
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 0.92,
+          "wage": 38.25,
+          "cost": 35.06
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 0.9,
+          "wage": 36,
+          "cost": 32.4
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 1.03,
+          "wage": 38.25,
+          "cost": 39.53
+        }
+      ]
+    },
+    {
+      "property": "A210",
+      "code": "a210",
+      "appfolio_actual": 449.6,
+      "ramp_total": 10.87,
+      "labor_total": 345.76,
+      "ramp_items": [
+        {
+          "date": "2026-06-11",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 10.87,
+          "memo": "Waste management services"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 0.18,
+          "wage": 36,
+          "cost": 6.6
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 0.17,
+          "wage": 38.25,
+          "cost": 6.38
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Alexander Overall",
+          "hours": 1.4,
+          "wage": 36,
+          "cost": 50.4
+        },
+        {
+          "date": "2026-06-09",
+          "name": "David Sanchez",
+          "hours": 1.43,
+          "wage": 38.25,
+          "cost": 54.83
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Alexander Overall",
+          "hours": 1.23,
+          "wage": 36,
+          "cost": 44.4
+        },
+        {
+          "date": "2026-06-11",
+          "name": "David Sanchez",
+          "hours": 1.2,
+          "wage": 38.25,
+          "cost": 45.9
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 0.38,
+          "wage": 36,
+          "cost": 13.8
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 0.37,
+          "wage": 38.25,
+          "cost": 14.02
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Alexander Overall",
+          "hours": 0.92,
+          "wage": 36,
+          "cost": 33
+        },
+        {
+          "date": "2026-06-22",
+          "name": "David Sanchez",
+          "hours": 0.82,
+          "wage": 38.25,
+          "cost": 31.24
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Alexander Overall",
+          "hours": 0.6,
+          "wage": 36,
+          "cost": 21.6
+        },
+        {
+          "date": "2026-06-29",
+          "name": "David Sanchez",
+          "hours": 0.62,
+          "wage": 38.25,
+          "cost": 23.59
+        }
+      ]
+    },
+    {
+      "property": "C302",
+      "code": "c302",
+      "appfolio_actual": 414.87,
+      "ramp_total": 0,
+      "labor_total": 404.96,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-03",
+          "name": "Alexander Overall",
+          "hours": 1.97,
+          "wage": 36,
+          "cost": 70.8
+        },
+        {
+          "date": "2026-06-03",
+          "name": "David Sanchez",
+          "hours": 2.18,
+          "wage": 38.25,
+          "cost": 83.51
+        },
+        {
+          "date": "2026-06-10",
+          "name": "David Sanchez",
+          "hours": 0.85,
+          "wage": 38.25,
+          "cost": 32.51
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Alexander Overall",
+          "hours": 2.32,
+          "wage": 36,
+          "cost": 83.4
+        },
+        {
+          "date": "2026-06-19",
+          "name": "David Sanchez",
+          "hours": 2.6,
+          "wage": 38.25,
+          "cost": 99.45
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Alexander Overall",
+          "hours": 0.47,
+          "wage": 36,
+          "cost": 16.8
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 0.48,
+          "wage": 38.25,
+          "cost": 18.49
+        }
+      ]
+    },
+    {
+      "property": "S129",
+      "code": "s129",
+      "appfolio_actual": 386,
+      "ramp_total": 49.07,
+      "labor_total": 329,
+      "ramp_items": [
+        {
+          "date": "2026-06-04",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 28.37,
+          "memo": "Waste management utility services"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 20.7,
+          "memo": "Grounds maintenance waste removal"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-04",
+          "name": "Alexander Overall",
+          "hours": 1.77,
+          "wage": 36,
+          "cost": 63.6
+        },
+        {
+          "date": "2026-06-04",
+          "name": "David Sanchez",
+          "hours": 1.9,
+          "wage": 38.25,
+          "cost": 72.68
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 0.23,
+          "wage": 36,
+          "cost": 8.4
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 0.23,
+          "wage": 38.25,
+          "cost": 8.93
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 0.9,
+          "wage": 36,
+          "cost": 32.4
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 0.88,
+          "wage": 38.25,
+          "cost": 33.79
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Alexander Overall",
+          "hours": 0.87,
+          "wage": 36,
+          "cost": 31.2
+        },
+        {
+          "date": "2026-06-22",
+          "name": "David Sanchez",
+          "hours": 0.65,
+          "wage": 38.25,
+          "cost": 24.86
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Alexander Overall",
+          "hours": 0.47,
+          "wage": 36,
+          "cost": 16.8
+        },
+        {
+          "date": "2026-06-29",
+          "name": "David Sanchez",
+          "hours": 0.95,
+          "wage": 38.25,
+          "cost": 36.34
+        }
+      ]
+    },
+    {
+      "property": "S300",
+      "code": "s300",
+      "appfolio_actual": 339.44,
+      "ramp_total": 11.39,
+      "labor_total": 260.48,
+      "ramp_items": [
+        {
+          "date": "2026-06-08",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 11.39,
+          "memo": "Site cleanup waste removal"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-01",
+          "name": "David Sanchez",
+          "hours": 0.38,
+          "wage": 38.25,
+          "cost": 14.66
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 1.12,
+          "wage": 36,
+          "cost": 40.2
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 1.95,
+          "wage": 38.25,
+          "cost": 74.59
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 0.7,
+          "wage": 36,
+          "cost": 25.2
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 0.75,
+          "wage": 38.25,
+          "cost": 28.69
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Alexander Overall",
+          "hours": 0.53,
+          "wage": 36,
+          "cost": 19.2
+        },
+        {
+          "date": "2026-06-22",
+          "name": "David Sanchez",
+          "hours": 0.68,
+          "wage": 38.25,
+          "cost": 26.14
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Alexander Overall",
+          "hours": 0.88,
+          "wage": 36,
+          "cost": 31.8
+        }
+      ]
+    },
+    {
+      "property": "W117",
+      "code": "w117",
+      "appfolio_actual": 337.34,
+      "ramp_total": 0,
+      "labor_total": 141.15,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-10",
+          "name": "Alexander Overall",
+          "hours": 0.68,
+          "wage": 36,
+          "cost": 24.6
+        },
+        {
+          "date": "2026-06-10",
+          "name": "David Sanchez",
+          "hours": 0.72,
+          "wage": 38.25,
+          "cost": 27.41
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 1.27,
+          "wage": 38.25,
+          "cost": 48.45
+        },
+        {
+          "date": "2026-06-24",
+          "name": "Alexander Overall",
+          "hours": 0.9,
+          "wage": 36,
+          "cost": 32.4
+        },
+        {
+          "date": "2026-06-24",
+          "name": "David Sanchez",
+          "hours": 0.22,
+          "wage": 38.25,
+          "cost": 8.29
+        }
+      ]
+    },
+    {
+      "property": "B101",
+      "code": "b101",
+      "appfolio_actual": 308.22,
+      "ramp_total": 0,
+      "labor_total": 75.53,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-16",
+          "name": "Alexander Overall",
+          "hours": 0.55,
+          "wage": 36,
+          "cost": 19.8
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 0.6,
+          "wage": 38.25,
+          "cost": 22.95
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Alexander Overall",
+          "hours": 0.2,
+          "wage": 36,
+          "cost": 7.2
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 0.2,
+          "wage": 38.25,
+          "cost": 7.65
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 0.25,
+          "wage": 36,
+          "cost": 9
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 0.23,
+          "wage": 38.25,
+          "cost": 8.93
+        }
+      ]
+    },
+    {
+      "property": "HL65",
+      "code": "hl65",
+      "appfolio_actual": 304.2,
+      "ramp_total": 304.2,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-03",
+          "merchant": "Montana Maid Perfect Cleaning Services",
+          "amount": 304.2,
+          "memo": "Turn: Turn - Contractor expenses"
+        }
+      ],
+      "labor_items": []
+    },
+    {
+      "property": "M608",
+      "code": "m608",
+      "appfolio_actual": 300.75,
+      "ramp_total": 0,
+      "labor_total": 143.52,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Alexander Overall",
+          "hours": 0.38,
+          "wage": 36,
+          "cost": 13.8
+        },
+        {
+          "date": "2026-06-02",
+          "name": "David Sanchez",
+          "hours": 0.35,
+          "wage": 38.25,
+          "cost": 13.39
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 0.33,
+          "wage": 36,
+          "cost": 12
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 0.32,
+          "wage": 38.25,
+          "cost": 12.11
+        },
+        {
+          "date": "2026-06-16",
+          "name": "Alexander Overall",
+          "hours": 0.52,
+          "wage": 36,
+          "cost": 18.6
+        },
+        {
+          "date": "2026-06-16",
+          "name": "David Sanchez",
+          "hours": 0.5,
+          "wage": 38.25,
+          "cost": 19.13
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Alexander Overall",
+          "hours": 0.43,
+          "wage": 36,
+          "cost": 15.6
+        },
+        {
+          "date": "2026-06-23",
+          "name": "David Sanchez",
+          "hours": 0.43,
+          "wage": 38.25,
+          "cost": 16.58
+        },
+        {
+          "date": "2026-06-30",
+          "name": "Alexander Overall",
+          "hours": 0.28,
+          "wage": 36,
+          "cost": 10.2
+        },
+        {
+          "date": "2026-06-30",
+          "name": "David Sanchez",
+          "hours": 0.32,
+          "wage": 38.25,
+          "cost": 12.11
+        }
+      ]
+    },
+    {
+      "property": "HL73",
+      "code": "hl73",
+      "appfolio_actual": 269.31,
+      "ramp_total": 238,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-03",
+          "merchant": "Montana Maid Perfect Cleaning Services",
+          "amount": 238,
+          "memo": "Turn: Turn - Contractor expenses"
+        }
+      ],
+      "labor_items": []
+    },
+    {
+      "property": "W225",
+      "code": "w225",
+      "appfolio_actual": 35.99,
+      "ramp_total": 35.99,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-06-16",
+          "merchant": "Simplisafe",
+          "amount": 35.99,
+          "memo": ""
+        }
+      ],
+      "labor_items": []
+    }
+  ]
+}

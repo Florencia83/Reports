@@ -126,7 +126,7 @@ footer a { color: var(--ink-soft); }
   </div>
   <div class="masthead">
     <h1>Financial Detail</h1>
-    <p class="masthead-range">Ramp + QBT itemized backup vs. the AppFolio bill, per property.</p>
+    <p class="masthead-range">Ramp + QBT vs. the AppFolio bill, per property. Every transaction and labor entry is in <a href="report-itemized-detail.html">Itemized Detail</a>, updated daily.</p>
   </div>
 
   <section>
@@ -190,11 +190,6 @@ footer a { color: var(--ink-soft); }
   </section>
 
   <section>
-    <p class="section-label">R&amp;M Repairs &mdash; Itemized detail per property</p>
-    <div id="detail-root"></div>
-  </section>
-
-  <section>
     <p class="section-label">Grounds &mdash; Summary</p>
     <div class="table-wrap">
       <table>
@@ -244,11 +239,6 @@ footer a { color: var(--ink-soft); }
     </div>
   </section>
 
-  <section>
-    <p class="section-label">Grounds &mdash; Itemized detail per property</p>
-    <div id="grounds-detail-root"></div>
-  </section>
-
   <footer>
     <span><a href="index.html">&larr; Back to Reports</a></span>
     <span>Built from Ramp + QBT (TSheets) + AppFolio, June 2026</span>
@@ -272,47 +262,10 @@ function renderSummary(data, elId) {
   document.getElementById(elId).innerHTML = body;
 }
 
-function renderRampTable(items) {
-  if (!items.length) return '<p class="no-data">No Ramp card transactions found.</p>';
-  var head = '<tr><th>Date</th><th>Merchant</th><th class="num">Amount</th><th class="detail">Memo</th></tr>';
-  var body = items.map(function(t) {
-    return '<tr><td>' + t.date + '</td><td>' + t.merchant + '</td><td class="num">' + money(t.amount) + '</td><td class="detail">' + (t.memo || '&mdash;') + '</td></tr>';
-  }).join('');
-  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
-}
-
-function renderLaborTable(items) {
-  if (!items.length) return '<p class="no-data">No QBT hours logged.</p>';
-  var head = '<tr><th>Name</th><th class="num">Hours</th><th class="num">Wage</th><th class="num">Cost</th></tr>';
-  var body = items.map(function(p) {
-    return '<tr><td>' + p.name + '</td><td class="num">' + p.hours + 'h</td><td class="num">' + (p.wage != null ? money(p.wage) + '/h' : '<i>no wage on file</i>') + '</td><td class="num">' + (p.cost != null ? money(p.cost) : '&mdash;') + '</td></tr>';
-  }).join('');
-  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
-}
-
-function renderDetail(data, elId) {
-  var html = data.map(function(d) {
-    return '<details class="prop-detail">' +
-      '<summary><div class="summary-left"><span class="pname">' + d.property + '</span></div>' +
-      '<div class="summary-nums">' +
-        '<span>Ramp <b>' + money(d.ramp_total) + '</b></span>' +
-        '<span>Labor <b>' + money(d.labor_total) + '</b></span>' +
-        '<span>AppFolio <b>' + money(d.appfolio_total) + '</b></span>' +
-      '</div></summary>' +
-      '<div class="detail-body">' +
-        '<p class="sub-label">Ramp &mdash; ' + d.ramp_items.length + ' transactions</p>' + renderRampTable(d.ramp_items) +
-        '<p class="sub-label">QBT Labor &mdash; ' + d.labor_items.length + ' people</p>' + renderLaborTable(d.labor_items) +
-      '</div></details>';
-  }).join('');
-  document.getElementById(elId).innerHTML = html;
-}
-
 var GROUNDS_DATA = [{"property":"E328","code":"e328","appfolio_total":706.95,"ramp_total":0,"labor_total":558.55,"pct_justified":79,"ramp_items":[],"labor_items":[{"name":"David Sanchez","hours":8.2,"wage":25.5,"cost":313.65},{"name":"Alexander Overall","hours":4.9,"wage":24,"cost":176.4},{"name":"Maria Florencia Sola","hours":1.6,"wage":10,"cost":16},{"name":"Outright Clean LLC","hours":0.7,"wage":50,"cost":52.5}],"creator":"Hanzhao"},{"property":"K308","code":"k308","appfolio_total":533.07,"ramp_total":0,"labor_total":501.7,"pct_justified":94.1,"ramp_items":[],"labor_items":[{"name":"David Sanchez","hours":6.8,"wage":25.5,"cost":260.1},{"name":"Alexander Overall","hours":5.6,"wage":24,"cost":201.6},{"name":"Maria Florencia Sola","hours":4,"wage":10,"cost":40}],"creator":"Hanzhao"},{"property":"V202","code":"v202","appfolio_total":1234.47,"ramp_total":295.09,"labor_total":996.18,"pct_justified":104.6,"ramp_items":[{"date":"2026-06-17","merchant":"SiteOne","amount":203.47,"memo":"Grounds maintenance material supplies"},{"date":"2026-06-30","merchant":"Spokane Waste To Energy","amount":59.42,"memo":"dump run"},{"date":"2026-06-08","merchant":"Spokane Waste To Energy","amount":21.31,"memo":"Waste management utility services"},{"date":"2026-06-17","merchant":"Ace Hardware","amount":10.89,"memo":"Grounds maintenance materials"}],"labor_items":[{"name":"David Sanchez","hours":19.1,"wage":25.5,"cost":730.58},{"name":"Alexander Overall","hours":7.1,"wage":24,"cost":255.6},{"name":"Maria Florencia Sola","hours":1,"wage":10,"cost":10}],"creator":"Hanzhao"},{"property":"K104-Lefevre","code":"k104","appfolio_total":4568.47,"ramp_total":1369.89,"labor_total":2685.68,"pct_justified":88.8,"ramp_items":[{"date":"2026-06-25","merchant":"North 40 Outfitters","amount":790.23,"memo":"Property maintenance or renovation supplies"},{"date":"2026-06-25","merchant":"Ace Hardware","amount":164.41,"memo":"Nondiscretionary maintenance hardware for property upkeep"},{"date":"2026-06-04","merchant":"Ace Hardware","amount":131,"memo":"Grounds maintenance hardware materials"},{"date":"2026-06-05","merchant":"Ace Hardware","amount":103,"memo":"Grounds maintenance hardware materials"},{"date":"2026-06-30","merchant":"The Home Depot","amount":52.3,"memo":"Grounds maintenance materials"},{"date":"2026-06-04","merchant":"True Value","amount":45.24,"memo":"Grounds maintenance material supplies"},{"date":"2026-06-26","merchant":"Spokane Waste To Energy","amount":27.61,"memo":"Waste management services"},{"date":"2026-06-22","merchant":"North 40 Outfitters","amount":22.86,"memo":"Grounds maintenance material supplies"},{"date":"2026-06-12","merchant":"Spokane Waste To Energy","amount":20.7,"memo":"Waste management utility services"},{"date":"2026-06-05","merchant":"True Value","amount":12.54,"memo":"Grounds maintenance material supplies"}],"labor_items":[{"name":"David Sanchez","hours":38.7,"wage":25.5,"cost":1480.28},{"name":"Alexander Overall","hours":31.4,"wage":24,"cost":1130.4},{"name":"Maria Florencia Sola","hours":7.5,"wage":10,"cost":75}],"creator":"Hanzhao"},{"property":"MS22","code":"ms22","appfolio_total":600,"ramp_total":0,"labor_total":0,"pct_justified":0,"ramp_items":[],"labor_items":[],"creator":"Hanzhao"},{"property":"RL16","code":"rl16","appfolio_total":5995.1,"ramp_total":880.65,"labor_total":5126.02,"pct_justified":100.2,"ramp_items":[{"date":"2026-06-01","merchant":"Pye-Barker Fire & Safety","amount":387.81,"memo":"rl16 monthly security"},{"date":"2026-06-01","merchant":"Mirage Pool N Spa","amount":295.5,"memo":"Pool maintenance supplies"},{"date":"2026-06-02","merchant":"Energy Source Pools","amount":89.98,"memo":"Pool chemicals and maintenance supplies"},{"date":"2026-06-04","merchant":"Energy Source Pools","amount":81.29,"memo":"Pool maintenance repair supplies"},{"date":"2026-06-18","merchant":"Safeway","amount":26.07,"memo":"Water for shop use"}],"labor_items":[{"name":"Jared Miller","hours":45.7,"wage":28.09,"cost":1925.57},{"name":"Reynaldo Leonides","hours":44.9,"wage":25,"cost":1683.75},{"name":"Hannah Deckard","hours":40.6,"wage":22,"cost":1339.8},{"name":"James Dunlap","hours":2.6,"wage":23,"cost":89.7},{"name":"Margarito Saldana","hours":2,"wage":28.4,"cost":85.2},{"name":"Maria Florencia Sola","hours":0.2,"wage":10,"cost":2}],"creator":"Hanzhao"},{"property":"W226","code":"w226","appfolio_total":679.36,"ramp_total":76.26,"labor_total":401.48,"pct_justified":70.3,"ramp_items":[{"date":"2026-06-17","merchant":"Ace Hardware","amount":26,"memo":"Groundskeeping maintenance supplies"},{"date":"2026-06-25","merchant":"Spokane Waste To Energy","amount":25.56,"memo":"dump run"},{"date":"2026-06-25","merchant":"Spokane Waste To Energy","amount":20.7,"memo":"dump run"},{"date":"2026-06-18","merchant":"Ace Hardware","amount":4,"memo":"Nondiscretionary maintenance hardware for general grounds upkeep/ TLZ2BPCB"}],"labor_items":[{"name":"David Sanchez","hours":9.1,"wage":25.5,"cost":348.08},{"name":"Alexander Overall","hours":1.4,"wage":24,"cost":50.4},{"name":"Maria Florencia Sola","hours":0.3,"wage":10,"cost":3}],"creator":"Hanzhao"},{"property":"O155-Oak","code":"o155-oak","appfolio_total":1863.1,"ramp_total":374.77,"labor_total":925.75,"pct_justified":69.8,"ramp_items":[{"date":"2026-06-19","merchant":"The Home Depot","amount":103.9,"memo":"grounds maintenance material"},{"date":"2026-06-10","merchant":"The Home Depot","amount":80.08,"memo":"Grounds maintenance materials"},{"date":"2026-06-23","merchant":"Ace Hardware","amount":59,"memo":"Hardware for grounds upkeep"},{"date":"2026-06-23","merchant":"Ace Hardware","amount":58,"memo":"Hardware for grounds upkeep"},{"date":"2026-06-02","merchant":"SiteOne","amount":46.18,"memo":"Grounds maintenance material supplies"},{"date":"2026-06-18","merchant":"Spokane Waste To Energy","amount":27.61,"memo":"Grounds maintenance waste disposal"}],"labor_items":[{"name":"David Sanchez","hours":15.3,"wage":25.5,"cost":585.23},{"name":"Alexander Overall","hours":7.8,"wage":24,"cost":280.8},{"name":"Wade Hippen","hours":1.4,"wage":28.44,"cost":59.72}],"creator":"Hanzhao"},{"property":"H731","code":"h731","appfolio_total":479.28,"ramp_total":0,"labor_total":470.93,"pct_justified":98.3,"ramp_items":[],"labor_items":[{"name":"Alexander Overall","hours":6.6,"wage":24,"cost":237.6},{"name":"David Sanchez","hours":6.1,"wage":25.5,"cost":233.33}],"creator":"Hanzhao"},{"property":"A511","code":"a511","appfolio_total":562.8,"ramp_total":136.35,"labor_total":301.05,"pct_justified":77.7,"ramp_items":[{"date":"2026-06-30","merchant":"Ace Hardware","amount":136.35,"memo":"Nondiscretionary maintenance hardware"}],"labor_items":[{"name":"David Sanchez","hours":4.2,"wage":25.5,"cost":160.65},{"name":"Alexander Overall","hours":3.9,"wage":24,"cost":140.4}],"creator":"Hanzhao"},{"property":"P705","code":"p705","appfolio_total":1032.2,"ramp_total":40.7,"labor_total":1110.23,"pct_justified":111.5,"ramp_items":[{"date":"2026-06-29","merchant":"Ace Hardware","amount":40.7,"memo":"Nondiscretionary maintenance hardware"}],"labor_items":[{"name":"David Sanchez","hours":17.7,"wage":25.5,"cost":677.03},{"name":"Alexander Overall","hours":11.2,"wage":24,"cost":403.2},{"name":"Outright Clean LLC","hours":0.4,"wage":50,"cost":30}],"creator":"Hanzhao"},{"property":"PS17","code":"ps17","appfolio_total":866.7,"ramp_total":0,"labor_total":804.45,"pct_justified":92.8,"ramp_items":[],"labor_items":[{"name":"Hannah Deckard","hours":15.4,"wage":22,"cost":508.2},{"name":"Reynaldo Leonides","hours":7.9,"wage":25,"cost":296.25}],"creator":"Hanzhao"},{"property":"KN47","code":"kn47","appfolio_total":11396.84,"ramp_total":1190.62,"labor_total":9832.25,"pct_justified":96.7,"ramp_items":[{"date":"2026-06-02","merchant":"Northwest Power Equipment","amount":451.47,"memo":"Grounds equipment parts"},{"date":"2026-06-20","merchant":"Duo Cleaning Compa","amount":220,"memo":"kn47-k1 office cleaning grounds contractor"},{"date":"2026-06-15","merchant":"Lowe's","amount":130.71,"memo":"General repair maintenance materials"},{"date":"2026-06-17","merchant":"Ace Hardware","amount":94.62,"memo":"landscape tools"},{"date":"2026-06-10","merchant":"The Home Depot","amount":69.87,"memo":"Nondiscretionary shop supplies"},{"date":"2026-06-17","merchant":"Waste Management","amount":63.84,"memo":"Waste management grounds materials"},{"date":"2026-06-16","merchant":"The Home Depot","amount":51.83,"memo":"Nondiscretionary shop supplies"},{"date":"2026-06-19","merchant":"Richland Energy Services","amount":30,"memo":"Garbage disposal usage fee"},{"date":"2026-06-19","merchant":"Richland Energy Services","amount":30,"memo":"Garbage disposal usage fees"},{"date":"2026-06-04","merchant":"ULINE","amount":25.37,"memo":"returns"},{"date":"2026-06-16","merchant":"Lowe's","amount":22.91,"memo":"Maintenance repair supplies"}],"labor_items":[{"name":"Reynaldo Leonides","hours":131.2,"wage":25,"cost":4920},{"name":"Hannah Deckard","hours":96.4,"wage":22,"cost":3181.2},{"name":"Jared Miller","hours":36.1,"wage":28.09,"cost":1521.07},{"name":"Maria Florencia Sola","hours":11.2,"wage":10,"cost":112},{"name":"Margarito Saldana","hours":2.3,"wage":28.4,"cost":97.98}],"creator":"Hanzhao"},{"property":"A210","code":"a210","appfolio_total":449.6,"ramp_total":10.87,"labor_total":352.65,"pct_justified":80.9,"ramp_items":[{"date":"2026-06-11","merchant":"Spokane Waste To Energy","amount":10.87,"memo":"Waste management services"}],"labor_items":[{"name":"Alexander Overall","hours":4.7,"wage":24,"cost":169.2},{"name":"David Sanchez","hours":4.6,"wage":25.5,"cost":175.95},{"name":"Outright Clean LLC","hours":0.1,"wage":50,"cost":7.5}],"creator":"Hanzhao"},{"property":"HL73","code":"hl73","appfolio_total":269.34,"ramp_total":238,"labor_total":30,"pct_justified":99.5,"ramp_items":[{"date":"2026-06-03","merchant":"Montana Maid Perfect Cleaning Services","amount":238,"memo":"Turn: Turn - Contractor expenses"}],"labor_items":[{"name":"Outright Clean LLC","hours":0.4,"wage":50,"cost":30}],"creator":"Hanzhao"},{"property":"M221","code":"m221","appfolio_total":611.38,"ramp_total":0,"labor_total":196.09,"pct_justified":32.1,"ramp_items":[],"labor_items":[{"name":"David Sanchez","hours":2,"wage":25.5,"cost":76.5},{"name":"Alexander Overall","hours":1.9,"wage":24,"cost":68.4},{"name":"Wade Hippen","hours":1.2,"wage":28.44,"cost":51.19}],"creator":"Hanzhao"}];
 var GROUNDS_PROPERTY_ORDER = ['e328', 'k308', 'v202', 'k104', 'ms22', 'rl16', 'w226', 'o155-oak', 'h731', 'a511', 'p705', 'ps17', 'kn47', 'a210', 'hl73', 'm221'];
 GROUNDS_DATA.sort(function(a, b) { return GROUNDS_PROPERTY_ORDER.indexOf(a.code) - GROUNDS_PROPERTY_ORDER.indexOf(b.code); });
 
 renderSummary(DATA, 'summary-body');
-renderDetail(DATA, 'detail-root');
 renderSummary(GROUNDS_DATA, 'grounds-summary-body');
-renderDetail(GROUNDS_DATA, 'grounds-detail-root');
 </script>
