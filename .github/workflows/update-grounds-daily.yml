@@ -2,7 +2,7 @@ name: Update Grounds data (daily)
 
 on:
   schedule:
-    - cron: '50 8 * * *'  # every day, 08:50 UTC
+    - cron: '0 20 * * *'  # every day, 20:00 UTC = 1pm PDT (moved 2026-07-16 -- 08:50 UTC landed at 1:50am PDT, when Florencia's PC/runner is usually off)
   workflow_dispatch: {}
 
 permissions:
