@@ -57,9 +57,9 @@ html, body { background: var(--grounds-tint); color: var(--ink); font-family: 'M
 body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
 * { box-sizing: border-box; }
 
-.email-card { background: var(--surface); border-radius: 20px; padding: clamp(20px, 4vh, 36px) clamp(20px, 5vw, 36px); box-shadow: var(--shadow); max-width: 1080px; margin: 0 auto; }
+.email-card { background: var(--surface); border-radius: 20px; padding: clamp(20px, 4vh, 36px) clamp(20px, 5vw, 36px); box-shadow: var(--shadow); max-width: 880px; margin: 0 auto; }
 
-.wrap { max-width: 1080px; margin: 0 auto; }
+.wrap { max-width: 880px; margin: 0 auto; }
 .masthead-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
 .masthead-id { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0; display: flex; align-items: center; gap: 8px; }
 .masthead-id a { color: inherit; text-decoration: none; }
@@ -67,33 +67,39 @@ body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
 .masthead-meta { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; color: var(--ink-soft); text-align: right; line-height: 1.6; }
 
 .masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); }
-h1 { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 30px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0; line-height: 1.05; text-wrap: balance; }
-.masthead-range { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; color: var(--ink-soft); margin: 6px 0 0; }
+h1 { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: clamp(20px, 2.6vw, 26px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0; line-height: 1.05; text-wrap: balance; }
+.masthead-range { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; color: var(--ink-soft); margin: 6px 0 0; }
 
-h2.area-title { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.02em; margin: clamp(20px, 4vh, 32px) 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--line); }
+h2.area-title { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.02em; margin: clamp(18px, 3.5vh, 28px) 0 10px; padding-bottom: 7px; border-bottom: 2px solid var(--line); }
 h2.area-title:first-of-type { margin-top: 0; }
 
-.section-label { font-family: 'Manrope', system-ui, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
+.section-label { font-family: 'Manrope', system-ui, sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 10px; display: flex; align-items: center; gap: 10px; }
 .section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
 
-.table-wrap { overflow-x: auto; border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); margin-bottom: 22px; }
-table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
-th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); border-right: 1px solid var(--violet); white-space: nowrap; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); margin-bottom: 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 11px; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); border-right: 1px solid var(--violet); white-space: nowrap; }
 th:last-child, td:last-child { border-right: none; }
-th { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; font-weight: 500; background: var(--violet); }
+th { font-family: 'Manrope', system-ui, sans-serif; font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; font-weight: 500; background: var(--violet); }
 tr:last-child td { border-bottom: none; }
-td.svc { font-family: 'Manrope', system-ui, sans-serif; white-space: normal; min-width: 220px; }
-td.cad { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; color: var(--ink-soft); white-space: nowrap; }
+td.svc { font-family: 'Manrope', system-ui, sans-serif; white-space: normal; min-width: 190px; }
+td.cad { font-family: 'Manrope', system-ui, sans-serif; font-size: 9px; color: var(--ink-soft); white-space: nowrap; }
 td.occ { text-align: center; }
 /* box-shadow (not border) for the top/bottom divider lines -- border-collapse picks only
    one winning border per shared row edge (width/style tie-break, browser-dependent), which
    made the top line inconsistently thinner/invisible vs the bottom. An inset box-shadow
    paints on both edges of this cell regardless of what the neighboring row declares. */
-tr.prop-divider td { background: var(--grounds-tint); color: var(--grounds-ink); font-family: 'Space Mono', monospace; font-weight: 700; font-size: 14.5px; letter-spacing: 0.05em; padding: 10px 12px; border: none; box-shadow: inset 0 2px 0 0 var(--grounds-ink), inset 0 -2px 0 0 var(--grounds-ink); }
-tr.emp-divider td { background: color-mix(in srgb, var(--violet) 9%, var(--surface)); color: var(--ink-soft); font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 12px; border: none; box-shadow: inset 0 2px 0 0 var(--violet), inset 0 -2px 0 0 var(--violet); }
+tr.prop-divider td { background: var(--grounds-tint); color: var(--grounds-ink); font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; padding: 8px 10px; border: none; box-shadow: inset 0 2px 0 0 var(--grounds-ink), inset 0 -2px 0 0 var(--grounds-ink); }
+tr.emp-divider td { background: color-mix(in srgb, var(--violet) 9%, var(--surface)); color: var(--ink-soft); font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 10px; border: none; box-shadow: inset 0 2px 0 0 var(--violet), inset 0 -2px 0 0 var(--violet); }
 a.occ-link { text-decoration: none; color: inherit; }
 
-.pill { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 10px; display: inline-block; white-space: nowrap; }
+.prop-divider-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.prop-bar { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.prop-bar-track { width: 84px; height: 6px; border-radius: 3px; background: color-mix(in srgb, var(--grounds-ink) 18%, transparent); overflow: hidden; }
+.prop-bar-fill { height: 100%; border-radius: 3px; }
+.prop-bar-pct { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: normal; min-width: 30px; text-align: right; }
+
+.pill { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 10px; display: inline-block; white-space: nowrap; }
 .pill.bad { background: color-mix(in srgb, var(--bad) 16%, var(--surface)); color: var(--bad); }
 .pill.warn { background: color-mix(in srgb, var(--warn) 16%, var(--surface)); color: var(--warn); }
 .pill.good { background: color-mix(in srgb, var(--good) 16%, var(--surface)); color: var(--good); }
@@ -171,8 +177,27 @@ function renderRecurringRow(r) {
   return '<tr><td class="svc">' + esc(r.title) + '</td><td class="cad">' + esc(r.cadence || '') + '</td>' + cells + '</tr>';
 }
 
+function completionPct(p) {
+  var total = 0, completed = 0;
+  p.employees.forEach(function(e) {
+    e.recurring.forEach(function(r) {
+      (r.occurrences || []).forEach(function(occ) {
+        total++;
+        if (occ.status === 'COMPLETED') completed++;
+      });
+    });
+  });
+  return total ? Math.round(100 * completed / total) : null;
+}
+
+function completionBar(pct) {
+  if (pct === null) return '';
+  var color = pct >= 90 ? 'var(--good)' : (pct >= 70 ? 'var(--warn)' : 'var(--bad)');
+  return '<div class="prop-bar"><div class="prop-bar-track"><div class="prop-bar-fill" style="width:' + pct + '%; background:' + color + ';"></div></div><span class="prop-bar-pct">' + pct + '%</span></div>';
+}
+
 function renderPropertyBlock(p) {
-  var rows = '<tr class="prop-divider"><td colspan="6">' + esc(p.property) + '</td></tr>';
+  var rows = '<tr class="prop-divider"><td colspan="6"><div class="prop-divider-inner"><span>' + esc(p.property) + '</span>' + completionBar(completionPct(p)) + '</div></td></tr>';
   p.employees.forEach(function(e) {
     rows += '<tr class="emp-divider"><td colspan="6">' + esc(e.employee) + '</td></tr>';
     rows += e.recurring.map(renderRecurringRow).join('');
