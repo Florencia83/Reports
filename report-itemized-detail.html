@@ -135,6 +135,10 @@ footer a { color: var(--ink-soft); }
       <label for="to-date">To</label>
       <input type="date" id="to-date">
     </div>
+    <div class="picker-field">
+      <label for="person-select">Team member</label>
+      <select id="person-select"><option value="">All</option></select>
+    </div>
     <button class="picker-reset" id="reset-range">Reset to full month</button>
   </div>
 
@@ -145,12 +149,17 @@ footer a { color: var(--ink-soft); }
     </div>
   </div>
 
-  <section>
+  <section id="person-section" style="display:none;">
+    <p class="section-label">Team member</p>
+    <div id="person-root"></div>
+  </section>
+
+  <section id="repairs-section">
     <p class="section-label">R&amp;M Repairs</p>
     <div id="repairs-root"></div>
   </section>
 
-  <section>
+  <section id="grounds-section">
     <p class="section-label">Grounds</p>
     <div id="grounds-root"></div>
   </section>
@@ -213,16 +222,77 @@ function renderDivision(list, elId, from, to) {
   document.getElementById(elId).innerHTML = html || '<p class="no-data">No properties with spend in this range.</p>';
 }
 
+// Flat, cross-property view of one person's labor entries -- built when the Team
+// member picker is set to something other than "All". Both divisions are combined into
+// one table (with Property + Division columns) since a person's real work often spans
+// both in the same month.
+function renderPerson(name, from, to) {
+  var rows = [];
+  ['repairs', 'grounds'].forEach(function(div) {
+    currentData[div].forEach(function(d) {
+      d.labor_items.forEach(function(l) {
+        if (l.name !== name) return;
+        if (l.date < from || l.date > to) return;
+        rows.push({ date: l.date, property: d.property, division: div, hours: l.hours, wage: l.wage, cost: l.cost });
+      });
+    });
+  });
+  rows.sort(function(a, b) { return a.date.localeCompare(b.date) || a.property.localeCompare(b.property); });
+  var total = rows.reduce(function(s, r) { return s + r.cost; }, 0);
+  var totalHours = rows.reduce(function(s, r) { return s + r.hours; }, 0);
+  if (!rows.length) {
+    document.getElementById('person-root').innerHTML = '<p class="no-data">No hours logged for ' + name + ' in this range.</p>';
+    return;
+  }
+  var head = '<tr><th>Date</th><th>Property</th><th>Division</th><th class="num">Hours</th><th class="num">Wage</th><th class="num">Cost</th></tr>';
+  var body = rows.map(function(r) {
+    return '<tr><td>' + r.date + '</td><td>' + r.property + '</td><td>' + (r.division === 'repairs' ? 'R&amp;M Repairs' : 'Grounds') + '</td>' +
+      '<td class="num">' + r.hours + 'h</td><td class="num">' + money(r.wage) + '/h</td><td class="num">' + money(r.cost) + '</td></tr>';
+  }).join('');
+  document.getElementById('person-root').innerHTML =
+    '<div class="callout finance" style="margin-bottom:14px;"><div class="prose"><p>' + rows.length + ' entries, ' + totalHours.toFixed(2) + 'h total, <b>' + money(total) + '</b> (wage &times; 1.5) in this range.</p></div></div>' +
+    '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
 function renderAll() {
   if (!currentData) return;
   var from = document.getElementById('from-date').value;
   var to = document.getElementById('to-date').value;
-  renderDivision(currentData.repairs, 'repairs-root', from, to);
-  renderDivision(currentData.grounds, 'grounds-root', from, to);
+  var person = document.getElementById('person-select').value;
+  if (person) {
+    document.getElementById('person-section').style.display = '';
+    document.getElementById('repairs-section').style.display = 'none';
+    document.getElementById('grounds-section').style.display = 'none';
+    renderPerson(person, from, to);
+  } else {
+    document.getElementById('person-section').style.display = 'none';
+    document.getElementById('repairs-section').style.display = '';
+    document.getElementById('grounds-section').style.display = '';
+    renderDivision(currentData.repairs, 'repairs-root', from, to);
+    renderDivision(currentData.grounds, 'grounds-root', from, to);
+  }
   document.getElementById('updated-label').textContent = 'Data as of ' + currentData.generated_at;
 }
 
 function daysInMonth(y, m) { return new Date(y, m, 0).getDate(); }
+function todayStr() {
+  var d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+function populatePersonSelect() {
+  var names = new Set();
+  ['repairs', 'grounds'].forEach(function(div) {
+    currentData[div].forEach(function(d) { d.labor_items.forEach(function(l) { names.add(l.name); }); });
+  });
+  var select = document.getElementById('person-select');
+  select.innerHTML = '<option value="">All</option>';
+  [...names].sort().forEach(function(n) {
+    var opt = document.createElement('option');
+    opt.value = n; opt.textContent = n;
+    select.appendChild(opt);
+  });
+}
 
 function loadMonth(key) {
   var ts = Date.now();
@@ -231,10 +301,16 @@ function loadMonth(key) {
     var parts = key.split('-'); var y = +parts[0], m = +parts[1];
     var monthEnd = key + '-' + String(daysInMonth(y, m)).padStart(2, '0');
     currentData._monthEnd = monthEnd;
+    // For the current, still-in-progress month there's no data past today -- default
+    // the "To" field to today instead of a month-end that hasn't happened yet. Past
+    // months still default to their real last day.
+    var today = todayStr();
+    var effectiveEnd = today < monthEnd ? today : monthEnd;
     var fromInput = document.getElementById('from-date'), toInput = document.getElementById('to-date');
     fromInput.min = key + '-01'; fromInput.max = monthEnd;
     toInput.min = key + '-01'; toInput.max = monthEnd;
-    fromInput.value = key + '-01'; toInput.value = monthEnd;
+    fromInput.value = key + '-01'; toInput.value = effectiveEnd;
+    populatePersonSelect();
     renderAll();
   }).catch(function(err) {
     document.getElementById('repairs-root').innerHTML = '<div class="callout" style="font-size:13px;">Could not load data for this month: ' + err.message + '</div>';
@@ -244,10 +320,13 @@ function loadMonth(key) {
 
 document.getElementById('from-date').addEventListener('change', renderAll);
 document.getElementById('to-date').addEventListener('change', renderAll);
+document.getElementById('person-select').addEventListener('change', renderAll);
 document.getElementById('reset-range').addEventListener('click', function() {
   if (!currentData) return;
+  var today = todayStr();
+  var effectiveEnd = today < currentData._monthEnd ? today : currentData._monthEnd;
   document.getElementById('from-date').value = currentData.month + '-01';
-  document.getElementById('to-date').value = currentData._monthEnd;
+  document.getElementById('to-date').value = effectiveEnd;
   renderAll();
 });
 
