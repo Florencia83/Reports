@@ -3,16 +3,16 @@
   "week_end": "2026-07-19",
   "label": "July 13 – 19, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-16",
-  "complete": false,
+  "generated_at": "2026-07-19",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 48.29,
-      "last_30": 55.74,
-      "last_7": 61.69
+      "last_30": 51.14,
+      "last_7": 29.17
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -115,6 +115,14 @@
       "cost": 445.9
     },
     {
+      "ref": "TKFWD2L",
+      "property": "rl16",
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 362.25,
+      "cost": 362.25
+    },
+    {
       "ref": "TZAKAQE",
       "property": "kn47",
       "brief": "C - Paint Prep / Paint",
@@ -123,29 +131,21 @@
       "cost": 342.89
     },
     {
-      "ref": "TV2UB2Q",
-      "property": "tc68",
-      "brief": "D - Maintenance (clone)",
-      "labor": 0,
-      "materials": 305.63,
-      "cost": 305.63
-    },
-    {
-      "ref": "TCYJLQAB",
-      "property": "rl16",
-      "brief": "OCCUPIED UNITS INSPECTION",
-      "labor": 293.59,
-      "materials": 0,
-      "cost": 293.59
+      "ref": "TKRUKPR",
+      "property": "kn47 k1",
+      "brief": "Housing Inspection - FAIL",
+      "labor": 95.6,
+      "materials": 240.78,
+      "cost": 336.38
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 84,
-      "avg_cost_per_wo": 31.83,
-      "total_labor_cost": 1292.3,
-      "avg_resident_rating": 4.33,
+      "wo_count": 99,
+      "avg_cost_per_wo": 32.13,
+      "total_labor_cost": 1438.26,
+      "avg_resident_rating": 4,
       "reviews": [
         {
           "ref": "TDIUJDW",
@@ -156,34 +156,15 @@
           "ref": "TT8VWDQ",
           "rating": 3,
           "text": "Bee hive in bedroom window still active"
-        },
-        {
-          "ref": "TV3HC42",
-          "rating": 5,
-          "text": "Outstanding!!!"
-        }
-      ]
-    },
-    {
-      "name": "Justin Gutierrez",
-      "wo_count": 35,
-      "avg_cost_per_wo": 255.47,
-      "total_labor_cost": 1416.25,
-      "avg_resident_rating": 5,
-      "reviews": [
-        {
-          "ref": "TEJ8NZ5",
-          "rating": 5,
-          "text": null
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 35,
-      "avg_cost_per_wo": 47.09,
-      "total_labor_cost": 1028.4,
-      "avg_resident_rating": 4.5,
+      "wo_count": 48,
+      "avg_cost_per_wo": 58.55,
+      "total_labor_cost": 1622.4,
+      "avg_resident_rating": 4.67,
       "reviews": [
         {
           "ref": "TZXD0MLB",
@@ -194,8 +175,40 @@
           "ref": "T64GCHLB",
           "rating": 5,
           "text": "Good job Jaxson"
+        },
+        {
+          "ref": "T47LXHBB",
+          "rating": 5,
+          "text": "Thank you.. The ceiling looks perfect."
         }
       ]
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 39,
+      "avg_cost_per_wo": 235.3,
+      "total_labor_cost": 1462.5,
+      "avg_resident_rating": 3,
+      "reviews": [
+        {
+          "ref": "TQ55RUU",
+          "rating": 1,
+          "text": null
+        },
+        {
+          "ref": "TEJ8NZ5",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 32,
+      "avg_cost_per_wo": 120.4,
+      "total_labor_cost": 650.7,
+      "avg_resident_rating": null,
+      "reviews": []
     },
     {
       "name": "Jonas Hoard",
@@ -215,14 +228,6 @@
           "text": null
         }
       ]
-    },
-    {
-      "name": "Isaac Chavez",
-      "wo_count": 27,
-      "avg_cost_per_wo": 151.77,
-      "total_labor_cost": 895.69,
-      "avg_resident_rating": null,
-      "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
@@ -246,16 +251,23 @@
       "property": "TC68",
       "cardholder": "Jonas Hoard",
       "amount": 695.25
+    },
+    {
+      "date": "2026-07-17",
+      "ref": "TKFWD2L",
+      "property": "RL16",
+      "cardholder": "Jared Miller",
+      "amount": 362.25
     }
   ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 643.07
+      "amount": 943.5
     },
     {
       "category": "Supplies and Tools",
-      "amount": 44.56
+      "amount": 137.64
     },
     {
       "category": "Appliances",
@@ -263,11 +275,11 @@
     },
     {
       "category": "Grounds",
-      "amount": 469.35
+      "amount": 992.6
     },
     {
       "category": "Maintenance",
-      "amount": 3417.31
+      "amount": 4447.97
     }
   ],
   "narrative": null,
