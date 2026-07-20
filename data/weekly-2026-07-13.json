@@ -10,7 +10,7 @@
     {
       "metric": "Average Work Order Cost",
       "q1": null,
-      "q2": 48.29,
+      "q2": 39,
       "last_30": 48.46,
       "last_7": 28.1
     },
@@ -18,43 +18,43 @@
       "metric": "Emergency Work Order Completion Time",
       "q1": null,
       "q2": null,
-      "last_30": null,
-      "last_7": null
+      "last_30": 0.9,
+      "last_7": 1.2
     },
     {
       "metric": "Work Order Resident Satisfaction",
       "q1": null,
       "q2": null,
-      "last_30": null,
-      "last_7": null
+      "last_30": 4.41,
+      "last_7": 4.17
     },
     {
       "metric": "Avg Vendor Completion Time",
       "q1": null,
       "q2": null,
-      "last_30": null,
-      "last_7": null
+      "last_30": 9,
+      "last_7": 11
     },
     {
       "metric": "Avg Speed of Repair",
       "q1": null,
       "q2": null,
-      "last_30": null,
-      "last_7": null
+      "last_30": 6.4,
+      "last_7": 6.2
     },
     {
       "metric": "Time to Assignment",
       "q1": null,
       "q2": null,
-      "last_30": null,
-      "last_7": null
+      "last_30": 0,
+      "last_7": 0.08
     },
     {
       "metric": "Time to Schedule",
       "q1": null,
       "q2": null,
-      "last_30": null,
-      "last_7": null
+      "last_30": 0.26,
+      "last_7": 0.16
     }
   ],
   "top_work_orders": [

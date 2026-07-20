@@ -26,6 +26,28 @@ const https = require('https');
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const APPFOLIO_SUBDOMAIN = 'mckay';
 
+// Average Work Order Cost's Q1/Q2 (etc.) values are supposed to be closed, immutable
+// history once a quarter ends -- but carrying them forward via each week-file's own
+// prior version only locks them within THAT week's lineage. Every Monday creates a
+// brand-new weekly-{monday}.json with no history of its own, so q1/q2 silently
+// recomputed from scratch on the first run of every new week and drifted (found
+// 2026-07-20: Q2 showed 48.25, then 48.29, then 49.45 across three different weekly
+// files). This separate quarter-keyed file is the real single source of truth --
+// once a quarter gets a real value here, it never changes again, no matter how many
+// new weekly files get created afterward.
+const QUARTER_LOCKS_PATH = path.join(DATA_DIR, 'quarterly-kpi-locks.json');
+function loadQuarterLocks() {
+  if (!fs.existsSync(QUARTER_LOCKS_PATH)) return { avgWoCostByQuarter: {} };
+  try {
+    const j = JSON.parse(fs.readFileSync(QUARTER_LOCKS_PATH, 'utf8'));
+    if (!j.avgWoCostByQuarter) j.avgWoCostByQuarter = {};
+    return j;
+  } catch (e) { return { avgWoCostByQuarter: {} }; }
+}
+function saveQuarterLocks(locks) {
+  fs.writeFileSync(QUARTER_LOCKS_PATH, JSON.stringify(locks, null, 2));
+}
+
 // PM agent id + QBT user id + hourly wage.
 const TECHS = [
   { name: 'Jonas Hoard',      pmId: 59983, qbtId: 7623296, wage: 27.00 },
@@ -604,9 +626,13 @@ async function main() {
   kpis[0].last_7 = avgWoCostFor(melds, laborRecords, rampRecords, last7Start, todayStr, 'last_7');
 
   // Q1/Q2 (calendar quarters, matching the other 6 manually-pasted KPIs) are closed,
-  // immutable history once the quarter ends -- compute once and never touch again
-  // (kpis[0].q1/q2 come from priorKpis above, so a non-null value here means an
-  // earlier run already did this and it's just being carried forward untouched).
+  // immutable history once the quarter ends -- locked globally in quarterly-kpi-locks.json
+  // (see comment near QUARTER_LOCKS_PATH above), NOT per-week-file, so every week's
+  // kpis[0].q1/q2 always show the exact same number once a quarter is real.
+  const quarterLocks = loadQuarterLocks();
+  kpis[0].q1 = quarterLocks.avgWoCostByQuarter['2026-Q1'] ?? null;
+  kpis[0].q2 = quarterLocks.avgWoCostByQuarter['2026-Q2'] ?? null;
+
   if (kpis[0].q1 == null) {
     console.log('Backfilling Average Work Order Cost Q1 2026 (Jan-Mar)...');
     const [q1Melds, q1Labor, q1Ramp] = await Promise.all([
@@ -616,6 +642,7 @@ async function main() {
     ]);
     console.log('Q1 raw fetch: melds', q1Melds.length, '| labor records', q1Labor.length, '| ramp records', q1Ramp.length);
     kpis[0].q1 = avgWoCostFor(q1Melds, q1Labor, q1Ramp, '2026-01-01', '2026-03-31', 'q1');
+    if (kpis[0].q1 != null) { quarterLocks.avgWoCostByQuarter['2026-Q1'] = kpis[0].q1; saveQuarterLocks(quarterLocks); }
   }
   if (kpis[0].q2 == null) {
     console.log('Backfilling Average Work Order Cost Q2 2026 (Apr-Jun)...');
@@ -626,6 +653,7 @@ async function main() {
     ]);
     console.log('Q2 raw fetch: melds', q2Melds.length, '| labor records', q2Labor.length, '| ramp records', q2Ramp.length);
     kpis[0].q2 = avgWoCostFor(q2Melds, q2Labor, q2Ramp, '2026-04-01', '2026-06-30', 'q2');
+    if (kpis[0].q2 != null) { quarterLocks.avgWoCostByQuarter['2026-Q2'] = kpis[0].q2; saveQuarterLocks(quarterLocks); }
   }
 
   const weekJson = {

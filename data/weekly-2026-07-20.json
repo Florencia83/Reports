@@ -10,9 +10,9 @@
     {
       "metric": "Average Work Order Cost",
       "q1": null,
-      "q2": 49.45,
-      "last_30": 48.27,
-      "last_7": 28
+      "q2": 39,
+      "last_30": 48.13,
+      "last_7": 27.12
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,10 +142,10 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 100,
-      "avg_cost_per_wo": 30.67,
-      "total_labor_cost": 1407.36,
-      "avg_resident_rating": 4,
+      "wo_count": 101,
+      "avg_cost_per_wo": 30.97,
+      "total_labor_cost": 1448.09,
+      "avg_resident_rating": 4.25,
       "reviews": [
         {
           "ref": "TDIUJDW",
@@ -161,14 +161,19 @@
           "ref": "TB5PYAC",
           "rating": 4,
           "text": "Good job Jared"
+        },
+        {
+          "ref": "TV3HC42",
+          "rating": 5,
+          "text": "Outstanding!!!"
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 46,
-      "avg_cost_per_wo": 59.43,
-      "total_labor_cost": 1528,
+      "wo_count": 50,
+      "avg_cost_per_wo": 55.65,
+      "total_labor_cost": 1576.8,
       "avg_resident_rating": 4.5,
       "reviews": [
         {
@@ -214,9 +219,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 31,
-      "avg_cost_per_wo": 124.28,
-      "total_labor_cost": 650.7,
+      "wo_count": 32,
+      "avg_cost_per_wo": 120.71,
+      "total_labor_cost": 660.6,
       "avg_resident_rating": null,
       "reviews": []
     },
