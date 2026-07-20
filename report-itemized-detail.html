@@ -222,36 +222,53 @@ function renderDivision(list, elId, from, to) {
   document.getElementById(elId).innerHTML = html || '<p class="no-data">No properties with spend in this range.</p>';
 }
 
-// Flat, cross-property view of one person's labor entries -- built when the Team
-// member picker is set to something other than "All". Both divisions are combined into
-// one table (with Property + Division columns) since a person's real work often spans
-// both in the same month.
+// Flat, cross-property view of one person's labor entries AND Ramp card purchases --
+// built when the Team member picker is set to something other than "All". Both
+// divisions are combined into one set of tables (with Property + Division columns)
+// since a person's real work/spend often spans both in the same month.
 function renderPerson(name, from, to) {
-  var rows = [];
+  var laborRows = [], rampRows = [];
   ['repairs', 'grounds'].forEach(function(div) {
     currentData[div].forEach(function(d) {
       d.labor_items.forEach(function(l) {
         if (l.name !== name) return;
         if (l.date < from || l.date > to) return;
-        rows.push({ date: l.date, property: d.property, division: div, hours: l.hours, wage: l.wage, cost: l.cost });
+        laborRows.push({ date: l.date, property: d.property, division: div, hours: l.hours, wage: l.wage, cost: l.cost });
+      });
+      d.ramp_items.forEach(function(t) {
+        if (t.cardholder !== name) return;
+        if (t.date < from || t.date > to) return;
+        rampRows.push({ date: t.date, property: d.property, division: div, merchant: t.merchant, amount: t.amount, memo: t.memo });
       });
     });
   });
-  rows.sort(function(a, b) { return a.date.localeCompare(b.date) || a.property.localeCompare(b.property); });
-  var total = rows.reduce(function(s, r) { return s + r.cost; }, 0);
-  var totalHours = rows.reduce(function(s, r) { return s + r.hours; }, 0);
-  if (!rows.length) {
-    document.getElementById('person-root').innerHTML = '<p class="no-data">No hours logged for ' + name + ' in this range.</p>';
+  laborRows.sort(function(a, b) { return a.date.localeCompare(b.date) || a.property.localeCompare(b.property); });
+  rampRows.sort(function(a, b) { return a.date.localeCompare(b.date) || a.property.localeCompare(b.property); });
+  var laborTotal = laborRows.reduce(function(s, r) { return s + r.cost; }, 0);
+  var totalHours = laborRows.reduce(function(s, r) { return s + r.hours; }, 0);
+  var rampTotal = rampRows.reduce(function(s, r) { return s + r.amount; }, 0);
+  if (!laborRows.length && !rampRows.length) {
+    document.getElementById('person-root').innerHTML = '<p class="no-data">No hours or purchases logged for ' + name + ' in this range.</p>';
     return;
   }
-  var head = '<tr><th>Date</th><th>Property</th><th>Division</th><th class="num">Hours</th><th class="num">Wage</th><th class="num">Cost</th></tr>';
-  var body = rows.map(function(r) {
+  var summary = '<div class="callout finance" style="margin-bottom:14px;"><div class="prose"><p>' +
+    laborRows.length + ' labor entries, ' + totalHours.toFixed(2) + 'h total, <b>' + money(laborTotal) + '</b> (wage &times; 1.5)' +
+    ' &mdash; ' + rampRows.length + ' Ramp purchases, <b>' + money(rampTotal) + '</b> in this range.</p></div></div>';
+  var laborHead = '<tr><th>Date</th><th>Property</th><th>Division</th><th class="num">Hours</th><th class="num">Wage</th><th class="num">Cost</th></tr>';
+  var laborBody = laborRows.map(function(r) {
     return '<tr><td>' + r.date + '</td><td>' + r.property + '</td><td>' + (r.division === 'repairs' ? 'R&amp;M Repairs' : 'Grounds') + '</td>' +
       '<td class="num">' + r.hours + 'h</td><td class="num">' + money(r.wage) + '/h</td><td class="num">' + money(r.cost) + '</td></tr>';
   }).join('');
-  document.getElementById('person-root').innerHTML =
-    '<div class="callout finance" style="margin-bottom:14px;"><div class="prose"><p>' + rows.length + ' entries, ' + totalHours.toFixed(2) + 'h total, <b>' + money(total) + '</b> (wage &times; 1.5) in this range.</p></div></div>' +
-    '<div class="table-wrap"><table>' + head + body + '</table></div>';
+  var laborTable = laborRows.length ? '<div class="table-wrap">' + '<table>' + laborHead + laborBody + '</table></div>' : '<p class="no-data">No hours logged for ' + name + ' in this range.</p>';
+  var rampHead = '<tr><th>Date</th><th>Property</th><th>Division</th><th>Merchant</th><th class="num">Amount</th><th class="detail">Memo</th></tr>';
+  var rampBody = rampRows.map(function(t) {
+    return '<tr><td>' + t.date + '</td><td>' + t.property + '</td><td>' + (t.division === 'repairs' ? 'R&amp;M Repairs' : 'Grounds') + '</td>' +
+      '<td>' + t.merchant + '</td><td class="num">' + money(t.amount) + '</td><td class="detail">' + (t.memo || '&mdash;') + '</td></tr>';
+  }).join('');
+  var rampTable = rampRows.length ? '<div class="table-wrap">' + '<table>' + rampHead + rampBody + '</table></div>' : '<p class="no-data">No Ramp purchases for ' + name + ' in this range.</p>';
+  document.getElementById('person-root').innerHTML = summary +
+    '<p class="sub-label">QBT Labor (wage &times; 1.5)</p>' + laborTable +
+    '<p class="sub-label">Ramp Purchases</p>' + rampTable;
 }
 
 function renderAll() {
@@ -283,7 +300,10 @@ function todayStr() {
 function populatePersonSelect() {
   var names = new Set();
   ['repairs', 'grounds'].forEach(function(div) {
-    currentData[div].forEach(function(d) { d.labor_items.forEach(function(l) { names.add(l.name); }); });
+    currentData[div].forEach(function(d) {
+      d.labor_items.forEach(function(l) { names.add(l.name); });
+      d.ramp_items.forEach(function(t) { if (t.cardholder) names.add(t.cardholder); });
+    });
   });
   var select = document.getElementById('person-select');
   select.innerHTML = '<option value="">All</option>';

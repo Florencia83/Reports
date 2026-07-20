@@ -69,7 +69,21 @@ const GROUNDS_ACCOUNT = '52003';
 const PROPERTY_CODE_RE = /^[a-z]{1,2}\d{2,3}/i;
 
 async function qbtFetchWithRetry(url, headers, attempt = 1) {
-  const res = await fetch(url, { headers });
+  // A bare fetch() has no default timeout -- a stalled connection (seen intermittently
+  // against this API) hangs the whole script forever instead of failing. 20s + retry
+  // (same backoff as 429/5xx) turns that into a bounded, self-healing wait.
+  let res;
+  try {
+    res = await fetch(url, { headers, signal: AbortSignal.timeout(20000) });
+  } catch (e) {
+    if (attempt <= 4) {
+      const backoff = 2000 * attempt;
+      console.log(`QBT request timed out/errored on ${url} (${e.message}), retrying in ${backoff}ms (attempt ${attempt})`);
+      await new Promise(r => setTimeout(r, backoff));
+      return qbtFetchWithRetry(url, headers, attempt + 1);
+    }
+    throw e;
+  }
   if (!res.ok && attempt <= 4 && (res.status === 429 || res.status >= 500)) {
     const backoff = 2000 * attempt;
     console.log(`QBT ${res.status} on ${url}, retrying in ${backoff}ms (attempt ${attempt})`);
@@ -160,6 +174,7 @@ async function fetchRampTransactions(fromStr, toStr) {
     method: 'POST',
     headers: { Authorization: `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' },
     body: 'grant_type=client_credentials&scope=transactions:read',
+    signal: AbortSignal.timeout(20000),
   });
   if (!tokRes.ok) throw new Error(`Ramp token failed: ${tokRes.status} ${await tokRes.text()}`);
   const token = (await tokRes.json()).access_token;
@@ -173,7 +188,7 @@ async function fetchRampTransactions(fromStr, toStr) {
     url.searchParams.set('from_date', from);
     url.searchParams.set('page_size', '100');
     if (start) url.searchParams.set('start', start);
-    const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(20000) });
     if (!res.ok) throw new Error(`Ramp transactions failed: ${res.status} ${await res.text()}`);
     const j = await res.json();
     all.push(...(j.data || []));
@@ -208,7 +223,12 @@ async function fetchRampTransactions(fromStr, toStr) {
     else if (glName.startsWith('grounds')) division = 'grounds';
     if (!division) continue;
 
-    records.push({ date, property, division, merchant: t.merchant_name, amount, memo: t.memo || '' });
+    // Cardholder name, same field used for the RM_TEAM matching in update-weekly-history.js
+    // and update-ramp-appliances.js -- needed here so the Team member picker can show a
+    // person's Ramp purchases, not just their QBT labor hours.
+    const cardholder = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}`.trim().replace(/\s+/g, ' ') : null;
+
+    records.push({ date, property, division, merchant: t.merchant_name, amount, memo: t.memo || '', cardholder });
   }
   return records;
 }
@@ -228,6 +248,7 @@ async function appfolioBudgetComparative(month, propertiesIds) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Basic ${auth}` },
     body: JSON.stringify(body),
+    signal: AbortSignal.timeout(20000),
   });
   if (!res.ok) throw new Error(`AppFolio budget_comparative failed: ${res.status} ${await res.text()}`);
   return res.json();
@@ -264,7 +285,7 @@ function buildDivision(rampRecords, laborRecords, division, appfolioByProp, appf
   const out = [];
   for (const prop of props) {
     const rampItems = rampRecords.filter(r => r.division === division && r.property === prop)
-      .map(r => ({ date: r.date, merchant: r.merchant, amount: round2(r.amount), memo: r.memo }))
+      .map(r => ({ date: r.date, merchant: r.merchant, amount: round2(r.amount), memo: r.memo, cardholder: r.cardholder }))
       .sort((a, b) => a.date.localeCompare(b.date));
     // Grouped by date+name (not collapsed to one row per person for the whole month)
     // so the report's date-range picker can filter labor the same way it filters Ramp

@@ -1,7 +1,7 @@
 {
   "month": "2026-06",
   "label": "June 2026",
-  "generated_at": "2026-07-16",
+  "generated_at": "2026-07-20",
   "complete": true,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -17,301 +17,351 @@
           "date": "2026-06-01",
           "merchant": "The Home Depot",
           "amount": 88.12,
-          "memo": "Purchased room to room fan to replace broken one"
+          "memo": "Purchased room to room fan to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-01",
           "merchant": "Ace Hardware",
           "amount": 17.39,
-          "memo": "Purchased ac cleaner to clean ptac meld#TG7VYEH"
+          "memo": "Purchased ac cleaner to clean ptac meld#TG7VYEH",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-02",
           "merchant": "Ace Hardware",
           "amount": 21.75,
-          "memo": "Purchased doorknob from ace hardware to replace broken one"
+          "memo": "Purchased doorknob from ace hardware to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-04",
           "merchant": "Ace Hardware",
           "amount": 40.78,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-04",
           "merchant": "Heritage Professional Landscaping",
           "amount": 704.48,
-          "memo": "Landscaping contractor service Ridgeview"
+          "memo": "Landscaping contractor service Ridgeview",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-04",
           "merchant": "Ace Hardware",
           "amount": 13.05,
-          "memo": "Purchased tub stopper to replace broken one"
+          "memo": "Purchased tub stopper to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-05",
           "merchant": "The Home Depot",
           "amount": 80.44,
-          "memo": "R&M supplies purchase"
+          "memo": "R&M supplies purchase",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-08",
           "merchant": "The Home Depot",
           "amount": 23.9,
-          "memo": "Purchased new closet track to replace broken one"
+          "memo": "Purchased new closet track to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-08",
           "merchant": "The Home Depot",
           "amount": 18.47,
-          "memo": "Purchased range hood filter to replace broken one"
+          "memo": "Purchased range hood filter to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-10",
           "merchant": "Ace Hardware",
           "amount": 45.66,
-          "memo": "Purchased wood filler to repair chipped countertop and purchased towel rack to replace broken one"
+          "memo": "Purchased wood filler to repair chipped countertop and purchased towel rack to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-11",
           "merchant": "The Home Depot",
           "amount": 25.72,
-          "memo": "Purchased striker plates to help secure front door and purchased mailbox lock to replace the broken one"
+          "memo": "Purchased striker plates to help secure front door and purchased mailbox lock to replace the broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-11",
           "merchant": "PayRange",
           "amount": 10,
-          "memo": "Put money in PayRange account to test machines"
+          "memo": "Put money in PayRange account to test machines",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-12",
           "merchant": "Ace Hardware",
           "amount": 20.66,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-12",
           "merchant": "Ace Hardware",
           "amount": 114.85,
-          "memo": "pool chems"
+          "memo": "pool chems",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-12",
           "merchant": "Ace Hardware",
           "amount": 16.95,
-          "memo": "Purchased air freshener to make apartment smell better"
+          "memo": "Purchased air freshener to make apartment smell better",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-15",
           "merchant": "Ace Hardware",
           "amount": 14.13,
-          "memo": "Purchased caulking to caulk tub"
+          "memo": "Purchased caulking to caulk tub",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-15",
           "merchant": "Ace Hardware",
           "amount": 163.19,
-          "memo": "Repair and maintenance materials\nfor meld TD1P4GP (not synced)"
+          "memo": "Repair and maintenance materials\nfor meld TD1P4GP (not synced)",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-16",
           "merchant": "Ace Hardware",
           "amount": 45.67,
-          "memo": "Purchased dishwasher supply line and elbow"
+          "memo": "Purchased dishwasher supply line and elbow",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-16",
           "merchant": "The Home Depot",
           "amount": 85.95,
-          "memo": "R&M supplies purchase"
+          "memo": "R&M supplies purchase",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-16",
           "merchant": "Ace Hardware",
           "amount": 45.67,
-          "memo": "Purchased texture for drywall repair and filter for shop vac to clean up drywall dust"
+          "memo": "Purchased texture for drywall repair and filter for shop vac to clean up drywall dust",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-18",
           "merchant": "PayRange",
           "amount": 10,
-          "memo": "Purchase for laundry equipment troubleshooting."
+          "memo": "Purchase for laundry equipment troubleshooting.",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-18",
           "merchant": "The Home Depot",
           "amount": 16.3,
-          "memo": "R&M supplies purchase"
+          "memo": "R&M supplies purchase",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-18",
           "merchant": "FASTSIGNS",
           "amount": 372.08,
-          "memo": "Property signage for exterior of building"
+          "memo": "Property signage for exterior of building",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-18",
           "merchant": "Warehouse-Lighting",
           "amount": 121.46,
-          "memo": "Light Cover For exterior lights"
+          "memo": "Light Cover For exterior lights",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-18",
           "merchant": "Ace Hardware",
           "amount": 20.66,
-          "memo": "toilet repair kit"
+          "memo": "toilet repair kit",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-18",
           "merchant": "Ace Hardware",
           "amount": 25.01,
-          "memo": "Purchased dishwasher supply line to replace old copper one"
+          "memo": "Purchased dishwasher supply line to replace old copper one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-19",
           "merchant": "The Home Depot",
           "amount": 13.78,
-          "memo": "Purchased mailbox lock to replace lock with no keys"
+          "memo": "Purchased mailbox lock to replace lock with no keys",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-19",
           "merchant": "Amazon",
           "amount": 24.59,
-          "memo": "R&M supplies purchase"
+          "memo": "R&M supplies purchase",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-20",
           "merchant": "Empire Electric USA",
           "amount": 190.4,
-          "memo": "kn47-k1-D20 R&M contractor kitchen power"
+          "memo": "kn47-k1-D20 R&M contractor kitchen power",
+          "cardholder": "Hanzhao Meng"
         },
         {
           "date": "2026-06-20",
           "merchant": "Empire Electric USA",
           "amount": 369.92,
-          "memo": "kn47 R&M contractor"
+          "memo": "kn47 R&M contractor",
+          "cardholder": "Hanzhao Meng"
         },
         {
           "date": "2026-06-22",
           "merchant": "Ace Hardware",
           "amount": 26.09,
-          "memo": "Purchased aerator for kitchen faucet and flapper for toilet"
+          "memo": "Purchased aerator for kitchen faucet and flapper for toilet",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-22",
           "merchant": "PayRange",
           "amount": 10,
-          "memo": "Purchase for laundry equipment troubleshooting."
+          "memo": "Purchase for laundry equipment troubleshooting.",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-22",
           "merchant": "Ace Hardware",
           "amount": 1.73,
-          "memo": "sink repair kit"
+          "memo": "sink repair kit",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 64.17,
-          "memo": "Purchased shower cartridge to replace faulty one meld#TEYEKJM"
+          "memo": "Purchased shower cartridge to replace faulty one meld#TEYEKJM",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 115.38,
-          "memo": "Purchased items to clean mold, re caulk tub, replace shower cartridge.meld#TEYEKJM"
+          "memo": "Purchased items to clean mold, re caulk tub, replace shower cartridge.meld#TEYEKJM",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 135.97,
-          "memo": "Nondiscretionary shop supplies"
+          "memo": "Nondiscretionary shop supplies",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 48.93,
-          "memo": "Nondiscretionary shop supplies"
+          "memo": "Nondiscretionary shop supplies",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 10.87,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 77.25,
-          "memo": "Purchased closet door to replace broken one"
+          "memo": "Purchased closet door to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-24",
           "merchant": "Dependable Appliance",
           "amount": 92.78,
-          "memo": "Purchased fridge evaporator motor to replace broke one meld#TY521PH"
+          "memo": "Purchased fridge evaporator motor to replace broke one meld#TY521PH",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-25",
           "merchant": "Ace Hardware",
           "amount": 36.97,
-          "memo": "Purchased materials to make window screen"
+          "memo": "Purchased materials to make window screen",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-26",
           "merchant": "The Home Depot",
           "amount": 27.18,
-          "memo": "Purchased drip pans to replace broken ones meld#TBYTPCF"
+          "memo": "Purchased drip pans to replace broken ones meld#TBYTPCF",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-29",
           "merchant": "The Home Depot",
           "amount": 43.37,
-          "memo": "Purchased shower cartridge and handle to replace broken one"
+          "memo": "Purchased shower cartridge and handle to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-29",
           "merchant": "The Home Depot",
           "amount": 7.49,
-          "memo": "Purchased splash guards for tub"
+          "memo": "Purchased splash guards for tub",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-29",
           "merchant": "GE Appliances",
           "amount": 189.61,
-          "memo": "Purchased parts for washer"
+          "memo": "Purchased parts for washer",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 209.07,
-          "memo": "Maintenance repair materials purchase"
+          "memo": "Maintenance repair materials purchase",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 33.34,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-30",
           "merchant": "Dependable Appliance",
           "amount": 104.02,
-          "memo": "Purchased parts for appliance repair"
+          "memo": "Purchased parts for appliance repair",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-30",
           "merchant": "Ace Hardware",
           "amount": 21.75,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-30",
           "merchant": "Ace Hardware",
           "amount": 11.41,
-          "memo": "Purchased light bulb to replace burnt out one"
+          "memo": "Purchased light bulb to replace burnt out one",
+          "cardholder": "Jaxson Lakins"
         }
       ],
       "labor_items": [
@@ -657,211 +707,246 @@
           "date": "2026-06-01",
           "merchant": "Insight Pest Solutions",
           "amount": 219.7,
-          "memo": "pest"
+          "memo": "pest",
+          "cardholder": "Lee Roy Phillips"
         },
         {
           "date": "2026-06-02",
           "merchant": "Sherwin-Williams",
           "amount": 104.6,
-          "memo": "Paint for unit turn"
+          "memo": "Paint for unit turn",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-02",
-          "merchant": "RPW Headlamps",
+          "merchant": "Reliable Parts",
           "amount": 58.89,
-          "memo": "General building repair materials"
+          "memo": "General building repair materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-02",
           "merchant": "The Home Depot",
           "amount": 49.49,
-          "memo": "Essential building material purchase"
+          "memo": "Essential building material purchase",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-03",
           "merchant": "The Home Depot",
           "amount": 60.7,
-          "memo": "General maintenance supply tools"
+          "memo": "General maintenance supply tools",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-03",
-          "merchant": "RPW Headlamps",
+          "merchant": "Reliable Parts",
           "amount": 27.82,
-          "memo": "Essential building material purchase"
+          "memo": "Essential building material purchase",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-03",
           "merchant": "The Home Depot",
           "amount": 230.24,
-          "memo": "Unit turn supply materials"
+          "memo": "Unit turn supply materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-03",
           "merchant": "The Home Depot",
           "amount": 27.57,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-04",
           "merchant": "The Home Depot",
           "amount": 635.31,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-05",
           "merchant": "The Home Depot",
           "amount": 110.76,
-          "memo": "turn"
+          "memo": "turn",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-05",
           "merchant": "The Home Depot",
           "amount": -27.57,
-          "memo": "Refund for Repair and maintenance materials"
+          "memo": "Refund for Repair and maintenance materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-09",
           "merchant": "The Home Depot",
           "amount": 164.04,
-          "memo": "drywall patch"
+          "memo": "drywall patch",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-10",
           "merchant": "The Home Depot",
           "amount": 37.46,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-10",
-          "merchant": "RPW Headlamps",
+          "merchant": "Reliable Parts",
           "amount": 58.89,
-          "memo": "Replacement building material purchase"
+          "memo": "Replacement building material purchase",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-11",
           "merchant": "Tacoma Screw Products",
           "amount": 1.25,
-          "memo": "stove"
+          "memo": "stove",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-19",
           "merchant": "The Home Depot",
           "amount": 61.75,
-          "memo": "General repair maintenance materials T9BXB9N"
+          "memo": "General repair maintenance materials T9BXB9N",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-19",
           "merchant": "The Home Depot",
           "amount": 42.17,
-          "memo": "Maintenance repair materials"
+          "memo": "Maintenance repair materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-20",
           "merchant": "Insight Pest Solutions",
           "amount": 661.3,
-          "memo": ""
+          "memo": "",
+          "cardholder": "Lee Roy Phillips"
         },
         {
           "date": "2026-06-22",
           "merchant": "The Home Depot",
           "amount": 131.43,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-22",
-          "merchant": "RPW Headlamps",
+          "merchant": "Reliable Parts",
           "amount": 52.18,
-          "memo": "appliance repair"
+          "memo": "appliance repair",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-22",
           "merchant": "The Home Depot",
           "amount": 49.64,
-          "memo": "bath hardware"
+          "memo": "bath hardware",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 219.68,
-          "memo": "r&m"
+          "memo": "r&m",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-24",
           "merchant": "The Home Depot",
           "amount": 46.2,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-24",
           "merchant": "The Home Depot",
           "amount": 40.68,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-25",
           "merchant": "The Home Depot",
           "amount": 13.21,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-25",
           "merchant": "The Home Depot",
           "amount": 94.62,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-25",
           "merchant": "The Home Depot",
           "amount": 64.29,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-28",
           "merchant": "Paypal",
           "amount": 1575.86,
-          "memo": "Contractor service payment for unit maintenance"
+          "memo": "Contractor service payment for unit maintenance",
+          "cardholder": "Armani Mitchell"
         },
         {
           "date": "2026-06-29",
           "merchant": "The Home Depot",
           "amount": 44.52,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-29",
           "merchant": "The Home Depot",
           "amount": 7.71,
-          "memo": "General repair and maintenance supplies"
+          "memo": "General repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-29",
           "merchant": "The Home Depot",
           "amount": 49.29,
-          "memo": "Turn supplies and material"
+          "memo": "Turn supplies and material",
+          "cardholder": "Armani Mitchell"
         },
         {
           "date": "2026-06-29",
           "merchant": "The Home Depot",
           "amount": 153.46,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 22.87,
-          "memo": "Maintenance repair building materials"
+          "memo": "Maintenance repair building materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 26.43,
-          "memo": "General repair and maintenance supplies for property"
+          "memo": "General repair and maintenance supplies for property",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 48.19,
-          "memo": "General repair and maintenance supplies for Ridgeview property"
+          "memo": "General repair and maintenance supplies for Ridgeview property",
+          "cardholder": "Jonas Hoard"
         }
       ],
       "labor_items": [
@@ -983,73 +1068,85 @@
           "date": "2026-06-02",
           "merchant": "Grainger Industrial Supply",
           "amount": 38.89,
-          "memo": "c313 gate remote"
+          "memo": "c313 gate remote",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-03",
           "merchant": "Grainger Industrial Supply",
           "amount": 77.78,
-          "memo": "gate opener remote"
+          "memo": "gate opener remote",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-04",
           "merchant": "The Home Depot",
           "amount": 14.05,
-          "memo": "flower replacement for tenant"
+          "memo": "flower replacement for tenant",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-08",
           "merchant": "The Home Depot",
           "amount": 70.87,
-          "memo": "gutter cleaning supplies"
+          "memo": "gutter cleaning supplies",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-10",
           "merchant": "Ace Hardware",
           "amount": 10.89,
-          "memo": "Duplicate keys for new tenant"
+          "memo": "Duplicate keys for new tenant",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-10",
           "merchant": "Lowe's",
           "amount": 49.27,
-          "memo": "rain gutter clean out"
+          "memo": "rain gutter clean out",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-10",
           "merchant": "The Home Depot",
           "amount": 51.86,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-15",
           "merchant": "The Home Depot",
           "amount": 76.34,
-          "memo": "blower for removing dust"
+          "memo": "blower for removing dust",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-18",
           "merchant": "The Home Depot",
           "amount": 25.92,
-          "memo": "drain clog clean-up supplies"
+          "memo": "drain clog clean-up supplies",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-18",
           "merchant": "Reliable Parts",
           "amount": 41.35,
-          "memo": "oven bake element replacement"
+          "memo": "oven bake element replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-19",
           "merchant": "Walmart",
           "amount": 31.58,
-          "memo": "replacement cord for drain auger"
+          "memo": "replacement cord for drain auger",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 57.78,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -1171,181 +1268,211 @@
           "date": "2026-06-02",
           "merchant": "The Home Depot",
           "amount": 27.18,
-          "memo": "Purchased exhaust fan to replace broken on I’d D building laundry room"
+          "memo": "Purchased exhaust fan to replace broken on I’d D building laundry room",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-02",
           "merchant": "Pro Fire",
           "amount": 20.67,
-          "memo": "Paid pro fire for fire extinguisher service inspection"
+          "memo": "Paid pro fire for fire extinguisher service inspection",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-02",
           "merchant": "Ace Hardware",
           "amount": 35.89,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-03",
           "merchant": "PayRange",
           "amount": 10,
-          "memo": "Purchase for laundry equipment troubleshooting."
+          "memo": "Purchase for laundry equipment troubleshooting.",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-03",
           "merchant": "HD Supply Facilities Maintenance",
           "amount": 86.02,
-          "memo": "General repair maintenance materials"
+          "memo": "General repair maintenance materials",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-03",
           "merchant": "HD Supply Facilities Maintenance",
           "amount": 86.02,
-          "memo": "General repair maintenance materials"
+          "memo": "General repair maintenance materials",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-04",
           "merchant": "The Home Depot",
           "amount": 105.85,
-          "memo": "R&M supplies purchase for meld TXKBD0G"
+          "memo": "R&M supplies purchase for meld TXKBD0G",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-05",
           "merchant": "Ace Hardware",
           "amount": 9.35,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-05",
           "merchant": "Ace Hardware",
           "amount": 10.87,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-09",
           "merchant": "Ace Hardware",
           "amount": 32.61,
-          "memo": "Purchased multiple materials to fix issues after leak"
+          "memo": "Purchased multiple materials to fix issues after leak",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-12",
           "merchant": "Ace Hardware",
           "amount": 93.52,
-          "memo": "Purchased smart lock deadbolts to replace broken locks on maintenance storage rooms, and electrical rooms"
+          "memo": "Purchased smart lock deadbolts to replace broken locks on maintenance storage rooms, and electrical rooms",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-12",
           "merchant": "Ace Hardware",
           "amount": 28.92,
-          "memo": "Purchased texture for drywall repair and gang box cover to cover old smoke alarm hole"
+          "memo": "Purchased texture for drywall repair and gang box cover to cover old smoke alarm hole",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-15",
           "merchant": "Ace Hardware",
           "amount": 21.75,
-          "memo": "Purchased gang box cover for the pools pump emergency shut off button"
+          "memo": "Purchased gang box cover for the pools pump emergency shut off button",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-15",
           "merchant": "Ace Hardware",
           "amount": 9.7,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-16",
           "merchant": "Ace Hardware",
           "amount": 1.09,
-          "memo": "Purchased longer screws for gang box cover over pool shut off button"
+          "memo": "Purchased longer screws for gang box cover over pool shut off button",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-17",
           "merchant": "Walgreens",
           "amount": 8.77,
-          "memo": "Cleaning supplies for grounds"
+          "memo": "Cleaning supplies for grounds",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-17",
           "merchant": "Ace Hardware",
           "amount": 27.19,
-          "memo": "Purchased dishwasher supply line and elbow"
+          "memo": "Purchased dishwasher supply line and elbow",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-18",
           "merchant": "The Home Depot",
           "amount": 27.18,
-          "memo": "Purchased exhaust fan to replace broken one"
+          "memo": "Purchased exhaust fan to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-18",
           "merchant": "Ace Hardware",
           "amount": 12.14,
-          "memo": "Purchased outlet cover plates to replace missing ones in laundry rooms"
+          "memo": "Purchased outlet cover plates to replace missing ones in laundry rooms",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-18",
           "merchant": "The Home Depot",
           "amount": 26.09,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-18",
           "merchant": "Ace Hardware",
           "amount": 16.29,
-          "memo": "Had copy’s of keys made for fire marshals"
+          "memo": "Had copy’s of keys made for fire marshals",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 65.26,
-          "memo": "Purchase deadbolt and doorknob to replace because tenant lost keys"
+          "memo": "Purchase deadbolt and doorknob to replace because tenant lost keys",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 35.88,
-          "memo": "Purchased wax ring to replace old one and gloves"
+          "memo": "Purchased wax ring to replace old one and gloves",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-24",
           "merchant": "The Home Depot",
           "amount": 67.65,
-          "memo": "Purchased bathroom sink to replace one with a hole in it"
+          "memo": "Purchased bathroom sink to replace one with a hole in it",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-25",
           "merchant": "USPS",
           "amount": 50,
-          "memo": "Paid for usps to replace mailbox lock"
+          "memo": "Paid for usps to replace mailbox lock",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-25",
           "merchant": "PayRange",
           "amount": 10,
-          "memo": "Purchase for laundry equipment troubleshooting."
+          "memo": "Purchase for laundry equipment troubleshooting.",
+          "cardholder": "isaac chavez"
         },
         {
           "date": "2026-06-26",
           "merchant": "Walmart",
           "amount": 43.43,
-          "memo": "general maintenance tools"
+          "memo": "general maintenance tools",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-26",
           "merchant": "Ace Hardware",
           "amount": 27.18,
-          "memo": "Maintenance materials for plunger and drain gel purchase"
+          "memo": "Maintenance materials for plunger and drain gel purchase",
+          "cardholder": "Hannah Deckard"
         },
         {
           "date": "2026-06-29",
           "merchant": "Ace Hardware",
           "amount": 13.03,
-          "memo": "Repair and maintenance materials\nmeld TH1IMZD"
+          "memo": "Repair and maintenance materials\nmeld TH1IMZD",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-30",
           "merchant": "USPS",
           "amount": 50,
-          "memo": "mail lock replacement"
+          "memo": "mail lock replacement",
+          "cardholder": "Jared Miller"
         }
       ],
       "labor_items": [
@@ -1656,13 +1783,15 @@
           "date": "2026-06-20",
           "merchant": "Ace Hardware",
           "amount": 35.89,
-          "memo": "Repair and maintenance materials\nTJZKEPT"
+          "memo": "Repair and maintenance materials\nTJZKEPT",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 63.88,
-          "memo": "Purchased weather stripping for front door"
+          "memo": "Purchased weather stripping for front door",
+          "cardholder": "Jaxson Lakins"
         }
       ],
       "labor_items": [
@@ -1735,7 +1864,8 @@
           "date": "2026-06-15",
           "merchant": "Ace Hardware",
           "amount": 45.81,
-          "memo": "door knob replacement for unit"
+          "memo": "door knob replacement for unit",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -1794,163 +1924,190 @@
           "date": "2026-06-01",
           "merchant": "True Value",
           "amount": 53.44,
-          "memo": "drain repair supplies"
+          "memo": "drain repair supplies",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-01",
           "merchant": "True Value",
           "amount": 20.71,
-          "memo": "cleaning supplies for drain"
+          "memo": "cleaning supplies for drain",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-02",
           "merchant": "True Value",
           "amount": 29.42,
-          "memo": "caulking supplies for bath tub"
+          "memo": "caulking supplies for bath tub",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-02",
           "merchant": "Ace Hardware",
           "amount": 45.8,
-          "memo": "Plumbing"
+          "memo": "Plumbing",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-03",
           "merchant": "Ace Hardware",
           "amount": 42.52,
-          "memo": "R&M contractor supplies"
+          "memo": "R&M contractor supplies",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-03",
           "merchant": "Ace Hardware",
           "amount": 30.53,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-03",
           "merchant": "Ace Hardware",
           "amount": 40.36,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-04",
           "merchant": "Ace Hardware",
           "amount": 30.53,
-          "memo": "garage door repair"
+          "memo": "garage door repair",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-04",
           "merchant": "Ace Hardware",
           "amount": 17.76,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-04",
           "merchant": "The Home Depot",
           "amount": 56.67,
-          "memo": "air conditioner support for tenant"
+          "memo": "air conditioner support for tenant",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-09",
           "merchant": "Ace Hardware",
           "amount": 41.44,
-          "memo": "stair tread safety equipment"
+          "memo": "stair tread safety equipment",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-10",
           "merchant": "True Value",
           "amount": 7.63,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-10",
           "merchant": "The Home Depot",
           "amount": 261.6,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-10",
           "merchant": "True Value",
           "amount": 22.9,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-12",
           "merchant": "True Value",
           "amount": 14.17,
-          "memo": "air conditioner cleaning spray"
+          "memo": "air conditioner cleaning spray",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-12",
           "merchant": "True Value",
           "amount": 32.14,
-          "memo": "air conditioner filter replacement"
+          "memo": "air conditioner filter replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-12",
           "merchant": "True Value",
           "amount": 36.53,
-          "memo": "GFCI outlet replacement"
+          "memo": "GFCI outlet replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-12",
           "merchant": "Ace Hardware",
           "amount": 101.66,
-          "memo": "R&M contractor supplies"
+          "memo": "R&M contractor supplies",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-16",
           "merchant": "Ace Hardware",
           "amount": 45.81,
-          "memo": "timer replacememt for sprinklers"
+          "memo": "timer replacememt for sprinklers",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-16",
           "merchant": "Lowe's",
           "amount": 83.91,
-          "memo": "Interior door replacement amd door knobs"
+          "memo": "Interior door replacement amd door knobs",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-22",
           "merchant": "True Value",
           "amount": 31.63,
-          "memo": "2-stroke fuel for chainsaw"
+          "memo": "2-stroke fuel for chainsaw",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 22.54,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-24",
           "merchant": "Ace Hardware",
           "amount": 730.96,
-          "memo": "R&M contractor supplies"
+          "memo": "R&M contractor supplies",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-25",
           "merchant": "True Value",
           "amount": 26.16,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-25",
           "merchant": "Ace Hardware",
           "amount": 69.79,
-          "memo": "Repair and maintenance materials for property upkeep"
+          "memo": "Repair and maintenance materials for property upkeep",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-26",
           "merchant": "True Value",
           "amount": 29.66,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-30",
           "merchant": "Ace Hardware",
           "amount": 99,
-          "memo": "Repair and maintenance materials"
+          "memo": "Repair and maintenance materials",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -2037,37 +2194,43 @@
           "date": "2026-06-02",
           "merchant": "Reliable Parts",
           "amount": 52.2,
-          "memo": "oven bake element replacement"
+          "memo": "oven bake element replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-04",
           "merchant": "Division One Plumbing",
           "amount": 1840,
-          "memo": "M405-7 Plumbing repair project"
+          "memo": "M405-7 Plumbing repair project",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-05",
           "merchant": "The Home Depot",
           "amount": 69.74,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-11",
           "merchant": "The Home Depot",
           "amount": 223.09,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-30",
           "merchant": "Night Owl Security Products",
           "amount": 3.99,
-          "memo": ""
+          "memo": "",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-30",
           "merchant": "Night Owl Security Products",
           "amount": 3.99,
-          "memo": ""
+          "memo": "",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -2147,7 +2310,8 @@
           "date": "2026-06-19",
           "merchant": "DSR Construction & Handyman Services",
           "amount": 2805.2,
-          "memo": "DSR handyman services"
+          "memo": "DSR handyman services",
+          "cardholder": "Florencia Sola"
         }
       ],
       "labor_items": []
@@ -2163,7 +2327,8 @@
           "date": "2026-06-29",
           "merchant": "Redcliffe Electric",
           "amount": 390,
-          "memo": "Electrical repair at Missoula"
+          "memo": "Electrical repair at Missoula",
+          "cardholder": "Florencia Sola"
         }
       ],
       "labor_items": []
@@ -2179,67 +2344,78 @@
           "date": "2026-06-04",
           "merchant": "Reliable Parts",
           "amount": 303.8,
-          "memo": "dishwasher motor replacement parts"
+          "memo": "dishwasher motor replacement parts",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-09",
           "merchant": "Goodwill",
           "amount": 11,
-          "memo": "towels for water clean up"
+          "memo": "towels for water clean up",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-10",
           "merchant": "Reliable Parts",
           "amount": -165.23,
-          "memo": "Refund for dishwasher motor replacement parts"
+          "memo": "Refund for dishwasher motor replacement parts",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-11",
           "merchant": "Miller's Hardware",
           "amount": 21.55,
-          "memo": "mailbox lock and key copy"
+          "memo": "mailbox lock and key copy",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-15",
           "merchant": "Ace Hardware",
           "amount": 91.05,
-          "memo": "move-in repairs"
+          "memo": "move-in repairs",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-16",
           "merchant": "Miller's Hardware",
           "amount": 25.07,
-          "memo": "shower neck replacement"
+          "memo": "shower neck replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-18",
           "merchant": "The Home Depot",
           "amount": 111.82,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-26",
           "merchant": "The Home Depot",
           "amount": 184.38,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-30",
           "merchant": "Handyman Electric",
           "amount": 597.87,
-          "memo": "Handyman electric"
+          "memo": "Handyman electric",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 156.93,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 118.92,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -2340,31 +2516,36 @@
           "date": "2026-06-02",
           "merchant": "M&L Supply.Co",
           "amount": 399.5,
-          "memo": "General R&M material repair"
+          "memo": "General R&M material repair",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-04",
           "merchant": "The Home Depot",
           "amount": 65.53,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-05",
           "merchant": "Ace Hardware",
           "amount": 46.87,
-          "memo": "pest control bait and traps"
+          "memo": "pest control bait and traps",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-16",
           "merchant": "Ace Hardware",
           "amount": 3.36,
-          "memo": "shower faucet repair"
+          "memo": "shower faucet repair",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 214.86,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -2472,37 +2653,43 @@
           "date": "2026-06-02",
           "merchant": "Griggs Department Store",
           "amount": 30.48,
-          "memo": "Purchased co2 detector to replace broken one"
+          "memo": "Purchased co2 detector to replace broken one",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-02",
           "merchant": "Ace Hardware",
           "amount": 20.87,
-          "memo": "Purchased batteries to replaced used up ones in carbon monoxide detector"
+          "memo": "Purchased batteries to replaced used up ones in carbon monoxide detector",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-05",
           "merchant": "Griggs Department Store",
           "amount": 57.68,
-          "memo": "Purchased light bulbs to replace burnt out ones"
+          "memo": "Purchased light bulbs to replace burnt out ones",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-12",
           "merchant": "Partselect.Com",
           "amount": 262.94,
-          "memo": "Replacement appliance component parts"
+          "memo": "Replacement appliance component parts",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-16",
           "merchant": "The Home Depot",
           "amount": 28.22,
-          "memo": "R&M supplies purchase\nTZV5D5J"
+          "memo": "R&M supplies purchase\nTZV5D5J",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-24",
           "merchant": "Griggs Department Store",
           "amount": 130.67,
-          "memo": "Purchased garbage disposal to replace broken one"
+          "memo": "Purchased garbage disposal to replace broken one",
+          "cardholder": "Jaxson Lakins"
         }
       ],
       "labor_items": [
@@ -2638,13 +2825,15 @@
           "date": "2026-06-10",
           "merchant": "Ace Hardware",
           "amount": 45.81,
-          "memo": "lock replacement for tenant"
+          "memo": "lock replacement for tenant",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-27",
           "merchant": "Roto-Rooter",
           "amount": 518.4,
-          "memo": "Professional plumbing repair services for property maintenance"
+          "memo": "Professional plumbing repair services for property maintenance",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -2696,7 +2885,8 @@
           "date": "2026-06-24",
           "merchant": "Sunshine Disposal & Recycling",
           "amount": 22.81,
-          "memo": "dump run debris disposal"
+          "memo": "dump run debris disposal",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -2706,102 +2896,6 @@
           "hours": 2,
           "wage": 42.660000000000004,
           "cost": 85.32
-        }
-      ]
-    },
-    {
-      "property": "S129",
-      "code": "s129",
-      "appfolio_actual": 1063.17,
-      "ramp_total": 516.18,
-      "labor_total": 565.23,
-      "ramp_items": [
-        {
-          "date": "2026-06-04",
-          "merchant": "Lowe's",
-          "amount": 148.17,
-          "memo": "General maintenance hardware and materials"
-        },
-        {
-          "date": "2026-06-04",
-          "merchant": "Peters Hardware",
-          "amount": 17.43,
-          "memo": "R&M materials and tools"
-        },
-        {
-          "date": "2026-06-15",
-          "merchant": "The Home Depot",
-          "amount": 9.79,
-          "memo": "dishwasher cleaner for maintenance"
-        },
-        {
-          "date": "2026-06-15",
-          "merchant": "Reliable Parts",
-          "amount": 123.07,
-          "memo": "dishwasher repair parts"
-        },
-        {
-          "date": "2026-06-18",
-          "merchant": "Advanced Fire Systems",
-          "amount": 150,
-          "memo": "fire extinguisher replacement"
-        },
-        {
-          "date": "2026-06-23",
-          "merchant": "Lowe's",
-          "amount": 67.72,
-          "memo": "emergency stair tread repair"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-06-02",
-          "name": "Wade Hippen",
-          "hours": 1.98,
-          "wage": 42.660000000000004,
-          "cost": 84.61
-        },
-        {
-          "date": "2026-06-04",
-          "name": "Justin Gutierrez",
-          "hours": 2,
-          "wage": 37.5,
-          "cost": 75
-        },
-        {
-          "date": "2026-06-05",
-          "name": "Justin Gutierrez",
-          "hours": 2,
-          "wage": 37.5,
-          "cost": 75
-        },
-        {
-          "date": "2026-06-09",
-          "name": "Wade Hippen",
-          "hours": 1.98,
-          "wage": 42.660000000000004,
-          "cost": 84.61
-        },
-        {
-          "date": "2026-06-11",
-          "name": "Wade Hippen",
-          "hours": 1.1,
-          "wage": 42.660000000000004,
-          "cost": 46.93
-        },
-        {
-          "date": "2026-06-15",
-          "name": "Wade Hippen",
-          "hours": 2,
-          "wage": 42.660000000000004,
-          "cost": 85.32
-        },
-        {
-          "date": "2026-06-23",
-          "name": "Wade Hippen",
-          "hours": 2.67,
-          "wage": 42.660000000000004,
-          "cost": 113.76
         }
       ]
     },
@@ -2816,19 +2910,22 @@
           "date": "2026-06-01",
           "merchant": "Reliable Parts",
           "amount": 42.39,
-          "memo": "power block replacememt"
+          "memo": "power block replacememt",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-01",
           "merchant": "Reliable Parts",
           "amount": 191.88,
-          "memo": "Whirlpool washer replacement timer"
+          "memo": "Whirlpool washer replacement timer",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-20",
           "merchant": "Advanced Fire Systems",
           "amount": 163.5,
-          "memo": "p705 R&M contractor fire extinguisher"
+          "memo": "p705 R&M contractor fire extinguisher",
+          "cardholder": "Hanzhao Meng"
         }
       ],
       "labor_items": [
@@ -2901,37 +2998,43 @@
           "date": "2026-06-08",
           "merchant": "The Home Depot",
           "amount": 30.52,
-          "memo": "CO alarm replacement"
+          "memo": "CO alarm replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-17",
           "merchant": "The Home Depot",
           "amount": 136.9,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-19",
           "merchant": "The Home Depot",
           "amount": 89.31,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-19",
           "merchant": "Ace Hardware",
           "amount": 10.89,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-25",
           "merchant": "Ace Hardware",
           "amount": 207.27,
-          "memo": "Repair and maintenance materials for property upkeep"
+          "memo": "Repair and maintenance materials for property upkeep",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-29",
           "merchant": "Ace Hardware",
           "amount": 14.16,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -2976,13 +3079,15 @@
           "date": "2026-06-22",
           "merchant": "Lowe's",
           "amount": 33.03,
-          "memo": "Purchased rubber couplers to fix broken cast iron pipe and purchased ptrap washers to replace broke ones"
+          "memo": "Purchased rubber couplers to fix broken cast iron pipe and purchased ptrap washers to replace broke ones",
+          "cardholder": "Jaxson Lakins"
         },
         {
           "date": "2026-06-29",
           "merchant": "The Home Depot",
           "amount": 53.26,
-          "memo": "Purchased anode rod for water heater to replace old one"
+          "memo": "Purchased anode rod for water heater to replace old one",
+          "cardholder": "Jaxson Lakins"
         }
       ],
       "labor_items": [
@@ -3069,13 +3174,15 @@
           "date": "2026-06-09",
           "merchant": "Reliable Parts",
           "amount": 231.79,
-          "memo": "washer timer replacement"
+          "memo": "washer timer replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 132.28,
-          "memo": "exterior spigot repair"
+          "memo": "exterior spigot repair",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -3106,25 +3213,29 @@
           "date": "2026-06-11",
           "merchant": "The Home Depot",
           "amount": 167.7,
-          "memo": "toilet repair"
+          "memo": "toilet repair",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-16",
           "merchant": "PayRange",
           "amount": 25,
-          "memo": "Laundry machine repair materials"
+          "memo": "Laundry machine repair materials",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-18",
           "merchant": "The Home Depot",
           "amount": 29.63,
-          "memo": "Repair and maintenance supplies"
+          "memo": "Repair and maintenance supplies",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-23",
           "merchant": "The Home Depot",
           "amount": 43.85,
-          "memo": "General repair maintenance materials"
+          "memo": "General repair maintenance materials",
+          "cardholder": "Jonas Hoard"
         }
       ],
       "labor_items": [
@@ -3190,7 +3301,8 @@
           "date": "2026-06-22",
           "merchant": "Ace Hardware",
           "amount": 29,
-          "memo": "Fasteners and screws for securing wall"
+          "memo": "Fasteners and screws for securing wall",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": []
@@ -3206,31 +3318,36 @@
           "date": "2026-06-05",
           "merchant": "Ace Hardware",
           "amount": 45.81,
-          "memo": "door closer for building rear door"
+          "memo": "door closer for building rear door",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-12",
           "merchant": "Ace Hardware",
           "amount": 80.71,
-          "memo": "New toilet seat for tenant"
+          "memo": "New toilet seat for tenant",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-16",
           "merchant": "Ace Hardware",
           "amount": 37.14,
-          "memo": "supplies for repairing roof"
+          "memo": "supplies for repairing roof",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-18",
           "merchant": "Ace Hardware",
           "amount": 70.84,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-19",
           "merchant": "Ace Hardware",
           "amount": 26.94,
-          "memo": "R&M materials and tools"
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -3289,19 +3406,22 @@
           "date": "2026-06-03",
           "merchant": "The Home Depot",
           "amount": 76.27,
-          "memo": "digital deadbolt replacement"
+          "memo": "digital deadbolt replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-04",
           "merchant": "The Home Depot",
           "amount": 110.4,
-          "memo": "gravel to fill pot holes"
+          "memo": "gravel to fill pot holes",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 181.52,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -3339,19 +3459,22 @@
           "date": "2026-06-10",
           "merchant": "Lowe's",
           "amount": 19.66,
-          "memo": "T3KN9HIB-caulking supplies"
+          "memo": "T3KN9HIB-caulking supplies",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-17",
           "merchant": "Lowe's",
           "amount": 16,
-          "memo": "TXHVVYP-soffit plugs"
+          "memo": "TXHVVYP-soffit plugs",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-17",
           "merchant": "The Home Depot",
           "amount": 149.71,
-          "memo": "TKI58CR-rot repair and oaint supplies"
+          "memo": "TKI58CR-rot repair and oaint supplies",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": []
@@ -3367,19 +3490,22 @@
           "date": "2026-06-08",
           "merchant": "Ace Hardware",
           "amount": 39.24,
-          "memo": "air conditioner cleaning supplies"
+          "memo": "air conditioner cleaning supplies",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-12",
           "merchant": "Amazon",
           "amount": 10.9,
-          "memo": "outlet adapters"
+          "memo": "outlet adapters",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-15",
           "merchant": "The Home Depot",
           "amount": 25.62,
-          "memo": "GFCI outlet replacement"
+          "memo": "GFCI outlet replacement",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -3424,13 +3550,15 @@
           "date": "2026-06-02",
           "merchant": "The Home Depot",
           "amount": 176.56,
-          "memo": "General maintenance hardware and materials"
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
         },
         {
           "date": "2026-06-03",
           "merchant": "Ace Hardware",
           "amount": 16.31,
-          "memo": "Groundskeeping supplies and materials"
+          "memo": "Groundskeeping supplies and materials",
+          "cardholder": "Hannah Deckard"
         }
       ],
       "labor_items": [
@@ -3475,13 +3603,15 @@
           "date": "2026-06-22",
           "merchant": "Amazon",
           "amount": 47.99,
-          "memo": "door handle replacement"
+          "memo": "door handle replacement",
+          "cardholder": "Wade Hippen"
         },
         {
           "date": "2026-06-25",
           "merchant": "American Lock & Key",
           "amount": 82.03,
-          "memo": "Locksmith services for property maintenance"
+          "memo": "Locksmith services for property maintenance",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -3526,7 +3656,8 @@
           "date": "2026-06-02",
           "merchant": "PayRange",
           "amount": 25,
-          "memo": "PayRange maintenance service"
+          "memo": "PayRange maintenance service",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -3557,7 +3688,8 @@
           "date": "2026-06-17",
           "merchant": "Ace Hardware",
           "amount": 56.15,
-          "memo": "shower handle repair"
+          "memo": "shower handle repair",
+          "cardholder": "Wade Hippen"
         }
       ],
       "labor_items": [
@@ -3595,7 +3727,8 @@
           "date": "2026-06-09",
           "merchant": "Miller's Hardware",
           "amount": 43.06,
-          "memo": "R&M contractor supplies"
+          "memo": "R&M contractor supplies",
+          "cardholder": "Justin Gutierrez"
         }
       ],
       "labor_items": [
@@ -3654,6 +3787,108 @@
       ]
     },
     {
+      "property": "S129",
+      "code": "s129",
+      "appfolio_actual": null,
+      "ramp_total": 516.18,
+      "labor_total": 565.23,
+      "ramp_items": [
+        {
+          "date": "2026-06-04",
+          "merchant": "Lowe's",
+          "amount": 148.17,
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Peters Hardware",
+          "amount": 17.43,
+          "memo": "R&M materials and tools",
+          "cardholder": "Justin Gutierrez"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "The Home Depot",
+          "amount": 9.79,
+          "memo": "dishwasher cleaner for maintenance",
+          "cardholder": "Wade Hippen"
+        },
+        {
+          "date": "2026-06-15",
+          "merchant": "Reliable Parts",
+          "amount": 123.07,
+          "memo": "dishwasher repair parts",
+          "cardholder": "Wade Hippen"
+        },
+        {
+          "date": "2026-06-18",
+          "merchant": "Advanced Fire Systems",
+          "amount": 150,
+          "memo": "fire extinguisher replacement",
+          "cardholder": "Wade Hippen"
+        },
+        {
+          "date": "2026-06-23",
+          "merchant": "Lowe's",
+          "amount": 67.72,
+          "memo": "emergency stair tread repair",
+          "cardholder": "Wade Hippen"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-02",
+          "name": "Wade Hippen",
+          "hours": 1.98,
+          "wage": 42.660000000000004,
+          "cost": 84.61
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Justin Gutierrez",
+          "hours": 2,
+          "wage": 37.5,
+          "cost": 75
+        },
+        {
+          "date": "2026-06-05",
+          "name": "Justin Gutierrez",
+          "hours": 2,
+          "wage": 37.5,
+          "cost": 75
+        },
+        {
+          "date": "2026-06-09",
+          "name": "Wade Hippen",
+          "hours": 1.98,
+          "wage": 42.660000000000004,
+          "cost": 84.61
+        },
+        {
+          "date": "2026-06-11",
+          "name": "Wade Hippen",
+          "hours": 1.1,
+          "wage": 42.660000000000004,
+          "cost": 46.93
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Wade Hippen",
+          "hours": 2,
+          "wage": 42.660000000000004,
+          "cost": 85.32
+        },
+        {
+          "date": "2026-06-23",
+          "name": "Wade Hippen",
+          "hours": 2.67,
+          "wage": 42.660000000000004,
+          "cost": 113.76
+        }
+      ]
+    },
+    {
       "property": "L925",
       "code": "l925",
       "appfolio_actual": null,
@@ -3683,67 +3918,78 @@
           "date": "2026-06-02",
           "merchant": "Northwest Power Equipment",
           "amount": 451.47,
-          "memo": "Grounds equipment parts"
+          "memo": "Grounds equipment parts",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-04",
           "merchant": "ULINE",
           "amount": 25.37,
-          "memo": "returns"
+          "memo": "returns",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-10",
           "merchant": "The Home Depot",
           "amount": 69.87,
-          "memo": "Nondiscretionary shop supplies"
+          "memo": "Nondiscretionary shop supplies",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-15",
           "merchant": "Lowe's",
           "amount": 130.71,
-          "memo": "General repair maintenance materials"
+          "memo": "General repair maintenance materials",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-16",
           "merchant": "The Home Depot",
           "amount": 51.83,
-          "memo": "Nondiscretionary shop supplies"
+          "memo": "Nondiscretionary shop supplies",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-16",
           "merchant": "Lowe's",
           "amount": 22.91,
-          "memo": "Maintenance repair supplies"
+          "memo": "Maintenance repair supplies",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-17",
           "merchant": "Ace Hardware",
           "amount": 94.62,
-          "memo": "landscape tools"
+          "memo": "landscape tools",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-17",
           "merchant": "Waste Management",
           "amount": 63.84,
-          "memo": "Waste management grounds materials"
+          "memo": "Waste management grounds materials",
+          "cardholder": "Reynaldo Leonides"
         },
         {
           "date": "2026-06-19",
           "merchant": "Richland Energy Services",
           "amount": 30,
-          "memo": "Garbage disposal usage fee"
+          "memo": "Garbage disposal usage fee",
+          "cardholder": "Hannah Deckard"
         },
         {
           "date": "2026-06-19",
           "merchant": "Richland Energy Services",
           "amount": 30,
-          "memo": "Garbage disposal usage fees"
+          "memo": "Garbage disposal usage fees",
+          "cardholder": "Hannah Deckard"
         },
         {
           "date": "2026-06-20",
           "merchant": "Duo Cleaning Compa",
           "amount": 220,
-          "memo": "kn47-k1 office cleaning grounds contractor"
+          "memo": "kn47-k1 office cleaning grounds contractor",
+          "cardholder": "Hanzhao Meng"
         }
       ],
       "labor_items": [
@@ -4145,31 +4391,36 @@
           "date": "2026-06-01",
           "merchant": "Mirage Pool N Spa",
           "amount": 295.5,
-          "memo": "Pool maintenance supplies"
+          "memo": "Pool maintenance supplies",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-01",
           "merchant": "Pye-Barker Fire & Safety",
           "amount": 387.81,
-          "memo": "rl16 monthly security"
+          "memo": "rl16 monthly security",
+          "cardholder": "Hanzhao Meng"
         },
         {
           "date": "2026-06-02",
           "merchant": "Energy Source Pools",
           "amount": 89.98,
-          "memo": "Pool chemicals and maintenance supplies"
+          "memo": "Pool chemicals and maintenance supplies",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-04",
           "merchant": "Energy Source Pools",
           "amount": 81.29,
-          "memo": "Pool maintenance repair supplies"
+          "memo": "Pool maintenance repair supplies",
+          "cardholder": "Jared Miller"
         },
         {
           "date": "2026-06-18",
           "merchant": "Safeway",
           "amount": 26.07,
-          "memo": "Water for shop use"
+          "memo": "Water for shop use",
+          "cardholder": "Reynaldo Leonides"
         }
       ],
       "labor_items": [
@@ -4473,61 +4724,71 @@
           "date": "2026-06-04",
           "merchant": "True Value",
           "amount": 45.24,
-          "memo": "Grounds maintenance material supplies"
+          "memo": "Grounds maintenance material supplies",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-04",
           "merchant": "Ace Hardware",
           "amount": 131,
-          "memo": "Grounds maintenance hardware materials"
+          "memo": "Grounds maintenance hardware materials",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-05",
           "merchant": "True Value",
           "amount": 12.54,
-          "memo": "Grounds maintenance material supplies"
+          "memo": "Grounds maintenance material supplies",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-05",
           "merchant": "Ace Hardware",
           "amount": 103,
-          "memo": "Grounds maintenance hardware materials"
+          "memo": "Grounds maintenance hardware materials",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-12",
           "merchant": "Spokane Waste To Energy",
           "amount": 20.7,
-          "memo": "Waste management utility services"
+          "memo": "Waste management utility services",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-22",
           "merchant": "North 40 Outfitters",
           "amount": 22.86,
-          "memo": "Grounds maintenance material supplies"
+          "memo": "Grounds maintenance material supplies",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-25",
           "merchant": "North 40 Outfitters",
           "amount": 790.23,
-          "memo": "Property maintenance or renovation supplies"
+          "memo": "Property maintenance or renovation supplies",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-25",
           "merchant": "Ace Hardware",
           "amount": 164.41,
-          "memo": "Nondiscretionary maintenance hardware for property upkeep"
+          "memo": "Nondiscretionary maintenance hardware for property upkeep",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-26",
           "merchant": "Spokane Waste To Energy",
           "amount": 27.61,
-          "memo": "Waste management services"
+          "memo": "Waste management services",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-30",
           "merchant": "The Home Depot",
           "amount": 52.3,
-          "memo": "Grounds maintenance materials"
+          "memo": "Grounds maintenance materials",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -4607,7 +4868,8 @@
           "date": "2026-06-01",
           "merchant": "The Home Depot",
           "amount": 91.9,
-          "memo": "tools"
+          "memo": "tools",
+          "cardholder": "Jonas Hoard"
         }
       ],
       "labor_items": [
@@ -4680,37 +4942,43 @@
           "date": "2026-06-02",
           "merchant": "SiteOne",
           "amount": 46.18,
-          "memo": "Grounds maintenance material supplies"
+          "memo": "Grounds maintenance material supplies",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-10",
           "merchant": "The Home Depot",
           "amount": 80.08,
-          "memo": "Grounds maintenance materials"
+          "memo": "Grounds maintenance materials",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-18",
           "merchant": "Spokane Waste To Energy",
           "amount": 27.61,
-          "memo": "Grounds maintenance waste disposal"
+          "memo": "Grounds maintenance waste disposal",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-19",
           "merchant": "The Home Depot",
           "amount": 103.9,
-          "memo": "grounds maintenance material"
+          "memo": "grounds maintenance material",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 59,
-          "memo": "Hardware for grounds upkeep"
+          "memo": "Hardware for grounds upkeep",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-23",
           "merchant": "Ace Hardware",
           "amount": 58,
-          "memo": "Hardware for grounds upkeep"
+          "memo": "Hardware for grounds upkeep",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -4996,25 +5264,29 @@
           "date": "2026-06-08",
           "merchant": "Spokane Waste To Energy",
           "amount": 21.31,
-          "memo": "Waste management utility services"
+          "memo": "Waste management utility services",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-17",
           "merchant": "Ace Hardware",
           "amount": 10.89,
-          "memo": "Grounds maintenance materials"
+          "memo": "Grounds maintenance materials",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-17",
           "merchant": "SiteOne",
           "amount": 203.47,
-          "memo": "Grounds maintenance material supplies"
+          "memo": "Grounds maintenance material supplies",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-30",
           "merchant": "Spokane Waste To Energy",
           "amount": 59.42,
-          "memo": "dump run"
+          "memo": "dump run",
+          "cardholder": "Micheal Magoon"
         }
       ],
       "labor_items": [
@@ -5115,13 +5387,15 @@
           "date": "2026-06-03",
           "merchant": "The Home Depot",
           "amount": 80.35,
-          "memo": "ground maintenance material"
+          "memo": "ground maintenance material",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-26",
           "merchant": "The Home Depot",
           "amount": 15.56,
-          "memo": "Grounds maintenance materials"
+          "memo": "Grounds maintenance materials",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -5229,7 +5503,8 @@
           "date": "2026-06-29",
           "merchant": "Ace Hardware",
           "amount": 40.7,
-          "memo": "Nondiscretionary maintenance hardware"
+          "memo": "Nondiscretionary maintenance hardware",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -5337,25 +5612,29 @@
           "date": "2026-06-01",
           "merchant": "Waste Management",
           "amount": 64.73,
-          "memo": "Waste management utility services"
+          "memo": "Waste management utility services",
+          "cardholder": "Hannah Deckard"
         },
         {
           "date": "2026-06-01",
           "merchant": "Waste Management",
           "amount": 64.73,
-          "memo": "Waste management utility services"
+          "memo": "Waste management utility services",
+          "cardholder": "Hannah Deckard"
         },
         {
           "date": "2026-06-01",
           "merchant": "Waste Management",
           "amount": 64.73,
-          "memo": "Waste management utility services"
+          "memo": "Waste management utility services",
+          "cardholder": "Hannah Deckard"
         },
         {
           "date": "2026-06-16",
           "merchant": "Ace Hardware",
           "amount": 36,
-          "memo": "Grounds maintenance hardware materials"
+          "memo": "Grounds maintenance hardware materials",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -5640,25 +5919,29 @@
           "date": "2026-06-17",
           "merchant": "Ace Hardware",
           "amount": 26,
-          "memo": "Groundskeeping maintenance supplies"
+          "memo": "Groundskeeping maintenance supplies",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-18",
           "merchant": "Ace Hardware",
           "amount": 4,
-          "memo": "Nondiscretionary maintenance hardware for general grounds upkeep/ TLZ2BPCB"
+          "memo": "Nondiscretionary maintenance hardware for general grounds upkeep/ TLZ2BPCB",
+          "cardholder": "David Sanchez"
         },
         {
           "date": "2026-06-25",
           "merchant": "Spokane Waste To Energy",
           "amount": 25.56,
-          "memo": "dump run"
+          "memo": "dump run",
+          "cardholder": "Micheal Magoon"
         },
         {
           "date": "2026-06-25",
           "merchant": "Spokane Waste To Energy",
           "amount": 20.7,
-          "memo": "dump run"
+          "memo": "dump run",
+          "cardholder": "Micheal Magoon"
         }
       ],
       "labor_items": [
@@ -5724,13 +6007,15 @@
           "date": "2026-06-12",
           "merchant": "U-Haul",
           "amount": 114.36,
-          "memo": "truck for trash out"
+          "memo": "truck for trash out",
+          "cardholder": "Jonas Hoard"
         },
         {
           "date": "2026-06-15",
           "merchant": "Solid Waste",
           "amount": 187,
-          "memo": "unit trash out"
+          "memo": "unit trash out",
+          "cardholder": "Jonas Hoard"
         }
       ],
       "labor_items": []
@@ -5833,7 +6118,8 @@
           "date": "2026-06-30",
           "merchant": "Ace Hardware",
           "amount": 136.35,
-          "memo": "Nondiscretionary maintenance hardware"
+          "memo": "Nondiscretionary maintenance hardware",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -6191,7 +6477,8 @@
           "date": "2026-06-02",
           "merchant": "Spokane Waste To Energy",
           "amount": 11.39,
-          "memo": "Waste management utility services"
+          "memo": "Waste management utility services",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -6271,7 +6558,8 @@
           "date": "2026-06-11",
           "merchant": "Spokane Waste To Energy",
           "amount": 10.87,
-          "memo": "Waste management services"
+          "memo": "Waste management services",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -6421,99 +6709,6 @@
       ]
     },
     {
-      "property": "S129",
-      "code": "s129",
-      "appfolio_actual": 386,
-      "ramp_total": 49.07,
-      "labor_total": 329,
-      "ramp_items": [
-        {
-          "date": "2026-06-04",
-          "merchant": "Spokane Waste To Energy",
-          "amount": 28.37,
-          "memo": "Waste management utility services"
-        },
-        {
-          "date": "2026-06-04",
-          "merchant": "Spokane Waste To Energy",
-          "amount": 20.7,
-          "memo": "Grounds maintenance waste removal"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-06-04",
-          "name": "Alexander Overall",
-          "hours": 1.77,
-          "wage": 36,
-          "cost": 63.6
-        },
-        {
-          "date": "2026-06-04",
-          "name": "David Sanchez",
-          "hours": 1.9,
-          "wage": 38.25,
-          "cost": 72.68
-        },
-        {
-          "date": "2026-06-08",
-          "name": "Alexander Overall",
-          "hours": 0.23,
-          "wage": 36,
-          "cost": 8.4
-        },
-        {
-          "date": "2026-06-08",
-          "name": "David Sanchez",
-          "hours": 0.23,
-          "wage": 38.25,
-          "cost": 8.93
-        },
-        {
-          "date": "2026-06-15",
-          "name": "Alexander Overall",
-          "hours": 0.9,
-          "wage": 36,
-          "cost": 32.4
-        },
-        {
-          "date": "2026-06-15",
-          "name": "David Sanchez",
-          "hours": 0.88,
-          "wage": 38.25,
-          "cost": 33.79
-        },
-        {
-          "date": "2026-06-22",
-          "name": "Alexander Overall",
-          "hours": 0.87,
-          "wage": 36,
-          "cost": 31.2
-        },
-        {
-          "date": "2026-06-22",
-          "name": "David Sanchez",
-          "hours": 0.65,
-          "wage": 38.25,
-          "cost": 24.86
-        },
-        {
-          "date": "2026-06-29",
-          "name": "Alexander Overall",
-          "hours": 0.47,
-          "wage": 36,
-          "cost": 16.8
-        },
-        {
-          "date": "2026-06-29",
-          "name": "David Sanchez",
-          "hours": 0.95,
-          "wage": 38.25,
-          "cost": 36.34
-        }
-      ]
-    },
-    {
       "property": "S300",
       "code": "s300",
       "appfolio_actual": 339.44,
@@ -6524,7 +6719,8 @@
           "date": "2026-06-08",
           "merchant": "Spokane Waste To Energy",
           "amount": 11.39,
-          "memo": "Site cleanup waste removal"
+          "memo": "Site cleanup waste removal",
+          "cardholder": "David Sanchez"
         }
       ],
       "labor_items": [
@@ -6694,7 +6890,8 @@
           "date": "2026-06-03",
           "merchant": "Montana Maid Perfect Cleaning Services",
           "amount": 304.2,
-          "memo": "Turn: Turn - Contractor expenses"
+          "memo": "Turn: Turn - Contractor expenses",
+          "cardholder": "Josh Bird"
         }
       ],
       "labor_items": []
@@ -6790,7 +6987,8 @@
           "date": "2026-06-03",
           "merchant": "Montana Maid Perfect Cleaning Services",
           "amount": 238,
-          "memo": "Turn: Turn - Contractor expenses"
+          "memo": "Turn: Turn - Contractor expenses",
+          "cardholder": "Josh Bird"
         }
       ],
       "labor_items": []
@@ -6806,10 +7004,106 @@
           "date": "2026-06-16",
           "merchant": "Simplisafe",
           "amount": 35.99,
-          "memo": ""
+          "memo": "",
+          "cardholder": "Lee Roy Phillips"
         }
       ],
       "labor_items": []
+    },
+    {
+      "property": "S129",
+      "code": "s129",
+      "appfolio_actual": null,
+      "ramp_total": 49.07,
+      "labor_total": 329,
+      "ramp_items": [
+        {
+          "date": "2026-06-04",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 28.37,
+          "memo": "Waste management utility services",
+          "cardholder": "David Sanchez"
+        },
+        {
+          "date": "2026-06-04",
+          "merchant": "Spokane Waste To Energy",
+          "amount": 20.7,
+          "memo": "Grounds maintenance waste removal",
+          "cardholder": "David Sanchez"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-06-04",
+          "name": "Alexander Overall",
+          "hours": 1.77,
+          "wage": 36,
+          "cost": 63.6
+        },
+        {
+          "date": "2026-06-04",
+          "name": "David Sanchez",
+          "hours": 1.9,
+          "wage": 38.25,
+          "cost": 72.68
+        },
+        {
+          "date": "2026-06-08",
+          "name": "Alexander Overall",
+          "hours": 0.23,
+          "wage": 36,
+          "cost": 8.4
+        },
+        {
+          "date": "2026-06-08",
+          "name": "David Sanchez",
+          "hours": 0.23,
+          "wage": 38.25,
+          "cost": 8.93
+        },
+        {
+          "date": "2026-06-15",
+          "name": "Alexander Overall",
+          "hours": 0.9,
+          "wage": 36,
+          "cost": 32.4
+        },
+        {
+          "date": "2026-06-15",
+          "name": "David Sanchez",
+          "hours": 0.88,
+          "wage": 38.25,
+          "cost": 33.79
+        },
+        {
+          "date": "2026-06-22",
+          "name": "Alexander Overall",
+          "hours": 0.87,
+          "wage": 36,
+          "cost": 31.2
+        },
+        {
+          "date": "2026-06-22",
+          "name": "David Sanchez",
+          "hours": 0.65,
+          "wage": 38.25,
+          "cost": 24.86
+        },
+        {
+          "date": "2026-06-29",
+          "name": "Alexander Overall",
+          "hours": 0.47,
+          "wage": 36,
+          "cost": 16.8
+        },
+        {
+          "date": "2026-06-29",
+          "name": "David Sanchez",
+          "hours": 0.95,
+          "wage": 38.25,
+          "cost": 36.34
+        }
+      ]
     }
   ]
 }
