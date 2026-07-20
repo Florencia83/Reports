@@ -507,6 +507,23 @@ async function main() {
   const weekStart = dstr(monday);
   const weekEnd = dstr(today) < dstr(sunday) ? todayStr : dstr(sunday);
 
+  // Once a week closes (complete: true), every automated number in it -- Top 10,
+  // By Technician, Ramp Purchases, Operational Expenses, Monthly Budget, Cost by
+  // Property, and kpis[0]'s last_30/last_7 -- must freeze forever, same as the
+  // narrative/manual KPIs already do. Before this guard, re-running the script for
+  // an already-closed week (e.g. a bugfix backfill) silently reshuffled these every
+  // time (Florencia found this 2026-07-20). FORCE_REFRESH=1 overrides it for a
+  // deliberate one-off fix, same as this session's Turn-exclusion/QBT-outage backfills.
+  const outPathEarly = path.join(DATA_DIR, `weekly-${weekStart}.json`);
+  if (fs.existsSync(outPathEarly) && !process.env.FORCE_REFRESH) {
+    let priorEarly = null;
+    try { priorEarly = JSON.parse(fs.readFileSync(outPathEarly, 'utf8')); } catch (e) { /* fall through, treat as regenerate */ }
+    if (priorEarly && priorEarly.complete) {
+      console.log(`weekly-${weekStart}.json is already complete (closed ${priorEarly.week_end}) -- automated numbers are frozen, skipping. Set FORCE_REFRESH=1 to override.`);
+      return;
+    }
+  }
+
   const monthStart = todayStr.slice(0, 7) + '-01';
   const last30Start = dstr(daysAgo(29));
   const last7Start = dstr(daysAgo(6));
@@ -668,40 +685,11 @@ async function main() {
     lockQuarterValue('2026-Q2', 'Average Work Order Cost', kpis[0].q2);
   }
 
-  const weekJson = {
-    week_start: weekStart,
-    week_end: dstr(sunday),
-    label: weekLabel(monday, sunday),
-    month_label: monthName(today.getMonth()) + ' ' + today.getFullYear(),
-    generated_at: todayStr,
-    complete: weekEnd === dstr(sunday),
-    source: 'Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.',
-    kpis,
-    top_work_orders: topWorkOrders,
-    by_technician: byTechnician,
-    ramp_purchases_over_300: weekOver300,
-    operational_expenses: opex.buckets,
-    narrative: priorNarrative,
-    narrative_2: priorNarrative2,
-    priorities_next_week: priorPriorities,
-  };
-
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(outPath, JSON.stringify(weekJson, null, 2));
-  console.log('Wrote weekly-' + weekStart + '.json');
-
-  const manifestPath = path.join(DATA_DIR, 'weekly-manifest.json');
-  let manifest = { weeks: [] };
-  if (fs.existsSync(manifestPath)) manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-  manifest.generated_at = todayStr;
-  const existing = manifest.weeks.find(w => w.key === weekStart);
-  if (existing) { existing.label = weekJson.label; }
-  else { manifest.weeks.unshift({ key: weekStart, label: weekJson.label }); }
-  manifest.weeks.sort((a, b) => b.key.localeCompare(a.key));
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log('Updated weekly-manifest.json');
-
-  // ---- Month-to-date file: Monthly Budget + Cost by Property ----
+  // ---- Monthly Budget + Cost by Property (month-to-date, snapshotted into THIS
+  // week's own file so it freezes with everything else once the week closes --
+  // previously these lived only in the always-live weekly-mtd.json, so picking any
+  // past week on the site still showed today's current-month numbers, not that
+  // week's own. Florencia flagged this 2026-07-20.) ----
   const month = todayStr.slice(0, 7);
   const laborMTD = totalCost(monthLaborRecords);
   const materialsMTD = materialsBudgetTotal(monthRampRecords);
@@ -740,18 +728,50 @@ async function main() {
 
   // A whole month with zero budget data AND zero R&M spend is implausible -- treat it
   // as an upstream failure (AppFolio/Ramp/QBT auth or outage) rather than silently
-  // overwriting the last good weekly-mtd.json with empty figures.
+  // overwriting the last good file with empty figures.
   if (rmRepairsBudget == null && totalActual === 0) {
-    throw new Error('AppFolio, QBT, and Ramp all returned nothing for the month — likely an upstream failure, refusing to write weekly-mtd.json.');
+    throw new Error('AppFolio, QBT, and Ramp all returned nothing for the month — likely an upstream failure, refusing to write.');
   }
 
-  const mtdJson = {
-    month,
+  const weekJson = {
+    week_start: weekStart,
+    week_end: dstr(sunday),
+    label: weekLabel(monday, sunday),
+    month_label: monthName(today.getMonth()) + ' ' + today.getFullYear(),
     generated_at: todayStr,
-    source: 'AppFolio (R&M - Repairs budget, monthly + per-property) + QBT (labor + Ramp materials) — automated',
+    complete: weekEnd === dstr(sunday),
+    source: 'Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.',
+    kpis,
+    top_work_orders: topWorkOrders,
+    by_technician: byTechnician,
+    ramp_purchases_over_300: weekOver300,
+    operational_expenses: opex.buckets,
     monthly_budget: monthlyBudget,
     cost_by_property: costByProperty,
+    narrative: priorNarrative,
+    narrative_2: priorNarrative2,
+    priorities_next_week: priorPriorities,
   };
+
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(outPath, JSON.stringify(weekJson, null, 2));
+  console.log('Wrote weekly-' + weekStart + '.json');
+
+  const manifestPath = path.join(DATA_DIR, 'weekly-manifest.json');
+  let manifest = { weeks: [] };
+  if (fs.existsSync(manifestPath)) manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  manifest.generated_at = todayStr;
+  const existing = manifest.weeks.find(w => w.key === weekStart);
+  if (existing) { existing.label = weekJson.label; }
+  else { manifest.weeks.unshift({ key: weekStart, label: weekJson.label }); }
+  manifest.weeks.sort((a, b) => b.key.localeCompare(a.key));
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+  console.log('Updated weekly-manifest.json');
+
+  // weekly-mtd.json is kept as a quick always-current snapshot (nothing else reads
+  // it anymore -- report-weekly-update.html now reads monthly_budget/cost_by_property
+  // from the selected week's own file above).
+  const mtdJson = { month, generated_at: todayStr, monthly_budget: monthlyBudget, cost_by_property: costByProperty };
   fs.writeFileSync(path.join(DATA_DIR, 'weekly-mtd.json'), JSON.stringify(mtdJson, null, 2));
   console.log('Wrote weekly-mtd.json —', costByProperty.length, 'properties over budget this month');
 }

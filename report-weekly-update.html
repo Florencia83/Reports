@@ -394,13 +394,6 @@ function renderPriorities(items) {
 }
 
 var ts = Date.now();
-var mtdData = null;
-
-function renderMtdSections() {
-  if (!mtdData) return;
-  document.getElementById('budget-vs-spent-container').innerHTML = renderMonthlyBudget(mtdData);
-  document.getElementById('cost-by-property-container').innerHTML = renderCostByProperty(mtdData.cost_by_property);
-}
 
 function renderWeek(data) {
   document.getElementById('top-wo-label').textContent = 'Top 10 Work Orders — ' + data.month_label;
@@ -423,7 +416,8 @@ function renderWeek(data) {
   document.getElementById('narrative2-section').style.display = n2.visible ? '' : 'none';
   document.getElementById('narrative2-container').innerHTML = n2.html;
 
-  renderMtdSections();
+  document.getElementById('budget-vs-spent-container').innerHTML = renderMonthlyBudget(data);
+  document.getElementById('cost-by-property-container').innerHTML = renderCostByProperty(data.cost_by_property);
 
   document.getElementById('range-label').textContent = data.label;
   document.getElementById('sent-label').textContent = 'Data as of ' + data.generated_at;
@@ -435,8 +429,6 @@ function loadWeek(key) {
     document.getElementById('top-wo-container').innerHTML = '<div class="callout" style="font-size:13px;">Could not load data for this week: ' + err.message + '</div>';
   });
 }
-
-fetch('./data/weekly-mtd.json?_=' + ts).then(function(r) { return r.json(); }).then(function(data) { mtdData = data; renderMtdSections(); }).catch(function() {});
 
 fetch('./data/weekly-manifest.json?_=' + ts).then(function(r) { return r.json(); }).then(function(manifest) {
   var select = document.getElementById('week-select');

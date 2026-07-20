@@ -5,14 +5,14 @@
   "month_label": "July 2026",
   "generated_at": "2026-07-20",
   "complete": true,
-  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 48.46,
-      "last_7": 28.1
+      "last_30": 48.41,
+      "last_7": 28.56
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -61,7 +61,7 @@
     {
       "ref": "TVJCXAV",
       "property": "kn47",
-      "brief": "The pump lost its prime its no longer working.",
+      "brief": "Irrigation pump lost prime and stopped working",
       "labor": 0,
       "materials": 3202.01,
       "cost": 3202.01
@@ -77,7 +77,7 @@
     {
       "ref": "T3LAL2Q",
       "property": "b101",
-      "brief": "No Hot Water In Home",
+      "brief": "3 water heaters had broken heating elements",
       "labor": 66.67,
       "materials": 2365.3,
       "cost": 2431.97
@@ -93,7 +93,7 @@
     {
       "ref": "TZQE4L",
       "property": "tc68",
-      "brief": "see list below",
+      "brief": "Water heater replacement",
       "labor": 148.5,
       "materials": 925.73,
       "cost": 1074.23
@@ -101,7 +101,7 @@
     {
       "ref": "TU292CMB",
       "property": "kn47",
-      "brief": "Daily Pool Maintenance",
+      "brief": "Pool requirements from health department",
       "labor": 0,
       "materials": 445.9,
       "cost": 445.9
@@ -142,10 +142,10 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 100,
-      "avg_cost_per_wo": 30.52,
-      "total_labor_cost": 1391.91,
-      "avg_resident_rating": 4,
+      "wo_count": 102,
+      "avg_cost_per_wo": 30.88,
+      "total_labor_cost": 1469.16,
+      "avg_resident_rating": 4.25,
       "reviews": [
         {
           "ref": "TDIUJDW",
@@ -161,14 +161,19 @@
           "ref": "TB5PYAC",
           "rating": 4,
           "text": "Good job Jared"
+        },
+        {
+          "ref": "TV3HC42",
+          "rating": 5,
+          "text": "Outstanding!!!"
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 46,
-      "avg_cost_per_wo": 59.43,
-      "total_labor_cost": 1528,
+      "wo_count": 50,
+      "avg_cost_per_wo": 56.01,
+      "total_labor_cost": 1594.4,
       "avg_resident_rating": 4.5,
       "reviews": [
         {
@@ -214,17 +219,17 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 31,
-      "avg_cost_per_wo": 124.28,
-      "total_labor_cost": 650.7,
+      "wo_count": 32,
+      "avg_cost_per_wo": 120.71,
+      "total_labor_cost": 660.6,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 28,
-      "avg_cost_per_wo": 79.2,
-      "total_labor_cost": 536.4,
+      "wo_count": 30,
+      "avg_cost_per_wo": 83.25,
+      "total_labor_cost": 571.95,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -292,7 +297,38 @@
       "amount": 4447.97
     }
   ],
-  "narrative": null,
+  "monthly_budget": {
+    "budget": 67267.78,
+    "labor": 7818.29,
+    "materials": 17218.59,
+    "total_actual": 25036.88,
+    "variance": 42230.9
+  },
+  "cost_by_property": [
+    {
+      "property": "B101",
+      "labor": 66.67,
+      "materials": 2365.3,
+      "cost": 2431.97,
+      "budget": 671.7,
+      "pct_over_budget": 262.1
+    },
+    {
+      "property": "C302",
+      "labor": 303.33,
+      "materials": 750.1,
+      "cost": 1053.43,
+      "budget": 816.5,
+      "pct_over_budget": 29
+    }
+  ],
+  "narrative": [
+    "This week's metrics were affected by the backlog in Spokane and the submission of multiple emergency work orders, which pushed up completion times and speed of repair. A new team member was onboarded today, so we expect these numbers to revert.",
+    "Resident satisfaction dipped slightly due to a small number of reviews, including a 3-star rating.",
+    "Avg Vendor Completion Time has risen again.",
+    "In the Top 10 Work Orders, the irrigation pump repair leads the list, followed by the L912 insulation and leak repairs, and B101's three water heaters with broken heating elements. Other notable items include a water heater replacement at TC68 and pool requirements from the health department.",
+    "In the Maintenance Team KPIs, the cost per work order is similar to last week."
+  ],
   "narrative_2": null,
   "priorities_next_week": null
 }
