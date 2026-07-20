@@ -1,0 +1,259 @@
+{
+  "week_start": "2026-07-20",
+  "week_end": "2026-07-26",
+  "label": "July 20 – 26, 2026",
+  "month_label": "July 2026",
+  "generated_at": "2026-07-20",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": 49.45,
+      "last_30": 50.61,
+      "last_7": 26.86
+    },
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "q1": null,
+      "q2": null,
+      "last_30": null,
+      "last_7": null
+    }
+  ],
+  "top_work_orders": [
+    {
+      "ref": "TVJCXAV",
+      "property": "kn47",
+      "brief": "The pump lost its prime its no longer working.",
+      "labor": 0,
+      "materials": 3202.01,
+      "cost": 3202.01
+    },
+    {
+      "ref": "TEZZTLB",
+      "property": "l912 (multi-family)",
+      "brief": "Crawl space insulation repair",
+      "labor": 117.92,
+      "materials": 2560.14,
+      "cost": 2678.06
+    },
+    {
+      "ref": "T3LAL2Q",
+      "property": "b101",
+      "brief": "No Hot Water In Home",
+      "labor": 66.67,
+      "materials": 2365.3,
+      "cost": 2431.97
+    },
+    {
+      "ref": "TGZT14D",
+      "property": "l912 (multi-family)",
+      "brief": "Leak in crawl space",
+      "labor": 90.42,
+      "materials": 2141.22,
+      "cost": 2231.64
+    },
+    {
+      "ref": "TZQE4L",
+      "property": "tc68",
+      "brief": "see list below",
+      "labor": 148.5,
+      "materials": 925.73,
+      "cost": 1074.23
+    },
+    {
+      "ref": "TRPALKHB",
+      "property": "kn47",
+      "brief": "D - Maintenance",
+      "labor": 0,
+      "materials": 476.13,
+      "cost": 476.13
+    },
+    {
+      "ref": "TU292CMB",
+      "property": "kn47",
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 445.9,
+      "cost": 445.9
+    },
+    {
+      "ref": "TKFWD2L",
+      "property": "rl16",
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 362.25,
+      "cost": 362.25
+    },
+    {
+      "ref": "TZAKAQE",
+      "property": "kn47",
+      "brief": "C - Paint Prep / Paint",
+      "labor": 0,
+      "materials": 342.89,
+      "cost": 342.89
+    },
+    {
+      "ref": "TKRUKPR",
+      "property": "kn47 k1",
+      "brief": "Housing Inspection - FAIL",
+      "labor": 95.6,
+      "materials": 240.78,
+      "cost": 336.38
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jared Miller",
+      "wo_count": 102,
+      "avg_cost_per_wo": 31.18,
+      "total_labor_cost": 1438.26,
+      "avg_resident_rating": 4,
+      "reviews": [
+        {
+          "ref": "TDIUJDW",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TT8VWDQ",
+          "rating": 3,
+          "text": "Bee hive in bedroom window still active"
+        }
+      ]
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 48,
+      "avg_cost_per_wo": 58.55,
+      "total_labor_cost": 1622.4,
+      "avg_resident_rating": 4.67,
+      "reviews": [
+        {
+          "ref": "TZXD0MLB",
+          "rating": 4,
+          "text": "Good job Jaxson"
+        },
+        {
+          "ref": "T64GCHLB",
+          "rating": 5,
+          "text": "Good job Jaxson"
+        },
+        {
+          "ref": "T47LXHBB",
+          "rating": 5,
+          "text": "Thank you.. The ceiling looks perfect."
+        }
+      ]
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 39,
+      "avg_cost_per_wo": 235.3,
+      "total_labor_cost": 1462.5,
+      "avg_resident_rating": 3,
+      "reviews": [
+        {
+          "ref": "TQ55RUU",
+          "rating": 1,
+          "text": null
+        },
+        {
+          "ref": "TEJ8NZ5",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 32,
+      "avg_cost_per_wo": 120.4,
+      "total_labor_cost": 650.7,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Jonas Hoard",
+      "wo_count": 28,
+      "avg_cost_per_wo": 78.82,
+      "total_labor_cost": 501.3,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "TZ95XDDB",
+          "rating": 5,
+          "text": "Thank you! I wasn't expecting the cleaning until today but it was cleaned yesterday Instead! I hope with no added stress to the Maintenance man! The patio looks great! Its been so long since Ive been able to use my space, i cant wait to enjoy it!"
+        },
+        {
+          "ref": "TPM69YT",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    }
+  ],
+  "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 0
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 0
+    },
+    {
+      "category": "Grounds",
+      "amount": 0
+    },
+    {
+      "category": "Maintenance",
+      "amount": 0
+    }
+  ],
+  "narrative": null,
+  "narrative_2": null,
+  "priorities_next_week": null
+}
