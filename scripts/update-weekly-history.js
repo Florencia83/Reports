@@ -26,23 +26,26 @@ const https = require('https');
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const APPFOLIO_SUBDOMAIN = 'mckay';
 
-// Average Work Order Cost's Q1/Q2 (etc.) values are supposed to be closed, immutable
-// history once a quarter ends -- but carrying them forward via each week-file's own
-// prior version only locks them within THAT week's lineage. Every Monday creates a
-// brand-new weekly-{monday}.json with no history of its own, so q1/q2 silently
-// recomputed from scratch on the first run of every new week and drifted (found
-// 2026-07-20: Q2 showed 48.25, then 48.29, then 49.45 across three different weekly
-// files). This separate quarter-keyed file is the real single source of truth --
-// once a quarter gets a real value here, it never changes again, no matter how many
-// new weekly files get created afterward.
+// All 7 KPIs' Q1/Q2 (etc.) values are supposed to be closed, immutable history once
+// a quarter ends -- but carrying them forward via each week-file's own prior version
+// only locks them within THAT week's lineage. Every Monday creates a brand-new
+// weekly-{monday}.json with no history of its own, so Average Work Order Cost's q1/q2
+// silently recomputed from scratch on the first run of every new week and drifted
+// (found 2026-07-20: Q2 showed 48.25, then 48.29, then 49.45 across three different
+// weekly files), and the other 6 (manually pasted by Florencia from Property Meld's
+// Sigma dashboard) would have needed re-pasting into every single new weekly file
+// forever. This separate file, keyed by quarter then metric name, is the real single
+// source of truth for all 7 -- once a quarter has a real value here, every week's
+// kpis[i].q1/q2 read the exact same number, no matter how many new weekly files get
+// created afterward. Only Average Work Order Cost can ever fill itself in here
+// (computed below); the other 6 only ever get a value when Florencia gives one to
+// paste in by hand, same as always -- and per her (2026-07-20), that value then holds
+// for the rest of the year until the next quarter starts.
 const QUARTER_LOCKS_PATH = path.join(DATA_DIR, 'quarterly-kpi-locks.json');
 function loadQuarterLocks() {
-  if (!fs.existsSync(QUARTER_LOCKS_PATH)) return { avgWoCostByQuarter: {} };
-  try {
-    const j = JSON.parse(fs.readFileSync(QUARTER_LOCKS_PATH, 'utf8'));
-    if (!j.avgWoCostByQuarter) j.avgWoCostByQuarter = {};
-    return j;
-  } catch (e) { return { avgWoCostByQuarter: {} }; }
+  if (!fs.existsSync(QUARTER_LOCKS_PATH)) return {};
+  try { return JSON.parse(fs.readFileSync(QUARTER_LOCKS_PATH, 'utf8')); }
+  catch (e) { return {}; }
 }
 function saveQuarterLocks(locks) {
   fs.writeFileSync(QUARTER_LOCKS_PATH, JSON.stringify(locks, null, 2));
@@ -600,6 +603,20 @@ async function main() {
     ? priorKpis
     : KPI_METRICS.map(metric => ({ metric, q1: null, q2: null, last_30: null, last_7: null }));
 
+  // q1/q2 for every KPI (not just row 0) always come from the global quarter-lock
+  // file, never from priorKpis above -- see the big comment near QUARTER_LOCKS_PATH.
+  const quarterLocks = loadQuarterLocks();
+  kpis.forEach(k => {
+    k.q1 = (quarterLocks['2026-Q1'] && quarterLocks['2026-Q1'][k.metric] != null) ? quarterLocks['2026-Q1'][k.metric] : null;
+    k.q2 = (quarterLocks['2026-Q2'] && quarterLocks['2026-Q2'][k.metric] != null) ? quarterLocks['2026-Q2'][k.metric] : null;
+  });
+  function lockQuarterValue(quarter, metric, value) {
+    if (value == null) return;
+    if (!quarterLocks[quarter]) quarterLocks[quarter] = {};
+    quarterLocks[quarter][metric] = value;
+    saveQuarterLocks(quarterLocks);
+  }
+
   // Average Work Order Cost = (sum of QBT labor cost + Ramp materials cost, matched to
   // each meld by its reference ID) / (number of melds completed in the window). Logs
   // its inputs so the result is checkable against PM/QBT/Ramp directly, not just trusted.
@@ -625,14 +642,9 @@ async function main() {
   kpis[0].last_30 = avgWoCostFor(melds, laborRecords, rampRecords, last30Start, todayStr, 'last_30');
   kpis[0].last_7 = avgWoCostFor(melds, laborRecords, rampRecords, last7Start, todayStr, 'last_7');
 
-  // Q1/Q2 (calendar quarters, matching the other 6 manually-pasted KPIs) are closed,
-  // immutable history once the quarter ends -- locked globally in quarterly-kpi-locks.json
-  // (see comment near QUARTER_LOCKS_PATH above), NOT per-week-file, so every week's
-  // kpis[0].q1/q2 always show the exact same number once a quarter is real.
-  const quarterLocks = loadQuarterLocks();
-  kpis[0].q1 = quarterLocks.avgWoCostByQuarter['2026-Q1'] ?? null;
-  kpis[0].q2 = quarterLocks.avgWoCostByQuarter['2026-Q2'] ?? null;
-
+  // Average Work Order Cost is the only KPI that can compute its own Q1/Q2 -- the
+  // other 6 rows' q1/q2 (set above from quarterLocks) just stay whatever Florencia
+  // last pasted in, since there's no API for them.
   if (kpis[0].q1 == null) {
     console.log('Backfilling Average Work Order Cost Q1 2026 (Jan-Mar)...');
     const [q1Melds, q1Labor, q1Ramp] = await Promise.all([
@@ -642,7 +654,7 @@ async function main() {
     ]);
     console.log('Q1 raw fetch: melds', q1Melds.length, '| labor records', q1Labor.length, '| ramp records', q1Ramp.length);
     kpis[0].q1 = avgWoCostFor(q1Melds, q1Labor, q1Ramp, '2026-01-01', '2026-03-31', 'q1');
-    if (kpis[0].q1 != null) { quarterLocks.avgWoCostByQuarter['2026-Q1'] = kpis[0].q1; saveQuarterLocks(quarterLocks); }
+    lockQuarterValue('2026-Q1', 'Average Work Order Cost', kpis[0].q1);
   }
   if (kpis[0].q2 == null) {
     console.log('Backfilling Average Work Order Cost Q2 2026 (Apr-Jun)...');
@@ -653,7 +665,7 @@ async function main() {
     ]);
     console.log('Q2 raw fetch: melds', q2Melds.length, '| labor records', q2Labor.length, '| ramp records', q2Ramp.length);
     kpis[0].q2 = avgWoCostFor(q2Melds, q2Labor, q2Ramp, '2026-04-01', '2026-06-30', 'q2');
-    if (kpis[0].q2 != null) { quarterLocks.avgWoCostByQuarter['2026-Q2'] = kpis[0].q2; saveQuarterLocks(quarterLocks); }
+    lockQuarterValue('2026-Q2', 'Average Work Order Cost', kpis[0].q2);
   }
 
   const weekJson = {

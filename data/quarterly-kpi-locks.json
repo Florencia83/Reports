@@ -1,5 +1,20 @@
 {
-  "avgWoCostByQuarter": {
-    "2026-Q2": 39
+  "2026-Q1": {
+    "Average Work Order Cost": null,
+    "Emergency Work Order Completion Time": 0.8,
+    "Work Order Resident Satisfaction": 4.21,
+    "Avg Vendor Completion Time": 18.7,
+    "Avg Speed of Repair": 9.2,
+    "Time to Assignment": 0.3,
+    "Time to Schedule": 0.4
+  },
+  "2026-Q2": {
+    "Average Work Order Cost": 39,
+    "Emergency Work Order Completion Time": 0.4,
+    "Work Order Resident Satisfaction": 4.6,
+    "Avg Vendor Completion Time": 38.9,
+    "Avg Speed of Repair": 15.6,
+    "Time to Assignment": 1.31,
+    "Time to Schedule": 1.7
   }
 }

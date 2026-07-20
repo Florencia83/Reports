@@ -11,48 +11,48 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 48.13,
-      "last_7": 27.12
+      "last_30": 48.45,
+      "last_7": 28.96
     },
     {
       "metric": "Emergency Work Order Completion Time",
-      "q1": null,
-      "q2": null,
+      "q1": 0.8,
+      "q2": 0.4,
       "last_30": null,
       "last_7": null
     },
     {
       "metric": "Work Order Resident Satisfaction",
-      "q1": null,
-      "q2": null,
+      "q1": 4.21,
+      "q2": 4.6,
       "last_30": null,
       "last_7": null
     },
     {
       "metric": "Avg Vendor Completion Time",
-      "q1": null,
-      "q2": null,
+      "q1": 18.7,
+      "q2": 38.9,
       "last_30": null,
       "last_7": null
     },
     {
       "metric": "Avg Speed of Repair",
-      "q1": null,
-      "q2": null,
+      "q1": 9.2,
+      "q2": 15.6,
       "last_30": null,
       "last_7": null
     },
     {
       "metric": "Time to Assignment",
-      "q1": null,
-      "q2": null,
+      "q1": 0.3,
+      "q2": 1.31,
       "last_30": null,
       "last_7": null
     },
     {
       "metric": "Time to Schedule",
-      "q1": null,
-      "q2": null,
+      "q1": 0.4,
+      "q2": 1.7,
       "last_30": null,
       "last_7": null
     }
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 101,
-      "avg_cost_per_wo": 30.97,
-      "total_labor_cost": 1448.09,
+      "wo_count": 102,
+      "avg_cost_per_wo": 30.88,
+      "total_labor_cost": 1469.16,
       "avg_resident_rating": 4.25,
       "reviews": [
         {
@@ -172,8 +172,8 @@
     {
       "name": "Jaxson Lakins",
       "wo_count": 50,
-      "avg_cost_per_wo": 55.65,
-      "total_labor_cost": 1576.8,
+      "avg_cost_per_wo": 56.01,
+      "total_labor_cost": 1594.4,
       "avg_resident_rating": 4.5,
       "reviews": [
         {
@@ -227,9 +227,9 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 28,
-      "avg_cost_per_wo": 79.2,
-      "total_labor_cost": 536.4,
+      "wo_count": 29,
+      "avg_cost_per_wo": 86.12,
+      "total_labor_cost": 571.95,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -246,6 +246,13 @@
     }
   ],
   "ramp_purchases_over_300": [
+    {
+      "date": "2026-07-20",
+      "ref": "T8UVKM9",
+      "property": "RL21",
+      "cardholder": "isaac chavez",
+      "amount": 972.67
+    },
     {
       "date": "2026-07-20",
       "ref": null,
@@ -272,7 +279,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 363.39
+      "amount": 1336.06
     },
     {
       "category": "Grounds",
