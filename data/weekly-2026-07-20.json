@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 49.45,
-      "last_30": 50.61,
-      "last_7": 26.86
+      "last_30": 48.27,
+      "last_7": 28
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -99,14 +99,6 @@
       "cost": 1074.23
     },
     {
-      "ref": "TRPALKHB",
-      "property": "kn47",
-      "brief": "D - Maintenance",
-      "labor": 0,
-      "materials": 476.13,
-      "cost": 476.13
-    },
-    {
       "ref": "TU292CMB",
       "property": "kn47",
       "brief": "Daily Pool Maintenance",
@@ -123,28 +115,36 @@
       "cost": 362.25
     },
     {
-      "ref": "TZAKAQE",
-      "property": "kn47",
-      "brief": "C - Paint Prep / Paint",
-      "labor": 0,
-      "materials": 342.89,
-      "cost": 342.89
-    },
-    {
       "ref": "TKRUKPR",
       "property": "kn47 k1",
       "brief": "Housing Inspection - FAIL",
       "labor": 95.6,
       "materials": 240.78,
       "cost": 336.38
+    },
+    {
+      "ref": "TL23LGN",
+      "property": "rl16",
+      "brief": "roof leak (clone)",
+      "labor": 190.54,
+      "materials": 101,
+      "cost": 291.54
+    },
+    {
+      "ref": "T2KDLDW",
+      "property": "tc68",
+      "brief": "Grounds - Litter Pick Up",
+      "labor": 0,
+      "materials": 282.87,
+      "cost": 282.87
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 102,
-      "avg_cost_per_wo": 31.18,
-      "total_labor_cost": 1438.26,
+      "wo_count": 100,
+      "avg_cost_per_wo": 30.67,
+      "total_labor_cost": 1407.36,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -156,16 +156,26 @@
           "ref": "TT8VWDQ",
           "rating": 3,
           "text": "Bee hive in bedroom window still active"
+        },
+        {
+          "ref": "TB5PYAC",
+          "rating": 4,
+          "text": "Good job Jared"
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 48,
-      "avg_cost_per_wo": 58.55,
-      "total_labor_cost": 1622.4,
-      "avg_resident_rating": 4.67,
+      "wo_count": 46,
+      "avg_cost_per_wo": 59.43,
+      "total_labor_cost": 1528,
+      "avg_resident_rating": 4.5,
       "reviews": [
+        {
+          "ref": "TFD9Y8U",
+          "rating": 4,
+          "text": "Good job Jaxson"
+        },
         {
           "ref": "TZXD0MLB",
           "rating": 4,
@@ -185,9 +195,9 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 39,
-      "avg_cost_per_wo": 235.3,
-      "total_labor_cost": 1462.5,
+      "wo_count": 37,
+      "avg_cost_per_wo": 242.94,
+      "total_labor_cost": 1301.67,
       "avg_resident_rating": 3,
       "reviews": [
         {
@@ -204,8 +214,8 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 32,
-      "avg_cost_per_wo": 120.4,
+      "wo_count": 31,
+      "avg_cost_per_wo": 124.28,
       "total_labor_cost": 650.7,
       "avg_resident_rating": null,
       "reviews": []
@@ -213,8 +223,8 @@
     {
       "name": "Jonas Hoard",
       "wo_count": 28,
-      "avg_cost_per_wo": 78.82,
-      "total_labor_cost": 501.3,
+      "avg_cost_per_wo": 79.2,
+      "total_labor_cost": 536.4,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -230,7 +240,22 @@
       ]
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-07-20",
+      "ref": null,
+      "property": null,
+      "cardholder": "Justin Gutierrez",
+      "amount": 519.32
+    },
+    {
+      "date": "2026-07-20",
+      "ref": "TEPHG14",
+      "property": "RL16",
+      "cardholder": "isaac chavez",
+      "amount": 363.39
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
@@ -242,7 +267,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 363.39
     },
     {
       "category": "Grounds",
@@ -250,7 +275,7 @@
     },
     {
       "category": "Maintenance",
-      "amount": 0
+      "amount": 108.26
     }
   ],
   "narrative": null,

@@ -3,7 +3,7 @@
   "week_end": "2026-07-12",
   "label": "July 6 – 12, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-13",
+  "generated_at": "2026-07-20",
   "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 48.25,
-      "last_30": 56.92,
-      "last_7": 55.24
+      "last_30": 48.85,
+      "last_7": 26.44
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 66,
-      "avg_cost_per_wo": 29.99,
-      "total_labor_cost": 904.5,
+      "wo_count": 104,
+      "avg_cost_per_wo": 31.23,
+      "total_labor_cost": 1483.67,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -160,37 +160,61 @@
       ]
     },
     {
-      "name": "Justin Gutierrez",
-      "wo_count": 25,
-      "avg_cost_per_wo": 239.83,
-      "total_labor_cost": 1005.42,
-      "avg_resident_rating": 4.5,
+      "name": "Jaxson Lakins",
+      "wo_count": 50,
+      "avg_cost_per_wo": 57,
+      "total_labor_cost": 1634,
+      "avg_resident_rating": 4.67,
       "reviews": [
         {
-          "ref": "TEJ8NZ5",
-          "rating": 5,
-          "text": null
+          "ref": "TZXD0MLB",
+          "rating": 4,
+          "text": "Good job Jaxson"
         },
         {
-          "ref": "TH8Y2DHB",
-          "rating": 4,
-          "text": "The work was fine, and Justin was very conscientious.  A little adjustment is needed.  The door does not open and  move smoothly.  I think the cotton muffling is impeding it."
+          "ref": "T64GCHLB",
+          "rating": 5,
+          "text": "Good job Jaxson"
+        },
+        {
+          "ref": "T47LXHBB",
+          "rating": 5,
+          "text": "Thank you.. The ceiling looks perfect."
         }
       ]
     },
     {
-      "name": "Jaxson Lakins",
-      "wo_count": 23,
-      "avg_cost_per_wo": 53.34,
-      "total_labor_cost": 721.2,
+      "name": "Justin Gutierrez",
+      "wo_count": 39,
+      "avg_cost_per_wo": 235.3,
+      "total_labor_cost": 1462.5,
+      "avg_resident_rating": 3,
+      "reviews": [
+        {
+          "ref": "TQ55RUU",
+          "rating": 1,
+          "text": null
+        },
+        {
+          "ref": "TEJ8NZ5",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 32,
+      "avg_cost_per_wo": 120.4,
+      "total_labor_cost": 650.7,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 21,
-      "avg_cost_per_wo": 83.67,
-      "total_labor_cost": 394.2,
+      "wo_count": 30,
+      "avg_cost_per_wo": 77.38,
+      "total_labor_cost": 562.95,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -204,14 +228,6 @@
           "text": null
         }
       ]
-    },
-    {
-      "name": "Isaac Chavez",
-      "wo_count": 19,
-      "avg_cost_per_wo": 188.28,
-      "total_labor_cost": 375.3,
-      "avg_resident_rating": null,
-      "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
@@ -245,8 +261,8 @@
     },
     {
       "date": "2026-07-11",
-      "ref": null,
-      "property": null,
+      "ref": "TIFBJ48",
+      "property": "C302",
       "cardholder": "Justin Gutierrez",
       "amount": 657.27
     },
@@ -277,7 +293,7 @@
     },
     {
       "category": "Maintenance",
-      "amount": 3774.71
+      "amount": 4431.98
     }
   ],
   "narrative": [

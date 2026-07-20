@@ -147,6 +147,12 @@ async function fetchPmCompletedMelds(fromStr, toStr) {
       if (!cd) continue;
       if (cd < fromStr) { stop = true; continue; }
       if (cd > toStr) continue;
+      // Turns are a separate workflow, not R&M -- exclude permanently (Florencia found
+      // one leaking into the Top 10 Work Orders 2026-07-20). work_type: 'TURN' is the
+      // correct/complete signal -- confirmed live every work_category: 'TURNOVER' meld
+      // also carries this, plus 43 more (locks/keys/doors handoff tasks etc.) that
+      // TURNOVER alone would miss.
+      if (m.work_type === 'TURN') continue;
       const servicer = (m.in_house_servicers || []).find(s => s.agent && pmIdToTech[s.agent.id]);
       melds.push({
         ref: m.reference_id,
