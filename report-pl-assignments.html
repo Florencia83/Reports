@@ -56,7 +56,7 @@
 * { box-sizing: border-box; }
 html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
 body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
-.wrap { max-width: 680px; margin: 0 auto; }
+.wrap { width: 100%; max-width: 680px; margin: 0 auto; }
 
 @page { size: A4; margin: 18mm; }
 @media print {
@@ -66,7 +66,7 @@ body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
 }
 
 .masthead-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
-.masthead { border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); }
+.masthead { width: 100%; border-bottom: 3px solid var(--ink); padding-bottom: 16px; margin-bottom: clamp(20px, 4vh, 32px); }
 .masthead-id { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0; display: flex; align-items: center; gap: 8px; }
 .masthead-id a { color: var(--ink-soft); text-decoration: none; }
 .masthead-id a:hover { color: var(--accent); }
@@ -117,11 +117,11 @@ td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); f
 .prose { font-size: 14px; line-height: 1.65; text-align: justify; }
 .prose p + p { margin-top: 14px; }
 
-.callout { border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 14px 14px 0; padding: 14px 18px; box-shadow: var(--shadow); font-size: 13px; line-height: 1.6; }
+.callout { width: 100%; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 14px 14px 0; padding: 14px 18px; box-shadow: var(--shadow); font-size: 13px; line-height: 1.6; }
 .callout.finance { border-left-color: var(--finance-ink); }
 .callout.maintenance { border-left-color: var(--maint-ink); }
 
-.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.stat-row { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 @media (max-width: 480px) { .stat-row { grid-template-columns: 1fr; } }
 .stat { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--finance-ink); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); text-align: center; }
 .stat.bad { background: color-mix(in srgb, var(--bad) 12%, var(--surface)); border-top-color: var(--bad); }
