@@ -295,9 +295,34 @@ function kpiColorClass(metric, value) {
   return 'bad';
 }
 
+// Same reason as th()'s inline style above: color-mix() renders fine on-screen, but the
+// .num.good/warn/bad rule that actually paints it lives in the external <style> block,
+// which Google Docs (and some paste sanitizers) drop entirely on paste -- the KPI tint
+// was vanishing. Reproduce color-mix(in srgb, X 18%, --surface) manually in JS from the
+// LIVE resolved CSS variables (so it still follows whichever theme -- light/dark -- is
+// active) and bake the result as an inline style, same fix pattern (found 2026-07-21).
+function parseColor(s) {
+  s = (s || '').trim();
+  var m = s.match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);
+  if (m) { var h = m[1]; if (h.length === 3) h = h.split('').map(function(c){return c+c;}).join(''); var n = parseInt(h, 16); return [(n>>16)&255, (n>>8)&255, n&255]; }
+  m = s.match(/rgba?\(\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)/i);
+  if (m) return [parseFloat(m[1]), parseFloat(m[2]), parseFloat(m[3])];
+  return [255, 255, 255];
+}
+function mixInSrgb(colorVarName, pct, baseVarName) {
+  var cs = getComputedStyle(document.documentElement);
+  var c = parseColor(cs.getPropertyValue(colorVarName));
+  var b = parseColor(cs.getPropertyValue(baseVarName));
+  var p = pct / 100;
+  var r = Math.round(c[0] * p + b[0] * (1 - p));
+  var g = Math.round(c[1] * p + b[1] * (1 - p));
+  var bl = Math.round(c[2] * p + b[2] * (1 - p));
+  return 'rgb(' + r + ',' + g + ',' + bl + ')';
+}
 function kpiCell(metric, value) {
   var cls = kpiColorClass(metric, value);
-  return '<td class="num' + (cls ? ' ' + cls : '') + '">' + (value != null ? value : '&mdash;') + '</td>';
+  var style = cls ? ' style="background:' + mixInSrgb('--' + cls, 18, '--surface') + ';font-weight:500;"' : '';
+  return '<td class="num' + (cls ? ' ' + cls : '') + '"' + style + '>' + (value != null ? value : '&mdash;') + '</td>';
 }
 
 function renderKpis(kpis) {
