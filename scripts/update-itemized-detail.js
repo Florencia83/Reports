@@ -150,14 +150,24 @@ async function fetchQbtLaborForRange(jobcodes, fromStr, toStr) {
     else if (/ground/i.test(cls)) division = 'grounds';
     if (!division) continue;
     const p = jcPath(ts.jobcode_id, jcCache);
-    if (!p.length) continue;
     const propIdx = p.findIndex(seg => PROPERTY_CODE_RE.test(seg));
-    if (propIdx === -1) continue;
     // Jobcode segments for multi-building properties look like "kn47 K1", "kn47-k3" --
     // normalize to just the bare code (matching PROPERTY_IDS and the Ramp-side
     // extraction below) so K1/K2/k3 all roll up under "kn47" instead of becoming three
     // separate untracked properties.
-    const prop = p[propIdx].match(PROPERTY_CODE_RE)[0].toLowerCase();
+    let prop = propIdx !== -1 ? p[propIdx].match(PROPERTY_CODE_RE)[0].toLowerCase() : null;
+    if (!prop) {
+      // Fallback: some timesheets (e.g. admin/scheduling entries logged under a generic
+      // top-level jobcode like "Palouse Homes" with no property anywhere in its ancestry)
+      // still carry the real property in the Property custom field (25068, e.g.
+      // "kn47 (245)") on the timesheet itself. Without this fallback these hours were
+      // silently dropped entirely -- found 2026-07-21 via Isaac Chavez's admin/scheduling
+      // hours (class "R&M - Admin") being real in QBT but missing from Itemized Detail's
+      // Team member view.
+      const m = ((ts.customfields && ts.customfields['25068']) || '').match(PROPERTY_CODE_RE);
+      prop = m ? m[0].toLowerCase() : null;
+    }
+    if (!prop) continue;
     const hrs = ts.duration / 3600;
     const effectiveWage = person.wage * LABOR_RATE_MULTIPLIER;
     records.push({ date: ts.date, property: prop, division, name: person.name, hours: hrs, wage: effectiveWage, cost: hrs * effectiveWage });
