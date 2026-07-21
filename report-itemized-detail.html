@@ -43,14 +43,17 @@
 }
 
 * { box-sizing: border-box; }
-html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
+html, body { background: var(--finance-tint); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
 body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
 .wrap { max-width: 760px; margin: 0 auto; }
+.email-card { width: 100%; max-width: 760px; margin: 0 auto; background: var(--surface); border-radius: 20px; padding: clamp(20px, 4vh, 36px) clamp(20px, 5vw, 36px); box-shadow: var(--shadow); }
 
 @page { size: A4; margin: 18mm; }
 @media print {
+  html, body { background: var(--surface); }
   body { padding: 0; }
   .wrap { max-width: none; }
+  .email-card { background: none; border-radius: 0; padding: 0; box-shadow: none; }
   footer, .picker-row { display: none; }
 }
 
@@ -74,8 +77,9 @@ h1 { font-weight: 700; font-size: clamp(20px, 3vw, 28px); letter-spacing: 0.01em
 .picker-reset { font-size: 12px; color: var(--accent); background: none; border: none; cursor: pointer; padding: 6px 0; font-family: inherit; }
 .picker-reset:hover { text-decoration: underline; }
 
-.section-label { font-weight: 500; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
+.section-label { font-weight: 500; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 28px 0 12px; display: flex; align-items: center; gap: 10px; }
 .section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.masthead + section .section-label { margin-top: 0; }
 section { margin-bottom: clamp(28px, 4vh, 44px); }
 
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
@@ -117,6 +121,7 @@ footer a { color: var(--ink-soft); }
     <p class="masthead-id"><a href="index.html">&larr; Reports</a> &middot; <span class="tag finance">Finance</span></p>
     <div class="masthead-meta" id="updated-label"></div>
   </div>
+  <div class="email-card">
   <div class="masthead">
     <h1>Itemized Detail</h1>
     <p class="masthead-range">Every Ramp transaction and QBT labor entry per property, R&amp;M Repairs and Grounds &mdash; the raw ledger behind <a href="report-financial-detail.html">Financial Detail</a>.</p>
@@ -163,6 +168,7 @@ footer a { color: var(--ink-soft); }
     <p class="section-label">Grounds</p>
     <div id="grounds-root"></div>
   </section>
+  </div>
 
   <footer>
     <span><a href="index.html">&larr; Back to Reports</a></span>

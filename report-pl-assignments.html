@@ -54,14 +54,17 @@
 
 
 * { box-sizing: border-box; }
-html, body { background: var(--paper); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
+html, body { background: var(--finance-tint); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; margin: 0; padding: 0; }
 body { padding: clamp(20px, 4vh, 40px) clamp(20px, 6vw, 48px) 64px; }
 .wrap { width: 100%; max-width: 680px; margin: 0 auto; }
+.email-card { width: 100%; max-width: 680px; margin: 0 auto; background: var(--surface); border-radius: 20px; padding: clamp(20px, 4vh, 36px) clamp(20px, 5vw, 36px); box-shadow: var(--shadow); }
 
 @page { size: A4; margin: 18mm; }
 @media print {
+  html, body { background: var(--surface); }
   body { padding: 0; }
   .wrap { max-width: none; }
+  .email-card { background: none; border-radius: 0; padding: 0; box-shadow: none; }
   .month-picker, footer { display: none; }
 }
 
@@ -75,8 +78,10 @@ h1 { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size:
 .masthead-meta { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; color: var(--ink-soft); text-align: right; line-height: 1.6; }
 .masthead-meta strong { color: var(--ink); font-weight: 500; }
 
-.section-label { font-family: 'Manrope', system-ui, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
+.section-label { font-family: 'Manrope', system-ui, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); margin: 28px 0 12px; display: flex; align-items: center; gap: 10px; }
 .section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.masthead + section .section-label { margin-top: 0; }
+#content-root > section:first-child .section-label { margin-top: 0; }
 section { margin-bottom: clamp(28px, 4vh, 44px); }
 
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
@@ -151,6 +156,7 @@ footer a { color: var(--ink-soft); }
       <span id="sent-label"></span>
     </div>
   </div>
+  <div class="email-card">
   <div class="masthead">
     <h1>P&amp;L Assignments &mdash; R&amp;M / Grounds / Appliances</h1>
     <p class="masthead-range" id="range-label"></p>
@@ -158,6 +164,7 @@ footer a { color: var(--ink-soft); }
 
   <div id="content-root">
     <p style="font-family:'Manrope',sans-serif; font-size:12px; color:var(--ink-soft);">Loading&hellip;</p>
+  </div>
   </div>
 
   <footer>
