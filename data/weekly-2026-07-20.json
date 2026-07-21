@@ -3,16 +3,16 @@
   "week_end": "2026-07-26",
   "label": "July 20 – 26, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-20",
+  "generated_at": "2026-07-21",
   "complete": false,
-  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 48.45,
-      "last_7": 28.96
+      "last_30": 47.92,
+      "last_7": 26.84
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -123,27 +123,27 @@
       "cost": 336.38
     },
     {
+      "ref": "T6N60R0",
+      "property": "s300",
+      "brief": "No AC, Over 85℉ Outside",
+      "labor": 0,
+      "materials": 304.07,
+      "cost": 304.07
+    },
+    {
       "ref": "TL23LGN",
       "property": "rl16",
       "brief": "roof leak (clone)",
       "labor": 190.54,
       "materials": 101,
       "cost": 291.54
-    },
-    {
-      "ref": "T2KDLDW",
-      "property": "tc68",
-      "brief": "Grounds - Litter Pick Up",
-      "labor": 0,
-      "materials": 282.87,
-      "cost": 282.87
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 102,
-      "avg_cost_per_wo": 30.88,
+      "wo_count": 105,
+      "avg_cost_per_wo": 30,
       "total_labor_cost": 1469.16,
       "avg_resident_rating": 4.25,
       "reviews": [
@@ -171,11 +171,21 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 50,
-      "avg_cost_per_wo": 56.01,
-      "total_labor_cost": 1594.4,
-      "avg_resident_rating": 4.5,
+      "wo_count": 53,
+      "avg_cost_per_wo": 56.12,
+      "total_labor_cost": 1670.8,
+      "avg_resident_rating": 4.67,
       "reviews": [
+        {
+          "ref": "TQ4B01MB",
+          "rating": 5,
+          "text": "Good job Jaxson Thank you so much."
+        },
+        {
+          "ref": "T7IB016",
+          "rating": 5,
+          "text": "Good job Jaxson"
+        },
         {
           "ref": "TFD9Y8U",
           "rating": 4,
@@ -200,9 +210,9 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 37,
-      "avg_cost_per_wo": 242.94,
-      "total_labor_cost": 1301.67,
+      "wo_count": 41,
+      "avg_cost_per_wo": 230.52,
+      "total_labor_cost": 1460,
       "avg_resident_rating": 3,
       "reviews": [
         {
@@ -218,17 +228,9 @@
       ]
     },
     {
-      "name": "Isaac Chavez",
-      "wo_count": 32,
-      "avg_cost_per_wo": 120.71,
-      "total_labor_cost": 660.6,
-      "avg_resident_rating": null,
-      "reviews": []
-    },
-    {
       "name": "Jonas Hoard",
-      "wo_count": 29,
-      "avg_cost_per_wo": 86.12,
+      "wo_count": 34,
+      "avg_cost_per_wo": 73.45,
       "total_labor_cost": 571.95,
       "avg_resident_rating": 5,
       "reviews": [
@@ -243,6 +245,14 @@
           "text": null
         }
       ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 32,
+      "avg_cost_per_wo": 120.71,
+      "total_labor_cost": 660.6,
+      "avg_resident_rating": null,
+      "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
@@ -255,8 +265,8 @@
     },
     {
       "date": "2026-07-20",
-      "ref": null,
-      "property": null,
+      "ref": "TFNQV9P",
+      "property": "C302",
       "cardholder": "Justin Gutierrez",
       "amount": 519.32
     },
@@ -287,7 +297,32 @@
     },
     {
       "category": "Maintenance",
-      "amount": 108.26
+      "amount": 1062.57
+    }
+  ],
+  "monthly_budget": {
+    "budget": 67267.78,
+    "labor": 7983.05,
+    "materials": 18075.16,
+    "total_actual": 26058.21,
+    "variance": 41209.57
+  },
+  "cost_by_property": [
+    {
+      "property": "B101",
+      "labor": 66.67,
+      "materials": 2365.3,
+      "cost": 2431.97,
+      "budget": 671.7,
+      "pct_over_budget": 262.1
+    },
+    {
+      "property": "C302",
+      "labor": 402.5,
+      "materials": 1302.6,
+      "cost": 1705.1,
+      "budget": 816.5,
+      "pct_over_budget": 108.8
     }
   ],
   "narrative": null,
