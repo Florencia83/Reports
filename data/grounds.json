@@ -23,11 +23,6 @@
                       "date": "2026-07-20"
                     },
                     {
-                      "ref": "TVXV46I",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
-                    },
-                    {
                       "ref": "T6K7MW7",
                       "status": "SCHEDULED",
                       "date": "2026-07-25"
@@ -35,6 +30,11 @@
                     {
                       "ref": "TG9Q3FV",
                       "status": "COMPLETED",
+                      "date": "2026-07-27"
+                    },
+                    {
+                      "ref": "TVXV46I",
+                      "status": "SCHEDULED",
                       "date": "2026-07-27"
                     }
                   ]
@@ -258,8 +258,8 @@
                     },
                     {
                       "ref": "TJPJ5KKB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 },
@@ -286,8 +286,8 @@
                     },
                     {
                       "ref": "TQH76CBB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-29"
                     }
                   ]
                 },
@@ -497,8 +497,8 @@
                     },
                     {
                       "ref": "T5KZ5BJB",
-                      "status": "SCHEDULED",
-                      "date": "2026-07-28"
+                      "status": "COMPLETED",
+                      "date": "2026-07-22"
                     }
                   ]
                 }
@@ -974,8 +974,8 @@
                     },
                     {
                       "ref": "TPEMD8T",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-27"
                     }
                   ]
                 }
@@ -1012,8 +1012,8 @@
                     },
                     {
                       "ref": "TXQRFDN",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1050,8 +1050,8 @@
                     },
                     {
                       "ref": "TNURXACB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1088,8 +1088,8 @@
                     },
                     {
                       "ref": "TFE8XJM",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1121,13 +1121,13 @@
                     },
                     {
                       "ref": "TBAGTD0",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-07-22"
                     },
                     {
                       "ref": "TT3QNR4",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-29"
                     }
                   ]
                 }
@@ -1158,14 +1158,14 @@
                       "date": "2026-07-16"
                     },
                     {
-                      "ref": "TLHWAN6",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
-                    },
-                    {
                       "ref": "TQDJFR3",
                       "status": "SCHEDULED",
                       "date": "2026-07-23"
+                    },
+                    {
+                      "ref": "TLHWAN6",
+                      "status": "SCHEDULED",
+                      "date": "2026-07-30"
                     }
                   ]
                 }
@@ -1197,13 +1197,13 @@
                     },
                     {
                       "ref": "T30KBX8",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-07-22"
                     },
                     {
                       "ref": "TR3ML08",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-29"
                     }
                   ]
                 }
@@ -1240,8 +1240,8 @@
                     },
                     {
                       "ref": "T0U51YX",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-29"
                     }
                   ]
                 }
@@ -1278,8 +1278,8 @@
                     },
                     {
                       "ref": "TM11RCMB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1430,8 +1430,8 @@
                     },
                     {
                       "ref": "TTCLUGAB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1468,8 +1468,8 @@
                     },
                     {
                       "ref": "TM12V0AB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1506,8 +1506,8 @@
                     },
                     {
                       "ref": "T0WGHFN",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1544,8 +1544,8 @@
                     },
                     {
                       "ref": "T6I7AIN",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-28"
                     }
                   ]
                 }
@@ -1615,8 +1615,8 @@
                     },
                     {
                       "ref": "TAI2RX9",
-                      "status": "SCHEDULED",
-                      "date": "2026-07-23"
+                      "status": "COMPLETED",
+                      "date": "2026-07-22"
                     },
                     {
                       "ref": "T6VWL2C",
@@ -1658,8 +1658,8 @@
                     },
                     {
                       "ref": "TJXCM86",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-27"
                     }
                   ]
                 }
@@ -1696,8 +1696,8 @@
                     },
                     {
                       "ref": "TU2L4MGB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-27"
                     }
                   ]
                 }
@@ -1734,8 +1734,8 @@
                     },
                     {
                       "ref": "TWXHJ5L",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-27"
                     }
                   ]
                 }
@@ -1772,8 +1772,8 @@
                     },
                     {
                       "ref": "THU4P3AB",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-27"
                     }
                   ]
                 }
@@ -1805,13 +1805,13 @@
                     },
                     {
                       "ref": "TUDBMQI",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-07-22"
                     },
                     {
                       "ref": "T84VEZJ",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-29"
                     }
                   ]
                 }
@@ -1843,13 +1843,13 @@
                     },
                     {
                       "ref": "TARHW2W",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-07-22"
                     },
                     {
                       "ref": "T0IEAIX",
-                      "status": "PENDING",
-                      "date": "2026-07-22"
+                      "status": "SCHEDULED",
+                      "date": "2026-07-29"
                     }
                   ]
                 }
