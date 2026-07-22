@@ -63,6 +63,22 @@ const TECHS = [
 const pmIdToTech = {}; TECHS.forEach(t => pmIdToTech[t.pmId] = t);
 const qbtIdToTech = {}; TECHS.forEach(t => qbtIdToTech[t.qbtId] = t);
 
+// Grounds team roster (QBT id + hourly wage) for the Grounds Monthly Budget section
+// (Florencia, 2026-07-22). Jonas and Jared also do Grounds-classed hours (TC68/TC34 lawn
+// oversight, pool maintenance) alongside their normal R&M work -- their wage here matches
+// TECHS above, kept separate since this map is scoped by the Grounds QBT Class, not by
+// person. Alex/Rey have no pay_rate on file in QBT (confirmed via API, 2026-07-22) --
+// wages given directly by Florencia.
+const GROUNDS_TECHS = [
+  { name: 'David Sanchez',     qbtId: 6175154, wage: 25.50 },
+  { name: 'Hannah Deckard',    qbtId: 6346740, wage: 22.00 },
+  { name: 'Reynaldo Leonides', qbtId: 7653196, wage: 25.00 },
+  { name: 'Alexander Overall', qbtId: 7842488, wage: 24.00 },
+  { name: 'Jonas Hoard',       qbtId: 7623296, wage: 27.00 },
+  { name: 'Jared Miller',      qbtId: 36902,   wage: 28.09 },
+];
+const groundsQbtIdToTech = {}; GROUNDS_TECHS.forEach(t => groundsQbtIdToTech[t.qbtId] = t);
+
 // Same R&M team roster used by update-ramp-appliances.js, for the >$300 purchases list
 // and the Monthly Budget Labor/Materials totals -- repair techs only (Wade resigned).
 const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard'];
@@ -276,6 +292,54 @@ async function fetchQbtLaborForRange(jobcodes, fromStr, toStr) {
   return records;
 }
 
+// Same shape as fetchQbtLaborForRange, scoped to the Grounds team + Grounds QBT Class
+// instead of R&M -- for the Grounds Monthly Budget section (Florencia, 2026-07-22). Kept
+// as its own fetch (separate timesheets pull) rather than sharing fetchQbtLaborForRange's
+// call, since it's a genuinely different team+class filter, same convention as RM_TEAM vs
+// OPEX_TEAM being separate literal rosters elsewhere in this file.
+async function fetchGroundsLaborForRange(jobcodes, fromStr, toStr) {
+  const headers = { Authorization: `Bearer ${process.env.QBT_TOKEN}` };
+
+  function jcPath(id, cache) {
+    if (cache[id]) return cache[id];
+    const j = jobcodes[id];
+    if (!j) return [];
+    if (!j.parent_id) return (cache[id] = [j.name]);
+    return (cache[id] = [...jcPath(j.parent_id, cache), j.name]);
+  }
+
+  const timesheets = [];
+  let page = 1;
+  while (true) {
+    const j = await qbtFetchWithRetry(`https://rest.tsheets.com/api/v1/timesheets?start_date=${fromStr}&end_date=${toStr}&page=${page}`, headers);
+    const rows = Object.values(j.results?.timesheets || {});
+    if (!rows.length) break;
+    timesheets.push(...rows);
+    if (!j.more) break;
+    page++;
+  }
+
+  const jcCache = {};
+  const records = [];
+  for (const ts of timesheets) {
+    if (ts.type !== 'regular') continue;
+    const tech = groundsQbtIdToTech[ts.user_id];
+    if (!tech) continue;
+    const cls = (ts.customfields && ts.customfields['25056']) || '';
+    if (!/grounds/i.test(cls)) continue;
+    const p = jcPath(ts.jobcode_id, jcCache);
+    if (!p.length) continue;
+    const propIdx = p.findIndex(seg => PROPERTY_CODE_RE.test(seg));
+    if (propIdx === -1) continue;
+    const prop = p[propIdx].toLowerCase();
+    const leafRef = p[p.length - 1];
+    const ref = /^T[A-Z0-9]{5,}/i.test(leafRef) ? leafRef : null;
+    const hrs = ts.duration / 3600;
+    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage });
+  }
+  return records;
+}
+
 // Returns raw per-transaction records (not pre-aggregated), same reasoning as above.
 async function fetchRampTransactions(fromStr, toStr) {
   const auth = Buffer.from(`${process.env.RAMP_CLIENT_ID}:${process.env.RAMP_CLIENT_SECRET}`).toString('base64');
@@ -432,6 +496,12 @@ function opexByCategory(records) {
 function materialsBudgetTotal(records) {
   return records.filter(r => r.isRmTeam && MATERIALS_GL_IDS.includes(r.glId)).reduce((s, r) => s + r.amount, 0);
 }
+// Grounds materials MTD, mirroring materialsBudgetTotal above -- scoped by the same
+// GL-or-classCode Grounds match already used for the Operational Expenses bucket
+// (opexByCategory's matchers.Grounds), not a separate GL id list.
+function groundsMaterialsTotal(records) {
+  return records.filter(r => r.isOpexTeam && (GL_BUCKETS.Grounds.includes(r.glId) || r.classCode === GROUNDS_CLASS)).reduce((s, r) => s + r.amount, 0);
+}
 
 async function appfolioBudgetComparative(month, propertiesIds) {
   const cid = (process.env.APPFOLIO_CLIENT_ID || '').trim();
@@ -456,6 +526,14 @@ async function appfolioBudgetComparative(month, propertiesIds) {
 async function appfolioRMRepairsBudget(month) {
   const rows = await appfolioBudgetComparative(month, null);
   const row = rows.find(r => r.account_name === 'R&M - Repairs');
+  return row ? parseFloat(row.period_budget) : null;
+}
+
+// Portfolio-wide "R&M - Grounds" budget line (account 52003, confirmed live 2026-07-22
+// against kn47) for the Grounds Monthly Budget section.
+async function appfolioGroundsBudget(month) {
+  const rows = await appfolioBudgetComparative(month, null);
+  const row = rows.find(r => r.account_name === 'R&M - Grounds');
   return row ? parseFloat(row.period_budget) : null;
 }
 
@@ -536,17 +614,19 @@ async function main() {
 
   // One fetch pass wide enough to cover the current week, month-to-date, and the last
   // 30/7 day rolling windows -- everything below just slices this in memory.
-  const [melds, laborRecords, rampRecords] = await Promise.all([
+  const [melds, laborRecords, rampRecords, groundsLaborRecords] = await Promise.all([
     fetchPmCompletedMelds(broadStart, todayStr),
     fetchQbtLaborForRange(jobcodes, broadStart, todayStr),
     fetchRampTransactions(broadStart, todayStr),
+    fetchGroundsLaborForRange(jobcodes, broadStart, todayStr),
   ]);
-  console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length);
+  console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length, '| Grounds labor records:', groundsLaborRecords.length);
 
   // Month-to-date records, computed once here and reused below both for Top 10 Work
   // Orders and for the Monthly Budget/Cost by Property section further down.
   const monthLaborRecords = inRange(laborRecords, monthStart, todayStr);
   const monthRampRecords = inRange(rampRecords, monthStart, todayStr);
+  const monthGroundsLaborRecords = inRange(groundsLaborRecords, monthStart, todayStr);
 
   // Top 10 Work Orders and Maintenance Team KPI's are both month-to-date, not just
   // this week -- a job completed earlier in the month should still show up (Florencia
@@ -703,6 +783,21 @@ async function main() {
     variance: rmRepairsBudget != null ? Math.round((rmRepairsBudget - totalActual) * 100) / 100 : null,
   };
 
+  // Grounds Monthly Budget (Florencia, 2026-07-22) -- same shape as monthlyBudget above,
+  // scoped to the Grounds team/class instead of R&M. Budget comes from AppFolio's
+  // "R&M - Grounds" line (account 52003), portfolio-wide, same convention as R&M's own.
+  const groundsLaborMTD = totalCost(monthGroundsLaborRecords);
+  const groundsMaterialsMTD = groundsMaterialsTotal(monthRampRecords);
+  const groundsTotalActual = groundsLaborMTD + groundsMaterialsMTD;
+  const groundsBudget = await appfolioGroundsBudget(month);
+  const groundsMonthlyBudget = {
+    budget: groundsBudget,
+    labor: Math.round(groundsLaborMTD * 100) / 100,
+    materials: Math.round(groundsMaterialsMTD * 100) / 100,
+    total_actual: Math.round(groundsTotalActual * 100) / 100,
+    variance: groundsBudget != null ? Math.round((groundsBudget - groundsTotalActual) * 100) / 100 : null,
+  };
+
   const laborByPropMTD = sumByProperty(monthLaborRecords);
   const materialsByPropMTD = materialsByProperty(monthRampRecords);
   const propKeys = new Set([...Object.keys(laborByPropMTD), ...Object.keys(materialsByPropMTD)]);
@@ -747,6 +842,7 @@ async function main() {
     ramp_purchases_over_300: weekOver300,
     operational_expenses: opex.buckets,
     monthly_budget: monthlyBudget,
+    grounds_monthly_budget: groundsMonthlyBudget,
     cost_by_property: costByProperty,
     narrative: priorNarrative,
     narrative_2: priorNarrative2,
@@ -771,7 +867,7 @@ async function main() {
   // weekly-mtd.json is kept as a quick always-current snapshot (nothing else reads
   // it anymore -- report-weekly-update.html now reads monthly_budget/cost_by_property
   // from the selected week's own file above).
-  const mtdJson = { month, generated_at: todayStr, monthly_budget: monthlyBudget, cost_by_property: costByProperty };
+  const mtdJson = { month, generated_at: todayStr, monthly_budget: monthlyBudget, grounds_monthly_budget: groundsMonthlyBudget, cost_by_property: costByProperty };
   fs.writeFileSync(path.join(DATA_DIR, 'weekly-mtd.json'), JSON.stringify(mtdJson, null, 2));
   console.log('Wrote weekly-mtd.json —', costByProperty.length, 'properties over budget this month');
 }

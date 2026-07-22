@@ -3,10 +3,17 @@
   "generated_at": "2026-07-22",
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 8662.91,
-    "materials": 18923.97,
-    "total_actual": 27586.88,
-    "variance": 39680.9
+    "labor": 8954.27,
+    "materials": 19784.27,
+    "total_actual": 28738.54,
+    "variance": 38529.24
+  },
+  "grounds_monthly_budget": {
+    "budget": 29156.3,
+    "labor": 12200.82,
+    "materials": 2118.04,
+    "total_actual": 14318.86,
+    "variance": 14837.44
   },
   "cost_by_property": [
     {

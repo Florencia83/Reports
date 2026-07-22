@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 50.57,
-      "last_7": 32.39
+      "last_30": 48.75,
+      "last_7": 30.86
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 109,
-      "avg_cost_per_wo": 29.9,
-      "total_labor_cost": 1566.07,
+      "wo_count": 112,
+      "avg_cost_per_wo": 29.44,
+      "total_labor_cost": 1604.46,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -167,8 +167,8 @@
     {
       "name": "Jaxson Lakins",
       "wo_count": 59,
-      "avg_cost_per_wo": 55.01,
-      "total_labor_cost": 1920,
+      "avg_cost_per_wo": 57.25,
+      "total_labor_cost": 1943.6,
       "avg_resident_rating": 4.67,
       "reviews": [
         {
@@ -205,8 +205,8 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 48,
-      "avg_cost_per_wo": 211.44,
+      "wo_count": 51,
+      "avg_cost_per_wo": 199,
       "total_labor_cost": 1605.42,
       "avg_resident_rating": 2.33,
       "reviews": [
@@ -229,9 +229,9 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 37,
-      "avg_cost_per_wo": 78.8,
-      "total_labor_cost": 672.3,
+      "wo_count": 38,
+      "avg_cost_per_wo": 78.39,
+      "total_labor_cost": 700.2,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -262,6 +262,13 @@
       "property": "RL21",
       "cardholder": "isaac chavez",
       "amount": 972.67
+    },
+    {
+      "date": "2026-07-22",
+      "ref": null,
+      "property": null,
+      "cardholder": "Justin Gutierrez",
+      "amount": 531.34
     },
     {
       "date": "2026-07-20",
@@ -318,15 +325,22 @@
     },
     {
       "category": "Maintenance",
-      "amount": 1911.38
+      "amount": 2771.68
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 8662.91,
-    "materials": 18923.97,
-    "total_actual": 27586.88,
-    "variance": 39680.9
+    "labor": 8954.27,
+    "materials": 19784.27,
+    "total_actual": 28738.54,
+    "variance": 38529.24
+  },
+  "grounds_monthly_budget": {
+    "budget": 29156.3,
+    "labor": 12200.82,
+    "materials": 2118.04,
+    "total_actual": 14318.86,
+    "variance": 14837.44
   },
   "cost_by_property": [
     {
