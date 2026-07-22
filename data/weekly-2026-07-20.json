@@ -3,7 +3,7 @@
   "week_end": "2026-07-26",
   "label": "July 20 – 26, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-21",
+  "generated_at": "2026-07-22",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 47.92,
-      "last_7": 26.84
+      "last_30": 50.57,
+      "last_7": 32.39
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -99,6 +99,22 @@
       "cost": 1074.23
     },
     {
+      "ref": "TIFBJ48",
+      "property": "c302",
+      "brief": "Ecall kitchen sink back up kitchen flooded",
+      "labor": 0,
+      "materials": 657.27,
+      "cost": 657.27
+    },
+    {
+      "ref": "TFNQV9P",
+      "property": "c302",
+      "brief": "Ceiling Fans, Not Attached To Ceiling",
+      "labor": 42.5,
+      "materials": 552.5,
+      "cost": 595
+    },
+    {
       "ref": "TU292CMB",
       "property": "kn47",
       "brief": "Daily Pool Maintenance",
@@ -107,45 +123,29 @@
       "cost": 445.9
     },
     {
+      "ref": "TEPHG14",
+      "property": "rl16",
+      "brief": "Ecall no ac",
+      "labor": 19.8,
+      "materials": 363.39,
+      "cost": 383.19
+    },
+    {
       "ref": "TKFWD2L",
       "property": "rl16",
       "brief": "Daily Pool Maintenance",
       "labor": 0,
       "materials": 362.25,
       "cost": 362.25
-    },
-    {
-      "ref": "TKRUKPR",
-      "property": "kn47 k1",
-      "brief": "Housing Inspection - FAIL",
-      "labor": 95.6,
-      "materials": 240.78,
-      "cost": 336.38
-    },
-    {
-      "ref": "T6N60R0",
-      "property": "s300",
-      "brief": "No AC, Over 85℉ Outside",
-      "labor": 0,
-      "materials": 304.07,
-      "cost": 304.07
-    },
-    {
-      "ref": "TL23LGN",
-      "property": "rl16",
-      "brief": "roof leak (clone)",
-      "labor": 190.54,
-      "materials": 101,
-      "cost": 291.54
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 105,
-      "avg_cost_per_wo": 30,
-      "total_labor_cost": 1469.16,
-      "avg_resident_rating": 4.25,
+      "wo_count": 109,
+      "avg_cost_per_wo": 29.9,
+      "total_labor_cost": 1566.07,
+      "avg_resident_rating": 4,
       "reviews": [
         {
           "ref": "TDIUJDW",
@@ -161,19 +161,14 @@
           "ref": "TB5PYAC",
           "rating": 4,
           "text": "Good job Jared"
-        },
-        {
-          "ref": "TV3HC42",
-          "rating": 5,
-          "text": "Outstanding!!!"
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 53,
-      "avg_cost_per_wo": 56.12,
-      "total_labor_cost": 1670.8,
+      "wo_count": 59,
+      "avg_cost_per_wo": 55.01,
+      "total_labor_cost": 1920,
       "avg_resident_rating": 4.67,
       "reviews": [
         {
@@ -210,15 +205,20 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 41,
-      "avg_cost_per_wo": 230.52,
-      "total_labor_cost": 1460,
-      "avg_resident_rating": 3,
+      "wo_count": 48,
+      "avg_cost_per_wo": 211.44,
+      "total_labor_cost": 1605.42,
+      "avg_resident_rating": 2.33,
       "reviews": [
         {
           "ref": "TQ55RUU",
           "rating": 1,
           "text": null
+        },
+        {
+          "ref": "T80BI02",
+          "rating": 1,
+          "text": "Still need mailbox key \nIt's been over a month"
         },
         {
           "ref": "TEJ8NZ5",
@@ -229,9 +229,9 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 34,
-      "avg_cost_per_wo": 73.45,
-      "total_labor_cost": 571.95,
+      "wo_count": 37,
+      "avg_cost_per_wo": 78.8,
+      "total_labor_cost": 672.3,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -249,8 +249,8 @@
     {
       "name": "Isaac Chavez",
       "wo_count": 32,
-      "avg_cost_per_wo": 120.71,
-      "total_labor_cost": 660.6,
+      "avg_cost_per_wo": 132.37,
+      "total_labor_cost": 670.5,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -271,6 +271,27 @@
       "amount": 519.32
     },
     {
+      "date": "2026-07-21",
+      "ref": "TMHMCWC",
+      "property": "TC68",
+      "cardholder": "Jonas Hoard",
+      "amount": 467.98
+    },
+    {
+      "date": "2026-07-22",
+      "ref": null,
+      "property": null,
+      "cardholder": "Jared Miller",
+      "amount": 379.71
+    },
+    {
+      "date": "2026-07-22",
+      "ref": null,
+      "property": null,
+      "cardholder": "Jared Miller",
+      "amount": 379.71
+    },
+    {
       "date": "2026-07-20",
       "ref": "TEPHG14",
       "property": "RL16",
@@ -281,7 +302,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 0
+      "amount": 330.45
     },
     {
       "category": "Supplies and Tools",
@@ -293,19 +314,19 @@
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 99.4
     },
     {
       "category": "Maintenance",
-      "amount": 1062.57
+      "amount": 1911.38
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 7983.05,
-    "materials": 18075.16,
-    "total_actual": 26058.21,
-    "variance": 41209.57
+    "labor": 8662.91,
+    "materials": 18923.97,
+    "total_actual": 27586.88,
+    "variance": 39680.9
   },
   "cost_by_property": [
     {
@@ -319,10 +340,10 @@
     {
       "property": "C302",
       "labor": 402.5,
-      "materials": 1302.6,
-      "cost": 1705.1,
+      "materials": 1321.81,
+      "cost": 1724.31,
       "budget": 816.5,
-      "pct_over_budget": 108.8
+      "pct_over_budget": 111.2
     }
   ],
   "narrative": null,

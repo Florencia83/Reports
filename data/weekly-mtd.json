@@ -1,12 +1,12 @@
 {
   "month": "2026-07",
-  "generated_at": "2026-07-21",
+  "generated_at": "2026-07-22",
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 7983.05,
-    "materials": 18075.16,
-    "total_actual": 26058.21,
-    "variance": 41209.57
+    "labor": 8662.91,
+    "materials": 18923.97,
+    "total_actual": 27586.88,
+    "variance": 39680.9
   },
   "cost_by_property": [
     {
@@ -20,10 +20,10 @@
     {
       "property": "C302",
       "labor": 402.5,
-      "materials": 1302.6,
-      "cost": 1705.1,
+      "materials": 1321.81,
+      "cost": 1724.31,
       "budget": 816.5,
-      "pct_over_budget": 108.8
+      "pct_over_budget": 111.2
     }
   ]
 }
