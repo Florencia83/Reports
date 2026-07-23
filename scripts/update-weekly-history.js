@@ -148,6 +148,9 @@ function httpreq(method, urlStr, headers, bodyStr) {
       let b = ''; resp.on('data', d => b += d);
       resp.on('end', () => resolve({ status: resp.statusCode, headers: resp.headers, body: b }));
     }).on('error', reject);
+    // No default timeout on https.request either -- same stalled-connection risk as the
+    // fetch() calls above, so a hung Property Meld connection could hang the script forever.
+    r.setTimeout(20000, () => r.destroy(new Error(`Property Meld request timed out: ${method} ${urlStr}`)));
     if (bodyStr) r.write(bodyStr);
     r.end();
   });
@@ -212,7 +215,22 @@ async function fetchPmCompletedMelds(fromStr, toStr) {
 }
 
 async function qbtFetchWithRetry(url, headers, attempt = 1) {
-  const res = await fetch(url, { headers });
+  // A bare fetch() has no default timeout -- a stalled connection (seen intermittently
+  // against this API) hangs the whole script forever instead of failing. 20s + retry
+  // (same backoff as 429/5xx) turns that into a bounded, self-healing wait. Same fix
+  // as update-itemized-detail.js's qbtFetchWithRetry (2026-07-20).
+  let res;
+  try {
+    res = await fetch(url, { headers, signal: AbortSignal.timeout(20000) });
+  } catch (e) {
+    if (attempt <= 4) {
+      const backoff = 2000 * attempt;
+      console.log(`QBT request timed out/errored on ${url} (${e.message}), retrying in ${backoff}ms (attempt ${attempt})`);
+      await new Promise(r => setTimeout(r, backoff));
+      return qbtFetchWithRetry(url, headers, attempt + 1);
+    }
+    throw e;
+  }
   if (!res.ok && attempt <= 4 && (res.status === 429 || res.status >= 500)) {
     const backoff = 2000 * attempt;
     console.log(`QBT ${res.status} on ${url}, retrying in ${backoff}ms (attempt ${attempt})`);
@@ -340,10 +358,34 @@ async function fetchGroundsLaborForRange(jobcodes, fromStr, toStr) {
   return records;
 }
 
+// Same stalled-connection protection as qbtFetchWithRetry above -- a bare fetch() here
+// can hang the whole script forever on a stalled connection, with no default timeout.
+async function fetchWithRetry(url, options, attempt = 1) {
+  let res;
+  try {
+    res = await fetch(url, { ...options, signal: AbortSignal.timeout(20000) });
+  } catch (e) {
+    if (attempt <= 4) {
+      const backoff = 2000 * attempt;
+      console.log(`Request timed out/errored on ${url} (${e.message}), retrying in ${backoff}ms (attempt ${attempt})`);
+      await new Promise(r => setTimeout(r, backoff));
+      return fetchWithRetry(url, options, attempt + 1);
+    }
+    throw e;
+  }
+  if (!res.ok && attempt <= 4 && (res.status === 429 || res.status >= 500)) {
+    const backoff = 2000 * attempt;
+    console.log(`${res.status} on ${url}, retrying in ${backoff}ms (attempt ${attempt})`);
+    await new Promise(r => setTimeout(r, backoff));
+    return fetchWithRetry(url, options, attempt + 1);
+  }
+  return res;
+}
+
 // Returns raw per-transaction records (not pre-aggregated), same reasoning as above.
 async function fetchRampTransactions(fromStr, toStr) {
   const auth = Buffer.from(`${process.env.RAMP_CLIENT_ID}:${process.env.RAMP_CLIENT_SECRET}`).toString('base64');
-  const tokRes = await fetch('https://api.ramp.com/developer/v1/token', {
+  const tokRes = await fetchWithRetry('https://api.ramp.com/developer/v1/token', {
     method: 'POST',
     headers: { Authorization: `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' },
     body: 'grant_type=client_credentials&scope=transactions:read',
@@ -360,7 +402,7 @@ async function fetchRampTransactions(fromStr, toStr) {
     url.searchParams.set('from_date', from);
     url.searchParams.set('page_size', '100');
     if (start) url.searchParams.set('start', start);
-    const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
+    const res = await fetchWithRetry(url, { headers: { Authorization: `Bearer ${token}` } });
     if (!res.ok) throw new Error(`Ramp transactions failed: ${res.status} ${await res.text()}`);
     const j = await res.json();
     all.push(...(j.data || []));
@@ -514,7 +556,7 @@ async function appfolioBudgetComparative(month, propertiesIds) {
     level_of_detail: 'detail_view',
   };
   if (propertiesIds) body.properties = { properties_ids: propertiesIds };
-  const res = await fetch(`https://${APPFOLIO_SUBDOMAIN}.appfolio.com/api/v2/reports/budget_comparative.json`, {
+  const res = await fetchWithRetry(`https://${APPFOLIO_SUBDOMAIN}.appfolio.com/api/v2/reports/budget_comparative.json`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Basic ${auth}` },
     body: JSON.stringify(body),
