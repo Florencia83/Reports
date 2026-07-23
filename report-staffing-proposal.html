@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kn47 Grounds Staffing Proposal — Reports</title>
+<style>
+  :root {
+    color-scheme: light;
+    --paper:        #f7f6f2;
+    --surface:      #ffffff;
+    --ink:          #171b19;
+    --ink-2:        #55524a;
+    --ink-muted:    #8c887d;
+    --line:         #e3e0d6;
+    --line-strong:  #cfc9ba;
+    --accent:       #12805f;
+    --accent-soft:  #e4f2ec;
+    --proposed:     #1baf7a;
+    --good:         #0ca30c;
+    --good-bg:      #eaf6ea;
+    --shadow:       0 1px 2px rgba(23,27,25,0.04), 0 8px 24px rgba(23,27,25,0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --paper:        #121412;
+      --surface:      #1a1d1a;
+      --ink:          #f3f2ec;
+      --ink-2:        #c7c4b8;
+      --ink-muted:    #8c887d;
+      --line:         #2c2f2b;
+      --line-strong:  #3a3d38;
+      --accent:       #35c497;
+      --accent-soft:  #17251f;
+      --proposed:     #199e70;
+      --good:         #4bc24b;
+      --good-bg:      #16281a;
+      --shadow:       0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper:        #121412;
+    --surface:      #1a1d1a;
+    --ink:          #f3f2ec;
+    --ink-2:        #c7c4b8;
+    --ink-muted:    #8c887d;
+    --line:         #2c2f2b;
+    --line-strong:  #3a3d38;
+    --accent:       #35c497;
+    --accent-soft:  #17251f;
+    --proposed:     #199e70;
+    --good:         #4bc24b;
+    --good-bg:      #16281a;
+    --shadow:       0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 920px; margin: 0 auto; padding: 32px 24px 80px; }
+  .mono {
+    font-family: "SF Mono", "Cascadia Mono", "Consolas", "Liberation Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .breadcrumb {
+    font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-muted); margin: 0 0 20px; font-weight: 600;
+  }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  header.report-head {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: 24px; border-bottom: 2px solid var(--ink); padding-bottom: 20px;
+    margin-bottom: 8px; flex-wrap: wrap;
+  }
+  .report-head h1 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-size: 26px; font-weight: 600; margin: 0 0 6px; text-wrap: balance;
+  }
+  .report-head .property-line { color: var(--ink-2); font-size: 14px; }
+  .report-head .prepared { text-align: right; font-size: 12px; color: var(--ink-muted); line-height: 1.6; }
+  .prepared .eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px; color: var(--ink-muted); }
+
+  .subhead { color: var(--ink-2); font-size: 15px; margin: 18px 0 32px; max-width: 66ch; line-height: 1.55; }
+
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden; margin-bottom: 36px;
+  }
+  .kpi { background: var(--surface); padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .kpi .label { text-transform: uppercase; letter-spacing: 0.07em; font-size: 10.5px; color: var(--ink-muted); font-weight: 600; }
+  .kpi .value { font-size: 23px; font-weight: 600; letter-spacing: -0.01em; }
+  .kpi .sub { font-size: 12.5px; color: var(--ink-2); }
+  .chip {
+    display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px;
+    border-radius: 100px; font-size: 11px; font-weight: 600;
+    background: var(--good-bg); color: var(--good); white-space: nowrap;
+  }
+  .chip.dot::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+  section.card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 22px 24px 20px; margin-bottom: 26px;
+  }
+  section.card h2 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-size: 16.5px; font-weight: 600; margin: 0 0 2px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  section.card h2 .person-rate { font-size: 12px; font-weight: 500; color: var(--ink-muted); font-family: system-ui, sans-serif; }
+  section.card .card-sub { font-size: 12.5px; color: var(--ink-muted); margin: 0 0 16px; }
+
+  .assumptions {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  }
+  .assumptions .who { border-left: 3px solid var(--proposed); padding-left: 14px; }
+  .assumptions .who h3 { font-size: 14px; margin: 0 0 6px; }
+  .assumptions .who dl { margin: 0; font-size: 12.5px; color: var(--ink-2); }
+  .assumptions .who dl div { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dotted var(--line); }
+  .assumptions .who dl div:last-child { border-bottom: none; }
+  .assumptions .who dl dt { color: var(--ink-muted); }
+  .assumptions .who dl dd { margin: 0; font-weight: 600; font-family: "SF Mono", "Cascadia Mono", Consolas, monospace; }
+
+  .formula-note {
+    font-size: 12px; color: var(--ink-muted); background: var(--accent-soft);
+    border-radius: 8px; padding: 10px 14px; margin: 16px 0 0; font-family: "SF Mono", "Cascadia Mono", Consolas, monospace;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: right; padding: 7px 9px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th {
+    text-transform: uppercase; letter-spacing: 0.05em; font-size: 10px;
+    color: var(--ink-muted); font-weight: 600; border-bottom: 1px solid var(--line-strong);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tr.total td { border-top: 1px solid var(--line-strong); font-weight: 600; background: var(--accent-soft); }
+  tr.zero td { color: var(--ink-muted); }
+  .table-scroll { overflow-x: auto; }
+
+  aside.notes { border-top: 2px solid var(--ink); padding-top: 18px; margin-top: 40px; }
+  aside.notes h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-muted); margin: 0 0 12px; }
+  aside.notes ul { margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--ink-2); line-height: 1.7; }
+  aside.notes li { margin-bottom: 6px; }
+  aside.notes b { color: var(--ink); }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 720px) {
+    .assumptions { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .kpi-grid { grid-template-columns: 1fr; }
+    .report-head { flex-direction: column; align-items: flex-start; }
+    .prepared { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Reports</a> &middot; Quick Reports</p>
+
+  <header class="report-head">
+    <div>
+      <h1>Staffing Proposal — kn47 Grounds</h1>
+      <div class="property-line">Three Rivers Place · 4711 W Metaline Ave, Kennewick WA · account 52003 R&amp;M&nbsp;-&nbsp;Grounds</div>
+    </div>
+    <div class="prepared">
+      <div class="eyebrow">Prepared</div>
+      Jul 23, 2026<br>Florencia · m5x2 Ops
+    </div>
+  </header>
+
+  <p class="subhead">
+    Month-by-month detail of the proposal: Rey is let go, an experienced replacement comes in at the same rate,
+    with a <b>20&nbsp;hr/week ceiling</b> at kn47 for that person and for Hannah. Jared is unchanged. The full
+    build-up is shown — hours, rate, the 1.5x payroll burden, and the materials % — for each person and each month.
+  </p>
+
+  <div class="kpi-grid" id="kpiGrid"></div>
+
+  <section class="card">
+    <h2>Assumptions</h2>
+    <div class="assumptions">
+      <div class="who">
+        <h3>New hire <span style="color:var(--ink-muted); font-weight:400;">(replaces Rey)</span></h3>
+        <dl>
+          <div><dt>Rate</dt><dd>$25.00/hr</dd></div>
+          <div><dt>Materials</dt><dd>+20%</dd></div>
+          <div><dt>kn47 ceiling</dt><dd>20 hr/wk</dd></div>
+          <div><dt>Season</dt><dd>Apr&ndash;Nov</dd></div>
+        </dl>
+      </div>
+      <div class="who">
+        <h3>Hannah Deckard</h3>
+        <dl>
+          <div><dt>Rate</dt><dd>$22.00/hr</dd></div>
+          <div><dt>Materials</dt><dd>+10%</dd></div>
+          <div><dt>kn47 ceiling</dt><dd>20 hr/wk</dd></div>
+          <div><dt>Season</dt><dd>year-round</dd></div>
+        </dl>
+      </div>
+      <div class="who">
+        <h3>Jared Miller <span style="color:var(--ink-muted); font-weight:400;">(unchanged)</span></h3>
+        <dl>
+          <div><dt>Rate</dt><dd>$28.09/hr</dd></div>
+          <div><dt>Materials</dt><dd>+10%</dd></div>
+          <div><dt>Hours</dt><dd>real QBT pattern</dd></div>
+          <div><dt>Season</dt><dd>pool May&ndash;Sep + grounds</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="formula-note">month_cost = hours &times; rate &times; 1.5 (loaded wage) &times; (1 + materials %)</div>
+  </section>
+
+  <section class="card">
+    <h2>New hire <span class="person-rate">$25.00/hr &middot; +20% materials &middot; 20 hr/wk ceiling &middot; active Apr&ndash;Nov</span></h2>
+    <p class="card-sub">No lawn activity Dec&ndash;Mar. Ceiling, not a floor: uses Rey's real pace where data exists (Mar&ndash;Jul), capped at 20 hr/wk; for months with no data (Aug&ndash;Nov, before he was hired) the ceiling is assumed, since his known pace already exceeded it.</p>
+    <div class="table-scroll">
+      <table class="mono" id="tableNew"></table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Hannah Deckard <span class="person-rate">$22.00/hr &middot; +10% materials &middot; 20 hr/wk ceiling &middot; year-round</span></h2>
+    <p class="card-sub">Ceiling, not a floor: uses her real monthly pace; only trimmed to 20 hr/wk in months where she exceeds it</p>
+    <div class="table-scroll">
+      <table class="mono" id="tableHannah"></table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Jared Miller <span class="person-rate">$28.09/hr &middot; +10% materials &middot; unchanged</span></h2>
+    <p class="card-sub">Real QBT hours (Grounds class at kn47) — same pattern in both scenarios</p>
+    <div class="table-scroll">
+      <table class="mono" id="tableJared"></table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Combined monthly summary</h2>
+    <p class="card-sub">New hire + Hannah + Jared, against the prorated monthly budget ($98,333.80/12)</p>
+    <div class="table-scroll">
+      <table class="mono" id="tableSummary"></table>
+    </div>
+  </section>
+
+  <aside class="notes">
+    <h3>Sources &amp; assumptions</h3>
+    <ul>
+      <li><b>Budget:</b> AppFolio, kn47 property (id 1057), account 52003 "R&amp;M - Grounds", Aug 2025&ndash;Jul 2026 period = <b>$98,333.80/year</b> ($8,194.48/month prorated). AppFolio shows no actuals posted to this account for that period with the tool used — this report's cost is built bottom-up (hours &times; rate), not read from an AppFolio actual.</li>
+      <li><b>Rates:</b> Hannah and Jared from QuickBooks Time. New hire at $25/hr (same rate as Rey), confirmed by Florencia. The rate gets &times;1.5 (loaded wage) applied, then the materials %.</li>
+      <li><b>20 hr/week ceiling</b> (new hire + Hannah, not Jared): it's a ceiling, not a floor — if a month's real pace is under 20 hr/wk, it stays as-is; it's only trimmed when it exceeds that.</li>
+      <li><b>Jared:</b> uses his real monthly hours pattern (QBT, kn47 property, "Grounds" class) from the last 12 months — includes pool season (May&ndash;Sep, confirmed in Property Meld) and other grounds tasks outside pool season.</li>
+      <li><b>Not included:</b> material purchases or vendor contracts that may also post to account 52003 (e.g. DUO&nbsp;CLEAN, fertilizer, equipment) — the real margin against budget is likely smaller once those are added.</li>
+    </ul>
+  </aside>
+
+</div>
+
+<script>
+(function () {
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var hannah = {Jan:78.1,Feb:81.2,Mar:56.6,Apr:106.8,May:77.2,Jun:83.8,Jul:53.1,Aug:76.2,Sep:96.1,Oct:76.1,Nov:73.0,Dec:96.8};
+  var jared  = {Jan:10.7,Feb:0,Mar:4.5,Apr:2.2,May:12.9,Jun:31.6,Jul:19.9,Aug:22.7,Sep:14.2,Oct:17.5,Nov:0,Dec:5.3};
+  var reyReal = {Mar:8.0,Apr:100.3,May:32.9,Jun:129.2,Jul:116.5}; // real QBT hours, only months Rey has been employed
+  var reyActive = {Apr:1,May:1,Jun:1,Jul:1,Aug:1,Sep:1,Oct:1,Nov:1}; // 8-month lawn season, no lawn dec-mar
+  var CAP_MO = 20 * 4.34; // 20 hr/wk ceiling (86.8 hrs/month) -- a ceiling, not a floor: if real pace is lower, it stays as-is
+  var BASE = 1.5; // loaded wage (payroll burden multiplier)
+  var BUDGET_ANNUAL = 98333.80;
+  var budgetMonthly = BUDGET_ANNUAL / 12;
+
+  function money(n, d) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: d === undefined ? 2 : d, maximumFractionDigits: d === undefined ? 2 : d }); }
+  function moneyR(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function calcRow(hrs, rate, mk) {
+    var sub = hrs * rate;
+    var afterBase = sub * BASE;
+    var materials = afterBase * mk;
+    var total = afterBase + materials;
+    return { hrs: hrs, rate: rate, sub: sub, afterBase: afterBase, mk: mk, materials: materials, total: total };
+  }
+
+  function buildLedger(tableId, rowsByMonth, mkPct) {
+    var thead = '<thead><tr><th style="text-align:left">Month</th><th>Hours</th><th>Rate</th><th>Subtotal</th><th>&times;1.5</th><th>+Materials (' + mkPct + ')</th><th>Month total</th></tr></thead>';
+    var body = '';
+    var totalHrs = 0, totalCost = 0, totalMaterials = 0;
+    MONTHS.forEach(function (m) {
+      var r = rowsByMonth[m];
+      totalHrs += r.hrs; totalCost += r.total; totalMaterials += r.materials;
+      var cls = r.hrs === 0 ? ' class="zero"' : '';
+      body += '<tr' + cls + '><td style="text-align:left">' + m + '</td><td>' + r.hrs.toFixed(1) + '</td><td>' + money(r.rate) + '</td><td>' + money(r.sub) + '</td><td>' + money(r.afterBase) + '</td><td>' + money(r.materials) + '</td><td>' + money(r.total) + '</td></tr>';
+    });
+    body += '<tr class="total"><td style="text-align:left">Year total</td><td>' + totalHrs.toFixed(1) + '</td><td></td><td></td><td></td><td>' + moneyR(totalMaterials) + '</td><td>' + moneyR(totalCost) + '</td></tr>';
+    document.getElementById(tableId).innerHTML = thead + '<tbody>' + body + '</tbody>';
+    return totalCost;
+  }
+
+  var newRows = {}, hannahRows = {}, jaredRows = {};
+  MONTHS.forEach(function (m) {
+    var newHrs = 0;
+    if (reyActive[m]) { newHrs = reyReal[m] !== undefined ? Math.min(reyReal[m], CAP_MO) : CAP_MO; }
+    newRows[m] = calcRow(newHrs, 25, 0.20);
+    hannahRows[m] = calcRow(Math.min(hannah[m], CAP_MO), 22, 0.10);
+    jaredRows[m] = calcRow(jared[m], 28.09, 0.10);
+  });
+
+  var totalNew = buildLedger('tableNew', newRows, '+20%');
+  var totalHannah = buildLedger('tableHannah', hannahRows, '+10%');
+  var totalJared = buildLedger('tableJared', jaredRows, '+10%');
+  var grandTotal = totalNew + totalHannah + totalJared;
+
+  // KPI tiles
+  var kpis = [
+    { label: 'Annual budget (AppFolio)', value: moneyR(BUDGET_ANNUAL), sub: 'account 52003 · $' + Math.round(budgetMonthly).toLocaleString('en-US') + '/mo prorated' },
+    { label: 'Total annual proposal', value: moneyR(grandTotal), sub: (grandTotal / BUDGET_ANNUAL * 100).toFixed(1) + '% of budget', chip: moneyR(BUDGET_ANNUAL - grandTotal) + ' remaining' },
+    { label: 'New hire + Hannah + Jared', value: moneyR(totalNew) + ' / ' + moneyR(totalHannah) + ' / ' + moneyR(totalJared), sub: 'annual breakdown by person' }
+  ];
+  var grid = document.getElementById('kpiGrid');
+  kpis.forEach(function (k) {
+    var el = document.createElement('div');
+    el.className = 'kpi';
+    var chipHtml = k.chip ? '<div class="sub"><span class="chip dot">' + k.chip + '</span></div>' : '';
+    el.innerHTML = '<div class="label">' + k.label + '</div><div class="value mono">' + k.value + '</div><div class="sub">' + k.sub + '</div>' + chipHtml;
+    grid.appendChild(el);
+  });
+
+  // Combined monthly summary table
+  var thead2 = '<thead><tr><th style="text-align:left">Month</th><th>New hire</th><th>Hannah</th><th>Jared</th><th>Month total</th><th>Budget/mo</th><th>Variance</th></tr></thead>';
+  var body2 = '';
+  MONTHS.forEach(function (m) {
+    var t = newRows[m].total + hannahRows[m].total + jaredRows[m].total;
+    var v = budgetMonthly - t;
+    body2 += '<tr><td style="text-align:left">' + m + '</td><td>' + moneyR(newRows[m].total) + '</td><td>' + moneyR(hannahRows[m].total) + '</td><td>' + moneyR(jaredRows[m].total) + '</td><td>' + moneyR(t) + '</td><td>' + moneyR(budgetMonthly) + '</td><td>' + (v >= 0 ? '+' : '') + moneyR(v) + '</td></tr>';
+  });
+  body2 += '<tr class="total"><td style="text-align:left">Year total</td><td>' + moneyR(totalNew) + '</td><td>' + moneyR(totalHannah) + '</td><td>' + moneyR(totalJared) + '</td><td>' + moneyR(grandTotal) + '</td><td>' + moneyR(BUDGET_ANNUAL) + '</td><td>+' + moneyR(BUDGET_ANNUAL - grandTotal) + '</td></tr>';
+  document.getElementById('tableSummary').innerHTML = thead2 + '<tbody>' + body2 + '</tbody>';
+})();
+</script>
+</body>
+</html>
