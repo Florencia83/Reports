@@ -3,7 +3,7 @@
   "week_end": "2026-07-26",
   "label": "July 20 – 26, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-23",
+  "generated_at": "2026-07-24",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 45.55,
-      "last_7": 29.88
+      "last_30": 45,
+      "last_7": 25.27
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,11 +142,16 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 118,
-      "avg_cost_per_wo": 34.81,
-      "total_labor_cost": 1840.38,
-      "avg_resident_rating": 4,
+      "wo_count": 120,
+      "avg_cost_per_wo": 34.26,
+      "total_labor_cost": 1824.93,
+      "avg_resident_rating": 4.25,
       "reviews": [
+        {
+          "ref": "TTHRJHQ",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TDIUJDW",
           "rating": 5,
@@ -166,15 +171,20 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 63,
-      "avg_cost_per_wo": 56.66,
-      "total_labor_cost": 2092,
-      "avg_resident_rating": 4.67,
+      "wo_count": 68,
+      "avg_cost_per_wo": 53.5,
+      "total_labor_cost": 2160,
+      "avg_resident_rating": 4.71,
       "reviews": [
         {
           "ref": "TQ4B01MB",
           "rating": 5,
           "text": "Good job Jaxson Thank you so much."
+        },
+        {
+          "ref": "T6LECHR",
+          "rating": 5,
+          "text": "Nice work!!!"
         },
         {
           "ref": "T7IB016",
@@ -205,9 +215,9 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 52,
-      "avg_cost_per_wo": 199.46,
-      "total_labor_cost": 1832.08,
+      "wo_count": 53,
+      "avg_cost_per_wo": 193.06,
+      "total_labor_cost": 1851.25,
       "avg_resident_rating": 3,
       "reviews": [
         {
@@ -234,9 +244,9 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 40,
-      "avg_cost_per_wo": 74.47,
-      "total_labor_cost": 700.2,
+      "wo_count": 44,
+      "avg_cost_per_wo": 71.95,
+      "total_labor_cost": 887.4,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -253,9 +263,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 32,
-      "avg_cost_per_wo": 34.07,
-      "total_labor_cost": 716.85,
+      "wo_count": 31,
+      "avg_cost_per_wo": 33.27,
+      "total_labor_cost": 657.9,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -267,6 +277,13 @@
       "property": "RL21",
       "cardholder": "isaac chavez",
       "amount": 972.67
+    },
+    {
+      "date": "2026-07-23",
+      "ref": null,
+      "property": null,
+      "cardholder": "Justin Gutierrez",
+      "amount": 531.34
     },
     {
       "date": "2026-07-22",
@@ -322,30 +339,30 @@
     },
     {
       "category": "Appliances",
-      "amount": 1336.06
+      "amount": 0
     },
     {
       "category": "Grounds",
-      "amount": 114.51
+      "amount": 131.84
     },
     {
       "category": "Maintenance",
-      "amount": 3622
+      "amount": 4292.37
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 9463.26,
-    "materials": 20634.59,
-    "total_actual": 30097.85,
-    "variance": 37169.93
+    "labor": 9821.22,
+    "materials": 21304.96,
+    "total_actual": 31126.18,
+    "variance": 36141.6
   },
   "grounds_monthly_budget": {
     "budget": 29156.3,
-    "labor": 12647.33,
-    "materials": 2133.15,
-    "total_actual": 14780.48,
-    "variance": 14375.82
+    "labor": 13142.31,
+    "materials": 2150.48,
+    "total_actual": 15292.79,
+    "variance": 13863.51
   },
   "cost_by_property": [
     {
