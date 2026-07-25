@@ -3,7 +3,7 @@
   "week_end": "2026-07-26",
   "label": "July 20 – 26, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-24",
+  "generated_at": "2026-07-25",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 45,
-      "last_7": 25.27
+      "last_30": 44.15,
+      "last_7": 25.35
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 120,
-      "avg_cost_per_wo": 34.26,
-      "total_labor_cost": 1824.93,
+      "wo_count": 126,
+      "avg_cost_per_wo": 34.69,
+      "total_labor_cost": 2027.64,
       "avg_resident_rating": 4.25,
       "reviews": [
         {
@@ -171,11 +171,26 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 68,
-      "avg_cost_per_wo": 53.5,
-      "total_labor_cost": 2160,
-      "avg_resident_rating": 4.71,
+      "wo_count": 74,
+      "avg_cost_per_wo": 51.92,
+      "total_labor_cost": 2258.4,
+      "avg_resident_rating": 4.36,
       "reviews": [
+        {
+          "ref": "T2T5CI1",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TMW5IAN",
+          "rating": 3,
+          "text": "Jaxson did great but I think the whole area where the oven plug goes needs to be replaced because anything could happen from it being so old"
+        },
+        {
+          "ref": "TW917HM",
+          "rating": 5,
+          "text": "Great job Jaxson Thank you for putting in brand new burner and drip pan thing under burner today."
+        },
         {
           "ref": "TQ4B01MB",
           "rating": 5,
@@ -190,6 +205,11 @@
           "ref": "T7IB016",
           "rating": 5,
           "text": "Good job Jaxson"
+        },
+        {
+          "ref": "T5XEGZ5",
+          "rating": 2,
+          "text": "I think that cockroach traps should have been with the inspectors so the old ones could have been thrown out and new ones could have been put in the places where the old traps were. They need to be more prepared with equipment to help us tenants."
         },
         {
           "ref": "TFD9Y8U",
@@ -244,8 +264,8 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 44,
-      "avg_cost_per_wo": 71.95,
+      "wo_count": 49,
+      "avg_cost_per_wo": 66.4,
       "total_labor_cost": 887.4,
       "avg_resident_rating": 5,
       "reviews": [
@@ -263,9 +283,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 31,
-      "avg_cost_per_wo": 33.27,
-      "total_labor_cost": 657.9,
+      "wo_count": 36,
+      "avg_cost_per_wo": 34.01,
+      "total_labor_cost": 830.7,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -347,22 +367,22 @@
     },
     {
       "category": "Maintenance",
-      "amount": 4292.37
+      "amount": 5019.16
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 9821.22,
-    "materials": 21304.96,
-    "total_actual": 31126.18,
-    "variance": 36141.6
+    "labor": 10491.55,
+    "materials": 22031.75,
+    "total_actual": 32523.3,
+    "variance": 34744.48
   },
   "grounds_monthly_budget": {
     "budget": 29156.3,
-    "labor": 13142.31,
+    "labor": 13465.67,
     "materials": 2150.48,
-    "total_actual": 15292.79,
-    "variance": 13863.51
+    "total_actual": 15616.15,
+    "variance": 13540.15
   },
   "cost_by_property": [
     {
@@ -375,11 +395,11 @@
     },
     {
       "property": "C302",
-      "labor": 402.5,
-      "materials": 1321.81,
-      "cost": 1724.31,
+      "labor": 551.67,
+      "materials": 1804.8,
+      "cost": 2356.47,
       "budget": 816.5,
-      "pct_over_budget": 111.2
+      "pct_over_budget": 188.6
     }
   ],
   "narrative": null,
