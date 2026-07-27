@@ -18,43 +18,43 @@
       "metric": "Emergency Work Order Completion Time",
       "q1": 0.8,
       "q2": 0.4,
-      "last_30": null,
-      "last_7": null
+      "last_30": 1.4,
+      "last_7": 2.1
     },
     {
       "metric": "Work Order Resident Satisfaction",
       "q1": 4.21,
       "q2": 4.6,
-      "last_30": null,
-      "last_7": null
+      "last_30": 4.47,
+      "last_7": 4.5
     },
     {
       "metric": "Avg Vendor Completion Time",
       "q1": 18.7,
       "q2": 38.9,
-      "last_30": null,
-      "last_7": null
+      "last_30": 9.2,
+      "last_7": 7.2
     },
     {
       "metric": "Avg Speed of Repair",
       "q1": 9.2,
       "q2": 15.6,
-      "last_30": null,
-      "last_7": null
+      "last_30": 6.5,
+      "last_7": 7.5
     },
     {
       "metric": "Time to Assignment",
       "q1": 0.3,
       "q2": 1.31,
-      "last_30": null,
-      "last_7": null
+      "last_30": 0,
+      "last_7": 0.2
     },
     {
       "metric": "Time to Schedule",
       "q1": 0.4,
       "q2": 1.7,
-      "last_30": null,
-      "last_7": null
+      "last_30": 0.18,
+      "last_7": 0.5
     }
   ],
   "top_work_orders": [
@@ -364,7 +364,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 1426.28
     },
     {
       "category": "Grounds",
@@ -407,7 +407,17 @@
       "pct_over_budget": 188.6
     }
   ],
-  "narrative": null,
+  "narrative": [
+    "Time to Assignment and Time to Schedule have had some variation week over week but are both still within a performing range.",
+    "Emergency Work Order Completion Time increased due to a rise in emergency calls, driven mostly by Spokane.",
+    "Work Order Resident Satisfaction improved to a performing status, though a few individual reviews came in lower than the overall metric suggests. Every prior emergency was addressed, but as new emergencies come in on top of existing work, completion gets difficult when technicians are overloaded. Onboarding a new team member in Spokane should help resolve this.",
+    "Avg Speed of Repair decreased for the same reason. Tri-Cities and Tacoma are current, but Spokane has a sizable backlog; we expect onboarding a third technician there to bring the schedule back on track.",
+    "Avg Vendor Completion Time is running between 6 and 10 days, which is in line with the normal range and not a concern.",
+    "The Top 10 Work Orders list stayed steady, with a few seasonal repairs added: two AC units not cooling, pool maintenance, and ceiling fans not properly attached.",
+    "One low resident review reflected a poor move-in experience at C302-7, citing multiple issues in the unit. One of our technicians is now focused on that unit to resolve all outstanding issues."
+  ],
   "narrative_2": null,
-  "priorities_next_week": null
+  "priorities_next_week": [
+    "Onboard a third technician in Spokane to clear the repair backlog"
+  ]
 }

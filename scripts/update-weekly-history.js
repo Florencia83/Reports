@@ -105,7 +105,14 @@ const OPEX_CLASS = 'r203';
 const GL_BUCKETS = {
   Auto: ['59100'],
   'Supplies and Tools': ['67800'],
-  Appliances: ['59000', '59002'],
+  // GL id for CapEX - Appliance changed from 59000/59002 to 58000/58002 sometime
+  // around 2026-07-01 (confirmed live 2026-07-27: every Appliance transaction from
+  // July onward uses 58000/58002, none use 59000/59002 -- and the QuickbooksClass
+  // subclass "r203:CapEx Appliances" that used to catch these via APPLIANCE_CLASSES
+  // also stopped being populated at the same time, so both matchers silently missed
+  // real spend, reporting $0 for weeks 2026-07-20+ until this fix). Keeping the old
+  // ids too in case old/reclassified transactions still carry them.
+  Appliances: ['58000', '58002', '59000', '59002'],
   Grounds: ['54002'],
   Maintenance: ['52002'],
 };
