@@ -220,6 +220,16 @@ footer a { color: var(--ink-soft); }
     <p class="section-label">Grounds &mdash; Monthly Budget vs Spent (MTD)</p>
     <div id="grounds-budget-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
   </section>
+
+  <section>
+    <p class="section-label" id="grounds-top-purchases-label">Top 10 Grounds Purchases</p>
+    <div id="grounds-top-purchases-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
+
+  <section>
+    <p class="section-label">Pest Control Report</p>
+    <div id="pest-control-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
   </div>
 
   <footer>
@@ -439,6 +449,29 @@ function renderPriorities(items) {
   return '<div class="prose" style="font-size:14px;"><p>' + html + '</p></div>';
 }
 
+function renderGroundsTopPurchases(list) {
+  if (!list || !list.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No Grounds purchases found this month.</p>';
+  var head = '<tr><th>Date</th><th>Cardholder</th><th>Property</th><th class="num">Amount</th></tr>';
+  var body = list.map(function(r) {
+    return '<tr><td>' + esc(r.date) + '</td><td>' + esc(r.cardholder) + '</td><td>' + esc(r.property || '—') + '</td><td class="num">' + money(r.amount) + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+function renderPestControl(list) {
+  if (!list || !list.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No active elimination programs.</p>';
+  // table-layout:fixed + explicit column widths, since the default auto layout expands
+  // to each cell's unwrapped content width and pushes Amount off the right edge of the
+  // page/screenshot instead of actually wrapping the long Program/Units text (found
+  // 2026-07-27 -- min-width alone on td.detail isn't enough without fixed layout).
+  var head = '<tr><th style="width:13%;">Property</th><th class="detail" style="width:25%;">Program</th><th class="detail" style="width:32%;">Units</th><th style="width:15%;">Date Signed</th><th class="num" style="width:15%;">Amount</th></tr>';
+  var body = list.map(function(r) {
+    var units = Array.isArray(r.units) ? r.units.join(', ') : (r.units || '');
+    return '<tr><td>' + esc(r.property) + '</td><td class="detail">' + esc(r.program) + '</td><td class="detail">' + esc(units) + '</td><td>' + esc(r.date_signed) + '</td><td class="num">' + money(r.amount) + '</td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table style="table-layout:fixed; width:100%;">' + head + body + '</table></div>';
+}
+
 var ts = Date.now();
 
 function renderWeek(data) {
@@ -465,6 +498,10 @@ function renderWeek(data) {
   document.getElementById('budget-vs-spent-container').innerHTML = renderMonthlyBudget(data);
   document.getElementById('cost-by-property-container').innerHTML = renderCostByProperty(data.cost_by_property);
   document.getElementById('grounds-budget-container').innerHTML = renderGroundsMonthlyBudget(data);
+
+  document.getElementById('grounds-top-purchases-label').textContent = 'Top 10 Grounds Purchases' + (data.month_label ? ' — ' + data.month_label : '');
+  document.getElementById('grounds-top-purchases-container').innerHTML = renderGroundsTopPurchases(data.grounds_top_purchases);
+  document.getElementById('pest-control-container').innerHTML = renderPestControl(data.grounds_pest_control);
 
   document.getElementById('range-label').textContent = data.label;
   document.getElementById('sent-label').textContent = 'Data as of ' + data.generated_at;

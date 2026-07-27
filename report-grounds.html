@@ -259,10 +259,11 @@ function renderPestControl(list) {
     document.getElementById('pest-control-container').innerHTML = '<p style="font-size:12.5px; color:var(--ink-soft);">No active elimination programs.</p>';
     return;
   }
-  var head = '<tr><th>Property</th><th>Program</th><th>Units</th><th>Date Signed</th><th style="text-align:right;">Amount</th></tr>';
+  var wrapCell = 'white-space:normal; min-width:180px;';
+  var head = '<tr><th>Property</th><th style="' + wrapCell + '">Program</th><th style="' + wrapCell + '">Units</th><th>Date Signed</th><th style="text-align:right;">Amount</th></tr>';
   var body = list.map(function(r) {
     var units = Array.isArray(r.units) ? r.units.join(', ') : (r.units || '');
-    return '<tr><td>' + esc(r.property) + '</td><td>' + esc(r.program) + '</td><td>' + esc(units) + '</td><td>' + esc(r.date_signed) + '</td><td style="text-align:right;">' + money(r.amount) + '</td></tr>';
+    return '<tr><td>' + esc(r.property) + '</td><td style="' + wrapCell + '">' + esc(r.program) + '</td><td style="' + wrapCell + '">' + esc(units) + '</td><td>' + esc(r.date_signed) + '</td><td style="text-align:right;">' + money(r.amount) + '</td></tr>';
   }).join('');
   document.getElementById('pest-control-container').innerHTML = '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }

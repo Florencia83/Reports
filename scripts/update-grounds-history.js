@@ -409,20 +409,17 @@ async function main() {
   const monthStart = month + '-01';
   const topPurchases = await fetchTopGroundsPurchases(monthStart, todayStr);
 
-  // pest_control is manually authored by Florencia (elimination programs she signs) --
-  // never generated here, same carry-forward convention as the Weekly Update's
-  // narrative/priorities. Read the prior file before overwriting so a fresh run never
-  // erases it mid-month. Unlike narrative/priorities though, this list is month-scoped
-  // (Florencia, 2026-07-27): it resets to empty as soon as the calendar month rolls over,
-  // tracked via pest_control_month so the reset only fires once per month, not every run.
-  let priorPestControl = [];
-  const outPath = path.join(DATA_DIR, 'grounds.json');
-  if (fs.existsSync(outPath)) {
+  // pest_control is manually authored by Florencia (elimination programs she signs),
+  // added to across the month then reset once the calendar month rolls over. Read from
+  // the same data/pest-control.json state file used by update-weekly-history.js's Weekly
+  // Update report (keyed by month), so an entry given once shows up in both reports and
+  // never has to be re-entered -- this script only reads it, never writes it.
+  let pestControl = [];
+  const pestControlPath = path.join(DATA_DIR, 'pest-control.json');
+  if (fs.existsSync(pestControlPath)) {
     try {
-      const prior = JSON.parse(fs.readFileSync(outPath, 'utf8'));
-      if (prior.pest_control_month === month && Array.isArray(prior.pest_control)) {
-        priorPestControl = prior.pest_control;
-      }
+      const state = JSON.parse(fs.readFileSync(pestControlPath, 'utf8'));
+      if (Array.isArray(state[month])) pestControl = state[month];
     } catch (e) { /* fall through, treat as empty */ }
   }
 
@@ -432,10 +429,10 @@ async function main() {
     areas,
     top_purchases_month: month,
     top_purchases: topPurchases,
-    pest_control_month: month,
-    pest_control: priorPestControl,
+    pest_control: pestControl,
   };
 
+  const outPath = path.join(DATA_DIR, 'grounds.json');
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(out, null, 2));
   const total = areas.reduce((s, a) => s + a.properties.reduce((s2, p) => s2 + p.employees.reduce((s3, e) => s3 + e.recurring.length, 0), 0), 0);

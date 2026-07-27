@@ -47,6 +47,19 @@ function loadQuarterLocks() {
   try { return JSON.parse(fs.readFileSync(QUARTER_LOCKS_PATH, 'utf8')); }
   catch (e) { return {}; }
 }
+
+// Pest Control Report (Florencia, 2026-07-27) -- a manually-authored list of elimination
+// programs she signs, added to as the month goes (not weekly-file-scoped like
+// narrative/priorities, since she adds to it across several weeks within the same
+// month), then resets to empty once the calendar month rolls over. Keyed by month
+// ("YYYY-MM") in its own file, shared with update-grounds-history.js's report-grounds.html
+// section, so an entry given once shows up in both places and never has to be re-entered.
+const PEST_CONTROL_PATH = path.join(DATA_DIR, 'pest-control.json');
+function loadPestControl() {
+  if (!fs.existsSync(PEST_CONTROL_PATH)) return {};
+  try { return JSON.parse(fs.readFileSync(PEST_CONTROL_PATH, 'utf8')); }
+  catch (e) { return {}; }
+}
 function saveQuarterLocks(locks) {
   fs.writeFileSync(QUARTER_LOCKS_PATH, JSON.stringify(locks, null, 2));
 }
@@ -847,6 +860,19 @@ async function main() {
     variance: groundsBudget != null ? Math.round((groundsBudget - groundsTotalActual) * 100) / 100 : null,
   };
 
+  // Top 10 Grounds Purchases (Florencia, 2026-07-27) -- reuses monthRampRecords (already
+  // fetched above for R&M), scoped by the same GL-or-class Grounds match as the
+  // Operational Expenses bucket. Any cardholder counts (GL/class-scoped, not roster-scoped)
+  // so a vendor or one-off purchase still shows up, same reasoning as ramp_purchases_over_300.
+  const groundsTopPurchases = monthRampRecords
+    .filter(r => GL_BUCKETS.Grounds.includes(r.glId) || r.classCode === GROUNDS_CLASS)
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, 10)
+    .map(r => ({ date: r.date, cardholder: r.cardholder, property: r.property ? r.property.toUpperCase() : null, ref: r.ref, amount: Math.round(r.amount * 100) / 100 }));
+
+  const pestControlState = loadPestControl();
+  const groundsPestControl = pestControlState[month] || [];
+
   const laborByPropMTD = sumByProperty(monthLaborRecords);
   const materialsByPropMTD = materialsByProperty(monthRampRecords);
   const propKeys = new Set([...Object.keys(laborByPropMTD), ...Object.keys(materialsByPropMTD)]);
@@ -896,6 +922,9 @@ async function main() {
     narrative: priorNarrative,
     narrative_2: priorNarrative2,
     priorities_next_week: priorPriorities,
+    grounds_top_purchases_month: month,
+    grounds_top_purchases: groundsTopPurchases,
+    grounds_pest_control: groundsPestControl,
   };
 
   fs.mkdirSync(DATA_DIR, { recursive: true });
