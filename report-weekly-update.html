@@ -451,9 +451,11 @@ function renderPriorities(items) {
 
 function renderGroundsTopPurchases(list) {
   if (!list || !list.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No Grounds purchases found this month.</p>';
-  var head = '<tr><th>Date</th><th>Cardholder</th><th>Property</th><th class="num">Amount</th></tr>';
+  // Same header style (th()) and cell classes (ref/num) as Top 10 Work Orders / Ramp
+  // Purchases Over $300, so all three "purchase list" tables read as one system.
+  var head = '<tr>' + th('Date') + th('W.O.') + th('Property') + th('Cardholder') + th('Amount', 'num') + '</tr>';
   var body = list.map(function(r) {
-    return '<tr><td>' + esc(r.date) + '</td><td>' + esc(r.cardholder) + '</td><td>' + esc(r.property || '—') + '</td><td class="num">' + money(r.amount) + '</td></tr>';
+    return '<tr><td>' + esc(r.date) + '</td><td class="ref">' + (esc(r.ref) || '&mdash;') + '</td><td class="ref">' + (esc(r.property) || '&mdash;') + '</td><td>' + esc(r.cardholder) + '</td><td class="num">' + money(r.amount) + '</td></tr>';
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
@@ -464,7 +466,8 @@ function renderPestControl(list) {
   // to each cell's unwrapped content width and pushes Amount off the right edge of the
   // page/screenshot instead of actually wrapping the long Program/Units text (found
   // 2026-07-27 -- min-width alone on td.detail isn't enough without fixed layout).
-  var head = '<tr><th style="width:13%;">Property</th><th class="detail" style="width:25%;">Program</th><th class="detail" style="width:32%;">Units</th><th style="width:15%;">Date Signed</th><th class="num" style="width:15%;">Amount</th></tr>';
+  var thc = 'background:#4a6f92;color:#ffffff;';
+  var head = '<tr><th style="' + thc + 'width:13%;">Property</th><th class="detail" style="' + thc + 'width:25%;">Program</th><th class="detail" style="' + thc + 'width:32%;">Units</th><th style="' + thc + 'width:15%;">Date Signed</th><th class="num" style="' + thc + 'width:15%;">Amount</th></tr>';
   var body = list.map(function(r) {
     var units = Array.isArray(r.units) ? r.units.join(', ') : (r.units || '');
     return '<tr><td>' + esc(r.property) + '</td><td class="detail">' + esc(r.program) + '</td><td class="detail">' + esc(units) + '</td><td>' + esc(r.date_signed) + '</td><td class="num">' + money(r.amount) + '</td></tr>';
