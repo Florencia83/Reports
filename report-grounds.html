@@ -141,6 +141,16 @@ footer a { color: var(--ink-soft); }
 
   <div id="areas-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
 
+  <section>
+    <p class="section-label" id="top-purchases-label">Top 10 Grounds Purchases</p>
+    <div id="top-purchases-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
+
+  <section>
+    <p class="section-label">Pest Control Report</p>
+    <div id="pest-control-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
+  </section>
+
   </div>
 
   <footer>
@@ -222,10 +232,47 @@ function renderArea(area) {
   return '<h2 class="area-title">' + esc(area.area) + '</h2><div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
+function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+
+function monthLabel(ym) {
+  if (!ym) return '';
+  var parts = ym.split('-');
+  var d = new Date(Number(parts[0]), Number(parts[1]) - 1, 1);
+  return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
+
+function renderTopPurchases(list, month) {
+  document.getElementById('top-purchases-label').textContent = 'Top 10 Grounds Purchases' + (month ? ' — ' + monthLabel(month) + ' (MTD)' : '');
+  if (!list || !list.length) {
+    document.getElementById('top-purchases-container').innerHTML = '<p style="font-size:12.5px; color:var(--ink-soft);">No Grounds purchases found this month.</p>';
+    return;
+  }
+  var head = '<tr><th>Date</th><th>Cardholder</th><th>Property</th><th style="text-align:right;">Amount</th></tr>';
+  var body = list.map(function(r) {
+    return '<tr><td>' + esc(fmtDate(r.date)) + '</td><td>' + esc(r.cardholder) + '</td><td>' + esc(r.property || '&mdash;') + '</td><td style="text-align:right;">' + money(r.amount) + '</td></tr>';
+  }).join('');
+  document.getElementById('top-purchases-container').innerHTML = '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
+function renderPestControl(list) {
+  if (!list || !list.length) {
+    document.getElementById('pest-control-container').innerHTML = '<p style="font-size:12.5px; color:var(--ink-soft);">No active elimination programs.</p>';
+    return;
+  }
+  var head = '<tr><th>Property</th><th>Program</th><th>Units</th><th>Date Signed</th><th style="text-align:right;">Amount</th></tr>';
+  var body = list.map(function(r) {
+    var units = Array.isArray(r.units) ? r.units.join(', ') : (r.units || '');
+    return '<tr><td>' + esc(r.property) + '</td><td>' + esc(r.program) + '</td><td>' + esc(units) + '</td><td>' + esc(r.date_signed) + '</td><td style="text-align:right;">' + money(r.amount) + '</td></tr>';
+  }).join('');
+  document.getElementById('pest-control-container').innerHTML = '<div class="table-wrap"><table>' + head + body + '</table></div>';
+}
+
 function render(data) {
   document.getElementById('areas-container').innerHTML = data.areas.map(renderArea).join('');
   document.getElementById('updated-label').textContent = 'Data as of ' + data.generated_at;
   document.getElementById('footer-updated-label').textContent = 'Updated ' + data.generated_at;
+  renderTopPurchases(data.top_purchases, data.top_purchases_month);
+  renderPestControl(data.pest_control);
 }
 
 var ts = new Date().getTime();

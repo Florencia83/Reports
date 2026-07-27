@@ -10,13 +10,24 @@
 // Quarterly/safety inspections (Isaac Chavez's supervisor role, not grounds crew). Confirmed
 // inclusion (2026-07-14, Florencia): Jared Miller's "Daily Pool Maintenance" at kn47/ps25/rl16.
 //
-// Required env vars: PROPERTYMELD_EMAIL, PROPERTYMELD_PASSWORD
+// Also computes Top 10 Grounds Purchases (Ramp, month-to-date, GL "Grounds - Material"/
+// class r203:grounds) and carries forward the manually-authored Pest Control Report list
+// (elimination programs Florencia signs -- never generated here, same convention as the
+// Weekly Update's narrative/priorities).
+//
+// Required env vars: PROPERTYMELD_EMAIL, PROPERTYMELD_PASSWORD, RAMP_CLIENT_ID, RAMP_CLIENT_SECRET
 
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const PM_BASE = 'https://app.propertymeld.com', PM_MGMT = '2975';
+const PROPERTY_CODE_RE = /^[a-z]{1,2}\d{2,3}/i;
+// Same GL-or-class Grounds match as update-weekly-history.js's opexByCategory (GL id
+// confirmed live 2026-07-22; class fallback for the (rare) transaction still carrying
+// the "r203:grounds" sub-class instead of a bare "r203").
+const GROUNDS_GL_IDS = ['54002'];
+const GROUNDS_CLASS = 'r203:grounds';
 
 // Cadence sort order, most-frequent first -- matches Florencia's requested row order
 // (2026-07-14): weekly first, then bi-weekly, monthly, quarterly, bi-annual, annual.
@@ -147,6 +158,92 @@ async function pmLogin() {
 async function pmGet(p, sc, csrf) {
   return httpreq('GET', PM_BASE + '/' + PM_MGMT + '/m/' + PM_MGMT + p,
     { 'User-Agent': 'Mozilla/5.0', 'Cookie': sc(), 'X-CSRFToken': csrf, 'Accept': 'application/json', 'Referer': PM_BASE + '/' + PM_MGMT + '/m/' + PM_MGMT + '/' }, null);
+}
+
+// Same stalled-connection protection as the Weekly Update pipeline's fetchWithRetry.
+async function fetchWithRetry(url, options, attempt = 1) {
+  let res;
+  try {
+    res = await fetch(url, { ...options, signal: AbortSignal.timeout(20000) });
+  } catch (e) {
+    if (attempt <= 4) {
+      await new Promise(r => setTimeout(r, 2000 * attempt));
+      return fetchWithRetry(url, options, attempt + 1);
+    }
+    throw e;
+  }
+  if (!res.ok && attempt <= 4 && (res.status === 429 || res.status >= 500)) {
+    await new Promise(r => setTimeout(r, 2000 * attempt));
+    return fetchWithRetry(url, options, attempt + 1);
+  }
+  return res;
+}
+
+// Fetches this month's Ramp transactions and returns the top 10 Grounds-classed purchases
+// by amount (any cardholder -- scoped by GL/class, not by roster, so it also catches a
+// vendor or one-off cardholder's Grounds-coded purchase, not just the core crew).
+async function fetchTopGroundsPurchases(monthStart, todayStr) {
+  const auth = Buffer.from(`${process.env.RAMP_CLIENT_ID}:${process.env.RAMP_CLIENT_SECRET}`).toString('base64');
+  const tokRes = await fetchWithRetry('https://api.ramp.com/developer/v1/token', {
+    method: 'POST',
+    headers: { Authorization: `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'grant_type=client_credentials&scope=transactions:read',
+  });
+  if (!tokRes.ok) throw new Error(`Ramp token failed: ${tokRes.status} ${await tokRes.text()}`);
+  const token = (await tokRes.json()).access_token;
+
+  const from = `${monthStart}T00:00:00Z`;
+  const toTime = new Date(`${todayStr}T23:59:59Z`).getTime();
+  const all = [];
+  let start = null;
+  do {
+    const url = new URL('https://api.ramp.com/developer/v1/transactions');
+    url.searchParams.set('from_date', from);
+    url.searchParams.set('page_size', '100');
+    if (start) url.searchParams.set('start', start);
+    const res = await fetchWithRetry(url, { headers: { Authorization: `Bearer ${token}` } });
+    if (!res.ok) throw new Error(`Ramp transactions failed: ${res.status} ${await res.text()}`);
+    const j = await res.json();
+    all.push(...(j.data || []));
+    start = j.page && j.page.next ? new URL(j.page.next).searchParams.get('start') : null;
+  } while (start);
+  const inWindow = all.filter(t => new Date(t.user_transaction_time).getTime() <= toTime);
+
+  const records = [];
+  for (const t of inWindow) {
+    const glCat = (t.accounting_categories || []).find(c => c.tracking_category_remote_type === 'GL_ACCOUNT');
+    const classCat = (t.accounting_categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksClass');
+    const classCode = classCat && classCat.category_name ? classCat.category_name.toLowerCase() : null;
+    const glId = glCat ? glCat.category_id : null;
+    const isGrounds = GROUNDS_GL_IDS.includes(glId) || classCode === GROUNDS_CLASS;
+    if (!isGrounds) continue;
+
+    let ref = null;
+    const custDept = (t.accounting_categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksCustomer');
+    if (custDept && custDept.category_name) {
+      const parts = custDept.category_name.split(':');
+      const cand = parts[parts.length - 1].trim();
+      if (/^T[A-Z0-9]{5,}/i.test(cand)) ref = cand;
+    }
+    let property = null;
+    const propDept = (t.accounting_categories || []).find(c => c.tracking_category_remote_id === 'QuickbooksDepartment');
+    if (propDept && propDept.category_name) {
+      const propPart = propDept.category_name.split(':')[0];
+      const m = propPart.match(/^([a-z0-9-]+)\s*\(/i);
+      const cand = (m ? m[1] : propPart).trim().toLowerCase();
+      if (PROPERTY_CODE_RE.test(cand)) property = cand;
+    }
+    const holderName = t.card_holder ? `${t.card_holder.first_name} ${t.card_holder.last_name}`.trim().replace(/\s+/g, ' ') : '';
+
+    records.push({
+      date: t.user_transaction_time.slice(0, 10),
+      cardholder: holderName,
+      property: property ? property.toUpperCase() : null,
+      ref,
+      amount: Math.round(t.amount * 100) / 100,
+    });
+  }
+  return records.sort((a, b) => b.amount - a.amount).slice(0, 10);
 }
 
 const OPEN_STATUSES = ['PENDING_ASSIGNMENT', 'PENDING_MORE_MANAGEMENT_AVAILABILITY', 'PENDING_COMPLETION', 'PENDING_VENDOR', 'PENDING_MORE_VENDOR_AVAILABILITY'];
@@ -308,16 +405,41 @@ async function main() {
     })),
   }));
 
+  const month = todayStr.slice(0, 7);
+  const monthStart = month + '-01';
+  const topPurchases = await fetchTopGroundsPurchases(monthStart, todayStr);
+
+  // pest_control is manually authored by Florencia (elimination programs she signs) --
+  // never generated here, same carry-forward convention as the Weekly Update's
+  // narrative/priorities. Read the prior file before overwriting so a fresh run never
+  // erases it mid-month. Unlike narrative/priorities though, this list is month-scoped
+  // (Florencia, 2026-07-27): it resets to empty as soon as the calendar month rolls over,
+  // tracked via pest_control_month so the reset only fires once per month, not every run.
+  let priorPestControl = [];
+  const outPath = path.join(DATA_DIR, 'grounds.json');
+  if (fs.existsSync(outPath)) {
+    try {
+      const prior = JSON.parse(fs.readFileSync(outPath, 'utf8'));
+      if (prior.pest_control_month === month && Array.isArray(prior.pest_control)) {
+        priorPestControl = prior.pest_control;
+      }
+    } catch (e) { /* fall through, treat as empty */ }
+  }
+
   const out = {
     generated_at: todayStr,
     source: 'Property Meld (recurring melds only, registry reconciled against Florencia\'s manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated',
     areas,
+    top_purchases_month: month,
+    top_purchases: topPurchases,
+    pest_control_month: month,
+    pest_control: priorPestControl,
   };
 
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(path.join(DATA_DIR, 'grounds.json'), JSON.stringify(out, null, 2));
+  fs.writeFileSync(outPath, JSON.stringify(out, null, 2));
   const total = areas.reduce((s, a) => s + a.properties.reduce((s2, p) => s2 + p.employees.reduce((s3, e) => s3 + e.recurring.length, 0), 0), 0);
-  console.log('Wrote grounds.json —', total, 'recurring series across', areas.length, 'areas');
+  console.log('Wrote grounds.json —', total, 'recurring series across', areas.length, 'areas, top purchases:', topPurchases.length);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
