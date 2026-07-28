@@ -320,8 +320,21 @@ async function fetchQbtLaborForRange(jobcodes, fromStr, toStr) {
     // a property code rather than assuming a fixed depth, so Funds never get counted as
     // a property.
     const propIdx = p.findIndex(seg => PROPERTY_CODE_RE.test(seg));
-    if (propIdx === -1) continue;
-    const prop = p[propIdx].toLowerCase();
+    // Multi-building segments look like "kn47 K1" -- extract just the bare code so
+    // K1/K2/k3 roll up under "kn47" instead of becoming separate untracked properties.
+    let prop = propIdx !== -1 ? p[propIdx].match(PROPERTY_CODE_RE)[0].toLowerCase() : null;
+    if (!prop) {
+      // Fallback: some timesheets (e.g. admin/scheduling entries logged under a generic
+      // top-level jobcode like "Palouse Homes" with no property anywhere in its ancestry)
+      // still carry the real property in the Property custom field (25068). Without this,
+      // these hours were silently dropped entirely from Cost by Property -- same root
+      // cause already fixed in update-itemized-detail.js on 2026-07-21, ported here
+      // 2026-07-28 after it was found to also undercount Cost by Property (~$2,900/mo
+      // this month, mostly kn47 via Isaac Chavez's R&M-Admin/Hardware hours).
+      const m = ((ts.customfields && ts.customfields['25068']) || '').match(PROPERTY_CODE_RE);
+      prop = m ? m[0].toLowerCase() : null;
+    }
+    if (!prop) continue;
     const leafRef = p[p.length - 1];
     const ref = /^T[A-Z0-9]{5,}/i.test(leafRef) ? leafRef : null;
     const hrs = ts.duration / 3600;
@@ -368,8 +381,13 @@ async function fetchGroundsLaborForRange(jobcodes, fromStr, toStr) {
     const p = jcPath(ts.jobcode_id, jcCache);
     if (!p.length) continue;
     const propIdx = p.findIndex(seg => PROPERTY_CODE_RE.test(seg));
-    if (propIdx === -1) continue;
-    const prop = p[propIdx].toLowerCase();
+    // Same multi-building + admin/scheduling fallback as fetchQbtLaborForRange above.
+    let prop = propIdx !== -1 ? p[propIdx].match(PROPERTY_CODE_RE)[0].toLowerCase() : null;
+    if (!prop) {
+      const m = ((ts.customfields && ts.customfields['25068']) || '').match(PROPERTY_CODE_RE);
+      prop = m ? m[0].toLowerCase() : null;
+    }
+    if (!prop) continue;
     const leafRef = p[p.length - 1];
     const ref = /^T[A-Z0-9]{5,}/i.test(leafRef) ? leafRef : null;
     const hrs = ts.duration / 3600;

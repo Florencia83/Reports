@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.75,
-      "last_7": 18.67
+      "last_30": 43.2,
+      "last_7": 18.21
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -60,7 +60,7 @@
   "top_work_orders": [
     {
       "ref": "TEZZTLB",
-      "property": "l912 (multi-family)",
+      "property": "l912",
       "brief": "Crawl space insulation repair",
       "labor": 117.92,
       "materials": 2560.14,
@@ -76,7 +76,7 @@
     },
     {
       "ref": "TGZT14D",
-      "property": "l912 (multi-family)",
+      "property": "l912",
       "brief": "Leak in crawl space",
       "labor": 90.42,
       "materials": 2141.22,
@@ -171,9 +171,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 80,
-      "avg_cost_per_wo": 52.34,
-      "total_labor_cost": 2442.8,
+      "wo_count": 79,
+      "avg_cost_per_wo": 52.46,
+      "total_labor_cost": 2400,
       "avg_resident_rating": 4.36,
       "reviews": [
         {
@@ -264,9 +264,9 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 50,
-      "avg_cost_per_wo": 75.44,
-      "total_labor_cost": 934.65,
+      "wo_count": 51,
+      "avg_cost_per_wo": 74.73,
+      "total_labor_cost": 973.8,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -309,6 +309,13 @@
       "property": "TC68",
       "cardholder": "Jonas Hoard",
       "amount": 440.9
+    },
+    {
+      "date": "2026-07-28",
+      "ref": "TMHMCWC",
+      "property": "TC68",
+      "cardholder": "Jonas Hoard",
+      "amount": 405.81
     }
   ],
   "operational_expenses": [
@@ -330,22 +337,22 @@
     },
     {
       "category": "Maintenance",
-      "amount": 1161.48
+      "amount": 1567.29
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 11005.42,
-    "materials": 23224.63,
-    "total_actual": 34230.05,
-    "variance": 33037.73
+    "labor": 14025.68,
+    "materials": 23630.44,
+    "total_actual": 37656.12,
+    "variance": 29611.66
   },
   "grounds_monthly_budget": {
     "budget": 29156.3,
-    "labor": 14312.04,
+    "labor": 15501.96,
     "materials": 2176.86,
-    "total_actual": 16488.9,
-    "variance": 12667.4
+    "total_actual": 17678.82,
+    "variance": 11477.48
   },
   "cost_by_property": [
     {
@@ -467,6 +474,15 @@
       ],
       "date_signed": "July 2026",
       "amount": 1305.6
+    },
+    {
+      "property": "PS25",
+      "program": "Cockroach elimination program",
+      "units": [
+        "A08"
+      ],
+      "date_signed": "July 2026",
+      "amount": 326.7
     }
   ]
 }
