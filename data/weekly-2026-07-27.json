@@ -3,7 +3,7 @@
   "week_end": "2026-08-02",
   "label": "July 27 – August 2, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-27",
+  "generated_at": "2026-07-28",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.49,
-      "last_7": 17.68
+      "last_30": 43.75,
+      "last_7": 18.67
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -123,28 +123,28 @@
       "cost": 445.9
     },
     {
+      "ref": "T1YWVLL",
+      "property": "tc34",
+      "brief": "see issue below",
+      "labor": 0,
+      "materials": 443.97,
+      "cost": 443.97
+    },
+    {
       "ref": "TEPHG14",
       "property": "rl16",
       "brief": "Ecall no ac",
       "labor": 19.8,
       "materials": 363.39,
       "cost": 383.19
-    },
-    {
-      "ref": "TKFWD2L",
-      "property": "rl16",
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
-      "materials": 362.25,
-      "cost": 362.25
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 133,
-      "avg_cost_per_wo": 33.07,
-      "total_labor_cost": 2055.73,
+      "wo_count": 139,
+      "avg_cost_per_wo": 31.31,
+      "total_labor_cost": 1970.53,
       "avg_resident_rating": 4.25,
       "reviews": [
         {
@@ -171,9 +171,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 75,
-      "avg_cost_per_wo": 51.45,
-      "total_labor_cost": 2275.2,
+      "wo_count": 80,
+      "avg_cost_per_wo": 52.34,
+      "total_labor_cost": 2442.8,
       "avg_resident_rating": 4.36,
       "reviews": [
         {
@@ -235,8 +235,8 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 54,
-      "avg_cost_per_wo": 189.49,
+      "wo_count": 55,
+      "avg_cost_per_wo": 186.96,
       "total_labor_cost": 1851.25,
       "avg_resident_rating": 3,
       "reviews": [
@@ -265,7 +265,7 @@
     {
       "name": "Jonas Hoard",
       "wo_count": 50,
-      "avg_cost_per_wo": 66.56,
+      "avg_cost_per_wo": 75.44,
       "total_labor_cost": 934.65,
       "avg_resident_rating": 5,
       "reviews": [
@@ -289,17 +289,32 @@
     {
       "name": "Isaac Chavez",
       "wo_count": 36,
-      "avg_cost_per_wo": 34.01,
-      "total_labor_cost": 830.7,
+      "avg_cost_per_wo": 32.82,
+      "total_labor_cost": 787.95,
       "avg_resident_rating": null,
       "reviews": []
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-07-27",
+      "ref": "TV90F7L",
+      "property": "TC68",
+      "cardholder": "Jonas Hoard",
+      "amount": 943.9
+    },
+    {
+      "date": "2026-07-27",
+      "ref": "T1YWVLL",
+      "property": "TC68",
+      "cardholder": "Jonas Hoard",
+      "amount": 440.9
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 0
+      "amount": 284.17
     },
     {
       "category": "Supplies and Tools",
@@ -307,30 +322,30 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 440.9
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 11.39
     },
     {
       "category": "Maintenance",
-      "amount": 0
+      "amount": 1161.48
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 10627.96,
-    "materials": 22058.87,
-    "total_actual": 32686.83,
-    "variance": 34580.95
+    "labor": 11005.42,
+    "materials": 23224.63,
+    "total_actual": 34230.05,
+    "variance": 33037.73
   },
   "grounds_monthly_budget": {
     "budget": 29156.3,
-    "labor": 13565.39,
-    "materials": 2150.48,
-    "total_actual": 15715.87,
-    "variance": 13440.43
+    "labor": 14312.04,
+    "materials": 2176.86,
+    "total_actual": 16488.9,
+    "variance": 12667.4
   },
   "cost_by_property": [
     {
@@ -352,5 +367,106 @@
   ],
   "narrative": null,
   "narrative_2": null,
-  "priorities_next_week": null
+  "priorities_next_week": null,
+  "grounds_top_purchases_month": "2026-07",
+  "grounds_top_purchases": [
+    {
+      "date": "2026-07-17",
+      "cardholder": "Hanzhao Meng",
+      "property": "RL16",
+      "ref": null,
+      "amount": 475
+    },
+    {
+      "date": "2026-07-17",
+      "cardholder": "Jared Miller",
+      "property": "RL16",
+      "ref": "TKFWD2L",
+      "amount": 362.25
+    },
+    {
+      "date": "2026-07-02",
+      "cardholder": "Jared Miller",
+      "property": "KN47",
+      "ref": "TU292CMB",
+      "amount": 299.09
+    },
+    {
+      "date": "2026-07-10",
+      "cardholder": "David Sanchez",
+      "property": "C313",
+      "ref": null,
+      "amount": 163.58
+    },
+    {
+      "date": "2026-07-10",
+      "cardholder": "David Sanchez",
+      "property": "K104",
+      "ref": "T8V6XNC",
+      "amount": 123.39
+    },
+    {
+      "date": "2026-07-15",
+      "cardholder": "David Sanchez",
+      "property": "R203",
+      "ref": null,
+      "amount": 93.79
+    },
+    {
+      "date": "2026-07-17",
+      "cardholder": "Hannah Deckard",
+      "property": "KN47",
+      "ref": "TJMNBVEB",
+      "amount": 86
+    },
+    {
+      "date": "2026-07-21",
+      "cardholder": "David Sanchez",
+      "property": "A511",
+      "ref": "TFXUV2I",
+      "amount": 82
+    },
+    {
+      "date": "2026-07-14",
+      "cardholder": "Jonas Hoard",
+      "property": "TC68",
+      "ref": "T2KDLDW",
+      "amount": 76.5
+    },
+    {
+      "date": "2026-07-03",
+      "cardholder": "David Sanchez",
+      "property": "K104",
+      "ref": "TC0H7NP",
+      "amount": 75.82
+    }
+  ],
+  "grounds_pest_control": [
+    {
+      "property": "PS25",
+      "program": "Cockroach elimination program",
+      "units": [
+        "D27",
+        "D28",
+        "D23",
+        "D24",
+        "E31",
+        "E34"
+      ],
+      "date_signed": "July 2026",
+      "amount": 1960.2
+    },
+    {
+      "property": "KN47",
+      "program": "Cockroach elimination program",
+      "units": [
+        "A102",
+        "A104",
+        "A202",
+        "A204"
+      ],
+      "date_signed": "July 2026",
+      "amount": 1305.6
+    }
+  ]
 }
