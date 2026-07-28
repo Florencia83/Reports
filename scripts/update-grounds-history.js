@@ -265,7 +265,10 @@ async function fetchAllMelds(sc, csrf, status, cutoffStr, dateField) {
   let offset = 0;
   while (true) {
     const r = await pmGet(`/api/melds/?limit=200&offset=${offset}&status=${status}`, sc, csrf);
-    if (r.status !== 200) break;
+    // Fail loud instead of silently truncating this status bucket -- a transient PM
+    // error here used to just stop paging with no log/throw, so a whole page of melds
+    // (e.g. all PENDING_ASSIGNMENT past page 2) could go missing with zero trace.
+    if (r.status !== 200) throw new Error(`PropertyMeld melds fetch failed: status=${status} offset=${offset} http=${r.status}`);
     const d = JSON.parse(r.body);
     const rows = d.results || [];
     if (!rows.length) break;

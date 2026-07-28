@@ -46,6 +46,7 @@ const TEAM = [
   { name: 'Maria Florencia Sola', qbtId: 8746168, wage: 10.00 },
   { name: 'Outright Clean LLC', qbtId: 5249464, wage: 50.00 },
   { name: 'Juan Valenciano', qbtId: 7307662, wage: 12.50 },
+  { name: 'Micheal N. Magoon', qbtId: 5887924, wage: 25.00 },
 ];
 const qbtIdToPerson = {}; TEAM.forEach(t => qbtIdToPerson[t.qbtId] = t);
 
