@@ -72,6 +72,7 @@ const TECHS = [
   { name: 'Jared Miller',     pmId: 48347, qbtId: 36902,   wage: 28.09 },
   { name: 'Jaxson Lakins',    pmId: 51579, qbtId: 6010510, wage: 24.00 },
   { name: 'Isaac Chavez',     pmId: 51605, qbtId: 6010506, wage: 27.00 },
+  { name: 'Jacob Jett',       pmId: 62740, qbtId: 10172876, wage: 26.00 },
 ];
 const pmIdToTech = {}; TECHS.forEach(t => pmIdToTech[t.pmId] = t);
 const qbtIdToTech = {}; TECHS.forEach(t => qbtIdToTech[t.qbtId] = t);
@@ -94,11 +95,11 @@ const groundsQbtIdToTech = {}; GROUNDS_TECHS.forEach(t => groundsQbtIdToTech[t.q
 
 // Same R&M team roster used by update-ramp-appliances.js, for the >$300 purchases list
 // and the Monthly Budget Labor/Materials totals -- repair techs only (Wade resigned).
-const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard'];
+const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard', 'Jacob Jett'];
 
 // Wider roster for Operational Expenses -- maintenance (repair) + grounds team, since
 // that section covers team card spend broadly, not just repair work orders.
-const OPEX_TEAM = ['Justin Gutierrez', 'Jared Miller', 'Jaxson Lakins', 'Jonas Hoard', 'Isaac Chavez',
+const OPEX_TEAM = ['Justin Gutierrez', 'Jared Miller', 'Jaxson Lakins', 'Jonas Hoard', 'Isaac Chavez', 'Jacob Jett',
   'Reynaldo Leonides', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Florencia Sola'];
 // Every real transaction from this team carries QuickbooksClass "r203" (Ridgeview
 // Repairs & Renewals LLC) or a "r203:<sub-class>" child of it -- confirmed live

@@ -22,7 +22,7 @@ const path = require('path');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 
-const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard'];
+const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard', 'Jacob Jett'];
 // GL id for CapEX - Appliance changed from 59000/59002 to 58000/58002 around
 // 2026-07-01 (confirmed live 2026-07-27 against update-weekly-history.js's Operational
 // Expenses bug -- same root cause, ported fix here before the Aug 1 monthly run).

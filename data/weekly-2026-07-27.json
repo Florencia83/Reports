@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.2,
-      "last_7": 18.21
+      "last_30": 43.1,
+      "last_7": 21.24
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -94,17 +94,9 @@
       "ref": "TIFBJ48",
       "property": "c302",
       "brief": "Ecall kitchen sink back up kitchen flooded",
-      "labor": 0,
+      "labor": 3.47,
       "materials": 657.27,
-      "cost": 657.27
-    },
-    {
-      "ref": "TFNQV9P",
-      "property": "c302",
-      "brief": "Ceiling Fans, Not Attached To Ceiling",
-      "labor": 42.5,
-      "materials": 552.5,
-      "cost": 595
+      "cost": 660.74
     },
     {
       "ref": "TJF5VZH",
@@ -137,6 +129,14 @@
       "labor": 19.8,
       "materials": 363.39,
       "cost": 383.19
+    },
+    {
+      "ref": "TAG89EIB",
+      "property": "c302",
+      "brief": "Active Flooding Or Leaking",
+      "labor": 370.67,
+      "materials": 0,
+      "cost": 370.67
     }
   ],
   "by_technician": [
@@ -171,9 +171,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 79,
-      "avg_cost_per_wo": 52.46,
-      "total_labor_cost": 2400,
+      "wo_count": 78,
+      "avg_cost_per_wo": 51.51,
+      "total_labor_cost": 2349.2,
       "avg_resident_rating": 4.36,
       "reviews": [
         {
@@ -235,9 +235,9 @@
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 55,
-      "avg_cost_per_wo": 186.96,
-      "total_labor_cost": 1851.25,
+      "wo_count": 54,
+      "avg_cost_per_wo": 183.77,
+      "total_labor_cost": 2094.83,
       "avg_resident_rating": 3,
       "reviews": [
         {
@@ -293,6 +293,30 @@
       "total_labor_cost": 787.95,
       "avg_resident_rating": null,
       "reviews": []
+    },
+    {
+      "name": "Jacob Jett",
+      "wo_count": 24,
+      "avg_cost_per_wo": 57.55,
+      "total_labor_cost": 669.6,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "T4B3DVG",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TKTVVXDB",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TCG7QNIB",
+          "rating": 5,
+          "text": null
+        }
+      ]
     }
   ],
   "ramp_purchases_over_300": [
@@ -321,7 +345,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 284.17
+      "amount": 409.81
     },
     {
       "category": "Supplies and Tools",
@@ -329,7 +353,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 440.9
+      "amount": 494.2
     },
     {
       "category": "Grounds",
@@ -337,22 +361,22 @@
     },
     {
       "category": "Maintenance",
-      "amount": 1567.29
+      "amount": 1603.39
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 14025.68,
-    "materials": 23630.44,
-    "total_actual": 37656.12,
-    "variance": 29611.66
+    "labor": 15563.53,
+    "materials": 23666.54,
+    "total_actual": 39230.07,
+    "variance": 28037.71
   },
   "grounds_monthly_budget": {
     "budget": 29156.3,
-    "labor": 15501.96,
+    "labor": 15572.67,
     "materials": 2176.86,
-    "total_actual": 17678.82,
-    "variance": 11477.48
+    "total_actual": 17749.53,
+    "variance": 11406.77
   },
   "cost_by_property": [
     {
@@ -365,11 +389,11 @@
     },
     {
       "property": "C302",
-      "labor": 551.67,
+      "labor": 928.67,
       "materials": 1804.8,
-      "cost": 2356.47,
+      "cost": 2733.47,
       "budget": 816.5,
-      "pct_over_budget": 188.6
+      "pct_over_budget": 234.8
     }
   ],
   "narrative": null,
