@@ -64,7 +64,12 @@ function saveQuarterLocks(locks) {
   fs.writeFileSync(QUARTER_LOCKS_PATH, JSON.stringify(locks, null, 2));
 }
 
-// PM agent id + QBT user id + hourly wage.
+// PM agent id + QBT user id + hourly wage. The 7 with a pmId are the ones who get melds
+// assigned in Property Meld (used for By Technician/Top Work Orders); the rest are real
+// QBT/Ramp R&M-Repairs cost sources without PM assignments of their own, added 2026-07-29
+// to match the complete 17-person roster in update-itemized-detail.js's TEAM -- the
+// previous 7-person list was silently dropping real labor (e.g. Micheal Magoon's hours
+// on C302) from the Monthly Budget/Cost by Property totals.
 const TECHS = [
   { name: 'Jonas Hoard',      pmId: 59983, qbtId: 7623296, wage: 27.00 },
   { name: 'Wade Hippen',      pmId: 48355, qbtId: 36898,   wage: 28.44 },
@@ -73,8 +78,18 @@ const TECHS = [
   { name: 'Jaxson Lakins',    pmId: 51579, qbtId: 6010510, wage: 24.00 },
   { name: 'Isaac Chavez',     pmId: 51605, qbtId: 6010506, wage: 27.00 },
   { name: 'Jacob Jett',       pmId: 62740, qbtId: 10172876, wage: 26.00 },
+  { name: 'Reynaldo Leonides', qbtId: 7653196, wage: 25.00 },
+  { name: 'Hannah Deckard', qbtId: 6346740, wage: 22.00 },
+  { name: 'David Sanchez', qbtId: 6175154, wage: 25.50 },
+  { name: 'Alexander Overall', qbtId: 7842488, wage: 24.00 },
+  { name: 'Margarito Saldana', qbtId: 5210688, wage: 28.40 },
+  { name: 'James Dunlap', qbtId: 6832702, wage: 23.00 },
+  { name: 'Maria Florencia Sola', qbtId: 8746168, wage: 10.00 },
+  { name: 'Outright Clean LLC', qbtId: 5249464, wage: 50.00 },
+  { name: 'Juan Valenciano', qbtId: 7307662, wage: 12.50 },
+  { name: 'Micheal N. Magoon', qbtId: 5887924, wage: 25.00 },
 ];
-const pmIdToTech = {}; TECHS.forEach(t => pmIdToTech[t.pmId] = t);
+const pmIdToTech = {}; TECHS.forEach(t => { if (t.pmId) pmIdToTech[t.pmId] = t; });
 const qbtIdToTech = {}; TECHS.forEach(t => qbtIdToTech[t.qbtId] = t);
 
 // Grounds team roster (QBT id + hourly wage) for the Grounds Monthly Budget section
@@ -93,9 +108,10 @@ const GROUNDS_TECHS = [
 ];
 const groundsQbtIdToTech = {}; GROUNDS_TECHS.forEach(t => groundsQbtIdToTech[t.qbtId] = t);
 
-// Same R&M team roster used by update-ramp-appliances.js, for the >$300 purchases list
-// and the Monthly Budget Labor/Materials totals -- repair techs only (Wade resigned).
-const RM_TEAM = ['Justin Gutierrez', 'Wade Hippen', 'Isaac Chavez', 'Jaxson Lakins', 'Jared Miller', 'Jonas Hoard', 'Jacob Jett'];
+// R&M-Repairs materials roster for the Monthly Budget/Cost by Property "Materials" total --
+// expanded 2026-07-29 to the same complete 17-person roster as TECHS above (previously only
+// 7 names, so a real R&M-Repairs-GL-coded Ramp purchase by anyone else silently didn't count).
+const RM_TEAM = TECHS.map(t => t.name);
 
 // Wider roster for Operational Expenses -- maintenance (repair) + grounds team, since
 // that section covers team card spend broadly, not just repair work orders.
