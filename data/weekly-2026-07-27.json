@@ -3,7 +3,7 @@
   "week_end": "2026-08-02",
   "label": "July 27 – August 2, 2026",
   "month_label": "July 2026",
-  "generated_at": "2026-07-29",
+  "generated_at": "2026-07-30",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 44.07,
-      "last_7": 17.27
+      "last_30": 43.29,
+      "last_7": 17.61
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,11 +142,16 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 144,
-      "avg_cost_per_wo": 24.51,
-      "total_labor_cost": 1675.15,
-      "avg_resident_rating": 4.25,
+      "wo_count": 148,
+      "avg_cost_per_wo": 24.77,
+      "total_labor_cost": 1783.3,
+      "avg_resident_rating": 4.4,
       "reviews": [
+        {
+          "ref": "T1ELIDHB",
+          "rating": 5,
+          "text": "Showed uo Timely and was thorough!"
+        },
         {
           "ref": "TTHRJHQ",
           "rating": 5,
@@ -171,11 +176,16 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 81,
-      "avg_cost_per_wo": 56.35,
-      "total_labor_cost": 2462.8,
-      "avg_resident_rating": 4.36,
+      "wo_count": 88,
+      "avg_cost_per_wo": 59.17,
+      "total_labor_cost": 2652.4,
+      "avg_resident_rating": 4.42,
       "reviews": [
+        {
+          "ref": "T004XTN",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "T2T5CI1",
           "rating": 5,
@@ -264,9 +274,9 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 52,
-      "avg_cost_per_wo": 74.8,
-      "total_labor_cost": 1027.8,
+      "wo_count": 50,
+      "avg_cost_per_wo": 69.68,
+      "total_labor_cost": 882.9,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -278,11 +288,6 @@
           "ref": "TZ95XDDB",
           "rating": 5,
           "text": "Thank you! I wasn't expecting the cleaning until today but it was cleaned yesterday Instead! I hope with no added stress to the Maintenance man! The patio looks great! Its been so long since Ive been able to use my space, i cant wait to enjoy it!"
-        },
-        {
-          "ref": "TPM69YT",
-          "rating": 5,
-          "text": null
         }
       ]
     },
@@ -343,6 +348,13 @@
       "amount": 1022.57
     },
     {
+      "date": "2026-07-29",
+      "ref": "TFEJWJG",
+      "property": "KN47",
+      "cardholder": "Jared Miller",
+      "amount": 999.87
+    },
+    {
       "date": "2026-07-27",
       "ref": "TV90F7L",
       "property": "TC68",
@@ -393,26 +405,26 @@
     },
     {
       "category": "Grounds",
-      "amount": 11.39
+      "amount": 67.54
     },
     {
       "category": "Maintenance",
-      "amount": 2883.85
+      "amount": 4144.7
     }
   ],
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 21835.56,
-    "materials": 25141.78,
-    "total_actual": 46977.34,
-    "variance": 20290.44
+    "labor": 22631.42,
+    "materials": 26402.63,
+    "total_actual": 49034.05,
+    "variance": 18233.73
   },
   "grounds_monthly_budget": {
     "budget": 29156.3,
-    "labor": 16127.26,
-    "materials": 2176.86,
-    "total_actual": 18304.12,
-    "variance": 10852.18
+    "labor": 16470.47,
+    "materials": 2233.01,
+    "total_actual": 18703.48,
+    "variance": 10452.82
   },
   "cost_by_property": [
     {
