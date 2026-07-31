@@ -1,19 +1,19 @@
 {
   "month": "2026-07",
-  "generated_at": "2026-07-30",
+  "generated_at": "2026-07-31",
   "monthly_budget": {
     "budget": 67267.78,
-    "labor": 22631.42,
-    "materials": 26402.63,
-    "total_actual": 49034.05,
-    "variance": 18233.73
+    "labor": 23633.91,
+    "materials": 27101.03,
+    "total_actual": 50734.94,
+    "variance": 16532.84
   },
   "grounds_monthly_budget": {
     "budget": 29156.3,
-    "labor": 16470.47,
+    "labor": 17108.18,
     "materials": 2233.01,
-    "total_actual": 18703.48,
-    "variance": 10452.82
+    "total_actual": 19341.19,
+    "variance": 9815.11
   },
   "cost_by_property": [
     {
@@ -26,27 +26,27 @@
     },
     {
       "property": "C302",
-      "labor": 1093.33,
-      "materials": 1804.8,
-      "cost": 2898.13,
+      "labor": 1117.17,
+      "materials": 1830.37,
+      "cost": 2947.54,
       "budget": 816.5,
-      "pct_over_budget": 254.9
+      "pct_over_budget": 261
     },
     {
       "property": "S129",
-      "labor": 399.23,
+      "labor": 433.47,
       "materials": 1022.57,
-      "cost": 1421.8,
+      "cost": 1456.04,
       "budget": 1218.1,
-      "pct_over_budget": 16.7
+      "pct_over_budget": 19.5
     },
     {
       "property": "W117",
-      "labor": 422.17,
+      "labor": 443.5,
       "materials": 0,
-      "cost": 422.17,
+      "cost": 443.5,
       "budget": 415.5,
-      "pct_over_budget": 1.6
+      "pct_over_budget": 6.7
     }
   ]
 }
