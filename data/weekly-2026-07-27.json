@@ -2,8 +2,8 @@
   "week_start": "2026-07-27",
   "week_end": "2026-08-02",
   "label": "July 27 – August 2, 2026",
-  "month_label": "July 2026",
-  "generated_at": "2026-07-31",
+  "month_label": "August 2026",
+  "generated_at": "2026-08-01",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.37,
-      "last_7": 25.43
+      "last_30": 38.92,
+      "last_7": 29.81
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,284 +59,70 @@
   ],
   "top_work_orders": [
     {
-      "ref": "TEZZTLB",
-      "property": "l912",
-      "brief": "Crawl space insulation repair",
-      "labor": 117.92,
-      "materials": 2560.14,
-      "cost": 2678.06
-    },
-    {
-      "ref": "T3LAL2Q",
-      "property": "b101",
-      "brief": "No Hot Water In Home",
-      "labor": 66.67,
-      "materials": 2365.3,
-      "cost": 2431.97
-    },
-    {
-      "ref": "TGZT14D",
-      "property": "l912",
-      "brief": "Leak in crawl space",
-      "labor": 90.42,
-      "materials": 2141.22,
-      "cost": 2231.64
-    },
-    {
-      "ref": "TFEJWJG",
-      "property": "kn47",
-      "brief": "The Air Conditioner In The Living Room Is Switching On And Off While The Power Is Switch T",
-      "labor": 76.31,
-      "materials": 999.87,
-      "cost": 1076.18
-    },
-    {
-      "ref": "TZQE4L",
-      "property": "tc68",
-      "brief": "see list below",
-      "labor": 148.5,
-      "materials": 925.73,
-      "cost": 1074.23
-    },
-    {
-      "ref": "T555RX7",
-      "property": "l912",
-      "brief": "Active Flooding Or Leaking",
-      "labor": 118.83,
-      "materials": 581.49,
-      "cost": 700.32
-    },
-    {
-      "ref": "TIFBJ48",
-      "property": "c302",
-      "brief": "Ecall kitchen sink back up kitchen flooded",
-      "labor": 22.63,
-      "materials": 657.27,
-      "cost": 679.9
-    },
-    {
-      "ref": "T4B3DVG",
-      "property": "j312",
-      "brief": "Dishwasher Is Leaking",
-      "labor": 54.6,
-      "materials": 531.34,
-      "cost": 585.94
-    },
-    {
-      "ref": "T3EAKBL",
-      "property": "rl16",
-      "brief": "My AC Unit Is Blowing Out Humid Air While On Cool",
-      "labor": 73.2,
-      "materials": 379.71,
-      "cost": 452.91
-    },
-    {
-      "ref": "TU292CMB",
-      "property": "kn47",
+      "ref": "T8UE19Y",
+      "property": null,
       "brief": "Daily Pool Maintenance",
       "labor": 0,
-      "materials": 445.9,
-      "cost": 445.9
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TB2LV51",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TD5I4R0",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TTMLREKB",
+      "property": null,
+      "brief": "stove not working",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "T9W11A0",
+      "property": null,
+      "brief": "Bathtub Or Shower Is Clogged",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 158,
-      "avg_cost_per_wo": 31.15,
-      "total_labor_cost": 1993.04,
-      "avg_resident_rating": 4.4,
-      "reviews": [
-        {
-          "ref": "T1ELIDHB",
-          "rating": 5,
-          "text": "Showed uo Timely and was thorough!"
-        },
-        {
-          "ref": "TTHRJHQ",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TDIUJDW",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TT8VWDQ",
-          "rating": 3,
-          "text": "Bee hive in bedroom window still active"
-        },
-        {
-          "ref": "TB5PYAC",
-          "rating": 4,
-          "text": "Good job Jared"
-        }
-      ]
+      "wo_count": 3,
+      "avg_cost_per_wo": 0,
+      "total_labor_cost": 0,
+      "avg_resident_rating": null,
+      "reviews": []
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 88,
-      "avg_cost_per_wo": 60.93,
-      "total_labor_cost": 2710.35,
-      "avg_resident_rating": 4.42,
-      "reviews": [
-        {
-          "ref": "T004XTN",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "T2T5CI1",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TMW5IAN",
-          "rating": 3,
-          "text": "Jaxson did great but I think the whole area where the oven plug goes needs to be replaced because anything could happen from it being so old"
-        },
-        {
-          "ref": "TW917HM",
-          "rating": 5,
-          "text": "Great job Jaxson Thank you for putting in brand new burner and drip pan thing under burner today."
-        },
-        {
-          "ref": "TQ4B01MB",
-          "rating": 5,
-          "text": "Good job Jaxson Thank you so much."
-        },
-        {
-          "ref": "T6LECHR",
-          "rating": 5,
-          "text": "Nice work!!!"
-        },
-        {
-          "ref": "T7IB016",
-          "rating": 5,
-          "text": "Good job Jaxson"
-        },
-        {
-          "ref": "T5XEGZ5",
-          "rating": 2,
-          "text": "I think that cockroach traps should have been with the inspectors so the old ones could have been thrown out and new ones could have been put in the places where the old traps were. They need to be more prepared with equipment to help us tenants."
-        },
-        {
-          "ref": "TFD9Y8U",
-          "rating": 4,
-          "text": "Good job Jaxson"
-        },
-        {
-          "ref": "TZXD0MLB",
-          "rating": 4,
-          "text": "Good job Jaxson"
-        },
-        {
-          "ref": "T64GCHLB",
-          "rating": 5,
-          "text": "Good job Jaxson"
-        },
-        {
-          "ref": "T47LXHBB",
-          "rating": 5,
-          "text": "Thank you.. The ceiling looks perfect."
-        }
-      ]
-    },
-    {
-      "name": "Justin Gutierrez",
-      "wo_count": 54,
-      "avg_cost_per_wo": 183.66,
-      "total_labor_cost": 2021.08,
-      "avg_resident_rating": 3,
-      "reviews": [
-        {
-          "ref": "TQ55RUU",
-          "rating": 1,
-          "text": null
-        },
-        {
-          "ref": "T80BI02",
-          "rating": 1,
-          "text": "Still need mailbox key \nIt's been over a month"
-        },
-        {
-          "ref": "TEJ8NZ5",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TDCM4JR",
-          "rating": 5,
-          "text": null
-        }
-      ]
-    },
-    {
-      "name": "Jonas Hoard",
-      "wo_count": 50,
-      "avg_cost_per_wo": 67.81,
-      "total_labor_cost": 882.9,
-      "avg_resident_rating": 5,
-      "reviews": [
-        {
-          "ref": "TCVTU4T",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TZ95XDDB",
-          "rating": 5,
-          "text": "Thank you! I wasn't expecting the cleaning until today but it was cleaned yesterday Instead! I hope with no added stress to the Maintenance man! The patio looks great! Its been so long since Ive been able to use my space, i cant wait to enjoy it!"
-        }
-      ]
-    },
-    {
-      "name": "Isaac Chavez",
-      "wo_count": 36,
-      "avg_cost_per_wo": 34.27,
-      "total_labor_cost": 830.25,
+      "wo_count": 1,
+      "avg_cost_per_wo": 0,
+      "total_labor_cost": 0,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 28,
-      "avg_cost_per_wo": 87.83,
-      "total_labor_cost": 689.2,
-      "avg_resident_rating": 4.67,
-      "reviews": [
-        {
-          "ref": "T4B3DVG",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "T8HY6MK",
-          "rating": 5,
-          "text": "Washer (Clothes)\n\nAlthough we've experienced several service appointments and learned the new AI Scheduling was responsible for date and time for the tech to arrive, AI is NOT advising and scheduling the tech. In other words, the tech had no knowledge that we had an issue. The schedule has been reset 5 times since July 1st and they were NO SHOW on the appointments, the AI system rescheduled, and did not advise the tenant, manager or the service tech.\n\nNOTE TO ADMIN; Please discard the AI system. This caused a lot of stress to everyone involved, life is too short to have this much trouble in asking for simple repairs to be done.\n\nGoing forward; Manager, Florencia, became involved and scheduled Jacob Jett (service tech) to arrive early this morning. Jacob did arrive this morning and called me when he was on the way.\n\nJacob pulled the washer out, examined the hot and cold-water hoses, seems both hoses only have cold water available to the washer.\n\nWhat I believe has happened, several years ago, there was a water leak found to be in the wall behind the clothes washer. I had a flood in the utility room extending into the kitchen. I won’t go into details of the nightmare we experienced. The only thing that makes sense is both the hot and cold-water hoses were connected to the cold-water source IN THE WALL behind the newly installed sheet rock. It is oblivious, I’ve simply set the washer to use hot water and until recently discovered there is NO hot water to the washer.\nIn order to correct this error, Jacob stated this would be a contract job, not a simple service call to check hoses.\nAt this time, I would not want to go through what would be involved in correcting this issue, it’s been this way for some time and I can live with it.\n\nI do have plans to move to a larger home, however until finances and health issues are completed, I will continue to maintain my apartment in excellent condition and this issue can be addressed when I vacate the apartment.\n\nToday, I want to thank Manager Florencia, for getting involved in the AI NO SHOW scheduling issue and a Great Service Tech, Jacob Jett for his help.\n\nNita (Tenant)"
-        },
-        {
-          "ref": "TTU5GP1",
-          "rating": 3,
-          "text": null
-        },
-        {
-          "ref": "TKTVVXDB",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TCG7QNIB",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TQZEPIV",
-          "rating": 5,
-          "text": "I believe this issue has already been answered, however in case it hasn't been recorded, I will post it again.\n\n\nDishwasher;\n\nAlthough we've experienced several service appointments and learned the new AI Scheduling was responsible for date and time for the tech to arrive, AI is NOT advising and scheduling the tech. In other words, the tech had no knowledge that we had an issue. The schedule has been reset 5 times since July 1st and they were NO SHOW on the appointments, the AI system rescheduled, and did not advise the tenant, manager or the service tech.\n\nNOTE TO ADMIN; Please discard the AI system. This caused a lot of stress to everyone involved, life is too short to have this much trouble in asking for simple repairs to be done.\n\nGoing forward; Manager, Florencia, became involved and scheduled Jacob Jett (service tech) to arrive early this morning. Jacob did arrive this morning and called me when he was on the way.\n\nJacob removed the filter screens in the bottom of the dishwasher using tools a tenant is not expected to have or the ability to disassemble the filter system. Only a service tech could do this task. Although I use the best detergent, Rinse Aid and wash dishes before placing them in the dishwasher, the filter did need cleaning.\n\nJacob stated there was a possibility of the heater element not heating to full capacity and past this cleaning, if the unit again does not dry the dishes, I am to contact management and the unit would be replaced since it is probably too old to find parts for repairing.\n\nThank you, Jacob Jett, for the excellent service, to manager, Florencia for getting involved and overriding the No Shows,\n\n\nNita (Tennant)"
-        }
-      ]
+      "wo_count": 1,
+      "avg_cost_per_wo": 0,
+      "total_labor_cost": 0,
+      "avg_resident_rating": null,
+      "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
@@ -391,8 +177,8 @@
     },
     {
       "date": "2026-07-30",
-      "ref": null,
-      "property": null,
+      "ref": "TL5XF0M",
+      "property": "C313",
       "cardholder": "Justin Gutierrez",
       "amount": 326.21
     },
@@ -407,7 +193,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 558.95
+      "amount": 820.1
     },
     {
       "category": "Supplies and Tools",
@@ -419,172 +205,32 @@
     },
     {
       "category": "Grounds",
-      "amount": 67.54
+      "amount": 91.77
     },
     {
       "category": "Maintenance",
-      "amount": 4291.99
+      "amount": 5030.49
     }
   ],
   "monthly_budget": {
-    "budget": 67267.78,
-    "labor": 23633.91,
-    "materials": 27101.03,
-    "total_actual": 50734.94,
-    "variance": 16532.84
+    "budget": 67431.05,
+    "labor": 0,
+    "materials": 0,
+    "total_actual": 0,
+    "variance": 67431.05
   },
   "grounds_monthly_budget": {
-    "budget": 29156.3,
-    "labor": 17108.18,
-    "materials": 2233.01,
-    "total_actual": 19341.19,
-    "variance": 9815.11
+    "budget": 29227.06,
+    "labor": 0,
+    "materials": 0,
+    "total_actual": 0,
+    "variance": 29227.06
   },
-  "cost_by_property": [
-    {
-      "property": "B101",
-      "labor": 291.67,
-      "materials": 2365.3,
-      "cost": 2656.97,
-      "budget": 671.7,
-      "pct_over_budget": 295.6
-    },
-    {
-      "property": "C302",
-      "labor": 1117.17,
-      "materials": 1830.37,
-      "cost": 2947.54,
-      "budget": 816.5,
-      "pct_over_budget": 261
-    },
-    {
-      "property": "S129",
-      "labor": 433.47,
-      "materials": 1022.57,
-      "cost": 1456.04,
-      "budget": 1218.1,
-      "pct_over_budget": 19.5
-    },
-    {
-      "property": "W117",
-      "labor": 443.5,
-      "materials": 0,
-      "cost": 443.5,
-      "budget": 415.5,
-      "pct_over_budget": 6.7
-    }
-  ],
+  "cost_by_property": [],
   "narrative": null,
   "narrative_2": null,
   "priorities_next_week": null,
-  "grounds_top_purchases_month": "2026-07",
-  "grounds_top_purchases": [
-    {
-      "date": "2026-07-17",
-      "cardholder": "Hanzhao Meng",
-      "property": "RL16",
-      "ref": null,
-      "amount": 475
-    },
-    {
-      "date": "2026-07-17",
-      "cardholder": "Jared Miller",
-      "property": "RL16",
-      "ref": "TKFWD2L",
-      "amount": 362.25
-    },
-    {
-      "date": "2026-07-02",
-      "cardholder": "Jared Miller",
-      "property": "KN47",
-      "ref": "TU292CMB",
-      "amount": 299.09
-    },
-    {
-      "date": "2026-07-10",
-      "cardholder": "David Sanchez",
-      "property": "C313",
-      "ref": null,
-      "amount": 163.58
-    },
-    {
-      "date": "2026-07-10",
-      "cardholder": "David Sanchez",
-      "property": "K104",
-      "ref": "T8V6XNC",
-      "amount": 123.39
-    },
-    {
-      "date": "2026-07-15",
-      "cardholder": "David Sanchez",
-      "property": "R203",
-      "ref": null,
-      "amount": 93.79
-    },
-    {
-      "date": "2026-07-17",
-      "cardholder": "Hannah Deckard",
-      "property": "KN47",
-      "ref": "TJMNBVEB",
-      "amount": 86
-    },
-    {
-      "date": "2026-07-21",
-      "cardholder": "David Sanchez",
-      "property": "A511",
-      "ref": "TFXUV2I",
-      "amount": 82
-    },
-    {
-      "date": "2026-07-14",
-      "cardholder": "Jonas Hoard",
-      "property": "TC68",
-      "ref": "T2KDLDW",
-      "amount": 76.5
-    },
-    {
-      "date": "2026-07-03",
-      "cardholder": "David Sanchez",
-      "property": "K104",
-      "ref": "TC0H7NP",
-      "amount": 75.82
-    }
-  ],
-  "grounds_pest_control": [
-    {
-      "property": "PS25",
-      "program": "Cockroach elimination program",
-      "units": [
-        "D27",
-        "D28",
-        "D23",
-        "D24",
-        "E31",
-        "E34"
-      ],
-      "date_signed": "July 2026",
-      "amount": 1960.2
-    },
-    {
-      "property": "KN47",
-      "program": "Cockroach elimination program",
-      "units": [
-        "A102",
-        "A104",
-        "A202",
-        "A204"
-      ],
-      "date_signed": "July 2026",
-      "amount": 1305.6
-    },
-    {
-      "property": "PS25",
-      "program": "Cockroach elimination program",
-      "units": [
-        "A08"
-      ],
-      "date_signed": "July 2026",
-      "amount": 326.7
-    }
-  ]
+  "grounds_top_purchases_month": "2026-08",
+  "grounds_top_purchases": [],
+  "grounds_pest_control": []
 }
