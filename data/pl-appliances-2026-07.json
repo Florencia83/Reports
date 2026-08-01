@@ -1,0 +1,116 @@
+{
+  "month": "2026-07",
+  "label": "July 2026",
+  "generated_at": "2026-08-01",
+  "source": "Ramp (CapEX - Appliance GL account, R&M team cardholder transactions; property/unit from QuickBooks-synced Department field) — automated",
+  "items": [
+    {
+      "prop": "kn47",
+      "unit": "kn47-k1-B202",
+      "area": "Tri-Cities",
+      "amount": 716.7,
+      "cardholder": "Jaxson Lakins ",
+      "merchant": "Fred's Appliance",
+      "appliance": "Purchased stove from Fred appliance"
+    },
+    {
+      "prop": "p705",
+      "unit": "p705-11",
+      "area": "Spokane",
+      "amount": 53.3,
+      "cardholder": "Jacob Jett",
+      "merchant": "Lowe's",
+      "appliance": "p705 unit 11 drywall items"
+    },
+    {
+      "prop": "tc68",
+      "unit": "tc68-A09",
+      "area": "Tacoma",
+      "amount": 440.9,
+      "cardholder": "Jonas Hoard",
+      "merchant": "HD Supply Facilities Maintenance",
+      "appliance": "dishwasher"
+    },
+    {
+      "prop": "tc68",
+      "unit": "tc68-A17",
+      "area": "Tacoma",
+      "amount": 90.22,
+      "cardholder": "Jonas Hoard",
+      "merchant": "Fixera",
+      "appliance": "r&m appliance"
+    },
+    {
+      "prop": "j312",
+      "unit": "j312-3104",
+      "area": "Spokane",
+      "amount": 531.34,
+      "cardholder": "Justin  Gutierrez ",
+      "merchant": "Lowe's",
+      "appliance": "Plumbing repair materials for property maintenance"
+    },
+    {
+      "prop": "l912",
+      "unit": "L912-104",
+      "area": "Spokane",
+      "amount": 531.34,
+      "cardholder": "Justin  Gutierrez ",
+      "merchant": "Lowe's",
+      "appliance": "General maintenance hardware and materials"
+    },
+    {
+      "prop": "rl21",
+      "unit": "rl21-18",
+      "area": "Tri-Cities",
+      "amount": 972.67,
+      "cardholder": "isaac chavez",
+      "merchant": "HD Supply Facilities Maintenance",
+      "appliance": "PTAC unit or appliance replacement for Ridgeview property"
+    },
+    {
+      "prop": "rl16",
+      "unit": "rl16-A08",
+      "area": "Tri-Cities",
+      "amount": 363.39,
+      "cardholder": "isaac chavez",
+      "merchant": "HD Supply Facilities Maintenance",
+      "appliance": "PTAC unit or appliance replacement for Ridgeview property"
+    },
+    {
+      "prop": "kn47",
+      "unit": "kn47-k1-H101",
+      "area": "Tri-Cities",
+      "amount": 983.55,
+      "cardholder": "isaac chavez",
+      "merchant": "HD Supply Facilities Maintenance",
+      "appliance": "PTAC unit replacement for Ridgeview property"
+    },
+    {
+      "prop": "tc34",
+      "unit": "tc34-B110",
+      "area": "Tacoma",
+      "amount": 551.4,
+      "cardholder": "Jonas Hoard",
+      "merchant": "HD Supply Facilities Maintenance",
+      "appliance": "fridge"
+    },
+    {
+      "prop": "kn47",
+      "unit": "kn47-K3-K103",
+      "area": "Tri-Cities",
+      "amount": 440.62,
+      "cardholder": "Jaxson Lakins ",
+      "merchant": "Fred's Appliance",
+      "appliance": "Purchased dishwasher to replace broken one Meld#T7537KT"
+    },
+    {
+      "prop": "tc68",
+      "unit": "tc68-B32",
+      "area": "Tacoma",
+      "amount": 828.25,
+      "cardholder": "Jonas Hoard",
+      "merchant": "The Home Depot",
+      "appliance": "New water heater appliance"
+    }
+  ]
+}

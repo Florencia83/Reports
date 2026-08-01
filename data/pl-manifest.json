@@ -1,6 +1,11 @@
 {
-  "generated_at": "2026-07-12",
+  "generated_at": "2026-08-01",
   "months": [
+    {
+      "key": "2026-07",
+      "label": "July 2026",
+      "complete": true
+    },
     {
       "key": "2026-06",
       "label": "June 2026",
