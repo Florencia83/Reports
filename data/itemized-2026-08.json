@@ -1,7 +1,7 @@
 {
   "month": "2026-08",
   "label": "August 2026",
-  "generated_at": "2026-08-01",
+  "generated_at": "2026-08-02",
   "complete": false,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -22,7 +22,134 @@
         }
       ],
       "labor_items": []
+    },
+    {
+      "property": "KN47",
+      "code": "kn47",
+      "appfolio_actual": 0,
+      "ramp_total": 0,
+      "labor_total": 29.32,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-08-01",
+          "name": "Jared Miller",
+          "hours": 0.5,
+          "wage": 42.135,
+          "cost": 21.07
+        },
+        {
+          "date": "2026-08-01",
+          "name": "Maria Florencia Sola",
+          "hours": 0.55,
+          "wage": 15,
+          "cost": 8.25
+        }
+      ]
+    },
+    {
+      "property": "TC68",
+      "code": "tc68",
+      "appfolio_actual": 0,
+      "ramp_total": 0,
+      "labor_total": 17.25,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-08-01",
+          "name": "Maria Florencia Sola",
+          "hours": 1.15,
+          "wage": 15,
+          "cost": 17.25
+        }
+      ]
+    },
+    {
+      "property": "RL21",
+      "code": "rl21",
+      "appfolio_actual": 0,
+      "ramp_total": 0,
+      "labor_total": 15.45,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-08-01",
+          "name": "Jared Miller",
+          "hours": 0.37,
+          "wage": 42.135,
+          "cost": 15.45
+        }
+      ]
+    },
+    {
+      "property": "J312",
+      "code": "j312",
+      "appfolio_actual": 0,
+      "ramp_total": 0,
+      "labor_total": 64.35,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-08-01",
+          "name": "Jacob Jett",
+          "hours": 1.65,
+          "wage": 39,
+          "cost": 64.35
+        }
+      ]
     }
   ],
-  "grounds": []
+  "grounds": [
+    {
+      "property": "PS25",
+      "code": "ps25",
+      "appfolio_actual": 0,
+      "ramp_total": 0,
+      "labor_total": 15.45,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-08-01",
+          "name": "Jared Miller",
+          "hours": 0.37,
+          "wage": 42.135,
+          "cost": 15.45
+        }
+      ]
+    },
+    {
+      "property": "KN47",
+      "code": "kn47",
+      "appfolio_actual": 0,
+      "ramp_total": 0,
+      "labor_total": 54.78,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-08-01",
+          "name": "Jared Miller",
+          "hours": 1.3,
+          "wage": 42.135,
+          "cost": 54.78
+        }
+      ]
+    },
+    {
+      "property": "RL16",
+      "code": "rl16",
+      "appfolio_actual": 0,
+      "ramp_total": 0,
+      "labor_total": 46.35,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-08-01",
+          "name": "Jared Miller",
+          "hours": 1.1,
+          "wage": 42.135,
+          "cost": 46.35
+        }
+      ]
+    }
+  ]
 }
