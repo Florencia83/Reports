@@ -3,16 +3,16 @@
   "week_end": "2026-08-02",
   "label": "July 27 – August 2, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-01",
-  "complete": false,
+  "generated_at": "2026-08-02",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 38.92,
-      "last_7": 29.81
+      "last_30": 39.07,
+      "last_7": 29.93
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,6 +59,38 @@
   ],
   "top_work_orders": [
     {
+      "ref": "TA8KEDKB",
+      "property": "kn47",
+      "brief": "No move in locked out ",
+      "labor": 14.05,
+      "materials": 0,
+      "cost": 14.05
+    },
+    {
+      "ref": "TJIBC69",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "T087F8DB",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "T7KCDA7",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
       "ref": "T8UE19Y",
       "property": null,
       "brief": "Daily Pool Maintenance",
@@ -102,7 +134,7 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 3,
+      "wo_count": 6,
       "avg_cost_per_wo": 0,
       "total_labor_cost": 0,
       "avg_resident_rating": null,
@@ -214,17 +246,17 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 0,
+    "labor": 84.24,
     "materials": 0,
-    "total_actual": 0,
-    "variance": 67431.05
+    "total_actual": 84.24,
+    "variance": 67346.81
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 0,
+    "labor": 77.72,
     "materials": 0,
-    "total_actual": 0,
-    "variance": 29227.06
+    "total_actual": 77.72,
+    "variance": 29149.34
   },
   "cost_by_property": [],
   "narrative": null,
