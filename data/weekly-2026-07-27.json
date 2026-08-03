@@ -502,7 +502,15 @@
       "pct_over_budget": 6.2
     }
   ],
-  "narrative": null,
+  "narrative": [
+    "The emergency work order completion time measurement was affected this week due to a process change. While in the past we were completing the meld once the emergency was addressed and cloning the original meld to perform the rest of the work needed, we are now including all work order-related time within the emergency meld itself for visibility and easier tracking of resident complaints and delayed work.",
+    "Work order resident satisfaction remains close to performing. We continue reinforcing communication with residents and attention to detail with our team members to increase the number of reviews we receive.",
+    "Avg vendor completion time has increased again. We are currently reviewing all melds assigned to vendors to follow up.",
+    "Speed of repair remains high. The backlog in Spokane is still affecting this metric; we are actively searching to onboard two additional team members.",
+    "Time to assignment and time to schedule reflect the exclusion of one outlier day's reading from this week's data; both metrics are otherwise tracking normally.",
+    "The Top 10 Work Orders list remains steady, aside from an AC replacement at KN47.",
+    "For the Team KPI's, all reviews of 3 stars or less are being followed closely to create new work orders or clarify the incident as needed."
+  ],
   "narrative_2": null,
   "priorities_next_week": null,
   "grounds_top_purchases_month": "2026-07",
