@@ -190,10 +190,10 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 95.24,
+    "labor": 111.41,
     "materials": 0,
-    "total_actual": 95.24,
-    "variance": 67335.81
+    "total_actual": 111.41,
+    "variance": 67319.64
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,

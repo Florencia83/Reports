@@ -699,7 +699,13 @@ async function main() {
     }
   }
 
-  const monthStart = todayStr.slice(0, 7) + '-01';
+  // Anchored to the reported week's own month (weekStart), not today's calendar date --
+  // a week spanning a month boundary (e.g. July 27 - Aug 2) closes on a day that's
+  // already in the new month, so using todayStr here silently dropped almost the whole
+  // week's data from Top 10/By Technician/Cost by Property/Monthly Budget (found 2026-08-03,
+  // weekly-2026-07-27.json showed $0 labor for every technician despite $4,654 in real
+  // QBT hours logged July 27-31 -- all excluded because "month-to-date" meant Aug 1-2 only).
+  const monthStart = weekStart.slice(0, 7) + '-01';
   const last30Start = dstr(daysAgo(29));
   const last7Start = dstr(daysAgo(6));
   const broadStart = [monthStart, last30Start, weekStart].sort()[0];
@@ -867,7 +873,7 @@ async function main() {
   // previously these lived only in the always-live weekly-mtd.json, so picking any
   // past week on the site still showed today's current-month numbers, not that
   // week's own. Florencia flagged this 2026-07-20.) ----
-  const month = todayStr.slice(0, 7);
+  const month = monthStart.slice(0, 7);
   const laborMTD = totalCost(monthLaborRecords);
   const materialsMTD = materialsBudgetTotal(monthRampRecords);
   const totalActual = laborMTD + materialsMTD;
@@ -942,7 +948,7 @@ async function main() {
     week_start: weekStart,
     week_end: dstr(sunday),
     label: weekLabel(monday, sunday),
-    month_label: monthName(today.getMonth()) + ' ' + today.getFullYear(),
+    month_label: monthName(monday.getMonth()) + ' ' + monday.getFullYear(),
     generated_at: todayStr,
     complete: weekEnd === dstr(sunday),
     source: 'Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.',
