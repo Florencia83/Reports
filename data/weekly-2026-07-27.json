@@ -46,15 +46,15 @@
       "metric": "Time to Assignment",
       "q1": 0.3,
       "q2": 1.31,
-      "last_30": 1.83,
-      "last_7": 2.22
+      "last_30": 0.03,
+      "last_7": 0.14
     },
     {
       "metric": "Time to Schedule",
       "q1": 0.4,
       "q2": 1.7,
-      "last_30": 1.09,
-      "last_7": 1.72
+      "last_30": 0.22,
+      "last_7": 0.8
     }
   ],
   "top_work_orders": [
