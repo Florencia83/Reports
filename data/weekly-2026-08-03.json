@@ -1,0 +1,212 @@
+{
+  "week_start": "2026-08-03",
+  "week_end": "2026-08-09",
+  "label": "August 3 – 9, 2026",
+  "month_label": "August 2026",
+  "generated_at": "2026-08-03",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": 39,
+      "last_30": 34.85,
+      "last_7": 30.09
+    },
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "q1": 0.8,
+      "q2": 0.4,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "q1": 4.21,
+      "q2": 4.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "q1": 18.7,
+      "q2": 38.9,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "q1": 9.2,
+      "q2": 15.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "q1": 0.3,
+      "q2": 1.31,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "q1": 0.4,
+      "q2": 1.7,
+      "last_30": null,
+      "last_7": null
+    }
+  ],
+  "top_work_orders": [
+    {
+      "ref": "TA8KEDKB",
+      "property": "kn47",
+      "brief": "No move in locked out ",
+      "labor": 14.05,
+      "materials": 0,
+      "cost": 14.05
+    },
+    {
+      "ref": "TFEVRLFB",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TB12J77",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TWG6HRR",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TJIBC69",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "T087F8DB",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "T7KCDA7",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "T8UE19Y",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TB2LV51",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    },
+    {
+      "ref": "TD5I4R0",
+      "property": null,
+      "brief": "Daily Pool Maintenance",
+      "labor": 0,
+      "materials": 0,
+      "cost": 0
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jared Miller",
+      "wo_count": 9,
+      "avg_cost_per_wo": 0,
+      "total_labor_cost": 0,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 1,
+      "avg_cost_per_wo": 0,
+      "total_labor_cost": 0,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Jacob Jett",
+      "wo_count": 1,
+      "avg_cost_per_wo": 0,
+      "total_labor_cost": 0,
+      "avg_resident_rating": null,
+      "reviews": []
+    }
+  ],
+  "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 0
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 0
+    },
+    {
+      "category": "Grounds",
+      "amount": 0
+    },
+    {
+      "category": "Maintenance",
+      "amount": 0
+    }
+  ],
+  "monthly_budget": {
+    "budget": 67431.05,
+    "labor": 95.24,
+    "materials": 0,
+    "total_actual": 95.24,
+    "variance": 67335.81
+  },
+  "grounds_monthly_budget": {
+    "budget": 29227.06,
+    "labor": 127.34,
+    "materials": 0,
+    "total_actual": 127.34,
+    "variance": 29099.72
+  },
+  "cost_by_property": [],
+  "narrative": null,
+  "narrative_2": null,
+  "priorities_next_week": null,
+  "grounds_top_purchases_month": "2026-08",
+  "grounds_top_purchases": [],
+  "grounds_pest_control": []
+}
