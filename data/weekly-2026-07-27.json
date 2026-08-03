@@ -512,7 +512,11 @@
     "For the Team KPI's, all reviews of 3 stars or less are being followed closely to create new work orders or clarify the incident as needed."
   ],
   "narrative_2": null,
-  "priorities_next_week": null,
+  "priorities_next_week": [
+    "Find 2 techs for Spokane",
+    "Complete W117 deliverables",
+    "Find lawn care technician for Tri-Cities"
+  ],
   "grounds_top_purchases_month": "2026-07",
   "grounds_top_purchases": [
     {
