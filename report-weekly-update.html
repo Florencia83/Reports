@@ -90,11 +90,12 @@ th { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; letter-sp
 td.num, th.num { font-family: 'Manrope', system-ui, sans-serif; font-variant-numeric: tabular-nums; text-align: right; }
 td.detail, th.detail { white-space: normal; min-width: 220px; }
 td.detail { color: var(--ink-soft); }
-#by-tech-container td.detail, #by-tech-container th.detail { min-width: 0; max-width: 140px; }
 #top-wo-container td.detail, #top-wo-container th.detail { min-width: 0; max-width: 170px; }
 #kpis-container td:first-child, #kpis-container th:first-child { white-space: normal; max-width: 160px; }
 td.prop, th.prop { white-space: normal; max-width: 90px; }
 #by-tech-container td, #by-tech-container th { border-bottom: 1px solid var(--violet); }
+#by-tech-container tr.tech-row td { border-bottom: none; }
+#by-tech-container tr.reviews-row td { background: var(--paper); color: var(--ink-soft); white-space: normal; padding: 8px 12px 14px; }
 #opex-container td, #opex-container th { border-bottom: 1px solid var(--violet); }
 tr:last-child td { border-bottom: none; }
 tr.total td { font-weight: 600; background: var(--paper); }
@@ -261,7 +262,7 @@ function renderTopWorkOrders(items) {
 
 function renderByTechnician(items) {
   if (!items || !items.length) return '<p style="font-size:12.5px; color:var(--ink-soft);">No completed work orders assigned to a technician this month yet.</p>';
-  var head = '<tr>' + th('Name') + th('W.O.\'s', 'num') + th('Avg Cost/W.O.', 'num') + th('Total Labor', 'num') + th('Rating', 'num') + th('Reviews', 'detail') + '</tr>';
+  var head = '<tr>' + th('Name') + th('W.O.\'s', 'num') + th('Avg Cost/W.O.', 'num') + th('Total Labor', 'num') + th('Rating', 'num') + '</tr>';
   var body = items.map(function(t) {
     var ratingHtml = t.avg_resident_rating != null
       ? '<span class="rating-tag good">' + t.avg_resident_rating.toFixed(2) + '</span>'
@@ -274,7 +275,9 @@ function renderByTechnician(items) {
           return '<div class="comment-block"><span class="cref">' + esc(c.ref) + '</span>' + stars + ' &mdash; ' + textHtml + '</div>';
         }).join('')
       : '<span style="color:var(--ink-soft); font-style:italic;">No reviews this month</span>';
-    return '<tr><td class="ref">' + esc(t.name) + '</td><td class="num">' + t.wo_count + '</td><td class="num">' + money(t.avg_cost_per_wo) + '</td><td class="num">' + money(t.total_labor_cost) + '</td><td class="num">' + ratingHtml + '</td><td class="detail">' + reviewsHtml + '</td></tr>';
+    var techRow = '<tr class="tech-row"><td class="ref">' + esc(t.name) + '</td><td class="num">' + t.wo_count + '</td><td class="num">' + money(t.avg_cost_per_wo) + '</td><td class="num">' + money(t.total_labor_cost) + '</td><td class="num">' + ratingHtml + '</td></tr>';
+    var reviewsRow = '<tr class="reviews-row"><td colspan="5">' + reviewsHtml + '</td></tr>';
+    return techRow + reviewsRow;
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
