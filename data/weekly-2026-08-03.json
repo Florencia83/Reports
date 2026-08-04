@@ -3,7 +3,7 @@
   "week_end": "2026-08-09",
   "label": "August 3 – 9, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-03",
+  "generated_at": "2026-08-04",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 34.85,
-      "last_7": 30.09
+      "last_30": 35.2,
+      "last_7": 30.24
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,100 +59,136 @@
   ],
   "top_work_orders": [
     {
-      "ref": "TA8KEDKB",
+      "ref": "TZX6JHY",
       "property": "kn47",
-      "brief": "No move in locked out ",
-      "labor": 14.05,
-      "materials": 0,
-      "cost": 14.05
+      "brief": "Bedroom doors not closing properly ",
+      "labor": 77.2,
+      "materials": 152.53,
+      "cost": 229.73
     },
     {
-      "ref": "TFEVRLFB",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
-      "materials": 0,
-      "cost": 0
+      "ref": "TKBR3YX",
+      "property": "kn47",
+      "brief": "Garbage Disposal",
+      "labor": 51.03,
+      "materials": 136.14,
+      "cost": 187.17
     },
     {
-      "ref": "TB12J77",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
+      "ref": "TEHXVXGB",
+      "property": "kn47",
+      "brief": "Weekly Pet Waste Removal",
       "labor": 0,
-      "materials": 0,
-      "cost": 0
+      "materials": 165.26,
+      "cost": 165.26
     },
     {
-      "ref": "TWG6HRR",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
-      "materials": 0,
-      "cost": 0
+      "ref": "T22TU8",
+      "property": "tc68",
+      "brief": "Sink Is Leaking Severely",
+      "labor": 39.6,
+      "materials": 38.19,
+      "cost": 77.79
     },
     {
-      "ref": "TJIBC69",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
+      "ref": "TPX9FVDB",
+      "property": "p705",
+      "brief": "Ecall fridge leak and Ac issue",
+      "labor": 63.75,
       "materials": 0,
-      "cost": 0
+      "cost": 63.75
     },
     {
-      "ref": "T087F8DB",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
-      "materials": 0,
-      "cost": 0
+      "ref": "T6DBXCJB",
+      "property": "tc34",
+      "brief": "Middle Back Door Needs To Be Fixed",
+      "labor": 41.85,
+      "materials": 19.86,
+      "cost": 61.71
     },
     {
-      "ref": "T7KCDA7",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
+      "ref": "TC1X5TAB",
+      "property": "rl21",
+      "brief": "08/06 - ost NTE units 3-5-6-10-13",
+      "labor": 32.4,
       "materials": 0,
-      "cost": 0
+      "cost": 32.4
     },
     {
-      "ref": "T8UE19Y",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
-      "materials": 0,
-      "cost": 0
+      "ref": "TA39DEI",
+      "property": "ps25",
+      "brief": "Ants in bathrooms",
+      "labor": 22,
+      "materials": 8.26,
+      "cost": 30.26
     },
     {
-      "ref": "TB2LV51",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
+      "ref": "TMPB2UF",
+      "property": "kn47",
+      "brief": "Laundry closet doors need repaired ",
+      "labor": 26.4,
       "materials": 0,
-      "cost": 0
+      "cost": 26.4
     },
     {
-      "ref": "TD5I4R0",
-      "property": null,
-      "brief": "Daily Pool Maintenance",
-      "labor": 0,
+      "ref": "TP18KC8",
+      "property": "kn47",
+      "brief": "Tolet And Tub Needs Caulking Floor Coming Up The Water Nobe Just Turns And Turns So I Don'",
+      "labor": 24.34,
       "materials": 0,
-      "cost": 0
+      "cost": 24.34
     }
   ],
   "by_technician": [
     {
+      "name": "Jonas Hoard",
+      "wo_count": 18,
+      "avg_cost_per_wo": 7.75,
+      "total_labor_cost": 81.45,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "T6DBXCJB",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
       "name": "Jared Miller",
-      "wo_count": 9,
-      "avg_cost_per_wo": 0,
-      "total_labor_cost": 0,
+      "wo_count": 18,
+      "avg_cost_per_wo": 13.87,
+      "total_labor_cost": 105.34,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 1,
-      "avg_cost_per_wo": 0,
-      "total_labor_cost": 0,
+      "wo_count": 5,
+      "avg_cost_per_wo": 51.23,
+      "total_labor_cost": 103.6,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "TJ7HHP0",
+          "rating": 5,
+          "text": "Job well done,"
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 2,
+      "avg_cost_per_wo": 16.2,
+      "total_labor_cost": 32.4,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 2,
+      "avg_cost_per_wo": 31.87,
+      "total_labor_cost": 63.75,
       "avg_resident_rating": null,
       "reviews": []
     },
@@ -165,48 +201,85 @@
       "reviews": []
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-08-03",
+      "ref": null,
+      "property": "TC68",
+      "cardholder": "Jonas Hoard",
+      "amount": 1737.03
+    },
+    {
+      "date": "2026-08-03",
+      "ref": "TZU5940",
+      "property": "KN47",
+      "cardholder": "isaac chavez",
+      "amount": 999.87
+    },
+    {
+      "date": "2026-08-03",
+      "ref": null,
+      "property": null,
+      "cardholder": "Justin Gutierrez",
+      "amount": 337.05
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 0
+      "amount": 156.01
     },
     {
       "category": "Supplies and Tools",
-      "amount": 0
+      "amount": 216.51
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 999.87
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 183.18
     },
     {
       "category": "Maintenance",
-      "amount": 0
+      "amount": 2421.52
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 111.41,
-    "materials": 0,
-    "total_actual": 111.41,
-    "variance": 67319.64
+    "labor": 1111.49,
+    "materials": 2638.03,
+    "total_actual": 3749.52,
+    "variance": 63681.53
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 127.34,
-    "materials": 0,
-    "total_actual": 127.34,
-    "variance": 29099.72
+    "labor": 784.42,
+    "materials": 183.18,
+    "total_actual": 967.6,
+    "variance": 28259.46
   },
   "cost_by_property": [],
   "narrative": null,
   "narrative_2": null,
   "priorities_next_week": null,
   "grounds_top_purchases_month": "2026-08",
-  "grounds_top_purchases": [],
+  "grounds_top_purchases": [
+    {
+      "date": "2026-08-03",
+      "cardholder": "isaac chavez",
+      "property": "KN47",
+      "ref": "TEHXVXGB",
+      "amount": 165.26
+    },
+    {
+      "date": "2026-08-03",
+      "cardholder": "David Sanchez",
+      "property": "S129",
+      "ref": null,
+      "amount": 17.92
+    }
+  ],
   "grounds_pest_control": []
 }
