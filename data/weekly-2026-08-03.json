@@ -3,7 +3,7 @@
   "week_end": "2026-08-09",
   "label": "August 3 – 9, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-04",
+  "generated_at": "2026-08-05",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 35.2,
-      "last_7": 30.24
+      "last_30": 41.33,
+      "last_7": 44.92
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,12 +59,44 @@
   ],
   "top_work_orders": [
     {
+      "ref": "T6DBXCJB",
+      "property": "tc34",
+      "brief": "Middle Back Door Needs To Be Fixed",
+      "labor": 41.85,
+      "materials": 1756.89,
+      "cost": 1798.74
+    },
+    {
+      "ref": "TPX9FVDB",
+      "property": "p705",
+      "brief": "Ecall fridge leak and Ac issue",
+      "labor": 63.75,
+      "materials": 417.05,
+      "cost": 480.8
+    },
+    {
       "ref": "TZX6JHY",
       "property": "kn47",
       "brief": "Bedroom doors not closing properly ",
       "labor": 77.2,
       "materials": 152.53,
       "cost": 229.73
+    },
+    {
+      "ref": "T2Q5GP9",
+      "property": "kn47",
+      "brief": "Stove burner not working ",
+      "labor": 30.8,
+      "materials": 190.29,
+      "cost": 221.09
+    },
+    {
+      "ref": "TF4ZEGM",
+      "property": "tc68",
+      "brief": "Garbage Disposal",
+      "labor": 40.5,
+      "materials": 159.18,
+      "cost": 199.68
     },
     {
       "ref": "TKBR3YX",
@@ -83,68 +115,36 @@
       "cost": 165.26
     },
     {
+      "ref": "TGGUPR6",
+      "property": "tc68",
+      "brief": "Cupboard Shelf Is Bending",
+      "labor": 27,
+      "materials": 100.69,
+      "cost": 127.69
+    },
+    {
+      "ref": "TZK6J18",
+      "property": "k104",
+      "brief": "Attend water meter replacement",
+      "labor": 87.53,
+      "materials": 0,
+      "cost": 87.53
+    },
+    {
       "ref": "T22TU8",
       "property": "tc68",
       "brief": "Sink Is Leaking Severely",
       "labor": 39.6,
       "materials": 38.19,
       "cost": 77.79
-    },
-    {
-      "ref": "TPX9FVDB",
-      "property": "p705",
-      "brief": "Ecall fridge leak and Ac issue",
-      "labor": 63.75,
-      "materials": 0,
-      "cost": 63.75
-    },
-    {
-      "ref": "T6DBXCJB",
-      "property": "tc34",
-      "brief": "Middle Back Door Needs To Be Fixed",
-      "labor": 41.85,
-      "materials": 19.86,
-      "cost": 61.71
-    },
-    {
-      "ref": "TC1X5TAB",
-      "property": "rl21",
-      "brief": "08/06 - ost NTE units 3-5-6-10-13",
-      "labor": 32.4,
-      "materials": 0,
-      "cost": 32.4
-    },
-    {
-      "ref": "TA39DEI",
-      "property": "ps25",
-      "brief": "Ants in bathrooms",
-      "labor": 22,
-      "materials": 8.26,
-      "cost": 30.26
-    },
-    {
-      "ref": "TMPB2UF",
-      "property": "kn47",
-      "brief": "Laundry closet doors need repaired ",
-      "labor": 26.4,
-      "materials": 0,
-      "cost": 26.4
-    },
-    {
-      "ref": "TP18KC8",
-      "property": "kn47",
-      "brief": "Tolet And Tub Needs Caulking Floor Coming Up The Water Nobe Just Turns And Turns So I Don'",
-      "labor": 24.34,
-      "materials": 0,
-      "cost": 24.34
     }
   ],
   "by_technician": [
     {
       "name": "Jonas Hoard",
-      "wo_count": 18,
-      "avg_cost_per_wo": 7.75,
-      "total_labor_cost": 81.45,
+      "wo_count": 23,
+      "avg_cost_per_wo": 98.74,
+      "total_labor_cost": 183.15,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -156,19 +156,24 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 18,
-      "avg_cost_per_wo": 13.87,
-      "total_labor_cost": 105.34,
+      "wo_count": 19,
+      "avg_cost_per_wo": 13.69,
+      "total_labor_cost": 115.64,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 5,
-      "avg_cost_per_wo": 51.23,
-      "total_labor_cost": 103.6,
-      "avg_resident_rating": 5,
+      "wo_count": 9,
+      "avg_cost_per_wo": 57.56,
+      "total_labor_cost": 175.2,
+      "avg_resident_rating": 4.5,
       "reviews": [
+        {
+          "ref": "T2AUDNBB",
+          "rating": 4,
+          "text": null
+        },
         {
           "ref": "TJ7HHP0",
           "rating": 5,
@@ -177,26 +182,26 @@
       ]
     },
     {
-      "name": "Isaac Chavez",
-      "wo_count": 2,
-      "avg_cost_per_wo": 16.2,
-      "total_labor_cost": 32.4,
-      "avg_resident_rating": null,
-      "reviews": []
-    },
-    {
       "name": "Justin Gutierrez",
-      "wo_count": 2,
-      "avg_cost_per_wo": 31.87,
-      "total_labor_cost": 63.75,
+      "wo_count": 6,
+      "avg_cost_per_wo": 98.26,
+      "total_labor_cost": 172.5,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 1,
-      "avg_cost_per_wo": 0,
-      "total_labor_cost": 0,
+      "wo_count": 5,
+      "avg_cost_per_wo": 40.91,
+      "total_labor_cost": 204.53,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 4,
+      "avg_cost_per_wo": 28.13,
+      "total_labor_cost": 112.5,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -204,7 +209,7 @@
   "ramp_purchases_over_300": [
     {
       "date": "2026-08-03",
-      "ref": null,
+      "ref": "T6DBXCJB",
       "property": "TC68",
       "cardholder": "Jonas Hoard",
       "amount": 1737.03
@@ -217,9 +222,16 @@
       "amount": 999.87
     },
     {
+      "date": "2026-08-04",
+      "ref": "T9PQQ0B",
+      "property": "RL16",
+      "cardholder": "isaac chavez",
+      "amount": 379.71
+    },
+    {
       "date": "2026-08-03",
-      "ref": null,
-      "property": null,
+      "ref": "TPX9FVDB",
+      "property": "P705",
       "cardholder": "Justin Gutierrez",
       "amount": 337.05
     }
@@ -227,7 +239,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 156.01
+      "amount": 521.87
     },
     {
       "category": "Supplies and Tools",
@@ -235,30 +247,30 @@
     },
     {
       "category": "Appliances",
-      "amount": 999.87
+      "amount": 3116.61
     },
     {
       "category": "Grounds",
-      "amount": 183.18
+      "amount": 321.53
     },
     {
       "category": "Maintenance",
-      "amount": 2421.52
+      "amount": 1700.31
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 1111.49,
-    "materials": 2638.03,
-    "total_actual": 3749.52,
-    "variance": 63681.53
+    "labor": 2277.58,
+    "materials": 1916.82,
+    "total_actual": 4194.4,
+    "variance": 63236.65
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 784.42,
-    "materials": 183.18,
-    "total_actual": 967.6,
-    "variance": 28259.46
+    "labor": 1363.88,
+    "materials": 321.53,
+    "total_actual": 1685.41,
+    "variance": 27541.65
   },
   "cost_by_property": [],
   "narrative": null,
@@ -274,11 +286,53 @@
       "amount": 165.26
     },
     {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "A511",
+      "ref": "TUHUP2E",
+      "amount": 37.94
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "Hannah Deckard",
+      "property": "PS91",
+      "ref": "TW2PJK1",
+      "amount": 28.29
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "M221",
+      "ref": "T93P9MF",
+      "amount": 27.61
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "M221",
+      "ref": "T93P9MF",
+      "amount": 21
+    },
+    {
       "date": "2026-08-03",
       "cardholder": "David Sanchez",
       "property": "S129",
-      "ref": null,
+      "ref": "TGH6EGG",
       "amount": 17.92
+    },
+    {
+      "date": "2026-08-03",
+      "cardholder": "David Sanchez",
+      "property": "P705",
+      "ref": "TV3280L",
+      "amount": 13.72
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "A511",
+      "ref": "TUHUP2E",
+      "amount": 9.79
     }
   ],
   "grounds_pest_control": []
