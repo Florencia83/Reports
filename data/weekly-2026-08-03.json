@@ -356,5 +356,13 @@
       "amount": 9.79
     }
   ],
-  "grounds_pest_control": []
+  "grounds_pest_control": [
+    {
+      "property": "PS26",
+      "program": "Cockroach elimination program",
+      "units": ["F39"],
+      "date_signed": "August 2026",
+      "amount": 328.70
+    }
+  ]
 }

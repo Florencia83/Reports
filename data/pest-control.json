@@ -3,5 +3,8 @@
     { "property": "PS25", "program": "Cockroach elimination program", "units": ["D27", "D28", "D23", "D24", "E31", "E34"], "date_signed": "July 2026", "amount": 1960.20 },
     { "property": "KN47", "program": "Cockroach elimination program", "units": ["A102", "A104", "A202", "A204"], "date_signed": "July 2026", "amount": 1305.60 },
     { "property": "PS25", "program": "Cockroach elimination program", "units": ["A08"], "date_signed": "July 2026", "amount": 326.70 }
+  ],
+  "2026-08": [
+    { "property": "PS26", "program": "Cockroach elimination program", "units": ["F39"], "date_signed": "August 2026", "amount": 328.70 }
   ]
 }
