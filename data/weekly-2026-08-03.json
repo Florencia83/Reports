@@ -3,7 +3,7 @@
   "week_end": "2026-08-09",
   "label": "August 3 – 9, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-07",
+  "generated_at": "2026-08-08",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 41.88,
-      "last_7": 39.77
+      "last_30": 42.75,
+      "last_7": 40.93
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -65,6 +65,14 @@
       "labor": 41.85,
       "materials": 1756.89,
       "cost": 1798.74
+    },
+    {
+      "ref": "TTK4WLE",
+      "property": "m405",
+      "brief": "My Refrigerator Is Not Cooling.",
+      "labor": 83.63,
+      "materials": 750.61,
+      "cost": 834.24
     },
     {
       "ref": "TPX9FVDB",
@@ -129,27 +137,48 @@
       "labor": 27,
       "materials": 142.56,
       "cost": 169.56
-    },
-    {
-      "ref": "TEHXVXGB",
-      "property": "kn47",
-      "brief": "Weekly Pet Waste Removal",
-      "labor": 0,
-      "materials": 165.26,
-      "cost": 165.26
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 31,
-      "avg_cost_per_wo": 10.65,
-      "total_labor_cost": 185.86,
-      "avg_resident_rating": 4,
+      "wo_count": 40,
+      "avg_cost_per_wo": 10.27,
+      "total_labor_cost": 238.3,
+      "avg_resident_rating": 4.5,
       "reviews": [
         {
           "ref": "T5VPVG",
           "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TRPB1YZ",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 29,
+      "avg_cost_per_wo": 49.07,
+      "total_labor_cost": 597.6,
+      "avg_resident_rating": 4.67,
+      "reviews": [
+        {
+          "ref": "T2AUDNBB",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TJ7HHP0",
+          "rating": 5,
+          "text": "Job well done,"
+        },
+        {
+          "ref": "TKKZ2D1",
+          "rating": 5,
           "text": null
         }
       ]
@@ -179,50 +208,26 @@
       ]
     },
     {
-      "name": "Jaxson Lakins",
-      "wo_count": 22,
-      "avg_cost_per_wo": 50.2,
-      "total_labor_cost": 464,
-      "avg_resident_rating": 4.67,
-      "reviews": [
-        {
-          "ref": "T2AUDNBB",
-          "rating": 4,
-          "text": null
-        },
-        {
-          "ref": "TJ7HHP0",
-          "rating": 5,
-          "text": "Job well done,"
-        },
-        {
-          "ref": "TKKZ2D1",
-          "rating": 5,
-          "text": null
-        }
-      ]
-    },
-    {
       "name": "Jacob Jett",
-      "wo_count": 12,
-      "avg_cost_per_wo": 31.45,
-      "total_labor_cost": 352.3,
+      "wo_count": 17,
+      "avg_cost_per_wo": 75.76,
+      "total_labor_cost": 512.2,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 6,
-      "avg_cost_per_wo": 27.45,
-      "total_labor_cost": 164.7,
+      "wo_count": 8,
+      "avg_cost_per_wo": 25.93,
+      "total_labor_cost": 197.43,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 6,
-      "avg_cost_per_wo": 102.66,
-      "total_labor_cost": 127.08,
+      "wo_count": 5,
+      "avg_cost_per_wo": 111.93,
+      "total_labor_cost": 87.08,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -257,6 +262,13 @@
       "amount": 999.87
     },
     {
+      "date": "2026-08-07",
+      "ref": "TTK4WLE",
+      "property": "M405",
+      "cardholder": "Jacob Jett",
+      "amount": 750.61
+    },
+    {
       "date": "2026-08-06",
       "ref": "TV90F7L",
       "property": "TC68",
@@ -288,7 +300,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 587.43
+      "amount": 665.06
     },
     {
       "category": "Supplies and Tools",
@@ -300,26 +312,26 @@
     },
     {
       "category": "Grounds",
-      "amount": 357.5
+      "amount": 374.03
     },
     {
       "category": "Maintenance",
-      "amount": 5084.77
+      "amount": 6189.18
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 4263.76,
-    "materials": 5563.07,
-    "total_actual": 9826.83,
-    "variance": 57604.22
+    "labor": 5271.62,
+    "materials": 6667.48,
+    "total_actual": 11939.1,
+    "variance": 55491.95
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 2534.01,
-    "materials": 357.5,
-    "total_actual": 2891.51,
-    "variance": 26335.55
+    "labor": 3149.06,
+    "materials": 374.03,
+    "total_actual": 3523.09,
+    "variance": 25703.97
   },
   "cost_by_property": [],
   "narrative": null,
@@ -375,6 +387,13 @@
       "property": "S129",
       "ref": "TGH6EGG",
       "amount": 17.92
+    },
+    {
+      "date": "2026-08-07",
+      "cardholder": "David Sanchez",
+      "property": "K104",
+      "ref": "T8V6XNC",
+      "amount": 16.53
     },
     {
       "date": "2026-08-03",
