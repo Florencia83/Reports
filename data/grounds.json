@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08",
+  "generated_at": "2026-08-09",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "areas": [
     {
@@ -18,11 +18,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153870/",
                   "occurrences": [
                     {
-                      "ref": "TVT7UFIB",
-                      "status": "SCHEDULED",
-                      "date": "2026-08-17"
-                    },
-                    {
                       "ref": "T6K7MW7",
                       "status": "SCHEDULED",
                       "date": "2026-08-20"
@@ -36,6 +31,11 @@
                       "ref": "TAHCERC",
                       "status": "SCHEDULED",
                       "date": "2026-08-31"
+                    },
+                    {
+                      "ref": "TYG1UWJB",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-07"
                     }
                   ]
                 },
@@ -186,11 +186,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153868/",
                   "occurrences": [
                     {
-                      "ref": "TX3HT6IB",
-                      "status": "COMPLETED",
-                      "date": "2026-08-06"
-                    },
-                    {
                       "ref": "TPE3HQT",
                       "status": "COMPLETED",
                       "date": "2026-08-07"
@@ -202,8 +197,13 @@
                     },
                     {
                       "ref": "TAWUD5P",
+                      "status": "COMPLETED",
+                      "date": "2026-08-09"
+                    },
+                    {
+                      "ref": "TV7CDV6",
                       "status": "PENDING",
-                      "date": "2026-08-08"
+                      "date": "2026-08-09"
                     }
                   ]
                 }
@@ -303,11 +303,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153944/",
                   "occurrences": [
                     {
-                      "ref": "TW78VQN",
-                      "status": "COMPLETED",
-                      "date": "2026-04-13"
-                    },
-                    {
                       "ref": "TD9PEAJ",
                       "status": "COULD NOT COMPLETE",
                       "date": "2026-05-13"
@@ -321,6 +316,11 @@
                       "ref": "TIGWEWK",
                       "status": "COMPLETED",
                       "date": "2026-07-17"
+                    },
+                    {
+                      "ref": "TDJYGYL",
+                      "status": "SCHEDULED",
+                      "date": "2026-08-12"
                     }
                   ]
                 },
@@ -330,11 +330,6 @@
                   "cadence": "Monthly",
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153945/",
                   "occurrences": [
-                    {
-                      "ref": "TNLC940",
-                      "status": "COMPLETED",
-                      "date": "2026-04-10"
-                    },
                     {
                       "ref": "TEQZ06AB",
                       "status": "COULD NOT COMPLETE",
@@ -349,6 +344,11 @@
                       "ref": "T2EK5DQ",
                       "status": "COMPLETED",
                       "date": "2026-07-17"
+                    },
+                    {
+                      "ref": "TXM87LM",
+                      "status": "SCHEDULED",
+                      "date": "2026-08-12"
                     }
                   ]
                 },
@@ -590,11 +590,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/180223/",
                   "occurrences": [
                     {
-                      "ref": "TPD0EIM",
-                      "status": "COMPLETED",
-                      "date": "2026-08-06"
-                    },
-                    {
                       "ref": "TEI2P2",
                       "status": "COMPLETED",
                       "date": "2026-08-07"
@@ -606,8 +601,13 @@
                     },
                     {
                       "ref": "TI0GV4Y",
+                      "status": "COMPLETED",
+                      "date": "2026-08-09"
+                    },
+                    {
+                      "ref": "T3H5PCAB",
                       "status": "PENDING",
-                      "date": "2026-08-08"
+                      "date": "2026-08-09"
                     }
                   ]
                 }
@@ -821,11 +821,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/180224/",
                   "occurrences": [
                     {
-                      "ref": "TV0H68CB",
-                      "status": "COMPLETED",
-                      "date": "2026-08-06"
-                    },
-                    {
                       "ref": "TJ1GA50",
                       "status": "COMPLETED",
                       "date": "2026-08-07"
@@ -837,8 +832,13 @@
                     },
                     {
                       "ref": "TV0G2N7",
+                      "status": "COMPLETED",
+                      "date": "2026-08-09"
+                    },
+                    {
+                      "ref": "TQP0B3E",
                       "status": "PENDING",
-                      "date": "2026-08-08"
+                      "date": "2026-08-09"
                     }
                   ]
                 }
