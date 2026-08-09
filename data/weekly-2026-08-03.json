@@ -3,16 +3,16 @@
   "week_end": "2026-08-09",
   "label": "August 3 – 9, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-08",
-  "complete": false,
+  "generated_at": "2026-08-09",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 42.75,
-      "last_7": 40.93
+      "last_30": 40.58,
+      "last_7": 41.43
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,8 +142,8 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 40,
-      "avg_cost_per_wo": 10.27,
+      "wo_count": 43,
+      "avg_cost_per_wo": 9.56,
       "total_labor_cost": 238.3,
       "avg_resident_rating": 4.5,
       "reviews": [
@@ -210,10 +210,16 @@
     {
       "name": "Jacob Jett",
       "wo_count": 17,
-      "avg_cost_per_wo": 75.76,
-      "total_labor_cost": 512.2,
-      "avg_resident_rating": null,
-      "reviews": []
+      "avg_cost_per_wo": 80.68,
+      "total_labor_cost": 595.83,
+      "avg_resident_rating": 4,
+      "reviews": [
+        {
+          "ref": "TU3MVVEB",
+          "rating": 4,
+          "text": null
+        }
+      ]
     },
     {
       "name": "Isaac Chavez",
@@ -260,6 +266,13 @@
       "property": "KN47",
       "cardholder": "isaac chavez",
       "amount": 999.87
+    },
+    {
+      "date": "2026-08-08",
+      "ref": "TTNQ7CT",
+      "property": "PS25",
+      "cardholder": "Jared Miller",
+      "amount": 879.1
     },
     {
       "date": "2026-08-07",
@@ -316,22 +329,22 @@
     },
     {
       "category": "Maintenance",
-      "amount": 6189.18
+      "amount": 7068.28
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 5271.62,
-    "materials": 6667.48,
-    "total_actual": 11939.1,
-    "variance": 55491.95
+    "labor": 5386.66,
+    "materials": 7546.58,
+    "total_actual": 12933.24,
+    "variance": 54497.81
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 3149.06,
+    "labor": 3203.35,
     "materials": 374.03,
-    "total_actual": 3523.09,
-    "variance": 25703.97
+    "total_actual": 3577.38,
+    "variance": 25649.68
   },
   "cost_by_property": [],
   "narrative": null,
