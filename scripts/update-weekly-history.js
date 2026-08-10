@@ -643,7 +643,7 @@ async function fetchQboProcessed() {
     if (!category) continue; // Turn/CapEx/other -- out of scope for Repairs+Grounds here
     const propMatch = String(t.dept || '').match(/^[a-z]+\d+/i);
     if (!propMatch) continue;
-    records.push({ date: t.d, property: propMatch[0].toLowerCase(), amount: t.amt, category, vendor: t.vendor });
+    records.push({ date: t.d, property: propMatch[0].toLowerCase(), amount: t.amt, category, vendor: t.vendor, desc: t.ln });
   }
   return records;
 }
@@ -653,6 +653,20 @@ function qboTotal(records, category) {
 function qboByProperty(records, category) {
   const out = {};
   records.forEach(r => { if (r.category !== category) return; out[r.property] = (out[r.property] || 0) + r.amount; });
+  return out;
+}
+// Per-property list of individual bills (Florencia, 2026-08-10 -- owner-update wants
+// vendor + amount shown per invoice, not just a summed total). NOTE: unlike Ramp
+// purchases, this feed has no PropertyMeld meld reference to show alongside vendor --
+// `desc` (the qbo_category/ln field, e.g. "R&M - Contractor") is the closest available
+// label. Flagged to Florencia as a real gap, not silently worked around.
+function qboListByProperty(records, category) {
+  const out = {};
+  records.forEach(r => {
+    if (r.category !== category) return;
+    if (!out[r.property]) out[r.property] = [];
+    out[r.property].push({ vendor: r.vendor, desc: r.desc, amount: Math.round(r.amount * 100) / 100, date: r.date });
+  });
   return out;
 }
 
@@ -1121,11 +1135,16 @@ async function main() {
     const matByPropMonth = materialsByPropFn(monthRampRecords);
     const qboByPropWeek = qboByProperty(weekQboRecords, qboCategoryName);
     const qboByPropMonth = qboByProperty(monthQboRecords, qboCategoryName);
+    const qboListByPropMonth = qboListByProperty(monthQboRecords, qboCategoryName);
     const allProps = Object.keys(PROPERTY_IDS);
     const budgets = await appfolioPropertyBudgets(allProps, month, accountName);
     return allProps.map(prop => {
+      const laborHoursMonth = laborByPropMonth[prop] ? laborByPropMonth[prop].hours : 0;
+      const laborCostMonth = laborByPropMonth[prop] ? laborByPropMonth[prop].cost : 0;
+      const materialsMonth = matByPropMonth[prop] || 0;
+      const invoicesMonth = qboByPropMonth[prop] || 0;
       const lastWeek = (laborByPropWeek[prop] ? laborByPropWeek[prop].cost : 0) + (matByPropWeek[prop] || 0) + (qboByPropWeek[prop] || 0);
-      const mtd = (laborByPropMonth[prop] ? laborByPropMonth[prop].cost : 0) + (matByPropMonth[prop] || 0) + (qboByPropMonth[prop] || 0);
+      const mtd = laborCostMonth + materialsMonth + invoicesMonth;
       const budget = budgets[prop] != null ? budgets[prop] : null;
       return {
         property: prop.toUpperCase(),
@@ -1134,6 +1153,12 @@ async function main() {
         mtd: Math.round(mtd * 100) / 100,
         budget,
         pct_of_budget: budget ? Math.round((mtd / budget) * 1000) / 10 : null,
+        // Added 2026-08-10 for the owner-update per-property card breakdown (Florencia:
+        // show Invoices/Labor hours/Ramp purchases per line, invoices listed individually).
+        labor_hours_mtd: Math.round(laborHoursMonth * 100) / 100,
+        materials_mtd: Math.round(materialsMonth * 100) / 100,
+        invoices_mtd: Math.round(invoicesMonth * 100) / 100,
+        invoices_list_mtd: (qboListByPropMonth[prop] || []).slice().sort((a, b) => b.amount - a.amount),
       };
     });
   }

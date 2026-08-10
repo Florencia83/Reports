@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 40.59,
-      "last_7": 36.75
+      "last_30": 41.24,
+      "last_7": 38.68
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -91,6 +91,14 @@
       "cost": 536.3
     },
     {
+      "ref": "T4TDY8FB",
+      "property": "tc34",
+      "brief": "Yard Work Question Needs Mowing",
+      "labor": 0,
+      "materials": 234.19,
+      "cost": 234.19
+    },
+    {
       "ref": "TNT066M",
       "property": "tc68",
       "brief": "Dryer Sounds Noisy",
@@ -129,22 +137,14 @@
       "labor": 51.03,
       "materials": 136.14,
       "cost": 187.17
-    },
-    {
-      "ref": "T0JUKU5",
-      "property": "kn47",
-      "brief": "Oven not working ",
-      "labor": 68.4,
-      "materials": 115.01,
-      "cost": 183.41
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 47,
-      "avg_cost_per_wo": 12.57,
-      "total_labor_cost": 397.47,
+      "wo_count": 48,
+      "avg_cost_per_wo": 13.49,
+      "total_labor_cost": 428.37,
       "avg_resident_rating": 4.67,
       "reviews": [
         {
@@ -159,6 +159,30 @@
         },
         {
           "ref": "TRPB1YZ",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jonas Hoard",
+      "wo_count": 33,
+      "avg_cost_per_wo": 100.05,
+      "total_labor_cost": 347.4,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "TDRMRCU",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TB22WMK",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T6DBXCJB",
           "rating": 5,
           "text": null
         }
@@ -194,36 +218,17 @@
       ]
     },
     {
-      "name": "Jonas Hoard",
-      "wo_count": 30,
-      "avg_cost_per_wo": 97.64,
-      "total_labor_cost": 347.4,
-      "avg_resident_rating": 5,
-      "reviews": [
-        {
-          "ref": "TDRMRCU",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TB22WMK",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "T6DBXCJB",
-          "rating": 5,
-          "text": null
-        }
-      ]
-    },
-    {
       "name": "Jacob Jett",
-      "wo_count": 22,
-      "avg_cost_per_wo": 69.39,
-      "total_labor_cost": 750.97,
-      "avg_resident_rating": 4,
+      "wo_count": 24,
+      "avg_cost_per_wo": 67.14,
+      "total_labor_cost": 787.8,
+      "avg_resident_rating": 4.5,
       "reviews": [
+        {
+          "ref": "TZ99Z6F",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TU3MVVEB",
           "rating": 4,
@@ -252,7 +257,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 0
+      "amount": 113.51
     },
     {
       "category": "Supplies and Tools",
@@ -268,24 +273,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 515.22
+      "amount": 696.58
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 6211.09,
-    "materials": 8061.8,
+    "labor": 6327.99,
+    "materials": 8274.33,
     "invoices": 0,
-    "total_actual": 14272.89,
-    "variance": 53158.16
+    "total_actual": 14602.32,
+    "variance": 52828.73
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 3738.66,
+    "labor": 3860.07,
     "materials": 374.03,
     "invoices": 1823.25,
-    "total_actual": 5935.94,
-    "variance": 23291.12
+    "total_actual": 6057.35,
+    "variance": 23169.71
   },
   "cost_by_property": [],
   "narrative": null,

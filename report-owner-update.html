@@ -137,6 +137,17 @@ td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); f
 .area-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 18px 0 8px; }
 .area-label:first-child { margin-top: 0; }
 
+.prop-card { border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); padding: 10px 14px; margin-bottom: 10px; }
+.prop-card-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; font-family: 'Manrope', system-ui, sans-serif; margin-bottom: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.prop-card-name { font-weight: 700; font-size: 13px; }
+.prop-card-budget { font-size: 11.5px; color: var(--ink-soft); }
+.prop-card-budget.bad { color: var(--bad); font-weight: 600; }
+.prop-card-budget.good { color: var(--good); font-weight: 600; }
+.prop-breakdown { width: 100%; font-size: 12px; border-collapse: collapse; }
+.prop-breakdown td { padding: 3px 0; border: none; white-space: normal; font-family: 'Manrope', system-ui, sans-serif; }
+.prop-breakdown td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 10px; }
+.prop-breakdown tr.sub td { padding: 2px 0 2px 14px; font-size: 11px; color: var(--ink-soft); }
+
 .tag { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
 .tag.maintenance { background: var(--maint-tint); color: var(--maint-ink); }
 .tag.finance { background: var(--finance-tint); color: var(--finance-ink); }
@@ -181,40 +192,63 @@ footer a { color: var(--ink-soft); }
 function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
 function pctClass(v) { if (v === null || v === undefined) return ''; return v > 100 ? 'bad' : 'good'; }
 function pctText(v) { return v === null || v === undefined ? '&mdash;' : v + '%'; }
+function hoursText(v) { return v === null || v === undefined ? '&mdash;' : Number(v).toFixed(1) + 'h'; }
+function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 
-// One row per property: Property | Last Week | MTD | Monthly Budget | % of Budget Used.
-function renderPropertyTable(rows) {
+// One card per property (Florencia, 2026-08-10 -- replaced the old 5-column table,
+// which forced horizontal scrolling on narrow screens). Each card: name + budget/%
+// used on top, then MTD Invoices/Labor Hours/Ramp Purchases stacked as label/value
+// rows instead of more columns, so width never grows. Invoices are also listed
+// individually underneath their total (vendor + category -- NOT a meld reference,
+// the QBO feed doesn't carry one the way Ramp purchases do).
+function renderPropertyCards(rows) {
   if (!rows.length) return '<div class="callout" style="font-size:12.5px;">No properties in this region.</div>';
-  var head = '<tr><th>Property</th><th class="num">Last Week</th><th class="num">Month to Date</th><th class="num">Monthly Budget</th><th class="num">% of Budget Used</th></tr>';
-  var body = rows.map(function(r) {
+  return rows.map(function(r) {
     var cls = pctClass(r.pct_of_budget);
-    return '<tr><td class="prop">' + r.property + '</td><td class="num">' + money(r.last_week) + '</td><td class="num">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
+    var invoiceLines = (r.invoices_list_mtd || []).map(function(inv) {
+      return '<tr class="sub"><td>' + esc(inv.vendor) + (inv.desc ? ' &mdash; ' + esc(inv.desc) : '') + '</td><td class="num">' + money(inv.amount) + '</td></tr>';
+    }).join('');
+    return '<div class="prop-card">' +
+      '<div class="prop-card-head"><span class="prop-card-name">' + r.property + '</span>' +
+      '<span class="prop-card-budget ' + cls + '">' + money(r.budget) + ' budget &middot; ' + pctText(r.pct_of_budget) + ' used</span></div>' +
+      '<table class="prop-breakdown">' +
+      '<tr><td>Invoices</td><td class="num">' + money(r.invoices_mtd) + '</td></tr>' +
+      invoiceLines +
+      '<tr><td>Labor Hours</td><td class="num">' + hoursText(r.labor_hours_mtd) + '</td></tr>' +
+      '<tr><td>Ramp Purchases</td><td class="num">' + money(r.materials_mtd) + '</td></tr>' +
+      '</table></div>';
   }).join('');
-  return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
+// Repairs for all 3 regions first, then Grounds for all 3 (Florencia, 2026-08-10 --
+// was region-then-category; she wants category-then-region instead).
 function renderRegions(regions) {
-  var html = '';
+  var html = '<section><p class="section-label">Repairs</p>';
   regions.forEach(function(reg) {
-    html += '<section><p class="section-label">' + reg.region + ' &mdash; Repairs</p>' + renderPropertyTable(reg.repairs) + '</section>';
-    html += '<section><p class="section-label">' + reg.region + ' &mdash; Grounds</p>' + renderPropertyTable(reg.grounds) + '</section>';
+    html += '<p class="area-label">' + reg.region + '</p>' + renderPropertyCards(reg.repairs);
   });
+  html += '</section><section><p class="section-label">Grounds</p>';
+  regions.forEach(function(reg) {
+    html += '<p class="area-label">' + reg.region + '</p>' + renderPropertyCards(reg.grounds);
+  });
+  html += '</section>';
   return html;
 }
 
 // One 4-row table per flagged scope (RL16, KN47, Portfolio Total): Repairs / Grounds /
-// Turns / Total as rows, same 4 columns as the property tables. Turns has a real
-// Monthly Budget (AppFolio account 52002, wired 2026-08-10) but no actual-spend source
-// yet, so its Last Week/MTD/% columns stay blank -- Total is flagged partial
-// (Repairs+Grounds only) until Turns actual is built.
+// Turns / Total as rows. Turns has a real Monthly Budget (AppFolio account 52002,
+// wired 2026-08-10) but no actual-spend source yet, so its Last Wk/MTD/% columns stay
+// blank -- Total is Repairs+Grounds only until Turns actual is built (see the page's
+// own callout above for that explanation, kept out of the table itself so headers stay
+// short and the table doesn't force horizontal scroll).
 function renderScopeTable(label, scope) {
-  var head = '<tr><th>' + label + '</th><th class="num">Last Week</th><th class="num">Month to Date</th><th class="num">Monthly Budget</th><th class="num">% of Budget Used</th></tr>';
-  function row(name, r, note) {
+  var head = '<tr><th>' + label + '</th><th class="num">Last Wk</th><th class="num">MTD</th><th class="num">Budget</th><th class="num">% Used</th></tr>';
+  function row(name, r) {
     if (!r) return '<tr><td class="prop">' + name + '</td><td class="num" colspan="4">&mdash; no data &mdash;</td></tr>';
     var cls = pctClass(r.pct_of_budget);
-    return '<tr><td class="prop">' + name + (note ? ' <span style="font-weight:400;color:var(--ink-soft);">' + note + '</span>' : '') + '</td><td class="num">' + money(r.last_week) + '</td><td class="num">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
+    return '<tr><td class="prop">' + name + '</td><td class="num">' + money(r.last_week) + '</td><td class="num">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
   }
-  var body = row('Repairs', scope.repairs) + row('Grounds', scope.grounds) + row('Turns', scope.turns, '(actual not tracked yet)') + row('Total', scope.total, scope.total && scope.total.partial ? '(Repairs+Grounds only)' : '');
+  var body = row('Repairs', scope.repairs) + row('Grounds', scope.grounds) + row('Turns', scope.turns) + row('Total', scope.total);
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
