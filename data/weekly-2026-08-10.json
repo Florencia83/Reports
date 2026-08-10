@@ -1,0 +1,376 @@
+{
+  "week_start": "2026-08-10",
+  "week_end": "2026-08-16",
+  "label": "August 10 – 16, 2026",
+  "month_label": "August 2026",
+  "generated_at": "2026-08-10",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": 39,
+      "last_30": 39.43,
+      "last_7": 28.18
+    },
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "q1": 0.8,
+      "q2": 0.4,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "q1": 4.21,
+      "q2": 4.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "q1": 18.7,
+      "q2": 38.9,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "q1": 9.2,
+      "q2": 15.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "q1": 0.3,
+      "q2": 1.31,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "q1": 0.4,
+      "q2": 1.7,
+      "last_30": null,
+      "last_7": null
+    }
+  ],
+  "top_work_orders": [
+    {
+      "ref": "T6DBXCJB",
+      "property": "tc34",
+      "brief": "Middle Back Door Needs To Be Fixed",
+      "labor": 41.85,
+      "materials": 1756.89,
+      "cost": 1798.74
+    },
+    {
+      "ref": "TTK4WLE",
+      "property": "m405",
+      "brief": "My Refrigerator Is Not Cooling.",
+      "labor": 83.63,
+      "materials": 750.61,
+      "cost": 834.24
+    },
+    {
+      "ref": "TPX9FVDB",
+      "property": "p705",
+      "brief": "Ecall fridge leak and Ac issue",
+      "labor": 63.75,
+      "materials": 472.55,
+      "cost": 536.3
+    },
+    {
+      "ref": "TNT066M",
+      "property": "tc68",
+      "brief": "Dryer Sounds Noisy",
+      "labor": 53.1,
+      "materials": 178.56,
+      "cost": 231.66
+    },
+    {
+      "ref": "TZX6JHY",
+      "property": "kn47",
+      "brief": "Bedroom doors not closing properly ",
+      "labor": 77.2,
+      "materials": 152.53,
+      "cost": 229.73
+    },
+    {
+      "ref": "T2Q5GP9",
+      "property": "kn47",
+      "brief": "Stove burner not working ",
+      "labor": 30.8,
+      "materials": 190.29,
+      "cost": 221.09
+    },
+    {
+      "ref": "TF4ZEGM",
+      "property": "tc68",
+      "brief": "Garbage Disposal",
+      "labor": 40.5,
+      "materials": 159.18,
+      "cost": 199.68
+    },
+    {
+      "ref": "TKBR3YX",
+      "property": "kn47",
+      "brief": "Garbage Disposal",
+      "labor": 51.03,
+      "materials": 136.14,
+      "cost": 187.17
+    },
+    {
+      "ref": "T0JUKU5",
+      "property": "kn47",
+      "brief": "Oven not working ",
+      "labor": 68.4,
+      "materials": 115.01,
+      "cost": 183.41
+    },
+    {
+      "ref": "TGGUPR6",
+      "property": "tc68",
+      "brief": "Cupboard Shelf Is Bending",
+      "labor": 27,
+      "materials": 142.56,
+      "cost": 169.56
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jared Miller",
+      "wo_count": 46,
+      "avg_cost_per_wo": 8.93,
+      "total_labor_cost": 238.3,
+      "avg_resident_rating": 4.67,
+      "reviews": [
+        {
+          "ref": "T5VPVG",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TGZFVDX",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TRPB1YZ",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 29,
+      "avg_cost_per_wo": 49.07,
+      "total_labor_cost": 597.6,
+      "avg_resident_rating": 3.75,
+      "reviews": [
+        {
+          "ref": "T2GAQY7",
+          "rating": 1,
+          "text": null
+        },
+        {
+          "ref": "T2AUDNBB",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TJ7HHP0",
+          "rating": 5,
+          "text": "Job well done,"
+        },
+        {
+          "ref": "TKKZ2D1",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jonas Hoard",
+      "wo_count": 24,
+      "avg_cost_per_wo": 107.17,
+      "total_labor_cost": 236.25,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "TDRMRCU",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TB22WMK",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T6DBXCJB",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jacob Jett",
+      "wo_count": 18,
+      "avg_cost_per_wo": 79.73,
+      "total_labor_cost": 659.53,
+      "avg_resident_rating": 4,
+      "reviews": [
+        {
+          "ref": "TU3MVVEB",
+          "rating": 4,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 8,
+      "avg_cost_per_wo": 25.93,
+      "total_labor_cost": 197.43,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 5,
+      "avg_cost_per_wo": 111.93,
+      "total_labor_cost": 87.08,
+      "avg_resident_rating": null,
+      "reviews": []
+    }
+  ],
+  "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 0
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 0
+    },
+    {
+      "category": "Grounds",
+      "amount": 0
+    },
+    {
+      "category": "Maintenance",
+      "amount": 0
+    }
+  ],
+  "monthly_budget": {
+    "budget": 67431.05,
+    "labor": 5531,
+    "materials": 7546.58,
+    "total_actual": 13077.58,
+    "variance": 54353.47
+  },
+  "grounds_monthly_budget": {
+    "budget": 29227.06,
+    "labor": 3264.21,
+    "materials": 374.03,
+    "total_actual": 3638.24,
+    "variance": 25588.82
+  },
+  "cost_by_property": [],
+  "narrative": null,
+  "narrative_2": null,
+  "priorities_next_week": null,
+  "grounds_top_purchases_month": "2026-08",
+  "grounds_top_purchases": [
+    {
+      "date": "2026-08-03",
+      "cardholder": "isaac chavez",
+      "property": "KN47",
+      "ref": "TEHXVXGB",
+      "amount": 165.26
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "A511",
+      "ref": "TUHUP2E",
+      "amount": 37.94
+    },
+    {
+      "date": "2026-08-06",
+      "cardholder": "David Sanchez",
+      "property": "C302",
+      "ref": "TQ8RZCM",
+      "amount": 35.97
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "Hannah Deckard",
+      "property": "PS91",
+      "ref": "TW2PJK1",
+      "amount": 28.29
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "M221",
+      "ref": "T93P9MF",
+      "amount": 27.61
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "M221",
+      "ref": "T93P9MF",
+      "amount": 21
+    },
+    {
+      "date": "2026-08-03",
+      "cardholder": "David Sanchez",
+      "property": "S129",
+      "ref": "TGH6EGG",
+      "amount": 17.92
+    },
+    {
+      "date": "2026-08-07",
+      "cardholder": "David Sanchez",
+      "property": "K104",
+      "ref": "T8V6XNC",
+      "amount": 16.53
+    },
+    {
+      "date": "2026-08-03",
+      "cardholder": "David Sanchez",
+      "property": "P705",
+      "ref": "TV3280L",
+      "amount": 13.72
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "A511",
+      "ref": "TUHUP2E",
+      "amount": 9.79
+    }
+  ],
+  "grounds_pest_control": [
+    {
+      "property": "PS26",
+      "program": "Cockroach elimination program",
+      "units": [
+        "F39"
+      ],
+      "date_signed": "August 2026",
+      "amount": 328.7
+    }
+  ]
+}
