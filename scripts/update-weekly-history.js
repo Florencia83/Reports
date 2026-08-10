@@ -599,6 +599,73 @@ function materialsBudgetTotal(records) {
 function groundsMaterialsTotal(records) {
   return records.filter(r => r.isOpexTeam && (GL_BUCKETS.Grounds.includes(r.glId) || r.classCode === GROUNDS_CLASS)).reduce((s, r) => s + r.amount, 0);
 }
+// Per-property grounds materials, mirroring materialsByProperty above but scoped by
+// the Grounds GL/class match (same scope as groundsMaterialsTotal) instead of the
+// repairs-only MATERIALS_GL_IDS list. Added 2026-08-10 for the owner-update region
+// tables -- Grounds never had a per-property materials breakdown before, only a
+// portfolio-wide total.
+function groundsMaterialsByProperty(records) {
+  const out = {};
+  records.forEach(r => {
+    if (!r.property || !(GL_BUCKETS.Grounds.includes(r.glId) || r.classCode === GROUNDS_CLASS)) return;
+    out[r.property] = (out[r.property] || 0) + r.amount;
+  });
+  return out;
+}
+// QBO vendor bills (Repairs/Grounds materials+contractor), sourced directly from
+// LeeRoy's public repo feed (Florencia, 2026-08-10) -- we don't have our own QuickBooks
+// Online API access yet (asked LeeRoy the same day), but he's already solved OAuth
+// against this exact company/portfolio, so this just reads his committed output file
+// over plain HTTPS. No auth needed, it's a public repo.
+// Known unresolved caveats (Florencia flagged 2026-08-10 -- do not remove this note
+// until they're actually resolved): (1) the "d" field's exact meaning (bill/entry date
+// vs. payment date) is unconfirmed, so a given week/month's QBO total here may include
+// or exclude work that belongs to a different accrual period than it looks like.
+// (2) Some entries carry qbo_category:"(split -- needs line detail)" with amt:0 --
+// unusable, skipped below entirely (real dollar figure exists somewhere in QBO but this
+// feed doesn't expose which category it belongs to). Swap this whole function for a
+// real QBO API pull once Florencia's own access lands -- see
+// [[project_louisa_simplified_budget_report]] in memory for status.
+const QBO_LEEROY_FEED_URL = 'https://raw.githubusercontent.com/leeroy-cmyk/reports/main/data/qbo_processed.json';
+const QBO_CATEGORY_MAP = {
+  'r&m - contractor': 'Repairs', 'r&m - material': 'Repairs',
+  'grounds - contractor': 'Grounds', 'grounds - material': 'Grounds',
+};
+async function fetchQboProcessed() {
+  const res = await fetchWithRetry(QBO_LEEROY_FEED_URL, {});
+  if (!res.ok) throw new Error(`QBO feed (LeeRoy's repo) failed: ${res.status} ${await res.text()}`);
+  const j = await res.json();
+  const records = [];
+  for (const t of (j.transactions || [])) {
+    if (!t.amt) continue; // zero/split-only line, no usable amount
+    const catKey = String(t.qbo_category || t.ln || '').trim().toLowerCase();
+    const category = QBO_CATEGORY_MAP[catKey];
+    if (!category) continue; // Turn/CapEx/other -- out of scope for Repairs+Grounds here
+    const propMatch = String(t.dept || '').match(/^[a-z]+\d+/i);
+    if (!propMatch) continue;
+    records.push({ date: t.d, property: propMatch[0].toLowerCase(), amount: t.amt, category, vendor: t.vendor });
+  }
+  return records;
+}
+function qboTotal(records, category) {
+  return records.filter(r => r.category === category).reduce((s, r) => s + r.amount, 0);
+}
+function qboByProperty(records, category) {
+  const out = {};
+  records.forEach(r => { if (r.category !== category) return; out[r.property] = (out[r.property] || 0) + r.amount; });
+  return out;
+}
+
+// Property-code prefix -> region, same convention as report-pl-assignments' appliance
+// grouping (RL/PS/KN = Tri-Cities, TC = Tacoma, else = Spokane). Used to group the
+// owner-update region tables below (Florencia, 2026-08-10 -- Louisa wants Tri-Cities
+// shown first).
+function regionOf(prop) {
+  if (/^(rl|ps|kn)/i.test(prop)) return 'Tri-Cities';
+  if (/^tc/i.test(prop)) return 'Tacoma';
+  return 'Spokane';
+}
+const REGION_ORDER = ['Tri-Cities', 'Spokane', 'Tacoma'];
 
 async function appfolioBudgetComparative(month, propertiesIds) {
   const cid = (process.env.APPFOLIO_CLIENT_ID || '').trim();
@@ -634,20 +701,39 @@ async function appfolioGroundsBudget(month) {
   return row ? parseFloat(row.period_budget) : null;
 }
 
-// Per-property R&M - Repairs budget for the month, keyed by property-code prefix.
-// Unknown prefixes (not in PROPERTY_IDS) or a failed lookup are simply omitted --
-// callers treat "no budget" as "can't tell if it's over budget", not as zero.
-async function appfolioPropertyBudgets(props, month) {
+// Portfolio-wide "R&M - Turns" budget line (account 52002, confirmed live 2026-08-10 in
+// the chart of accounts -- sibling of R&M - Repairs/52001 and R&M - Grounds/52003 under
+// the same "60120 Repair & Maintenance" parent). Added for the owner-update Turns row
+// Louisa asked for. Budget-only for now -- there is no bottom-up QBT+Ramp actual-cost
+// pipeline for Turns yet (would need a Turns-specific labor Class + Ramp category,
+// mirroring how Repairs/Grounds were built), so scopeBreakdown() below still leaves
+// turns.last_week/mtd/pct_of_budget null. Do NOT swap this to AppFolio's own accrual
+// actual either -- see the Monthly Budget comment above, it has a real multi-day posting
+// lag right after month-close, same reasoning as Repairs/Grounds using QBT+Ramp instead.
+async function appfolioTurnsBudget(month) {
+  const rows = await appfolioBudgetComparative(month, null);
+  const row = rows.find(r => r.account_name === 'R&M - Turns');
+  return row ? parseFloat(row.period_budget) : null;
+}
+
+// Per-property budget for the month, keyed by property-code prefix. accountName lets
+// callers ask for "R&M - Repairs" (default, unchanged existing behavior) or
+// "R&M - Grounds" (added 2026-08-10 for the owner-update region tables below) --
+// same AppFolio budget_comparative call, just a different account_name row picked out
+// of the same response. Unknown prefixes (not in PROPERTY_IDS) or a failed lookup are
+// simply omitted -- callers treat "no budget" as "can't tell if it's over budget", not
+// as zero.
+async function appfolioPropertyBudgets(props, month, accountName = 'R&M - Repairs') {
   const out = {};
   for (const prop of props) {
     const ids = PROPERTY_IDS[prop];
     if (!ids) continue;
     try {
       const rows = await appfolioBudgetComparative(month, ids);
-      const row = rows.find(r => r.account_name === 'R&M - Repairs');
+      const row = rows.find(r => r.account_name === accountName);
       out[prop] = row ? parseFloat(row.period_budget) : null;
     } catch (e) {
-      console.log('AppFolio per-property budget failed for', prop, '-', e.message);
+      console.log('AppFolio per-property budget failed for', prop, accountName, '-', e.message);
     }
     await new Promise(r => setTimeout(r, 150));
   }
@@ -717,12 +803,14 @@ async function main() {
 
   // One fetch pass wide enough to cover the current week, month-to-date, and the last
   // 30/7 day rolling windows -- everything below just slices this in memory.
-  const [melds, laborRecords, rampRecords, groundsLaborRecords] = await Promise.all([
+  const [melds, laborRecords, rampRecords, groundsLaborRecords, qboRecordsAll] = await Promise.all([
     fetchPmCompletedMelds(broadStart, todayStr),
     fetchQbtLaborForRange(jobcodes, broadStart, todayStr),
     fetchRampTransactions(broadStart, todayStr),
     fetchGroundsLaborForRange(jobcodes, broadStart, todayStr),
+    fetchQboProcessed(),
   ]);
+  const qboRecords = inRange(qboRecordsAll, broadStart, todayStr);
   console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length, '| Grounds labor records:', groundsLaborRecords.length);
 
   // Month-to-date records, computed once here and reused below both for Top 10 Work
@@ -730,6 +818,15 @@ async function main() {
   const monthLaborRecords = inRange(laborRecords, monthStart, todayStr);
   const monthRampRecords = inRange(rampRecords, monthStart, todayStr);
   const monthGroundsLaborRecords = inRange(groundsLaborRecords, monthStart, todayStr);
+  const monthQboRecords = inRange(qboRecords, monthStart, todayStr);
+
+  // This-week-only slices (Monday..Sunday of the reported week), added 2026-08-10 for
+  // the owner-update region tables' "Last Week" column -- everything else in this file
+  // only ever needed month-to-date or the rolling 30/7-day windows.
+  const weekLaborRecords = inRange(laborRecords, weekStart, weekEnd);
+  const weekRampRecords = inRange(rampRecords, weekStart, weekEnd);
+  const weekGroundsLaborRecords = inRange(groundsLaborRecords, weekStart, weekEnd);
+  const weekQboRecords = inRange(qboRecords, weekStart, weekEnd);
 
   // Top 10 Work Orders and Maintenance Team KPI's are both month-to-date, not just
   // this week -- a job completed earlier in the month should still show up (Florencia
@@ -876,12 +973,17 @@ async function main() {
   const month = monthStart.slice(0, 7);
   const laborMTD = totalCost(monthLaborRecords);
   const materialsMTD = materialsBudgetTotal(monthRampRecords);
-  const totalActual = laborMTD + materialsMTD;
+  // Invoices = QBO vendor bills, added 2026-08-10 (Florencia: pull from LeeRoy's feed
+  // now rather than wait for our own QBO access) -- see fetchQboProcessed above for
+  // the source and its caveats.
+  const invoicesMTD = qboTotal(monthQboRecords, 'Repairs');
+  const totalActual = laborMTD + materialsMTD + invoicesMTD;
   const rmRepairsBudget = await appfolioRMRepairsBudget(month);
   const monthlyBudget = {
     budget: rmRepairsBudget,
     labor: Math.round(laborMTD * 100) / 100,
     materials: Math.round(materialsMTD * 100) / 100,
+    invoices: Math.round(invoicesMTD * 100) / 100,
     total_actual: Math.round(totalActual * 100) / 100,
     variance: rmRepairsBudget != null ? Math.round((rmRepairsBudget - totalActual) * 100) / 100 : null,
   };
@@ -891,15 +993,22 @@ async function main() {
   // "R&M - Grounds" line (account 52003), portfolio-wide, same convention as R&M's own.
   const groundsLaborMTD = totalCost(monthGroundsLaborRecords);
   const groundsMaterialsMTD = groundsMaterialsTotal(monthRampRecords);
-  const groundsTotalActual = groundsLaborMTD + groundsMaterialsMTD;
+  const groundsInvoicesMTD = qboTotal(monthQboRecords, 'Grounds');
+  const groundsTotalActual = groundsLaborMTD + groundsMaterialsMTD + groundsInvoicesMTD;
   const groundsBudget = await appfolioGroundsBudget(month);
   const groundsMonthlyBudget = {
     budget: groundsBudget,
     labor: Math.round(groundsLaborMTD * 100) / 100,
     materials: Math.round(groundsMaterialsMTD * 100) / 100,
+    invoices: Math.round(groundsInvoicesMTD * 100) / 100,
     total_actual: Math.round(groundsTotalActual * 100) / 100,
     variance: groundsBudget != null ? Math.round((groundsBudget - groundsTotalActual) * 100) / 100 : null,
   };
+
+  // Turns budget (portfolio-wide + the two flagged properties) for the owner-update
+  // Turns row -- see appfolioTurnsBudget above for why actual is still null.
+  const turnsBudgetPortfolio = await appfolioTurnsBudget(month);
+  const turnsBudgetsByProp = await appfolioPropertyBudgets(['rl16', 'kn47'], month, 'R&M - Turns');
 
   // Top 10 Grounds Purchases (Florencia, 2026-07-27) -- reuses monthRampRecords (already
   // fetched above for R&M), scoped by the same GL-or-class Grounds match as the
@@ -989,6 +1098,105 @@ async function main() {
   const mtdJson = { month, generated_at: todayStr, monthly_budget: monthlyBudget, grounds_monthly_budget: groundsMonthlyBudget, cost_by_property: costByProperty };
   fs.writeFileSync(path.join(DATA_DIR, 'weekly-mtd.json'), JSON.stringify(mtdJson, null, 2));
   console.log('Wrote weekly-mtd.json —', costByProperty.length, 'properties over budget this month');
+
+  // ---- Owner Update: region-grouped Repairs/Grounds vs Budget (Florencia, 2026-08-10)
+  // -- built after Louisa flagged that the full Weekly Update never surfaced RL16/KN47
+  // running over budget 4 months straight. "Dramatically simplified": every property,
+  // grouped by region (Tri-Cities first per her request), Last Week / MTD / Monthly
+  // Budget / % of Budget Used, for Repairs and Grounds (Florencia's own two categories).
+  // Turns BUDGET wired the same day (account 52002) for the flagged scope table's Turns
+  // row -- Turns ACTUAL still has no bottom-up source, left null (see appfolioTurnsBudget
+  // above). Same
+  // bottom-up QBT+Ramp actual as everything else in this file, never AppFolio's own
+  // accrual actual -- that has a real posting lag (confirmed 2026-08-10: re-running
+  // pl-budget-2026-07.json nine days after month-close took portfolio R&M-Repairs
+  // actual from ~$3.8k to ~$107k). AppFolio is still the right source for the fixed
+  // MONTHLY BUDGET number itself -- that's not an actual, it doesn't lag.
+  // qboCategoryName pulls the matching QBO-bills slice (Repairs or Grounds) in on top of
+  // labor+materials -- added 2026-08-10 alongside the Monthly Budget invoices field above.
+  async function buildCategoryRows(laborWeekRecs, laborMonthRecs, materialsByPropFn, accountName, qboCategoryName) {
+    const laborByPropWeek = sumByProperty(laborWeekRecs);
+    const laborByPropMonth = sumByProperty(laborMonthRecs);
+    const matByPropWeek = materialsByPropFn(weekRampRecords);
+    const matByPropMonth = materialsByPropFn(monthRampRecords);
+    const qboByPropWeek = qboByProperty(weekQboRecords, qboCategoryName);
+    const qboByPropMonth = qboByProperty(monthQboRecords, qboCategoryName);
+    const allProps = Object.keys(PROPERTY_IDS);
+    const budgets = await appfolioPropertyBudgets(allProps, month, accountName);
+    return allProps.map(prop => {
+      const lastWeek = (laborByPropWeek[prop] ? laborByPropWeek[prop].cost : 0) + (matByPropWeek[prop] || 0) + (qboByPropWeek[prop] || 0);
+      const mtd = (laborByPropMonth[prop] ? laborByPropMonth[prop].cost : 0) + (matByPropMonth[prop] || 0) + (qboByPropMonth[prop] || 0);
+      const budget = budgets[prop] != null ? budgets[prop] : null;
+      return {
+        property: prop.toUpperCase(),
+        region: regionOf(prop),
+        last_week: Math.round(lastWeek * 100) / 100,
+        mtd: Math.round(mtd * 100) / 100,
+        budget,
+        pct_of_budget: budget ? Math.round((mtd / budget) * 1000) / 10 : null,
+      };
+    });
+  }
+
+  const ownerRepairsRows = await buildCategoryRows(weekLaborRecords, monthLaborRecords, materialsByProperty, 'R&M - Repairs', 'Repairs');
+  const ownerGroundsRows = await buildCategoryRows(weekGroundsLaborRecords, monthGroundsLaborRecords, groundsMaterialsByProperty, 'R&M - Grounds', 'Grounds');
+
+  const regions = REGION_ORDER.map(region => ({
+    region,
+    repairs: ownerRepairsRows.filter(r => r.region === region).sort((a, b) => a.property.localeCompare(b.property)),
+    grounds: ownerGroundsRows.filter(r => r.region === region).sort((a, b) => a.property.localeCompare(b.property)),
+  }));
+
+  // Repairs/Grounds/Turns/Total breakdown for a single flagged property (RL16, KN47)
+  // or the whole portfolio (propUpper === null). Turns budget wired 2026-08-10 (account
+  // 52002, "R&M - Turns") -- actual is still null, no bottom-up QBT+Ramp source for Turns
+  // yet (see appfolioTurnsBudget above). Total = Repairs+Grounds only (partial until
+  // Turns actual exists), flagged via total.partial so the report can label it -- Turns
+  // budget is shown on its own row but deliberately left out of Total so budget and
+  // actual stay consistent (both Repairs+Grounds-only) rather than mixing a real Turns
+  // budget with a missing Turns actual.
+  function scopeBreakdown(propUpper) {
+    let repairs, grounds, turnsBudgetVal;
+    if (propUpper) {
+      repairs = ownerRepairsRows.find(r => r.property === propUpper) || null;
+      grounds = ownerGroundsRows.find(r => r.property === propUpper) || null;
+      turnsBudgetVal = turnsBudgetsByProp[propUpper.toLowerCase()] != null ? turnsBudgetsByProp[propUpper.toLowerCase()] : null;
+    } else {
+      const repairsLastWeek = totalCost(weekLaborRecords) + materialsBudgetTotal(weekRampRecords) + qboTotal(weekQboRecords, 'Repairs');
+      const groundsLastWeek = totalCost(weekGroundsLaborRecords) + groundsMaterialsTotal(weekRampRecords) + qboTotal(weekQboRecords, 'Grounds');
+      repairs = { last_week: Math.round(repairsLastWeek * 100) / 100, mtd: monthlyBudget.total_actual, budget: monthlyBudget.budget, pct_of_budget: monthlyBudget.budget ? Math.round((monthlyBudget.total_actual / monthlyBudget.budget) * 1000) / 10 : null };
+      grounds = { last_week: Math.round(groundsLastWeek * 100) / 100, mtd: groundsMonthlyBudget.total_actual, budget: groundsMonthlyBudget.budget, pct_of_budget: groundsMonthlyBudget.budget ? Math.round((groundsMonthlyBudget.total_actual / groundsMonthlyBudget.budget) * 1000) / 10 : null };
+      turnsBudgetVal = turnsBudgetPortfolio;
+    }
+    const turns = { last_week: null, mtd: null, budget: turnsBudgetVal, pct_of_budget: null };
+    const totalBudget = (repairs && repairs.budget != null ? repairs.budget : 0) + (grounds && grounds.budget != null ? grounds.budget : 0);
+    const total = {
+      last_week: (repairs ? repairs.last_week : 0) + (grounds ? grounds.last_week : 0),
+      mtd: (repairs ? repairs.mtd : 0) + (grounds ? grounds.mtd : 0),
+      budget: totalBudget || null,
+      pct_of_budget: totalBudget ? Math.round((((repairs ? repairs.mtd : 0) + (grounds ? grounds.mtd : 0)) / totalBudget) * 1000) / 10 : null,
+      partial: true, // Turns excluded -- not a real total until that's built
+    };
+    return { repairs, grounds, turns, total };
+  }
+
+  const ownerUpdateJson = {
+    week_start: weekStart,
+    week_end: dstr(sunday),
+    label: weekJson.label,
+    month_label: weekJson.month_label,
+    generated_at: todayStr,
+    complete: weekJson.complete,
+    source: 'Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy\'s feed, pending Florencia\'s own QBO access) for Last Week/MTD actual (Repairs+Grounds only, Turns actual not yet tracked); AppFolio for the fixed Monthly Budget number, including Turns (account 52002) — automated.',
+    regions,
+    flagged: {
+      RL16: scopeBreakdown('RL16'),
+      KN47: scopeBreakdown('KN47'),
+      PORTFOLIO: scopeBreakdown(null),
+    },
+  };
+  fs.writeFileSync(path.join(DATA_DIR, `owner-update-${weekStart}.json`), JSON.stringify(ownerUpdateJson, null, 2));
+  console.log('Wrote owner-update-' + weekStart + '.json —', ownerRepairsRows.length, 'properties x 2 categories, regions:', REGION_ORDER.join(', '));
 }
 
 main().catch(err => { console.error(err); process.exit(1); });

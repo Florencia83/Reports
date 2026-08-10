@@ -1,0 +1,747 @@
+{
+  "week_start": "2026-08-10",
+  "week_end": "2026-08-16",
+  "label": "August 10 – 16, 2026",
+  "month_label": "August 2026",
+  "generated_at": "2026-08-10",
+  "complete": false,
+  "source": "Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy's feed, pending Florencia's own QBO access) for Last Week/MTD actual (Repairs+Grounds only, Turns actual not yet tracked); AppFolio for the fixed Monthly Budget number, including Turns (account 52002) — automated.",
+  "regions": [
+    {
+      "region": "Tri-Cities",
+      "repairs": [
+        {
+          "property": "KN47",
+          "region": "Tri-Cities",
+          "last_week": 233.51,
+          "mtd": 2509.42,
+          "budget": 22551.1,
+          "pct_of_budget": 11.1
+        },
+        {
+          "property": "PS17",
+          "region": "Tri-Cities",
+          "last_week": 0,
+          "mtd": 10.77,
+          "budget": 734.2,
+          "pct_of_budget": 1.5
+        },
+        {
+          "property": "PS25",
+          "region": "Tri-Cities",
+          "last_week": 21.6,
+          "mtd": 1306.04,
+          "budget": 2439,
+          "pct_of_budget": 53.5
+        },
+        {
+          "property": "PS91",
+          "region": "Tri-Cities",
+          "last_week": 0,
+          "mtd": 5.33,
+          "budget": 681.8,
+          "pct_of_budget": 0.8
+        },
+        {
+          "property": "RL16",
+          "region": "Tri-Cities",
+          "last_week": 284.99,
+          "mtd": 1637.58,
+          "budget": 7913,
+          "pct_of_budget": 20.7
+        },
+        {
+          "property": "RL21",
+          "region": "Tri-Cities",
+          "last_week": 67.73,
+          "mtd": 429.64,
+          "budget": 1119.4,
+          "pct_of_budget": 38.4
+        }
+      ],
+      "grounds": [
+        {
+          "property": "KN47",
+          "region": "Tri-Cities",
+          "last_week": 151.1,
+          "mtd": 919.23,
+          "budget": 6264.2,
+          "pct_of_budget": 14.7
+        },
+        {
+          "property": "PS17",
+          "region": "Tri-Cities",
+          "last_week": 0,
+          "mtd": 109.63,
+          "budget": 367.1,
+          "pct_of_budget": 29.9
+        },
+        {
+          "property": "PS25",
+          "region": "Tri-Cities",
+          "last_week": 7.02,
+          "mtd": 130.89,
+          "budget": 1219.5,
+          "pct_of_budget": 10.7
+        },
+        {
+          "property": "PS91",
+          "region": "Tri-Cities",
+          "last_week": 0,
+          "mtd": 72.66,
+          "budget": 340.9,
+          "pct_of_budget": 21.3
+        },
+        {
+          "property": "RL16",
+          "region": "Tri-Cities",
+          "last_week": 13.58,
+          "mtd": 398.8,
+          "budget": 2544.1,
+          "pct_of_budget": 15.7
+        },
+        {
+          "property": "RL21",
+          "region": "Tri-Cities",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 223.9,
+          "pct_of_budget": 0
+        }
+      ]
+    },
+    {
+      "region": "Spokane",
+      "repairs": [
+        {
+          "property": "A210",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 34.33,
+          "budget": 445.9,
+          "pct_of_budget": 7.7
+        },
+        {
+          "property": "A511",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 357.1,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "A916",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 57.92,
+          "budget": 517,
+          "pct_of_budget": 11.2
+        },
+        {
+          "property": "B101",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 55.17,
+          "budget": 673.2,
+          "pct_of_budget": 8.2
+        },
+        {
+          "property": "C302",
+          "region": "Spokane",
+          "last_week": 46.37,
+          "mtd": 117.45,
+          "budget": 818.3,
+          "pct_of_budget": 14.4
+        },
+        {
+          "property": "C313",
+          "region": "Spokane",
+          "last_week": 9.83,
+          "mtd": 336.25,
+          "budget": 2125.46,
+          "pct_of_budget": 15.8
+        },
+        {
+          "property": "C616",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "E328",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 243.6,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "H604",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "H731",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 39.43,
+          "budget": 423.8,
+          "pct_of_budget": 9.3
+        },
+        {
+          "property": "HL65",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 5.83,
+          "budget": 501.6,
+          "pct_of_budget": 1.2
+        },
+        {
+          "property": "HL73",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 229.9,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "J312",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 149.08,
+          "budget": 589.09,
+          "pct_of_budget": 25.3
+        },
+        {
+          "property": "K104",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 529.68,
+          "budget": 3099.6,
+          "pct_of_budget": 17.1
+        },
+        {
+          "property": "K308",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 50.7,
+          "budget": 292.3,
+          "pct_of_budget": 17.3
+        },
+        {
+          "property": "L912",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "L925",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "M221",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 682.6,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "M405",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 1053.14,
+          "budget": 1095,
+          "pct_of_budget": 96.2
+        },
+        {
+          "property": "M608",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 450.9,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "MS22",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 317.1,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "MS43",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 124.33,
+          "budget": 733.1,
+          "pct_of_budget": 17
+        },
+        {
+          "property": "O155",
+          "region": "Spokane",
+          "last_week": 59.57,
+          "mtd": 380.28,
+          "budget": 5276.1,
+          "pct_of_budget": 7.2
+        },
+        {
+          "property": "P705",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 667.97,
+          "budget": 1125.3,
+          "pct_of_budget": 59.4
+        },
+        {
+          "property": "S129",
+          "region": "Spokane",
+          "last_week": 37.27,
+          "mtd": 301.42,
+          "budget": 1221.2,
+          "pct_of_budget": 24.7
+        },
+        {
+          "property": "S300",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 43.77,
+          "budget": 577.3,
+          "pct_of_budget": 7.6
+        },
+        {
+          "property": "SF21",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "V202",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 11.67,
+          "budget": 409.7,
+          "pct_of_budget": 2.8
+        },
+        {
+          "property": "W117",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 51.33,
+          "budget": 416.4,
+          "pct_of_budget": 12.3
+        },
+        {
+          "property": "W225",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "W226",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 135.03,
+          "budget": 547.8,
+          "pct_of_budget": 24.7
+        }
+      ],
+      "grounds": [
+        {
+          "property": "A210",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 14.43,
+          "budget": 222.9,
+          "pct_of_budget": 6.5
+        },
+        {
+          "property": "A511",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 169.48,
+          "budget": 255,
+          "pct_of_budget": 66.5
+        },
+        {
+          "property": "A916",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 16.92,
+          "budget": 258.5,
+          "pct_of_budget": 6.5
+        },
+        {
+          "property": "B101",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 39,
+          "budget": 336.6,
+          "pct_of_budget": 11.6
+        },
+        {
+          "property": "C302",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 126.37,
+          "budget": 409.2,
+          "pct_of_budget": 30.9
+        },
+        {
+          "property": "C313",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 70.93,
+          "budget": 897.3,
+          "pct_of_budget": 7.9
+        },
+        {
+          "property": "C616",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "E328",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 70.8,
+          "budget": 323.6,
+          "pct_of_budget": 21.9
+        },
+        {
+          "property": "H604",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "H731",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 211.9,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "HL65",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 250.8,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "HL73",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 115,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "J312",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 51,
+          "budget": 331.36,
+          "pct_of_budget": 15.4
+        },
+        {
+          "property": "K104",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 338.41,
+          "budget": 1549.8,
+          "pct_of_budget": 21.8
+        },
+        {
+          "property": "K308",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 47.7,
+          "budget": 128.2,
+          "pct_of_budget": 37.2
+        },
+        {
+          "property": "L912",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 70.13,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "L925",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "M221",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 204.96,
+          "budget": 341.3,
+          "pct_of_budget": 60.1
+        },
+        {
+          "property": "M405",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 42.9,
+          "budget": 547.5,
+          "pct_of_budget": 7.8
+        },
+        {
+          "property": "M608",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 34.03,
+          "budget": 225.5,
+          "pct_of_budget": 15.1
+        },
+        {
+          "property": "MS22",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 158.6,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "MS43",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 366.6,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "O155",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 154.48,
+          "budget": 3638,
+          "pct_of_budget": 4.2
+        },
+        {
+          "property": "P705",
+          "region": "Spokane",
+          "last_week": 129.78,
+          "mtd": 309.17,
+          "budget": 562.7,
+          "pct_of_budget": 54.9
+        },
+        {
+          "property": "S129",
+          "region": "Spokane",
+          "last_week": 40.95,
+          "mtd": 154.37,
+          "budget": 203.5,
+          "pct_of_budget": 75.9
+        },
+        {
+          "property": "S300",
+          "region": "Spokane",
+          "last_week": 47.85,
+          "mtd": 70.95,
+          "budget": 288.6,
+          "pct_of_budget": 24.6
+        },
+        {
+          "property": "SF21",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "V202",
+          "region": "Spokane",
+          "last_week": 84.18,
+          "mtd": 305.52,
+          "budget": 608.4,
+          "pct_of_budget": 50.2
+        },
+        {
+          "property": "W117",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 21.6,
+          "budget": 208.2,
+          "pct_of_budget": 10.4
+        },
+        {
+          "property": "W225",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null
+        },
+        {
+          "property": "W226",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 31.35,
+          "budget": 273.9,
+          "pct_of_budget": 11.4
+        }
+      ]
+    },
+    {
+      "region": "Tacoma",
+      "repairs": [
+        {
+          "property": "TC34",
+          "region": "Tacoma",
+          "last_week": 0,
+          "mtd": 333.73,
+          "budget": 1463.6,
+          "pct_of_budget": 22.8
+        },
+        {
+          "property": "TC68",
+          "region": "Tacoma",
+          "last_week": 370.51,
+          "mtd": 5602.57,
+          "budget": 7359.6,
+          "pct_of_budget": 76.1
+        }
+      ],
+      "grounds": [
+        {
+          "property": "TC34",
+          "region": "Tacoma",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 396.6,
+          "pct_of_budget": 0
+        },
+        {
+          "property": "TC68",
+          "region": "Tacoma",
+          "last_week": 0,
+          "mtd": 1894.8,
+          "budget": 5157.8,
+          "pct_of_budget": 36.7
+        }
+      ]
+    }
+  ],
+  "flagged": {
+    "RL16": {
+      "repairs": {
+        "property": "RL16",
+        "region": "Tri-Cities",
+        "last_week": 284.99,
+        "mtd": 1637.58,
+        "budget": 7913,
+        "pct_of_budget": 20.7
+      },
+      "grounds": {
+        "property": "RL16",
+        "region": "Tri-Cities",
+        "last_week": 13.58,
+        "mtd": 398.8,
+        "budget": 2544.1,
+        "pct_of_budget": 15.7
+      },
+      "turns": {
+        "last_week": null,
+        "mtd": null,
+        "budget": 4298.5,
+        "pct_of_budget": null
+      },
+      "total": {
+        "last_week": 298.57,
+        "mtd": 2036.3799999999999,
+        "budget": 10457.1,
+        "pct_of_budget": 19.5,
+        "partial": true
+      }
+    },
+    "KN47": {
+      "repairs": {
+        "property": "KN47",
+        "region": "Tri-Cities",
+        "last_week": 233.51,
+        "mtd": 2509.42,
+        "budget": 22551.1,
+        "pct_of_budget": 11.1
+      },
+      "grounds": {
+        "property": "KN47",
+        "region": "Tri-Cities",
+        "last_week": 151.1,
+        "mtd": 919.23,
+        "budget": 6264.2,
+        "pct_of_budget": 14.7
+      },
+      "turns": {
+        "last_week": null,
+        "mtd": null,
+        "budget": 5313.6,
+        "pct_of_budget": null
+      },
+      "total": {
+        "last_week": 384.61,
+        "mtd": 3428.65,
+        "budget": 28815.3,
+        "pct_of_budget": 11.9,
+        "partial": true
+      }
+    },
+    "PORTFOLIO": {
+      "repairs": {
+        "last_week": 1195.31,
+        "mtd": 14272.89,
+        "budget": 67431.05,
+        "pct_of_budget": 21.2
+      },
+      "grounds": {
+        "last_week": 474.45,
+        "mtd": 5935.94,
+        "budget": 29227.06,
+        "pct_of_budget": 20.3
+      },
+      "turns": {
+        "last_week": null,
+        "mtd": null,
+        "budget": 41472.75,
+        "pct_of_budget": null
+      },
+      "total": {
+        "last_week": 1669.76,
+        "mtd": 20208.829999999998,
+        "budget": 96658.11,
+        "pct_of_budget": 20.9,
+        "partial": true
+      }
+    }
+  }
+}

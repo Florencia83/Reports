@@ -374,10 +374,11 @@ function renderMonthlyBudget(mtd) {
   if (!mtd || !mtd.monthly_budget) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not available.</p>';
   var b = mtd.monthly_budget;
   var varClass = b.variance != null && b.variance < 0 ? 'bad' : 'good';
-  return '<div class="stat-row">' +
+  return '<div class="stat-row" style="grid-template-columns: repeat(4, 1fr);">' +
     '<div class="stat"><p class="stat-label">Budget</p><p class="stat-value">' + money(b.budget) + '</p></div>' +
     '<div class="stat"><p class="stat-label">Labor</p><p class="stat-value">' + money(b.labor) + '</p></div>' +
     '<div class="stat"><p class="stat-label">Materials</p><p class="stat-value">' + money(b.materials) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Invoices</p><p class="stat-value">' + money(b.invoices) + '</p></div>' +
     '</div>' +
     '<div class="stat-row" style="grid-template-columns: repeat(2, 1fr);">' +
     '<div class="stat"><p class="stat-label">Total Actual</p><p class="stat-value">' + money(b.total_actual) + '</p></div>' +
@@ -389,10 +390,11 @@ function renderGroundsMonthlyBudget(mtd) {
   if (!mtd || !mtd.grounds_monthly_budget) return '<p style="font-size:12.5px; color:var(--ink-soft);">Not available.</p>';
   var b = mtd.grounds_monthly_budget;
   var varClass = b.variance != null && b.variance < 0 ? 'bad' : 'good';
-  return '<div class="stat-row">' +
+  return '<div class="stat-row" style="grid-template-columns: repeat(4, 1fr);">' +
     '<div class="stat"><p class="stat-label">Budget</p><p class="stat-value">' + money(b.budget) + '</p></div>' +
     '<div class="stat"><p class="stat-label">Labor</p><p class="stat-value">' + money(b.labor) + '</p></div>' +
     '<div class="stat"><p class="stat-label">Materials</p><p class="stat-value">' + money(b.materials) + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Invoices</p><p class="stat-value">' + money(b.invoices) + '</p></div>' +
     '</div>' +
     '<div class="stat-row" style="grid-template-columns: repeat(2, 1fr);">' +
     '<div class="stat"><p class="stat-label">Total Actual</p><p class="stat-value">' + money(b.total_actual) + '</p></div>' +

@@ -26,84 +26,84 @@
       "units": 6,
       "budget": 229.4,
       "actual_per_unit": 429.26,
-      "detail": ""
+      "detail": "Handyman repairs, $2752, DSR Construction"
     },
     {
       "property": "RL21",
       "units": 22,
       "budget": 1116.6,
       "actual_per_unit": 425.48,
-      "detail": ""
+      "detail": "Pest control, $5386, Eden Advanced Pest Techno"
     },
     {
       "property": "L912",
       "units": 21,
       "budget": null,
       "actual_per_unit": 290.09,
-      "detail": ""
+      "detail": "Water heater $2235 + drain $2080, 2 vendors"
     },
     {
       "property": "J312",
       "units": 18,
       "budget": 587.62,
       "actual_per_unit": 219.09,
-      "detail": ""
+      "detail": "Plumbing, $3203, Bulldog Rooter"
     },
     {
       "property": "B101",
       "units": 17,
       "budget": 671.7,
       "actual_per_unit": 176.59,
-      "detail": ""
+      "detail": "Plumbing repair, $2365, Bulldog Rooter"
     },
     {
       "property": "PS25",
       "units": 44,
       "budget": 2433.6,
       "actual_per_unit": 172.63,
-      "detail": ""
+      "detail": "Pavement marking $3098 + pest $1960"
     },
     {
       "property": "RL16",
       "units": 96,
       "budget": 7893.3,
       "actual_per_unit": 157.13,
-      "detail": ""
+      "detail": "Repairs labor $6053 + materials $3348"
     },
     {
       "property": "C616",
       "units": 1,
       "budget": null,
       "actual_per_unit": 154.92,
-      "detail": ""
+      "detail": "Furnace repair, $155, Banner Furnace & Fuel"
     },
     {
       "property": "P705",
       "units": 20,
       "budget": 1122.8,
       "actual_per_unit": 154.52,
-      "detail": ""
+      "detail": "Materials $571 + labor $866"
     },
     {
       "property": "KN47",
       "units": 246,
       "budget": 22494.9,
       "actual_per_unit": 135.46,
-      "detail": ""
+      "detail": "Repairs labor $15,873 (Jaxson/Isaac/Jared)"
     },
     {
       "property": "PS91",
       "units": 14,
       "budget": 680.3,
       "actual_per_unit": 120.1,
-      "detail": ""
+      "detail": "Pest $653 + labor $670 + materials $248"
     },
     {
       "property": "S129",
       "units": 20,
       "budget": 1218.1,
       "actual_per_unit": 110.45,
-      "detail": ""
+      "detail": "Plumbing repair, $1023, Bulldog Rooter"
     },
     {
       "property": "W117",
@@ -308,105 +308,105 @@
       "units": 2,
       "budget": null,
       "actual_per_unit": 149.84,
-      "detail": ""
+      "detail": "Grounds labor (D.Sanchez+A.Overall), $229"
     },
     {
       "property": "K308",
       "units": 6,
       "budget": 127.9,
       "actual_per_unit": 124.35,
-      "detail": ""
+      "detail": "Grounds labor (D.Sanchez+A.Overall), $606"
     },
     {
       "property": "W226",
       "units": 11,
       "budget": 273.3,
       "actual_per_unit": 98.66,
-      "detail": ""
+      "detail": "Grounds labor (D.Sanchez+A.Overall), $674"
     },
     {
       "property": "E328",
       "units": 7,
       "budget": 322.8,
       "actual_per_unit": 81.77,
-      "detail": ""
+      "detail": "Grounds labor (D.Sanchez+A.Overall), $341"
     },
     {
       "property": "K104-LEFEVRE",
       "units": 60,
       "budget": 1546.3,
       "actual_per_unit": 78.02,
-      "detail": ""
+      "detail": "Grounds labor $2848 + sprinkler repair $560"
     },
     {
       "property": "MS22",
       "units": 8,
       "budget": 158.2,
       "actual_per_unit": 75,
-      "detail": ""
+      "detail": "Grounds cleaning, $600, AV Janitorial"
     },
     {
       "property": "MS43",
       "units": 15,
       "budget": 365.8,
       "actual_per_unit": 73.33,
-      "detail": ""
+      "detail": "Grounds cleaning, $1100, AV Janitorial (2 bills)"
     },
     {
       "property": "RL16",
       "units": 96,
       "budget": 2537.8,
       "actual_per_unit": 71.18,
-      "detail": ""
+      "detail": "Grounds labor $3941 + tree trimming $816"
     },
     {
       "property": "HL73",
       "units": 6,
       "budget": 114.7,
       "actual_per_unit": 70.05,
-      "detail": ""
+      "detail": "Cleaning service, $204, Montana Maid"
     },
     {
       "property": "O155-OAK",
       "units": 31,
       "budget": 3629,
       "actual_per_unit": 56.84,
-      "detail": ""
+      "detail": "Grounds labor (D.Sanchez+A.Overall), $986"
     },
     {
       "property": "V202",
       "units": 16,
       "budget": 606.9,
       "actual_per_unit": 56.35,
-      "detail": ""
+      "detail": "Grounds labor (D.Sanchez+A.Overall), $717"
     },
     {
       "property": "PS25",
       "units": 44,
       "budget": 1216.8,
       "actual_per_unit": 54.82,
-      "detail": ""
+      "detail": "Grounds labor (Jared/Rey/Hannah), $1785"
     },
     {
       "property": "A511",
       "units": 10,
       "budget": 254.4,
       "actual_per_unit": 53.27,
-      "detail": ""
+      "detail": "Grounds labor $274 + materials $82"
     },
     {
       "property": "KN47",
       "units": 246,
       "budget": 6248.6,
       "actual_per_unit": 52.68,
-      "detail": ""
+      "detail": "Grounds labor $8503 (Rey/Hannah/Jared) + tree trim $1632"
     },
     {
       "property": "W117",
       "units": 10,
       "budget": 207.8,
       "actual_per_unit": 49.26,
-      "detail": ""
+      "detail": "Grounds labor (D.Sanchez+A.Overall), $240"
     },
     {
       "property": "C313",
