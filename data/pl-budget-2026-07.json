@@ -1,38 +1,178 @@
 {
   "month": "2026-07",
   "label": "July 2026",
-  "generated_at": "2026-08-01",
+  "generated_at": "2026-08-10",
   "source": "AppFolio Budget Comparative Report (accrual, per property) — automated",
   "complete": true,
   "averages": {
-    "repairs_per_unit": 3.55,
-    "grounds_per_unit": 0.19
+    "repairs_per_unit": 100.96,
+    "grounds_per_unit": 45.31
   },
   "portfolio": {
     "repairs": {
       "budget": 67267.78,
-      "actual": 3789.58,
-      "variance_pct": -94.37
+      "actual": 107724.17,
+      "variance_pct": 60.14
     },
     "grounds": {
       "budget": 29156.3,
-      "actual": 205,
-      "variance_pct": -99.3
+      "actual": 48351.06,
+      "variance_pct": 65.83
     }
   },
   "repairs": [
     {
-      "property": "P705",
-      "units": 20,
-      "budget": 1122.8,
-      "actual_per_unit": 76,
+      "property": "HL73",
+      "units": 6,
+      "budget": 229.4,
+      "actual_per_unit": 429.26,
       "detail": ""
     },
     {
       "property": "RL21",
       "units": 22,
       "budget": 1116.6,
-      "actual_per_unit": 45.45,
+      "actual_per_unit": 425.48,
+      "detail": ""
+    },
+    {
+      "property": "L912",
+      "units": 21,
+      "budget": null,
+      "actual_per_unit": 290.09,
+      "detail": ""
+    },
+    {
+      "property": "J312",
+      "units": 18,
+      "budget": 587.62,
+      "actual_per_unit": 219.09,
+      "detail": ""
+    },
+    {
+      "property": "B101",
+      "units": 17,
+      "budget": 671.7,
+      "actual_per_unit": 176.59,
+      "detail": ""
+    },
+    {
+      "property": "PS25",
+      "units": 44,
+      "budget": 2433.6,
+      "actual_per_unit": 172.63,
+      "detail": ""
+    },
+    {
+      "property": "RL16",
+      "units": 96,
+      "budget": 7893.3,
+      "actual_per_unit": 157.13,
+      "detail": ""
+    },
+    {
+      "property": "C616",
+      "units": 1,
+      "budget": null,
+      "actual_per_unit": 154.92,
+      "detail": ""
+    },
+    {
+      "property": "P705",
+      "units": 20,
+      "budget": 1122.8,
+      "actual_per_unit": 154.52,
+      "detail": ""
+    },
+    {
+      "property": "KN47",
+      "units": 246,
+      "budget": 22494.9,
+      "actual_per_unit": 135.46,
+      "detail": ""
+    },
+    {
+      "property": "PS91",
+      "units": 14,
+      "budget": 680.3,
+      "actual_per_unit": 120.1,
+      "detail": ""
+    },
+    {
+      "property": "S129",
+      "units": 20,
+      "budget": 1218.1,
+      "actual_per_unit": 110.45,
+      "detail": ""
+    },
+    {
+      "property": "W117",
+      "units": 10,
+      "budget": 415.5,
+      "actual_per_unit": 96.52,
+      "detail": ""
+    },
+    {
+      "property": "C313",
+      "units": 40,
+      "budget": 2120.16,
+      "actual_per_unit": 77.5,
+      "detail": ""
+    },
+    {
+      "property": "TC68",
+      "units": 108,
+      "budget": 7341.3,
+      "actual_per_unit": 65.85,
+      "detail": ""
+    },
+    {
+      "property": "K308",
+      "units": 6,
+      "budget": 291.6,
+      "actual_per_unit": 61.05,
+      "detail": ""
+    },
+    {
+      "property": "A210",
+      "units": 10,
+      "budget": 444.9,
+      "actual_per_unit": 46.06,
+      "detail": ""
+    },
+    {
+      "property": "W226",
+      "units": 11,
+      "budget": 546.6,
+      "actual_per_unit": 44.15,
+      "detail": ""
+    },
+    {
+      "property": "W225",
+      "units": 36,
+      "budget": null,
+      "actual_per_unit": 38.54,
+      "detail": ""
+    },
+    {
+      "property": "M405",
+      "units": 26,
+      "budget": 1092.7,
+      "actual_per_unit": 38.49,
+      "detail": ""
+    },
+    {
+      "property": "S300",
+      "units": 14,
+      "budget": 576,
+      "actual_per_unit": 30.97,
+      "detail": ""
+    },
+    {
+      "property": "TC34",
+      "units": 24,
+      "budget": 1459.9,
+      "actual_per_unit": 30.72,
       "detail": ""
     },
     {
@@ -43,10 +183,59 @@
       "detail": ""
     },
     {
-      "property": "M405",
-      "units": 26,
-      "budget": 1092.7,
-      "actual_per_unit": 16.35,
+      "property": "O155-OAK",
+      "units": 31,
+      "budget": 5263,
+      "actual_per_unit": 23.79,
+      "detail": ""
+    },
+    {
+      "property": "PS17",
+      "units": 18,
+      "budget": 732.6,
+      "actual_per_unit": 23.41,
+      "detail": ""
+    },
+    {
+      "property": "H731",
+      "units": 8,
+      "budget": 422.8,
+      "actual_per_unit": 21.36,
+      "detail": ""
+    },
+    {
+      "property": "E328",
+      "units": 7,
+      "budget": 243,
+      "actual_per_unit": 18.71,
+      "detail": ""
+    },
+    {
+      "property": "HL65",
+      "units": 10,
+      "budget": 500.4,
+      "actual_per_unit": 17.82,
+      "detail": ""
+    },
+    {
+      "property": "K104-LEFEVRE",
+      "units": 60,
+      "budget": 3092.7,
+      "actual_per_unit": 13.43,
+      "detail": ""
+    },
+    {
+      "property": "M221",
+      "units": 14,
+      "budget": 681.1,
+      "actual_per_unit": 12.27,
+      "detail": ""
+    },
+    {
+      "property": "V202",
+      "units": 16,
+      "budget": 408.7,
+      "actual_per_unit": 11.8,
       "detail": ""
     },
     {
@@ -57,191 +246,51 @@
       "detail": ""
     },
     {
-      "property": "RL16",
-      "units": 96,
-      "budget": 7893.3,
-      "actual_per_unit": 2.55,
-      "detail": ""
-    },
-    {
-      "property": "PS17",
-      "units": 18,
-      "budget": 732.6,
-      "actual_per_unit": 1,
-      "detail": ""
-    },
-    {
-      "property": "A916",
-      "units": 12,
-      "budget": 515.9,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "S300",
-      "units": 14,
-      "budget": 576,
-      "actual_per_unit": 0,
+      "property": "A511",
+      "units": 10,
+      "budget": 356.2,
+      "actual_per_unit": 6.8,
       "detail": ""
     },
     {
       "property": "M608",
       "units": 9,
       "budget": 450,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "H604",
-      "units": 1,
-      "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "A210",
-      "units": 10,
-      "budget": 444.9,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "B101",
-      "units": 17,
-      "budget": 671.7,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "MS43",
-      "units": 15,
-      "budget": 731.5,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "HL65",
-      "units": 10,
-      "budget": 500.4,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "C616",
-      "units": 1,
-      "budget": null,
-      "actual_per_unit": 0,
+      "actual_per_unit": 4.48,
       "detail": ""
     },
     {
       "property": "MS22",
       "units": 8,
       "budget": 316.4,
-      "actual_per_unit": 0,
+      "actual_per_unit": 3.77,
+      "detail": ""
+    },
+    {
+      "property": "A916",
+      "units": 12,
+      "budget": 515.9,
+      "actual_per_unit": 2.62,
       "detail": ""
     },
     {
       "property": "L925",
       "units": 2,
       "budget": null,
-      "actual_per_unit": 0,
+      "actual_per_unit": 1.5,
       "detail": ""
     },
     {
-      "property": "HL73",
-      "units": 6,
-      "budget": 229.4,
-      "actual_per_unit": 0,
+      "property": "MS43",
+      "units": 15,
+      "budget": 731.5,
+      "actual_per_unit": 0.12,
       "detail": ""
     },
     {
-      "property": "K104-LEFEVRE",
-      "units": 60,
-      "budget": 3092.7,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "PS25",
-      "units": 44,
-      "budget": 2433.6,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "M221",
-      "units": 14,
-      "budget": 681.1,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "W226",
-      "units": 11,
-      "budget": 546.6,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "W117",
-      "units": 10,
-      "budget": 415.5,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "PS91",
-      "units": 14,
-      "budget": 680.3,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "H731",
-      "units": 8,
-      "budget": 422.8,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "W225",
-      "units": 36,
+      "property": "H604",
+      "units": 1,
       "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "S129",
-      "units": 20,
-      "budget": 1218.1,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "E328",
-      "units": 7,
-      "budget": 243,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "J312",
-      "units": 18,
-      "budget": 587.62,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "L912",
-      "units": 21,
-      "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "C313",
-      "units": 40,
-      "budget": 2120.16,
       "actual_per_unit": 0,
       "detail": ""
     },
@@ -251,91 +300,245 @@
       "budget": null,
       "actual_per_unit": 0,
       "detail": ""
+    }
+  ],
+  "grounds": [
+    {
+      "property": "L925",
+      "units": 2,
+      "budget": null,
+      "actual_per_unit": 149.84,
+      "detail": ""
     },
     {
       "property": "K308",
       "units": 6,
-      "budget": 291.6,
-      "actual_per_unit": 0,
+      "budget": 127.9,
+      "actual_per_unit": 124.35,
       "detail": ""
     },
     {
-      "property": "A511",
-      "units": 10,
-      "budget": 356.2,
-      "actual_per_unit": 0,
+      "property": "W226",
+      "units": 11,
+      "budget": 273.3,
+      "actual_per_unit": 98.66,
       "detail": ""
     },
     {
-      "property": "V202",
-      "units": 16,
-      "budget": 408.7,
-      "actual_per_unit": 0,
+      "property": "E328",
+      "units": 7,
+      "budget": 322.8,
+      "actual_per_unit": 81.77,
       "detail": ""
     },
     {
-      "property": "TC34",
-      "units": 24,
-      "budget": 1459.9,
-      "actual_per_unit": 0,
+      "property": "K104-LEFEVRE",
+      "units": 60,
+      "budget": 1546.3,
+      "actual_per_unit": 78.02,
       "detail": ""
     },
     {
-      "property": "KN47",
-      "units": 246,
-      "budget": 22494.9,
-      "actual_per_unit": 0,
+      "property": "MS22",
+      "units": 8,
+      "budget": 158.2,
+      "actual_per_unit": 75,
+      "detail": ""
+    },
+    {
+      "property": "MS43",
+      "units": 15,
+      "budget": 365.8,
+      "actual_per_unit": 73.33,
+      "detail": ""
+    },
+    {
+      "property": "RL16",
+      "units": 96,
+      "budget": 2537.8,
+      "actual_per_unit": 71.18,
+      "detail": ""
+    },
+    {
+      "property": "HL73",
+      "units": 6,
+      "budget": 114.7,
+      "actual_per_unit": 70.05,
       "detail": ""
     },
     {
       "property": "O155-OAK",
       "units": 31,
-      "budget": 5263,
-      "actual_per_unit": 0,
+      "budget": 3629,
+      "actual_per_unit": 56.84,
       "detail": ""
     },
     {
-      "property": "TC68",
-      "units": 108,
-      "budget": 7341.3,
-      "actual_per_unit": 0,
+      "property": "V202",
+      "units": 16,
+      "budget": 606.9,
+      "actual_per_unit": 56.35,
       "detail": ""
-    }
-  ],
-  "grounds": [
+    },
+    {
+      "property": "PS25",
+      "units": 44,
+      "budget": 1216.8,
+      "actual_per_unit": 54.82,
+      "detail": ""
+    },
+    {
+      "property": "A511",
+      "units": 10,
+      "budget": 254.4,
+      "actual_per_unit": 53.27,
+      "detail": ""
+    },
+    {
+      "property": "KN47",
+      "units": 246,
+      "budget": 6248.6,
+      "actual_per_unit": 52.68,
+      "detail": ""
+    },
+    {
+      "property": "W117",
+      "units": 10,
+      "budget": 207.8,
+      "actual_per_unit": 49.26,
+      "detail": ""
+    },
+    {
+      "property": "C313",
+      "units": 40,
+      "budget": 895.06,
+      "actual_per_unit": 45.72,
+      "detail": ""
+    },
+    {
+      "property": "PS91",
+      "units": 14,
+      "budget": 340.1,
+      "actual_per_unit": 44.29,
+      "detail": ""
+    },
     {
       "property": "PS17",
       "units": 18,
       "budget": 366.3,
-      "actual_per_unit": 6.94,
+      "actual_per_unit": 43.92,
       "detail": ""
     },
     {
-      "property": "B101",
-      "units": 17,
-      "budget": 335.9,
-      "actual_per_unit": 4.71,
-      "detail": ""
-    },
-    {
-      "property": "A916",
-      "units": 12,
-      "budget": 257.9,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "S300",
+      "property": "M221",
       "units": 14,
-      "budget": 288,
-      "actual_per_unit": 0,
+      "budget": 340.5,
+      "actual_per_unit": 40.45,
       "detail": ""
     },
     {
       "property": "M608",
       "units": 9,
       "budget": 225,
-      "actual_per_unit": 0,
+      "actual_per_unit": 37.25,
+      "detail": ""
+    },
+    {
+      "property": "A210",
+      "units": 10,
+      "budget": 222.4,
+      "actual_per_unit": 35.72,
+      "detail": ""
+    },
+    {
+      "property": "TC68",
+      "units": 108,
+      "budget": 5144.9,
+      "actual_per_unit": 35.53,
+      "detail": ""
+    },
+    {
+      "property": "P705",
+      "units": 20,
+      "budget": 561.4,
+      "actual_per_unit": 35.1,
+      "detail": ""
+    },
+    {
+      "property": "J312",
+      "units": 18,
+      "budget": 330.54,
+      "actual_per_unit": 31.39,
+      "detail": ""
+    },
+    {
+      "property": "A916",
+      "units": 12,
+      "budget": 257.9,
+      "actual_per_unit": 30.36,
+      "detail": ""
+    },
+    {
+      "property": "M405",
+      "units": 26,
+      "budget": 546.3,
+      "actual_per_unit": 29.25,
+      "detail": ""
+    },
+    {
+      "property": "TC34",
+      "units": 24,
+      "budget": 395.6,
+      "actual_per_unit": 29.02,
+      "detail": ""
+    },
+    {
+      "property": "H731",
+      "units": 8,
+      "budget": 211.4,
+      "actual_per_unit": 26.91,
+      "detail": ""
+    },
+    {
+      "property": "HL65",
+      "units": 10,
+      "budget": 250.2,
+      "actual_per_unit": 23.8,
+      "detail": ""
+    },
+    {
+      "property": "B101",
+      "units": 17,
+      "budget": 335.9,
+      "actual_per_unit": 23.6,
+      "detail": ""
+    },
+    {
+      "property": "S300",
+      "units": 14,
+      "budget": 288,
+      "actual_per_unit": 14.03,
+      "detail": ""
+    },
+    {
+      "property": "S129",
+      "units": 20,
+      "budget": 203,
+      "actual_per_unit": 9.91,
+      "detail": ""
+    },
+    {
+      "property": "L912",
+      "units": 21,
+      "budget": null,
+      "actual_per_unit": 9.17,
+      "detail": ""
+    },
+    {
+      "property": "RL21",
+      "units": 22,
+      "budget": 223.3,
+      "actual_per_unit": 4.02,
       "detail": ""
     },
     {
@@ -346,100 +549,9 @@
       "detail": ""
     },
     {
-      "property": "A210",
-      "units": 10,
-      "budget": 222.4,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "MS43",
-      "units": 15,
-      "budget": 365.8,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "HL65",
-      "units": 10,
-      "budget": 250.2,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
       "property": "C616",
       "units": 1,
       "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "MS22",
-      "units": 8,
-      "budget": 158.2,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "P705",
-      "units": 20,
-      "budget": 561.4,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "L925",
-      "units": 2,
-      "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "HL73",
-      "units": 6,
-      "budget": 114.7,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "M405",
-      "units": 26,
-      "budget": 546.3,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "K104-LEFEVRE",
-      "units": 60,
-      "budget": 1546.3,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "PS25",
-      "units": 44,
-      "budget": 1216.8,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "M221",
-      "units": 14,
-      "budget": 340.5,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "W226",
-      "units": 11,
-      "budget": 273.3,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "W117",
-      "units": 10,
-      "budget": 207.8,
       "actual_per_unit": 0,
       "detail": ""
     },
@@ -451,65 +563,9 @@
       "detail": ""
     },
     {
-      "property": "PS91",
-      "units": 14,
-      "budget": 340.1,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "H731",
-      "units": 8,
-      "budget": 211.4,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "RL16",
-      "units": 96,
-      "budget": 2537.8,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
       "property": "W225",
       "units": 36,
       "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "S129",
-      "units": 20,
-      "budget": 203,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "E328",
-      "units": 7,
-      "budget": 322.8,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "J312",
-      "units": 18,
-      "budget": 330.54,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "L912",
-      "units": 21,
-      "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "C313",
-      "units": 40,
-      "budget": 895.06,
       "actual_per_unit": 0,
       "detail": ""
     },
@@ -521,65 +577,9 @@
       "detail": ""
     },
     {
-      "property": "K308",
-      "units": 6,
-      "budget": 127.9,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "RL21",
-      "units": 22,
-      "budget": 223.3,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "A511",
-      "units": 10,
-      "budget": 254.4,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "V202",
-      "units": 16,
-      "budget": 606.9,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "TC34",
-      "units": 24,
-      "budget": 395.6,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "KN47",
-      "units": 246,
-      "budget": 6248.6,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "O155-OAK",
-      "units": 31,
-      "budget": 3629,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
       "property": "O155-ELM",
       "units": 21,
       "budget": null,
-      "actual_per_unit": 0,
-      "detail": ""
-    },
-    {
-      "property": "TC68",
-      "units": 108,
-      "budget": 5144.9,
       "actual_per_unit": 0,
       "detail": ""
     }
