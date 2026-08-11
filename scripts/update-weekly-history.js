@@ -617,33 +617,45 @@ function groundsMaterialsByProperty(records) {
 // Online API access yet (asked LeeRoy the same day), but he's already solved OAuth
 // against this exact company/portfolio, so this just reads his committed output file
 // over plain HTTPS. No auth needed, it's a public repo.
-// Known unresolved caveats (Florencia flagged 2026-08-10 -- do not remove this note
-// until they're actually resolved): (1) the "d" field's exact meaning (bill/entry date
-// vs. payment date) is unconfirmed, so a given week/month's QBO total here may include
-// or exclude work that belongs to a different accrual period than it looks like.
-// (2) Some entries carry qbo_category:"(split -- needs line detail)" with amt:0 --
-// unusable, skipped below entirely (real dollar figure exists somewhere in QBO but this
-// feed doesn't expose which category it belongs to). Swap this whole function for a
-// real QBO API pull once Florencia's own access lands -- see
-// [[project_louisa_simplified_budget_report]] in memory for status.
+// Known unresolved caveat (Florencia flagged 2026-08-10 -- do not remove this note
+// until it's actually resolved): the "d" field's exact meaning (bill/entry date vs.
+// payment date) is unconfirmed, so a given week/month's QBO total here may include or
+// exclude work that belongs to a different accrual period than it looks like.
+// Swap this whole function for a real QBO API pull once Florencia's own access lands
+// -- see [[project_louisa_simplified_budget_report]] in memory for status.
 const QBO_LEEROY_FEED_URL = 'https://raw.githubusercontent.com/leeroy-cmyk/reports/main/data/qbo_processed.json';
 const QBO_CATEGORY_MAP = {
   'r&m - contractor': 'Repairs', 'r&m - material': 'Repairs',
   'grounds - contractor': 'Grounds', 'grounds - material': 'Grounds',
 };
+// Some entries carry qbo_category:"(split -- needs line detail)" -- the feed's header
+// row for a multi-line bill where the split itself isn't broken out, so there's a real
+// dollar amount but no clean category. Previously dropped entirely; Florencia reviewed
+// a real batch of these 2026-08-10 (Spokane Water Heater, Reliable Rooter, Eden Pest,
+// Redcliffe Electric, Pannonia Glass) and confirmed they're overwhelmingly Repairs, not
+// Grounds -- so a split bill now defaults to Repairs unless the vendor name is clearly
+// a grounds/landscaping trade. Marked `unconfirmed: true` so the UI can flag it as a
+// best guess rather than a confirmed GL categorization.
+const QBO_SPLIT_KEY = '(split — needs line detail)';
+const GROUNDS_VENDOR_RE = /landscap|lawn|tree|groundskeep|garden/i;
 async function fetchQboProcessed() {
   const res = await fetchWithRetry(QBO_LEEROY_FEED_URL, {});
   if (!res.ok) throw new Error(`QBO feed (LeeRoy's repo) failed: ${res.status} ${await res.text()}`);
   const j = await res.json();
   const records = [];
   for (const t of (j.transactions || [])) {
-    if (!t.amt) continue; // zero/split-only line, no usable amount
+    if (!t.amt) continue; // zero-amount line, nothing to count
     const catKey = String(t.qbo_category || t.ln || '').trim().toLowerCase();
-    const category = QBO_CATEGORY_MAP[catKey];
+    let category = QBO_CATEGORY_MAP[catKey];
+    let unconfirmed = false;
+    if (!category && catKey === QBO_SPLIT_KEY.toLowerCase()) {
+      category = GROUNDS_VENDOR_RE.test(t.vendor || '') ? 'Grounds' : 'Repairs';
+      unconfirmed = true;
+    }
     if (!category) continue; // Turn/CapEx/other -- out of scope for Repairs+Grounds here
     const propMatch = String(t.dept || '').match(/^[a-z]+\d+/i);
     if (!propMatch) continue;
-    records.push({ date: t.d, property: propMatch[0].toLowerCase(), amount: t.amt, category, vendor: t.vendor, desc: t.ln });
+    records.push({ date: t.d, property: propMatch[0].toLowerCase(), amount: t.amt, category, vendor: t.vendor, desc: unconfirmed ? 'uncategorized bill, assumed Repairs' : t.ln, unconfirmed });
   }
   return records;
 }
@@ -665,7 +677,7 @@ function qboListByProperty(records, category) {
   records.forEach(r => {
     if (r.category !== category) return;
     if (!out[r.property]) out[r.property] = [];
-    out[r.property].push({ vendor: r.vendor, desc: r.desc, amount: Math.round(r.amount * 100) / 100, date: r.date });
+    out[r.property].push({ vendor: r.vendor, desc: r.desc, amount: Math.round(r.amount * 100) / 100, date: r.date, unconfirmed: !!r.unconfirmed });
   });
   return out;
 }

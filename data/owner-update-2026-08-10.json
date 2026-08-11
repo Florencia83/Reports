@@ -6,6 +6,10 @@
   "generated_at": "2026-08-10",
   "complete": false,
   "source": "Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy's feed, pending Florencia's own QBO access) for Last Week/MTD actual (Repairs+Grounds only, Turns actual not yet tracked); AppFolio for the fixed Monthly Budget number, including Turns (account 52002) — automated.",
+  "issues": {
+    "flagged": null,
+    "resolved": null
+  },
   "regions": [
     {
       "region": "Tri-Cities",
@@ -13,14 +17,22 @@
         {
           "property": "KN47",
           "region": "Tri-Cities",
-          "last_week": 241.61,
-          "mtd": 2517.52,
+          "last_week": 391.94,
+          "mtd": 3973.45,
           "budget": 22551.1,
-          "pct_of_budget": 11.2,
-          "labor_hours_mtd": 73.7,
+          "pct_of_budget": 17.6,
+          "labor_hours_mtd": 79.15,
           "materials_mtd": 711.08,
-          "invoices_mtd": 0,
-          "invoices_list_mtd": []
+          "invoices_mtd": 1305.6,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Eden Advanced Pest Techno",
+              "desc": "uncategorized bill, assumed Repairs",
+              "amount": 1305.6,
+              "date": "2026-08-03",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "PS17",
@@ -38,13 +50,21 @@
           "property": "PS25",
           "region": "Tri-Cities",
           "last_week": 21.6,
-          "mtd": 1306.04,
+          "mtd": 2990.72,
           "budget": 2439,
-          "pct_of_budget": 53.5,
+          "pct_of_budget": 122.6,
           "labor_hours_mtd": 12.95,
           "materials_mtd": 977.67,
-          "invoices_mtd": 0,
-          "invoices_list_mtd": []
+          "invoices_mtd": 1684.68,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Pannonia Glass Company",
+              "desc": "uncategorized bill, assumed Repairs",
+              "amount": 1684.68,
+              "date": "2026-08-02",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "PS91",
@@ -61,26 +81,34 @@
         {
           "property": "RL16",
           "region": "Tri-Cities",
-          "last_week": 315.39,
-          "mtd": 1667.98,
+          "last_week": 468.78,
+          "mtd": 1821.37,
           "budget": 7913,
-          "pct_of_budget": 21.1,
-          "labor_hours_mtd": 38.3,
-          "materials_mtd": 712.13,
+          "pct_of_budget": 23,
+          "labor_hours_mtd": 41.65,
+          "materials_mtd": 782.8,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
         },
         {
           "property": "RL21",
           "region": "Tri-Cities",
-          "last_week": 106.96,
-          "mtd": 468.87,
+          "last_week": 114.79,
+          "mtd": 612.08,
           "budget": 1119.4,
-          "pct_of_budget": 41.9,
-          "labor_hours_mtd": 9.13,
+          "pct_of_budget": 54.7,
+          "labor_hours_mtd": 9.92,
           "materials_mtd": 242.57,
-          "invoices_mtd": 0,
-          "invoices_list_mtd": []
+          "invoices_mtd": 135.38,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Reliable Rooter",
+              "desc": "uncategorized bill, assumed Repairs",
+              "amount": 135.38,
+              "date": "2026-08-03",
+              "unconfirmed": true
+            }
+          ]
         }
       ],
       "grounds": [
@@ -309,22 +337,30 @@
           "property": "J312",
           "region": "Spokane",
           "last_week": 0,
-          "mtd": 149.08,
+          "mtd": 803.68,
           "budget": 589.09,
-          "pct_of_budget": 25.3,
+          "pct_of_budget": 136.4,
           "labor_hours_mtd": 5.82,
           "materials_mtd": 25.05,
-          "invoices_mtd": 0,
-          "invoices_list_mtd": []
+          "invoices_mtd": 654.6,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Spokane Water Heater",
+              "desc": "uncategorized bill, assumed Repairs",
+              "amount": 654.6,
+              "date": "2026-08-05",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "K104",
           "region": "Spokane",
-          "last_week": 0,
-          "mtd": 529.68,
+          "last_week": 69.77,
+          "mtd": 599.44,
           "budget": 3099.6,
-          "pct_of_budget": 17.1,
-          "labor_hours_mtd": 15.4,
+          "pct_of_budget": 19.3,
+          "labor_hours_mtd": 18.08,
           "materials_mtd": 261.81,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -417,13 +453,21 @@
           "property": "MS43",
           "region": "Spokane",
           "last_week": 0,
-          "mtd": 124.33,
+          "mtd": 734.33,
           "budget": 733.1,
-          "pct_of_budget": 17,
+          "pct_of_budget": 100.2,
           "labor_hours_mtd": 1.43,
           "materials_mtd": 110,
-          "invoices_mtd": 0,
-          "invoices_list_mtd": []
+          "invoices_mtd": 610,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Redcliffe Electric",
+              "desc": "uncategorized bill, assumed Repairs",
+              "amount": 610,
+              "date": "2026-08-03",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "O155",
@@ -682,11 +726,11 @@
         {
           "property": "J312",
           "region": "Spokane",
-          "last_week": 0,
-          "mtd": 51,
+          "last_week": 94.3,
+          "mtd": 145.3,
           "budget": 331.36,
-          "pct_of_budget": 15.4,
-          "labor_hours_mtd": 2,
+          "pct_of_budget": 43.8,
+          "labor_hours_mtd": 5.77,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -927,12 +971,12 @@
         {
           "property": "TC68",
           "region": "Tacoma",
-          "last_week": 463.41,
-          "mtd": 5695.47,
+          "last_week": 615.06,
+          "mtd": 5847.12,
           "budget": 7359.6,
-          "pct_of_budget": 77.4,
-          "labor_hours_mtd": 18.55,
-          "materials_mtd": 5233.15,
+          "pct_of_budget": 79.4,
+          "labor_hours_mtd": 20.12,
+          "materials_mtd": 5342.5,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
         }
@@ -941,11 +985,11 @@
         {
           "property": "TC34",
           "region": "Tacoma",
-          "last_week": 60.3,
-          "mtd": 60.3,
+          "last_week": 54,
+          "mtd": 54,
           "budget": 396.6,
-          "pct_of_budget": 15.2,
-          "labor_hours_mtd": 2.23,
+          "pct_of_budget": 13.6,
+          "labor_hours_mtd": 2,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -965,7 +1009,8 @@
               "vendor": "Malone's Landscape Management",
               "desc": "Grounds - Contractor",
               "amount": 1823.25,
-              "date": "2026-08-01"
+              "date": "2026-08-01",
+              "unconfirmed": false
             }
           ]
         }
@@ -977,12 +1022,12 @@
       "repairs": {
         "property": "RL16",
         "region": "Tri-Cities",
-        "last_week": 315.39,
-        "mtd": 1667.98,
+        "last_week": 468.78,
+        "mtd": 1821.37,
         "budget": 7913,
-        "pct_of_budget": 21.1,
-        "labor_hours_mtd": 38.3,
-        "materials_mtd": 712.13,
+        "pct_of_budget": 23,
+        "labor_hours_mtd": 41.65,
+        "materials_mtd": 782.8,
         "invoices_mtd": 0,
         "invoices_list_mtd": []
       },
@@ -1005,10 +1050,10 @@
         "pct_of_budget": null
       },
       "total": {
-        "last_week": 328.96999999999997,
-        "mtd": 2066.78,
+        "last_week": 482.35999999999996,
+        "mtd": 2220.17,
         "budget": 10457.1,
-        "pct_of_budget": 19.8,
+        "pct_of_budget": 21.2,
         "partial": true
       }
     },
@@ -1016,14 +1061,22 @@
       "repairs": {
         "property": "KN47",
         "region": "Tri-Cities",
-        "last_week": 241.61,
-        "mtd": 2517.52,
+        "last_week": 391.94,
+        "mtd": 3973.45,
         "budget": 22551.1,
-        "pct_of_budget": 11.2,
-        "labor_hours_mtd": 73.7,
+        "pct_of_budget": 17.6,
+        "labor_hours_mtd": 79.15,
         "materials_mtd": 711.08,
-        "invoices_mtd": 0,
-        "invoices_list_mtd": []
+        "invoices_mtd": 1305.6,
+        "invoices_list_mtd": [
+          {
+            "vendor": "Eden Advanced Pest Techno",
+            "desc": "uncategorized bill, assumed Repairs",
+            "amount": 1305.6,
+            "date": "2026-08-03",
+            "unconfirmed": true
+          }
+        ]
       },
       "grounds": {
         "property": "KN47",
@@ -1044,25 +1097,25 @@
         "pct_of_budget": null
       },
       "total": {
-        "last_week": 426.44000000000005,
-        "mtd": 3470.48,
+        "last_week": 576.77,
+        "mtd": 4926.41,
         "budget": 28815.3,
-        "pct_of_budget": 12,
+        "pct_of_budget": 17.1,
         "partial": true
       }
     },
     "PORTFOLIO": {
       "repairs": {
-        "last_week": 1493.57,
-        "mtd": 14602.32,
+        "last_week": 2026.54,
+        "mtd": 19525.54,
         "budget": 67431.05,
-        "pct_of_budget": 21.7
+        "pct_of_budget": 29
       },
       "grounds": {
-        "last_week": 595.86,
-        "mtd": 6057.35,
+        "last_week": 683.86,
+        "mtd": 6145.35,
         "budget": 29227.06,
-        "pct_of_budget": 20.7
+        "pct_of_budget": 21
       },
       "turns": {
         "last_week": null,
@@ -1071,10 +1124,10 @@
         "pct_of_budget": null
       },
       "total": {
-        "last_week": 2089.43,
-        "mtd": 20659.67,
+        "last_week": 2710.4,
+        "mtd": 25670.89,
         "budget": 96658.11,
-        "pct_of_budget": 21.4,
+        "pct_of_budget": 26.6,
         "partial": true
       }
     }
