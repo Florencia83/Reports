@@ -228,8 +228,9 @@ function renderPropertyCards(rows) {
   }).join('');
 }
 
-// Repairs for all 3 regions first, then Grounds for all 3 (Florencia, 2026-08-10 --
-// was region-then-category; she wants category-then-region instead).
+// Repairs for all 3 regions first, then Grounds for all 3, then Turns for all 3
+// (Florencia, 2026-08-10 -- was region-then-category; she wants category-then-region
+// instead. Turns section added 2026-08-11 once full Turns actual tracking landed).
 function renderRegions(regions) {
   var html = '<section><p class="section-label">Repairs</p>';
   regions.forEach(function(reg) {
@@ -238,6 +239,10 @@ function renderRegions(regions) {
   html += '</section><section><p class="section-label">Grounds</p>';
   regions.forEach(function(reg) {
     html += '<p class="area-label">' + reg.region + '</p>' + renderPropertyCards(reg.grounds);
+  });
+  html += '</section><section><p class="section-label">Turns</p>';
+  regions.forEach(function(reg) {
+    html += '<p class="area-label">' + reg.region + '</p>' + renderPropertyCards(reg.turns);
   });
   html += '</section>';
   return html;

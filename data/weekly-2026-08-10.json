@@ -278,11 +278,11 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 6807.63,
+    "labor": 6822.47,
     "materials": 8454.35,
     "invoices": 4390.26,
-    "total_actual": 19652.24,
-    "variance": 47778.81
+    "total_actual": 19667.08,
+    "variance": 47763.97
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,

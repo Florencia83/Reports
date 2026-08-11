@@ -108,6 +108,30 @@ const GROUNDS_TECHS = [
 ];
 const groundsQbtIdToTech = {}; GROUNDS_TECHS.forEach(t => groundsQbtIdToTech[t.qbtId] = t);
 
+// Turns team roster (Florencia, 2026-08-11) -- Ron Cramer + Micheal Magoon (Spokane),
+// James Dunlap + Ryan Robson (Tri-Cities paint/maintenance), Margarito Saldana
+// (Tri-Cities walkthroughs) also logs turn-classed hours sometimes. QBT Class
+// confirmed live: "r203:Turn" (also seen: "r203:Turn - Admin") -- see TURN_CLASS_RE
+// below. Wages: Cramer/Magoon/Robson pulled from QBT's own pay_rate field (API,
+// 2026-08-11: Cramer "25,75" comma-decimal = $25.75, Magoon $25.00, Robson $23.00);
+// Dunlap/Saldana reuse their existing TECHS wage (no separate source needed).
+const TURN_TECHS = [
+  { name: 'Ronald Cramer',      qbtId: 36854,    wage: 25.75 },
+  { name: 'Micheal Magoon',     qbtId: 5887924,  wage: 25.00 },
+  { name: 'Ryan Robson',        qbtId: 6682738,  wage: 23.00 },
+  { name: 'James Dunlap',       qbtId: 6832702,  wage: 23.00 },
+  { name: 'Margarito Saldana',  qbtId: 5210688,  wage: 28.40 },
+];
+const turnQbtIdToTech = {}; TURN_TECHS.forEach(t => turnQbtIdToTech[t.qbtId] = t);
+const TURN_CLASS_RE = /turn/i;
+// Ramp GL id for Turn materials/contractor spend (confirmed live 2026-08-11 against
+// real July/August transactions from the Turn techs above: 101 of 133 of their Ramp
+// purchases carried "53002 Turn:Turn - Material"). Excludes 57002 "CapEx - Turn" on
+// purpose -- that's capital expenditure, a different AppFolio account (80121) than the
+// operating "R&M - Turns" (52002) this report tracks, same exclusion logic as
+// CapEx-Appliance being kept out of regular Repairs materials.
+const TURN_MATERIALS_GL_IDS = ['53002'];
+
 // R&M-Repairs materials roster for the Monthly Budget/Cost by Property "Materials" total --
 // expanded 2026-07-29 to the same complete 17-person roster as TECHS above (previously only
 // 7 names, so a real R&M-Repairs-GL-coded Ramp purchase by anyone else silently didn't count).
@@ -115,8 +139,15 @@ const RM_TEAM = TECHS.map(t => t.name);
 
 // Wider roster for Operational Expenses -- maintenance (repair) + grounds team, since
 // that section covers team card spend broadly, not just repair work orders.
+// Added Margarito Saldana, James Dunlap (already in TECHS/RM_TEAM's 17-person roster
+// since 2026-07-29 but never added here -- a real pre-existing gap, found 2026-08-11
+// while building Turns tracking) + the 3 new Turn-only techs (Ronald Cramer, Micheal
+// Magoon, Ryan Robson) so their Grounds/Turns Ramp purchases count toward the
+// portfolio-wide totals below, not just the per-property breakdowns (which don't gate
+// on isOpexTeam).
 const OPEX_TEAM = ['Justin Gutierrez', 'Jared Miller', 'Jaxson Lakins', 'Jonas Hoard', 'Isaac Chavez', 'Jacob Jett',
-  'Reynaldo Leonides', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Florencia Sola'];
+  'Reynaldo Leonides', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Florencia Sola',
+  'Margarito Saldana', 'James Dunlap', 'Ronald Cramer', 'Micheal Magoon', 'Ryan Robson'];
 // Every real transaction from this team carries QuickbooksClass "r203" (Ridgeview
 // Repairs & Renewals LLC) or a "r203:<sub-class>" child of it -- confirmed live
 // 2026-07-19 against a full week, then against team spend since April (1166 txns).
@@ -413,6 +444,55 @@ async function fetchGroundsLaborForRange(jobcodes, fromStr, toStr) {
   return records;
 }
 
+// Turns labor, mirroring fetchGroundsLaborForRange above -- same jobcode-path property
+// resolution, scoped to TURN_TECHS + TURN_CLASS_RE instead of the Grounds roster/class.
+async function fetchTurnsLaborForRange(jobcodes, fromStr, toStr) {
+  const headers = { Authorization: `Bearer ${process.env.QBT_TOKEN}` };
+
+  function jcPath(id, cache) {
+    if (cache[id]) return cache[id];
+    const j = jobcodes[id];
+    if (!j) return [];
+    if (!j.parent_id) return (cache[id] = [j.name]);
+    return (cache[id] = [...jcPath(j.parent_id, cache), j.name]);
+  }
+
+  const timesheets = [];
+  let page = 1;
+  while (true) {
+    const j = await qbtFetchWithRetry(`https://rest.tsheets.com/api/v1/timesheets?start_date=${fromStr}&end_date=${toStr}&page=${page}`, headers);
+    const rows = Object.values(j.results?.timesheets || {});
+    if (!rows.length) break;
+    timesheets.push(...rows);
+    if (!j.more) break;
+    page++;
+  }
+
+  const jcCache = {};
+  const records = [];
+  for (const ts of timesheets) {
+    if (ts.type !== 'regular') continue;
+    const tech = turnQbtIdToTech[ts.user_id];
+    if (!tech) continue;
+    const cls = (ts.customfields && ts.customfields['25056']) || '';
+    if (!TURN_CLASS_RE.test(cls) || /capex/i.test(cls)) continue;
+    const p = jcPath(ts.jobcode_id, jcCache);
+    if (!p.length) continue;
+    const propIdx = p.findIndex(seg => PROPERTY_CODE_RE.test(seg));
+    let prop = propIdx !== -1 ? p[propIdx].match(PROPERTY_CODE_RE)[0].toLowerCase() : null;
+    if (!prop) {
+      const m = ((ts.customfields && ts.customfields['25068']) || '').match(PROPERTY_CODE_RE);
+      prop = m ? m[0].toLowerCase() : null;
+    }
+    if (!prop) continue;
+    const leafRef = p[p.length - 1];
+    const ref = /^T[A-Z0-9]{5,}/i.test(leafRef) ? leafRef : null;
+    const hrs = ts.duration / 3600;
+    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage });
+  }
+  return records;
+}
+
 // Same stalled-connection protection as qbtFetchWithRetry above -- a bare fetch() here
 // can hang the whole script forever on a stalled connection, with no default timeout.
 async function fetchWithRetry(url, options, attempt = 1) {
@@ -612,6 +692,20 @@ function groundsMaterialsByProperty(records) {
   });
   return out;
 }
+// Turns materials, mirroring groundsMaterialsTotal/groundsMaterialsByProperty above --
+// scoped to TURN_MATERIALS_GL_IDS (Ramp GL 53002 "Turn:Turn - Material", confirmed live
+// 2026-08-11). Added for the owner-update Turns actual (Florencia, 2026-08-11).
+function turnsMaterialsTotal(records) {
+  return records.filter(r => r.isOpexTeam && TURN_MATERIALS_GL_IDS.includes(r.glId)).reduce((s, r) => s + r.amount, 0);
+}
+function turnsMaterialsByProperty(records) {
+  const out = {};
+  records.forEach(r => {
+    if (!r.property || !TURN_MATERIALS_GL_IDS.includes(r.glId)) return;
+    out[r.property] = (out[r.property] || 0) + r.amount;
+  });
+  return out;
+}
 // QBO vendor bills (Repairs/Grounds materials+contractor), sourced directly from
 // LeeRoy's public repo feed (Florencia, 2026-08-10) -- we don't have our own QuickBooks
 // Online API access yet (asked LeeRoy the same day), but he's already solved OAuth
@@ -627,6 +721,10 @@ const QBO_LEEROY_FEED_URL = 'https://raw.githubusercontent.com/leeroy-cmyk/repor
 const QBO_CATEGORY_MAP = {
   'r&m - contractor': 'Repairs', 'r&m - material': 'Repairs',
   'grounds - contractor': 'Grounds', 'grounds - material': 'Grounds',
+  // 'capex turn - contractor'/'-material' deliberately NOT mapped -- that's capital
+  // expenditure (AppFolio account 80121), a different bucket than the operating
+  // "R&M - Turns" (52002) this report tracks. Added 2026-08-11 for full Turns tracking.
+  'turn - contractor': 'Turns', 'turn - material': 'Turns',
 };
 // Some entries carry qbo_category:"(split -- needs line detail)" -- the feed's header
 // row for a multi-line bill where the split itself isn't broken out, so there's a real
@@ -829,21 +927,23 @@ async function main() {
 
   // One fetch pass wide enough to cover the current week, month-to-date, and the last
   // 30/7 day rolling windows -- everything below just slices this in memory.
-  const [melds, laborRecords, rampRecords, groundsLaborRecords, qboRecordsAll] = await Promise.all([
+  const [melds, laborRecords, rampRecords, groundsLaborRecords, turnsLaborRecords, qboRecordsAll] = await Promise.all([
     fetchPmCompletedMelds(broadStart, todayStr),
     fetchQbtLaborForRange(jobcodes, broadStart, todayStr),
     fetchRampTransactions(broadStart, todayStr),
     fetchGroundsLaborForRange(jobcodes, broadStart, todayStr),
+    fetchTurnsLaborForRange(jobcodes, broadStart, todayStr),
     fetchQboProcessed(),
   ]);
   const qboRecords = inRange(qboRecordsAll, broadStart, todayStr);
-  console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length, '| Grounds labor records:', groundsLaborRecords.length);
+  console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length, '| Grounds labor records:', groundsLaborRecords.length, '| Turns labor records:', turnsLaborRecords.length);
 
   // Month-to-date records, computed once here and reused below both for Top 10 Work
   // Orders and for the Monthly Budget/Cost by Property section further down.
   const monthLaborRecords = inRange(laborRecords, monthStart, todayStr);
   const monthRampRecords = inRange(rampRecords, monthStart, todayStr);
   const monthGroundsLaborRecords = inRange(groundsLaborRecords, monthStart, todayStr);
+  const monthTurnsLaborRecords = inRange(turnsLaborRecords, monthStart, todayStr);
   const monthQboRecords = inRange(qboRecords, monthStart, todayStr);
 
   // This-week-only slices (Monday..Sunday of the reported week), added 2026-08-10 for
@@ -852,6 +952,7 @@ async function main() {
   const weekLaborRecords = inRange(laborRecords, weekStart, weekEnd);
   const weekRampRecords = inRange(rampRecords, weekStart, weekEnd);
   const weekGroundsLaborRecords = inRange(groundsLaborRecords, weekStart, weekEnd);
+  const weekTurnsLaborRecords = inRange(turnsLaborRecords, weekStart, weekEnd);
   const weekQboRecords = inRange(qboRecords, weekStart, weekEnd);
 
   // Top 10 Work Orders and Maintenance Team KPI's are both month-to-date, not just
@@ -1031,9 +1132,24 @@ async function main() {
     variance: groundsBudget != null ? Math.round((groundsBudget - groundsTotalActual) * 100) / 100 : null,
   };
 
-  // Turns budget (portfolio-wide + the two flagged properties) for the owner-update
-  // Turns row -- see appfolioTurnsBudget above for why actual is still null.
+  // Turns Monthly Budget (Florencia, 2026-08-11) -- same shape as monthlyBudget/
+  // groundsMonthlyBudget above, now with a REAL bottom-up actual: labor (Cramer/Magoon/
+  // Robson/Dunlap/Saldana, QBT class "r203:Turn") + materials (Ramp GL 53002) +
+  // invoices (QBO "Turn - Contractor"/"Turn - Material", CapEx Turn excluded). Budget
+  // from AppFolio's "R&M - Turns" line (account 52002).
+  const turnsLaborMTD = totalCost(monthTurnsLaborRecords);
+  const turnsMaterialsMTD = turnsMaterialsTotal(monthRampRecords);
+  const turnsInvoicesMTD = qboTotal(monthQboRecords, 'Turns');
+  const turnsTotalActual = turnsLaborMTD + turnsMaterialsMTD + turnsInvoicesMTD;
   const turnsBudgetPortfolio = await appfolioTurnsBudget(month);
+  const turnsMonthlyBudget = {
+    budget: turnsBudgetPortfolio,
+    labor: Math.round(turnsLaborMTD * 100) / 100,
+    materials: Math.round(turnsMaterialsMTD * 100) / 100,
+    invoices: Math.round(turnsInvoicesMTD * 100) / 100,
+    total_actual: Math.round(turnsTotalActual * 100) / 100,
+    variance: turnsBudgetPortfolio != null ? Math.round((turnsBudgetPortfolio - turnsTotalActual) * 100) / 100 : null,
+  };
   const turnsBudgetsByProp = await appfolioPropertyBudgets(['rl16', 'kn47'], month, 'R&M - Turns');
 
   // Top 10 Grounds Purchases (Florencia, 2026-07-27) -- reuses monthRampRecords (already
@@ -1125,14 +1241,14 @@ async function main() {
   fs.writeFileSync(path.join(DATA_DIR, 'weekly-mtd.json'), JSON.stringify(mtdJson, null, 2));
   console.log('Wrote weekly-mtd.json —', costByProperty.length, 'properties over budget this month');
 
-  // ---- Owner Update: region-grouped Repairs/Grounds vs Budget (Florencia, 2026-08-10)
-  // -- built after Louisa flagged that the full Weekly Update never surfaced RL16/KN47
-  // running over budget 4 months straight. "Dramatically simplified": every property,
-  // grouped by region (Tri-Cities first per her request), Last Week / MTD / Monthly
-  // Budget / % of Budget Used, for Repairs and Grounds (Florencia's own two categories).
-  // Turns BUDGET wired the same day (account 52002) for the flagged scope table's Turns
-  // row -- Turns ACTUAL still has no bottom-up source, left null (see appfolioTurnsBudget
-  // above). Same
+  // ---- Owner Update: region-grouped Repairs/Grounds/Turns vs Budget (Florencia,
+  // 2026-08-10) -- built after Louisa flagged that the full Weekly Update never
+  // surfaced RL16/KN47 running over budget 4 months straight. "Dramatically
+  // simplified": every property, grouped by region (Tri-Cities first per her
+  // request), Last Week / MTD / Monthly Budget / % of Budget Used, for Repairs,
+  // Grounds, AND Turns (full Turns actual tracking added 2026-08-11 -- labor via
+  // TURN_TECHS/TURN_CLASS_RE, materials via TURN_MATERIALS_GL_IDS, invoices via the
+  // QBO_CATEGORY_MAP 'Turns' bucket). Same
   // bottom-up QBT+Ramp actual as everything else in this file, never AppFolio's own
   // accrual actual -- that has a real posting lag (confirmed 2026-08-10: re-running
   // pl-budget-2026-07.json nine days after month-close took portfolio R&M-Repairs
@@ -1190,42 +1306,41 @@ async function main() {
 
   const ownerRepairsRows = await buildCategoryRows(weekLaborRecords, monthLaborRecords, materialsByProperty, 'R&M - Repairs', 'Repairs');
   const ownerGroundsRows = await buildCategoryRows(weekGroundsLaborRecords, monthGroundsLaborRecords, groundsMaterialsByProperty, 'R&M - Grounds', 'Grounds');
+  const ownerTurnsRows = await buildCategoryRows(weekTurnsLaborRecords, monthTurnsLaborRecords, turnsMaterialsByProperty, 'R&M - Turns', 'Turns');
 
   const regions = REGION_ORDER.map(region => ({
     region,
     repairs: ownerRepairsRows.filter(r => r.region === region).sort((a, b) => a.property.localeCompare(b.property)),
     grounds: ownerGroundsRows.filter(r => r.region === region).sort((a, b) => a.property.localeCompare(b.property)),
+    turns: ownerTurnsRows.filter(r => r.region === region).sort((a, b) => a.property.localeCompare(b.property)),
   }));
 
   // Repairs/Grounds/Turns/Total breakdown for a single flagged property (RL16, KN47)
-  // or the whole portfolio (propUpper === null). Turns budget wired 2026-08-10 (account
-  // 52002, "R&M - Turns") -- actual is still null, no bottom-up QBT+Ramp source for Turns
-  // yet (see appfolioTurnsBudget above). Total = Repairs+Grounds only (partial until
-  // Turns actual exists), flagged via total.partial so the report can label it -- Turns
-  // budget is shown on its own row but deliberately left out of Total so budget and
-  // actual stay consistent (both Repairs+Grounds-only) rather than mixing a real Turns
-  // budget with a missing Turns actual.
+  // or the whole portfolio (propUpper === null). Turns now has a REAL bottom-up actual
+  // (Florencia, 2026-08-11 -- labor + Ramp materials + QBO invoices, same as
+  // Repairs/Grounds), so Total finally covers all three categories -- `partial` is
+  // gone, this is a real total now.
   function scopeBreakdown(propUpper) {
-    let repairs, grounds, turnsBudgetVal;
+    let repairs, grounds, turns;
     if (propUpper) {
       repairs = ownerRepairsRows.find(r => r.property === propUpper) || null;
       grounds = ownerGroundsRows.find(r => r.property === propUpper) || null;
-      turnsBudgetVal = turnsBudgetsByProp[propUpper.toLowerCase()] != null ? turnsBudgetsByProp[propUpper.toLowerCase()] : null;
+      turns = ownerTurnsRows.find(r => r.property === propUpper) || null;
     } else {
       const repairsLastWeek = totalCost(weekLaborRecords) + materialsBudgetTotal(weekRampRecords) + qboTotal(weekQboRecords, 'Repairs');
       const groundsLastWeek = totalCost(weekGroundsLaborRecords) + groundsMaterialsTotal(weekRampRecords) + qboTotal(weekQboRecords, 'Grounds');
+      const turnsLastWeek = totalCost(weekTurnsLaborRecords) + turnsMaterialsTotal(weekRampRecords) + qboTotal(weekQboRecords, 'Turns');
       repairs = { last_week: Math.round(repairsLastWeek * 100) / 100, mtd: monthlyBudget.total_actual, budget: monthlyBudget.budget, pct_of_budget: monthlyBudget.budget ? Math.round((monthlyBudget.total_actual / monthlyBudget.budget) * 1000) / 10 : null };
       grounds = { last_week: Math.round(groundsLastWeek * 100) / 100, mtd: groundsMonthlyBudget.total_actual, budget: groundsMonthlyBudget.budget, pct_of_budget: groundsMonthlyBudget.budget ? Math.round((groundsMonthlyBudget.total_actual / groundsMonthlyBudget.budget) * 1000) / 10 : null };
-      turnsBudgetVal = turnsBudgetPortfolio;
+      turns = { last_week: Math.round(turnsLastWeek * 100) / 100, mtd: turnsMonthlyBudget.total_actual, budget: turnsMonthlyBudget.budget, pct_of_budget: turnsMonthlyBudget.budget ? Math.round((turnsMonthlyBudget.total_actual / turnsMonthlyBudget.budget) * 1000) / 10 : null };
     }
-    const turns = { last_week: null, mtd: null, budget: turnsBudgetVal, pct_of_budget: null };
-    const totalBudget = (repairs && repairs.budget != null ? repairs.budget : 0) + (grounds && grounds.budget != null ? grounds.budget : 0);
+    const totalBudget = (repairs && repairs.budget != null ? repairs.budget : 0) + (grounds && grounds.budget != null ? grounds.budget : 0) + (turns && turns.budget != null ? turns.budget : 0);
+    const totalMtd = (repairs ? repairs.mtd : 0) + (grounds ? grounds.mtd : 0) + (turns ? turns.mtd : 0);
     const total = {
-      last_week: (repairs ? repairs.last_week : 0) + (grounds ? grounds.last_week : 0),
-      mtd: (repairs ? repairs.mtd : 0) + (grounds ? grounds.mtd : 0),
+      last_week: (repairs ? repairs.last_week : 0) + (grounds ? grounds.last_week : 0) + (turns ? turns.last_week : 0),
+      mtd: totalMtd,
       budget: totalBudget || null,
-      pct_of_budget: totalBudget ? Math.round((((repairs ? repairs.mtd : 0) + (grounds ? grounds.mtd : 0)) / totalBudget) * 1000) / 10 : null,
-      partial: true, // Turns excluded -- not a real total until that's built
+      pct_of_budget: totalBudget ? Math.round((totalMtd / totalBudget) * 1000) / 10 : null,
     };
     return { repairs, grounds, turns, total };
   }
@@ -1250,7 +1365,7 @@ async function main() {
     month_label: weekJson.month_label,
     generated_at: todayStr,
     complete: weekJson.complete,
-    source: 'Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy\'s feed, pending Florencia\'s own QBO access) for Last Week/MTD actual (Repairs+Grounds only, Turns actual not yet tracked); AppFolio for the fixed Monthly Budget number, including Turns (account 52002) — automated.',
+    source: 'Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy\'s feed, pending Florencia\'s own QBO access) for Last Week/MTD actual across Repairs, Grounds, AND Turns; AppFolio for the fixed Monthly Budget numbers — automated.',
     issues,
     regions,
     flagged: {
