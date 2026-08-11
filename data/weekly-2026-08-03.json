@@ -3,7 +3,7 @@
   "week_end": "2026-08-09",
   "label": "August 3 – 9, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-10",
+  "generated_at": "2026-08-11",
   "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 41.22,
-      "last_7": 38.6
+      "last_30": 41.93,
+      "last_7": 38.53
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -91,6 +91,14 @@
       "cost": 536.3
     },
     {
+      "ref": "T9PQQ0B",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 58,
+      "materials": 379.71,
+      "cost": 437.71
+    },
+    {
       "ref": "T4TDY8FB",
       "property": "tc34",
       "brief": "Yard Work Question Needs Mowing",
@@ -129,21 +137,13 @@
       "labor": 40.5,
       "materials": 159.18,
       "cost": 199.68
-    },
-    {
-      "ref": "TKBR3YX",
-      "property": "kn47",
-      "brief": "Garbage Disposal",
-      "labor": 51.03,
-      "materials": 136.14,
-      "cost": 187.17
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 48,
-      "avg_cost_per_wo": 13.49,
+      "wo_count": 51,
+      "avg_cost_per_wo": 12.7,
       "total_labor_cost": 428.37,
       "avg_resident_rating": 4.67,
       "reviews": [
@@ -159,6 +159,35 @@
         },
         {
           "ref": "TRPB1YZ",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 36,
+      "avg_cost_per_wo": 89.49,
+      "total_labor_cost": 902.4,
+      "avg_resident_rating": 3.75,
+      "reviews": [
+        {
+          "ref": "T2GAQY7",
+          "rating": 1,
+          "text": null
+        },
+        {
+          "ref": "T2AUDNBB",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TJ7HHP0",
+          "rating": 5,
+          "text": "Job well done,"
+        },
+        {
+          "ref": "TKKZ2D1",
           "rating": 5,
           "text": null
         }
@@ -183,35 +212,6 @@
         },
         {
           "ref": "T6DBXCJB",
-          "rating": 5,
-          "text": null
-        }
-      ]
-    },
-    {
-      "name": "Jaxson Lakins",
-      "wo_count": 32,
-      "avg_cost_per_wo": 82.74,
-      "total_labor_cost": 737.6,
-      "avg_resident_rating": 3.75,
-      "reviews": [
-        {
-          "ref": "T2GAQY7",
-          "rating": 1,
-          "text": null
-        },
-        {
-          "ref": "T2AUDNBB",
-          "rating": 4,
-          "text": null
-        },
-        {
-          "ref": "TJ7HHP0",
-          "rating": 5,
-          "text": "Job well done,"
-        },
-        {
-          "ref": "TKKZ2D1",
           "rating": 5,
           "text": null
         }
@@ -290,11 +290,25 @@
       "amount": 879.1
     },
     {
+      "date": "2026-08-03",
+      "ref": "TBK8WE8",
+      "property": "KN47",
+      "cardholder": "Ryan Robson",
+      "amount": 815.93
+    },
+    {
       "date": "2026-08-07",
       "ref": "TTK4WLE",
       "property": "M405",
       "cardholder": "Jacob Jett",
       "amount": 750.61
+    },
+    {
+      "date": "2026-08-06",
+      "ref": "T799ED6",
+      "property": "RL21",
+      "cardholder": "James Dunlap",
+      "amount": 675.33
     },
     {
       "date": "2026-08-06",
@@ -323,12 +337,19 @@
       "property": "P705",
       "cardholder": "Justin Gutierrez",
       "amount": 337.05
+    },
+    {
+      "date": "2026-08-07",
+      "ref": "TVDQH4D",
+      "property": "KN47",
+      "cardholder": "Ryan Robson",
+      "amount": 330.55
     }
   ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 873.81
+      "amount": 1013.25
     },
     {
       "category": "Supplies and Tools",
@@ -344,24 +365,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 7099.45
+      "amount": 7110.1
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 6770.8,
+    "labor": 6834.8,
     "materials": 8454.35,
     "invoices": 4390.26,
-    "total_actual": 19615.41,
-    "variance": 47815.64
+    "total_actual": 19679.41,
+    "variance": 47751.64
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 3948.07,
+    "labor": 3974.75,
     "materials": 374.03,
     "invoices": 1823.25,
-    "total_actual": 6145.35,
-    "variance": 23081.71
+    "total_actual": 6172.03,
+    "variance": 23055.03
   },
   "cost_by_property": [],
   "narrative": null,
