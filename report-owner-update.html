@@ -203,8 +203,7 @@ function renderPropertyCards(rows) {
   return rows.map(function(r) {
     var cls = pctClass(r.pct_of_budget);
     var invoiceLines = (r.invoices_list_mtd || []).map(function(inv) {
-      return '<tr class="sub"><td>' + esc(inv.vendor) + (inv.desc ? ' &mdash; ' + esc(inv.desc) : '') +
-        (inv.unconfirmed ? ' <i>(unconfirmed category)</i>' : '') + '</td><td class="num">' + money(inv.amount) + '</td></tr>';
+      return '<tr class="sub"><td>' + esc(inv.vendor) + (inv.desc ? ' &mdash; ' + esc(inv.desc) : '') + '</td><td class="num">' + money(inv.amount) + '</td></tr>';
     }).join('');
     return '<div class="prop-card">' +
       '<div class="prop-card-head"><span class="prop-card-name">' + r.property + '</span>' +
