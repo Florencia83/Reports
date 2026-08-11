@@ -17,14 +17,26 @@
         {
           "property": "KN47",
           "region": "Tri-Cities",
-          "last_week": 391.94,
-          "mtd": 3973.45,
+          "last_week": 419.54,
+          "mtd": 4001.05,
           "budget": 22551.1,
-          "pct_of_budget": 17.6,
-          "labor_hours_week": 16.87,
+          "pct_of_budget": 17.7,
+          "labor_hours_week": 18.02,
           "materials_week": 20.42,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 80.3,
+          "materials_mtd": 711.08,
+          "invoices_mtd": 1305.6,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Eden Advanced Pest Techno",
+              "desc": null,
+              "amount": 1305.6,
+              "date": "2026-08-03",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "PS17",
@@ -36,7 +48,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0.38,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS25",
@@ -48,7 +64,19 @@
           "labor_hours_week": 0.8,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 12.95,
+          "materials_mtd": 977.67,
+          "invoices_mtd": 1684.68,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Pannonia Glass Company",
+              "desc": null,
+              "amount": 1684.68,
+              "date": "2026-08-02",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "PS91",
@@ -60,7 +88,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0.53,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "RL16",
@@ -72,7 +104,11 @@
           "labor_hours_week": 10.57,
           "materials_week": 218.36,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 42.13,
+          "materials_mtd": 782.8,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "RL21",
@@ -84,7 +120,19 @@
           "labor_hours_week": 6.02,
           "materials_week": 62.41,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 11.73,
+          "materials_mtd": 278.92,
+          "invoices_mtd": 135.38,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Reliable Rooter",
+              "desc": null,
+              "amount": 135.38,
+              "date": "2026-08-03",
+              "unconfirmed": true
+            }
+          ]
         }
       ],
       "grounds": [
@@ -98,7 +146,11 @@
           "labor_hours_week": 8.3,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 33.95,
+          "materials_mtd": 165.26,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS17",
@@ -110,7 +162,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 4.98,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS25",
@@ -122,7 +178,11 @@
           "labor_hours_week": 0.25,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 5.05,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS91",
@@ -134,7 +194,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.02,
+          "materials_mtd": 28.29,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "RL16",
@@ -146,7 +210,11 @@
           "labor_hours_week": 0.48,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 16.08,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "RL21",
@@ -158,7 +226,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         }
       ]
     },
@@ -175,7 +247,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.43,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "A511",
@@ -187,7 +263,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "A916",
@@ -199,7 +279,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.32,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "B101",
@@ -211,7 +295,11 @@
           "labor_hours_week": 1.42,
           "materials_week": 16.67,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 4.83,
+          "materials_mtd": 16.67,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "C302",
@@ -223,7 +311,11 @@
           "labor_hours_week": 1.78,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 6.27,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "C313",
@@ -235,7 +327,11 @@
           "labor_hours_week": 1.22,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 20.37,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "C616",
@@ -247,7 +343,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "E328",
@@ -259,7 +359,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "H604",
@@ -271,7 +375,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "H731",
@@ -283,7 +391,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.52,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "HL65",
@@ -295,7 +407,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0.58,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "HL73",
@@ -307,7 +423,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "J312",
@@ -319,7 +439,19 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 5.82,
+          "materials_mtd": 25.05,
+          "invoices_mtd": 654.6,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Spokane Water Heater",
+              "desc": null,
+              "amount": 654.6,
+              "date": "2026-08-05",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "K104",
@@ -331,7 +463,11 @@
           "labor_hours_week": 3.93,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 19.33,
+          "materials_mtd": 261.81,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "K308",
@@ -343,7 +479,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.95,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "L912",
@@ -355,7 +495,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "L925",
@@ -367,7 +511,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "M221",
@@ -379,7 +527,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "M405",
@@ -391,7 +543,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 12.52,
+          "materials_mtd": 761.26,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "M608",
@@ -403,7 +559,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "MS22",
@@ -415,19 +575,35 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "MS43",
           "region": "Spokane",
-          "last_week": 0,
-          "mtd": 734.33,
+          "last_week": 6.83,
+          "mtd": 741.17,
           "budget": 733.1,
-          "pct_of_budget": 100.2,
-          "labor_hours_week": 0,
+          "pct_of_budget": 101.1,
+          "labor_hours_week": 0.68,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.12,
+          "materials_mtd": 110,
+          "invoices_mtd": 610,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Redcliffe Electric",
+              "desc": null,
+              "amount": 610,
+              "date": "2026-08-03",
+              "unconfirmed": true
+            }
+          ]
         },
         {
           "property": "O155",
@@ -439,7 +615,11 @@
           "labor_hours_week": 3.18,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 16.98,
+          "materials_mtd": 31.17,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "P705",
@@ -451,7 +631,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 10.47,
+          "materials_mtd": 472.55,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "S129",
@@ -463,7 +647,11 @@
           "labor_hours_week": 1.43,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 7.73,
+          "materials_mtd": 100.35,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "S300",
@@ -475,7 +663,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.68,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "SF21",
@@ -487,7 +679,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "V202",
@@ -499,7 +695,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0.47,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "W117",
@@ -511,7 +711,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 5.13,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "W225",
@@ -523,7 +727,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "W226",
@@ -535,7 +743,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 5.85,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         }
       ],
       "grounds": [
@@ -549,7 +761,11 @@
           "labor_hours_week": 1.1,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.68,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "A511",
@@ -561,7 +777,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 4.92,
+          "materials_mtd": 47.73,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "A916",
@@ -573,7 +793,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0.68,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "B101",
@@ -585,7 +809,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.55,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "C302",
@@ -597,7 +825,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 3.65,
+          "materials_mtd": 35.97,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "C313",
@@ -609,7 +841,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.87,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "C616",
@@ -621,7 +857,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "E328",
@@ -633,7 +873,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.83,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "H604",
@@ -645,7 +889,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "H731",
@@ -657,7 +905,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "HL65",
@@ -669,7 +921,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "HL73",
@@ -681,7 +937,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "J312",
@@ -693,7 +953,11 @@
           "labor_hours_week": 3.77,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 5.77,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "K104",
@@ -705,7 +969,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 12.95,
+          "materials_mtd": 16.53,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "K308",
@@ -717,7 +985,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.93,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "L912",
@@ -729,7 +1001,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.83,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "L925",
@@ -741,7 +1017,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "M221",
@@ -753,7 +1033,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 6.32,
+          "materials_mtd": 48.61,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "M405",
@@ -765,7 +1049,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.73,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "M608",
@@ -777,7 +1065,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.35,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "MS22",
@@ -789,7 +1081,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "MS43",
@@ -801,7 +1097,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "O155",
@@ -813,7 +1113,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 6.22,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "P705",
@@ -825,7 +1129,11 @@
           "labor_hours_week": 5.25,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 11.98,
+          "materials_mtd": 13.72,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "S129",
@@ -837,7 +1145,11 @@
           "labor_hours_week": 1.65,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 5.48,
+          "materials_mtd": 17.92,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "S300",
@@ -849,7 +1161,11 @@
           "labor_hours_week": 1.93,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.87,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "SF21",
@@ -861,7 +1177,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "V202",
@@ -873,7 +1193,11 @@
           "labor_hours_week": 3.38,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 12.32,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "W117",
@@ -885,7 +1209,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0.9,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "W225",
@@ -897,7 +1225,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "W226",
@@ -909,7 +1241,11 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 1.27,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         }
       ]
     },
@@ -926,7 +1262,11 @@
           "labor_hours_week": 0,
           "materials_week": 99.38,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 5.33,
+          "materials_mtd": 353.43,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "TC68",
@@ -938,7 +1278,11 @@
           "labor_hours_week": 5.77,
           "materials_week": 459.36,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 20.12,
+          "materials_mtd": 5342.5,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         }
       ],
       "grounds": [
@@ -952,7 +1296,11 @@
           "labor_hours_week": 2,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "TC68",
@@ -964,7 +1312,19 @@
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
-          "invoices_list_week": []
+          "invoices_list_week": [],
+          "labor_hours_mtd": 2.65,
+          "materials_mtd": 0,
+          "invoices_mtd": 1823.25,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Malone's Landscape Management",
+              "desc": "Grounds - Contractor",
+              "amount": 1823.25,
+              "date": "2026-08-01",
+              "unconfirmed": false
+            }
+          ]
         }
       ]
     }
@@ -981,7 +1341,11 @@
         "labor_hours_week": 10.57,
         "materials_week": 218.36,
         "invoices_week": 0,
-        "invoices_list_week": []
+        "invoices_list_week": [],
+        "labor_hours_mtd": 42.13,
+        "materials_mtd": 782.8,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
       },
       "grounds": {
         "property": "RL16",
@@ -993,7 +1357,11 @@
         "labor_hours_week": 0.48,
         "materials_week": 0,
         "invoices_week": 0,
-        "invoices_list_week": []
+        "invoices_list_week": [],
+        "labor_hours_mtd": 16.08,
+        "materials_mtd": 0,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
       },
       "turns": {
         "last_week": null,
@@ -1013,14 +1381,26 @@
       "repairs": {
         "property": "KN47",
         "region": "Tri-Cities",
-        "last_week": 391.94,
-        "mtd": 3973.45,
+        "last_week": 419.54,
+        "mtd": 4001.05,
         "budget": 22551.1,
-        "pct_of_budget": 17.6,
-        "labor_hours_week": 16.87,
+        "pct_of_budget": 17.7,
+        "labor_hours_week": 18.02,
         "materials_week": 20.42,
         "invoices_week": 0,
-        "invoices_list_week": []
+        "invoices_list_week": [],
+        "labor_hours_mtd": 80.3,
+        "materials_mtd": 711.08,
+        "invoices_mtd": 1305.6,
+        "invoices_list_mtd": [
+          {
+            "vendor": "Eden Advanced Pest Techno",
+            "desc": null,
+            "amount": 1305.6,
+            "date": "2026-08-03",
+            "unconfirmed": true
+          }
+        ]
       },
       "grounds": {
         "property": "KN47",
@@ -1032,7 +1412,11 @@
         "labor_hours_week": 8.3,
         "materials_week": 0,
         "invoices_week": 0,
-        "invoices_list_week": []
+        "invoices_list_week": [],
+        "labor_hours_mtd": 33.95,
+        "materials_mtd": 165.26,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
       },
       "turns": {
         "last_week": null,
@@ -1041,19 +1425,19 @@
         "pct_of_budget": null
       },
       "total": {
-        "last_week": 576.77,
-        "mtd": 4926.41,
+        "last_week": 604.37,
+        "mtd": 4954.01,
         "budget": 28815.3,
-        "pct_of_budget": 17.1,
+        "pct_of_budget": 17.2,
         "partial": true
       }
     },
     "PORTFOLIO": {
       "repairs": {
-        "last_week": 2088.8,
-        "mtd": 19587.81,
+        "last_week": 2123.24,
+        "mtd": 19622.24,
         "budget": 67431.05,
-        "pct_of_budget": 29
+        "pct_of_budget": 29.1
       },
       "grounds": {
         "last_week": 683.86,
@@ -1068,10 +1452,10 @@
         "pct_of_budget": null
       },
       "total": {
-        "last_week": 2772.6600000000003,
-        "mtd": 25733.160000000003,
+        "last_week": 2807.1,
+        "mtd": 25767.590000000004,
         "budget": 96658.11,
-        "pct_of_budget": 26.6,
+        "pct_of_budget": 26.7,
         "partial": true
       }
     }

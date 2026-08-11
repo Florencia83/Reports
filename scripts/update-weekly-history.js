@@ -655,7 +655,7 @@ async function fetchQboProcessed() {
     if (!category) continue; // Turn/CapEx/other -- out of scope for Repairs+Grounds here
     const propMatch = String(t.dept || '').match(/^[a-z]+\d+/i);
     if (!propMatch) continue;
-    records.push({ date: t.d, property: propMatch[0].toLowerCase(), amount: t.amt, category, vendor: t.vendor, desc: unconfirmed ? 'uncategorized bill, assumed Repairs' : t.ln, unconfirmed });
+    records.push({ date: t.d, property: propMatch[0].toLowerCase(), amount: t.amt, category, vendor: t.vendor, desc: unconfirmed ? null : t.ln, unconfirmed });
   }
   return records;
 }
@@ -1148,12 +1148,14 @@ async function main() {
     const qboByPropWeek = qboByProperty(weekQboRecords, qboCategoryName);
     const qboByPropMonth = qboByProperty(monthQboRecords, qboCategoryName);
     const qboListByPropWeek = qboListByProperty(weekQboRecords, qboCategoryName);
+    const qboListByPropMonth = qboListByProperty(monthQboRecords, qboCategoryName);
     const allProps = Object.keys(PROPERTY_IDS);
     const budgets = await appfolioPropertyBudgets(allProps, month, accountName);
     return allProps.map(prop => {
       const laborHoursWeek = laborByPropWeek[prop] ? laborByPropWeek[prop].hours : 0;
       const materialsWeek = matByPropWeek[prop] || 0;
       const invoicesWeek = qboByPropWeek[prop] || 0;
+      const laborHoursMonth = laborByPropMonth[prop] ? laborByPropMonth[prop].hours : 0;
       const laborCostMonth = laborByPropMonth[prop] ? laborByPropMonth[prop].cost : 0;
       const materialsMonth = matByPropMonth[prop] || 0;
       const invoicesMonth = qboByPropMonth[prop] || 0;
@@ -1169,13 +1171,19 @@ async function main() {
         pct_of_budget: budget ? Math.round((mtd / budget) * 1000) / 10 : null,
         // Added 2026-08-10 for the owner-update per-property card breakdown (Florencia:
         // show Invoices/Labor hours/Ramp purchases per line, invoices listed individually).
-        // Deliberately WEEK-scoped, not MTD (Florencia, 2026-08-10: each week's report
-        // shows only that week's own activity -- an invoice dated Aug 3 belongs on the
-        // Aug 3-9 report, not folded into Aug 10-16's month-to-date).
+        // Both week- and month-scoped versions kept: the card itself shows MONTH-TO-DATE
+        // (Florencia, 2026-08-10 final call: "que se vea month to date con el detalle de
+        // las invoices") -- an invoice dated Aug 3 shows on every week's card for the
+        // rest of that month, same as the MTD $ total already does; `_week` is kept
+        // around in case a strictly-this-week view is wanted again later.
         labor_hours_week: Math.round(laborHoursWeek * 100) / 100,
         materials_week: Math.round(materialsWeek * 100) / 100,
         invoices_week: Math.round(invoicesWeek * 100) / 100,
         invoices_list_week: (qboListByPropWeek[prop] || []).slice().sort((a, b) => b.amount - a.amount),
+        labor_hours_mtd: Math.round(laborHoursMonth * 100) / 100,
+        materials_mtd: Math.round(materialsMonth * 100) / 100,
+        invoices_mtd: Math.round(invoicesMonth * 100) / 100,
+        invoices_list_mtd: (qboListByPropMonth[prop] || []).slice().sort((a, b) => b.amount - a.amount),
       };
     });
   }
