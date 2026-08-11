@@ -191,6 +191,12 @@ function pctClass(v) { if (v === null || v === undefined) return ''; return v > 
 function pctText(v) { return v === null || v === undefined ? '&mdash;' : v + '%'; }
 function hoursText(v) { return v === null || v === undefined ? '&mdash;' : Number(v).toFixed(1) + 'h'; }
 function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+// Inline style (not just the CSS class) so header background/text color survive being
+// copy-pasted into Gmail/Google Docs, which drops the page's external <style> block on
+// paste but keeps inline style= attributes -- otherwise white header text turns
+// invisible on a white cell (same gotcha already fixed in report-weekly-update.html;
+// Florencia hit it live 2026-08-10 pasting this report into an email).
+function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' style="background:#4a6f92;color:#ffffff;">' + text + '</th>'; }
 
 // One card per property (Florencia, 2026-08-10 -- replaced the old 5-column table,
 // which forced horizontal scrolling on narrow screens). Each card: name + budget/%
@@ -241,14 +247,14 @@ function renderRegions(regions) {
 // actual-spend source yet, so its Last Week/MTD/% columns stay blank -- Total is
 // Repairs+Grounds only until Turns actual is built (see the page's own callout above).
 function renderFlaggedTable(scopes) {
-  var head = '<tr><th>Scope</th><th class="num">Last Week</th><th class="num">MTD</th><th class="num">Budget</th><th class="num">% Used</th></tr>';
+  var head = '<tr>' + th('Scope') + th('Last Week', 'num') + th('MTD', 'num') + th('Budget', 'num') + th('% Used', 'num') + '</tr>';
   function row(name, r) {
     if (!r) return '<tr><td class="prop">' + name + '</td><td class="num" colspan="4">&mdash; no data &mdash;</td></tr>';
     var cls = pctClass(r.pct_of_budget);
     return '<tr><td class="prop">' + name + '</td><td class="num">' + money(r.last_week) + '</td><td class="num">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
   }
   var body = scopes.map(function(s) {
-    return '<tr class="group-row"><td colspan="5" class="group-label">' + s.label + '</td></tr>' +
+    return '<tr class="group-row"><td colspan="5" class="group-label" style="background:#4a6f92;color:#ffffff;">' + s.label + '</td></tr>' +
       row('Repairs', s.scope.repairs) + row('Grounds', s.scope.grounds) + row('Turns', s.scope.turns) + row('Total', s.scope.total);
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
