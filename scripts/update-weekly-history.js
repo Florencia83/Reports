@@ -1147,15 +1147,17 @@ async function main() {
     const matByPropMonth = materialsByPropFn(monthRampRecords);
     const qboByPropWeek = qboByProperty(weekQboRecords, qboCategoryName);
     const qboByPropMonth = qboByProperty(monthQboRecords, qboCategoryName);
-    const qboListByPropMonth = qboListByProperty(monthQboRecords, qboCategoryName);
+    const qboListByPropWeek = qboListByProperty(weekQboRecords, qboCategoryName);
     const allProps = Object.keys(PROPERTY_IDS);
     const budgets = await appfolioPropertyBudgets(allProps, month, accountName);
     return allProps.map(prop => {
-      const laborHoursMonth = laborByPropMonth[prop] ? laborByPropMonth[prop].hours : 0;
+      const laborHoursWeek = laborByPropWeek[prop] ? laborByPropWeek[prop].hours : 0;
+      const materialsWeek = matByPropWeek[prop] || 0;
+      const invoicesWeek = qboByPropWeek[prop] || 0;
       const laborCostMonth = laborByPropMonth[prop] ? laborByPropMonth[prop].cost : 0;
       const materialsMonth = matByPropMonth[prop] || 0;
       const invoicesMonth = qboByPropMonth[prop] || 0;
-      const lastWeek = (laborByPropWeek[prop] ? laborByPropWeek[prop].cost : 0) + (matByPropWeek[prop] || 0) + (qboByPropWeek[prop] || 0);
+      const lastWeek = (laborByPropWeek[prop] ? laborByPropWeek[prop].cost : 0) + materialsWeek + invoicesWeek;
       const mtd = laborCostMonth + materialsMonth + invoicesMonth;
       const budget = budgets[prop] != null ? budgets[prop] : null;
       return {
@@ -1167,10 +1169,13 @@ async function main() {
         pct_of_budget: budget ? Math.round((mtd / budget) * 1000) / 10 : null,
         // Added 2026-08-10 for the owner-update per-property card breakdown (Florencia:
         // show Invoices/Labor hours/Ramp purchases per line, invoices listed individually).
-        labor_hours_mtd: Math.round(laborHoursMonth * 100) / 100,
-        materials_mtd: Math.round(materialsMonth * 100) / 100,
-        invoices_mtd: Math.round(invoicesMonth * 100) / 100,
-        invoices_list_mtd: (qboListByPropMonth[prop] || []).slice().sort((a, b) => b.amount - a.amount),
+        // Deliberately WEEK-scoped, not MTD (Florencia, 2026-08-10: each week's report
+        // shows only that week's own activity -- an invoice dated Aug 3 belongs on the
+        // Aug 3-9 report, not folded into Aug 10-16's month-to-date).
+        labor_hours_week: Math.round(laborHoursWeek * 100) / 100,
+        materials_week: Math.round(materialsWeek * 100) / 100,
+        invoices_week: Math.round(invoicesWeek * 100) / 100,
+        invoices_list_week: (qboListByPropWeek[prop] || []).slice().sort((a, b) => b.amount - a.amount),
       };
     });
   }

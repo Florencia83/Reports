@@ -174,10 +174,6 @@ footer a { color: var(--ink-soft); }
     <p class="masthead-range" id="range-label"></p>
   </div>
 
-  <div class="callout" style="border-left-color:var(--warn); font-size:12.5px; margin-bottom:16px;">
-    <b>Known gap:</b> Turns has a real Monthly Budget now (AppFolio account 52002), but Turns actual spend is still not tracked, so its Last Week/MTD columns stay blank and Total remains Repairs+Grounds only.
-  </div>
-
   <div id="content-root">
     <p style="font-family:'Manrope',sans-serif; font-size:12px; color:var(--ink-soft);">Loading&hellip;</p>
   </div>
@@ -206,7 +202,7 @@ function renderPropertyCards(rows) {
   if (!rows.length) return '<div class="callout" style="font-size:12.5px;">No properties in this region.</div>';
   return rows.map(function(r) {
     var cls = pctClass(r.pct_of_budget);
-    var invoiceLines = (r.invoices_list_mtd || []).map(function(inv) {
+    var invoiceLines = (r.invoices_list_week || []).map(function(inv) {
       return '<tr class="sub"><td>' + esc(inv.vendor) + (inv.desc ? ' &mdash; ' + esc(inv.desc) : '') +
         (inv.unconfirmed ? ' <i>(unconfirmed category)</i>' : '') + '</td><td class="num">' + money(inv.amount) + '</td></tr>';
     }).join('');
@@ -214,10 +210,10 @@ function renderPropertyCards(rows) {
       '<div class="prop-card-head"><span class="prop-card-name">' + r.property + '</span>' +
       '<span class="prop-card-budget ' + cls + '">' + money(r.budget) + ' budget &middot; ' + pctText(r.pct_of_budget) + ' used</span></div>' +
       '<table class="prop-breakdown">' +
-      '<tr><td>Invoices</td><td class="num">' + money(r.invoices_mtd) + '</td></tr>' +
+      '<tr><td>Invoices</td><td class="num">' + money(r.invoices_week) + '</td></tr>' +
       invoiceLines +
-      '<tr><td>Labor Hours</td><td class="num">' + hoursText(r.labor_hours_mtd) + '</td></tr>' +
-      '<tr><td>Ramp Purchases</td><td class="num">' + money(r.materials_mtd) + '</td></tr>' +
+      '<tr><td>Labor Hours</td><td class="num">' + hoursText(r.labor_hours_week) + '</td></tr>' +
+      '<tr><td>Ramp Purchases</td><td class="num">' + money(r.materials_week) + '</td></tr>' +
       '</table></div>';
   }).join('');
 }
