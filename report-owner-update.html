@@ -243,7 +243,7 @@ function renderRegions(regions) {
 // own callout above for that explanation, kept out of the table itself so headers stay
 // short and the table doesn't force horizontal scroll).
 function renderScopeTable(label, scope) {
-  var head = '<tr><th>' + label + '</th><th class="num">Last Wk</th><th class="num">MTD</th><th class="num">Budget</th><th class="num">% Used</th></tr>';
+  var head = '<tr><th>' + label + '</th><th class="num">Last Week</th><th class="num">MTD</th><th class="num">Budget</th><th class="num">% Used</th></tr>';
   function row(name, r) {
     if (!r) return '<tr><td class="prop">' + name + '</td><td class="num" colspan="4">&mdash; no data &mdash;</td></tr>';
     var cls = pctClass(r.pct_of_budget);
