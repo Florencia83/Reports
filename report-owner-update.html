@@ -93,6 +93,7 @@ td.num, th.num { font-family: 'Manrope', system-ui, sans-serif; font-variant-num
 td.detail, th.detail { white-space: normal; min-width: 220px; }
 td.detail { color: var(--ink-soft); }
 tr.total td { font-weight: 600; background: var(--paper); }
+tr.group-row td.group-label { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--violet); color: #ffffff; border-right: none; }
 td.prop { font-family: 'Manrope', system-ui, sans-serif; font-weight: 700; }
 td.num.bad { background: color-mix(in srgb, var(--bad) 18%, var(--surface)); font-weight: 500; }
 td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); font-weight: 500; }
@@ -236,20 +237,25 @@ function renderRegions(regions) {
   return html;
 }
 
-// One 4-row table per flagged scope (RL16, KN47, Portfolio Total): Repairs / Grounds /
-// Turns / Total as rows. Turns has a real Monthly Budget (AppFolio account 52002,
-// wired 2026-08-10) but no actual-spend source yet, so its Last Wk/MTD/% columns stay
-// blank -- Total is Repairs+Grounds only until Turns actual is built (see the page's
-// own callout above for that explanation, kept out of the table itself so headers stay
-// short and the table doesn't force horizontal scroll).
-function renderScopeTable(label, scope) {
-  var head = '<tr><th>' + label + '</th><th class="num">Last Week</th><th class="num">MTD</th><th class="num">Budget</th><th class="num">% Used</th></tr>';
+// ONE shared table for all 3 flagged scopes (RL16, KN47, Portfolio Total), each a
+// group-label row + Repairs/Grounds/Turns/Total rows -- merged into a single <table>
+// 2026-08-10 (Florencia: the column dividers weren't lining up across 3 separate
+// tables, since each auto-sized its own first column to its own longest label like
+// "Portfolio Total"). One shared table guarantees the same column widths everywhere.
+// Turns has a real Monthly Budget (AppFolio account 52002, wired 2026-08-10) but no
+// actual-spend source yet, so its Last Week/MTD/% columns stay blank -- Total is
+// Repairs+Grounds only until Turns actual is built (see the page's own callout above).
+function renderFlaggedTable(scopes) {
+  var head = '<tr><th>Scope</th><th class="num">Last Week</th><th class="num">MTD</th><th class="num">Budget</th><th class="num">% Used</th></tr>';
   function row(name, r) {
     if (!r) return '<tr><td class="prop">' + name + '</td><td class="num" colspan="4">&mdash; no data &mdash;</td></tr>';
     var cls = pctClass(r.pct_of_budget);
     return '<tr><td class="prop">' + name + '</td><td class="num">' + money(r.last_week) + '</td><td class="num">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
   }
-  var body = row('Repairs', scope.repairs) + row('Grounds', scope.grounds) + row('Turns', scope.turns) + row('Total', scope.total);
+  var body = scopes.map(function(s) {
+    return '<tr class="group-row"><td colspan="5" class="group-label">' + s.label + '</td></tr>' +
+      row('Repairs', s.scope.repairs) + row('Grounds', s.scope.grounds) + row('Turns', s.scope.turns) + row('Total', s.scope.total);
+  }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
@@ -272,9 +278,11 @@ function renderWeek(data) {
   html += renderIssues(data.issues);
 
   html += '<section><p class="section-label">Flagged Properties &amp; Portfolio Total</p>' +
-    renderScopeTable('RL16', data.flagged.RL16) +
-    renderScopeTable('KN47', data.flagged.KN47) +
-    renderScopeTable('Portfolio Total', data.flagged.PORTFOLIO) +
+    renderFlaggedTable([
+      { label: 'RL16', scope: data.flagged.RL16 },
+      { label: 'KN47', scope: data.flagged.KN47 },
+      { label: 'Portfolio Total', scope: data.flagged.PORTFOLIO },
+    ]) +
     '</section>';
 
   html += renderRegions(data.regions);
