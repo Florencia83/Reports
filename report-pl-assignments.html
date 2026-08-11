@@ -176,9 +176,15 @@ footer a { color: var(--ink-soft); }
 <script>
 function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
 function vsAvgClass(v, avg) { if (v === null || v === undefined) return ''; return v > avg ? 'bad' : 'good'; }
+// Inline style (not just the CSS class) so header background/text color survive being
+// copy-pasted into Gmail/Google Docs, which drops the page's external <style> block on
+// paste but keeps inline style= attributes -- otherwise white header text turns
+// invisible on a white cell (same fix already in report-weekly-update.html and
+// report-owner-update.html; this page never had it, Florencia 2026-08-11).
+function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' style="background:#4a6f92;color:#ffffff;">' + text + '</th>'; }
 
 function renderTable(rows, avg) {
-  var head = '<tr><th>Property</th><th class="num">Units</th><th class="num">Budget</th><th class="num">Actual $/Unit</th><th class="detail">Detail</th></tr>';
+  var head = '<tr>' + th('Property') + th('Units', 'num') + th('Budget', 'num') + th('Actual $/Unit', 'num') + th('Detail', 'detail') + '</tr>';
   var body = rows.map(function(r) {
     var cls = vsAvgClass(r.actual_per_unit, avg);
     return '<tr><td class="prop">' + r.property + '</td><td class="num">' + (r.units != null ? r.units : '&mdash;') + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + money(r.actual_per_unit) + '</td><td class="detail">' + (r.detail || '') + '</td></tr>';
@@ -203,7 +209,7 @@ function renderAppliancesTable(items) {
       return;
     }
     rows.sort(function(a, b) { return (a.prop || '').localeCompare(b.prop || ''); });
-    var head = '<tr><th>Property / Unit</th><th class="num">Amount</th><th>Cardholder</th><th class="detail">Description</th></tr>';
+    var head = '<tr>' + th('Property / Unit') + th('Amount', 'num') + th('Cardholder') + th('Description', 'detail') + '</tr>';
     var body = rows.map(function(r) {
       var propUnit = r.unit ? r.unit.toUpperCase() : (r.prop ? r.prop.toUpperCase() : '&mdash;');
       var desc = (r.merchant ? '<b>' + r.merchant + '</b> &mdash; ' : '') + (r.appliance || '');
