@@ -1,0 +1,1086 @@
+{
+  "week_start": "2026-08-03",
+  "week_end": "2026-08-09",
+  "label": "August 3 – 9, 2026",
+  "month_label": "August 2026",
+  "generated_at": "2026-08-10",
+  "complete": true,
+  "source": "Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy's feed, pending Florencia's own QBO access) for Last Week/MTD actual (Repairs+Grounds only, Turns actual not yet tracked); AppFolio for the fixed Monthly Budget number, including Turns (account 52002) — automated.",
+  "issues": {
+    "flagged": 31,
+    "resolved": 6
+  },
+  "regions": [
+    {
+      "region": "Tri-Cities",
+      "repairs": [
+        {
+          "property": "KN47",
+          "region": "Tri-Cities",
+          "last_week": 2256.36,
+          "mtd": 2557.12,
+          "budget": 22551.1,
+          "pct_of_budget": 11.3,
+          "labor_hours_mtd": 75.17,
+          "materials_mtd": 711.08,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "PS17",
+          "region": "Tri-Cities",
+          "last_week": 10.77,
+          "mtd": 10.77,
+          "budget": 734.2,
+          "pct_of_budget": 1.5,
+          "labor_hours_mtd": 0.38,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "PS25",
+          "region": "Tri-Cities",
+          "last_week": 1284.44,
+          "mtd": 1306.04,
+          "budget": 2439,
+          "pct_of_budget": 53.5,
+          "labor_hours_mtd": 12.95,
+          "materials_mtd": 977.67,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "PS91",
+          "region": "Tri-Cities",
+          "last_week": 5.33,
+          "mtd": 5.33,
+          "budget": 681.8,
+          "pct_of_budget": 0.8,
+          "labor_hours_mtd": 0.53,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "RL16",
+          "region": "Tri-Cities",
+          "last_week": 1352.59,
+          "mtd": 1768.65,
+          "budget": 7913,
+          "pct_of_budget": 22.4,
+          "labor_hours_mtd": 39.55,
+          "materials_mtd": 782.8,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "RL21",
+          "region": "Tri-Cities",
+          "last_week": 351.61,
+          "mtd": 471.7,
+          "budget": 1119.4,
+          "pct_of_budget": 42.1,
+          "labor_hours_mtd": 9.42,
+          "materials_mtd": 242.57,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        }
+      ],
+      "grounds": [
+        {
+          "property": "KN47",
+          "region": "Tri-Cities",
+          "last_week": 710.08,
+          "mtd": 952.96,
+          "budget": 6264.2,
+          "pct_of_budget": 15.2,
+          "labor_hours_mtd": 33.95,
+          "materials_mtd": 165.26,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "PS17",
+          "region": "Tri-Cities",
+          "last_week": 109.63,
+          "mtd": 109.63,
+          "budget": 367.1,
+          "pct_of_budget": 29.9,
+          "labor_hours_mtd": 4.98,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "PS25",
+          "region": "Tri-Cities",
+          "last_week": 100.46,
+          "mtd": 130.89,
+          "budget": 1219.5,
+          "pct_of_budget": 10.7,
+          "labor_hours_mtd": 5.05,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "PS91",
+          "region": "Tri-Cities",
+          "last_week": 72.66,
+          "mtd": 72.66,
+          "budget": 340.9,
+          "pct_of_budget": 21.3,
+          "labor_hours_mtd": 2.02,
+          "materials_mtd": 28.29,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "RL16",
+          "region": "Tri-Cities",
+          "last_week": 328.1,
+          "mtd": 398.8,
+          "budget": 2544.1,
+          "pct_of_budget": 15.7,
+          "labor_hours_mtd": 16.08,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "RL21",
+          "region": "Tri-Cities",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 223.9,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        }
+      ]
+    },
+    {
+      "region": "Spokane",
+      "repairs": [
+        {
+          "property": "A210",
+          "region": "Spokane",
+          "last_week": 34.33,
+          "mtd": 34.33,
+          "budget": 445.9,
+          "pct_of_budget": 7.7,
+          "labor_hours_mtd": 1.43,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "A511",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 357.1,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "A916",
+          "region": "Spokane",
+          "last_week": 57.92,
+          "mtd": 57.92,
+          "budget": 517,
+          "pct_of_budget": 11.2,
+          "labor_hours_mtd": 2.32,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "B101",
+          "region": "Spokane",
+          "last_week": 55.17,
+          "mtd": 108.67,
+          "budget": 673.2,
+          "pct_of_budget": 16.1,
+          "labor_hours_mtd": 4.83,
+          "materials_mtd": 16.67,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "C302",
+          "region": "Spokane",
+          "last_week": 71.08,
+          "mtd": 117.45,
+          "budget": 818.3,
+          "pct_of_budget": 14.4,
+          "labor_hours_mtd": 6.27,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "C313",
+          "region": "Spokane",
+          "last_week": 326.42,
+          "mtd": 338.58,
+          "budget": 2125.46,
+          "pct_of_budget": 15.9,
+          "labor_hours_mtd": 20.37,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "C616",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "E328",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 243.6,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "H604",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "H731",
+          "region": "Spokane",
+          "last_week": 39.43,
+          "mtd": 39.43,
+          "budget": 423.8,
+          "pct_of_budget": 9.3,
+          "labor_hours_mtd": 1.52,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "HL65",
+          "region": "Spokane",
+          "last_week": 5.83,
+          "mtd": 5.83,
+          "budget": 501.6,
+          "pct_of_budget": 1.2,
+          "labor_hours_mtd": 0.58,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "HL73",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 229.9,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "J312",
+          "region": "Spokane",
+          "last_week": 106.18,
+          "mtd": 149.08,
+          "budget": 589.09,
+          "pct_of_budget": 25.3,
+          "labor_hours_mtd": 5.82,
+          "materials_mtd": 25.05,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "K104",
+          "region": "Spokane",
+          "last_week": 529.68,
+          "mtd": 529.68,
+          "budget": 3099.6,
+          "pct_of_budget": 17.1,
+          "labor_hours_mtd": 15.4,
+          "materials_mtd": 261.81,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "K308",
+          "region": "Spokane",
+          "last_week": 50.7,
+          "mtd": 50.7,
+          "budget": 292.3,
+          "pct_of_budget": 17.3,
+          "labor_hours_mtd": 1.95,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "L912",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "L925",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "M221",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 682.6,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "M405",
+          "region": "Spokane",
+          "last_week": 1053.14,
+          "mtd": 1053.14,
+          "budget": 1095,
+          "pct_of_budget": 96.2,
+          "labor_hours_mtd": 12.52,
+          "materials_mtd": 761.26,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "M608",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 450.9,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "MS22",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 317.1,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "MS43",
+          "region": "Spokane",
+          "last_week": 124.33,
+          "mtd": 124.33,
+          "budget": 733.1,
+          "pct_of_budget": 17,
+          "labor_hours_mtd": 1.43,
+          "materials_mtd": 110,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "O155",
+          "region": "Spokane",
+          "last_week": 351.89,
+          "mtd": 411.45,
+          "budget": 5276.1,
+          "pct_of_budget": 7.8,
+          "labor_hours_mtd": 16.98,
+          "materials_mtd": 31.17,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "P705",
+          "region": "Spokane",
+          "last_week": 667.97,
+          "mtd": 667.97,
+          "budget": 1125.3,
+          "pct_of_budget": 59.4,
+          "labor_hours_mtd": 10.47,
+          "materials_mtd": 472.55,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "S129",
+          "region": "Spokane",
+          "last_week": 264.15,
+          "mtd": 301.42,
+          "budget": 1221.2,
+          "pct_of_budget": 24.7,
+          "labor_hours_mtd": 7.73,
+          "materials_mtd": 100.35,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "S300",
+          "region": "Spokane",
+          "last_week": 43.77,
+          "mtd": 43.77,
+          "budget": 577.3,
+          "pct_of_budget": 7.6,
+          "labor_hours_mtd": 1.68,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "SF21",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "V202",
+          "region": "Spokane",
+          "last_week": 11.67,
+          "mtd": 11.67,
+          "budget": 409.7,
+          "pct_of_budget": 2.8,
+          "labor_hours_mtd": 0.47,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "W117",
+          "region": "Spokane",
+          "last_week": 51.33,
+          "mtd": 51.33,
+          "budget": 416.4,
+          "pct_of_budget": 12.3,
+          "labor_hours_mtd": 5.13,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "W225",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "W226",
+          "region": "Spokane",
+          "last_week": 135.03,
+          "mtd": 135.03,
+          "budget": 547.8,
+          "pct_of_budget": 24.7,
+          "labor_hours_mtd": 5.85,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        }
+      ],
+      "grounds": [
+        {
+          "property": "A210",
+          "region": "Spokane",
+          "last_week": 14.43,
+          "mtd": 41.8,
+          "budget": 222.9,
+          "pct_of_budget": 18.8,
+          "labor_hours_mtd": 1.68,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "A511",
+          "region": "Spokane",
+          "last_week": 169.48,
+          "mtd": 169.48,
+          "budget": 255,
+          "pct_of_budget": 66.5,
+          "labor_hours_mtd": 4.92,
+          "materials_mtd": 47.73,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "A916",
+          "region": "Spokane",
+          "last_week": 16.92,
+          "mtd": 16.92,
+          "budget": 258.5,
+          "pct_of_budget": 6.5,
+          "labor_hours_mtd": 0.68,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "B101",
+          "region": "Spokane",
+          "last_week": 39,
+          "mtd": 39,
+          "budget": 336.6,
+          "pct_of_budget": 11.6,
+          "labor_hours_mtd": 1.55,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "C302",
+          "region": "Spokane",
+          "last_week": 126.37,
+          "mtd": 126.37,
+          "budget": 409.2,
+          "pct_of_budget": 30.9,
+          "labor_hours_mtd": 3.65,
+          "materials_mtd": 35.97,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "C313",
+          "region": "Spokane",
+          "last_week": 70.93,
+          "mtd": 70.93,
+          "budget": 897.3,
+          "pct_of_budget": 7.9,
+          "labor_hours_mtd": 2.87,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "C616",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "E328",
+          "region": "Spokane",
+          "last_week": 70.8,
+          "mtd": 70.8,
+          "budget": 323.6,
+          "pct_of_budget": 21.9,
+          "labor_hours_mtd": 2.83,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "H604",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "H731",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 211.9,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "HL65",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 250.8,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "HL73",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 115,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "J312",
+          "region": "Spokane",
+          "last_week": 51,
+          "mtd": 79,
+          "budget": 331.36,
+          "pct_of_budget": 23.8,
+          "labor_hours_mtd": 3.17,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "K104",
+          "region": "Spokane",
+          "last_week": 338.41,
+          "mtd": 338.41,
+          "budget": 1549.8,
+          "pct_of_budget": 21.8,
+          "labor_hours_mtd": 12.95,
+          "materials_mtd": 16.53,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "K308",
+          "region": "Spokane",
+          "last_week": 47.7,
+          "mtd": 47.7,
+          "budget": 128.2,
+          "pct_of_budget": 37.2,
+          "labor_hours_mtd": 1.93,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "L912",
+          "region": "Spokane",
+          "last_week": 70.13,
+          "mtd": 70.13,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 2.83,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "L925",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "M221",
+          "region": "Spokane",
+          "last_week": 204.96,
+          "mtd": 204.96,
+          "budget": 341.3,
+          "pct_of_budget": 60.1,
+          "labor_hours_mtd": 6.32,
+          "materials_mtd": 48.61,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "M405",
+          "region": "Spokane",
+          "last_week": 42.9,
+          "mtd": 42.9,
+          "budget": 547.5,
+          "pct_of_budget": 7.8,
+          "labor_hours_mtd": 1.73,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "M608",
+          "region": "Spokane",
+          "last_week": 34.03,
+          "mtd": 34.03,
+          "budget": 225.5,
+          "pct_of_budget": 15.1,
+          "labor_hours_mtd": 1.35,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "MS22",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 158.6,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "MS43",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": 366.6,
+          "pct_of_budget": 0,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "O155",
+          "region": "Spokane",
+          "last_week": 154.48,
+          "mtd": 154.48,
+          "budget": 3638,
+          "pct_of_budget": 4.2,
+          "labor_hours_mtd": 6.22,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "P705",
+          "region": "Spokane",
+          "last_week": 179.4,
+          "mtd": 309.17,
+          "budget": 562.7,
+          "pct_of_budget": 54.9,
+          "labor_hours_mtd": 11.98,
+          "materials_mtd": 13.72,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "S129",
+          "region": "Spokane",
+          "last_week": 113.42,
+          "mtd": 154.37,
+          "budget": 203.5,
+          "pct_of_budget": 75.9,
+          "labor_hours_mtd": 5.48,
+          "materials_mtd": 17.92,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "S300",
+          "region": "Spokane",
+          "last_week": 23.1,
+          "mtd": 70.95,
+          "budget": 288.6,
+          "pct_of_budget": 24.6,
+          "labor_hours_mtd": 2.87,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "SF21",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "V202",
+          "region": "Spokane",
+          "last_week": 221.35,
+          "mtd": 305.52,
+          "budget": 608.4,
+          "pct_of_budget": 50.2,
+          "labor_hours_mtd": 12.32,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "W117",
+          "region": "Spokane",
+          "last_week": 21.6,
+          "mtd": 21.6,
+          "budget": 208.2,
+          "pct_of_budget": 10.4,
+          "labor_hours_mtd": 0.9,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "W225",
+          "region": "Spokane",
+          "last_week": 0,
+          "mtd": 0,
+          "budget": null,
+          "pct_of_budget": null,
+          "labor_hours_mtd": 0,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "W226",
+          "region": "Spokane",
+          "last_week": 31.35,
+          "mtd": 31.35,
+          "budget": 273.9,
+          "pct_of_budget": 11.4,
+          "labor_hours_mtd": 1.27,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        }
+      ]
+    },
+    {
+      "region": "Tacoma",
+      "repairs": [
+        {
+          "property": "TC34",
+          "region": "Tacoma",
+          "last_week": 333.73,
+          "mtd": 433.11,
+          "budget": 1463.6,
+          "pct_of_budget": 29.6,
+          "labor_hours_mtd": 5.33,
+          "materials_mtd": 353.43,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "TC68",
+          "region": "Tacoma",
+          "last_week": 5212.72,
+          "mtd": 5847.12,
+          "budget": 7359.6,
+          "pct_of_budget": 79.4,
+          "labor_hours_mtd": 20.12,
+          "materials_mtd": 5342.5,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        }
+      ],
+      "grounds": [
+        {
+          "property": "TC34",
+          "region": "Tacoma",
+          "last_week": 0,
+          "mtd": 54,
+          "budget": 396.6,
+          "pct_of_budget": 13.6,
+          "labor_hours_mtd": 2,
+          "materials_mtd": 0,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
+        },
+        {
+          "property": "TC68",
+          "region": "Tacoma",
+          "last_week": 71.55,
+          "mtd": 1894.8,
+          "budget": 5157.8,
+          "pct_of_budget": 36.7,
+          "labor_hours_mtd": 2.65,
+          "materials_mtd": 0,
+          "invoices_mtd": 1823.25,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Malone's Landscape Management",
+              "desc": "Grounds - Contractor",
+              "amount": 1823.25,
+              "date": "2026-08-01"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "flagged": {
+    "RL16": {
+      "repairs": {
+        "property": "RL16",
+        "region": "Tri-Cities",
+        "last_week": 1352.59,
+        "mtd": 1768.65,
+        "budget": 7913,
+        "pct_of_budget": 22.4,
+        "labor_hours_mtd": 39.55,
+        "materials_mtd": 782.8,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
+      },
+      "grounds": {
+        "property": "RL16",
+        "region": "Tri-Cities",
+        "last_week": 328.1,
+        "mtd": 398.8,
+        "budget": 2544.1,
+        "pct_of_budget": 15.7,
+        "labor_hours_mtd": 16.08,
+        "materials_mtd": 0,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
+      },
+      "turns": {
+        "last_week": null,
+        "mtd": null,
+        "budget": 4298.5,
+        "pct_of_budget": null
+      },
+      "total": {
+        "last_week": 1680.69,
+        "mtd": 2167.4500000000003,
+        "budget": 10457.1,
+        "pct_of_budget": 20.7,
+        "partial": true
+      }
+    },
+    "KN47": {
+      "repairs": {
+        "property": "KN47",
+        "region": "Tri-Cities",
+        "last_week": 2256.36,
+        "mtd": 2557.12,
+        "budget": 22551.1,
+        "pct_of_budget": 11.3,
+        "labor_hours_mtd": 75.17,
+        "materials_mtd": 711.08,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
+      },
+      "grounds": {
+        "property": "KN47",
+        "region": "Tri-Cities",
+        "last_week": 710.08,
+        "mtd": 952.96,
+        "budget": 6264.2,
+        "pct_of_budget": 15.2,
+        "labor_hours_mtd": 33.95,
+        "materials_mtd": 165.26,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
+      },
+      "turns": {
+        "last_week": null,
+        "mtd": null,
+        "budget": 5313.6,
+        "pct_of_budget": null
+      },
+      "total": {
+        "last_week": 2966.44,
+        "mtd": 3510.08,
+        "budget": 28815.3,
+        "pct_of_budget": 12.2,
+        "partial": true
+      }
+    },
+    "PORTFOLIO": {
+      "repairs": {
+        "last_week": 13016.67,
+        "mtd": 14897.07,
+        "budget": 67431.05,
+        "pct_of_budget": 22.1
+      },
+      "grounds": {
+        "last_week": 3499.66,
+        "mtd": 6079.05,
+        "budget": 29227.06,
+        "pct_of_budget": 20.8
+      },
+      "turns": {
+        "last_week": null,
+        "mtd": null,
+        "budget": 41472.75,
+        "pct_of_budget": null
+      },
+      "total": {
+        "last_week": 16516.33,
+        "mtd": 20976.12,
+        "budget": 96658.11,
+        "pct_of_budget": 21.7,
+        "partial": true
+      }
+    }
+  }
+}

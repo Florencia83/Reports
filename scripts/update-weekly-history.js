@@ -1205,6 +1205,19 @@ async function main() {
     return { repairs, grounds, turns, total };
   }
 
+  // Issues Flagged for Review / Issues Resolved -- manual counts from a separate
+  // tracker Florencia's manager built (not something this pipeline has any source for,
+  // she just tells us the two numbers). Carried forward from the prior owner-update
+  // file the same way kpis/narrative are elsewhere, so a normal automated run never
+  // erases what she last typed in -- only update via the JSON directly (or ask
+  // Florencia for fresh numbers) when she reports a change.
+  const ownerUpdatePath = path.join(DATA_DIR, `owner-update-${weekStart}.json`);
+  let priorIssues = null;
+  if (fs.existsSync(ownerUpdatePath)) {
+    try { priorIssues = JSON.parse(fs.readFileSync(ownerUpdatePath, 'utf8')).issues || null; } catch (e) { /* ignore unparseable prior file */ }
+  }
+  const issues = priorIssues || { flagged: null, resolved: null };
+
   const ownerUpdateJson = {
     week_start: weekStart,
     week_end: dstr(sunday),
@@ -1213,6 +1226,7 @@ async function main() {
     generated_at: todayStr,
     complete: weekJson.complete,
     source: 'Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy\'s feed, pending Florencia\'s own QBO access) for Last Week/MTD actual (Repairs+Grounds only, Turns actual not yet tracked); AppFolio for the fixed Monthly Budget number, including Turns (account 52002) — automated.',
+    issues,
     regions,
     flagged: {
       RL16: scopeBreakdown('RL16'),
@@ -1220,7 +1234,7 @@ async function main() {
       PORTFOLIO: scopeBreakdown(null),
     },
   };
-  fs.writeFileSync(path.join(DATA_DIR, `owner-update-${weekStart}.json`), JSON.stringify(ownerUpdateJson, null, 2));
+  fs.writeFileSync(ownerUpdatePath, JSON.stringify(ownerUpdateJson, null, 2));
   console.log('Wrote owner-update-' + weekStart + '.json —', ownerRepairsRows.length, 'properties x 2 categories, regions:', REGION_ORDER.join(', '));
 }
 

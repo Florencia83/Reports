@@ -169,7 +169,7 @@ footer a { color: var(--ink-soft); }
   </div>
   <div class="email-card">
   <div class="masthead">
-    <h1>Owner Update &mdash; Repairs &amp; Grounds vs. Budget</h1>
+    <h1>Weekly Update &mdash; Repairs &amp; Grounds vs. Budget</h1>
     <p class="masthead-range" id="range-label"></p>
   </div>
 
@@ -252,9 +252,23 @@ function renderScopeTable(label, scope) {
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
+// Issues Flagged for Review / Issues Resolved -- manual counts Florencia reports from
+// a separate tracker her manager built (no automated source here, see
+// update-weekly-history.js's carry-forward comment near `issues`). Added 2026-08-10,
+// right under the masthead per her request.
+function renderIssues(issues) {
+  if (!issues || (issues.flagged == null && issues.resolved == null)) return '';
+  return '<section style="margin-bottom:20px;"><div class="stat-row" style="grid-template-columns: repeat(2, 1fr);">' +
+    '<div class="stat"><p class="stat-label">Issues Flagged for Review</p><p class="stat-value">' + (issues.flagged != null ? issues.flagged : '&mdash;') + '</p></div>' +
+    '<div class="stat"><p class="stat-label">Issues Resolved</p><p class="stat-value">' + (issues.resolved != null ? issues.resolved : '&mdash;') + '</p></div>' +
+    '</div></section>';
+}
+
 function renderWeek(data) {
   var root = document.getElementById('content-root');
   var html = '';
+
+  html += renderIssues(data.issues);
 
   html += '<section><p class="section-label">Flagged Properties &amp; Portfolio Total</p>' +
     renderScopeTable('RL16', data.flagged.RL16) +
