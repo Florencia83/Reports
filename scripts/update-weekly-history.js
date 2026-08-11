@@ -331,6 +331,14 @@ async function fetchQbtJobcodes() {
 
 // Returns raw per-timesheet-entry records (not pre-aggregated) so callers can slice by
 // any date sub-range (this week / month-to-date / last 7 / last 30) without refetching.
+// REAL BUG FOUND 2026-08-11: this function and its two siblings below
+// (fetchGroundsLaborForRange, fetchTurnsLaborForRange) each compute `cost` as raw
+// hours x wage -- missing the x1.5 loaded/burdened rate that's the confirmed
+// company-wide convention (Florencia, 2026-07-16/23; same LABOR_RATE_MULTIPLIER used in
+// update-itemized-detail.js). This whole file (built 2026-07-11/12) never had it,
+// silently understating every labor-driven $ figure in both Weekly Update pages by a
+// third since the pipeline was first built. Found while spot-checking KN47 Grounds
+// against a fresh manual QBT pull -- fixed in all three functions the same day.
 async function fetchQbtLaborForRange(jobcodes, fromStr, toStr) {
   const headers = { Authorization: `Bearer ${process.env.QBT_TOKEN}` };
 
@@ -386,7 +394,7 @@ async function fetchQbtLaborForRange(jobcodes, fromStr, toStr) {
     const leafRef = p[p.length - 1];
     const ref = /^T[A-Z0-9]{5,}/i.test(leafRef) ? leafRef : null;
     const hrs = ts.duration / 3600;
-    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage });
+    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage * 1.5 });
   }
   return records;
 }
@@ -439,7 +447,7 @@ async function fetchGroundsLaborForRange(jobcodes, fromStr, toStr) {
     const leafRef = p[p.length - 1];
     const ref = /^T[A-Z0-9]{5,}/i.test(leafRef) ? leafRef : null;
     const hrs = ts.duration / 3600;
-    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage });
+    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage * 1.5 });
   }
   return records;
 }
@@ -488,7 +496,7 @@ async function fetchTurnsLaborForRange(jobcodes, fromStr, toStr) {
     const leafRef = p[p.length - 1];
     const ref = /^T[A-Z0-9]{5,}/i.test(leafRef) ? leafRef : null;
     const hrs = ts.duration / 3600;
-    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage });
+    records.push({ date: ts.date, ref, property: prop, hours: hrs, cost: hrs * tech.wage * 1.5 });
   }
   return records;
 }
