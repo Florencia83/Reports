@@ -210,7 +210,12 @@ function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' 
 // are also listed individually underneath their total (vendor + category -- NOT a
 // meld reference, the QBO feed doesn't carry one the way Ramp purchases do).
 function renderPropertyCards(rows) {
-  if (!rows.length) return '<div class="callout" style="font-size:12.5px;">No properties in this region.</div>';
+  // Defensive: an older week's JSON (generated before a field/section was added -- e.g.
+  // Turns, added 2026-08-11) won't have this array at all. Rendering used to call
+  // .length on undefined and throw, silently blanking the whole page for that week
+  // (Florencia: "el reporte del 3 al 9 desaparecio"). Never let a missing/older data
+  // shape crash the page again.
+  if (!rows || !rows.length) return '<div class="callout" style="font-size:12.5px;">No properties in this region.</div>';
   return rows.map(function(r) {
     var cls = pctClass(r.pct_of_budget);
     var invoiceLines = (r.invoices_list_mtd || []).map(function(inv) {
