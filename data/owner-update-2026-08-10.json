@@ -3,7 +3,7 @@
   "week_end": "2026-08-16",
   "label": "August 10 – 16, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-08-12",
   "complete": false,
   "source": "Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy's feed, pending Florencia's own QBO access) for Last Week/MTD actual across Repairs, Grounds, AND Turns; AppFolio for the fixed Monthly Budget numbers — automated.",
   "issues": {
@@ -17,16 +17,16 @@
         {
           "property": "KN47",
           "region": "Tri-Cities",
-          "last_week": 813.28,
-          "mtd": 5187.4,
+          "last_week": 1069.14,
+          "mtd": 5443.27,
           "budget": 22551.1,
-          "pct_of_budget": 23,
-          "labor_hours_week": 23.35,
-          "materials_week": 20.42,
+          "pct_of_budget": 24.1,
+          "labor_hours_week": 29.42,
+          "materials_week": 50.71,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 85.63,
-          "materials_mtd": 711.08,
+          "labor_hours_mtd": 91.7,
+          "materials_mtd": 741.37,
           "invoices_mtd": 1305.6,
           "invoices_list_mtd": [
             {
@@ -41,32 +41,32 @@
         {
           "property": "PS17",
           "region": "Tri-Cities",
-          "last_week": 64.45,
-          "mtd": 80.6,
+          "last_week": 294.8,
+          "mtd": 310.95,
           "budget": 734.2,
-          "pct_of_budget": 11,
-          "labor_hours_week": 3.32,
-          "materials_week": 0,
+          "pct_of_budget": 42.4,
+          "labor_hours_week": 5.27,
+          "materials_week": 160.15,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 3.7,
-          "materials_mtd": 0,
+          "labor_hours_mtd": 5.65,
+          "materials_mtd": 160.15,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
         },
         {
           "property": "PS25",
           "region": "Tri-Cities",
-          "last_week": 58.73,
-          "mtd": 3181.23,
+          "last_week": 192.64,
+          "mtd": 3315.14,
           "budget": 2439,
-          "pct_of_budget": 130.4,
-          "labor_hours_week": 1.45,
-          "materials_week": 0,
+          "pct_of_budget": 135.9,
+          "labor_hours_week": 4.58,
+          "materials_week": 10,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 13.6,
-          "materials_mtd": 977.67,
+          "labor_hours_mtd": 16.73,
+          "materials_mtd": 987.67,
           "invoices_mtd": 1684.68,
           "invoices_list_mtd": [
             {
@@ -97,16 +97,16 @@
         {
           "property": "RL16",
           "region": "Tri-Cities",
-          "last_week": 743.43,
-          "mtd": 2490.09,
+          "last_week": 802.08,
+          "mtd": 2548.74,
           "budget": 7913,
-          "pct_of_budget": 31.5,
-          "labor_hours_week": 13.8,
-          "materials_week": 218.36,
+          "pct_of_budget": 32.2,
+          "labor_hours_week": 14.8,
+          "materials_week": 234.88,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 45.37,
-          "materials_mtd": 782.8,
+          "labor_hours_mtd": 46.37,
+          "materials_mtd": 799.32,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
         },
@@ -139,15 +139,15 @@
         {
           "property": "KN47",
           "region": "Tri-Cities",
-          "last_week": 305.34,
-          "mtd": 1374.9,
+          "last_week": 322.9,
+          "mtd": 1392.46,
           "budget": 6264.2,
-          "pct_of_budget": 21.9,
-          "labor_hours_week": 8.97,
+          "pct_of_budget": 22.2,
+          "labor_hours_week": 9.38,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 34.62,
+          "labor_hours_mtd": 35.03,
           "materials_mtd": 165.26,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -171,15 +171,15 @@
         {
           "property": "PS25",
           "region": "Tri-Cities",
-          "last_week": 124.68,
-          "mtd": 310.48,
+          "last_week": 192.75,
+          "mtd": 378.56,
           "budget": 1219.5,
-          "pct_of_budget": 25.5,
-          "labor_hours_week": 3.62,
+          "pct_of_budget": 31,
+          "labor_hours_week": 5.63,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 8.42,
+          "labor_hours_mtd": 10.43,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -187,15 +187,15 @@
         {
           "property": "PS91",
           "region": "Tri-Cities",
-          "last_week": 0,
-          "mtd": 94.84,
+          "last_week": 15.95,
+          "mtd": 110.79,
           "budget": 340.9,
-          "pct_of_budget": 27.8,
-          "labor_hours_week": 0,
+          "pct_of_budget": 32.5,
+          "labor_hours_week": 0.48,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 2.02,
+          "labor_hours_mtd": 2.5,
           "materials_mtd": 28.29,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -203,15 +203,15 @@
         {
           "property": "RL16",
           "region": "Tri-Cities",
-          "last_week": 58.99,
-          "mtd": 636.82,
+          "last_week": 84.27,
+          "mtd": 662.1,
           "budget": 2544.1,
-          "pct_of_budget": 25,
-          "labor_hours_week": 1.4,
+          "pct_of_budget": 26,
+          "labor_hours_week": 2,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 17,
+          "labor_hours_mtd": 17.6,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -325,15 +325,15 @@
         {
           "property": "RL21",
           "region": "Tri-Cities",
-          "last_week": 596.28,
-          "mtd": 2661.48,
+          "last_week": 825.13,
+          "mtd": 2890.34,
           "budget": 636.2,
-          "pct_of_budget": 418.3,
-          "labor_hours_week": 17.28,
+          "pct_of_budget": 454.3,
+          "labor_hours_week": 23.92,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 44.05,
+          "labor_hours_mtd": 50.68,
           "materials_mtd": 1141.76,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -362,15 +362,15 @@
         {
           "property": "A511",
           "region": "Spokane",
-          "last_week": 0,
-          "mtd": 0,
+          "last_week": 91,
+          "mtd": 91,
           "budget": 357.1,
-          "pct_of_budget": 0,
-          "labor_hours_week": 0,
+          "pct_of_budget": 25.5,
+          "labor_hours_week": 2.33,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 0,
+          "labor_hours_mtd": 2.33,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -562,15 +562,15 @@
         {
           "property": "K104",
           "region": "Spokane",
-          "last_week": 184.4,
-          "mtd": 848.01,
+          "last_week": 242.65,
+          "mtd": 906.26,
           "budget": 3099.6,
-          "pct_of_budget": 27.4,
-          "labor_hours_week": 6,
+          "pct_of_budget": 29.2,
+          "labor_hours_week": 9.88,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 21.4,
+          "labor_hours_mtd": 25.28,
           "materials_mtd": 261.81,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -714,15 +714,15 @@
         {
           "property": "O155",
           "region": "Spokane",
-          "last_week": 252.15,
-          "mtd": 764.4,
+          "last_week": 407.15,
+          "mtd": 919.4,
           "budget": 5276.1,
-          "pct_of_budget": 14.5,
-          "labor_hours_week": 7.78,
+          "pct_of_budget": 17.4,
+          "labor_hours_week": 11.92,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 21.58,
+          "labor_hours_mtd": 25.72,
           "materials_mtd": 31.17,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -842,15 +842,15 @@
         {
           "property": "W226",
           "region": "Spokane",
-          "last_week": 0,
-          "mtd": 202.55,
+          "last_week": 75.4,
+          "mtd": 277.95,
           "budget": 547.8,
-          "pct_of_budget": 37,
-          "labor_hours_week": 0,
+          "pct_of_budget": 50.7,
+          "labor_hours_week": 1.93,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 5.85,
+          "labor_hours_mtd": 7.78,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -956,15 +956,15 @@
         {
           "property": "C616",
           "region": "Spokane",
-          "last_week": 0,
-          "mtd": 0,
+          "last_week": 73.95,
+          "mtd": 73.95,
           "budget": null,
           "pct_of_budget": null,
-          "labor_hours_week": 0,
+          "labor_hours_week": 1.93,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 0,
+          "labor_hours_mtd": 1.93,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -1100,15 +1100,15 @@
         {
           "property": "L912",
           "region": "Spokane",
-          "last_week": 0,
-          "mtd": 105.19,
+          "last_week": 69.41,
+          "mtd": 174.6,
           "budget": null,
           "pct_of_budget": null,
-          "labor_hours_week": 0,
+          "labor_hours_week": 1.87,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 2.83,
+          "labor_hours_mtd": 4.7,
           "materials_mtd": 0,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -1438,15 +1438,15 @@
         {
           "property": "C313",
           "region": "Spokane",
-          "last_week": 84.38,
-          "mtd": 680.61,
+          "last_week": 298.75,
+          "mtd": 894.99,
           "budget": 1309.69,
-          "pct_of_budget": 52,
-          "labor_hours_week": 2.25,
+          "pct_of_budget": 68.3,
+          "labor_hours_week": 7.97,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 16.78,
+          "labor_hours_mtd": 22.5,
           "materials_mtd": 34.89,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -1806,15 +1806,15 @@
         {
           "property": "W117",
           "region": "Spokane",
-          "last_week": 761.19,
-          "mtd": 761.19,
+          "last_week": 925.35,
+          "mtd": 925.35,
           "budget": 520.5,
-          "pct_of_budget": 146.2,
-          "labor_hours_week": 12.5,
+          "pct_of_budget": 177.8,
+          "labor_hours_week": 16.75,
           "materials_week": 278.38,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 12.5,
+          "labor_hours_mtd": 16.75,
           "materials_mtd": 278.38,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -1976,35 +1976,125 @@
     }
   ],
   "flagged": {
+    "PORTFOLIO": {
+      "repairs": {
+        "last_week": 4863.44,
+        "mtd": 25127.94,
+        "budget": 67431.05,
+        "pct_of_budget": 37.3
+      },
+      "grounds": {
+        "last_week": 1976.08,
+        "mtd": 9069.68,
+        "budget": 29227.06,
+        "pct_of_budget": 31
+      },
+      "turns": {
+        "last_week": 3185.72,
+        "mtd": 11586.11,
+        "budget": 41472.75,
+        "pct_of_budget": 27.9
+      },
+      "total": {
+        "last_week": 6839.5199999999995,
+        "mtd": 34197.619999999995,
+        "budget": 96658.11,
+        "pct_of_budget": 35.4
+      }
+    },
+    "KN47": {
+      "repairs": {
+        "property": "KN47",
+        "region": "Tri-Cities",
+        "last_week": 1069.14,
+        "mtd": 5443.27,
+        "budget": 22551.1,
+        "pct_of_budget": 24.1,
+        "labor_hours_week": 29.42,
+        "materials_week": 50.71,
+        "invoices_week": 0,
+        "invoices_list_week": [],
+        "labor_hours_mtd": 91.7,
+        "materials_mtd": 741.37,
+        "invoices_mtd": 1305.6,
+        "invoices_list_mtd": [
+          {
+            "vendor": "Eden Advanced Pest Techno",
+            "desc": null,
+            "amount": 1305.6,
+            "date": "2026-08-03",
+            "unconfirmed": true
+          }
+        ]
+      },
+      "grounds": {
+        "property": "KN47",
+        "region": "Tri-Cities",
+        "last_week": 322.9,
+        "mtd": 1392.46,
+        "budget": 6264.2,
+        "pct_of_budget": 22.2,
+        "labor_hours_week": 9.38,
+        "materials_week": 0,
+        "invoices_week": 0,
+        "invoices_list_week": [],
+        "labor_hours_mtd": 35.03,
+        "materials_mtd": 165.26,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
+      },
+      "turns": {
+        "property": "KN47",
+        "region": "Tri-Cities",
+        "last_week": 54.63,
+        "mtd": 3609.74,
+        "budget": 5313.6,
+        "pct_of_budget": 67.9,
+        "labor_hours_week": 1.58,
+        "materials_week": 0,
+        "invoices_week": 0,
+        "invoices_list_week": [],
+        "labor_hours_mtd": 48,
+        "materials_mtd": 1953.74,
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
+      },
+      "total": {
+        "last_week": 1392.04,
+        "mtd": 6835.7300000000005,
+        "budget": 28815.3,
+        "pct_of_budget": 23.7
+      }
+    },
     "RL16": {
       "repairs": {
         "property": "RL16",
         "region": "Tri-Cities",
-        "last_week": 743.43,
-        "mtd": 2490.09,
+        "last_week": 802.08,
+        "mtd": 2548.74,
         "budget": 7913,
-        "pct_of_budget": 31.5,
-        "labor_hours_week": 13.8,
-        "materials_week": 218.36,
+        "pct_of_budget": 32.2,
+        "labor_hours_week": 14.8,
+        "materials_week": 234.88,
         "invoices_week": 0,
         "invoices_list_week": [],
-        "labor_hours_mtd": 45.37,
-        "materials_mtd": 782.8,
+        "labor_hours_mtd": 46.37,
+        "materials_mtd": 799.32,
         "invoices_mtd": 0,
         "invoices_list_mtd": []
       },
       "grounds": {
         "property": "RL16",
         "region": "Tri-Cities",
-        "last_week": 58.99,
-        "mtd": 636.82,
+        "last_week": 84.27,
+        "mtd": 662.1,
         "budget": 2544.1,
-        "pct_of_budget": 25,
-        "labor_hours_week": 1.4,
+        "pct_of_budget": 26,
+        "labor_hours_week": 2,
         "materials_week": 0,
         "invoices_week": 0,
         "invoices_list_week": [],
-        "labor_hours_mtd": 17,
+        "labor_hours_mtd": 17.6,
         "materials_mtd": 0,
         "invoices_mtd": 0,
         "invoices_list_mtd": []
@@ -2034,101 +2124,147 @@
         ]
       },
       "total": {
-        "last_week": 802.42,
-        "mtd": 3306.9100000000003,
-        "budget": 14755.6,
-        "pct_of_budget": 22.4
+        "last_week": 886.35,
+        "mtd": 3210.8399999999997,
+        "budget": 10457.1,
+        "pct_of_budget": 30.7
       }
     },
-    "KN47": {
-      "repairs": {
-        "property": "KN47",
-        "region": "Tri-Cities",
-        "last_week": 813.28,
-        "mtd": 5187.4,
-        "budget": 22551.1,
-        "pct_of_budget": 23,
-        "labor_hours_week": 23.35,
-        "materials_week": 20.42,
-        "invoices_week": 0,
-        "invoices_list_week": [],
-        "labor_hours_mtd": 85.63,
-        "materials_mtd": 711.08,
-        "invoices_mtd": 1305.6,
-        "invoices_list_mtd": [
-          {
-            "vendor": "Eden Advanced Pest Techno",
-            "desc": null,
-            "amount": 1305.6,
-            "date": "2026-08-03",
-            "unconfirmed": true
+    "OVER_BUDGET": [
+      {
+        "property": "J312",
+        "scope": {
+          "repairs": {
+            "property": "J312",
+            "region": "Spokane",
+            "last_week": 82.5,
+            "mtd": 948.2,
+            "budget": 589.09,
+            "pct_of_budget": 161,
+            "labor_hours_week": 2.2,
+            "materials_week": 0,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 8.02,
+            "materials_mtd": 25.05,
+            "invoices_mtd": 654.6,
+            "invoices_list_mtd": [
+              {
+                "vendor": "Spokane Water Heater",
+                "desc": null,
+                "amount": 654.6,
+                "date": "2026-08-05",
+                "unconfirmed": true
+              }
+            ]
+          },
+          "grounds": {
+            "property": "J312",
+            "region": "Spokane",
+            "last_week": 141.45,
+            "mtd": 217.95,
+            "budget": 331.36,
+            "pct_of_budget": 65.8,
+            "labor_hours_week": 3.77,
+            "materials_week": 0,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 5.77,
+            "materials_mtd": 0,
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
+          },
+          "turns": {
+            "property": "J312",
+            "region": "Spokane",
+            "last_week": 0,
+            "mtd": 0,
+            "budget": 805.96,
+            "pct_of_budget": 0,
+            "labor_hours_week": 0,
+            "materials_week": 0,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 0,
+            "materials_mtd": 0,
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
+          },
+          "total": {
+            "last_week": 223.95,
+            "mtd": 1166.15,
+            "budget": 920.45,
+            "pct_of_budget": 126.7
           }
-        ]
+        }
       },
-      "grounds": {
-        "property": "KN47",
-        "region": "Tri-Cities",
-        "last_week": 305.34,
-        "mtd": 1374.9,
-        "budget": 6264.2,
-        "pct_of_budget": 21.9,
-        "labor_hours_week": 8.97,
-        "materials_week": 0,
-        "invoices_week": 0,
-        "invoices_list_week": [],
-        "labor_hours_mtd": 34.62,
-        "materials_mtd": 165.26,
-        "invoices_mtd": 0,
-        "invoices_list_mtd": []
-      },
-      "turns": {
-        "property": "KN47",
-        "region": "Tri-Cities",
-        "last_week": 54.63,
-        "mtd": 3609.74,
-        "budget": 5313.6,
-        "pct_of_budget": 67.9,
-        "labor_hours_week": 1.58,
-        "materials_week": 0,
-        "invoices_week": 0,
-        "invoices_list_week": [],
-        "labor_hours_mtd": 48,
-        "materials_mtd": 1953.74,
-        "invoices_mtd": 0,
-        "invoices_list_mtd": []
-      },
-      "total": {
-        "last_week": 1173.25,
-        "mtd": 10172.039999999999,
-        "budget": 34128.9,
-        "pct_of_budget": 29.8
+      {
+        "property": "PS25",
+        "scope": {
+          "repairs": {
+            "property": "PS25",
+            "region": "Tri-Cities",
+            "last_week": 192.64,
+            "mtd": 3315.14,
+            "budget": 2439,
+            "pct_of_budget": 135.9,
+            "labor_hours_week": 4.58,
+            "materials_week": 10,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 16.73,
+            "materials_mtd": 987.67,
+            "invoices_mtd": 1684.68,
+            "invoices_list_mtd": [
+              {
+                "vendor": "Pannonia Glass Company",
+                "desc": null,
+                "amount": 1684.68,
+                "date": "2026-08-02",
+                "unconfirmed": true
+              }
+            ]
+          },
+          "grounds": {
+            "property": "PS25",
+            "region": "Tri-Cities",
+            "last_week": 192.75,
+            "mtd": 378.56,
+            "budget": 1219.5,
+            "pct_of_budget": 31,
+            "labor_hours_week": 5.63,
+            "materials_week": 0,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 10.43,
+            "materials_mtd": 0,
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
+          },
+          "turns": {
+            "property": "PS25",
+            "region": "Tri-Cities",
+            "last_week": 0,
+            "mtd": 0,
+            "budget": 3048.8,
+            "pct_of_budget": 0,
+            "labor_hours_week": 0,
+            "materials_week": 0,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 0,
+            "materials_mtd": 0,
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
+          },
+          "total": {
+            "last_week": 385.39,
+            "mtd": 3693.7,
+            "budget": 3658.5,
+            "pct_of_budget": 101
+          }
+        }
       }
-    },
-    "PORTFOLIO": {
-      "repairs": {
-        "last_week": 3805.01,
-        "mtd": 24069.51,
-        "budget": 67431.05,
-        "pct_of_budget": 35.7
-      },
-      "grounds": {
-        "last_week": 1583.12,
-        "mtd": 8676.72,
-        "budget": 29227.06,
-        "pct_of_budget": 29.7
-      },
-      "turns": {
-        "last_week": 2578.34,
-        "mtd": 10978.73,
-        "budget": 41472.75,
-        "pct_of_budget": 26.5
-      },
-      "total": {
-        "last_week": 7966.47,
-        "mtd": 43724.95999999999,
-        "budget": 138130.86,
-        "pct_of_budget": 31.7
-      }
-    }
+    ]
   }
 }

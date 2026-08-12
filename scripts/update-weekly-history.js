@@ -1342,10 +1342,14 @@ async function main() {
       grounds = { last_week: Math.round(groundsLastWeek * 100) / 100, mtd: groundsMonthlyBudget.total_actual, budget: groundsMonthlyBudget.budget, pct_of_budget: groundsMonthlyBudget.budget ? Math.round((groundsMonthlyBudget.total_actual / groundsMonthlyBudget.budget) * 1000) / 10 : null };
       turns = { last_week: Math.round(turnsLastWeek * 100) / 100, mtd: turnsMonthlyBudget.total_actual, budget: turnsMonthlyBudget.budget, pct_of_budget: turnsMonthlyBudget.budget ? Math.round((turnsMonthlyBudget.total_actual / turnsMonthlyBudget.budget) * 1000) / 10 : null };
     }
-    const totalBudget = (repairs && repairs.budget != null ? repairs.budget : 0) + (grounds && grounds.budget != null ? grounds.budget : 0) + (turns && turns.budget != null ? turns.budget : 0);
-    const totalMtd = (repairs ? repairs.mtd : 0) + (grounds ? grounds.mtd : 0) + (turns ? turns.mtd : 0);
+    // Total = Repairs + Grounds only (Florencia, 2026-08-12: "turns sacalo" -- Turns
+    // dropped out of this flagged/over-budget table entirely, it's sourced from
+    // LeeRoy's feed and she doesn't want it in this view's Total or its over-budget
+    // determination). `turns` is still returned in case another view wants it later.
+    const totalBudget = (repairs && repairs.budget != null ? repairs.budget : 0) + (grounds && grounds.budget != null ? grounds.budget : 0);
+    const totalMtd = (repairs ? repairs.mtd : 0) + (grounds ? grounds.mtd : 0);
     const total = {
-      last_week: (repairs ? repairs.last_week : 0) + (grounds ? grounds.last_week : 0) + (turns ? turns.last_week : 0),
+      last_week: (repairs ? repairs.last_week : 0) + (grounds ? grounds.last_week : 0),
       mtd: totalMtd,
       budget: totalBudget || null,
       pct_of_budget: totalBudget ? Math.round((totalMtd / totalBudget) * 1000) / 10 : null,
@@ -1366,6 +1370,18 @@ async function main() {
   }
   const issues = priorIssues || { flagged: null, resolved: null };
 
+  // Flagged table (Florencia, 2026-08-12): Portfolio Total, KN47, RL16 always show
+  // first regardless of budget status, then every OTHER property that is over
+  // budget (total.pct_of_budget > 100), sorted most-over to least-over. Properties
+  // under budget (other than the pinned 3) are left out entirely -- Louisa asked for
+  // "less is more," just which properties are over and by how much.
+  const allPropsUpper = Object.keys(PROPERTY_IDS).map(p => p.toUpperCase());
+  const otherOverBudget = allPropsUpper
+    .filter(p => p !== 'KN47' && p !== 'RL16')
+    .map(p => ({ property: p, scope: scopeBreakdown(p) }))
+    .filter(o => o.scope.total.pct_of_budget != null && o.scope.total.pct_of_budget > 100)
+    .sort((a, b) => b.scope.total.pct_of_budget - a.scope.total.pct_of_budget);
+
   const ownerUpdateJson = {
     week_start: weekStart,
     week_end: dstr(sunday),
@@ -1377,9 +1393,10 @@ async function main() {
     issues,
     regions,
     flagged: {
-      RL16: scopeBreakdown('RL16'),
-      KN47: scopeBreakdown('KN47'),
       PORTFOLIO: scopeBreakdown(null),
+      KN47: scopeBreakdown('KN47'),
+      RL16: scopeBreakdown('RL16'),
+      OVER_BUDGET: otherOverBudget,
     },
   };
   fs.writeFileSync(ownerUpdatePath, JSON.stringify(ownerUpdateJson, null, 2));

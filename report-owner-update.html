@@ -253,24 +253,27 @@ function renderRegions(regions) {
   return html;
 }
 
-// ONE shared table for all 3 flagged scopes (RL16, KN47, Portfolio Total), each a
-// group-label row + Repairs/Grounds/Turns/Total rows -- merged into a single <table>
-// 2026-08-10 (Florencia: the column dividers weren't lining up across 3 separate
-// tables, since each auto-sized its own first column to its own longest label like
-// "Portfolio Total"). One shared table guarantees the same column widths everywhere.
-// Turns has a real Monthly Budget (AppFolio account 52002, wired 2026-08-10) but no
-// actual-spend source yet, so its Last Week/MTD/% columns stay blank -- Total is
-// Repairs+Grounds only until Turns actual is built (see the page's own callout above).
+// ONE shared table, each scope a group-label row + Repairs/Grounds/Total rows --
+// merged into a single <table> 2026-08-10 (Florencia: the column dividers weren't
+// lining up across separate tables, since each auto-sized its own first column to its
+// own longest label like "Portfolio Total"). One shared table guarantees the same
+// column widths everywhere. Turns dropped from this table entirely 2026-08-12
+// (Florencia: "turns sacalo" -- it's LeeRoy-sourced and she doesn't want it in this
+// view's Total or over-budget determination; see scopeBreakdown() in
+// update-weekly-history.js). Portfolio Total, KN47, RL16 always show first regardless
+// of budget status; every other property appears ONLY if over budget (Louisa asked for
+// "less is more" -- just which properties are over and by how much), sorted
+// most-over to least-over (see OVER_BUDGET in the same script).
 function renderFlaggedTable(scopes) {
   var head = '<tr>' + th('Scope') + th('Last Week', 'num') + th('MTD', 'num') + th('Budget', 'num') + th('% Used', 'num') + '</tr>';
   function row(name, r) {
     if (!r) return '<tr><td class="prop">' + name + '</td><td class="num" colspan="4">&mdash; no data &mdash;</td></tr>';
     var cls = pctClass(r.pct_of_budget);
-    return '<tr><td class="prop">' + name + '</td><td class="num">' + money(r.last_week) + '</td><td class="num">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
+    return '<tr><td class="prop">' + name + '</td><td class="num ' + cls + '">' + money(r.last_week) + '</td><td class="num ' + cls + '">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
   }
   var body = scopes.map(function(s) {
     return '<tr class="group-row"><td colspan="5" class="group-label" style="background:#4a6f92;color:#ffffff;">' + s.label + '</td></tr>' +
-      row('Repairs', s.scope.repairs) + row('Grounds', s.scope.grounds) + row('Turns', s.scope.turns) + row('Total', s.scope.total);
+      row('Repairs', s.scope.repairs) + row('Grounds', s.scope.grounds) + row('Total', s.scope.total);
   }).join('');
   return '<div class="table-wrap"><table>' + head + body + '</table></div>';
 }
@@ -295,10 +298,10 @@ function renderWeek(data) {
 
   html += '<section><p class="section-label">Flagged Properties &amp; Portfolio Total</p>' +
     renderFlaggedTable([
-      { label: 'RL16', scope: data.flagged.RL16 },
-      { label: 'KN47', scope: data.flagged.KN47 },
       { label: 'Portfolio Total', scope: data.flagged.PORTFOLIO },
-    ]) +
+      { label: 'KN47', scope: data.flagged.KN47 },
+      { label: 'RL16', scope: data.flagged.RL16 },
+    ].concat((data.flagged.OVER_BUDGET || []).map(function(o) { return { label: o.property, scope: o.scope }; }))) +
     '</section>';
 
   html += renderRegions(data.regions);
