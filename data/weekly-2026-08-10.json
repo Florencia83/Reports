@@ -3,7 +3,7 @@
   "week_end": "2026-08-16",
   "label": "August 10 – 16, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-08-12",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 48.94,
-      "last_7": 40.69
+      "last_30": 50.82,
+      "last_7": 38.99
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -75,6 +75,14 @@
       "cost": 1083.87
     },
     {
+      "ref": "TZU5940",
+      "property": "kn47",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 41.4,
+      "materials": 999.87,
+      "cost": 1041.27
+    },
+    {
       "ref": "TTK4WLE",
       "property": "m405",
       "brief": "My Refrigerator Is Not Cooling.",
@@ -89,6 +97,14 @@
       "labor": 95.62,
       "materials": 472.55,
       "cost": 568.17
+    },
+    {
+      "ref": "TERZN6K",
+      "property": "tc68",
+      "brief": "flood effecting  unit A29,A27,A25",
+      "labor": 0,
+      "materials": 543.03,
+      "cost": 543.03
     },
     {
       "ref": "T9PQQ0B",
@@ -121,30 +137,14 @@
       "labor": 46.2,
       "materials": 190.29,
       "cost": 236.49
-    },
-    {
-      "ref": "TF4ZEGM",
-      "property": "tc68",
-      "brief": "Garbage Disposal",
-      "labor": 60.75,
-      "materials": 159.18,
-      "cost": 219.93
-    },
-    {
-      "ref": "T0JUKU5",
-      "property": "kn47",
-      "brief": "Oven not working ",
-      "labor": 102.6,
-      "materials": 115.01,
-      "cost": 217.61
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 53,
-      "avg_cost_per_wo": 16.79,
-      "total_labor_cost": 670.65,
+      "wo_count": 59,
+      "avg_cost_per_wo": 18.61,
+      "total_labor_cost": 837.08,
       "avg_resident_rating": 4.67,
       "reviews": [
         {
@@ -166,9 +166,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 38,
-      "avg_cost_per_wo": 101.07,
-      "total_labor_cost": 1450.8,
+      "wo_count": 45,
+      "avg_cost_per_wo": 116.04,
+      "total_labor_cost": 1662,
       "avg_resident_rating": 3.75,
       "reviews": [
         {
@@ -219,8 +219,8 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 25,
-      "avg_cost_per_wo": 80.21,
+      "wo_count": 26,
+      "avg_cost_per_wo": 77.12,
       "total_labor_cost": 1181.7,
       "avg_resident_rating": 4.5,
       "reviews": [
@@ -238,17 +238,17 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 13,
-      "avg_cost_per_wo": 38.28,
-      "total_labor_cost": 454.1,
+      "wo_count": 16,
+      "avg_cost_per_wo": 36.98,
+      "total_labor_cost": 531.72,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 6,
-      "avg_cost_per_wo": 114.28,
-      "total_labor_cost": 213.13,
+      "wo_count": 7,
+      "avg_cost_per_wo": 120.1,
+      "total_labor_cost": 368.13,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -265,7 +265,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 271.42
+      "amount": 620.45
     },
     {
       "category": "Supplies and Tools",
@@ -281,24 +281,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 1021.45
+      "amount": 1238.41
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 11080.05,
-    "materials": 8599.2,
+    "labor": 11908.02,
+    "materials": 8816.16,
     "invoices": 4390.26,
-    "total_actual": 24069.51,
-    "variance": 43361.54
+    "total_actual": 25114.44,
+    "variance": 42316.61
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 6479.44,
+    "labor": 6872.4,
     "materials": 374.03,
     "invoices": 1823.25,
-    "total_actual": 8676.72,
-    "variance": 20550.34
+    "total_actual": 9069.68,
+    "variance": 20157.38
   },
   "cost_by_property": [
     {
