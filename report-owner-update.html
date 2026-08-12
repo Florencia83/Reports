@@ -138,18 +138,6 @@ td.num.good { background: color-mix(in srgb, var(--good) 18%, var(--surface)); f
 .area-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 18px 0 8px; }
 .area-label:first-child { margin-top: 0; }
 
-.prop-card { box-sizing: border-box; width: 100%; overflow: hidden; border: 1px solid var(--violet); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); padding: 10px 14px; margin-bottom: 10px; }
-.prop-card-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; font-family: 'Manrope', system-ui, sans-serif; margin-bottom: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
-.prop-card-name { font-weight: 700; font-size: 13px; }
-.prop-card-budget { font-size: 11.5px; color: var(--ink-soft); }
-.prop-card-budget.bad { color: var(--bad); font-weight: 600; }
-.prop-card-budget.good { color: var(--good); font-weight: 600; }
-.prop-breakdown { box-sizing: border-box; width: 100%; max-width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 12px; font-family: 'Manrope', system-ui, sans-serif; }
-.prop-breakdown td { box-sizing: border-box; padding: 6px 10px; border: none; border-bottom: 1px solid var(--line); white-space: normal; word-break: break-word; overflow-wrap: break-word; }
-.prop-breakdown tr:last-child td { border-bottom: none; }
-.prop-breakdown td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; border-left: 1px solid var(--line); }
-.prop-breakdown tr.sub td { padding: 4px 10px 4px 20px; font-size: 11px; color: var(--ink-soft); }
-
 .tag { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
 .tag.maintenance { background: var(--maint-tint); color: var(--maint-ink); }
 .tag.finance { background: var(--finance-tint); color: var(--finance-ink); }
@@ -190,8 +178,6 @@ footer a { color: var(--ink-soft); }
 function money(v) { return v === null || v === undefined ? '&mdash;' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
 function pctClass(v) { if (v === null || v === undefined) return ''; return v > 100 ? 'bad' : 'good'; }
 function pctText(v) { return v === null || v === undefined ? '&mdash;' : v + '%'; }
-function hoursText(v) { return v === null || v === undefined ? '&mdash;' : Number(v).toFixed(1) + 'h'; }
-function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 // Inline style (not just the CSS class) so header background/text color survive being
 // copy-pasted into Gmail/Google Docs, which drops the page's external <style> block on
 // paste but keeps inline style= attributes -- otherwise white header text turns
@@ -199,55 +185,32 @@ function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</
 // Florencia hit it live 2026-08-10 pasting this report into an email).
 function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' style="background:#4a6f92;color:#ffffff;">' + text + '</th>'; }
 
-// One card per property (Florencia, 2026-08-10 -- replaced the old 5-column table,
-// which forced horizontal scrolling on narrow screens). Each card: name + budget/%
-// used on top, then a narrow 2-column table (label | value) for MTD Invoices/Labor
-// Hours/Ramp Purchases -- the value column uses an HTML `width` ATTRIBUTE (not just
-// CSS), not flexbox: an earlier flexbox version overflowed once pasted into Gmail
-// (2026-08-11) because flex-grow/flex-shrink didn't survive the browser's
-// computed-style bake-in on copy the way simple longhand properties do; a literal
-// width="90" attribute on <td> is markup, not CSS, so it survives regardless. Invoices
-// are also listed individually underneath their total (vendor + category -- NOT a
-// meld reference, the QBO feed doesn't carry one the way Ramp purchases do).
-function renderPropertyCards(rows) {
-  // Defensive: an older week's JSON (generated before a field/section was added -- e.g.
-  // Turns, added 2026-08-11) won't have this array at all. Rendering used to call
-  // .length on undefined and throw, silently blanking the whole page for that week
-  // (Florencia: "el reporte del 3 al 9 desaparecio"). Never let a missing/older data
-  // shape crash the page again.
-  if (!rows || !rows.length) return '<div class="callout" style="font-size:12.5px;">No properties in this region.</div>';
-  return rows.map(function(r) {
-    var cls = pctClass(r.pct_of_budget);
-    var invoiceLines = (r.invoices_list_mtd || []).map(function(inv) {
-      return '<tr class="sub"><td>' + esc(inv.vendor) + (inv.desc ? ' &mdash; ' + esc(inv.desc) : '') + '</td><td class="num" width="90">' + money(inv.amount) + '</td></tr>';
-    }).join('');
-    return '<div class="prop-card">' +
-      '<div class="prop-card-head"><span class="prop-card-name">' + r.property + '</span>' +
-      '<span class="prop-card-budget ' + cls + '">' + money(r.budget) + ' budget &middot; ' + pctText(r.pct_of_budget) + ' used</span></div>' +
-      '<table class="prop-breakdown" width="100%" cellpadding="0" cellspacing="0">' +
-      '<tr><td>Invoices</td><td class="num" width="90">' + money(r.invoices_mtd) + '</td></tr>' +
-      invoiceLines +
-      '<tr><td>Labor Hours</td><td class="num" width="90">' + hoursText(r.labor_hours_mtd) + '</td></tr>' +
-      '<tr><td>Ramp Purchases</td><td class="num" width="90">' + money(r.materials_mtd) + '</td></tr>' +
-      '</table></div>';
-  }).join('');
+// Per-property % of budget used, R&M and Grounds side by side, colored on a continuous
+// green→red gradient by spend (Florencia, 2026-08-12 -- replaced the old per-property
+// invoice-detail cards, which she wants gone from this view entirely). color-mix()
+// with the page's own --good/--bad theme variables resolves to a concrete rgb() during
+// the browser's copy-to-Gmail computed-style bake-in, same as the rest of this report's
+// color-coding, so it survives paste and stays theme-aware light/dark.
+function spendStyle(pct) {
+  if (pct == null) return 'color:var(--ink-soft);';
+  var c = Math.max(0, Math.min(100, pct));
+  return 'color:color-mix(in srgb, var(--bad) ' + c.toFixed(0) + '%, var(--good));font-weight:600;';
 }
-
-// Repairs for all 3 regions first, then Grounds for all 3, then Turns for all 3
-// (Florencia, 2026-08-10 -- was region-then-category; she wants category-then-region
-// instead. Turns section added 2026-08-11 once full Turns actual tracking landed).
-function renderRegions(regions) {
-  var html = '<section><p class="section-label">Repairs</p>';
+function renderPropertyPctList(regions) {
+  var html = '<section><p class="section-label">All Properties &mdash; % of Budget Used</p>';
   regions.forEach(function(reg) {
-    html += '<p class="area-label">' + reg.region + '</p>' + renderPropertyCards(reg.repairs);
-  });
-  html += '</section><section><p class="section-label">Grounds</p>';
-  regions.forEach(function(reg) {
-    html += '<p class="area-label">' + reg.region + '</p>' + renderPropertyCards(reg.grounds);
-  });
-  html += '</section><section><p class="section-label">Turns</p>';
-  regions.forEach(function(reg) {
-    html += '<p class="area-label">' + reg.region + '</p>' + renderPropertyCards(reg.turns);
+    var groundsByProp = {};
+    (reg.grounds || []).forEach(function(g) { groundsByProp[g.property] = g; });
+    html += '<p class="area-label">' + reg.region + '</p>' +
+      '<div class="table-wrap"><table>' +
+      '<tr>' + th('Property') + th('R&amp;M %', 'num') + th('Grounds %', 'num') + '</tr>' +
+      (reg.repairs || []).map(function(r) {
+        var g = groundsByProp[r.property];
+        return '<tr><td class="prop">' + r.property + '</td>' +
+          '<td class="num" style="' + spendStyle(r.pct_of_budget) + '">' + pctText(r.pct_of_budget) + '</td>' +
+          '<td class="num" style="' + spendStyle(g ? g.pct_of_budget : null) + '">' + pctText(g ? g.pct_of_budget : null) + '</td></tr>';
+      }).join('') +
+      '</table></div>';
   });
   html += '</section>';
   return html;
@@ -304,7 +267,7 @@ function renderWeek(data) {
     ].concat((data.flagged.OVER_BUDGET || []).map(function(o) { return { label: o.property, scope: o.scope }; }))) +
     '</section>';
 
-  html += renderRegions(data.regions);
+  html += renderPropertyPctList(data.regions);
 
   root.innerHTML = html;
   document.getElementById('range-label').textContent = data.label + (data.complete ? '' : ' (week in progress)');
