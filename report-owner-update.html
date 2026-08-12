@@ -185,21 +185,51 @@ function pctText(v) { return v === null || v === undefined ? '&mdash;' : v + '%'
 // Florencia hit it live 2026-08-10 pasting this report into an email).
 function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' style="background:#4a6f92;color:#ffffff;">' + text + '</th>'; }
 
+// Same fix as report-weekly-update.html's kpiCell (2026-07-21) -- color-mix() renders fine
+// on-screen but the .num.good/bad rule that actually paints it lives in the external
+// <style> block, which Gmail drops entirely on paste, so a class-only cell (or an inline
+// style that still says var()/color-mix() as literal text) has nothing left to resolve
+// against and the tint silently vanishes. Reproduce the mix manually in JS from the LIVE
+// resolved CSS variables (so it still follows whichever theme is active) and bake the
+// result as an inline style. This should have been reused here from the start instead of
+// being re-solved with a different, non-theme-aware approach (Florencia, 2026-08-12).
+function parseColor(s) {
+  s = (s || '').trim();
+  var m = s.match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);
+  if (m) { var h = m[1]; if (h.length === 3) h = h.split('').map(function(c){return c+c;}).join(''); var n = parseInt(h, 16); return [(n>>16)&255, (n>>8)&255, n&255]; }
+  m = s.match(/rgba?\(\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)/i);
+  if (m) return [parseFloat(m[1]), parseFloat(m[2]), parseFloat(m[3])];
+  return [255, 255, 255];
+}
+function mixInSrgb(colorVarName, pct, baseVarName) {
+  var cs = getComputedStyle(document.documentElement);
+  var c = parseColor(cs.getPropertyValue(colorVarName));
+  var b = parseColor(cs.getPropertyValue(baseVarName));
+  var p = pct / 100;
+  var r = Math.round(c[0] * p + b[0] * (1 - p));
+  var g = Math.round(c[1] * p + b[1] * (1 - p));
+  var bl = Math.round(c[2] * p + b[2] * (1 - p));
+  return 'rgb(' + r + ',' + g + ',' + bl + ')';
+}
+// Continuous two-color blend (not just a fixed 18% tint like mixInSrgb above) -- used for
+// the per-property spend gradient below, 0% = pure --good, 100%+ = pure --bad.
+function mixTwo(varA, varB, pctB) {
+  var cs = getComputedStyle(document.documentElement);
+  var a = parseColor(cs.getPropertyValue(varA));
+  var b = parseColor(cs.getPropertyValue(varB));
+  var p = Math.max(0, Math.min(100, pctB)) / 100;
+  var r = Math.round(a[0] * (1 - p) + b[0] * p);
+  var g = Math.round(a[1] * (1 - p) + b[1] * p);
+  var bl = Math.round(a[2] * (1 - p) + b[2] * p);
+  return 'rgb(' + r + ',' + g + ',' + bl + ')';
+}
+
 // Per-property % of budget used, R&M and Grounds side by side, colored on a continuous
 // green→red gradient by spend (Florencia, 2026-08-12 -- replaced the old per-property
 // invoice-detail cards, which she wants gone from this view entirely).
-// Literal computed rgb(), NOT var()/color-mix() (Florencia, 2026-08-12: colors didn't
-// survive copy-paste) -- Gmail drops the page's external <style> block on paste, which is
-// where --good/--bad are DEFINED, so an inline style that still says var(--bad)/color-mix()
-// as literal text has nothing to resolve against and silently no-ops. th() below already
-// hardcodes a literal hex for the same reason; this does the gradient math in JS instead
-// so every cell gets a real, already-resolved rgb() value baked into its inline style.
 function spendStyle(pct) {
-  if (pct == null) return 'color:#54666f;';
-  var c = Math.max(0, Math.min(100, pct)) / 100;
-  var good = [18, 138, 99], bad = [178, 59, 59]; // light-theme --good/--bad, hardcoded on purpose
-  var rgb = good.map(function(g, i) { return Math.round(g + (bad[i] - g) * c); });
-  return 'color:rgb(' + rgb.join(',') + ');font-weight:600;';
+  if (pct == null) return 'color:' + getComputedStyle(document.documentElement).getPropertyValue('--ink-soft').trim() + ';';
+  return 'color:' + mixTwo('--good', '--bad', pct) + ';font-weight:600;';
 }
 function renderPropertyPctList(regions) {
   var html = '<section><p class="section-label">All Properties &mdash; % of Budget Used</p>';
@@ -237,7 +267,15 @@ function renderFlaggedTable(scopes) {
   function row(name, r) {
     if (!r) return '<tr><td class="prop">' + name + '</td><td class="num" colspan="4">&mdash; no data &mdash;</td></tr>';
     var cls = pctClass(r.pct_of_budget);
-    return '<tr><td class="prop">' + name + '</td><td class="num ' + cls + '">' + money(r.last_week) + '</td><td class="num ' + cls + '">' + money(r.mtd) + '</td><td class="num">' + money(r.budget) + '</td><td class="num ' + cls + '">' + pctText(r.pct_of_budget) + '</td></tr>';
+    // Baked inline background (mixInSrgb), not just the .num.bad/good CLASS -- that class's
+    // color-mix() rule lives in the external <style> block Gmail drops on paste, so the
+    // tint used to vanish (same fix as report-weekly-update.html's kpiCell, 2026-07-21).
+    var tint = cls ? ' style="background:' + mixInSrgb('--' + cls, 18, '--surface') + ';font-weight:500;"' : '';
+    return '<tr><td class="prop">' + name + '</td>' +
+      '<td class="num' + (cls ? ' ' + cls : '') + '"' + tint + '>' + money(r.last_week) + '</td>' +
+      '<td class="num' + (cls ? ' ' + cls : '') + '"' + tint + '>' + money(r.mtd) + '</td>' +
+      '<td class="num">' + money(r.budget) + '</td>' +
+      '<td class="num' + (cls ? ' ' + cls : '') + '"' + tint + '>' + pctText(r.pct_of_budget) + '</td></tr>';
   }
   var body = scopes.map(function(s) {
     return '<tr class="group-row"><td colspan="5" class="group-label" style="background:#4a6f92;color:#ffffff;">' + s.label + '</td></tr>' +
