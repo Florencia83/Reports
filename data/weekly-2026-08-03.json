@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 50.66,
-      "last_7": 38.22
+      "last_30": 51.13,
+      "last_7": 39.32
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -115,6 +115,14 @@
       "cost": 466.71
     },
     {
+      "ref": "TFD99U0",
+      "property": "o155",
+      "brief": "Hoping For A Ceiling Fan In Living Space Was Told To Do A Request",
+      "labor": 155,
+      "materials": 206.01,
+      "cost": 361.01
+    },
+    {
       "ref": "TZX6JHY",
       "property": "kn47",
       "brief": "Bedroom doors not closing properly ",
@@ -129,14 +137,6 @@
       "labor": 79.65,
       "materials": 178.56,
       "cost": 258.21
-    },
-    {
-      "ref": "T2Q5GP9",
-      "property": "kn47",
-      "brief": "Stove burner not working ",
-      "labor": 46.2,
-      "materials": 190.29,
-      "cost": 236.49
     }
   ],
   "by_technician": [
@@ -247,7 +247,7 @@
     {
       "name": "Justin Gutierrez",
       "wo_count": 7,
-      "avg_cost_per_wo": 120.1,
+      "avg_cost_per_wo": 169.79,
       "total_labor_cost": 368.13,
       "avg_resident_rating": null,
       "reviews": []
@@ -365,33 +365,33 @@
     },
     {
       "category": "Maintenance",
-      "amount": 7110.1
+      "amount": 7328.1
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 11920.27,
-    "materials": 8816.16,
+    "labor": 12060.85,
+    "materials": 9478.37,
     "invoices": 4390.26,
-    "total_actual": 25126.69,
-    "variance": 42304.36
+    "total_actual": 25929.48,
+    "variance": 41501.57
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 6885.05,
+    "labor": 7074.98,
     "materials": 374.03,
     "invoices": 1823.25,
-    "total_actual": 9082.33,
-    "variance": 20144.73
+    "total_actual": 9272.26,
+    "variance": 19954.8
   },
   "cost_by_property": [
     {
       "property": "M405",
       "labor": 437.83,
-      "materials": 761.26,
-      "cost": 1199.09,
+      "materials": 979.26,
+      "cost": 1417.09,
       "budget": 1095,
-      "pct_over_budget": 9.5
+      "pct_over_budget": 29.4
     }
   ],
   "narrative": null,

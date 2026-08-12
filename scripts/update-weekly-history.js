@@ -1371,16 +1371,22 @@ async function main() {
   const issues = priorIssues || { flagged: null, resolved: null };
 
   // Flagged table (Florencia, 2026-08-12): Portfolio Total, KN47, RL16 always show
-  // first regardless of budget status, then every OTHER property that is over
-  // budget (total.pct_of_budget > 100), sorted most-over to least-over. Properties
-  // under budget (other than the pinned 3) are left out entirely -- Louisa asked for
-  // "less is more," just which properties are over and by how much.
+  // first regardless of budget status, then every OTHER property that is over budget,
+  // sorted most-over to least-over. Properties under budget (other than the pinned 3)
+  // are left out entirely -- Louisa asked for "less is more," just which properties
+  // are over and by how much. Turns never counts here (Louisa: "that's LeeRoy's").
+  // Checked PER CATEGORY (repairs OR grounds over 100%), not the blended Repairs+Grounds
+  // Total -- the combined average was masking a real single-category overage (found
+  // 2026-08-12: M405 Repairs 109.5% over while Grounds sat at 15%, blended to 78%, so it
+  // never showed). Sort key is the worse of the two individual percentages.
   const allPropsUpper = Object.keys(PROPERTY_IDS).map(p => p.toUpperCase());
+  const catPct = s => Math.max((s.repairs && s.repairs.pct_of_budget) || 0, (s.grounds && s.grounds.pct_of_budget) || 0);
   const otherOverBudget = allPropsUpper
     .filter(p => p !== 'KN47' && p !== 'RL16')
     .map(p => ({ property: p, scope: scopeBreakdown(p) }))
-    .filter(o => o.scope.total.pct_of_budget != null && o.scope.total.pct_of_budget > 100)
-    .sort((a, b) => b.scope.total.pct_of_budget - a.scope.total.pct_of_budget);
+    .filter(o => ((o.scope.repairs && o.scope.repairs.pct_of_budget != null && o.scope.repairs.pct_of_budget > 100)
+      || (o.scope.grounds && o.scope.grounds.pct_of_budget != null && o.scope.grounds.pct_of_budget > 100)))
+    .sort((a, b) => catPct(b.scope) - catPct(a.scope));
 
   const ownerUpdateJson = {
     week_start: weekStart,
