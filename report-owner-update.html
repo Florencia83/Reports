@@ -187,14 +187,19 @@ function th(text, cls) { return '<th' + (cls ? ' class="' + cls + '"' : '') + ' 
 
 // Per-property % of budget used, R&M and Grounds side by side, colored on a continuous
 // green→red gradient by spend (Florencia, 2026-08-12 -- replaced the old per-property
-// invoice-detail cards, which she wants gone from this view entirely). color-mix()
-// with the page's own --good/--bad theme variables resolves to a concrete rgb() during
-// the browser's copy-to-Gmail computed-style bake-in, same as the rest of this report's
-// color-coding, so it survives paste and stays theme-aware light/dark.
+// invoice-detail cards, which she wants gone from this view entirely).
+// Literal computed rgb(), NOT var()/color-mix() (Florencia, 2026-08-12: colors didn't
+// survive copy-paste) -- Gmail drops the page's external <style> block on paste, which is
+// where --good/--bad are DEFINED, so an inline style that still says var(--bad)/color-mix()
+// as literal text has nothing to resolve against and silently no-ops. th() below already
+// hardcodes a literal hex for the same reason; this does the gradient math in JS instead
+// so every cell gets a real, already-resolved rgb() value baked into its inline style.
 function spendStyle(pct) {
-  if (pct == null) return 'color:var(--ink-soft);';
-  var c = Math.max(0, Math.min(100, pct));
-  return 'color:color-mix(in srgb, var(--bad) ' + c.toFixed(0) + '%, var(--good));font-weight:600;';
+  if (pct == null) return 'color:#54666f;';
+  var c = Math.max(0, Math.min(100, pct)) / 100;
+  var good = [18, 138, 99], bad = [178, 59, 59]; // light-theme --good/--bad, hardcoded on purpose
+  var rgb = good.map(function(g, i) { return Math.round(g + (bad[i] - g) * c); });
+  return 'color:rgb(' + rgb.join(',') + ');font-weight:600;';
 }
 function renderPropertyPctList(regions) {
   var html = '<section><p class="section-label">All Properties &mdash; % of Budget Used</p>';
