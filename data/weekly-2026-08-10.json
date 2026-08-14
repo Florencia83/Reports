@@ -3,7 +3,7 @@
   "week_end": "2026-08-16",
   "label": "August 10 – 16, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-13",
+  "generated_at": "2026-08-14",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 50.1,
-      "last_7": 38.84
+      "last_30": 54.16,
+      "last_7": 48.21
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -83,12 +83,28 @@
       "cost": 1048.47
     },
     {
+      "ref": "TTNQ7CT",
+      "property": "ps25",
+      "brief": "Ac not blowing cold air ",
+      "labor": 163.62,
+      "materials": 879.1,
+      "cost": 1042.72
+    },
+    {
       "ref": "TTK4WLE",
       "property": "m405",
       "brief": "My Refrigerator Is Not Cooling.",
       "labor": 125.45,
       "materials": 750.61,
       "cost": 876.06
+    },
+    {
+      "ref": "T49DWE8",
+      "property": "tc68",
+      "brief": "Drywall patches from leak",
+      "labor": 540.68,
+      "materials": 243.12,
+      "cost": 783.8
     },
     {
       "ref": "TPX9FVDB",
@@ -111,8 +127,8 @@
       "property": "rl16",
       "brief": "Multiple issues ",
       "labor": 237,
-      "materials": 241.38,
-      "cost": 478.38
+      "materials": 271.82,
+      "cost": 508.82
     },
     {
       "ref": "T9PQQ0B",
@@ -121,32 +137,21 @@
       "labor": 87,
       "materials": 379.71,
       "cost": 466.71
-    },
-    {
-      "ref": "TFD99U0",
-      "property": "o155",
-      "brief": "Hoping For A Ceiling Fan In Living Space Was Told To Do A Request",
-      "labor": 155,
-      "materials": 206.01,
-      "cost": 361.01
-    },
-    {
-      "ref": "TQ50LP7",
-      "property": "c313",
-      "brief": "Light On Dining Room Fan Is Not Working",
-      "labor": 143.13,
-      "materials": 209.42,
-      "cost": 352.54
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 64,
-      "avg_cost_per_wo": 18.77,
-      "total_labor_cost": 940.31,
-      "avg_resident_rating": 4.67,
+      "wo_count": 72,
+      "avg_cost_per_wo": 31.43,
+      "total_labor_cost": 1251.41,
+      "avg_resident_rating": 4.83,
       "reviews": [
+        {
+          "ref": "TBTTHHY",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "T5VPVG",
           "rating": 4,
@@ -161,14 +166,24 @@
           "ref": "TRPB1YZ",
           "rating": 5,
           "text": null
+        },
+        {
+          "ref": "TGJBLJU",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TZRHEMAB",
+          "rating": 5,
+          "text": "I'm glad the technician gave me a call"
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 48,
-      "avg_cost_per_wo": 125.7,
-      "total_labor_cost": 2016,
+      "wo_count": 56,
+      "avg_cost_per_wo": 113.48,
+      "total_labor_cost": 2254.8,
       "avg_resident_rating": 3.75,
       "reviews": [
         {
@@ -195,11 +210,16 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 37,
-      "avg_cost_per_wo": 89.47,
-      "total_labor_cost": 563.63,
+      "wo_count": 46,
+      "avg_cost_per_wo": 94.74,
+      "total_labor_cost": 1173.83,
       "avg_resident_rating": 5,
       "reviews": [
+        {
+          "ref": "TARR43AB",
+          "rating": 5,
+          "text": "Im she's very grateful for the patience and understanding in these times!"
+        },
         {
           "ref": "TDRMRCU",
           "rating": 5,
@@ -220,8 +240,8 @@
     {
       "name": "Jacob Jett",
       "wo_count": 29,
-      "avg_cost_per_wo": 74.77,
-      "total_labor_cost": 1316.25,
+      "avg_cost_per_wo": 80.06,
+      "total_labor_cost": 1469.65,
       "avg_resident_rating": 4.25,
       "reviews": [
         {
@@ -248,28 +268,40 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 16,
-      "avg_cost_per_wo": 36.98,
-      "total_labor_cost": 531.72,
+      "wo_count": 19,
+      "avg_cost_per_wo": 38.04,
+      "total_labor_cost": 662.67,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 12,
-      "avg_cost_per_wo": 131.81,
-      "total_labor_cost": 551.88,
-      "avg_resident_rating": 5,
+      "wo_count": 13,
+      "avg_cost_per_wo": 124.31,
+      "total_labor_cost": 586.25,
+      "avg_resident_rating": 3,
       "reviews": [
         {
           "ref": "T1804VZ",
           "rating": 5,
           "text": null
+        },
+        {
+          "ref": "TTNWAM1",
+          "rating": 1,
+          "text": "The rails on the steps are literally separated, and now the steps have cracks in them too. All the maintenance guy did was use a hammer for 5 minutes and broke the actual steps more. I feel very unsafe going up and down the steps. The whole thing needs replaced, but all that was done wad making the situation much worse"
         }
       ]
     }
   ],
   "ramp_purchases_over_300": [
+    {
+      "date": "2026-08-13",
+      "ref": null,
+      "property": null,
+      "cardholder": "Margarito Saldana",
+      "amount": 2922.88
+    },
     {
       "date": "2026-08-12",
       "ref": "TDYV8CD",
@@ -286,15 +318,29 @@
     },
     {
       "date": "2026-08-12",
-      "ref": null,
-      "property": null,
+      "ref": "TVNQTUC",
+      "property": "KN47",
       "cardholder": "Margarito Saldana",
       "amount": 758.34
     },
     {
-      "date": "2026-08-11",
+      "date": "2026-08-13",
       "ref": null,
       "property": null,
+      "cardholder": "Justin Gutierrez",
+      "amount": 758.19
+    },
+    {
+      "date": "2026-08-13",
+      "ref": null,
+      "property": "R203",
+      "cardholder": "David Sanchez",
+      "amount": 672.18
+    },
+    {
+      "date": "2026-08-11",
+      "ref": "T13YUDB",
+      "property": "RL21",
       "cardholder": "Margarito Saldana",
       "amount": 612.95
     },
@@ -309,7 +355,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 1132.87
+      "amount": 1936.77
     },
     {
       "category": "Supplies and Tools",
@@ -321,28 +367,28 @@
     },
     {
       "category": "Grounds",
-      "amount": 260.23
+      "amount": 880.36
     },
     {
       "category": "Maintenance",
-      "amount": 3815.62
+      "amount": 4426.32
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 13964.87,
-    "materials": 11611.37,
+    "labor": 15928.59,
+    "materials": 12302.58,
     "invoices": 4390.26,
-    "total_actual": 29966.5,
-    "variance": 37464.55
+    "total_actual": 32621.43,
+    "variance": 34809.62
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 7836.08,
-    "materials": 634.26,
+    "labor": 8780.38,
+    "materials": 1254.39,
     "invoices": 1823.25,
-    "total_actual": 10293.59,
-    "variance": 18933.47
+    "total_actual": 11858.02,
+    "variance": 17369.04
   },
   "cost_by_property": [
     {
@@ -355,11 +401,11 @@
     },
     {
       "property": "TC68",
-      "labor": 1074.85,
-      "materials": 7402.49,
-      "cost": 8477.34,
+      "labor": 1418.42,
+      "materials": 7682.62,
+      "cost": 9101.05,
       "budget": 7359.6,
-      "pct_over_budget": 15.2
+      "pct_over_budget": 23.7
     }
   ],
   "narrative": null,
@@ -373,6 +419,27 @@
       "property": "R203",
       "ref": null,
       "amount": 220.37
+    },
+    {
+      "date": "2026-08-13",
+      "cardholder": "Jared Miller",
+      "property": "KN47",
+      "ref": "TXKV5WJ",
+      "amount": 206.71
+    },
+    {
+      "date": "2026-08-13",
+      "cardholder": "Jared Miller",
+      "property": "PS25",
+      "ref": "TRN2WXG",
+      "amount": 206.71
+    },
+    {
+      "date": "2026-08-13",
+      "cardholder": "Jared Miller",
+      "property": "RL16",
+      "ref": "TBL8IEMB",
+      "amount": 206.71
     },
     {
       "date": "2026-08-03",
@@ -415,27 +482,6 @@
       "property": "M221",
       "ref": "T93P9MF",
       "amount": 27.61
-    },
-    {
-      "date": "2026-08-04",
-      "cardholder": "David Sanchez",
-      "property": "M221",
-      "ref": "T93P9MF",
-      "amount": 21
-    },
-    {
-      "date": "2026-08-03",
-      "cardholder": "David Sanchez",
-      "property": "S129",
-      "ref": "TGH6EGG",
-      "amount": 17.92
-    },
-    {
-      "date": "2026-08-07",
-      "cardholder": "David Sanchez",
-      "property": "K104",
-      "ref": "T8V6XNC",
-      "amount": 16.53
     }
   ],
   "grounds_pest_control": [
