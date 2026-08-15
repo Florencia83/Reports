@@ -1,7 +1,7 @@
 {
   "month": "2026-08",
   "label": "August 2026",
-  "generated_at": "2026-08-14",
+  "generated_at": "2026-08-15",
   "complete": false,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -9,9 +9,9 @@
     {
       "property": "KN47",
       "code": "kn47",
-      "appfolio_actual": 5662.24,
-      "ramp_total": 941.75,
-      "labor_total": 3964.02,
+      "appfolio_actual": 6317.69,
+      "ramp_total": 1072.9,
+      "labor_total": 4390.06,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -137,6 +137,41 @@
           "merchant": "Ace Hardware",
           "amount": 40.23,
           "memo": "Purchased door knob and deadbolt",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "Ace Hardware",
+          "amount": 40.25,
+          "memo": "Purchased doorknob meld#TEZ340P",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "Ace Hardware",
+          "amount": 38.71,
+          "memo": "Purchased tub spout and tub surround power grab",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "The Home Depot",
+          "amount": 26.09,
+          "memo": "R&M supplies purchase\nTJE2B8FB",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "Ace Hardware",
+          "amount": 7.61,
+          "memo": "R&M supplies\nT3TIB4HB",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "Ace Hardware",
+          "amount": 18.49,
+          "memo": "Purchased doorknob",
           "cardholder": "Jaxson Lakins"
         }
       ],
@@ -350,6 +385,20 @@
           "hours": 3.2,
           "wage": 36,
           "cost": 115.2
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jared Miller",
+          "hours": 3.23,
+          "wage": 42.135,
+          "cost": 136.24
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jaxson Lakins",
+          "hours": 8.05,
+          "wage": 36,
+          "cost": 289.8
         }
       ]
     },
@@ -357,8 +406,8 @@
       "property": "P705",
       "code": "p705",
       "appfolio_actual": 1200,
-      "ramp_total": 501.2,
-      "labor_total": 506.33,
+      "ramp_total": 752.1,
+      "labor_total": 555.08,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -386,6 +435,13 @@
           "merchant": "Lowe's",
           "amount": 28.65,
           "memo": "spray for spiders",
+          "cardholder": "Jacob Jett"
+        },
+        {
+          "date": "2026-08-13",
+          "merchant": "The Home Depot",
+          "amount": 250.9,
+          "memo": "Ridgeview property maintenance supplies",
           "cardholder": "Jacob Jett"
         }
       ],
@@ -424,283 +480,13 @@
           "hours": 1.83,
           "wage": 39,
           "cost": 71.5
-        }
-      ]
-    },
-    {
-      "property": "RL16",
-      "code": "rl16",
-      "appfolio_actual": 0,
-      "ramp_total": 902.04,
-      "labor_total": 2257.69,
-      "ramp_items": [
-        {
-          "date": "2026-08-04",
-          "merchant": "The Home Depot",
-          "amount": 138.3,
-          "memo": "Purchased bathroom sink and parts, closet rail, bathroom fan",
-          "cardholder": "Jaxson Lakins"
         },
         {
-          "date": "2026-08-05",
-          "merchant": "The Home Depot",
-          "amount": 122.78,
-          "memo": "Purchased toilet and parts for toilet",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-05",
-          "merchant": "AppliancePartsPros",
-          "amount": 103.08,
-          "memo": "Purchased gaskets for dishwasher",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-07",
-          "merchant": "Ace Hardware",
-          "amount": 28.47,
-          "memo": "repair supplies",
-          "cardholder": "Jared Miller"
-        },
-        {
-          "date": "2026-08-07",
-          "merchant": "USPS",
-          "amount": 50,
-          "memo": "mail lock replacement",
-          "cardholder": "Jared Miller"
-        },
-        {
-          "date": "2026-08-07",
-          "merchant": "Ace Hardware",
-          "amount": 121.81,
-          "memo": "Purchased transitional garbage cans for the dumpsters",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-10",
-          "merchant": "The Home Depot",
-          "amount": 70.67,
-          "memo": "Purchased closet door rails and closet rollers",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-10",
-          "merchant": "Ace Hardware",
-          "amount": 29.35,
-          "memo": "Purchased toilet flapper and fill valve",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-10",
-          "merchant": "Ace Hardware",
-          "amount": 84.84,
-          "memo": "Purchased shower valve rebuild kit and shower head",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-10",
-          "merchant": "The Home Depot",
-          "amount": 33.5,
-          "memo": "parts for tub stopper",
-          "cardholder": "isaac chavez"
-        },
-        {
-          "date": "2026-08-11",
-          "merchant": "Ace Hardware",
-          "amount": 16.52,
-          "memo": "materials for Ridgeview project maintenance",
-          "cardholder": "isaac chavez"
-        },
-        {
-          "date": "2026-08-12",
-          "merchant": "Ace Hardware",
-          "amount": 20.11,
-          "memo": "R&M supplies",
-          "cardholder": "Jared Miller"
-        },
-        {
-          "date": "2026-08-12",
-          "merchant": "Ace Hardware",
-          "amount": 30.44,
-          "memo": "Purchased burner receptacles",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-13",
-          "merchant": "Ace Hardware",
-          "amount": 19.56,
-          "memo": "Purchased toilet flapper and fill valve",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-13",
-          "merchant": "PayRange",
-          "amount": 25,
-          "memo": "Added funds to PayRange account to test laundry machines",
-          "cardholder": "Jaxson Lakins"
-        },
-        {
-          "date": "2026-08-13",
-          "merchant": "Ace Hardware",
-          "amount": 7.61,
-          "memo": "Purchased toilet flapper and fill valve",
-          "cardholder": "Jaxson Lakins"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-08-03",
-          "name": "Jared Miller",
-          "hours": 0.85,
-          "wage": 42.135,
-          "cost": 35.81
-        },
-        {
-          "date": "2026-08-03",
-          "name": "Jaxson Lakins",
-          "hours": 1.15,
-          "wage": 36,
-          "cost": 41.4
-        },
-        {
-          "date": "2026-08-04",
-          "name": "Isaac Chavez",
-          "hours": 2.55,
-          "wage": 40.5,
-          "cost": 103.28
-        },
-        {
-          "date": "2026-08-04",
-          "name": "Jaxson Lakins",
-          "hours": 5.72,
-          "wage": 36,
-          "cost": 205.8
-        },
-        {
-          "date": "2026-08-04",
-          "name": "Maria Florencia Sola",
-          "hours": 1.65,
-          "wage": 15,
-          "cost": 24.75
-        },
-        {
-          "date": "2026-08-05",
-          "name": "Isaac Chavez",
-          "hours": 1.83,
-          "wage": 40.5,
-          "cost": 74.25
-        },
-        {
-          "date": "2026-08-05",
-          "name": "Jaxson Lakins",
-          "hours": 4.53,
-          "wage": 36,
-          "cost": 163.2
-        },
-        {
-          "date": "2026-08-06",
-          "name": "Isaac Chavez",
-          "hours": 1.15,
-          "wage": 40.5,
-          "cost": 46.58
-        },
-        {
-          "date": "2026-08-06",
-          "name": "Jared Miller",
-          "hours": 2.03,
-          "wage": 42.135,
-          "cost": 85.67
-        },
-        {
-          "date": "2026-08-06",
-          "name": "Jaxson Lakins",
-          "hours": 1.82,
-          "wage": 36,
-          "cost": 65.4
-        },
-        {
-          "date": "2026-08-07",
-          "name": "Jared Miller",
-          "hours": 4.87,
-          "wage": 42.135,
-          "cost": 205.06
-        },
-        {
-          "date": "2026-08-07",
-          "name": "Jaxson Lakins",
-          "hours": 1.63,
-          "wage": 36,
-          "cost": 58.8
-        },
-        {
-          "date": "2026-08-09",
-          "name": "Isaac Chavez",
-          "hours": 1.78,
-          "wage": 40.5,
-          "cost": 72.22
-        },
-        {
-          "date": "2026-08-10",
-          "name": "Isaac Chavez",
-          "hours": 2.03,
-          "wage": 40.5,
-          "cost": 82.35
-        },
-        {
-          "date": "2026-08-10",
-          "name": "Jared Miller",
-          "hours": 0.57,
-          "wage": 42.135,
-          "cost": 23.88
-        },
-        {
-          "date": "2026-08-10",
-          "name": "Jaxson Lakins",
-          "hours": 7.97,
-          "wage": 36,
-          "cost": 286.8
-        },
-        {
-          "date": "2026-08-11",
-          "name": "Isaac Chavez",
-          "hours": 2.57,
-          "wage": 40.5,
-          "cost": 103.95
-        },
-        {
-          "date": "2026-08-11",
-          "name": "Jared Miller",
-          "hours": 1.67,
-          "wage": 42.135,
-          "cost": 70.22
-        },
-        {
-          "date": "2026-08-12",
-          "name": "Jared Miller",
-          "hours": 2.75,
-          "wage": 42.135,
-          "cost": 115.87
-        },
-        {
-          "date": "2026-08-12",
-          "name": "Jaxson Lakins",
-          "hours": 1.95,
-          "wage": 36,
-          "cost": 70.2
-        },
-        {
-          "date": "2026-08-13",
-          "name": "Jared Miller",
-          "hours": 2.93,
-          "wage": 42.135,
-          "cost": 123.6
-        },
-        {
-          "date": "2026-08-13",
-          "name": "Jaxson Lakins",
-          "hours": 5.52,
-          "wage": 36,
-          "cost": 198.6
+          "date": "2026-08-14",
+          "name": "Justin Gutierrez",
+          "hours": 1.3,
+          "wage": 37.5,
+          "cost": 48.75
         }
       ]
     },
@@ -708,8 +494,8 @@
       "property": "TC68",
       "code": "tc68",
       "appfolio_actual": 0,
-      "ramp_total": 7682.62,
-      "labor_total": 1418.43,
+      "ramp_total": 7743.84,
+      "labor_total": 1455.56,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -955,6 +741,13 @@
           "amount": 34.82,
           "memo": "Repair and maintenance supplies",
           "cardholder": "Jonas Hoard"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "The Home Depot",
+          "amount": 61.22,
+          "memo": "repair",
+          "cardholder": "Jonas Hoard"
         }
       ],
       "labor_items": [
@@ -1020,6 +813,13 @@
           "hours": 8.48,
           "wage": 40.5,
           "cost": 343.58
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jonas Hoard",
+          "hours": 0.92,
+          "wage": 40.5,
+          "cost": 37.13
         }
       ]
     },
@@ -1027,8 +827,8 @@
       "property": "TC34",
       "code": "tc34",
       "appfolio_actual": 0,
-      "ramp_total": 172.08,
-      "labor_total": 154.63,
+      "ramp_total": 261.68,
+      "labor_total": 255.21,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -1064,6 +864,13 @@
           "amount": 26.42,
           "memo": "repair",
           "cardholder": "Jonas Hoard"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "The Home Depot",
+          "amount": 89.6,
+          "memo": "repair",
+          "cardholder": "Jonas Hoard"
         }
       ],
       "labor_items": [
@@ -1087,20 +894,500 @@
           "hours": 0.87,
           "wage": 40.5,
           "cost": 35.1
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jonas Hoard",
+          "hours": 2.48,
+          "wage": 40.5,
+          "cost": 100.58
         }
       ]
+    },
+    {
+      "property": "K104",
+      "code": "k104",
+      "appfolio_actual": 0,
+      "ramp_total": 190.7,
+      "labor_total": 823.53,
+      "ramp_items": [
+        {
+          "date": "2026-08-04",
+          "merchant": "Ace Hardware",
+          "amount": 119.98,
+          "memo": "R&M contractor supplies",
+          "cardholder": "Justin Gutierrez"
+        },
+        {
+          "date": "2026-08-14",
+          "merchant": "Lowe's",
+          "amount": 70.72,
+          "memo": "railing work",
+          "cardholder": "Jacob Jett"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-08-04",
+          "name": "Jacob Jett",
+          "hours": 3.37,
+          "wage": 39,
+          "cost": 131.3
+        },
+        {
+          "date": "2026-08-04",
+          "name": "Justin Gutierrez",
+          "hours": 2.53,
+          "wage": 37.5,
+          "cost": 95
+        },
+        {
+          "date": "2026-08-04",
+          "name": "Maria Florencia Sola",
+          "hours": 2.72,
+          "wage": 15,
+          "cost": 40.75
+        },
+        {
+          "date": "2026-08-06",
+          "name": "Justin Gutierrez",
+          "hours": 0.6,
+          "wage": 37.5,
+          "cost": 22.5
+        },
+        {
+          "date": "2026-08-07",
+          "name": "Maria Florencia Sola",
+          "hours": 3.1,
+          "wage": 15,
+          "cost": 46.5
+        },
+        {
+          "date": "2026-08-07",
+          "name": "Micheal N. Magoon",
+          "hours": 0.87,
+          "wage": 37.5,
+          "cost": 32.5
+        },
+        {
+          "date": "2026-08-08",
+          "name": "Maria Florencia Sola",
+          "hours": 1.78,
+          "wage": 15,
+          "cost": 26.75
+        },
+        {
+          "date": "2026-08-09",
+          "name": "Maria Florencia Sola",
+          "hours": 0.43,
+          "wage": 15,
+          "cost": 6.5
+        },
+        {
+          "date": "2026-08-10",
+          "name": "Jacob Jett",
+          "hours": 3.17,
+          "wage": 39,
+          "cost": 123.5
+        },
+        {
+          "date": "2026-08-11",
+          "name": "Maria Florencia Sola",
+          "hours": 5.18,
+          "wage": 15,
+          "cost": 77.75
+        },
+        {
+          "date": "2026-08-12",
+          "name": "Maria Florencia Sola",
+          "hours": 2.78,
+          "wage": 15,
+          "cost": 41.75
+        },
+        {
+          "date": "2026-08-13",
+          "name": "Justin Gutierrez",
+          "hours": 0.92,
+          "wage": 37.5,
+          "cost": 34.38
+        },
+        {
+          "date": "2026-08-13",
+          "name": "Maria Florencia Sola",
+          "hours": 2.68,
+          "wage": 15,
+          "cost": 40.25
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jacob Jett",
+          "hours": 1.82,
+          "wage": 39,
+          "cost": 70.85
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Maria Florencia Sola",
+          "hours": 2.22,
+          "wage": 15,
+          "cost": 33.25
+        }
+      ]
+    },
+    {
+      "property": "RL16",
+      "code": "rl16",
+      "appfolio_actual": 0,
+      "ramp_total": 902.04,
+      "labor_total": 2395.74,
+      "ramp_items": [
+        {
+          "date": "2026-08-04",
+          "merchant": "The Home Depot",
+          "amount": 138.3,
+          "memo": "Purchased bathroom sink and parts, closet rail, bathroom fan",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-05",
+          "merchant": "The Home Depot",
+          "amount": 122.78,
+          "memo": "Purchased toilet and parts for toilet",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-05",
+          "merchant": "AppliancePartsPros",
+          "amount": 103.08,
+          "memo": "Purchased gaskets for dishwasher",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-07",
+          "merchant": "Ace Hardware",
+          "amount": 28.47,
+          "memo": "repair supplies",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-08-07",
+          "merchant": "USPS",
+          "amount": 50,
+          "memo": "mail lock replacement",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-08-07",
+          "merchant": "Ace Hardware",
+          "amount": 121.81,
+          "memo": "Purchased transitional garbage cans for the dumpsters",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-10",
+          "merchant": "The Home Depot",
+          "amount": 70.67,
+          "memo": "Purchased closet door rails and closet rollers",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-10",
+          "merchant": "Ace Hardware",
+          "amount": 29.35,
+          "memo": "Purchased toilet flapper and fill valve",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-10",
+          "merchant": "Ace Hardware",
+          "amount": 84.84,
+          "memo": "Purchased shower valve rebuild kit and shower head",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-10",
+          "merchant": "The Home Depot",
+          "amount": 33.5,
+          "memo": "parts for tub stopper",
+          "cardholder": "isaac chavez"
+        },
+        {
+          "date": "2026-08-11",
+          "merchant": "Ace Hardware",
+          "amount": 16.52,
+          "memo": "materials for Ridgeview project maintenance",
+          "cardholder": "isaac chavez"
+        },
+        {
+          "date": "2026-08-12",
+          "merchant": "Ace Hardware",
+          "amount": 20.11,
+          "memo": "R&M supplies",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-08-12",
+          "merchant": "Ace Hardware",
+          "amount": 30.44,
+          "memo": "Purchased burner receptacles",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-13",
+          "merchant": "Ace Hardware",
+          "amount": 19.56,
+          "memo": "Purchased toilet flapper and fill valve",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-13",
+          "merchant": "PayRange",
+          "amount": 25,
+          "memo": "Added funds to PayRange account to test laundry machines",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-08-13",
+          "merchant": "Ace Hardware",
+          "amount": 7.61,
+          "memo": "Purchased toilet flapper and fill valve",
+          "cardholder": "Jaxson Lakins"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-08-03",
+          "name": "Jared Miller",
+          "hours": 0.85,
+          "wage": 42.135,
+          "cost": 35.81
+        },
+        {
+          "date": "2026-08-03",
+          "name": "Jaxson Lakins",
+          "hours": 1.15,
+          "wage": 36,
+          "cost": 41.4
+        },
+        {
+          "date": "2026-08-04",
+          "name": "Isaac Chavez",
+          "hours": 2.55,
+          "wage": 40.5,
+          "cost": 103.28
+        },
+        {
+          "date": "2026-08-04",
+          "name": "Jaxson Lakins",
+          "hours": 5.72,
+          "wage": 36,
+          "cost": 205.8
+        },
+        {
+          "date": "2026-08-04",
+          "name": "Maria Florencia Sola",
+          "hours": 1.65,
+          "wage": 15,
+          "cost": 24.75
+        },
+        {
+          "date": "2026-08-05",
+          "name": "Isaac Chavez",
+          "hours": 1.83,
+          "wage": 40.5,
+          "cost": 74.25
+        },
+        {
+          "date": "2026-08-05",
+          "name": "Jaxson Lakins",
+          "hours": 4.53,
+          "wage": 36,
+          "cost": 163.2
+        },
+        {
+          "date": "2026-08-06",
+          "name": "Isaac Chavez",
+          "hours": 1.15,
+          "wage": 40.5,
+          "cost": 46.58
+        },
+        {
+          "date": "2026-08-06",
+          "name": "Jared Miller",
+          "hours": 2.03,
+          "wage": 42.135,
+          "cost": 85.67
+        },
+        {
+          "date": "2026-08-06",
+          "name": "Jaxson Lakins",
+          "hours": 1.82,
+          "wage": 36,
+          "cost": 65.4
+        },
+        {
+          "date": "2026-08-06",
+          "name": "Margarito Saldana",
+          "hours": 1,
+          "wage": 42.599999999999994,
+          "cost": 42.6
+        },
+        {
+          "date": "2026-08-07",
+          "name": "Jared Miller",
+          "hours": 4.87,
+          "wage": 42.135,
+          "cost": 205.06
+        },
+        {
+          "date": "2026-08-07",
+          "name": "Jaxson Lakins",
+          "hours": 1.63,
+          "wage": 36,
+          "cost": 58.8
+        },
+        {
+          "date": "2026-08-09",
+          "name": "Isaac Chavez",
+          "hours": 1.78,
+          "wage": 40.5,
+          "cost": 72.22
+        },
+        {
+          "date": "2026-08-10",
+          "name": "Isaac Chavez",
+          "hours": 2.03,
+          "wage": 40.5,
+          "cost": 82.35
+        },
+        {
+          "date": "2026-08-10",
+          "name": "Jared Miller",
+          "hours": 0.57,
+          "wage": 42.135,
+          "cost": 23.88
+        },
+        {
+          "date": "2026-08-10",
+          "name": "Jaxson Lakins",
+          "hours": 7.97,
+          "wage": 36,
+          "cost": 286.8
+        },
+        {
+          "date": "2026-08-11",
+          "name": "Isaac Chavez",
+          "hours": 2.57,
+          "wage": 40.5,
+          "cost": 103.95
+        },
+        {
+          "date": "2026-08-11",
+          "name": "Jared Miller",
+          "hours": 1.67,
+          "wage": 42.135,
+          "cost": 70.22
+        },
+        {
+          "date": "2026-08-12",
+          "name": "Jared Miller",
+          "hours": 2.75,
+          "wage": 42.135,
+          "cost": 115.87
+        },
+        {
+          "date": "2026-08-12",
+          "name": "Jaxson Lakins",
+          "hours": 1.95,
+          "wage": 36,
+          "cost": 70.2
+        },
+        {
+          "date": "2026-08-13",
+          "name": "Jared Miller",
+          "hours": 2.93,
+          "wage": 42.135,
+          "cost": 123.6
+        },
+        {
+          "date": "2026-08-13",
+          "name": "Jaxson Lakins",
+          "hours": 5.52,
+          "wage": 36,
+          "cost": 198.6
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jared Miller",
+          "hours": 1.08,
+          "wage": 42.135,
+          "cost": 45.65
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jaxson Lakins",
+          "hours": 1.38,
+          "wage": 36,
+          "cost": 49.8
+        }
+      ]
+    },
+    {
+      "property": "R203",
+      "code": "r203",
+      "appfolio_actual": null,
+      "ramp_total": 70.35,
+      "labor_total": 0,
+      "ramp_items": [
+        {
+          "date": "2026-08-03",
+          "merchant": "The Home Depot",
+          "amount": 24.92,
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
+        },
+        {
+          "date": "2026-08-04",
+          "merchant": "True Value",
+          "amount": 16.34,
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
+        },
+        {
+          "date": "2026-08-13",
+          "merchant": "The Home Depot",
+          "amount": 29.09,
+          "memo": "parts for shower and sink",
+          "cardholder": "Jacob Jett"
+        }
+      ],
+      "labor_items": []
     },
     {
       "property": "C313",
       "code": "c313",
       "appfolio_actual": 0,
-      "ramp_total": 209.42,
-      "labor_total": 886.51,
+      "ramp_total": 1151.21,
+      "labor_total": 929.23,
       "ramp_items": [
+        {
+          "date": "2026-08-12",
+          "merchant": "R&B Garage Doors and Services",
+          "amount": 863.46,
+          "memo": "Garage door repair services for rental property",
+          "cardholder": "Justin Gutierrez"
+        },
         {
           "date": "2026-08-12",
           "merchant": "The Home Depot",
           "amount": 209.42,
+          "memo": "General maintenance hardware and materials",
+          "cardholder": "Justin Gutierrez"
+        },
+        {
+          "date": "2026-08-13",
+          "merchant": "The Home Depot",
+          "amount": 78.33,
           "memo": "General maintenance hardware and materials",
           "cardholder": "Justin Gutierrez"
         }
@@ -1109,9 +1396,9 @@
         {
           "date": "2026-08-03",
           "name": "Justin Gutierrez",
-          "hours": 2.23,
+          "hours": 2,
           "wage": 37.5,
-          "cost": 83.75
+          "cost": 75
         },
         {
           "date": "2026-08-03",
@@ -1186,9 +1473,9 @@
         {
           "date": "2026-08-12",
           "name": "Justin Gutierrez",
-          "hours": 6.18,
+          "hours": 6.17,
           "wage": 37.5,
-          "cost": 231.88
+          "cost": 231.25
         },
         {
           "date": "2026-08-12",
@@ -1200,9 +1487,9 @@
         {
           "date": "2026-08-13",
           "name": "Justin Gutierrez",
-          "hours": 2.07,
+          "hours": 2,
           "wage": 37.5,
-          "cost": 77.5
+          "cost": 75
         },
         {
           "date": "2026-08-13",
@@ -1210,6 +1497,13 @@
           "hours": 1.73,
           "wage": 15,
           "cost": 26
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jacob Jett",
+          "hours": 1.4,
+          "wage": 39,
+          "cost": 54.6
         }
       ]
     },
@@ -1218,7 +1512,7 @@
       "code": "ps25",
       "appfolio_actual": 0,
       "ramp_total": 1067.17,
-      "labor_total": 1257.17,
+      "labor_total": 1429.3,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -1396,6 +1690,13 @@
           "hours": 2.12,
           "wage": 40.5,
           "cost": 85.73
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Isaac Chavez",
+          "hours": 4.25,
+          "wage": 40.5,
+          "cost": 172.13
         }
       ]
     },
@@ -1404,7 +1705,7 @@
       "code": "ps17",
       "appfolio_actual": 0,
       "ramp_total": 160.15,
-      "labor_total": 307.23,
+      "labor_total": 466.32,
       "ramp_items": [
         {
           "date": "2026-08-11",
@@ -1449,6 +1750,20 @@
           "hours": 2.68,
           "wage": 40.5,
           "cost": 108.68
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Isaac Chavez",
+          "hours": 3.63,
+          "wage": 40.5,
+          "cost": 147.15
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jared Miller",
+          "hours": 0.28,
+          "wage": 42.135,
+          "cost": 11.94
         }
       ]
     },
@@ -1457,7 +1772,7 @@
       "code": "o155",
       "appfolio_actual": 0,
       "ramp_total": 237.18,
-      "labor_total": 1255.01,
+      "labor_total": 1253.61,
       "ramp_items": [
         {
           "date": "2026-08-08",
@@ -1506,9 +1821,9 @@
         {
           "date": "2026-08-08",
           "name": "Jacob Jett",
-          "hours": 3.22,
+          "hours": 3.03,
           "wage": 39,
-          "cost": 125.45
+          "cost": 118.3
         },
         {
           "date": "2026-08-09",
@@ -1576,9 +1891,9 @@
         {
           "date": "2026-08-13",
           "name": "Jacob Jett",
-          "hours": 2.25,
+          "hours": 2,
           "wage": 39,
-          "cost": 87.75
+          "cost": 78
         },
         {
           "date": "2026-08-13",
@@ -1586,6 +1901,13 @@
           "hours": 1.42,
           "wage": 15,
           "cost": 21.25
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Maria Florencia Sola",
+          "hours": 1.03,
+          "wage": 15,
+          "cost": 15.5
         }
       ]
     },
@@ -1661,7 +1983,7 @@
       "code": "j312",
       "appfolio_actual": 0,
       "ramp_total": 213.75,
-      "labor_total": 268.55,
+      "labor_total": 279.6,
       "ramp_items": [
         {
           "date": "2026-08-04",
@@ -1689,9 +2011,9 @@
         {
           "date": "2026-08-01",
           "name": "Jacob Jett",
-          "hours": 1.65,
+          "hours": 1.93,
           "wage": 39,
-          "cost": 64.35
+          "cost": 75.4
         },
         {
           "date": "2026-08-04",
@@ -1721,7 +2043,7 @@
       "code": "rl21",
       "appfolio_actual": 0,
       "ramp_total": 240.9,
-      "labor_total": 618.34,
+      "labor_total": 706.04,
       "ramp_items": [
         {
           "date": "2026-08-04",
@@ -1773,6 +2095,13 @@
           "hours": 2.02,
           "wage": 36,
           "cost": 72.6
+        },
+        {
+          "date": "2026-08-04",
+          "name": "Margarito Saldana",
+          "hours": 1.33,
+          "wage": 42.599999999999994,
+          "cost": 56.8
         },
         {
           "date": "2026-08-05",
@@ -1836,6 +2165,13 @@
           "hours": 0.92,
           "wage": 36,
           "cost": 33
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jared Miller",
+          "hours": 0.73,
+          "wage": 42.135,
+          "cost": 30.9
         }
       ]
     },
@@ -1897,7 +2233,7 @@
       "code": "s129",
       "appfolio_actual": 0,
       "ramp_total": 100.35,
-      "labor_total": 339.1,
+      "labor_total": 372.9,
       "ramp_items": [
         {
           "date": "2026-08-06",
@@ -1949,6 +2285,13 @@
           "hours": 1,
           "wage": 37.5,
           "cost": 37.5
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jacob Jett",
+          "hours": 0.87,
+          "wage": 39,
+          "cost": 33.8
         }
       ]
     },
@@ -1957,7 +2300,7 @@
       "code": "m405",
       "appfolio_actual": 0,
       "ramp_total": 979.26,
-      "labor_total": 437.84,
+      "labor_total": 669.69,
       "ramp_items": [
         {
           "date": "2026-08-06",
@@ -1985,9 +2328,9 @@
         {
           "date": "2026-08-05",
           "name": "Justin Gutierrez",
-          "hours": 3.78,
+          "hours": 3.38,
           "wage": 37.5,
-          "cost": 141.88
+          "cost": 126.88
         },
         {
           "date": "2026-08-06",
@@ -2016,13 +2359,34 @@
           "hours": 1.45,
           "wage": 37.5,
           "cost": 54.38
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jacob Jett",
+          "hours": 2.98,
+          "wage": 39,
+          "cost": 116.35
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Justin Gutierrez",
+          "hours": 1.67,
+          "wage": 37.5,
+          "cost": 62.5
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Maria Florencia Sola",
+          "hours": 4.53,
+          "wage": 15,
+          "cost": 68
         }
       ]
     },
     {
       "property": "MS43",
       "code": "ms43",
-      "appfolio_actual": 0,
+      "appfolio_actual": null,
       "ramp_total": 110,
       "labor_total": 31.75,
       "ramp_items": [
@@ -2048,146 +2412,6 @@
           "hours": 0.68,
           "wage": 15,
           "cost": 10.25
-        }
-      ]
-    },
-    {
-      "property": "R203",
-      "code": "r203",
-      "appfolio_actual": null,
-      "ramp_total": 41.26,
-      "labor_total": 0,
-      "ramp_items": [
-        {
-          "date": "2026-08-03",
-          "merchant": "The Home Depot",
-          "amount": 24.92,
-          "memo": "General maintenance hardware and materials",
-          "cardholder": "Justin Gutierrez"
-        },
-        {
-          "date": "2026-08-04",
-          "merchant": "True Value",
-          "amount": 16.34,
-          "memo": "General maintenance hardware and materials",
-          "cardholder": "Justin Gutierrez"
-        }
-      ],
-      "labor_items": []
-    },
-    {
-      "property": "K104",
-      "code": "k104",
-      "appfolio_actual": 0,
-      "ramp_total": 119.98,
-      "labor_total": 754.33,
-      "ramp_items": [
-        {
-          "date": "2026-08-04",
-          "merchant": "Ace Hardware",
-          "amount": 119.98,
-          "memo": "R&M contractor supplies",
-          "cardholder": "Justin Gutierrez"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-08-04",
-          "name": "Jacob Jett",
-          "hours": 3.37,
-          "wage": 39,
-          "cost": 131.3
-        },
-        {
-          "date": "2026-08-04",
-          "name": "Justin Gutierrez",
-          "hours": 2.53,
-          "wage": 37.5,
-          "cost": 95
-        },
-        {
-          "date": "2026-08-04",
-          "name": "Maria Florencia Sola",
-          "hours": 2.72,
-          "wage": 15,
-          "cost": 40.75
-        },
-        {
-          "date": "2026-08-06",
-          "name": "Justin Gutierrez",
-          "hours": 0.6,
-          "wage": 37.5,
-          "cost": 22.5
-        },
-        {
-          "date": "2026-08-07",
-          "name": "Maria Florencia Sola",
-          "hours": 3.1,
-          "wage": 15,
-          "cost": 46.5
-        },
-        {
-          "date": "2026-08-07",
-          "name": "Micheal N. Magoon",
-          "hours": 0.87,
-          "wage": 37.5,
-          "cost": 32.5
-        },
-        {
-          "date": "2026-08-08",
-          "name": "Maria Florencia Sola",
-          "hours": 1.78,
-          "wage": 15,
-          "cost": 26.75
-        },
-        {
-          "date": "2026-08-09",
-          "name": "Maria Florencia Sola",
-          "hours": 0.43,
-          "wage": 15,
-          "cost": 6.5
-        },
-        {
-          "date": "2026-08-10",
-          "name": "Jacob Jett",
-          "hours": 3.93,
-          "wage": 39,
-          "cost": 153.4
-        },
-        {
-          "date": "2026-08-11",
-          "name": "Maria Florencia Sola",
-          "hours": 5.18,
-          "wage": 15,
-          "cost": 77.75
-        },
-        {
-          "date": "2026-08-12",
-          "name": "Maria Florencia Sola",
-          "hours": 2.78,
-          "wage": 15,
-          "cost": 41.75
-        },
-        {
-          "date": "2026-08-13",
-          "name": "Justin Gutierrez",
-          "hours": 0.92,
-          "wage": 37.5,
-          "cost": 34.38
-        },
-        {
-          "date": "2026-08-13",
-          "name": "Maria Florencia Sola",
-          "hours": 2.68,
-          "wage": 15,
-          "cost": 40.25
-        },
-        {
-          "date": "2026-08-14",
-          "name": "Maria Florencia Sola",
-          "hours": 0.33,
-          "wage": 15,
-          "cost": 5
         }
       ]
     },
@@ -2242,9 +2466,9 @@
     {
       "property": "K308",
       "code": "k308",
-      "appfolio_actual": 0,
+      "appfolio_actual": null,
       "ramp_total": 0,
-      "labor_total": 229.45,
+      "labor_total": 239.2,
       "ramp_items": [],
       "labor_items": [
         {
@@ -2257,9 +2481,9 @@
         {
           "date": "2026-08-13",
           "name": "Jacob Jett",
-          "hours": 3.93,
+          "hours": 4.18,
           "wage": 39,
-          "cost": 153.4
+          "cost": 163.15
         }
       ]
     },
@@ -2335,7 +2559,7 @@
     {
       "property": "H731",
       "code": "h731",
-      "appfolio_actual": 0,
+      "appfolio_actual": null,
       "ramp_total": 0,
       "labor_total": 59.15,
       "ramp_items": [],
@@ -2371,7 +2595,7 @@
       "code": "ps91",
       "appfolio_actual": 0,
       "ramp_total": 0,
-      "labor_total": 36.75,
+      "labor_total": 42.83,
       "ramp_items": [],
       "labor_items": [
         {
@@ -2394,6 +2618,13 @@
           "hours": 0.83,
           "wage": 15,
           "cost": 12.5
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Isaac Chavez",
+          "hours": 0.15,
+          "wage": 40.5,
+          "cost": 6.08
         }
       ]
     },
@@ -2453,9 +2684,9 @@
     {
       "property": "KN47",
       "code": "kn47",
-      "appfolio_actual": 2549.88,
+      "appfolio_actual": 2590.88,
       "ramp_total": 371.97,
-      "labor_total": 1578.83,
+      "labor_total": 1608.32,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -2598,6 +2829,13 @@
           "hours": 1.33,
           "wage": 42.135,
           "cost": 56.18
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jared Miller",
+          "hours": 0.7,
+          "wage": 42.135,
+          "cost": 29.49
         }
       ]
     },
@@ -2682,7 +2920,7 @@
       "code": "ps25",
       "appfolio_actual": 0,
       "ramp_total": 206.71,
-      "labor_total": 417.89,
+      "labor_total": 435.45,
       "ramp_items": [
         {
           "date": "2026-08-13",
@@ -2783,6 +3021,13 @@
           "hours": 0.52,
           "wage": 42.135,
           "cost": 21.77
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jared Miller",
+          "hours": 0.42,
+          "wage": 42.135,
+          "cost": 17.56
         }
       ]
     },
@@ -2791,7 +3036,7 @@
       "code": "rl16",
       "appfolio_actual": 0,
       "ramp_total": 625.55,
-      "labor_total": 901.68,
+      "labor_total": 938.2,
       "ramp_items": [
         {
           "date": "2026-08-01",
@@ -2899,6 +3144,101 @@
           "hours": 1.03,
           "wage": 42.135,
           "cost": 43.54
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jared Miller",
+          "hours": 0.87,
+          "wage": 42.135,
+          "cost": 36.52
+        }
+      ]
+    },
+    {
+      "property": "O155",
+      "code": "o155",
+      "appfolio_actual": 0,
+      "ramp_total": 15.76,
+      "labor_total": 749.51,
+      "ramp_items": [
+        {
+          "date": "2026-08-13",
+          "merchant": "The Home Depot",
+          "amount": 15.76,
+          "memo": "Grounds maintenance material",
+          "cardholder": "David Sanchez"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-08-05",
+          "name": "Alexander Overall",
+          "hours": 1.15,
+          "wage": 36,
+          "cost": 41.4
+        },
+        {
+          "date": "2026-08-05",
+          "name": "David Sanchez",
+          "hours": 1.58,
+          "wage": 38.25,
+          "cost": 60.56
+        },
+        {
+          "date": "2026-08-06",
+          "name": "Alexander Overall",
+          "hours": 1.55,
+          "wage": 36,
+          "cost": 55.8
+        },
+        {
+          "date": "2026-08-06",
+          "name": "David Sanchez",
+          "hours": 1.93,
+          "wage": 38.25,
+          "cost": 73.95
+        },
+        {
+          "date": "2026-08-12",
+          "name": "Alexander Overall",
+          "hours": 1.25,
+          "wage": 36,
+          "cost": 45
+        },
+        {
+          "date": "2026-08-12",
+          "name": "David Sanchez",
+          "hours": 1.77,
+          "wage": 38.25,
+          "cost": 67.58
+        },
+        {
+          "date": "2026-08-13",
+          "name": "Alexander Overall",
+          "hours": 3.48,
+          "wage": 36,
+          "cost": 125.4
+        },
+        {
+          "date": "2026-08-13",
+          "name": "David Sanchez",
+          "hours": 4.25,
+          "wage": 38.25,
+          "cost": 162.56
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Alexander Overall",
+          "hours": 1.15,
+          "wage": 36,
+          "cost": 41.4
+        },
+        {
+          "date": "2026-08-14",
+          "name": "David Sanchez",
+          "hours": 1.98,
+          "wage": 38.25,
+          "cost": 75.86
         }
       ]
     },
@@ -3096,7 +3436,7 @@
     {
       "property": "M221",
       "code": "m221",
-      "appfolio_actual": 0,
+      "appfolio_actual": null,
       "ramp_total": 48.61,
       "labor_total": 253.68,
       "ramp_items": [
@@ -3183,7 +3523,7 @@
       "code": "a511",
       "appfolio_actual": 0,
       "ramp_total": 47.73,
-      "labor_total": 304.84,
+      "labor_total": 370.43,
       "ramp_items": [
         {
           "date": "2026-08-04",
@@ -3235,6 +3575,20 @@
           "hours": 1.2,
           "wage": 36,
           "cost": 43.2
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Alexander Overall",
+          "hours": 0.88,
+          "wage": 36,
+          "cost": 31.8
+        },
+        {
+          "date": "2026-08-14",
+          "name": "David Sanchez",
+          "hours": 0.88,
+          "wage": 38.25,
+          "cost": 33.79
         }
       ]
     },
@@ -3349,7 +3703,7 @@
       "code": "tc68",
       "appfolio_actual": 0,
       "ramp_total": 0,
-      "labor_total": 107.32,
+      "labor_total": 188.32,
       "ramp_items": [],
       "labor_items": [
         {
@@ -3358,6 +3712,13 @@
           "hours": 2.65,
           "wage": 40.5,
           "cost": 107.32
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jonas Hoard",
+          "hours": 2,
+          "wage": 40.5,
+          "cost": 81
         }
       ]
     },
@@ -3704,72 +4065,6 @@
       ]
     },
     {
-      "property": "O155",
-      "code": "o155",
-      "appfolio_actual": 0,
-      "ramp_total": 0,
-      "labor_total": 632.25,
-      "ramp_items": [],
-      "labor_items": [
-        {
-          "date": "2026-08-05",
-          "name": "Alexander Overall",
-          "hours": 1.15,
-          "wage": 36,
-          "cost": 41.4
-        },
-        {
-          "date": "2026-08-05",
-          "name": "David Sanchez",
-          "hours": 1.58,
-          "wage": 38.25,
-          "cost": 60.56
-        },
-        {
-          "date": "2026-08-06",
-          "name": "Alexander Overall",
-          "hours": 1.55,
-          "wage": 36,
-          "cost": 55.8
-        },
-        {
-          "date": "2026-08-06",
-          "name": "David Sanchez",
-          "hours": 1.93,
-          "wage": 38.25,
-          "cost": 73.95
-        },
-        {
-          "date": "2026-08-12",
-          "name": "Alexander Overall",
-          "hours": 1.25,
-          "wage": 36,
-          "cost": 45
-        },
-        {
-          "date": "2026-08-12",
-          "name": "David Sanchez",
-          "hours": 1.77,
-          "wage": 38.25,
-          "cost": 67.58
-        },
-        {
-          "date": "2026-08-13",
-          "name": "Alexander Overall",
-          "hours": 3.48,
-          "wage": 36,
-          "cost": 125.4
-        },
-        {
-          "date": "2026-08-13",
-          "name": "David Sanchez",
-          "hours": 4.25,
-          "wage": 38.25,
-          "cost": 162.56
-        }
-      ]
-    },
-    {
       "property": "E328",
       "code": "e328",
       "appfolio_actual": 0,
@@ -3812,7 +4107,7 @@
       "code": "c313",
       "appfolio_actual": 0,
       "ramp_total": 0,
-      "labor_total": 285.34,
+      "labor_total": 388.16,
       "ramp_items": [],
       "labor_items": [
         {
@@ -3842,13 +4137,27 @@
           "hours": 2.47,
           "wage": 38.25,
           "cost": 94.35
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Alexander Overall",
+          "hours": 0.77,
+          "wage": 36,
+          "cost": 27.6
+        },
+        {
+          "date": "2026-08-14",
+          "name": "David Sanchez",
+          "hours": 1.97,
+          "wage": 38.25,
+          "cost": 75.22
         }
       ]
     },
     {
       "property": "K308",
       "code": "k308",
-      "appfolio_actual": 0,
+      "appfolio_actual": null,
       "ramp_total": 0,
       "labor_total": 71.55,
       "ramp_items": [],
@@ -3874,7 +4183,7 @@
       "code": "tc34",
       "appfolio_actual": 0,
       "ramp_total": 0,
-      "labor_total": 81,
+      "labor_total": 164.03,
       "ramp_items": [],
       "labor_items": [
         {
@@ -3883,6 +4192,13 @@
           "hours": 2,
           "wage": 40.5,
           "cost": 81
+        },
+        {
+          "date": "2026-08-14",
+          "name": "Jonas Hoard",
+          "hours": 2.05,
+          "wage": 40.5,
+          "cost": 83.03
         }
       ]
     },
@@ -3930,7 +4246,7 @@
     {
       "property": "H731",
       "code": "h731",
-      "appfolio_actual": 0,
+      "appfolio_actual": null,
       "ramp_total": 0,
       "labor_total": 65.03,
       "ramp_items": [],
