@@ -3,16 +3,16 @@
   "week_end": "2026-08-16",
   "label": "August 10 – 16, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-15",
-  "complete": false,
+  "generated_at": "2026-08-16",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 57.52,
-      "last_7": 41.39
+      "last_30": 57.49,
+      "last_7": 40.76
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,13 +142,18 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 81,
-      "avg_cost_per_wo": 36.12,
+      "wo_count": 84,
+      "avg_cost_per_wo": 34.83,
       "total_labor_cost": 1815.95,
-      "avg_resident_rating": 4.86,
+      "avg_resident_rating": 4.88,
       "reviews": [
         {
           "ref": "T3TIB4HB",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T22B34LB",
           "rating": 5,
           "text": null
         },
@@ -186,11 +191,16 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 63,
-      "avg_cost_per_wo": 108.61,
-      "total_labor_cost": 2673,
-      "avg_resident_rating": 4,
+      "wo_count": 64,
+      "avg_cost_per_wo": 107.57,
+      "total_labor_cost": 2715,
+      "avg_resident_rating": 4.17,
       "reviews": [
+        {
+          "ref": "TL9XBJZ",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "T2GAQY7",
           "rating": 1,
@@ -223,8 +233,18 @@
       "wo_count": 52,
       "avg_cost_per_wo": 120.52,
       "total_labor_cost": 1345.95,
-      "avg_resident_rating": 5,
+      "avg_resident_rating": 4.5,
       "reviews": [
+        {
+          "ref": "T9RQHW7",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TZ3MBZ6",
+          "rating": 2,
+          "text": "The tv at night in my area is still loud into 1am"
+        },
         {
           "ref": "TARR43AB",
           "rating": 5,
@@ -395,36 +415,36 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 17531.33,
+    "labor": 17658.68,
     "materials": 14212.47,
     "invoices": 6585.88,
-    "total_actual": 38329.68,
-    "variance": 29101.37
+    "total_actual": 38457.03,
+    "variance": 28974.02
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 9313.65,
+    "labor": 9418.29,
     "materials": 1270.15,
     "invoices": 2043.25,
-    "total_actual": 12627.05,
-    "variance": 16600.01
+    "total_actual": 12731.69,
+    "variance": 16495.37
   },
   "cost_by_property": [
     {
       "property": "M405",
-      "labor": 669.68,
+      "labor": 698.93,
       "materials": 979.26,
-      "cost": 1648.94,
+      "cost": 1678.19,
       "budget": 1095,
-      "pct_over_budget": 50.6
+      "pct_over_budget": 53.3
     },
     {
       "property": "TC68",
-      "labor": 1455.55,
+      "labor": 1479.85,
       "materials": 7743.84,
-      "cost": 9199.39,
+      "cost": 9223.69,
       "budget": 7359.6,
-      "pct_over_budget": 25
+      "pct_over_budget": 25.3
     },
     {
       "property": "P705",
