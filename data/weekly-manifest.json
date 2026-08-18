@@ -1,6 +1,10 @@
 {
   "weeks": [
     {
+      "key": "2026-08-17",
+      "label": "August 17 – 23, 2026"
+    },
+    {
       "key": "2026-08-10",
       "label": "August 10 – 16, 2026"
     },
@@ -29,5 +33,5 @@
       "label": "June 29 – July 5, 2026"
     }
   ],
-  "generated_at": "2026-08-16"
+  "generated_at": "2026-08-18"
 }
