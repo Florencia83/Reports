@@ -3,7 +3,7 @@
   "week_end": "2026-08-23",
   "label": "August 17 – 23, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-18",
+  "generated_at": "2026-08-19",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 61.48,
-      "last_7": 46.72
+      "last_30": 60.7,
+      "last_7": 39.14
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 96,
-      "avg_cost_per_wo": 32.19,
-      "total_labor_cost": 1950.78,
+      "wo_count": 101,
+      "avg_cost_per_wo": 36.22,
+      "total_labor_cost": 2193.05,
       "avg_resident_rating": 4.9,
       "reviews": [
         {
@@ -201,10 +201,10 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 67,
-      "avg_cost_per_wo": 111.34,
-      "total_labor_cost": 2848.8,
-      "avg_resident_rating": 4.17,
+      "wo_count": 72,
+      "avg_cost_per_wo": 115.94,
+      "total_labor_cost": 3192.3,
+      "avg_resident_rating": 4.29,
       "reviews": [
         {
           "ref": "TL9XBJZ",
@@ -235,6 +235,11 @@
           "ref": "T5M8D48",
           "rating": 5,
           "text": "Excellent craftsmanship and professionalism on a job well done"
+        },
+        {
+          "ref": "TVRLNQM",
+          "rating": 5,
+          "text": "Thank you for fixing my new dishwasher."
         }
       ]
     },
@@ -279,11 +284,16 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 33,
-      "avg_cost_per_wo": 81.66,
-      "total_labor_cost": 1842.75,
+      "wo_count": 36,
+      "avg_cost_per_wo": 78.78,
+      "total_labor_cost": 2000.7,
       "avg_resident_rating": 4.33,
       "reviews": [
+        {
+          "ref": "TR3E4FB",
+          "rating": 5,
+          "text": "I would like to recognize Jacob for his communication, reliability and kindness. He was very thorough with explaining why the maintenance issue had occurred and ensuring it was resolved. His professionalism and knowledge was very reassuring and I hope to be able to continue entrusting him with any maintenance related issues."
+        },
         {
           "ref": "TTUN518",
           "rating": 5,
@@ -293,26 +303,21 @@
           "ref": "TTK4WLE",
           "rating": 3,
           "text": null
-        },
-        {
-          "ref": "TZ99Z6F",
-          "rating": 5,
-          "text": null
         }
       ]
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 25,
-      "avg_cost_per_wo": 33.98,
+      "wo_count": 26,
+      "avg_cost_per_wo": 32.68,
       "total_labor_cost": 789.57,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 15,
-      "avg_cost_per_wo": 110.95,
+      "wo_count": 14,
+      "avg_cost_per_wo": 118.87,
       "total_labor_cost": 634.38,
       "avg_resident_rating": 3,
       "reviews": [
@@ -331,6 +336,13 @@
   ],
   "ramp_purchases_over_300": [
     {
+      "date": "2026-08-18",
+      "ref": "TTEAE5W",
+      "property": "KN47",
+      "cardholder": "Jaxson Lakins",
+      "amount": 441.72
+    },
+    {
       "date": "2026-08-17",
       "ref": "TVRLNQM",
       "property": "KN47",
@@ -343,12 +355,19 @@
       "property": "KN47",
       "cardholder": "Ryan Robson",
       "amount": 367.19
+    },
+    {
+      "date": "2026-08-18",
+      "ref": "TCM62W9",
+      "property": "KN47",
+      "cardholder": "Jared Miller",
+      "amount": 303.55
     }
   ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 579.6
+      "amount": 853.04
     },
     {
       "category": "Supplies and Tools",
@@ -356,32 +375,32 @@
     },
     {
       "category": "Appliances",
-      "amount": 441.72
+      "amount": 883.44
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 46.15
     },
     {
       "category": "Maintenance",
-      "amount": 188.62
+      "amount": 667.05
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 19043.71,
-    "materials": 14401.09,
+    "labor": 20210.71,
+    "materials": 14879.52,
     "invoices": 6585.88,
-    "total_actual": 40030.68,
-    "variance": 27400.37
+    "total_actual": 41676.11,
+    "variance": 25754.94
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 10527.96,
-    "materials": 1289.52,
+    "labor": 11682.65,
+    "materials": 1335.67,
     "invoices": 2043.25,
-    "total_actual": 13860.73,
-    "variance": 15366.33
+    "total_actual": 15061.57,
+    "variance": 14165.49
   },
   "cost_by_property": [
     {
@@ -395,10 +414,10 @@
     {
       "property": "TC68",
       "labor": 1479.85,
-      "materials": 7743.84,
-      "cost": 9223.69,
+      "materials": 7908.46,
+      "cost": 9388.31,
       "budget": 7359.6,
-      "pct_over_budget": 25.3
+      "pct_over_budget": 27.6
     },
     {
       "property": "P705",
@@ -410,11 +429,11 @@
     },
     {
       "property": "PS25",
-      "labor": 1713.09,
-      "materials": 1067.17,
-      "cost": 2780.26,
+      "labor": 1748.49,
+      "materials": 1106.55,
+      "cost": 2855.04,
       "budget": 2439,
-      "pct_over_budget": 14
+      "pct_over_budget": 17.1
     },
     {
       "property": "RL21",
@@ -494,10 +513,10 @@
       "amount": 28.29
     },
     {
-      "date": "2026-08-04",
+      "date": "2026-08-18",
       "cardholder": "David Sanchez",
-      "property": "M221",
-      "ref": "T93P9MF",
+      "property": "W226",
+      "ref": "TC3H4CNB",
       "amount": 27.61
     }
   ],
