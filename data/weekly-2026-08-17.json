@@ -145,8 +145,13 @@
       "wo_count": 104,
       "avg_cost_per_wo": 37.6,
       "total_labor_cost": 2330.45,
-      "avg_resident_rating": 4.9,
+      "avg_resident_rating": 4.91,
       "reviews": [
+        {
+          "ref": "TCM62W9",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "T3TIB4HB",
           "rating": 5,
@@ -409,19 +414,19 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 21067.86,
+    "labor": 21088.61,
     "materials": 11452.55,
-    "invoices": 6585.88,
-    "total_actual": 39106.29,
-    "variance": 28324.76
+    "invoices": 8684.42,
+    "total_actual": 41225.58,
+    "variance": 26205.47
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 12518.72,
+    "labor": 12583.62,
     "materials": 1335.67,
     "invoices": 2043.25,
-    "total_actual": 15897.64,
-    "variance": 13329.42
+    "total_actual": 15962.54,
+    "variance": 13264.52
   },
   "cost_by_property": [
     {

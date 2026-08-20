@@ -18,30 +18,30 @@
           "property": "KN47",
           "region": "Tri-Cities",
           "last_week": 1530.22,
-          "mtd": 8722.55,
+          "mtd": 8372.55,
           "budget": 22551.1,
-          "pct_of_budget": 38.7,
+          "pct_of_budget": 37.1,
           "labor_hours_week": 24.97,
           "materials_week": 577.89,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 144.78,
           "materials_mtd": 1650.79,
-          "invoices_mtd": 1655.6,
+          "invoices_mtd": 1305.6,
           "invoices_list_mtd": [
             {
               "vendor": "Eden Advanced Pest Techno",
-              "desc": null,
-              "amount": 1305.6,
+              "desc": "R&M-Pest Control",
+              "amount": 1200,
               "date": "2026-08-03",
-              "unconfirmed": true
+              "unconfirmed": false
             },
             {
-              "vendor": "Duo Cleaning Compa",
-              "desc": null,
-              "amount": 350,
-              "date": "2026-08-11",
-              "unconfirmed": true
+              "vendor": "Eden Advanced Pest Techno",
+              "desc": "R&M-Pest Control",
+              "amount": 105.6,
+              "date": "2026-08-03",
+              "unconfirmed": false
             }
           ]
         },
@@ -49,25 +49,17 @@
           "property": "PS17",
           "region": "Tri-Cities",
           "last_week": 50.32,
-          "mtd": 1026.79,
+          "mtd": 676.79,
           "budget": 734.2,
-          "pct_of_budget": 139.9,
+          "pct_of_budget": 92.2,
           "labor_hours_week": 0.6,
           "materials_week": 25.04,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 13.98,
           "materials_mtd": 185.19,
-          "invoices_mtd": 350,
-          "invoices_list_mtd": [
-            {
-              "vendor": "Duo Cleaning Compa",
-              "desc": null,
-              "amount": 350,
-              "date": "2026-08-01",
-              "unconfirmed": true
-            }
-          ]
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS25",
@@ -86,17 +78,31 @@
           "invoices_list_mtd": [
             {
               "vendor": "Pannonia Glass Company",
-              "desc": null,
-              "amount": 1684.68,
+              "desc": "R&M-Hardware",
+              "amount": 1547,
               "date": "2026-08-02",
-              "unconfirmed": true
+              "unconfirmed": false
             },
             {
               "vendor": "Eden Advanced Pest Techno",
-              "desc": null,
-              "amount": 326.7,
+              "desc": "R&M-Pest Control",
+              "amount": 300,
               "date": "2026-08-10",
-              "unconfirmed": true
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Pannonia Glass Company",
+              "desc": "R&M-Hardware",
+              "amount": 137.68,
+              "date": "2026-08-02",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Eden Advanced Pest Techno",
+              "desc": "R&M-Pest Control",
+              "amount": 26.7,
+              "date": "2026-08-10",
+              "unconfirmed": false
             }
           ]
         },
@@ -149,17 +155,31 @@
           "invoices_list_mtd": [
             {
               "vendor": "Eden Advanced Pest Techno",
-              "desc": null,
-              "amount": 216.51,
+              "desc": "R&M-Pest Control",
+              "amount": 199,
               "date": "2026-08-13",
-              "unconfirmed": true
+              "unconfirmed": false
             },
             {
               "vendor": "Reliable Rooter",
-              "desc": null,
-              "amount": 135.38,
+              "desc": "R&M-Plumbing",
+              "amount": 125,
               "date": "2026-08-03",
-              "unconfirmed": true
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Eden Advanced Pest Techno",
+              "desc": "R&M-Pest Control",
+              "amount": 17.51,
+              "date": "2026-08-13",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Reliable Rooter",
+              "desc": "R&M-Plumbing",
+              "amount": 10.38,
+              "date": "2026-08-03",
+              "unconfirmed": false
             }
           ]
         }
@@ -168,23 +188,23 @@
         {
           "property": "KN47",
           "region": "Tri-Cities",
-          "last_week": 350,
-          "mtd": 2598.89,
+          "last_week": 367.6,
+          "mtd": 2616.49,
           "budget": 6264.2,
-          "pct_of_budget": 41.5,
-          "labor_hours_week": 10.2,
+          "pct_of_budget": 41.8,
+          "labor_hours_week": 10.73,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 57.08,
+          "labor_hours_mtd": 57.62,
           "materials_mtd": 371.97,
           "invoices_mtd": 220,
           "invoices_list_mtd": [
             {
               "vendor": "Duo Cleaning Compa",
-              "desc": "Grounds - Contractor",
+              "desc": "Grounds",
               "amount": 220,
-              "date": "2026-08-01",
+              "date": "2026-08-13",
               "unconfirmed": false
             }
           ]
@@ -240,15 +260,15 @@
         {
           "property": "RL16",
           "region": "Tri-Cities",
-          "last_week": 299.52,
-          "mtd": 1535.72,
+          "last_week": 346.82,
+          "mtd": 1583.02,
           "budget": 2544.1,
-          "pct_of_budget": 60.4,
-          "labor_hours_week": 8.63,
+          "pct_of_budget": 62.2,
+          "labor_hours_week": 10.07,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 35.95,
+          "labor_hours_mtd": 37.38,
           "materials_mtd": 206.71,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -275,150 +295,49 @@
           "property": "KN47",
           "region": "Tri-Cities",
           "last_week": 403.1,
-          "mtd": 8149.34,
+          "mtd": 5369.34,
           "budget": 5313.6,
-          "pct_of_budget": 153.4,
+          "pct_of_budget": 101,
           "labor_hours_week": 0,
           "materials_week": 403.1,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 56.8,
           "materials_mtd": 3338.46,
-          "invoices_mtd": 2780,
-          "invoices_list_mtd": [
-            {
-              "vendor": "Duo Cleaning Compa",
-              "desc": "Turn - Contractor",
-              "amount": 350,
-              "date": "2026-08-07",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "Duo Cleaning Compa",
-              "desc": "Turn - Contractor",
-              "amount": 350,
-              "date": "2026-08-05",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "Duo Cleaning Compa",
-              "desc": "Turn - Contractor",
-              "amount": 350,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 350,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "Duo Cleaning Compa",
-              "desc": "Turn - Contractor",
-              "amount": 250,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 250,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 250,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 250,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 200,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 180,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            }
-          ]
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS17",
           "region": "Tri-Cities",
           "last_week": 0,
-          "mtd": 2089.02,
+          "mtd": 1439.02,
           "budget": 917.7,
-          "pct_of_budget": 227.6,
+          "pct_of_budget": 156.8,
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 22.75,
           "materials_mtd": 546.28,
-          "invoices_mtd": 650,
-          "invoices_list_mtd": [
-            {
-              "vendor": "Duo Cleaning Compa",
-              "desc": "Turn - Contractor",
-              "amount": 350,
-              "date": "2026-08-06",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 300,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            }
-          ]
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS25",
           "region": "Tri-Cities",
           "last_week": 0,
-          "mtd": 830,
+          "mtd": 0,
           "budget": 3048.8,
-          "pct_of_budget": 27.2,
+          "pct_of_budget": 0,
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 0,
           "materials_mtd": 0,
-          "invoices_mtd": 830,
-          "invoices_list_mtd": [
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 450,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 380,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            }
-          ]
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "PS91",
@@ -440,46 +359,17 @@
           "property": "RL16",
           "region": "Tri-Cities",
           "last_week": 0,
-          "mtd": 1102.6,
+          "mtd": 42.6,
           "budget": 4298.5,
-          "pct_of_budget": 25.7,
+          "pct_of_budget": 1,
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 1,
           "materials_mtd": 0,
-          "invoices_mtd": 1060,
-          "invoices_list_mtd": [
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 380,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 250,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 250,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "SOS Carpet & Upholstery",
-              "desc": "Turn - Contractor",
-              "amount": 180,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            }
-          ]
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "RL21",
@@ -535,10 +425,17 @@
           "invoices_list_mtd": [
             {
               "vendor": "Roto-Rooter",
-              "desc": null,
-              "amount": 452.41,
+              "desc": "R&M-Plumbing",
+              "amount": 414.68,
               "date": "2026-08-11",
-              "unconfirmed": true
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Roto-Rooter",
+              "desc": "R&M-Plumbing",
+              "amount": 37.73,
+              "date": "2026-08-11",
+              "unconfirmed": false
             }
           ]
         },
@@ -594,25 +491,17 @@
           "property": "C313",
           "region": "Spokane",
           "last_week": 0,
-          "mtd": 2580.44,
+          "mtd": 2105.36,
           "budget": 2125.46,
-          "pct_of_budget": 121.4,
+          "pct_of_budget": 99.1,
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 34.32,
-          "materials_mtd": 1151.21,
-          "invoices_mtd": 500,
-          "invoices_list_mtd": [
-            {
-              "vendor": "SPO Cleaning",
-              "desc": null,
-              "amount": 500,
-              "date": "2026-08-11",
-              "unconfirmed": true
-            }
-          ]
+          "materials_mtd": 1176.13,
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "C616",
@@ -727,10 +616,17 @@
           "invoices_list_mtd": [
             {
               "vendor": "Spokane Water Heater",
-              "desc": null,
-              "amount": 654.6,
+              "desc": "R&M-Plumbing",
+              "amount": 600,
               "date": "2026-08-05",
-              "unconfirmed": true
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Spokane Water Heater",
+              "desc": "R&M-Plumbing",
+              "amount": 54.6,
+              "date": "2026-08-05",
+              "unconfirmed": false
             }
           ]
         },
@@ -738,17 +634,67 @@
           "property": "K104",
           "region": "Spokane",
           "last_week": 0,
-          "mtd": 1014.22,
+          "mtd": 4329.1,
           "budget": 3099.6,
-          "pct_of_budget": 32.7,
+          "pct_of_budget": 139.7,
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 34.17,
-          "materials_mtd": 190.7,
-          "invoices_mtd": 0,
-          "invoices_list_mtd": []
+          "materials_mtd": 207.04,
+          "invoices_mtd": 3298.54,
+          "invoices_list_mtd": [
+            {
+              "vendor": "Carpet Barn",
+              "desc": "R&M-Hardware",
+              "amount": 1144.32,
+              "date": "2026-08-10",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Carpet Barn",
+              "desc": "R&M-Hardware",
+              "amount": 768,
+              "date": "2026-08-10",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Carpet Barn",
+              "desc": "R&M-Hardware",
+              "amount": 675.84,
+              "date": "2026-08-10",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Carpet Barn",
+              "desc": "R&M-Hardware",
+              "amount": 330.24,
+              "date": "2026-08-10",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Carpet Barn",
+              "desc": "R&M-Hardware",
+              "amount": 275.14,
+              "date": "2026-08-10",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Carpet Barn",
+              "desc": "R&M-Hardware",
+              "amount": 63,
+              "date": "2026-08-10",
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Carpet Barn",
+              "desc": "R&M-Hardware",
+              "amount": 42,
+              "date": "2026-08-10",
+              "unconfirmed": false
+            }
+          ]
         },
         {
           "property": "K308",
@@ -879,10 +825,17 @@
           "invoices_list_mtd": [
             {
               "vendor": "Redcliffe Electric",
-              "desc": null,
-              "amount": 610,
+              "desc": "R&M-Electrical (miscategorized as r203)",
+              "amount": 520,
               "date": "2026-08-03",
-              "unconfirmed": true
+              "unconfirmed": false
+            },
+            {
+              "vendor": "Redcliffe Electric",
+              "desc": "R&M-Electrical (miscategorized as r203)",
+              "amount": 90,
+              "date": "2026-08-03",
+              "unconfirmed": false
             }
           ]
         },
@@ -1917,15 +1870,15 @@
         {
           "property": "S129",
           "region": "Spokane",
-          "last_week": 2413.1,
-          "mtd": 2711.85,
+          "last_week": 2424.04,
+          "mtd": 2722.79,
           "budget": 671.6,
-          "pct_of_budget": 403.8,
-          "labor_hours_week": 42.97,
+          "pct_of_budget": 405.4,
+          "labor_hours_week": 43.25,
           "materials_week": 771.7,
           "invoices_week": 0,
           "invoices_list_week": [],
-          "labor_hours_mtd": 50.93,
+          "labor_hours_mtd": 51.22,
           "materials_mtd": 771.7,
           "invoices_mtd": 0,
           "invoices_list_mtd": []
@@ -2098,7 +2051,7 @@
           "invoices_list_mtd": [
             {
               "vendor": "Malone's Landscape Management",
-              "desc": "Grounds - Contractor",
+              "desc": "Grounds",
               "amount": 1823.25,
               "date": "2026-08-01",
               "unconfirmed": false
@@ -2127,25 +2080,17 @@
           "property": "TC68",
           "region": "Tacoma",
           "last_week": 0,
-          "mtd": 1068.4,
+          "mtd": 868.4,
           "budget": 5301.5,
-          "pct_of_budget": 20.2,
+          "pct_of_budget": 16.4,
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 0,
           "materials_mtd": 868.4,
-          "invoices_mtd": 200,
-          "invoices_list_mtd": [
-            {
-              "vendor": "Quality Commercial and Residential Cleaning",
-              "desc": "Turn - Contractor",
-              "amount": 200,
-              "date": "2026-08-01",
-              "unconfirmed": false
-            }
-          ]
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         }
       ]
     }
@@ -2153,28 +2098,28 @@
   "flagged": {
     "PORTFOLIO": {
       "repairs": {
-        "last_week": 5651.18,
-        "mtd": 39106.29,
+        "last_week": 5671.93,
+        "mtd": 41225.58,
         "budget": 67431.05,
-        "pct_of_budget": 58
+        "pct_of_budget": 61.1
       },
       "grounds": {
-        "last_week": 3028.61,
-        "mtd": 15897.64,
+        "last_week": 3093.51,
+        "mtd": 15962.54,
         "budget": 29227.06,
-        "pct_of_budget": 54.4
+        "pct_of_budget": 54.6
       },
       "turns": {
-        "last_week": 3125.87,
-        "mtd": 24908.97,
+        "last_week": 3204.97,
+        "mtd": 19468.07,
         "budget": 41472.75,
-        "pct_of_budget": 60.1
+        "pct_of_budget": 46.9
       },
       "total": {
-        "last_week": 8679.79,
-        "mtd": 55003.93,
+        "last_week": 8765.44,
+        "mtd": 57188.12,
         "budget": 96658.11,
-        "pct_of_budget": 56.9
+        "pct_of_budget": 59.2
       }
     },
     "KN47": {
@@ -2182,53 +2127,53 @@
         "property": "KN47",
         "region": "Tri-Cities",
         "last_week": 1530.22,
-        "mtd": 8722.55,
+        "mtd": 8372.55,
         "budget": 22551.1,
-        "pct_of_budget": 38.7,
+        "pct_of_budget": 37.1,
         "labor_hours_week": 24.97,
         "materials_week": 577.89,
         "invoices_week": 0,
         "invoices_list_week": [],
         "labor_hours_mtd": 144.78,
         "materials_mtd": 1650.79,
-        "invoices_mtd": 1655.6,
+        "invoices_mtd": 1305.6,
         "invoices_list_mtd": [
           {
             "vendor": "Eden Advanced Pest Techno",
-            "desc": null,
-            "amount": 1305.6,
+            "desc": "R&M-Pest Control",
+            "amount": 1200,
             "date": "2026-08-03",
-            "unconfirmed": true
+            "unconfirmed": false
           },
           {
-            "vendor": "Duo Cleaning Compa",
-            "desc": null,
-            "amount": 350,
-            "date": "2026-08-11",
-            "unconfirmed": true
+            "vendor": "Eden Advanced Pest Techno",
+            "desc": "R&M-Pest Control",
+            "amount": 105.6,
+            "date": "2026-08-03",
+            "unconfirmed": false
           }
         ]
       },
       "grounds": {
         "property": "KN47",
         "region": "Tri-Cities",
-        "last_week": 350,
-        "mtd": 2598.89,
+        "last_week": 367.6,
+        "mtd": 2616.49,
         "budget": 6264.2,
-        "pct_of_budget": 41.5,
-        "labor_hours_week": 10.2,
+        "pct_of_budget": 41.8,
+        "labor_hours_week": 10.73,
         "materials_week": 0,
         "invoices_week": 0,
         "invoices_list_week": [],
-        "labor_hours_mtd": 57.08,
+        "labor_hours_mtd": 57.62,
         "materials_mtd": 371.97,
         "invoices_mtd": 220,
         "invoices_list_mtd": [
           {
             "vendor": "Duo Cleaning Compa",
-            "desc": "Grounds - Contractor",
+            "desc": "Grounds",
             "amount": 220,
-            "date": "2026-08-01",
+            "date": "2026-08-13",
             "unconfirmed": false
           }
         ]
@@ -2237,94 +2182,23 @@
         "property": "KN47",
         "region": "Tri-Cities",
         "last_week": 403.1,
-        "mtd": 8149.34,
+        "mtd": 5369.34,
         "budget": 5313.6,
-        "pct_of_budget": 153.4,
+        "pct_of_budget": 101,
         "labor_hours_week": 0,
         "materials_week": 403.1,
         "invoices_week": 0,
         "invoices_list_week": [],
         "labor_hours_mtd": 56.8,
         "materials_mtd": 3338.46,
-        "invoices_mtd": 2780,
-        "invoices_list_mtd": [
-          {
-            "vendor": "Duo Cleaning Compa",
-            "desc": "Turn - Contractor",
-            "amount": 350,
-            "date": "2026-08-07",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "Duo Cleaning Compa",
-            "desc": "Turn - Contractor",
-            "amount": 350,
-            "date": "2026-08-05",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "Duo Cleaning Compa",
-            "desc": "Turn - Contractor",
-            "amount": 350,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 350,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "Duo Cleaning Compa",
-            "desc": "Turn - Contractor",
-            "amount": 250,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 250,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 250,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 250,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 200,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 180,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          }
-        ]
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
       },
       "total": {
-        "last_week": 1880.22,
-        "mtd": 11321.439999999999,
+        "last_week": 1897.8200000000002,
+        "mtd": 10989.039999999999,
         "budget": 28815.3,
-        "pct_of_budget": 39.3
+        "pct_of_budget": 38.1
       }
     },
     "RL16": {
@@ -2347,15 +2221,15 @@
       "grounds": {
         "property": "RL16",
         "region": "Tri-Cities",
-        "last_week": 299.52,
-        "mtd": 1535.72,
+        "last_week": 346.82,
+        "mtd": 1583.02,
         "budget": 2544.1,
-        "pct_of_budget": 60.4,
-        "labor_hours_week": 8.63,
+        "pct_of_budget": 62.2,
+        "labor_hours_week": 10.07,
         "materials_week": 0,
         "invoices_week": 0,
         "invoices_list_week": [],
-        "labor_hours_mtd": 35.95,
+        "labor_hours_mtd": 37.38,
         "materials_mtd": 206.71,
         "invoices_mtd": 0,
         "invoices_list_mtd": []
@@ -2364,52 +2238,23 @@
         "property": "RL16",
         "region": "Tri-Cities",
         "last_week": 0,
-        "mtd": 1102.6,
+        "mtd": 42.6,
         "budget": 4298.5,
-        "pct_of_budget": 25.7,
+        "pct_of_budget": 1,
         "labor_hours_week": 0,
         "materials_week": 0,
         "invoices_week": 0,
         "invoices_list_week": [],
         "labor_hours_mtd": 1,
         "materials_mtd": 0,
-        "invoices_mtd": 1060,
-        "invoices_list_mtd": [
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 380,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 250,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 250,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          },
-          {
-            "vendor": "SOS Carpet & Upholstery",
-            "desc": "Turn - Contractor",
-            "amount": 180,
-            "date": "2026-08-01",
-            "unconfirmed": false
-          }
-        ]
+        "invoices_mtd": 0,
+        "invoices_list_mtd": []
       },
       "total": {
-        "last_week": 665.03,
-        "mtd": 5199.01,
+        "last_week": 712.3299999999999,
+        "mtd": 5246.3099999999995,
         "budget": 10457.1,
-        "pct_of_budget": 49.7
+        "pct_of_budget": 50.2
       }
     },
     "OVER_BUDGET": [
@@ -2433,10 +2278,17 @@
             "invoices_list_mtd": [
               {
                 "vendor": "Roto-Rooter",
-                "desc": null,
-                "amount": 452.41,
+                "desc": "R&M-Plumbing",
+                "amount": 414.68,
                 "date": "2026-08-11",
-                "unconfirmed": true
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Roto-Rooter",
+                "desc": "R&M-Plumbing",
+                "amount": 37.73,
+                "date": "2026-08-11",
+                "unconfirmed": false
               }
             ]
           },
@@ -2500,10 +2352,17 @@
             "invoices_list_mtd": [
               {
                 "vendor": "Spokane Water Heater",
-                "desc": null,
-                "amount": 654.6,
+                "desc": "R&M-Plumbing",
+                "amount": 600,
                 "date": "2026-08-05",
-                "unconfirmed": true
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Spokane Water Heater",
+                "desc": "R&M-Plumbing",
+                "amount": 54.6,
+                "date": "2026-08-05",
+                "unconfirmed": false
               }
             ]
           },
@@ -2626,17 +2485,31 @@
             "invoices_list_mtd": [
               {
                 "vendor": "Pannonia Glass Company",
-                "desc": null,
-                "amount": 1684.68,
+                "desc": "R&M-Hardware",
+                "amount": 1547,
                 "date": "2026-08-02",
-                "unconfirmed": true
+                "unconfirmed": false
               },
               {
                 "vendor": "Eden Advanced Pest Techno",
-                "desc": null,
-                "amount": 326.7,
+                "desc": "R&M-Pest Control",
+                "amount": 300,
                 "date": "2026-08-10",
-                "unconfirmed": true
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Pannonia Glass Company",
+                "desc": "R&M-Hardware",
+                "amount": 137.68,
+                "date": "2026-08-02",
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Eden Advanced Pest Techno",
+                "desc": "R&M-Pest Control",
+                "amount": 26.7,
+                "date": "2026-08-10",
+                "unconfirmed": false
               }
             ]
           },
@@ -2660,32 +2533,17 @@
             "property": "PS25",
             "region": "Tri-Cities",
             "last_week": 0,
-            "mtd": 830,
+            "mtd": 0,
             "budget": 3048.8,
-            "pct_of_budget": 27.2,
+            "pct_of_budget": 0,
             "labor_hours_week": 0,
             "materials_week": 0,
             "invoices_week": 0,
             "invoices_list_week": [],
             "labor_hours_mtd": 0,
             "materials_mtd": 0,
-            "invoices_mtd": 830,
-            "invoices_list_mtd": [
-              {
-                "vendor": "SOS Carpet & Upholstery",
-                "desc": "Turn - Contractor",
-                "amount": 450,
-                "date": "2026-08-01",
-                "unconfirmed": false
-              },
-              {
-                "vendor": "SOS Carpet & Upholstery",
-                "desc": "Turn - Contractor",
-                "amount": 380,
-                "date": "2026-08-01",
-                "unconfirmed": false
-              }
-            ]
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
           },
           "total": {
             "last_week": 755.49,
@@ -2715,17 +2573,31 @@
             "invoices_list_mtd": [
               {
                 "vendor": "Eden Advanced Pest Techno",
-                "desc": null,
-                "amount": 216.51,
+                "desc": "R&M-Pest Control",
+                "amount": 199,
                 "date": "2026-08-13",
-                "unconfirmed": true
+                "unconfirmed": false
               },
               {
                 "vendor": "Reliable Rooter",
-                "desc": null,
-                "amount": 135.38,
+                "desc": "R&M-Plumbing",
+                "amount": 125,
                 "date": "2026-08-03",
-                "unconfirmed": true
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Eden Advanced Pest Techno",
+                "desc": "R&M-Pest Control",
+                "amount": 17.51,
+                "date": "2026-08-13",
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Reliable Rooter",
+                "desc": "R&M-Plumbing",
+                "amount": 10.38,
+                "date": "2026-08-03",
+                "unconfirmed": false
               }
             ]
           },
@@ -2807,15 +2679,15 @@
           "turns": {
             "property": "S129",
             "region": "Spokane",
-            "last_week": 2413.1,
-            "mtd": 2711.85,
+            "last_week": 2424.04,
+            "mtd": 2722.79,
             "budget": 671.6,
-            "pct_of_budget": 403.8,
-            "labor_hours_week": 42.97,
+            "pct_of_budget": 405.4,
+            "labor_hours_week": 43.25,
             "materials_week": 771.7,
             "invoices_week": 0,
             "invoices_list_week": [],
-            "labor_hours_mtd": 50.93,
+            "labor_hours_mtd": 51.22,
             "materials_mtd": 771.7,
             "invoices_mtd": 0,
             "invoices_list_mtd": []
@@ -2829,84 +2701,111 @@
         }
       },
       {
-        "property": "PS17",
+        "property": "K104",
         "scope": {
           "repairs": {
-            "property": "PS17",
-            "region": "Tri-Cities",
-            "last_week": 50.32,
-            "mtd": 1026.79,
-            "budget": 734.2,
-            "pct_of_budget": 139.9,
-            "labor_hours_week": 0.6,
-            "materials_week": 25.04,
-            "invoices_week": 0,
-            "invoices_list_week": [],
-            "labor_hours_mtd": 13.98,
-            "materials_mtd": 185.19,
-            "invoices_mtd": 350,
-            "invoices_list_mtd": [
-              {
-                "vendor": "Duo Cleaning Compa",
-                "desc": null,
-                "amount": 350,
-                "date": "2026-08-01",
-                "unconfirmed": true
-              }
-            ]
-          },
-          "grounds": {
-            "property": "PS17",
-            "region": "Tri-Cities",
-            "last_week": 89.1,
-            "mtd": 456.5,
-            "budget": 367.1,
-            "pct_of_budget": 124.4,
-            "labor_hours_week": 2.7,
-            "materials_week": 0,
-            "invoices_week": 0,
-            "invoices_list_week": [],
-            "labor_hours_mtd": 13.83,
-            "materials_mtd": 0,
-            "invoices_mtd": 0,
-            "invoices_list_mtd": []
-          },
-          "turns": {
-            "property": "PS17",
-            "region": "Tri-Cities",
+            "property": "K104",
+            "region": "Spokane",
             "last_week": 0,
-            "mtd": 2089.02,
-            "budget": 917.7,
-            "pct_of_budget": 227.6,
+            "mtd": 4329.1,
+            "budget": 3099.6,
+            "pct_of_budget": 139.7,
             "labor_hours_week": 0,
             "materials_week": 0,
             "invoices_week": 0,
             "invoices_list_week": [],
-            "labor_hours_mtd": 22.75,
-            "materials_mtd": 546.28,
-            "invoices_mtd": 650,
+            "labor_hours_mtd": 34.17,
+            "materials_mtd": 207.04,
+            "invoices_mtd": 3298.54,
             "invoices_list_mtd": [
               {
-                "vendor": "Duo Cleaning Compa",
-                "desc": "Turn - Contractor",
-                "amount": 350,
-                "date": "2026-08-06",
+                "vendor": "Carpet Barn",
+                "desc": "R&M-Hardware",
+                "amount": 1144.32,
+                "date": "2026-08-10",
                 "unconfirmed": false
               },
               {
-                "vendor": "SOS Carpet & Upholstery",
-                "desc": "Turn - Contractor",
-                "amount": 300,
-                "date": "2026-08-01",
+                "vendor": "Carpet Barn",
+                "desc": "R&M-Hardware",
+                "amount": 768,
+                "date": "2026-08-10",
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Carpet Barn",
+                "desc": "R&M-Hardware",
+                "amount": 675.84,
+                "date": "2026-08-10",
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Carpet Barn",
+                "desc": "R&M-Hardware",
+                "amount": 330.24,
+                "date": "2026-08-10",
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Carpet Barn",
+                "desc": "R&M-Hardware",
+                "amount": 275.14,
+                "date": "2026-08-10",
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Carpet Barn",
+                "desc": "R&M-Hardware",
+                "amount": 63,
+                "date": "2026-08-10",
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Carpet Barn",
+                "desc": "R&M-Hardware",
+                "amount": 42,
+                "date": "2026-08-10",
                 "unconfirmed": false
               }
             ]
           },
+          "grounds": {
+            "property": "K104",
+            "region": "Spokane",
+            "last_week": 0,
+            "mtd": 499.34,
+            "budget": 1549.8,
+            "pct_of_budget": 32.2,
+            "labor_hours_week": 0,
+            "materials_week": 0,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 12.95,
+            "materials_mtd": 16.53,
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
+          },
+          "turns": {
+            "property": "K104",
+            "region": "Spokane",
+            "last_week": 0,
+            "mtd": 778.43,
+            "budget": 3874.5,
+            "pct_of_budget": 20.1,
+            "labor_hours_week": 0,
+            "materials_week": 0,
+            "invoices_week": 0,
+            "invoices_list_week": [],
+            "labor_hours_mtd": 16.68,
+            "materials_mtd": 134.04,
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
+          },
           "total": {
-            "last_week": 139.42,
-            "mtd": 1483.29,
-            "budget": 1101.3000000000002,
-            "pct_of_budget": 134.7
+            "last_week": 0,
+            "mtd": 4828.4400000000005,
+            "budget": 4649.4,
+            "pct_of_budget": 103.9
           }
         }
       },
@@ -2970,69 +2869,61 @@
         }
       },
       {
-        "property": "C313",
+        "property": "PS17",
         "scope": {
           "repairs": {
-            "property": "C313",
-            "region": "Spokane",
-            "last_week": 0,
-            "mtd": 2580.44,
-            "budget": 2125.46,
-            "pct_of_budget": 121.4,
-            "labor_hours_week": 0,
-            "materials_week": 0,
+            "property": "PS17",
+            "region": "Tri-Cities",
+            "last_week": 50.32,
+            "mtd": 676.79,
+            "budget": 734.2,
+            "pct_of_budget": 92.2,
+            "labor_hours_week": 0.6,
+            "materials_week": 25.04,
             "invoices_week": 0,
             "invoices_list_week": [],
-            "labor_hours_mtd": 34.32,
-            "materials_mtd": 1151.21,
-            "invoices_mtd": 500,
-            "invoices_list_mtd": [
-              {
-                "vendor": "SPO Cleaning",
-                "desc": null,
-                "amount": 500,
-                "date": "2026-08-11",
-                "unconfirmed": true
-              }
-            ]
+            "labor_hours_mtd": 13.98,
+            "materials_mtd": 185.19,
+            "invoices_mtd": 0,
+            "invoices_list_mtd": []
           },
           "grounds": {
-            "property": "C313",
-            "region": "Spokane",
-            "last_week": 0,
-            "mtd": 407.53,
-            "budget": 897.3,
-            "pct_of_budget": 45.4,
-            "labor_hours_week": 0,
+            "property": "PS17",
+            "region": "Tri-Cities",
+            "last_week": 89.1,
+            "mtd": 456.5,
+            "budget": 367.1,
+            "pct_of_budget": 124.4,
+            "labor_hours_week": 2.7,
             "materials_week": 0,
             "invoices_week": 0,
             "invoices_list_week": [],
-            "labor_hours_mtd": 10.42,
-            "materials_mtd": 19.37,
+            "labor_hours_mtd": 13.83,
+            "materials_mtd": 0,
             "invoices_mtd": 0,
             "invoices_list_mtd": []
           },
           "turns": {
-            "property": "C313",
-            "region": "Spokane",
-            "last_week": 27.5,
-            "mtd": 1735.93,
-            "budget": 1309.69,
-            "pct_of_budget": 132.5,
-            "labor_hours_week": 0.73,
+            "property": "PS17",
+            "region": "Tri-Cities",
+            "last_week": 0,
+            "mtd": 1439.02,
+            "budget": 917.7,
+            "pct_of_budget": 156.8,
+            "labor_hours_week": 0,
             "materials_week": 0,
             "invoices_week": 0,
             "invoices_list_week": [],
-            "labor_hours_mtd": 40.48,
-            "materials_mtd": 201.45,
+            "labor_hours_mtd": 22.75,
+            "materials_mtd": 546.28,
             "invoices_mtd": 0,
             "invoices_list_mtd": []
           },
           "total": {
-            "last_week": 0,
-            "mtd": 2987.9700000000003,
-            "budget": 3022.76,
-            "pct_of_budget": 98.8
+            "last_week": 139.42,
+            "mtd": 1133.29,
+            "budget": 1101.3000000000002,
+            "pct_of_budget": 102.9
           }
         }
       },
@@ -3115,10 +3006,17 @@
             "invoices_list_mtd": [
               {
                 "vendor": "Redcliffe Electric",
-                "desc": null,
-                "amount": 610,
+                "desc": "R&M-Electrical (miscategorized as r203)",
+                "amount": 520,
                 "date": "2026-08-03",
-                "unconfirmed": true
+                "unconfirmed": false
+              },
+              {
+                "vendor": "Redcliffe Electric",
+                "desc": "R&M-Electrical (miscategorized as r203)",
+                "amount": 90,
+                "date": "2026-08-03",
+                "unconfirmed": false
               }
             ]
           },
