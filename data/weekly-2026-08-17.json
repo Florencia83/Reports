@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 60.87,
-      "last_7": 32.41
+      "last_30": 60.95,
+      "last_7": 32.52
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -143,8 +143,8 @@
     {
       "name": "Jared Miller",
       "wo_count": 104,
-      "avg_cost_per_wo": 37.6,
-      "total_labor_cost": 2330.45,
+      "avg_cost_per_wo": 37.78,
+      "total_labor_cost": 2349.05,
       "avg_resident_rating": 4.91,
       "reviews": [
         {
@@ -250,8 +250,8 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 53,
-      "avg_cost_per_wo": 149.61,
+      "wo_count": 54,
+      "avg_cost_per_wo": 146.84,
       "total_labor_cost": 1345.95,
       "avg_resident_rating": 4.5,
       "reviews": [
@@ -393,7 +393,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 918.13
+      "amount": 1015.26
     },
     {
       "category": "Supplies and Tools",
@@ -405,7 +405,7 @@
     },
     {
       "category": "Grounds",
-      "amount": 46.15
+      "amount": 75.1
     },
     {
       "category": "Maintenance",
@@ -414,19 +414,19 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 21102.86,
+    "labor": 21167.76,
     "materials": 11452.55,
     "invoices": 8074.42,
-    "total_actual": 40629.83,
-    "variance": 26801.22
+    "total_actual": 40694.73,
+    "variance": 26736.32
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 12583.62,
-    "materials": 1335.67,
+    "labor": 12691.1,
+    "materials": 1364.62,
     "invoices": 2043.25,
-    "total_actual": 15962.54,
-    "variance": 13264.52
+    "total_actual": 16098.97,
+    "variance": 13128.09
   },
   "cost_by_property": [
     {
