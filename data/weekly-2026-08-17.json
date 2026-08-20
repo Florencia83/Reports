@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 60.97,
-      "last_7": 32.64
+      "last_30": 60.87,
+      "last_7": 32.41
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -414,11 +414,11 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 21088.61,
+    "labor": 21102.86,
     "materials": 11452.55,
-    "invoices": 8684.42,
-    "total_actual": 41225.58,
-    "variance": 26205.47
+    "invoices": 8074.42,
+    "total_actual": 40629.83,
+    "variance": 26801.22
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,

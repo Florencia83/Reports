@@ -812,32 +812,17 @@
           "property": "MS43",
           "region": "Spokane",
           "last_week": 0,
-          "mtd": 751.75,
+          "mtd": 141.75,
           "budget": 733.1,
-          "pct_of_budget": 102.5,
+          "pct_of_budget": 19.3,
           "labor_hours_week": 0,
           "materials_week": 0,
           "invoices_week": 0,
           "invoices_list_week": [],
           "labor_hours_mtd": 2.12,
           "materials_mtd": 110,
-          "invoices_mtd": 610,
-          "invoices_list_mtd": [
-            {
-              "vendor": "Redcliffe Electric",
-              "desc": "R&M-Electrical (miscategorized as r203)",
-              "amount": 520,
-              "date": "2026-08-03",
-              "unconfirmed": false
-            },
-            {
-              "vendor": "Redcliffe Electric",
-              "desc": "R&M-Electrical (miscategorized as r203)",
-              "amount": 90,
-              "date": "2026-08-03",
-              "unconfirmed": false
-            }
-          ]
+          "invoices_mtd": 0,
+          "invoices_list_mtd": []
         },
         {
           "property": "O155",
@@ -2098,10 +2083,10 @@
   "flagged": {
     "PORTFOLIO": {
       "repairs": {
-        "last_week": 5671.93,
-        "mtd": 41225.58,
+        "last_week": 5686.18,
+        "mtd": 40629.83,
         "budget": 67431.05,
-        "pct_of_budget": 61.1
+        "pct_of_budget": 60.3
       },
       "grounds": {
         "last_week": 3093.51,
@@ -2116,10 +2101,10 @@
         "pct_of_budget": 46.9
       },
       "total": {
-        "last_week": 8765.44,
-        "mtd": 57188.12,
+        "last_week": 8779.69,
+        "mtd": 56592.37,
         "budget": 96658.11,
-        "pct_of_budget": 59.2
+        "pct_of_budget": 58.5
       }
     },
     "KN47": {
@@ -2983,80 +2968,6 @@
             "mtd": 388.32,
             "budget": 1023.9000000000001,
             "pct_of_budget": 37.9
-          }
-        }
-      },
-      {
-        "property": "MS43",
-        "scope": {
-          "repairs": {
-            "property": "MS43",
-            "region": "Spokane",
-            "last_week": 0,
-            "mtd": 751.75,
-            "budget": 733.1,
-            "pct_of_budget": 102.5,
-            "labor_hours_week": 0,
-            "materials_week": 0,
-            "invoices_week": 0,
-            "invoices_list_week": [],
-            "labor_hours_mtd": 2.12,
-            "materials_mtd": 110,
-            "invoices_mtd": 610,
-            "invoices_list_mtd": [
-              {
-                "vendor": "Redcliffe Electric",
-                "desc": "R&M-Electrical (miscategorized as r203)",
-                "amount": 520,
-                "date": "2026-08-03",
-                "unconfirmed": false
-              },
-              {
-                "vendor": "Redcliffe Electric",
-                "desc": "R&M-Electrical (miscategorized as r203)",
-                "amount": 90,
-                "date": "2026-08-03",
-                "unconfirmed": false
-              }
-            ]
-          },
-          "grounds": {
-            "property": "MS43",
-            "region": "Spokane",
-            "last_week": 0,
-            "mtd": 0,
-            "budget": 366.6,
-            "pct_of_budget": 0,
-            "labor_hours_week": 0,
-            "materials_week": 0,
-            "invoices_week": 0,
-            "invoices_list_week": [],
-            "labor_hours_mtd": 0,
-            "materials_mtd": 0,
-            "invoices_mtd": 0,
-            "invoices_list_mtd": []
-          },
-          "turns": {
-            "property": "MS43",
-            "region": "Spokane",
-            "last_week": 0,
-            "mtd": 0,
-            "budget": 916.4,
-            "pct_of_budget": 0,
-            "labor_hours_week": 0,
-            "materials_week": 0,
-            "invoices_week": 0,
-            "invoices_list_week": [],
-            "labor_hours_mtd": 0,
-            "materials_mtd": 0,
-            "invoices_mtd": 0,
-            "invoices_list_mtd": []
-          },
-          "total": {
-            "last_week": 0,
-            "mtd": 751.75,
-            "budget": 1099.7,
-            "pct_of_budget": 68.4
           }
         }
       }
