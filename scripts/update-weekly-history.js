@@ -744,10 +744,29 @@ const QBO_CATEGORY_MAP = {
 // best guess rather than a confirmed GL categorization.
 const QBO_SPLIT_KEY = '(split — needs line detail)';
 const GROUNDS_VENDOR_RE = /landscap|lawn|tree|groundskeep|garden/i;
-async function fetchQboProcessed() {
-  const res = await fetchWithRetry(QBO_LEEROY_FEED_URL, {});
-  if (!res.ok) throw new Error(`QBO feed (LeeRoy's repo) failed: ${res.status} ${await res.text()}`);
-  const j = await res.json();
+// Switched 2026-08-18 (Florencia's explicit call) from LeeRoy's remote feed to a local
+// file Florencia builds by hand from the QBO "Purchases by Vendor Detail" PDF she
+// exports herself -- same {transactions:[{amt, qbo_category, ln, dept, vendor, d}]}
+// shape LeeRoy's feed used, so everything below this point is unchanged. Deliberately
+// excludes wage/payroll-journal lines from that PDF (those are Ridgeview's own mirror
+// of labor QBT already tracks bottom-up elsewhere in this script -- including them here
+// too would double-count labor). Only genuine third-party vendor bills go in the file.
+// One file per month; update QBO_LOCAL_FILE (and regenerate the file) each time she
+// gives a fresh PDF. Falls back to LeeRoy's feed if the local file for this month is
+// missing, so older months/backfills still work.
+function qboLocalFilePath(monthStart) {
+  return path.join(DATA_DIR, `qbo-from-pdf-${monthStart.slice(0, 7)}.json`);
+}
+async function fetchQboProcessed(monthStart) {
+  const localPath = monthStart ? qboLocalFilePath(monthStart) : null;
+  let j;
+  if (localPath && fs.existsSync(localPath)) {
+    j = JSON.parse(fs.readFileSync(localPath, 'utf8'));
+  } else {
+    const res = await fetchWithRetry(QBO_LEEROY_FEED_URL, {});
+    if (!res.ok) throw new Error(`QBO feed (LeeRoy's repo) failed: ${res.status} ${await res.text()}`);
+    j = await res.json();
+  }
   const records = [];
   for (const t of (j.transactions || [])) {
     if (!t.amt) continue; // zero-amount line, nothing to count
@@ -941,7 +960,7 @@ async function main() {
     fetchRampTransactions(broadStart, todayStr),
     fetchGroundsLaborForRange(jobcodes, broadStart, todayStr),
     fetchTurnsLaborForRange(jobcodes, broadStart, todayStr),
-    fetchQboProcessed(),
+    fetchQboProcessed(monthStart),
   ]);
   const qboRecords = inRange(qboRecordsAll, broadStart, todayStr);
   console.log('PM completed melds:', melds.length, '| QBT labor records:', laborRecords.length, '| Ramp records:', rampRecords.length, '| Grounds labor records:', groundsLaborRecords.length, '| Turns labor records:', turnsLaborRecords.length);

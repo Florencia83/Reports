@@ -105,7 +105,7 @@ a.occ-link { text-decoration: none; color: inherit; }
 .pill.warn { background: color-mix(in srgb, var(--warn) 16%, var(--surface)); color: var(--warn); }
 .pill.good { background: color-mix(in srgb, var(--good) 16%, var(--surface)); color: var(--good); }
 .pill.info { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); color: var(--accent); }
-.pill.empty { background: none; color: var(--ink-soft); opacity: .4; }
+.pill.empty { background: none; color: var(--ink-soft); opacity: .7; }
 .pill-date { display: block; font-size: 9px; font-weight: 400; opacity: .75; }
 
 .tag { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
@@ -159,7 +159,7 @@ function fmtDate(iso) {
 }
 
 function pillFor(occ) {
-  if (!occ) return '<span class="pill empty">&mdash;</span>';
+  if (!occ) return '<span class="pill empty">No work order</span>';
   var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], PENDING: ['warn', 'Pending'], 'COULD NOT COMPLETE': ['bad', 'Missed'] };
   var m = map[occ.status] || ['empty', occ.status];
   var dateStr = fmtDate(occ.date);
@@ -176,7 +176,7 @@ function renderRecurringRow(r) {
     // recurring series page, where the full history/photos live).
     return '<td class="occ">' + (r.pm_url ? '<a class="occ-link" href="' + r.pm_url + '" target="_blank" rel="noopener">' + inner + '</a>' : inner) + '</td>';
   }).join('');
-  return '<tr><td class="svc">' + esc(r.title) + '</td><td class="cad">' + esc(r.cadence || '') + '</td>' + cells + '</tr>';
+  return '<tr><td class="svc">' + esc(r.title) + '</td><td class="cad">' + esc(r.cadence || 'No cadence set') + '</td>' + cells + '</tr>';
 }
 
 function todayStr() {

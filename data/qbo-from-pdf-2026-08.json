@@ -1,0 +1,206 @@
+{
+  "source": "Ridgeview Repairs & Renewals LLC - Purchases by Vendor Detail (real QBO xlsx export, Aug 1-20 2026, Florencia-provided, emailed 2026-08-20) -- replaces LeeRoy's feed per her 2026-08-18 call. Wage/payroll journal lines excluded on purpose (QBT already covers labor bottom-up elsewhere in this script). r203-tagged lines excluded by default except confirmed property-specific miscategorizations (see comments in build script).",
+  "generated_at": "2026-08-20",
+  "transactions": [
+    {
+      "d": "2026-08-11",
+      "dept": "a511",
+      "amt": 414.68,
+      "vendor": "Roto-Rooter",
+      "ln": "R&M-Plumbing",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-11",
+      "dept": "a511",
+      "amt": 37.73,
+      "vendor": "Roto-Rooter",
+      "ln": "R&M-Plumbing",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-05",
+      "dept": "j312",
+      "amt": 600,
+      "vendor": "Spokane Water Heater",
+      "ln": "R&M-Plumbing",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-05",
+      "dept": "j312",
+      "amt": 54.6,
+      "vendor": "Spokane Water Heater",
+      "ln": "R&M-Plumbing",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "k104",
+      "amt": 1144.32,
+      "vendor": "Carpet Barn",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "k104",
+      "amt": 675.84,
+      "vendor": "Carpet Barn",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "k104",
+      "amt": 768,
+      "vendor": "Carpet Barn",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "k104",
+      "amt": 330.24,
+      "vendor": "Carpet Barn",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "k104",
+      "amt": 63,
+      "vendor": "Carpet Barn",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "k104",
+      "amt": 42,
+      "vendor": "Carpet Barn",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "k104",
+      "amt": 275.14,
+      "vendor": "Carpet Barn",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-13",
+      "dept": "kn47",
+      "amt": 220,
+      "vendor": "Duo Cleaning Compa",
+      "ln": "Grounds",
+      "qbo_category": "grounds - contractor"
+    },
+    {
+      "d": "2026-08-03",
+      "dept": "kn47",
+      "amt": 1200,
+      "vendor": "Eden Advanced Pest Techno",
+      "ln": "R&M-Pest Control",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-03",
+      "dept": "kn47",
+      "amt": 105.6,
+      "vendor": "Eden Advanced Pest Techno",
+      "ln": "R&M-Pest Control",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-03",
+      "dept": "ms43",
+      "amt": 520,
+      "vendor": "Redcliffe Electric",
+      "ln": "R&M-Electrical (miscategorized as r203)",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-03",
+      "dept": "ms43",
+      "amt": 90,
+      "vendor": "Redcliffe Electric",
+      "ln": "R&M-Electrical (miscategorized as r203)",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "ps25",
+      "amt": 300,
+      "vendor": "Eden Advanced Pest Techno",
+      "ln": "R&M-Pest Control",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-10",
+      "dept": "ps25",
+      "amt": 26.7,
+      "vendor": "Eden Advanced Pest Techno",
+      "ln": "R&M-Pest Control",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-02",
+      "dept": "ps25",
+      "amt": 1547,
+      "vendor": "Pannonia Glass Company",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-02",
+      "dept": "ps25",
+      "amt": 137.68,
+      "vendor": "Pannonia Glass Company",
+      "ln": "R&M-Hardware",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-03",
+      "dept": "rl21",
+      "amt": 125,
+      "vendor": "Reliable Rooter",
+      "ln": "R&M-Plumbing",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-03",
+      "dept": "rl21",
+      "amt": 10.38,
+      "vendor": "Reliable Rooter",
+      "ln": "R&M-Plumbing",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-13",
+      "dept": "rl21",
+      "amt": 199,
+      "vendor": "Eden Advanced Pest Techno",
+      "ln": "R&M-Pest Control",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-13",
+      "dept": "rl21",
+      "amt": 17.51,
+      "vendor": "Eden Advanced Pest Techno",
+      "ln": "R&M-Pest Control",
+      "qbo_category": "r&m - contractor"
+    },
+    {
+      "d": "2026-08-01",
+      "dept": "tc68",
+      "amt": 1823.25,
+      "vendor": "Malone's Landscape Management",
+      "ln": "Grounds",
+      "qbo_category": "grounds - contractor"
+    }
+  ]
+}
