@@ -114,8 +114,10 @@ const GROUNDS_REGISTRY = {
   // 179920 removed 2026-07-16 -- was a duplicate recurrence firing every 7 days on the
   // same property/slot as 163904 (should only be bi-weekly). Florencia deleted it in PM.
   164381: { area: 'Spokane', property: 'K308', title: 'Lawn service', cadence: 'Weekly' },
-  166878: { area: 'Spokane', property: 'K104-LEFEVRE', title: 'Weekly mowing', cadence: 'Weekly' },
-  167333: { area: 'Spokane', property: 'K104-BROWER EVEN', title: 'Lawn service', cadence: 'Weekly' },
+  // 166878 (K104-LEFEVRE "Weekly mowing") and 167333 (K104-BROWER EVEN "Lawn service") are
+  // both is_active:false in PM (confirmed 2026-08-21) -- removed. Replaced by 186951, the
+  // recurrence Florencia recreated 2026-08-20 after her manager deleted the old one.
+  186951: { area: 'Spokane', property: 'K104-LEFEVRE', title: 'Weekly Lawn care', cadence: 'Weekly' },
 };
 
 function httpreq(method, urlStr, headers, bodyStr) {
