@@ -1,21 +1,21 @@
 {
   "month": "2026-08",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 21167.76,
-    "materials": 11452.55,
+    "labor": 22418.34,
+    "materials": 12046.69,
     "invoices": 8074.42,
-    "total_actual": 40694.73,
-    "variance": 26736.32
+    "total_actual": 42539.45,
+    "variance": 24891.6
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 12691.1,
+    "labor": 13172.6,
     "materials": 1364.62,
     "invoices": 2043.25,
-    "total_actual": 16098.97,
-    "variance": 13128.09
+    "total_actual": 16580.47,
+    "variance": 12646.59
   },
   "cost_by_property": [
     {
@@ -36,11 +36,11 @@
     },
     {
       "property": "RL21",
-      "labor": 778.64,
+      "labor": 797.84,
       "materials": 609.7,
-      "cost": 1388.34,
+      "cost": 1407.54,
       "budget": 1119.4,
-      "pct_over_budget": 24
+      "pct_over_budget": 25.7
     },
     {
       "property": "W226",
