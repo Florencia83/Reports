@@ -272,8 +272,20 @@ async function main() {
     // for these, so there's no live signal to detect vendor-run status other than her sheet).
     if (meta.vendor) { skippedNoEmployee++; continue; }
 
-    const instances = (byRecurId[rid] || []).slice().sort((a, b) => occDate(b).localeCompare(occDate(a)));
-    const recentInstances = instances.slice(0, 4);
+    const instances = byRecurId[rid] || [];
+    // Prefer real recent history over a backlog of already-scheduled future instances --
+    // sorting all instances by date descending and taking the top 4 picks whichever occurrences
+    // happen to be scheduled FURTHEST out when a series has a queue of pending melds already
+    // booked weeks ahead (found 2026-08-23: KN47 Litter pickup had 5 PENDING_COMPLETION melds
+    // stacked a week apart out to October, so the report showed nothing but far-future
+    // "Scheduled" pills and hid everything that actually happened in August). Take up to 4 real
+    // past/today occurrences (most recent first), only reaching into the future queue to fill
+    // remaining slots -- same behavior as before for a low-cadence series with no past history.
+    const past = instances.filter(m => occDate(m) <= todayStr).sort((a, b) => occDate(b).localeCompare(occDate(a)));
+    const future = instances.filter(m => occDate(m) > todayStr).sort((a, b) => occDate(a).localeCompare(occDate(b)));
+    const recentInstances = past.slice(0, 4);
+    if (recentInstances.length < 4) recentInstances.push(...future.slice(0, 4 - recentInstances.length));
+    recentInstances.sort((a, b) => occDate(a).localeCompare(occDate(b)));
 
     const tr = await pmGet(`/api/melds/recurring/${rid}/`, sc, csrf);
     if (tr.status !== 200) { console.log(`Could not fetch recurring template ${rid} (HTTP ${tr.status}) -- skipping.`); skippedNoEmployee++; continue; }
@@ -283,7 +295,7 @@ async function main() {
     const employee = names.join(' & ');
     await new Promise(res => setTimeout(res, 80));
 
-    const last4 = recentInstances.slice().reverse().map(m => {
+    const last4 = recentInstances.map(m => {
       const info = occurrenceInfo(m);
       return { ref: m.reference_id, status: info.status, date: info.date || null };
     });
