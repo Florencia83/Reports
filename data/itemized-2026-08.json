@@ -1,7 +1,7 @@
 {
   "month": "2026-08",
   "label": "August 2026",
-  "generated_at": "2026-08-22",
+  "generated_at": "2026-08-23",
   "complete": false,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -566,9 +566,9 @@
     {
       "property": "TC68",
       "code": "tc68",
-      "appfolio_actual": 6085.3,
+      "appfolio_actual": 6530.9,
       "ramp_total": 3203.45,
-      "labor_total": 2127.87,
+      "labor_total": 2457.95,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -956,6 +956,13 @@
           "hours": 7.92,
           "wage": 40.5,
           "cost": 320.63
+        },
+        {
+          "date": "2026-08-22",
+          "name": "Jonas Hoard",
+          "hours": 8.15,
+          "wage": 40.5,
+          "cost": 330.08
         }
       ]
     },
@@ -1660,9 +1667,9 @@
     {
       "property": "O155",
       "code": "o155",
-      "appfolio_actual": 2601.11,
+      "appfolio_actual": 2632.7,
       "ramp_total": 237.18,
-      "labor_total": 1628.66,
+      "labor_total": 1652.06,
       "ramp_items": [
         {
           "date": "2026-08-08",
@@ -1819,6 +1826,13 @@
           "hours": 5.7,
           "wage": 39,
           "cost": 222.3
+        },
+        {
+          "date": "2026-08-22",
+          "name": "Jacob Jett",
+          "hours": 0.6,
+          "wage": 39,
+          "cost": 23.4
         }
       ]
     },
@@ -3209,8 +3223,8 @@
       "property": "C702",
       "code": "c702",
       "appfolio_actual": null,
-      "ramp_total": 475.67,
-      "labor_total": 676,
+      "ramp_total": 534.54,
+      "labor_total": 762.45,
       "ramp_items": [
         {
           "date": "2026-08-20",
@@ -3239,6 +3253,13 @@
           "amount": 80.71,
           "memo": "Repair and maintenance materials",
           "cardholder": "David Sanchez"
+        },
+        {
+          "date": "2026-08-22",
+          "merchant": "Lowe's",
+          "amount": 58.87,
+          "memo": "property maintenance supplies",
+          "cardholder": "Jacob Jett"
         }
       ],
       "labor_items": [
@@ -3269,6 +3290,13 @@
           "hours": 6.6,
           "wage": 39,
           "cost": 257.4
+        },
+        {
+          "date": "2026-08-22",
+          "name": "Jacob Jett",
+          "hours": 2.22,
+          "wage": 39,
+          "cost": 86.45
         }
       ]
     },
@@ -3382,9 +3410,9 @@
     {
       "property": "KN47",
       "code": "kn47",
-      "appfolio_actual": 3529.62,
+      "appfolio_actual": 3569.65,
       "ramp_total": 371.97,
-      "labor_total": 2283.46,
+      "labor_total": 2312.25,
       "ramp_items": [
         {
           "date": "2026-08-03",
@@ -3590,15 +3618,22 @@
           "hours": 0.67,
           "wage": 42.135,
           "cost": 28.09
+        },
+        {
+          "date": "2026-08-22",
+          "name": "Jared Miller",
+          "hours": 0.68,
+          "wage": 42.135,
+          "cost": 28.79
         }
       ]
     },
     {
       "property": "RL16",
       "code": "rl16",
-      "appfolio_actual": 2157.44,
+      "appfolio_actual": 2208.21,
       "ramp_total": 625.55,
-      "labor_total": 1414.93,
+      "labor_total": 1451.45,
       "ramp_items": [
         {
           "date": "2026-08-01",
@@ -3755,6 +3790,13 @@
           "hours": 0.92,
           "wage": 42.135,
           "cost": 38.62
+        },
+        {
+          "date": "2026-08-22",
+          "name": "Jared Miller",
+          "hours": 0.87,
+          "wage": 42.135,
+          "cost": 36.52
         }
       ]
     },
@@ -3785,9 +3827,9 @@
     {
       "property": "PS25",
       "code": "ps25",
-      "appfolio_actual": 1444.66,
+      "appfolio_actual": 1449.54,
       "ramp_total": 206.71,
-      "labor_total": 890.32,
+      "labor_total": 904.36,
       "ramp_items": [
         {
           "date": "2026-08-13",
@@ -3937,6 +3979,13 @@
           "hours": 0.35,
           "wage": 42.135,
           "cost": 14.75
+        },
+        {
+          "date": "2026-08-22",
+          "name": "Jared Miller",
+          "hours": 0.33,
+          "wage": 42.135,
+          "cost": 14.04
         }
       ]
     },
