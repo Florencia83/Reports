@@ -1,0 +1,543 @@
+{
+  "week_start": "2026-08-24",
+  "week_end": "2026-08-30",
+  "label": "August 24 – 30, 2026",
+  "month_label": "August 2026",
+  "generated_at": "2026-08-24",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": 39,
+      "last_30": 64.05,
+      "last_7": 44.17
+    },
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "q1": 0.8,
+      "q2": 0.4,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "q1": 4.21,
+      "q2": 4.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "q1": 18.7,
+      "q2": 38.9,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "q1": 9.2,
+      "q2": 15.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "q1": 0.3,
+      "q2": 1.31,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "q1": 0.4,
+      "q2": 1.7,
+      "last_30": null,
+      "last_7": null
+    }
+  ],
+  "top_work_orders": [
+    {
+      "ref": "TUR1M2DB",
+      "property": "tc68",
+      "brief": "Washing Machine has not worked since move in",
+      "labor": 92.48,
+      "materials": 1737.03,
+      "cost": 1829.51
+    },
+    {
+      "ref": "T6DBXCJB",
+      "property": "tc34",
+      "brief": "Middle Back Door Needs To Be Fixed",
+      "labor": 62.78,
+      "materials": 1756.89,
+      "cost": 1819.67
+    },
+    {
+      "ref": "TDYV8CD",
+      "property": "tc68",
+      "brief": "Washer leaks",
+      "labor": 0,
+      "materials": 1661.93,
+      "cost": 1661.93
+    },
+    {
+      "ref": "TAP7UYM",
+      "property": "kn47",
+      "brief": "Ecall no Ac (clone)",
+      "labor": 84,
+      "materials": 999.87,
+      "cost": 1083.87
+    },
+    {
+      "ref": "TZU5940",
+      "property": "kn47",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 48.6,
+      "materials": 999.87,
+      "cost": 1048.47
+    },
+    {
+      "ref": "TTNQ7CT",
+      "property": "ps25",
+      "brief": "Ac not blowing cold air ",
+      "labor": 163.62,
+      "materials": 879.1,
+      "cost": 1042.72
+    },
+    {
+      "ref": "TTK4WLE",
+      "property": "m405",
+      "brief": "My Refrigerator Is Not Cooling.",
+      "labor": 125.45,
+      "materials": 750.61,
+      "cost": 876.06
+    },
+    {
+      "ref": "T49DWE8",
+      "property": "tc68",
+      "brief": "Drywall patches from leak",
+      "labor": 540.68,
+      "materials": 243.12,
+      "cost": 783.8
+    },
+    {
+      "ref": "TLJQGZ6",
+      "property": "rl21",
+      "brief": "Ecall plumbing issues ",
+      "labor": 0,
+      "materials": 690.88,
+      "cost": 690.88
+    },
+    {
+      "ref": "TERZN6K",
+      "property": "tc68",
+      "brief": "flood effecting  unit A29,A27,A25",
+      "labor": 0,
+      "materials": 543.03,
+      "cost": 543.03
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jared Miller",
+      "wo_count": 119,
+      "avg_cost_per_wo": 34.34,
+      "total_labor_cost": 2506.39,
+      "avg_resident_rating": 4.91,
+      "reviews": [
+        {
+          "ref": "TCM62W9",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T3TIB4HB",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T22B34LB",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TMJL4ZJ",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TBTTHHY",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T5VPVG",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TGZFVDX",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TRPB1YZ",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TF9U4MV",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TGJBLJU",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TZRHEMAB",
+          "rating": 5,
+          "text": "I'm glad the technician gave me a call"
+        }
+      ]
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 83,
+      "avg_cost_per_wo": 118.45,
+      "total_labor_cost": 3742.5,
+      "avg_resident_rating": 4.14,
+      "reviews": [
+        {
+          "ref": "TF7FBEJ",
+          "rating": 4,
+          "text": "I think he does a great job he does it quick and it is much better than it looked before I do think that if you could have gone a little bit on the sides like a little bit it would have been a little bit neater but he does a great job I still appreciate it no complaints"
+        },
+        {
+          "ref": "TL9XBJZ",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T2GAQY7",
+          "rating": 1,
+          "text": null
+        },
+        {
+          "ref": "T2AUDNBB",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TJ7HHP0",
+          "rating": 5,
+          "text": "Job well done,"
+        },
+        {
+          "ref": "TKKZ2D1",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T5M8D48",
+          "rating": 5,
+          "text": "Excellent craftsmanship and professionalism on a job well done"
+        }
+      ]
+    },
+    {
+      "name": "Jonas Hoard",
+      "wo_count": 68,
+      "avg_cost_per_wo": 146.25,
+      "total_labor_cost": 2214.68,
+      "avg_resident_rating": 3.89,
+      "reviews": [
+        {
+          "ref": "TLNV74JB",
+          "rating": 2,
+          "text": "No work was done in our space, and the communication about water being shut off in the first place was nonexistent. In the future, if a building is going to lose access to water, an email should be sent out to notify residents in the building."
+        },
+        {
+          "ref": "T87AB9MB",
+          "rating": 5,
+          "text": "You did amazing thank you"
+        },
+        {
+          "ref": "TWK2DVV",
+          "rating": 1,
+          "text": "No one showed up even when given an hours notice"
+        },
+        {
+          "ref": "T9RQHW7",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TZ3MBZ6",
+          "rating": 2,
+          "text": "The tv at night in my area is still loud into 1am"
+        },
+        {
+          "ref": "TARR43AB",
+          "rating": 5,
+          "text": "Im she's very grateful for the patience and understanding in these times!"
+        },
+        {
+          "ref": "TDRMRCU",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TB22WMK",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T6DBXCJB",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jacob Jett",
+      "wo_count": 44,
+      "avg_cost_per_wo": 77.28,
+      "total_labor_cost": 2498.6,
+      "avg_resident_rating": 3.8,
+      "reviews": [
+        {
+          "ref": "T6D3TUP",
+          "rating": 1,
+          "text": "Late, time management issue. That needs to be fixed. Even on emergencies things were always not on time. There's some improvement need to taking care of... Time management, especially in emergency situations."
+        },
+        {
+          "ref": "T5XDBQD",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TR3E4FB",
+          "rating": 5,
+          "text": "I would like to recognize Jacob for his communication, reliability and kindness. He was very thorough with explaining why the maintenance issue had occurred and ensuring it was resolved. His professionalism and knowledge was very reassuring and I hope to be able to continue entrusting him with any maintenance related issues."
+        },
+        {
+          "ref": "TTUN518",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TTK4WLE",
+          "rating": 3,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 22,
+      "avg_cost_per_wo": 36.56,
+      "total_labor_cost": 744.35,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Justin Gutierrez",
+      "wo_count": 11,
+      "avg_cost_per_wo": 96.46,
+      "total_labor_cost": 503.75,
+      "avg_resident_rating": 3,
+      "reviews": [
+        {
+          "ref": "T1804VZ",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TTNWAM1",
+          "rating": 1,
+          "text": "The rails on the steps are literally separated, and now the steps have cracks in them too. All the maintenance guy did was use a hammer for 5 minutes and broke the actual steps more. I feel very unsafe going up and down the steps. The whole thing needs replaced, but all that was done wad making the situation much worse"
+        }
+      ]
+    }
+  ],
+  "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 0
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 0
+    },
+    {
+      "category": "Grounds",
+      "amount": 0
+    },
+    {
+      "category": "Maintenance",
+      "amount": 0
+    }
+  ],
+  "monthly_budget": {
+    "budget": 67431.05,
+    "labor": 24221.73,
+    "materials": 14292.52,
+    "invoices": 8074.42,
+    "total_actual": 46588.67,
+    "variance": 20842.38
+  },
+  "grounds_monthly_budget": {
+    "budget": 29227.06,
+    "labor": 14350.04,
+    "materials": 1186.61,
+    "invoices": 2043.25,
+    "total_actual": 17579.91,
+    "variance": 11647.16
+  },
+  "cost_by_property": [
+    {
+      "property": "RL21",
+      "labor": 851.16,
+      "materials": 1300.58,
+      "cost": 2151.74,
+      "budget": 1119.4,
+      "pct_over_budget": 92.2
+    },
+    {
+      "property": "S129",
+      "labor": 530.85,
+      "materials": 1339.07,
+      "cost": 1869.92,
+      "budget": 1221.2,
+      "pct_over_budget": 53.1
+    },
+    {
+      "property": "P705",
+      "labor": 697.43,
+      "materials": 977.15,
+      "cost": 1674.58,
+      "budget": 1125.3,
+      "pct_over_budget": 48.8
+    },
+    {
+      "property": "W226",
+      "labor": 421.6,
+      "materials": 219.16,
+      "cost": 640.76,
+      "budget": 547.8,
+      "pct_over_budget": 17
+    },
+    {
+      "property": "TC34",
+      "labor": 255.2,
+      "materials": 1336.07,
+      "cost": 1591.27,
+      "budget": 1463.6,
+      "pct_over_budget": 8.7
+    },
+    {
+      "property": "L912",
+      "labor": 0,
+      "materials": 21.8,
+      "cost": 21.8,
+      "budget": 0,
+      "pct_over_budget": null
+    }
+  ],
+  "narrative": null,
+  "narrative_2": null,
+  "priorities_next_week": null,
+  "grounds_top_purchases_month": "2026-08",
+  "grounds_top_purchases": [
+    {
+      "date": "2026-08-13",
+      "cardholder": "Jared Miller",
+      "property": "KN47",
+      "ref": "TXKV5WJ",
+      "amount": 206.71
+    },
+    {
+      "date": "2026-08-13",
+      "cardholder": "Jared Miller",
+      "property": "PS25",
+      "ref": "TRN2WXG",
+      "amount": 206.71
+    },
+    {
+      "date": "2026-08-13",
+      "cardholder": "Jared Miller",
+      "property": "RL16",
+      "ref": "TBL8IEMB",
+      "amount": 206.71
+    },
+    {
+      "date": "2026-08-03",
+      "cardholder": "isaac chavez",
+      "property": "KN47",
+      "ref": "TEHXVXGB",
+      "amount": 165.26
+    },
+    {
+      "date": "2026-08-21",
+      "cardholder": "David Sanchez",
+      "property": "K104",
+      "ref": "TA8FY1I",
+      "amount": 42.36
+    },
+    {
+      "date": "2026-08-12",
+      "cardholder": "David Sanchez",
+      "property": "W226",
+      "ref": "T0IEAIX",
+      "amount": 39.86
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "David Sanchez",
+      "property": "A511",
+      "ref": "TUHUP2E",
+      "amount": 37.94
+    },
+    {
+      "date": "2026-08-06",
+      "cardholder": "David Sanchez",
+      "property": "C302",
+      "ref": "TQ8RZCM",
+      "amount": 35.97
+    },
+    {
+      "date": "2026-08-04",
+      "cardholder": "Hannah Deckard",
+      "property": "PS91",
+      "ref": "TW2PJK1",
+      "amount": 28.29
+    },
+    {
+      "date": "2026-08-18",
+      "cardholder": "David Sanchez",
+      "property": "W226",
+      "ref": "TC3H4CNB",
+      "amount": 27.61
+    }
+  ],
+  "grounds_pest_control": [
+    {
+      "property": "PS26",
+      "program": "Cockroach elimination program",
+      "units": [
+        "F39"
+      ],
+      "date_signed": "August 2026",
+      "amount": 328.7
+    }
+  ]
+}
