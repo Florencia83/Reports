@@ -1,8 +1,8 @@
 {
   "source": "Google Sheet 'Copy of P&L Questions', tab 'weekly update' (Repairs section) -- manually maintained/verified by Florencia, NOT the automated weekly-mtd.json pipeline (that feed had known data-quality gaps as of 2026-08-20: stale LeeRoy QBO feed, r203/CapEx/Turn miscategorized Ramp purchases counted as R&M).",
-  "updated_at": "2026-08-20",
-  "period_covered": "August 1-16, 2026",
+  "updated_at": "2026-08-25",
+  "period_covered": "August 1-23, 2026",
   "rule": "Properties listed in over_budget_repairs must not have NEW non-emergency/non-urgent repair melds scheduled before floor_date. This overrides every other scheduler rule (freeze windows, emergency-slot reservation, load balancing, day-blocking, etc.) EXCEPT a manual appointment placed by a human directly in Property Meld -- manual moves always stand as-is, never touched. Emergency and Urgent priority melds are ALWAYS scheduled immediately regardless of this list -- confirmed explicitly by Florencia 2026-08-20, do not defer real emergencies.",
   "floor_date": "2026-09-01",
-  "over_budget_repairs": ["ps25", "k104", "rl21", "p705", "a511", "j312"]
+  "over_budget_repairs": ["ps25", "s129", "rl21", "k104", "j312", "p705", "c313", "a511", "ps17"]
 }
