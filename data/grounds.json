@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27",
+  "generated_at": "2026-08-28",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "areas": [
     {
@@ -124,62 +124,6 @@
                   ]
                 },
                 {
-                  "recurring_id": 153941,
-                  "title": "Fast-Growth Trimming",
-                  "cadence": "Monthly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153941/",
-                  "occurrences": [
-                    {
-                      "ref": "TQCM9AM",
-                      "status": "COMPLETED",
-                      "date": "2026-05-26"
-                    },
-                    {
-                      "ref": "TYTK415",
-                      "status": "COMPLETED",
-                      "date": "2026-07-15"
-                    },
-                    {
-                      "ref": "T97N4K5",
-                      "status": "COMPLETED",
-                      "date": "2026-07-22"
-                    },
-                    {
-                      "ref": "TVKA9XDB",
-                      "status": "SCHEDULED",
-                      "date": "2026-08-19"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 153943,
-                  "title": "Flower bed refresh",
-                  "cadence": "Monthly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153943/",
-                  "occurrences": [
-                    {
-                      "ref": "TT6VA09",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-06-01"
-                    },
-                    {
-                      "ref": "T0CIQER",
-                      "status": "COMPLETED",
-                      "date": "2026-07-01"
-                    },
-                    {
-                      "ref": "TFKZZTL",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-07-29"
-                    },
-                    {
-                      "ref": "T3TTV59",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-26"
-                    }
-                  ]
-                },
-                {
                   "recurring_id": 153945,
                   "title": "Irrigation leak inspections",
                   "cadence": "Monthly",
@@ -204,19 +148,6 @@
                       "ref": "TXM87LM",
                       "status": "COULD NOT COMPLETE",
                       "date": "2026-08-27"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 153948,
-                  "title": "Tree limb clearance",
-                  "cadence": "Quarterly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153948/",
-                  "occurrences": [
-                    {
-                      "ref": "TWFZAHI",
-                      "status": "COMPLETED",
-                      "date": "2026-07-08"
                     }
                   ]
                 }
@@ -247,9 +178,9 @@
                       "date": "2026-08-21"
                     },
                     {
-                      "ref": "T4BWUUBB",
-                      "status": "PENDING",
-                      "date": "2026-08-27"
+                      "ref": "TCFBALZ",
+                      "status": "SCHEDULED",
+                      "date": "2026-08-28"
                     }
                   ]
                 },
@@ -304,7 +235,7 @@
                     },
                     {
                       "ref": "TMWKUFK",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-08-27"
                     }
                   ]
@@ -360,7 +291,7 @@
                     },
                     {
                       "ref": "TIDV8MDB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-08-27"
                     }
                   ]
@@ -400,11 +331,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153868/",
                   "occurrences": [
                     {
-                      "ref": "TD4T003",
-                      "status": "COMPLETED",
-                      "date": "2026-08-24"
-                    },
-                    {
                       "ref": "T7EX8KIB",
                       "status": "COMPLETED",
                       "date": "2026-08-25"
@@ -418,6 +344,11 @@
                       "ref": "TGXUUTFB",
                       "status": "COMPLETED",
                       "date": "2026-08-27"
+                    },
+                    {
+                      "ref": "TP8D2DQ",
+                      "status": "SCHEDULED",
+                      "date": "2026-08-28"
                     }
                   ]
                 }
@@ -615,11 +546,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163427/",
                   "occurrences": [
                     {
-                      "ref": "TD0VV8Y",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-07"
-                    },
-                    {
                       "ref": "TYE1Q54",
                       "status": "COULD NOT COMPLETE",
                       "date": "2026-08-14"
@@ -633,6 +559,11 @@
                       "ref": "T8B9Y7LB",
                       "status": "PENDING",
                       "date": "2026-08-24"
+                    },
+                    {
+                      "ref": "T6RDTIV",
+                      "status": "SCHEDULED",
+                      "date": "2026-08-28"
                     }
                   ]
                 }
@@ -681,11 +612,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/180223/",
                   "occurrences": [
                     {
-                      "ref": "TXAAYP7",
-                      "status": "COMPLETED",
-                      "date": "2026-08-24"
-                    },
-                    {
                       "ref": "TKCUPZ3",
                       "status": "COMPLETED",
                       "date": "2026-08-25"
@@ -699,6 +625,11 @@
                       "ref": "TKWHCIC",
                       "status": "COMPLETED",
                       "date": "2026-08-27"
+                    },
+                    {
+                      "ref": "TN9R6V5",
+                      "status": "COMPLETED",
+                      "date": "2026-08-28"
                     }
                   ]
                 }
@@ -719,11 +650,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163430/",
                   "occurrences": [
                     {
-                      "ref": "TQ1GPGKB",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-07"
-                    },
-                    {
                       "ref": "TXVGAM4",
                       "status": "COULD NOT COMPLETE",
                       "date": "2026-08-14"
@@ -737,6 +663,11 @@
                       "ref": "TJRPYGIB",
                       "status": "PENDING",
                       "date": "2026-08-24"
+                    },
+                    {
+                      "ref": "T3JB2A1",
+                      "status": "COMPLETED",
+                      "date": "2026-08-27"
                     }
                   ]
                 }
@@ -801,7 +732,7 @@
                     },
                     {
                       "ref": "TCAQPRR",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-08-27"
                     },
                     {
@@ -912,11 +843,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/180224/",
                   "occurrences": [
                     {
-                      "ref": "TEZTQ7Q",
-                      "status": "COMPLETED",
-                      "date": "2026-08-24"
-                    },
-                    {
                       "ref": "TY2XRQD",
                       "status": "COMPLETED",
                       "date": "2026-08-25"
@@ -930,6 +856,11 @@
                       "ref": "TFI28NN",
                       "status": "COMPLETED",
                       "date": "2026-08-27"
+                    },
+                    {
+                      "ref": "T46WC4Z",
+                      "status": "SCHEDULED",
+                      "date": "2026-08-28"
                     }
                   ]
                 }
@@ -950,6 +881,11 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/166100/",
                   "occurrences": [
                     {
+                      "ref": "T77GQDT",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-06"
+                    },
+                    {
                       "ref": "TPB7N8GB",
                       "status": "COULD NOT COMPLETE",
                       "date": "2026-08-13"
@@ -958,11 +894,6 @@
                       "ref": "TRAWPIF",
                       "status": "PENDING",
                       "date": "2026-08-20"
-                    },
-                    {
-                      "ref": "TQDKTJIB",
-                      "status": "PENDING",
-                      "date": "2026-08-27"
                     },
                     {
                       "ref": "TTEVY5BB",
@@ -1037,8 +968,8 @@
                     },
                     {
                       "ref": "T93Q7MF",
-                      "status": "SCHEDULED",
-                      "date": "2026-08-24"
+                      "status": "COMPLETED",
+                      "date": "2026-08-27"
                     }
                   ]
                 }
@@ -1227,27 +1158,10 @@
                     },
                     {
                       "ref": "TKQLCJ2",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-08-27"
                     }
                   ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "property": "C702",
-          "employees": [
-            {
-              "employee": "David Sanchez & Alexander Overall",
-              "recurring": [
-                {
-                  "recurring_id": 187342,
-                  "title": "Dumpster Pick Up",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/187342/",
-                  "occurrences": []
                 }
               ]
             }
@@ -1408,11 +1322,6 @@
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/164381/",
                   "occurrences": [
                     {
-                      "ref": "T844RFP",
-                      "status": "COMPLETED",
-                      "date": "2026-07-31"
-                    },
-                    {
                       "ref": "TDI6N01",
                       "status": "COMPLETED",
                       "date": "2026-08-07"
@@ -1426,6 +1335,11 @@
                       "ref": "TV8IPNBB",
                       "status": "COMPLETED",
                       "date": "2026-08-20"
+                    },
+                    {
+                      "ref": "T82WEDHB",
+                      "status": "SCHEDULED",
+                      "date": "2026-08-28"
                     }
                   ]
                 }
@@ -1652,7 +1566,7 @@
                     },
                     {
                       "ref": "TA2KB2BB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-08-27"
                     }
                   ]
@@ -1690,8 +1604,8 @@
                     },
                     {
                       "ref": "TM4TILK",
-                      "status": "SCHEDULED",
-                      "date": "2026-08-24"
+                      "status": "COMPLETED",
+                      "date": "2026-08-27"
                     }
                   ]
                 }
@@ -1895,39 +1809,6 @@
       "area": "Tacoma",
       "properties": [
         {
-          "property": "TC34",
-          "employees": [
-            {
-              "employee": "Florencia Sola",
-              "recurring": [
-                {
-                  "recurring_id": 186000,
-                  "title": "Lawn service / Landscaping",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/186000/",
-                  "occurrences": [
-                    {
-                      "ref": "TD3R7C1",
-                      "status": "COMPLETED",
-                      "date": "2026-08-21"
-                    },
-                    {
-                      "ref": "TC7TTNP",
-                      "status": "COMPLETED",
-                      "date": "2026-08-22"
-                    },
-                    {
-                      "ref": "TVF0CG0",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-04"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "property": "TC68",
           "employees": [
             {
@@ -1962,34 +1843,6 @@
                   ]
                 },
                 {
-                  "recurring_id": 179091,
-                  "title": "Litter pickup (2)",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/179091/",
-                  "occurrences": [
-                    {
-                      "ref": "TQCMC2E",
-                      "status": "COMPLETED",
-                      "date": "2026-08-03"
-                    },
-                    {
-                      "ref": "TL5H0HFB",
-                      "status": "COMPLETED",
-                      "date": "2026-08-03"
-                    },
-                    {
-                      "ref": "TXQNJGDB",
-                      "status": "COMPLETED",
-                      "date": "2026-08-13"
-                    },
-                    {
-                      "ref": "T7U2MR3",
-                      "status": "COMPLETED",
-                      "date": "2026-08-21"
-                    }
-                  ]
-                },
-                {
                   "recurring_id": 178925,
                   "title": "Pet waste removal",
                   "cadence": "Weekly",
@@ -2012,34 +1865,6 @@
                     },
                     {
                       "ref": "T5D98YL",
-                      "status": "COMPLETED",
-                      "date": "2026-08-21"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 166937,
-                  "title": "Bi-Weekly Grounds Inspections",
-                  "cadence": "Bi-Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/166937/",
-                  "occurrences": [
-                    {
-                      "ref": "TQ1CQ7EB",
-                      "status": "COMPLETED",
-                      "date": "2026-07-10"
-                    },
-                    {
-                      "ref": "TP4IW23",
-                      "status": "COMPLETED",
-                      "date": "2026-07-24"
-                    },
-                    {
-                      "ref": "TCVBNFV",
-                      "status": "COMPLETED",
-                      "date": "2026-08-13"
-                    },
-                    {
-                      "ref": "TQJD0B5",
                       "status": "COMPLETED",
                       "date": "2026-08-21"
                     }
@@ -2206,14 +2031,6 @@
           ]
         }
       ]
-    }
-  ],
-  "flagged": [
-    {
-      "recurring_id": 153942,
-      "title": "Lighting checks",
-      "property": "kn47 K1",
-      "employee": "Hannah Deckard"
     }
   ]
 }
