@@ -3,7 +3,7 @@
   "week_end": "2026-08-30",
   "label": "August 24 – 30, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-27",
+  "generated_at": "2026-08-28",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 56.09,
-      "last_7": 30.94
+      "last_30": 57.37,
+      "last_7": 33.82
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 137,
-      "avg_cost_per_wo": 34.15,
-      "total_labor_cost": 2876.48,
+      "wo_count": 141,
+      "avg_cost_per_wo": 33.6,
+      "total_labor_cost": 2934.76,
       "avg_resident_rating": 4.91,
       "reviews": [
         {
@@ -206,11 +206,16 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 100,
-      "avg_cost_per_wo": 103.5,
-      "total_labor_cost": 4427.1,
+      "wo_count": 105,
+      "avg_cost_per_wo": 103.83,
+      "total_labor_cost": 4694.7,
       "avg_resident_rating": 4.25,
       "reviews": [
+        {
+          "ref": "TCKG6BCB",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TF7FBEJ",
           "rating": 4,
@@ -245,18 +250,13 @@
           "ref": "TKKZ2D1",
           "rating": 5,
           "text": null
-        },
-        {
-          "ref": "T5M8D48",
-          "rating": 5,
-          "text": "Excellent craftsmanship and professionalism on a job well done"
         }
       ]
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 68,
-      "avg_cost_per_wo": 132.3,
+      "wo_count": 67,
+      "avg_cost_per_wo": 134.27,
       "total_labor_cost": 2243.7,
       "avg_resident_rating": 3.89,
       "reviews": [
@@ -309,10 +309,10 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 50,
-      "avg_cost_per_wo": 77.08,
-      "total_labor_cost": 2899,
-      "avg_resident_rating": 3.8,
+      "wo_count": 52,
+      "avg_cost_per_wo": 83.27,
+      "total_labor_cost": 3257.15,
+      "avg_resident_rating": 3.33,
       "reviews": [
         {
           "ref": "T6D3TUP",
@@ -323,6 +323,11 @@
           "ref": "T5XDBQD",
           "rating": 5,
           "text": null
+        },
+        {
+          "ref": "TW5RCZY",
+          "rating": 1,
+          "text": "Always make excuses for small tasks. Not acceptable. Not taking emergencies seriously. Bad communication and always delay on task."
         },
         {
           "ref": "TR3E4FB",
@@ -343,16 +348,16 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 25,
-      "avg_cost_per_wo": 33.23,
-      "total_labor_cost": 770.67,
+      "wo_count": 27,
+      "avg_cost_per_wo": 32.34,
+      "total_labor_cost": 813.2,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 9,
-      "avg_cost_per_wo": 112.47,
+      "wo_count": 10,
+      "avg_cost_per_wo": 128.92,
       "total_labor_cost": 455,
       "avg_resident_rating": 3,
       "reviews": [
@@ -420,7 +425,7 @@
     },
     {
       "category": "Supplies and Tools",
-      "amount": 331.57
+      "amount": 381.71
     },
     {
       "category": "Appliances",
@@ -428,38 +433,30 @@
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 334.52
     },
     {
       "category": "Maintenance",
-      "amount": 3073.38
+      "amount": 1149.4
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 28486.52,
-    "materials": 16811.2,
+    "labor": 29755.38,
+    "materials": 13997.74,
     "invoices": 8074.42,
-    "total_actual": 53372.14,
-    "variance": 14058.91
+    "total_actual": 51827.54,
+    "variance": 15603.51
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 17870.64,
-    "materials": 1186.61,
+    "labor": 18660.94,
+    "materials": 2090.29,
     "invoices": 2043.25,
-    "total_actual": 21100.5,
-    "variance": 8126.56
+    "total_actual": 22794.48,
+    "variance": 6432.58
   },
   "cost_by_property": [
-    {
-      "property": "J312",
-      "labor": 279.6,
-      "materials": 866.15,
-      "cost": 1145.75,
-      "budget": 589.09,
-      "pct_over_budget": 94.5
-    },
     {
       "property": "RL21",
       "labor": 1005.98,
@@ -470,11 +467,11 @@
     },
     {
       "property": "P705",
-      "labor": 828.08,
+      "labor": 852.78,
       "materials": 995.46,
-      "cost": 1823.54,
+      "cost": 1848.24,
       "budget": 1125.3,
-      "pct_over_budget": 62
+      "pct_over_budget": 64.2
     },
     {
       "property": "K308",
@@ -485,12 +482,12 @@
       "pct_over_budget": 60.4
     },
     {
-      "property": "W226",
-      "labor": 487.9,
-      "materials": 219.16,
-      "cost": 707.06,
-      "budget": 547.8,
-      "pct_over_budget": 29.1
+      "property": "C313",
+      "labor": 929.23,
+      "materials": 1944.78,
+      "cost": 2874.01,
+      "budget": 2125.46,
+      "pct_over_budget": 35.2
     },
     {
       "property": "W117",
@@ -501,20 +498,20 @@
       "pct_over_budget": 20.3
     },
     {
-      "property": "TC34",
-      "labor": 297.05,
-      "materials": 1336.07,
-      "cost": 1633.12,
-      "budget": 1463.6,
-      "pct_over_budget": 11.6
+      "property": "PS17",
+      "labor": 638,
+      "materials": 229.75,
+      "cost": 867.75,
+      "budget": 734.2,
+      "pct_over_budget": 18.2
     },
     {
-      "property": "L912",
-      "labor": 0,
-      "materials": 1083.34,
-      "cost": 1083.34,
-      "budget": 0,
-      "pct_over_budget": null
+      "property": "M405",
+      "labor": 845.83,
+      "materials": 267.12,
+      "cost": 1112.95,
+      "budget": 1095,
+      "pct_over_budget": 1.6
     }
   ],
   "narrative": null,
@@ -522,6 +519,13 @@
   "priorities_next_week": null,
   "grounds_top_purchases_month": "2026-08",
   "grounds_top_purchases": [
+    {
+      "date": "2026-08-21",
+      "cardholder": "Jonas Hoard",
+      "property": "TC34",
+      "ref": "TC7TTNP",
+      "amount": 227.63
+    },
     {
       "date": "2026-08-13",
       "cardholder": "Jared Miller",
@@ -544,11 +548,25 @@
       "amount": 206.71
     },
     {
+      "date": "2026-08-21",
+      "cardholder": "Jonas Hoard",
+      "property": "TC34",
+      "ref": "TC7TTNP",
+      "amount": 171.22
+    },
+    {
       "date": "2026-08-03",
       "cardholder": "isaac chavez",
       "property": "KN47",
       "ref": "TEHXVXGB",
       "amount": 165.26
+    },
+    {
+      "date": "2026-08-25",
+      "cardholder": "Jonas Hoard",
+      "property": "TC68",
+      "ref": "T9XH2WJB",
+      "amount": 160.72
     },
     {
       "date": "2026-08-25",
@@ -558,39 +576,18 @@
       "amount": 103.14
     },
     {
-      "date": "2026-08-25",
-      "cardholder": "Chad Cariquist",
-      "property": "KN47",
-      "ref": "TWKJIAE",
-      "amount": 60
+      "date": "2026-08-24",
+      "cardholder": "Jonas Hoard",
+      "property": "TC68",
+      "ref": "T9XH2WJB",
+      "amount": 92.06
     },
     {
-      "date": "2026-08-21",
-      "cardholder": "David Sanchez",
-      "property": "K104",
-      "ref": "TA8FY1I",
-      "amount": 42.36
-    },
-    {
-      "date": "2026-08-12",
-      "cardholder": "David Sanchez",
-      "property": "W226",
-      "ref": "T0IEAIX",
-      "amount": 39.86
-    },
-    {
-      "date": "2026-08-04",
-      "cardholder": "David Sanchez",
-      "property": "A511",
-      "ref": "TUHUP2E",
-      "amount": 37.94
-    },
-    {
-      "date": "2026-08-06",
-      "cardholder": "David Sanchez",
-      "property": "C302",
-      "ref": "TQ8RZCM",
-      "amount": 35.97
+      "date": "2026-08-14",
+      "cardholder": "Jonas Hoard",
+      "property": "TC34",
+      "ref": "TD3R7C1",
+      "amount": 89.6
     }
   ],
   "grounds_pest_control": [
