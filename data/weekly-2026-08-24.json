@@ -3,7 +3,7 @@
   "week_end": "2026-08-30",
   "label": "August 24 – 30, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 57.37,
-      "last_7": 33.82
+      "last_30": 57.46,
+      "last_7": 28.9
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 141,
-      "avg_cost_per_wo": 33.6,
-      "total_labor_cost": 2934.76,
+      "wo_count": 147,
+      "avg_cost_per_wo": 32.89,
+      "total_labor_cost": 3033.08,
       "avg_resident_rating": 4.91,
       "reviews": [
         {
@@ -206,11 +206,16 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 105,
-      "avg_cost_per_wo": 103.83,
-      "total_labor_cost": 4694.7,
-      "avg_resident_rating": 4.25,
+      "wo_count": 107,
+      "avg_cost_per_wo": 103.09,
+      "total_labor_cost": 4788.3,
+      "avg_resident_rating": 4.33,
       "reviews": [
+        {
+          "ref": "TIBQR03",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TCKG6BCB",
           "rating": 5,
@@ -255,10 +260,10 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 67,
-      "avg_cost_per_wo": 134.27,
-      "total_labor_cost": 2243.7,
-      "avg_resident_rating": 3.89,
+      "wo_count": 62,
+      "avg_cost_per_wo": 143.32,
+      "total_labor_cost": 2180.93,
+      "avg_resident_rating": 3.75,
       "reviews": [
         {
           "ref": "TLNV74JB",
@@ -299,19 +304,14 @@
           "ref": "TB22WMK",
           "rating": 5,
           "text": null
-        },
-        {
-          "ref": "T6DBXCJB",
-          "rating": 5,
-          "text": null
         }
       ]
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 52,
-      "avg_cost_per_wo": 83.27,
-      "total_labor_cost": 3257.15,
+      "wo_count": 53,
+      "avg_cost_per_wo": 86.79,
+      "total_labor_cost": 3526.9,
       "avg_resident_rating": 3.33,
       "reviews": [
         {
@@ -397,6 +397,13 @@
       "amount": 719.74
     },
     {
+      "date": "2026-08-28",
+      "ref": null,
+      "property": null,
+      "cardholder": "Margarito Saldana",
+      "amount": 654.96
+    },
+    {
       "date": "2026-08-24",
       "ref": "TZYZHTFB",
       "property": "C702",
@@ -421,11 +428,11 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 801.14
+      "amount": 1020.69
     },
     {
       "category": "Supplies and Tools",
-      "amount": 381.71
+      "amount": 467.86
     },
     {
       "category": "Appliances",
@@ -433,28 +440,28 @@
     },
     {
       "category": "Grounds",
-      "amount": 334.52
+      "amount": 393.31
     },
     {
       "category": "Maintenance",
-      "amount": 1149.4
+      "amount": 1184.19
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 29755.38,
-    "materials": 13997.74,
+    "labor": 30207.67,
+    "materials": 14118.68,
     "invoices": 8074.42,
-    "total_actual": 51827.54,
-    "variance": 15603.51
+    "total_actual": 52400.77,
+    "variance": 15030.28
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 18660.94,
-    "materials": 2090.29,
+    "labor": 19262.28,
+    "materials": 2149.08,
     "invoices": 2043.25,
-    "total_actual": 22794.48,
-    "variance": 6432.58
+    "total_actual": 23454.61,
+    "variance": 5772.45
   },
   "cost_by_property": [
     {
@@ -507,11 +514,11 @@
     },
     {
       "property": "M405",
-      "labor": 845.83,
+      "labor": 1010.28,
       "materials": 267.12,
-      "cost": 1112.95,
+      "cost": 1277.4,
       "budget": 1095,
-      "pct_over_budget": 1.6
+      "pct_over_budget": 16.7
     }
   ],
   "narrative": null,
