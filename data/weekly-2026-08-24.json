@@ -3,16 +3,16 @@
   "week_end": "2026-08-30",
   "label": "August 24 – 30, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-29",
-  "complete": false,
+  "generated_at": "2026-08-30",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 57.46,
-      "last_7": 28.9
+      "last_30": 56.13,
+      "last_7": 24.57
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 147,
-      "avg_cost_per_wo": 32.89,
-      "total_labor_cost": 3033.08,
+      "wo_count": 149,
+      "avg_cost_per_wo": 31.97,
+      "total_labor_cost": 2986.73,
       "avg_resident_rating": 4.91,
       "reviews": [
         {
@@ -207,10 +207,15 @@
     {
       "name": "Jaxson Lakins",
       "wo_count": 107,
-      "avg_cost_per_wo": 103.09,
-      "total_labor_cost": 4788.3,
-      "avg_resident_rating": 4.33,
+      "avg_cost_per_wo": 103.32,
+      "total_labor_cost": 4812.9,
+      "avg_resident_rating": 4.4,
       "reviews": [
+        {
+          "ref": "TH5YGEJ",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TIBQR03",
           "rating": 5,
@@ -260,8 +265,8 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 62,
-      "avg_cost_per_wo": 143.32,
+      "wo_count": 61,
+      "avg_cost_per_wo": 145.67,
       "total_labor_cost": 2180.93,
       "avg_resident_rating": 3.75,
       "reviews": [
@@ -309,9 +314,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 53,
-      "avg_cost_per_wo": 86.79,
-      "total_labor_cost": 3526.9,
+      "wo_count": 52,
+      "avg_cost_per_wo": 87.52,
+      "total_labor_cost": 3478.15,
       "avg_resident_rating": 3.33,
       "reviews": [
         {
@@ -348,9 +353,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 27,
-      "avg_cost_per_wo": 32.34,
-      "total_labor_cost": 813.2,
+      "wo_count": 28,
+      "avg_cost_per_wo": 32.56,
+      "total_labor_cost": 851.67,
       "avg_resident_rating": null,
       "reviews": []
     },
@@ -428,7 +433,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 1020.69
+      "amount": 1121.69
     },
     {
       "category": "Supplies and Tools",
@@ -449,19 +454,19 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 30207.67,
+    "labor": 30327.92,
     "materials": 14118.68,
     "invoices": 8074.42,
-    "total_actual": 52400.77,
-    "variance": 15030.28
+    "total_actual": 52521.02,
+    "variance": 14910.03
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 19262.28,
+    "labor": 19336.02,
     "materials": 2149.08,
     "invoices": 2043.25,
-    "total_actual": 23454.61,
-    "variance": 5772.45
+    "total_actual": 23528.35,
+    "variance": 5698.71
   },
   "cost_by_property": [
     {
