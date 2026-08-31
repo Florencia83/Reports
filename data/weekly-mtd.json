@@ -1,21 +1,21 @@
 {
   "month": "2026-08",
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-08-31",
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 30327.92,
+    "labor": 30451.45,
     "materials": 14118.68,
     "invoices": 8074.42,
-    "total_actual": 52521.02,
-    "variance": 14910.03
+    "total_actual": 52644.55,
+    "variance": 14786.5
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 19336.02,
+    "labor": 19503.76,
     "materials": 2149.08,
     "invoices": 2043.25,
-    "total_actual": 23528.35,
-    "variance": 5698.71
+    "total_actual": 23696.09,
+    "variance": 5530.97
   },
   "cost_by_property": [
     {
