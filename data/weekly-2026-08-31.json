@@ -3,7 +3,7 @@
   "week_end": "2026-09-06",
   "label": "August 31 – September 6, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-08-31",
+  "generated_at": "2026-09-02",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 55.3,
-      "last_7": 22.03
+      "last_30": 53.49,
+      "last_7": 22.22
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 151,
-      "avg_cost_per_wo": 30.32,
-      "total_labor_cost": 2912.43,
+      "wo_count": 156,
+      "avg_cost_per_wo": 28.04,
+      "total_labor_cost": 2806.39,
       "avg_resident_rating": 4.9,
       "reviews": [
         {
@@ -201,11 +201,21 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 105,
-      "avg_cost_per_wo": 101.02,
-      "total_labor_cost": 4587.3,
-      "avg_resident_rating": 4.4,
+      "wo_count": 108,
+      "avg_cost_per_wo": 100.95,
+      "total_labor_cost": 4903.88,
+      "avg_resident_rating": 4.17,
       "reviews": [
+        {
+          "ref": "TFF1KV7",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TC65XC6",
+          "rating": 1,
+          "text": null
+        },
         {
           "ref": "TH5YGEJ",
           "rating": 5,
@@ -261,7 +271,7 @@
     {
       "name": "Jonas Hoard",
       "wo_count": 61,
-      "avg_cost_per_wo": 145.67,
+      "avg_cost_per_wo": 138.4,
       "total_labor_cost": 2180.93,
       "avg_resident_rating": 3.75,
       "reviews": [
@@ -309,9 +319,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 52,
-      "avg_cost_per_wo": 87.52,
-      "total_labor_cost": 3478.15,
+      "wo_count": 56,
+      "avg_cost_per_wo": 84,
+      "total_labor_cost": 3587.35,
       "avg_resident_rating": 3.33,
       "reviews": [
         {
@@ -348,17 +358,17 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 28,
-      "avg_cost_per_wo": 32.56,
-      "total_labor_cost": 851.67,
+      "wo_count": 26,
+      "avg_cost_per_wo": 32.37,
+      "total_labor_cost": 781.47,
       "avg_resident_rating": null,
       "reviews": []
     },
     {
       "name": "Justin Gutierrez",
-      "wo_count": 10,
-      "avg_cost_per_wo": 128.92,
-      "total_labor_cost": 455,
+      "wo_count": 9,
+      "avg_cost_per_wo": 103.13,
+      "total_labor_cost": 300,
       "avg_resident_rating": 3,
       "reviews": [
         {
@@ -374,11 +384,26 @@
       ]
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-09-01",
+      "ref": "TPZGMHHB",
+      "property": "KN47",
+      "cardholder": "isaac chavez",
+      "amount": 999.87
+    },
+    {
+      "date": "2026-08-31",
+      "ref": null,
+      "property": null,
+      "cardholder": "Micheal Magoon",
+      "amount": 792.25
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 130.67
+      "amount": 345.12
     },
     {
       "category": "Supplies and Tools",
@@ -386,7 +411,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 999.87
     },
     {
       "category": "Grounds",
@@ -394,49 +419,57 @@
     },
     {
       "category": "Maintenance",
-      "amount": 0
+      "amount": 605.14
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 30451.45,
-    "materials": 14118.68,
+    "labor": 32286.5,
+    "materials": 14723.82,
     "invoices": 8074.42,
-    "total_actual": 52644.55,
-    "variance": 14786.5
+    "total_actual": 55084.74,
+    "variance": 12346.31
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 19503.76,
+    "labor": 20565.65,
     "materials": 2149.08,
     "invoices": 2043.25,
-    "total_actual": 23696.09,
-    "variance": 5530.97
+    "total_actual": 24757.98,
+    "variance": 4469.08
   },
   "cost_by_property": [
     {
       "property": "RL21",
-      "labor": 1005.98,
+      "labor": 1040.39,
       "materials": 1154.78,
-      "cost": 2160.76,
+      "cost": 2195.17,
       "budget": 1119.4,
-      "pct_over_budget": 93
-    },
-    {
-      "property": "P705",
-      "labor": 852.78,
-      "materials": 995.46,
-      "cost": 1848.24,
-      "budget": 1125.3,
-      "pct_over_budget": 64.2
+      "pct_over_budget": 96.1
     },
     {
       "property": "K308",
       "labor": 310.7,
-      "materials": 158.11,
-      "cost": 468.81,
+      "materials": 196.24,
+      "cost": 506.94,
       "budget": 292.3,
-      "pct_over_budget": 60.4
+      "pct_over_budget": 73.4
+    },
+    {
+      "property": "P705",
+      "labor": 930.78,
+      "materials": 995.46,
+      "cost": 1926.24,
+      "budget": 1125.3,
+      "pct_over_budget": 71.2
+    },
+    {
+      "property": "W117",
+      "labor": 657.13,
+      "materials": 0,
+      "cost": 657.13,
+      "budget": 416.4,
+      "pct_over_budget": 57.8
     },
     {
       "property": "C313",
@@ -447,12 +480,12 @@
       "pct_over_budget": 35.2
     },
     {
-      "property": "W117",
-      "labor": 501.13,
-      "materials": 0,
-      "cost": 501.13,
-      "budget": 416.4,
-      "pct_over_budget": 20.3
+      "property": "M405",
+      "labor": 1010.28,
+      "materials": 296.21,
+      "cost": 1306.49,
+      "budget": 1095,
+      "pct_over_budget": 19.3
     },
     {
       "property": "PS17",
@@ -461,14 +494,6 @@
       "cost": 867.75,
       "budget": 734.2,
       "pct_over_budget": 18.2
-    },
-    {
-      "property": "M405",
-      "labor": 1010.28,
-      "materials": 267.12,
-      "cost": 1277.4,
-      "budget": 1095,
-      "pct_over_budget": 16.7
     }
   ],
   "narrative": null,
