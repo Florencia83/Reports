@@ -1,23 +1,31 @@
 {
   "month": "2026-08",
-  "generated_at": "2026-09-02",
+  "generated_at": "2026-09-03",
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 32286.5,
-    "materials": 14723.82,
+    "labor": 33761.26,
+    "materials": 14978.27,
     "invoices": 8074.42,
-    "total_actual": 55084.74,
-    "variance": 12346.31
+    "total_actual": 56813.95,
+    "variance": 10617.1
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 20565.65,
-    "materials": 2149.08,
+    "labor": 21269.83,
+    "materials": 2180.92,
     "invoices": 2043.25,
-    "total_actual": 24757.98,
-    "variance": 4469.08
+    "total_actual": 25494,
+    "variance": 3733.06
   },
   "cost_by_property": [
+    {
+      "property": "K308",
+      "labor": 310.7,
+      "materials": 579.16,
+      "cost": 889.86,
+      "budget": 292.3,
+      "pct_over_budget": 204.4
+    },
     {
       "property": "RL21",
       "labor": 1040.39,
@@ -27,12 +35,12 @@
       "pct_over_budget": 96.1
     },
     {
-      "property": "K308",
-      "labor": 310.7,
-      "materials": 196.24,
-      "cost": 506.94,
-      "budget": 292.3,
-      "pct_over_budget": 73.4
+      "property": "W117",
+      "labor": 657.13,
+      "materials": 91.51,
+      "cost": 748.64,
+      "budget": 416.4,
+      "pct_over_budget": 79.8
     },
     {
       "property": "P705",
@@ -43,36 +51,44 @@
       "pct_over_budget": 71.2
     },
     {
-      "property": "W117",
-      "labor": 657.13,
-      "materials": 0,
-      "cost": 657.13,
-      "budget": 416.4,
-      "pct_over_budget": 57.8
+      "property": "C313",
+      "labor": 994.88,
+      "materials": 2004.26,
+      "cost": 2999.14,
+      "budget": 2125.46,
+      "pct_over_budget": 41.1
     },
     {
-      "property": "C313",
-      "labor": 929.23,
-      "materials": 1944.78,
-      "cost": 2874.01,
-      "budget": 2125.46,
-      "pct_over_budget": 35.2
+      "property": "W226",
+      "labor": 733.6,
+      "materials": 6.55,
+      "cost": 740.15,
+      "budget": 547.8,
+      "pct_over_budget": 35.1
+    },
+    {
+      "property": "PS17",
+      "labor": 654.8,
+      "materials": 229.75,
+      "cost": 884.55,
+      "budget": 734.2,
+      "pct_over_budget": 20.5
     },
     {
       "property": "M405",
       "labor": 1010.28,
-      "materials": 296.21,
-      "cost": 1306.49,
+      "materials": 304.19,
+      "cost": 1314.47,
       "budget": 1095,
-      "pct_over_budget": 19.3
+      "pct_over_budget": 20
     },
     {
-      "property": "PS17",
-      "labor": 638,
-      "materials": 229.75,
-      "cost": 867.75,
-      "budget": 734.2,
-      "pct_over_budget": 18.2
+      "property": "PS25",
+      "labor": 2147.02,
+      "materials": 348.45,
+      "cost": 2495.47,
+      "budget": 2439,
+      "pct_over_budget": 2.3
     }
   ]
 }
