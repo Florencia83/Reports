@@ -129,13 +129,13 @@ footer a { color: var(--ink-soft); }
   <div class="email-card">
   <div class="masthead">
     <h1>Grounds Recurring Service Status</h1>
-    <p class="masthead-range">Last 4 real occurrences per recurring service &mdash; oldest to newest, left to right</p>
+    <p class="masthead-range">Last 4 calendar weeks &mdash; oldest to newest, left to right</p>
   </div>
 
   <p class="legend">
     <span class="pill good">Completed</span>
     <span class="pill info">Scheduled</span>
-    <span class="pill warn">Pending</span>
+    <span class="pill warn">Overdue</span>
     <span class="pill bad">Canceled</span>
   </p>
 
@@ -162,21 +162,17 @@ function fmtDate(iso) {
 
 function pillFor(occ) {
   if (!occ) return '<span class="pill empty">No work order</span>';
-  var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], PENDING: ['warn', 'Pending'], 'COULD NOT COMPLETE': ['bad', 'Missed'] };
+  var map = { COMPLETED: ['good', 'Completed'], SCHEDULED: ['info', 'Scheduled'], CANCELED: ['bad', 'Canceled'], OVERDUE: ['warn', 'Overdue'], 'COULD NOT COMPLETE': ['bad', 'Missed'] };
   var m = map[occ.status] || ['empty', occ.status];
   var dateStr = fmtDate(occ.date);
   return '<span class="pill ' + m[0] + '">' + m[1] + (dateStr ? '<span class="pill-date">' + dateStr + '</span>' : '') + '</span>';
 }
 
 function renderRecurringRow(r) {
-  // Right-align: the newest real occurrence always sits in the last column, "No work order"
-  // fills the leading gap for a series that doesn't have 4 occurrences of history yet -- a
-  // brand-new series (e.g. one just added) otherwise showed its one real entry in column 1
-  // with 3 "No work order" pills trailing it, reading as 3 missed periods that never happened.
-  var occs = (r.occurrences || []).slice();
-  while (occs.length < 4) occs.unshift(null);
-  var cells = [0, 1, 2, 3].map(function(i) {
-    var occ = occs[i];
+  // One cell per calendar week, oldest to newest -- the data already guarantees exactly
+  // WEEK_COUNT entries (real occurrence or null for "No work order"), no padding needed.
+  var occs = r.occurrences || [];
+  var cells = occs.map(function(occ) {
     var inner = pillFor(occ);
     // Every occurrence links out to that service's recurring page in Property Meld
     // (per-instance detail URLs aren't confirmed, so all 4 weeks point at the same
@@ -186,20 +182,13 @@ function renderRecurringRow(r) {
   return '<tr><td class="svc">' + esc(r.title) + '</td><td class="cad">' + esc(r.cadence || 'No cadence set') + '</td>' + cells + '</tr>';
 }
 
-function todayStr() {
-  var d = new Date();
-  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-}
-
 function completionPct(p) {
   var total = 0, completed = 0;
-  var today = todayStr();
   p.employees.forEach(function(e) {
     e.recurring.forEach(function(r) {
       (r.occurrences || []).forEach(function(occ) {
-        // Not-yet-due occurrences (scheduled today or later) aren't a completion failure --
-        // skip them entirely so they don't drag the % down before their date even arrives.
-        if (occ.status === 'SCHEDULED' && occ.date >= today) return;
+        if (!occ) return; // No work order that week -- not a real event, not a failure
+        if (occ.status === 'SCHEDULED') return; // not yet due (OVERDUE is what counts as a miss)
         total++;
         if (occ.status === 'COMPLETED') completed++;
       });
@@ -223,8 +212,12 @@ function renderPropertyBlock(p) {
   return rows;
 }
 
-function renderArea(area) {
-  var head = '<tr><th>Service</th><th>Cadence</th><th>Occurrence 1</th><th>Occurrence 2</th><th>Occurrence 3</th><th>Occurrence 4</th></tr>';
+function weekHead(weeks) {
+  return (weeks || []).map(function(w) { return '<th>Week of ' + fmtDate(w) + '</th>'; }).join('');
+}
+
+function renderArea(area, weeks) {
+  var head = '<tr><th>Service</th><th>Cadence</th>' + weekHead(weeks) + '</tr>';
   var body = area.properties.map(renderPropertyBlock).join('');
   return '<h2 class="area-title">' + esc(area.area) + '</h2><div class="table-wrap"><table>' + head + body + '</table></div>';
 }
@@ -236,11 +229,11 @@ function renderFlagged(flagged) {
     return '<li>[' + f.recurring_id + '] ' + esc(f.property || '?') + ' &mdash; ' + esc(f.title) + ' (' + esc(f.employee) + ')</li>';
   }).join('');
   el.innerHTML = '<div class="callout" style="font-size:13px;"><strong>' + flagged.length +
-    ' recurring series run by known grounds crew are not yet in this report</strong> &mdash; add them to GROUNDS_REGISTRY once confirmed:<ul style="margin:6px 0 0 18px;">' + rows + '</ul></div>';
+    ' recurring series partially match the grounds crew/title but need a human look</strong>:<ul style="margin:6px 0 0 18px;">' + rows + '</ul></div>';
 }
 
 function render(data) {
-  document.getElementById('areas-container').innerHTML = data.areas.map(renderArea).join('');
+  document.getElementById('areas-container').innerHTML = data.areas.map(function(area) { return renderArea(area, data.weeks); }).join('');
   document.getElementById('updated-label').textContent = 'Data as of ' + data.generated_at;
   document.getElementById('footer-updated-label').textContent = 'Updated ' + data.generated_at;
   renderFlagged(data.flagged);

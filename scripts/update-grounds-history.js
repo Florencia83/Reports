@@ -1,7 +1,8 @@
 // Refreshes the Grounds report's data: for every known Grounds recurring meld series
-// (lawn/landscaping/grounds-cleaning/irrigation/pool, per area), shows the last 4 real
-// occurrences (not calendar weeks -- cadences vary from every-3-days to annual) with
-// status (Completed/Scheduled/Canceled/Pending) and the assigned employee or vendor.
+// (lawn/landscaping/grounds-cleaning/irrigation/pool, per area), shows the LAST 4 CALENDAR
+// WEEKS (Mon-Sun, not 4 real occurrences -- a week with no instance shows "No work order",
+// regardless of cadence -- Florencia, 2026-09-03) with the real status (Completed/Scheduled/
+// Overdue/Canceled/Could Not Complete) and date, and the assigned employee or vendor.
 //
 // Recurring meld ID registry below was reconciled 2026-07-14 against Florencia's manual
 // tracking sheet (https://docs.google.com/spreadsheets/d/1_BYqgShTbeD6oxpXSd5yugshLOpPCHIziZW-s0HYjJg)
@@ -9,6 +10,16 @@
 // that a live PM pull can miss entirely if nothing is currently due. Confirmed exclusions:
 // Quarterly/safety inspections (Isaac Chavez's supervisor role, not grounds crew). Confirmed
 // inclusion (2026-07-14, Florencia): Jared Miller's "Daily Pool Maintenance" at kn47/ps25/rl16.
+//
+// AUTO-INCLUSION (added 2026-09-03, Florencia: "si se crea una nueva work order deberia estar
+// en el reporte cuando se actualiza"): a live, ACTIVE recurring meld doesn't need a manual
+// registry entry to appear here anymore -- if it's run by a known GROUNDS_CREW_NAMES member
+// AND its title matches GROUNDS_TITLE_RE, it's included automatically (area/property/cadence
+// derived from the live PropertyMeld template). The registry above still wins when an id is
+// listed there (for custom titles, vendor annotations, and historical/retired entries kept for
+// continuity) -- it's just no longer the ONLY way in. A series matching only ONE of the two
+// conditions (crew or title, not both) is too ambiguous to auto-include and is still just
+// flagged for a human to confirm.
 //
 // Required env vars: PROPERTYMELD_EMAIL, PROPERTYMELD_PASSWORD
 
@@ -192,14 +203,21 @@ const COULD_NOT_COMPLETE_STATUSES = ['VENDOR_COULD_NOT_COMPLETE', 'MAINTENANCE_C
 // series that don't currently have an open instance.
 const COMPLETED_LOOKBACK_DAYS = 150;
 
-// Names of the people who actually do grounds/lawn work today, across all 3 areas. Used
-// ONLY to flag a recurring series that isn't in GROUNDS_REGISTRY yet (Florencia, 2026-08-26:
-// "cuando se crean las nuevas work orders, deberiamos verificar que venga de una de esas
-// fuentes") -- NEVER to auto-add it. Employee alone can't rule out something that shouldn't
-// be tracked (e.g. a one-off repair a crew member happens to be assigned), so a flagged
-// series always needs a human to confirm before it's added to the registry above. Update
-// this list whenever the crew changes (see pm-scheduling/CLAUDE.md for the current roster).
-const GROUNDS_CREW_NAMES = ['Chad Cariquist', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Jonas Hoard', 'Jared Miller'];
+// Names of the people who actually do grounds/lawn work today, across all 3 areas. Combined
+// with GROUNDS_TITLE_RE below, this is what decides auto-inclusion (see the file header) --
+// keep it current or a departed/replaced tech's new work silently stops appearing. Chad
+// Cariquist left and was replaced by Ellias Angulo (found live 2026-09-02/03 -- every real
+// kn47 K1/rl16/rl21 grounds recurring already shows Ellias as of 2026-08-24); Chad's name is
+// kept for any not-yet-refreshed historical templates. Update this list whenever the crew
+// changes (see pm-scheduling/CLAUDE.md for the current roster).
+const GROUNDS_CREW_NAMES = ['Chad Cariquist', 'Ellias Angulo', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Jonas Hoard', 'Jared Miller'];
+
+// Explicitly excluded even though they'd otherwise auto-match crew+title -- pending a human
+// decision, not something the auto-detect logic should decide on its own.
+const EXCLUDE_IDS = new Set([
+  153942, // "Lighting checks" (Hannah, kn47 K1) -- likely duplicate of registered 119264
+          // "Light Check"; Florencia hasn't confirmed which is canonical yet (2026-09-02/03).
+]);
 
 // Title keyword gate for the flag below -- crew name ALONE isn't enough, because Jared Miller
 // does both grounds (pool) and plain repairs (carpet cleaning, door/laundry lock batteries,
@@ -241,7 +259,12 @@ function latestEvent(m) {
   return events[0] || null;
 }
 
-function occurrenceInfo(m) {
+// Real status only -- Canceled/Could Not Complete/Completed/Scheduled/Overdue (Florencia,
+// 2026-09-03: "lo que se muestra tiene que ser el estado real... y la fecha"). No separate
+// "Pending" bucket: an open meld with no appointment yet is SCHEDULED if its reference date
+// (creation date, since that's all there is) hasn't passed, else OVERDUE -- same rule as an
+// open meld that HAS an appointment date in the past.
+function occurrenceInfo(m, todayStr) {
   if (m.manager_cancelled || m.tenant_canceller || CANCELED_STATUSES.includes(m.status)) {
     return { status: 'CANCELED', date: (m.manager_cancelled || m.tenant_canceller || m.updated || m.created || '').slice(0, 10) };
   }
@@ -252,13 +275,56 @@ function occurrenceInfo(m) {
     return { status: 'COULD NOT COMPLETE', date: (m.completion_date || m.updated || '').slice(0, 10) };
   }
   const ev = latestEvent(m);
-  if (ev) return { status: 'SCHEDULED', date: (ev.dtstart || '').slice(0, 10) };
-  return { status: 'PENDING', date: (m.created || '').slice(0, 10) };
+  const refDate = (ev ? ev.dtstart : m.created || '').slice(0, 10);
+  if (refDate && refDate < todayStr) return { status: 'OVERDUE', date: refDate };
+  return { status: 'SCHEDULED', date: refDate };
 }
 
-// Sort key for picking the "last 4 real occurrences" -- completed/scheduled/pending all
-// resolve to a real calendar date via occurrenceInfo, so a single date-desc sort works.
-function occDate(m) { return occurrenceInfo(m).date || '0000-00-00'; }
+// Calendar-week helpers (Florencia, 2026-09-03: "las fechas del reporte tienen que ser
+// semanales, no por cadencia") -- weeks are Mon-Sun, ending with the current week, regardless
+// of how often any given series actually fires.
+const WEEK_COUNT = 4;
+function ymd(d) { return d.toISOString().slice(0, 10); }
+function mondayOf(dateStr) {
+  const d = new Date(dateStr + 'T12:00:00Z');
+  const dow = d.getUTCDay();
+  d.setUTCDate(d.getUTCDate() + (dow === 0 ? -6 : 1 - dow));
+  return d;
+}
+function lastNWeeks(todayStr, n) {
+  const curMon = mondayOf(todayStr);
+  const weeks = [];
+  for (let i = n - 1; i >= 0; i--) {
+    const start = new Date(curMon); start.setUTCDate(start.getUTCDate() - i * 7);
+    const end = new Date(start); end.setUTCDate(end.getUTCDate() + 6);
+    weeks.push({ start: ymd(start), end: ymd(end) });
+  }
+  return weeks;
+}
+
+function inferArea(propertyName) {
+  const p = (propertyName || '').toLowerCase();
+  if (/^(kn|rl|ps)\d/.test(p)) return 'Tri-Cities';
+  if (/^tc\d/.test(p)) return 'Tacoma';
+  return 'Spokane';
+}
+
+function normalizePropertyDisplay(propertyName) {
+  if (!propertyName) return '?';
+  const m = propertyName.match(PROPERTY_CODE_RE);
+  if (!m) return propertyName;
+  return propertyName.slice(0, m[0].length).toUpperCase() + propertyName.slice(m[0].length);
+}
+
+function cadenceFromRrule(rrule) {
+  if (!rrule) return 'No cadence set';
+  const n = rrule.interval || 1;
+  if (rrule.freq === 'DAILY') return n === 1 ? 'Daily' : n === 3 ? 'Every 3 days' : n === 7 ? 'Weekly' : n === 14 ? 'Bi-Weekly' : `Every ${n} days`;
+  if (rrule.freq === 'WEEKLY') return n === 1 ? 'Weekly' : n === 2 ? 'Bi-Weekly' : `Every ${n} weeks`;
+  if (rrule.freq === 'MONTHLY') return n === 1 ? 'Monthly' : n === 3 ? 'Quarterly' : n === 6 ? 'Bi-Annual' : `Every ${n} months`;
+  if (rrule.freq === 'YEARLY') return n === 1 ? 'Annual' : `Every ${n} years`;
+  return 'No cadence set';
+}
 
 async function main() {
   const { sc, csrf } = await pmLogin();
@@ -280,32 +346,26 @@ async function main() {
   const seen = new Set();
   all = all.filter(m => { if (seen.has(m.id)) return false; seen.add(m.id); return true; });
 
-  // Client-side recurring_meld filter -- the API's recurring_meld__isnull query param is
-  // silently ignored (confirmed live 2026-07-14: returns the same unfiltered result set
-  // regardless of the param), so this MUST be checked here, not relied on server-side.
-  const relevant = all.filter(m => m.recurring_meld && GROUNDS_REGISTRY[m.recurring_meld]);
-
-  console.log(`Fetched ${all.length} melds total, ${relevant.length} match the Grounds registry (${Object.keys(GROUNDS_REGISTRY).length} known series).`);
-
-  const byRecurId = {};
-  relevant.forEach(m => { (byRecurId[m.recurring_meld] = byRecurId[m.recurring_meld] || []).push(m); });
-
-  const missing = Object.keys(GROUNDS_REGISTRY).filter(rid => !byRecurId[rid]);
-  if (missing.length) console.log(`No live occurrence history for ${missing.length} registered series (likely low-cadence, not currently due): ${missing.join(', ')}`);
-
-  // Flag any recurring series NOT in the registry but currently run by a known grounds crew
-  // member -- surfaces a brand-new series (new property, new task type) the day it starts
-  // showing up live, instead of relying on someone remembering to add it. Never auto-added
-  // to the registry -- shown as a banner on the report (data.flagged) for a human to confirm.
-  const unregisteredIds = [...new Set(all.filter(m => m.recurring_meld && !GROUNDS_REGISTRY[m.recurring_meld]).map(m => m.recurring_meld))];
+  // Auto-include a live, ACTIVE recurring meld run by a known grounds crew member with a
+  // grounds-sounding title even if it's never been added to GROUNDS_REGISTRY -- this is what
+  // makes a brand-new work order show up on the next report update instead of needing someone
+  // to remember to register it (Florencia, 2026-09-03). A series matching only ONE of the two
+  // conditions is too ambiguous to auto-include and is still just flagged for a human to check.
+  const unregisteredIds = [...new Set(all.filter(m => m.recurring_meld && !GROUNDS_REGISTRY[m.recurring_meld]).map(m => m.recurring_meld))]
+    .filter(rid => !EXCLUDE_IDS.has(rid));
   const flagged = [];
+  const workingRegistry = { ...GROUNDS_REGISTRY };
   for (const rid of unregisteredIds) {
     const tr = await pmGet(`/api/melds/recurring/${rid}/`, sc, csrf);
     if (tr.status !== 200) continue;
     const template = JSON.parse(tr.body);
     if (!template.is_active) continue;
     const names = (template.maintenance || []).map(a => a.name).filter(Boolean);
-    if (names.some(n => GROUNDS_CREW_NAMES.includes(n)) && GROUNDS_TITLE_RE.test(template.brief_description || '')) {
+    const crewMatch = names.some(n => GROUNDS_CREW_NAMES.includes(n));
+    const titleMatch = GROUNDS_TITLE_RE.test(template.brief_description || '');
+    if (crewMatch && titleMatch) {
+      workingRegistry[rid] = {}; // area/property/title/cadence derived live in the main loop below
+    } else if (crewMatch || titleMatch) {
       flagged.push({
         recurring_id: rid,
         title: template.brief_description || '',
@@ -315,7 +375,22 @@ async function main() {
     }
     await new Promise(res => setTimeout(res, 80));
   }
-  if (flagged.length) console.log(`⚠ ${flagged.length} recurring series run by known grounds crew are NOT in GROUNDS_REGISTRY yet: ${JSON.stringify(flagged)}`);
+  if (flagged.length) console.log(`⚠ ${flagged.length} recurring series partially match grounds crew/title, needs a human look: ${JSON.stringify(flagged)}`);
+
+  // Client-side recurring_meld filter -- the API's recurring_meld__isnull query param is
+  // silently ignored (confirmed live 2026-07-14: returns the same unfiltered result set
+  // regardless of the param), so this MUST be checked here, not relied on server-side.
+  const relevant = all.filter(m => m.recurring_meld && workingRegistry[m.recurring_meld]);
+
+  console.log(`Fetched ${all.length} melds total, ${relevant.length} match ${Object.keys(workingRegistry).length} Grounds series (${Object.keys(GROUNDS_REGISTRY).length} registered + ${Object.keys(workingRegistry).length - Object.keys(GROUNDS_REGISTRY).length} auto-detected).`);
+
+  const byRecurId = {};
+  relevant.forEach(m => { (byRecurId[m.recurring_meld] = byRecurId[m.recurring_meld] || []).push(m); });
+
+  const missing = Object.keys(GROUNDS_REGISTRY).filter(rid => !byRecurId[rid]);
+  if (missing.length) console.log(`No live occurrence history for ${missing.length} registered series (likely low-cadence, not currently due): ${missing.join(', ')}`);
+
+  const weeks = lastNWeeks(todayStr, WEEK_COUNT);
 
   // area -> property -> employee -> [ recurring rows ]. Employee is read from each series'
   // live recurring-meld template (current assignment in PM right now), NOT derived from past
@@ -328,7 +403,7 @@ async function main() {
   // placeholder employee.
   const areaMap = {};
   let skippedNoEmployee = 0;
-  for (const [ridStr, meta] of Object.entries(GROUNDS_REGISTRY)) {
+  for (const [ridStr, meta] of Object.entries(workingRegistry)) {
     const rid = Number(ridStr);
 
     // Registry `vendor` annotations are reconciled against Florencia's manual tracking sheet
@@ -339,19 +414,17 @@ async function main() {
     if (meta.vendor) { skippedNoEmployee++; continue; }
 
     const instances = byRecurId[rid] || [];
-    // Prefer real recent history over a backlog of already-scheduled future instances --
-    // sorting all instances by date descending and taking the top 4 picks whichever occurrences
-    // happen to be scheduled FURTHEST out when a series has a queue of pending melds already
-    // booked weeks ahead (found 2026-08-23: KN47 Litter pickup had 5 PENDING_COMPLETION melds
-    // stacked a week apart out to October, so the report showed nothing but far-future
-    // "Scheduled" pills and hid everything that actually happened in August). Take up to 4 real
-    // past/today occurrences (most recent first), only reaching into the future queue to fill
-    // remaining slots -- same behavior as before for a low-cadence series with no past history.
-    const past = instances.filter(m => occDate(m) <= todayStr).sort((a, b) => occDate(b).localeCompare(occDate(a)));
-    const future = instances.filter(m => occDate(m) > todayStr).sort((a, b) => occDate(a).localeCompare(occDate(b)));
-    const recentInstances = past.slice(0, 4);
-    if (recentInstances.length < 4) recentInstances.push(...future.slice(0, 4 - recentInstances.length));
-    recentInstances.sort((a, b) => occDate(a).localeCompare(occDate(b)));
+    const infoList = instances.map(m => ({ m, info: occurrenceInfo(m, todayStr) }));
+
+    // One cell per calendar week -- the occurrence (if any) whose real date falls in that week,
+    // else null ("No work order"). If a week somehow has more than one instance (a reschedule
+    // producing a second record), the most recently updated one wins.
+    const weekCells = weeks.map(w => {
+      const matches = infoList.filter(x => x.info.date && x.info.date >= w.start && x.info.date <= w.end);
+      if (!matches.length) return null;
+      matches.sort((a, b) => (b.m.updated || '').localeCompare(a.m.updated || ''));
+      return { ref: matches[0].m.reference_id, status: matches[0].info.status, date: matches[0].info.date || null };
+    });
 
     const tr = await pmGet(`/api/melds/recurring/${rid}/`, sc, csrf);
     if (tr.status !== 200) { console.log(`Could not fetch recurring template ${rid} (HTTP ${tr.status}) -- skipping.`); skippedNoEmployee++; continue; }
@@ -361,20 +434,23 @@ async function main() {
     const employee = names.join(' & ');
     await new Promise(res => setTimeout(res, 80));
 
-    const last4 = recentInstances.map(m => {
-      const info = occurrenceInfo(m);
-      return { ref: m.reference_id, status: info.status, date: info.date || null };
-    });
+    // Registry meta always wins when present; auto-detected entries (meta === {}) derive
+    // everything live from the PropertyMeld template instead.
+    const livePropName = template.prop && template.prop.property_name;
+    const area = meta.area || inferArea(livePropName);
+    const property = meta.property || normalizePropertyDisplay(livePropName);
+    const title = meta.title || (template.brief_description || '').trim();
+    const cadence = meta.cadence || cadenceFromRrule(template.event && template.event.rrule);
 
-    areaMap[meta.area] = areaMap[meta.area] || {};
-    areaMap[meta.area][meta.property] = areaMap[meta.area][meta.property] || {};
-    areaMap[meta.area][meta.property][employee] = areaMap[meta.area][meta.property][employee] || [];
-    areaMap[meta.area][meta.property][employee].push({
+    areaMap[area] = areaMap[area] || {};
+    areaMap[area][property] = areaMap[area][property] || {};
+    areaMap[area][property][employee] = areaMap[area][property][employee] || [];
+    areaMap[area][property][employee].push({
       recurring_id: rid,
-      title: meta.title,
-      cadence: meta.cadence,
+      title,
+      cadence,
       pm_url: `https://app.propertymeld.com/2975/m/2975/melds/recurring/${rid}/`,
-      occurrences: last4,
+      occurrences: weekCells,
     });
   }
   console.log(`Dropped ${skippedNoEmployee} registered series with no live in-house servicer found (vendor-only or currently unassigned).`);
@@ -395,6 +471,7 @@ async function main() {
   const out = {
     generated_at: todayStr,
     source: 'Property Meld (recurring melds only, registry reconciled against Florencia\'s manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated',
+    weeks: weeks.map(w => w.start),
     areas,
     flagged,
   };
