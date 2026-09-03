@@ -205,12 +205,15 @@ const COMPLETED_LOOKBACK_DAYS = 150;
 
 // Names of the people who actually do grounds/lawn work today, across all 3 areas. Combined
 // with GROUNDS_TITLE_RE below, this is what decides auto-inclusion (see the file header) --
-// keep it current or a departed/replaced tech's new work silently stops appearing. Chad
-// Cariquist left and was replaced by Ellias Angulo (found live 2026-09-02/03 -- every real
-// kn47 K1/rl16/rl21 grounds recurring already shows Ellias as of 2026-08-24); Chad's name is
-// kept for any not-yet-refreshed historical templates. Update this list whenever the crew
-// changes (see pm-scheduling/CLAUDE.md for the current roster).
-const GROUNDS_CREW_NAMES = ['Chad Cariquist', 'Ellias Angulo', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Jonas Hoard', 'Jared Miller'];
+// keep it current or a departed/replaced tech's new work silently stops appearing. Update
+// this list whenever the crew changes (see pm-scheduling/CLAUDE.md for the current roster).
+//
+// Chad Cariquist's kn47 K1/rl16/rl21 recurring templates were found showing "Ellias Angulo"
+// live (2026-09-02/03) -- Florencia does NOT recognize this name and does not know who he is
+// (2026-09-03: "no se quien es"). NOT added here. Those 11 templates + 153946 "Shrub Pruning"
+// were unassigned (no maintenance provider) the same day pending her identifying the real
+// replacement -- do not re-add "Ellias Angulo" without her explicit confirmation of who he is.
+const GROUNDS_CREW_NAMES = ['Chad Cariquist', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Jonas Hoard', 'Jared Miller'];
 
 // Explicitly excluded even though they'd otherwise auto-match crew+title -- pending a human
 // decision, not something the auto-detect logic should decide on its own.

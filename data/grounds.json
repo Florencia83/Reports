@@ -15,183 +15,6 @@
           "property": "KN47 K1",
           "employees": [
             {
-              "employee": "Ellias Angulo",
-              "recurring": [
-                {
-                  "recurring_id": 163425,
-                  "title": "General Landscaping Maintenance",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163425/",
-                  "occurrences": [
-                    {
-                      "ref": "T8322AR",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-10"
-                    },
-                    {
-                      "ref": "TFRUIQAB",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-17"
-                    },
-                    {
-                      "ref": "TAZVMP6",
-                      "status": "COMPLETED",
-                      "date": "2026-08-25"
-                    },
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153787,
-                  "title": "Lawn mowing & edging / exterior landscaping",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153787/",
-                  "occurrences": [
-                    {
-                      "ref": "TLDZUXP",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-11"
-                    },
-                    {
-                      "ref": "TWZKRRBB",
-                      "status": "OVERDUE",
-                      "date": "2026-08-19"
-                    },
-                    {
-                      "ref": "TWKJIAE",
-                      "status": "COMPLETED",
-                      "date": "2026-08-25"
-                    },
-                    {
-                      "ref": "THA8HWGB",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 153788,
-                  "title": "Spray rock beds / walkways / curb edges",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153788/",
-                  "occurrences": [
-                    {
-                      "ref": "TGUNHQ3",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-12"
-                    },
-                    null,
-                    {
-                      "ref": "T8MV8IV",
-                      "status": "COMPLETED",
-                      "date": "2026-08-26"
-                    },
-                    {
-                      "ref": "TBDRVGQ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 153944,
-                  "title": "Bed weeding (manual & chemical)",
-                  "cadence": "Monthly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153944/",
-                  "occurrences": [
-                    {
-                      "ref": "TDJYGYL",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-12"
-                    },
-                    null,
-                    null,
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153941,
-                  "title": "Fast-Growth Trimming",
-                  "cadence": "Monthly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153941/",
-                  "occurrences": [
-                    null,
-                    {
-                      "ref": "TVKA9XDB",
-                      "status": "OVERDUE",
-                      "date": "2026-08-19"
-                    },
-                    null,
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153943,
-                  "title": "Flower bed refresh",
-                  "cadence": "Monthly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153943/",
-                  "occurrences": [
-                    null,
-                    null,
-                    {
-                      "ref": "T3TTV59",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-26"
-                    },
-                    {
-                      "ref": "T91ZN7U",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 153945,
-                  "title": "Irrigation leak inspections",
-                  "cadence": "Monthly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153945/",
-                  "occurrences": [
-                    null,
-                    null,
-                    {
-                      "ref": "TXM87LM",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-27"
-                    },
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153948,
-                  "title": "Tree limb clearance",
-                  "cadence": "Quarterly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153948/",
-                  "occurrences": [
-                    null,
-                    null,
-                    null,
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153946,
-                  "title": "Shrub Pruning",
-                  "cadence": "Bi-Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153946/",
-                  "occurrences": [
-                    null,
-                    null,
-                    null,
-                    {
-                      "ref": "T3FRI1J",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-03"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "employee": "Hannah Deckard",
               "recurring": [
                 {
@@ -694,31 +517,6 @@
           "property": "RL16",
           "employees": [
             {
-              "employee": "Ellias Angulo",
-              "recurring": [
-                {
-                  "recurring_id": 163426,
-                  "title": "General Lawn Maintenance",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163426/",
-                  "occurrences": [
-                    {
-                      "ref": "TQR4RMDB",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-13"
-                    },
-                    null,
-                    {
-                      "ref": "TCAQPRR",
-                      "status": "COMPLETED",
-                      "date": "2026-08-27"
-                    },
-                    null
-                  ]
-                }
-              ]
-            },
-            {
               "employee": "Hannah Deckard",
               "recurring": [
                 {
@@ -820,64 +618,6 @@
                       "status": "SCHEDULED",
                       "date": "2026-09-03"
                     }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "property": "RL21",
-          "employees": [
-            {
-              "employee": "Ellias Angulo",
-              "recurring": [
-                {
-                  "recurring_id": 166100,
-                  "title": "Exterior Landscaping (return lawn service)",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/166100/",
-                  "occurrences": [
-                    {
-                      "ref": "TPB7N8GB",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-13"
-                    },
-                    {
-                      "ref": "TRAWPIF",
-                      "status": "OVERDUE",
-                      "date": "2026-08-20"
-                    },
-                    {
-                      "ref": "TQDKTJIB",
-                      "status": "COMPLETED",
-                      "date": "2026-08-28"
-                    },
-                    {
-                      "ref": "TVFWDLG",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-03"
-                    }
-                  ]
-                },
-                {
-                  "recurring_id": 163428,
-                  "title": "Lawn Service",
-                  "cadence": "Weekly",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163428/",
-                  "occurrences": [
-                    {
-                      "ref": "TNVTJQ1",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-13"
-                    },
-                    null,
-                    {
-                      "ref": "TI36QKB",
-                      "status": "COMPLETED",
-                      "date": "2026-08-28"
-                    },
-                    null
                   ]
                 }
               ]
@@ -2078,6 +1818,12 @@
     }
   ],
   "flagged": [
+    {
+      "recurring_id": 153946,
+      "title": "Shrub Pruning",
+      "property": "kn47 K1",
+      "employee": ""
+    },
     {
       "recurring_id": 187336,
       "title": "Lawn service to allocate vendor bill",
