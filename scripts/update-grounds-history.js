@@ -47,6 +47,18 @@ const GROUNDS_REGISTRY = {
   // series she wants tracked on this report (was Jared Miller & Austin Mulder, both instances
   // canceled; unrelated to the kn47 grounds crew scope).
   153868: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Daily Pool Maintenance', cadence: 'Daily' },
+  // Found live 2026-08-26 via the unregistered-recurring flag (Chad Cariquist, Monthly) --
+  // matches the "extras" Wed slots described in pm-scheduling/CLAUDE.md but wasn't in this
+  // registry yet.
+  153941: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Fast-Growth Trimming', cadence: 'Monthly' },
+  153943: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Flower bed refresh', cadence: 'Monthly' },
+  // Live PM rrule is every 4 months (not a bucket the report tracks) -- closest cadence label.
+  153948: { area: 'Tri-Cities', property: 'KN47 K1', title: 'Tree limb clearance', cadence: 'Quarterly' },
+  // NOTE (2026-08-26): kn47 K1 has a SECOND, likely-duplicate lighting-check recurring, id
+  // 153942 (Hannah Deckard, Monthly, "Lighting checks") alongside the registered 119264
+  // ("Light Check", Hannah Deckard, every-2-months). Same pattern as the h731 duplicate found
+  // 2026-07-16 -- left OUT of the registry until Florencia confirms which is canonical in PM
+  // (don't add both, it would double-count the row).
 
   // ---- Tri-Cities: RL16 (Rey + Hannah) ----
   163426: { area: 'Tri-Cities', property: 'RL16', title: 'General Lawn Maintenance', cadence: 'Weekly' },
@@ -80,6 +92,8 @@ const GROUNDS_REGISTRY = {
   178925: { area: 'Tacoma', property: 'TC68', title: 'Pet waste removal', cadence: 'Weekly' },
   178932: { area: 'Tacoma', property: 'TC68', title: 'Internal Office / Clubhouse Cleaning', cadence: 'Bi-Weekly' },
   178936: { area: 'Tacoma', property: 'TC68', title: 'Litter pickup', cadence: 'Bi-Weekly' },
+  // 179091 confirmed NOT a duplicate (Florencia, 2026-08-26) -- both run on purpose.
+  179091: { area: 'Tacoma', property: 'TC68', title: 'Litter pickup (2)', cadence: 'Weekly' },
   178939: { area: 'Tacoma', property: 'TC68', title: 'Irrigation zone adjustments', cadence: 'Quarterly' },
   178941: { area: 'Tacoma', property: 'TC68', title: 'Bed weeding (manual & chemical)', cadence: 'Monthly' },
   178945: { area: 'Tacoma', property: 'TC68', title: 'Lighting checks', cadence: 'Monthly' },
@@ -88,8 +102,20 @@ const GROUNDS_REGISTRY = {
   178953: { area: 'Tacoma', property: 'TC68', title: 'Irrigation winterization', cadence: 'Annual' },
   178955: { area: 'Tacoma', property: 'TC68', title: 'Tree pruning', cadence: 'Annual' },
   178958: { area: 'Tacoma', property: 'TC68', title: 'Pressure washing', cadence: 'Annual' },
+  166937: { area: 'Tacoma', property: 'TC68', title: 'Bi-Weekly Grounds Inspections', cadence: 'Bi-Weekly' },
+
+  // ---- Tacoma: TC34 (in-house, Jonas -- found live 2026-08-21, added here 2026-08-26) ----
+  186000: { area: 'Tacoma', property: 'TC34', title: 'Lawn service / Landscaping', cadence: 'Weekly' },
 
   // ---- Spokane (David Sanchez + Alexander Overall, shared across the whole portfolio) ----
+  // C702 has THREE "Dumpster Pick Up" recurring melds on record. 186065 was live on the lawn
+  // scheduler's TEMPLATE since 2026-08-11 (Friday) but never added to this registry -- its PM
+  // recurring rule is now gone (404), retired 2026-09-02, kept here only for history. 187342
+  // (created 2026-08-26) and 188298 (created 2026-09-02) are the current pair -- Thursday and
+  // Monday respectively -- split so dumpster pickup happens twice a week instead of once.
+  186065: { area: 'Spokane', property: 'C702', title: 'Dumpster Pick Up', cadence: 'Weekly' },
+  187342: { area: 'Spokane', property: 'C702', title: 'Dumpster Pick Up (Thu)', cadence: 'Weekly' },
+  188298: { area: 'Spokane', property: 'C702', title: 'Dumpster Pick Up (Mon)', cadence: 'Weekly' },
   161264: { area: 'Spokane', property: 'V202', title: 'Lawn service', cadence: 'Weekly' },
   161265: { area: 'Spokane', property: 'S129', title: 'Lawn service', cadence: 'Bi-Weekly' },
   161266: { area: 'Spokane', property: 'S300', title: 'Lawn service', cadence: 'Bi-Weekly' },
@@ -165,6 +191,22 @@ const COULD_NOT_COMPLETE_STATUSES = ['VENDOR_COULD_NOT_COMPLETE', 'MAINTENANCE_C
 // months of history, which in practice is the only way to catch quarterly/annual
 // series that don't currently have an open instance.
 const COMPLETED_LOOKBACK_DAYS = 150;
+
+// Names of the people who actually do grounds/lawn work today, across all 3 areas. Used
+// ONLY to flag a recurring series that isn't in GROUNDS_REGISTRY yet (Florencia, 2026-08-26:
+// "cuando se crean las nuevas work orders, deberiamos verificar que venga de una de esas
+// fuentes") -- NEVER to auto-add it. Employee alone can't rule out something that shouldn't
+// be tracked (e.g. a one-off repair a crew member happens to be assigned), so a flagged
+// series always needs a human to confirm before it's added to the registry above. Update
+// this list whenever the crew changes (see pm-scheduling/CLAUDE.md for the current roster).
+const GROUNDS_CREW_NAMES = ['Chad Cariquist', 'Hannah Deckard', 'David Sanchez', 'Alexander Overall', 'Jonas Hoard', 'Jared Miller'];
+
+// Title keyword gate for the flag below -- crew name ALONE isn't enough, because Jared Miller
+// does both grounds (pool) and plain repairs (carpet cleaning, door/laundry lock batteries,
+// hydrojetting) at the same properties. Confirmed live 2026-08-26: without this, his repair
+// recurring series flooded the flag list (10 of 16 hits were his). Vocabulary drawn from the
+// titles already in GROUNDS_REGISTRY above.
+const GROUNDS_TITLE_RE = /lawn|mow|landscap|litter|dumpster|irrigation|fertiliz|weed|prun|pressure wash|pool|grounds|fast-growth|tree|flower bed|clubhouse|fitness center|spray|curb|rock bed|safety inspection|light/i;
 
 async function fetchAllMelds(sc, csrf, status, cutoffStr, dateField) {
   const out = [];
@@ -251,6 +293,30 @@ async function main() {
   const missing = Object.keys(GROUNDS_REGISTRY).filter(rid => !byRecurId[rid]);
   if (missing.length) console.log(`No live occurrence history for ${missing.length} registered series (likely low-cadence, not currently due): ${missing.join(', ')}`);
 
+  // Flag any recurring series NOT in the registry but currently run by a known grounds crew
+  // member -- surfaces a brand-new series (new property, new task type) the day it starts
+  // showing up live, instead of relying on someone remembering to add it. Never auto-added
+  // to the registry -- shown as a banner on the report (data.flagged) for a human to confirm.
+  const unregisteredIds = [...new Set(all.filter(m => m.recurring_meld && !GROUNDS_REGISTRY[m.recurring_meld]).map(m => m.recurring_meld))];
+  const flagged = [];
+  for (const rid of unregisteredIds) {
+    const tr = await pmGet(`/api/melds/recurring/${rid}/`, sc, csrf);
+    if (tr.status !== 200) continue;
+    const template = JSON.parse(tr.body);
+    if (!template.is_active) continue;
+    const names = (template.maintenance || []).map(a => a.name).filter(Boolean);
+    if (names.some(n => GROUNDS_CREW_NAMES.includes(n)) && GROUNDS_TITLE_RE.test(template.brief_description || '')) {
+      flagged.push({
+        recurring_id: rid,
+        title: template.brief_description || '',
+        property: (template.prop && template.prop.property_name) || null,
+        employee: names.join(' & '),
+      });
+    }
+    await new Promise(res => setTimeout(res, 80));
+  }
+  if (flagged.length) console.log(`⚠ ${flagged.length} recurring series run by known grounds crew are NOT in GROUNDS_REGISTRY yet: ${JSON.stringify(flagged)}`);
+
   // area -> property -> employee -> [ recurring rows ]. Employee is read from each series'
   // live recurring-meld template (current assignment in PM right now), NOT derived from past
   // occurrences -- occurrence-level servicer data is locked once a meld closes (PM: "Closed
@@ -330,6 +396,7 @@ async function main() {
     generated_at: todayStr,
     source: 'Property Meld (recurring melds only, registry reconciled against Florencia\'s manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated',
     areas,
+    flagged,
   };
 
   const outPath = path.join(DATA_DIR, 'grounds.json');

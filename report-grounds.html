@@ -139,6 +139,8 @@ footer a { color: var(--ink-soft); }
     <span class="pill bad">Canceled</span>
   </p>
 
+  <div id="flagged-banner"></div>
+
   <div id="areas-container"><p style="font-size:12.5px; color:var(--ink-soft);">Loading&hellip;</p></div>
 
   </div>
@@ -167,7 +169,12 @@ function pillFor(occ) {
 }
 
 function renderRecurringRow(r) {
-  var occs = r.occurrences || [];
+  // Right-align: the newest real occurrence always sits in the last column, "No work order"
+  // fills the leading gap for a series that doesn't have 4 occurrences of history yet -- a
+  // brand-new series (e.g. one just added) otherwise showed its one real entry in column 1
+  // with 3 "No work order" pills trailing it, reading as 3 missed periods that never happened.
+  var occs = (r.occurrences || []).slice();
+  while (occs.length < 4) occs.unshift(null);
   var cells = [0, 1, 2, 3].map(function(i) {
     var occ = occs[i];
     var inner = pillFor(occ);
@@ -222,10 +229,21 @@ function renderArea(area) {
   return '<h2 class="area-title">' + esc(area.area) + '</h2><div class="table-wrap"><table>' + head + body + '</table></div>';
 }
 
+function renderFlagged(flagged) {
+  var el = document.getElementById('flagged-banner');
+  if (!flagged || !flagged.length) { el.innerHTML = ''; return; }
+  var rows = flagged.map(function(f) {
+    return '<li>[' + f.recurring_id + '] ' + esc(f.property || '?') + ' &mdash; ' + esc(f.title) + ' (' + esc(f.employee) + ')</li>';
+  }).join('');
+  el.innerHTML = '<div class="callout" style="font-size:13px;"><strong>' + flagged.length +
+    ' recurring series run by known grounds crew are not yet in this report</strong> &mdash; add them to GROUNDS_REGISTRY once confirmed:<ul style="margin:6px 0 0 18px;">' + rows + '</ul></div>';
+}
+
 function render(data) {
   document.getElementById('areas-container').innerHTML = data.areas.map(renderArea).join('');
   document.getElementById('updated-label').textContent = 'Data as of ' + data.generated_at;
   document.getElementById('footer-updated-label').textContent = 'Updated ' + data.generated_at;
+  renderFlagged(data.flagged);
 }
 
 var ts = new Date().getTime();
