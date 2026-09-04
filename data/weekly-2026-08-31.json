@@ -3,7 +3,7 @@
   "week_end": "2026-09-06",
   "label": "August 31 – September 6, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-09-03",
+  "generated_at": "2026-09-04",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 51.01,
-      "last_7": 23.75
+      "last_30": 45.49,
+      "last_7": 22.42
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,11 +142,16 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 167,
-      "avg_cost_per_wo": 31.45,
-      "total_labor_cost": 3307.71,
-      "avg_resident_rating": 4.91,
+      "wo_count": 168,
+      "avg_cost_per_wo": 29.43,
+      "total_labor_cost": 3142.06,
+      "avg_resident_rating": 4.64,
       "reviews": [
+        {
+          "ref": "TW7K3H2",
+          "rating": 2,
+          "text": "Still isn’t set correctly. More food burned and wasted! We may just need a new oven. This is absolutely ridiculous!"
+        },
         {
           "ref": "TCM62W9",
           "rating": 5,
@@ -196,19 +201,14 @@
           "ref": "TGJBLJU",
           "rating": 5,
           "text": null
-        },
-        {
-          "ref": "TZRHEMAB",
-          "rating": 5,
-          "text": "I'm glad the technician gave me a call"
         }
       ]
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 122,
-      "avg_cost_per_wo": 97.18,
-      "total_labor_cost": 5477.48,
+      "wo_count": 121,
+      "avg_cost_per_wo": 95.79,
+      "total_labor_cost": 5392.28,
       "avg_resident_rating": 4.17,
       "reviews": [
         {
@@ -275,8 +275,8 @@
     },
     {
       "name": "Jonas Hoard",
-      "wo_count": 63,
-      "avg_cost_per_wo": 134,
+      "wo_count": 61,
+      "avg_cost_per_wo": 138.4,
       "total_labor_cost": 2180.93,
       "avg_resident_rating": 3.75,
       "reviews": [
@@ -324,9 +324,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 61,
-      "avg_cost_per_wo": 78.99,
-      "total_labor_cost": 3701.75,
+      "wo_count": 59,
+      "avg_cost_per_wo": 80.84,
+      "total_labor_cost": 3653,
       "avg_resident_rating": 3.33,
       "reviews": [
         {
@@ -408,11 +408,11 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 345.12
+      "amount": 437.41
     },
     {
       "category": "Supplies and Tools",
-      "amount": 0
+      "amount": 25.07
     },
     {
       "category": "Appliances",
@@ -420,28 +420,28 @@
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 6.53
     },
     {
       "category": "Maintenance",
-      "amount": 796.72
+      "amount": 872.92
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 33761.26,
-    "materials": 14978.27,
+    "labor": 34970.31,
+    "materials": 15079.54,
     "invoices": 8074.42,
-    "total_actual": 56813.95,
-    "variance": 10617.1
+    "total_actual": 58124.27,
+    "variance": 9306.78
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 21269.83,
-    "materials": 2180.92,
+    "labor": 22465.37,
+    "materials": 2187.45,
     "invoices": 2043.25,
-    "total_actual": 25494,
-    "variance": 3733.06
+    "total_actual": 26696.07,
+    "variance": 2530.99
   },
   "cost_by_property": [
     {
@@ -478,11 +478,19 @@
     },
     {
       "property": "C313",
-      "labor": 994.88,
-      "materials": 2004.26,
-      "cost": 2999.14,
+      "labor": 1068.33,
+      "materials": 2036.96,
+      "cost": 3105.29,
       "budget": 2125.46,
-      "pct_over_budget": 41.1
+      "pct_over_budget": 46.1
+    },
+    {
+      "property": "J312",
+      "labor": 279.6,
+      "materials": 518.12,
+      "cost": 797.72,
+      "budget": 589.09,
+      "pct_over_budget": 35.4
     },
     {
       "property": "W226",
@@ -491,6 +499,14 @@
       "cost": 740.15,
       "budget": 547.8,
       "pct_over_budget": 35.1
+    },
+    {
+      "property": "PS25",
+      "labor": 2757.6,
+      "materials": 348.45,
+      "cost": 3106.05,
+      "budget": 2439,
+      "pct_over_budget": 27.3
     },
     {
       "property": "PS17",
@@ -507,14 +523,6 @@
       "cost": 1314.47,
       "budget": 1095,
       "pct_over_budget": 20
-    },
-    {
-      "property": "PS25",
-      "labor": 2147.02,
-      "materials": 348.45,
-      "cost": 2495.47,
-      "budget": 2439,
-      "pct_over_budget": 2.3
     }
   ],
   "narrative": null,
