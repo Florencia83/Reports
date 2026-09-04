@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03",
+  "generated_at": "2026-09-04",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-10",
@@ -14,6 +14,167 @@
         {
           "property": "KN47 K1",
           "employees": [
+            {
+              "employee": "Florencia Sola",
+              "recurring": [
+                {
+                  "recurring_id": 163425,
+                  "title": "General Landscaping Maintenance",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163425/",
+                  "occurrences": [
+                    {
+                      "ref": "T8322AR",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-10"
+                    },
+                    {
+                      "ref": "TFRUIQAB",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-17"
+                    },
+                    {
+                      "ref": "T8WM5AB",
+                      "status": "OVERDUE",
+                      "date": "2026-08-24"
+                    },
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 153787,
+                  "title": "Lawn mowing & edging / exterior landscaping",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153787/",
+                  "occurrences": [
+                    {
+                      "ref": "TLDZUXP",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-11"
+                    },
+                    {
+                      "ref": "TWZKRRBB",
+                      "status": "OVERDUE",
+                      "date": "2026-08-19"
+                    },
+                    {
+                      "ref": "TWKJIAE",
+                      "status": "COMPLETED",
+                      "date": "2026-08-25"
+                    },
+                    {
+                      "ref": "T61WTJU",
+                      "status": "OVERDUE",
+                      "date": "2026-09-01"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153788,
+                  "title": "Spray rock beds / walkways / curb edges",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153788/",
+                  "occurrences": [
+                    {
+                      "ref": "TGUNHQ3",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-12"
+                    },
+                    null,
+                    {
+                      "ref": "T8MV8IV",
+                      "status": "COMPLETED",
+                      "date": "2026-08-26"
+                    },
+                    {
+                      "ref": "TBDRVGQ",
+                      "status": "OVERDUE",
+                      "date": "2026-09-02"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153944,
+                  "title": "Bed weeding (manual & chemical)",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153944/",
+                  "occurrences": [
+                    {
+                      "ref": "TDJYGYL",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-12"
+                    },
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 153941,
+                  "title": "Fast-Growth Trimming",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153941/",
+                  "occurrences": [
+                    null,
+                    {
+                      "ref": "TVKA9XDB",
+                      "status": "OVERDUE",
+                      "date": "2026-08-19"
+                    },
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 153943,
+                  "title": "Flower bed refresh",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153943/",
+                  "occurrences": [
+                    null,
+                    null,
+                    {
+                      "ref": "T3TTV59",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-26"
+                    },
+                    {
+                      "ref": "T91ZN7U",
+                      "status": "OVERDUE",
+                      "date": "2026-09-02"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 153945,
+                  "title": "Irrigation leak inspections",
+                  "cadence": "Monthly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153945/",
+                  "occurrences": [
+                    null,
+                    null,
+                    {
+                      "ref": "TXM87LM",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-27"
+                    },
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 153948,
+                  "title": "Tree limb clearance",
+                  "cadence": "Quarterly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153948/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                }
+              ]
+            },
             {
               "employee": "Hannah Deckard",
               "recurring": [
@@ -80,7 +241,7 @@
                     },
                     {
                       "ref": "T0BYFV0",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-03"
                     }
                   ]
@@ -104,8 +265,8 @@
                     },
                     {
                       "ref": "TAXYK39",
-                      "status": "OVERDUE",
-                      "date": "2026-08-31"
+                      "status": "SCHEDULED",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -132,7 +293,7 @@
                     },
                     {
                       "ref": "TNZMA1DB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-03"
                     }
                   ]
@@ -176,9 +337,9 @@
                       "date": "2026-08-30"
                     },
                     {
-                      "ref": "TYK9XQP",
+                      "ref": "TNQGA3Y",
                       "status": "SCHEDULED",
-                      "date": "2026-09-04"
+                      "date": "2026-09-05"
                     }
                   ]
                 }
@@ -243,7 +404,7 @@
           "property": "PS17",
           "employees": [
             {
-              "employee": "Ellias Angulo",
+              "employee": "Florencia Sola",
               "recurring": [
                 {
                   "recurring_id": 163429,
@@ -258,9 +419,9 @@
                     },
                     null,
                     {
-                      "ref": "T3I67Q2",
-                      "status": "COULD NOT COMPLETE",
-                      "date": "2026-08-27"
+                      "ref": "TYPILVGB",
+                      "status": "OVERDUE",
+                      "date": "2026-08-24"
                     },
                     null
                   ]
@@ -354,7 +515,7 @@
           "property": "PS25",
           "employees": [
             {
-              "employee": "Ellias Angulo",
+              "employee": "Florencia Sola",
               "recurring": [
                 {
                   "recurring_id": 163427,
@@ -373,9 +534,9 @@
                       "date": "2026-08-21"
                     },
                     {
-                      "ref": "T6RDTIV",
-                      "status": "COMPLETED",
-                      "date": "2026-08-28"
+                      "ref": "T8B9Y7LB",
+                      "status": "OVERDUE",
+                      "date": "2026-08-24"
                     },
                     null
                   ]
@@ -440,9 +601,9 @@
                       "date": "2026-08-30"
                     },
                     {
-                      "ref": "TA609P6",
+                      "ref": "TM98AVIB",
                       "status": "SCHEDULED",
-                      "date": "2026-09-04"
+                      "date": "2026-09-05"
                     }
                   ]
                 }
@@ -454,7 +615,7 @@
           "property": "PS91",
           "employees": [
             {
-              "employee": "Ellias Angulo",
+              "employee": "Florencia Sola",
               "recurring": [
                 {
                   "recurring_id": 163430,
@@ -473,9 +634,9 @@
                       "date": "2026-08-21"
                     },
                     {
-                      "ref": "T3JB2A1",
-                      "status": "COMPLETED",
-                      "date": "2026-08-27"
+                      "ref": "TJRPYGIB",
+                      "status": "OVERDUE",
+                      "date": "2026-08-24"
                     },
                     null
                   ]
@@ -516,6 +677,31 @@
         {
           "property": "RL16",
           "employees": [
+            {
+              "employee": "Florencia Sola",
+              "recurring": [
+                {
+                  "recurring_id": 163426,
+                  "title": "General Lawn Maintenance",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163426/",
+                  "occurrences": [
+                    {
+                      "ref": "TQR4RMDB",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-13"
+                    },
+                    null,
+                    {
+                      "ref": "T9DJNFDB",
+                      "status": "OVERDUE",
+                      "date": "2026-08-24"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
             {
               "employee": "Hannah Deckard",
               "recurring": [
@@ -614,10 +800,68 @@
                       "date": "2026-08-30"
                     },
                     {
-                      "ref": "TP7WCYT",
+                      "ref": "TQD7W26",
                       "status": "SCHEDULED",
-                      "date": "2026-09-04"
+                      "date": "2026-09-05"
                     }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": "RL21",
+          "employees": [
+            {
+              "employee": "Florencia Sola",
+              "recurring": [
+                {
+                  "recurring_id": 166100,
+                  "title": "Exterior Landscaping (return lawn service)",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/166100/",
+                  "occurrences": [
+                    {
+                      "ref": "TPB7N8GB",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-13"
+                    },
+                    {
+                      "ref": "TRAWPIF",
+                      "status": "OVERDUE",
+                      "date": "2026-08-20"
+                    },
+                    {
+                      "ref": "TQDKTJIB",
+                      "status": "COMPLETED",
+                      "date": "2026-08-28"
+                    },
+                    {
+                      "ref": "TVFWDLG",
+                      "status": "OVERDUE",
+                      "date": "2026-09-03"
+                    }
+                  ]
+                },
+                {
+                  "recurring_id": 163428,
+                  "title": "Lawn Service",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/163428/",
+                  "occurrences": [
+                    {
+                      "ref": "TNVTJQ1",
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-08-13"
+                    },
+                    null,
+                    {
+                      "ref": "TI36QKB",
+                      "status": "COMPLETED",
+                      "date": "2026-08-28"
+                    },
+                    null
                   ]
                 }
               ]
@@ -1014,7 +1258,7 @@
                     },
                     {
                       "ref": "TJ3MGHAB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-04"
                     }
                   ]
@@ -1538,9 +1782,9 @@
                     },
                     null,
                     {
-                      "ref": "T7W38WQ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-01"
+                      "ref": "TVF0CG0",
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
                     }
                   ]
                 }
@@ -1572,9 +1816,9 @@
                     },
                     null,
                     {
-                      "ref": "TFYY3MMB",
-                      "status": "OVERDUE",
-                      "date": "2026-09-01"
+                      "ref": "TIBLADV",
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -1594,12 +1838,12 @@
                       "status": "COMPLETED",
                       "date": "2026-08-21"
                     },
+                    null,
                     {
-                      "ref": "T3UT8ZBB",
-                      "status": "OVERDUE",
-                      "date": "2026-08-29"
-                    },
-                    null
+                      "ref": "TY6X4TDB",
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
+                    }
                   ]
                 },
                 {
@@ -1620,9 +1864,9 @@
                     },
                     null,
                     {
-                      "ref": "TDJRQ0L",
-                      "status": "OVERDUE",
-                      "date": "2026-09-01"
+                      "ref": "TQAG53KB",
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -1645,8 +1889,8 @@
                     null,
                     {
                       "ref": "T6HUL86",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -1662,12 +1906,12 @@
                       "date": "2026-08-13"
                     },
                     null,
+                    null,
                     {
                       "ref": "T1B4RUW",
-                      "status": "OVERDUE",
-                      "date": "2026-08-27"
-                    },
-                    null
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
+                    }
                   ]
                 },
                 {
@@ -1688,9 +1932,9 @@
                     },
                     null,
                     {
-                      "ref": "TU0ML35",
-                      "status": "OVERDUE",
-                      "date": "2026-09-01"
+                      "ref": "T2IUPHIB",
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -1705,8 +1949,8 @@
                     null,
                     {
                       "ref": "T1250WJ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -1729,8 +1973,8 @@
                     },
                     {
                       "ref": "TUJ2A9D",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
+                      "status": "COULD NOT COMPLETE",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -1745,8 +1989,8 @@
                     null,
                     {
                       "ref": "T2XH2VI",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
+                      "status": "CANCELED",
+                      "date": "2026-09-04"
                     }
                   ]
                 },
@@ -1831,12 +2075,6 @@
       "employee": "Florencia Sola"
     },
     {
-      "recurring_id": 165582,
-      "title": "Quarterly Safety Inspections",
-      "property": "tc68",
-      "employee": "Florencia Sola"
-    },
-    {
       "recurring_id": 135424,
       "title": "B Building - Common area carpet cleaning ",
       "property": "rl16",
@@ -1891,6 +2129,12 @@
       "employee": "Florencia Sola"
     },
     {
+      "recurring_id": 165582,
+      "title": "Quarterly Safety Inspections",
+      "property": "tc68",
+      "employee": "Florencia Sola"
+    },
+    {
       "recurring_id": 114389,
       "title": "laundry lock battery replacement",
       "property": "ps17",
@@ -1913,6 +2157,12 @@
       "title": "Irrigation zone adjustments",
       "property": "kn47 K1",
       "employee": "Florencia Sola"
+    },
+    {
+      "recurring_id": 153955,
+      "title": "Pressure Washing",
+      "property": "kn47 K1",
+      "employee": ""
     }
   ]
 }
