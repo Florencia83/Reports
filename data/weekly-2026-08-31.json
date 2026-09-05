@@ -3,7 +3,7 @@
   "week_end": "2026-09-06",
   "label": "August 31 – September 6, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-09-04",
+  "generated_at": "2026-09-05",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 45.49,
-      "last_7": 22.42
+      "last_30": 45.69,
+      "last_7": 24.83
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 168,
-      "avg_cost_per_wo": 29.43,
-      "total_labor_cost": 3142.06,
+      "wo_count": 171,
+      "avg_cost_per_wo": 29.03,
+      "total_labor_cost": 3163.13,
       "avg_resident_rating": 4.64,
       "reviews": [
         {
@@ -206,11 +206,21 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 121,
-      "avg_cost_per_wo": 95.79,
-      "total_labor_cost": 5392.28,
-      "avg_resident_rating": 4.17,
+      "wo_count": 123,
+      "avg_cost_per_wo": 96.42,
+      "total_labor_cost": 5470.28,
+      "avg_resident_rating": 4.29,
       "reviews": [
+        {
+          "ref": "TQ1HYQW",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TXUZ68DB",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TFF1KV7",
           "rating": 5,
@@ -274,6 +284,55 @@
       ]
     },
     {
+      "name": "Jacob Jett",
+      "wo_count": 62,
+      "avg_cost_per_wo": 83.52,
+      "total_labor_cost": 3975.4,
+      "avg_resident_rating": 3.13,
+      "reviews": [
+        {
+          "ref": "TU4NF4JB",
+          "rating": 4,
+          "text": "It was a missing fuse. Someone had apparently gone into the room and removed it. Quickly fixed."
+        },
+        {
+          "ref": "TCK7FJZ",
+          "rating": 1,
+          "text": "Just got up and doing water coming from the ceiling again"
+        },
+        {
+          "ref": "T6D3TUP",
+          "rating": 1,
+          "text": "Late, time management issue. That needs to be fixed. Even on emergencies things were always not on time. There's some improvement need to taking care of... Time management, especially in emergency situations."
+        },
+        {
+          "ref": "T5XDBQD",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TW5RCZY",
+          "rating": 1,
+          "text": "Always make excuses for small tasks. Not acceptable. Not taking emergencies seriously. Bad communication and always delay on task."
+        },
+        {
+          "ref": "TR3E4FB",
+          "rating": 5,
+          "text": "I would like to recognize Jacob for his communication, reliability and kindness. He was very thorough with explaining why the maintenance issue had occurred and ensuring it was resolved. His professionalism and knowledge was very reassuring and I hope to be able to continue entrusting him with any maintenance related issues."
+        },
+        {
+          "ref": "TTUN518",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TTK4WLE",
+          "rating": 3,
+          "text": null
+        }
+      ]
+    },
+    {
       "name": "Jonas Hoard",
       "wo_count": 61,
       "avg_cost_per_wo": 138.4,
@@ -323,45 +382,6 @@
       ]
     },
     {
-      "name": "Jacob Jett",
-      "wo_count": 59,
-      "avg_cost_per_wo": 80.84,
-      "total_labor_cost": 3653,
-      "avg_resident_rating": 3.33,
-      "reviews": [
-        {
-          "ref": "T6D3TUP",
-          "rating": 1,
-          "text": "Late, time management issue. That needs to be fixed. Even on emergencies things were always not on time. There's some improvement need to taking care of... Time management, especially in emergency situations."
-        },
-        {
-          "ref": "T5XDBQD",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TW5RCZY",
-          "rating": 1,
-          "text": "Always make excuses for small tasks. Not acceptable. Not taking emergencies seriously. Bad communication and always delay on task."
-        },
-        {
-          "ref": "TR3E4FB",
-          "rating": 5,
-          "text": "I would like to recognize Jacob for his communication, reliability and kindness. He was very thorough with explaining why the maintenance issue had occurred and ensuring it was resolved. His professionalism and knowledge was very reassuring and I hope to be able to continue entrusting him with any maintenance related issues."
-        },
-        {
-          "ref": "TTUN518",
-          "rating": 5,
-          "text": null
-        },
-        {
-          "ref": "TTK4WLE",
-          "rating": 3,
-          "text": null
-        }
-      ]
-    },
-    {
       "name": "Isaac Chavez",
       "wo_count": 32,
       "avg_cost_per_wo": 34.02,
@@ -403,12 +423,19 @@
       "property": null,
       "cardholder": "Micheal Magoon",
       "amount": 792.25
+    },
+    {
+      "date": "2026-09-04",
+      "ref": "TQ7F0MP",
+      "property": "TC68",
+      "cardholder": "isaac chavez",
+      "amount": 440.9
     }
   ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 437.41
+      "amount": 537.41
     },
     {
       "category": "Supplies and Tools",
@@ -416,32 +443,32 @@
     },
     {
       "category": "Appliances",
-      "amount": 999.87
+      "amount": 1440.77
     },
     {
       "category": "Grounds",
-      "amount": 6.53
+      "amount": 167.53
     },
     {
       "category": "Maintenance",
-      "amount": 872.92
+      "amount": 1154.94
     }
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 34970.31,
-    "materials": 15079.54,
+    "labor": 36205.23,
+    "materials": 15361.56,
     "invoices": 8074.42,
-    "total_actual": 58124.27,
-    "variance": 9306.78
+    "total_actual": 59641.21,
+    "variance": 7789.84
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
-    "labor": 22465.37,
-    "materials": 2187.45,
+    "labor": 23357.87,
+    "materials": 2348.45,
     "invoices": 2043.25,
-    "total_actual": 26696.07,
-    "variance": 2530.99
+    "total_actual": 27749.57,
+    "variance": 1477.49
   },
   "cost_by_property": [
     {
@@ -454,11 +481,11 @@
     },
     {
       "property": "RL21",
-      "labor": 1040.39,
+      "labor": 1061.46,
       "materials": 1154.78,
-      "cost": 2195.17,
+      "cost": 2216.24,
       "budget": 1119.4,
-      "pct_over_budget": 96.1
+      "pct_over_budget": 98
     },
     {
       "property": "W117",
@@ -477,6 +504,14 @@
       "pct_over_budget": 71.2
     },
     {
+      "property": "PS25",
+      "labor": 3310.42,
+      "materials": 373.49,
+      "cost": 3683.91,
+      "budget": 2439,
+      "pct_over_budget": 51
+    },
+    {
       "property": "C313",
       "labor": 1068.33,
       "materials": 2036.96,
@@ -485,28 +520,20 @@
       "pct_over_budget": 46.1
     },
     {
+      "property": "W226",
+      "labor": 733.6,
+      "materials": 15.92,
+      "cost": 749.52,
+      "budget": 547.8,
+      "pct_over_budget": 36.8
+    },
+    {
       "property": "J312",
       "labor": 279.6,
       "materials": 518.12,
       "cost": 797.72,
       "budget": 589.09,
       "pct_over_budget": 35.4
-    },
-    {
-      "property": "W226",
-      "labor": 733.6,
-      "materials": 6.55,
-      "cost": 740.15,
-      "budget": 547.8,
-      "pct_over_budget": 35.1
-    },
-    {
-      "property": "PS25",
-      "labor": 2757.6,
-      "materials": 348.45,
-      "cost": 3106.05,
-      "budget": 2439,
-      "pct_over_budget": 27.3
     },
     {
       "property": "PS17",
@@ -523,6 +550,14 @@
       "cost": 1314.47,
       "budget": 1095,
       "pct_over_budget": 20
+    },
+    {
+      "property": "TC68",
+      "labor": 2757.63,
+      "materials": 5198.81,
+      "cost": 7956.44,
+      "budget": 7359.6,
+      "pct_over_budget": 8.1
     }
   ],
   "narrative": null,
