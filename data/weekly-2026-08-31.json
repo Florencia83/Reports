@@ -3,16 +3,16 @@
   "week_end": "2026-09-06",
   "label": "August 31 – September 6, 2026",
   "month_label": "August 2026",
-  "generated_at": "2026-09-05",
-  "complete": false,
+  "generated_at": "2026-09-06",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 45.69,
-      "last_7": 24.83
+      "last_30": 44.19,
+      "last_7": 26
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 171,
-      "avg_cost_per_wo": 29.03,
-      "total_labor_cost": 3163.13,
+      "wo_count": 173,
+      "avg_cost_per_wo": 27.94,
+      "total_labor_cost": 3167.59,
       "avg_resident_rating": 4.64,
       "reviews": [
         {
@@ -207,8 +207,8 @@
     {
       "name": "Jaxson Lakins",
       "wo_count": 123,
-      "avg_cost_per_wo": 96.42,
-      "total_labor_cost": 5470.28,
+      "avg_cost_per_wo": 96.79,
+      "total_labor_cost": 5516.48,
       "avg_resident_rating": 4.29,
       "reviews": [
         {
@@ -435,7 +435,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 537.41
+      "amount": 557.92
     },
     {
       "category": "Supplies and Tools",
@@ -456,11 +456,11 @@
   ],
   "monthly_budget": {
     "budget": 67431.05,
-    "labor": 36205.23,
+    "labor": 36376.83,
     "materials": 15361.56,
     "invoices": 8074.42,
-    "total_actual": 59641.21,
-    "variance": 7789.84
+    "total_actual": 59812.81,
+    "variance": 7618.24
   },
   "grounds_monthly_budget": {
     "budget": 29227.06,
@@ -505,11 +505,11 @@
     },
     {
       "property": "PS25",
-      "labor": 3310.42,
+      "labor": 3336.82,
       "materials": 373.49,
-      "cost": 3683.91,
+      "cost": 3710.31,
       "budget": 2439,
-      "pct_over_budget": 51
+      "pct_over_budget": 52.1
     },
     {
       "property": "C313",
