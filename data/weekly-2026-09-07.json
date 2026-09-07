@@ -1,0 +1,307 @@
+{
+  "week_start": "2026-09-07",
+  "week_end": "2026-09-13",
+  "label": "September 7 – 13, 2026",
+  "month_label": "September 2026",
+  "generated_at": "2026-09-07",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": 39,
+      "last_30": 43.19,
+      "last_7": 21.58
+    },
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "q1": 0.8,
+      "q2": 0.4,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "q1": 4.21,
+      "q2": 4.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "q1": 18.7,
+      "q2": 38.9,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "q1": 9.2,
+      "q2": 15.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "q1": 0.3,
+      "q2": 1.31,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "q1": 0.4,
+      "q2": 1.7,
+      "last_30": null,
+      "last_7": null
+    }
+  ],
+  "top_work_orders": [
+    {
+      "ref": "TCK7FJZ",
+      "property": "o155",
+      "brief": "Ecall bathroom leaking again",
+      "labor": 161.2,
+      "materials": 86.19,
+      "cost": 247.39
+    },
+    {
+      "ref": "TLIE66GB",
+      "property": "kn47",
+      "brief": "Garbage Disposal",
+      "labor": 69,
+      "materials": 170.79,
+      "cost": 239.79
+    },
+    {
+      "ref": "T2X3AYF",
+      "property": "r203",
+      "brief": "Water heater needds maintenance",
+      "labor": 0,
+      "materials": 223.25,
+      "cost": 223.25
+    },
+    {
+      "ref": "TH7E8DBB",
+      "property": "kn47",
+      "brief": "Active Flooding Or Leaking",
+      "labor": 77.25,
+      "materials": 136.14,
+      "cost": 213.39
+    },
+    {
+      "ref": "TPZ61VFB",
+      "property": "kn47",
+      "brief": "No Hot Water In House",
+      "labor": 101.4,
+      "materials": 43.5,
+      "cost": 144.9
+    },
+    {
+      "ref": "TA135C5",
+      "property": "p705",
+      "brief": "Ecall washer issue and leaking fridge ",
+      "labor": 78,
+      "materials": 0,
+      "cost": 78
+    },
+    {
+      "ref": "TC6GDW",
+      "property": "c302",
+      "brief": "Tree Branches Over Hanging The Front Landing",
+      "labor": 78,
+      "materials": 0,
+      "cost": 78
+    },
+    {
+      "ref": "TDRVU1LB",
+      "property": "kn47",
+      "brief": "Stove Is Damaged (clone)",
+      "labor": 58.2,
+      "materials": 15.22,
+      "cost": 73.42
+    },
+    {
+      "ref": "T6HHKMR",
+      "property": "c313",
+      "brief": "No hot water ",
+      "labor": 65.65,
+      "materials": 0,
+      "cost": 65.65
+    },
+    {
+      "ref": "TNZBTBQ",
+      "property": "rl16",
+      "brief": "Dishwasher Not Rinsing",
+      "labor": 62.5,
+      "materials": 0,
+      "cost": 62.5
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jared Miller",
+      "wo_count": 27,
+      "avg_cost_per_wo": 17.77,
+      "total_labor_cost": 343.64,
+      "avg_resident_rating": 2,
+      "reviews": [
+        {
+          "ref": "TW7K3H2",
+          "rating": 2,
+          "text": "Still isn’t set correctly. More food burned and wasted! We may just need a new oven. This is absolutely ridiculous!"
+        }
+      ]
+    },
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 15,
+      "avg_cost_per_wo": 56.53,
+      "total_labor_cost": 570,
+      "avg_resident_rating": 5,
+      "reviews": [
+        {
+          "ref": "TQ1HYQW",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TXUZ68DB",
+          "rating": 5,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Jacob Jett",
+      "wo_count": 9,
+      "avg_cost_per_wo": 58.76,
+      "total_labor_cost": 442.65,
+      "avg_resident_rating": 2.5,
+      "reviews": [
+        {
+          "ref": "TU4NF4JB",
+          "rating": 4,
+          "text": "It was a missing fuse. Someone had apparently gone into the room and removed it. Quickly fixed."
+        },
+        {
+          "ref": "TCK7FJZ",
+          "rating": 1,
+          "text": "Just got up and doing water coming from the ceiling again"
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 3,
+      "avg_cost_per_wo": 9,
+      "total_labor_cost": 27,
+      "avg_resident_rating": null,
+      "reviews": []
+    }
+  ],
+  "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 0
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 0
+    },
+    {
+      "category": "Grounds",
+      "amount": 0
+    },
+    {
+      "category": "Maintenance",
+      "amount": 0
+    }
+  ],
+  "monthly_budget": {
+    "budget": 67595.13,
+    "labor": 5499.18,
+    "materials": 932.08,
+    "invoices": 0,
+    "total_actual": 6431.26,
+    "variance": 61163.87
+  },
+  "grounds_monthly_budget": {
+    "budget": 29297.43,
+    "labor": 3822.19,
+    "materials": 167.53,
+    "invoices": 0,
+    "total_actual": 3989.72,
+    "variance": 25307.71
+  },
+  "cost_by_property": [],
+  "narrative": null,
+  "narrative_2": null,
+  "priorities_next_week": null,
+  "grounds_top_purchases_month": "2026-09",
+  "grounds_top_purchases": [
+    {
+      "date": "2026-09-04",
+      "cardholder": "Jared Miller",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "isaac chavez",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "Jared Miller",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "Jared Miller",
+      "property": "R203",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "isaac chavez",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "Jared Miller",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "isaac chavez",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-01",
+      "cardholder": "David Sanchez",
+      "property": "A511",
+      "ref": "T5WEE94",
+      "amount": 6.53
+    }
+  ],
+  "grounds_pest_control": []
+}
