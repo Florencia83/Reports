@@ -1,8 +1,18 @@
 {
-  "source": "Google Sheet 'Copy of P&L Questions', tab 'weekly update' (Repairs section) -- manually maintained/verified by Florencia, NOT the automated weekly-mtd.json pipeline (that feed had known data-quality gaps as of 2026-08-20: stale LeeRoy QBO feed, r203/CapEx/Turn miscategorized Ramp purchases counted as R&M).",
-  "updated_at": "2026-08-25",
-  "period_covered": "August 1-23, 2026",
+  "source": "09/2026 tab (Google Sheet 1DTbOVhgHMc84mgVtFeOnhiVPh__LLCRZZYcBGaFVSmo), 'OVER BUDGET -- REPAIRS' summary table, built from the AppFolio Expense Distribution method (Budget vs month-to-date Subtotal). Supersedes the prior Aug 23 list below (that floor already auto-released 2026-09-01 and had gone stale).",
+  "updated_at": "2026-09-08",
+  "period_covered": "September 1-8, 2026",
   "rule": "Properties listed in over_budget_repairs must not have NEW non-emergency/non-urgent repair melds scheduled before floor_date. This overrides every other scheduler rule (freeze windows, emergency-slot reservation, load balancing, day-blocking, etc.) EXCEPT a manual appointment placed by a human directly in Property Meld -- manual moves always stand as-is, never touched. Emergency and Urgent priority melds are ALWAYS scheduled immediately regardless of this list -- confirmed explicitly by Florencia 2026-08-20, do not defer real emergencies.",
-  "floor_date": "2026-09-01",
-  "over_budget_repairs": ["ps25", "s129", "rl21", "k104", "j312", "p705", "c313", "a511", "ps17", "w226"]
+  "floor_date": "2026-10-01",
+  "over_budget_repairs": ["c302"],
+  "pending_addition": {
+    "property": "w226",
+    "reason": "Florencia asked the same Oct 1 floor for w226 too, but 2 existing non-emergency melds she explicitly wants kept (TLFLP9T garage break-in, TUKMAQK light bulb) are scheduled 2026-09-11 -- adding w226 now would let the scheduler's proactive floor-move sweep them into October against her wishes. Add 'w226' to over_budget_repairs once both melds are completed or past 2026-09-11, whichever comes first.",
+    "melds_to_wait_for": ["TLFLP9T", "TUKMAQK"]
+  },
+  "previous_list_2026-08-25_superseded": {
+    "floor_date": "2026-09-01",
+    "over_budget_repairs": ["ps25", "s129", "rl21", "k104", "j312", "p705", "c313", "a511", "ps17", "w226"],
+    "note": "This floor already passed and auto-released before this update -- kept here for history only, not active."
+  }
 }
