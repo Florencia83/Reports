@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07",
+  "generated_at": "2026-09-08",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-17",
@@ -182,12 +182,12 @@
                       "status": "COMPLETED",
                       "date": "2026-08-28"
                     },
-                    null,
                     {
                       "ref": "TYG1UWJB",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-07"
-                    }
+                      "status": "COMPLETED",
+                      "date": "2026-08-31"
+                    },
+                    null
                   ]
                 },
                 {
@@ -208,7 +208,7 @@
                     },
                     {
                       "ref": "T3DA9NEB",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-04"
                     },
                     {
@@ -236,7 +236,7 @@
                     },
                     {
                       "ref": "T0BYFV0",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-03"
                     },
                     {
@@ -264,14 +264,10 @@
                     },
                     {
                       "ref": "TAXYK39",
-                      "status": "OVERDUE",
-                      "date": "2026-09-04"
+                      "status": "COMPLETED",
+                      "date": "2026-08-31"
                     },
-                    {
-                      "ref": "TWZ64NFB",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-07"
-                    }
+                    null
                   ]
                 },
                 {
@@ -292,7 +288,7 @@
                     },
                     {
                       "ref": "TNZMA1DB",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-03"
                     },
                     {
@@ -453,12 +449,12 @@
                     },
                     {
                       "ref": "TJ3IWCH",
-                      "status": "OVERDUE",
-                      "date": "2026-09-01"
+                      "status": "COMPLETED",
+                      "date": "2026-09-02"
                     },
                     {
                       "ref": "TV2KY6Z",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -481,12 +477,12 @@
                     },
                     {
                       "ref": "TACBL0R",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-01"
                     },
                     {
                       "ref": "TJ41MZH",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -505,8 +501,8 @@
                     null,
                     {
                       "ref": "TJBVD92",
-                      "status": "OVERDUE",
-                      "date": "2026-09-01"
+                      "status": "COMPLETED",
+                      "date": "2026-09-02"
                     },
                     {
                       "ref": "T7XJPBH",
@@ -568,7 +564,7 @@
                     },
                     {
                       "ref": "TXGT14JB",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-01"
                     },
                     {
@@ -606,8 +602,8 @@
                     },
                     {
                       "ref": "TY23AUF",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-07"
+                      "status": "CANCELED",
+                      "date": "2026-09-08"
                     }
                   ]
                 }
@@ -664,12 +660,12 @@
                     },
                     {
                       "ref": "T3IZ7EMB",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-01"
                     },
                     {
                       "ref": "T3DBLB9",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -751,7 +747,7 @@
                     },
                     {
                       "ref": "TUX9GX9",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-02"
                     },
                     {
@@ -779,7 +775,7 @@
                     },
                     {
                       "ref": "TF0V6RFB",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-02"
                     },
                     {
@@ -817,8 +813,8 @@
                     },
                     {
                       "ref": "TZXP9M",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-07"
+                      "status": "CANCELED",
+                      "date": "2026-09-08"
                     }
                   ]
                 }
@@ -867,7 +863,7 @@
                     null,
                     {
                       "ref": "TUP060X",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-07"
                     }
                   ]
@@ -982,7 +978,7 @@
                     },
                     {
                       "ref": "TEHBJ5FB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1020,7 +1016,7 @@
                     },
                     {
                       "ref": "TB7UD56",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1122,7 +1118,7 @@
                     null,
                     {
                       "ref": "TV4FXACB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-07"
                     }
                   ]
@@ -1244,7 +1240,7 @@
                     },
                     {
                       "ref": "T3KFN1JB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1392,7 +1388,7 @@
                     },
                     {
                       "ref": "TNPUHXC",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1468,7 +1464,7 @@
                     },
                     {
                       "ref": "TFQMI21",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1582,8 +1578,8 @@
                     },
                     {
                       "ref": "TMJI2JE",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-07"
+                      "status": "COMPLETED",
+                      "date": "2026-09-08"
                     }
                   ]
                 }
@@ -1620,8 +1616,8 @@
                     },
                     {
                       "ref": "TP59BVAB",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-07"
+                      "status": "COMPLETED",
+                      "date": "2026-09-08"
                     }
                   ]
                 }
@@ -1653,9 +1649,9 @@
                     },
                     null,
                     {
-                      "ref": "TNGAQ1JB",
-                      "status": "CANCELED",
-                      "date": "2026-09-07"
+                      "ref": "TGHL5VU",
+                      "status": "COMPLETED",
+                      "date": "2026-09-08"
                     }
                   ]
                 }
@@ -1692,8 +1688,8 @@
                     },
                     {
                       "ref": "T0W3GX",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-07"
+                      "status": "COMPLETED",
+                      "date": "2026-09-08"
                     }
                   ]
                 }
@@ -1805,7 +1801,11 @@
                       "status": "CANCELED",
                       "date": "2026-09-04"
                     },
-                    null
+                    {
+                      "ref": "TZ6NK5IB",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-08"
+                    }
                   ]
                 }
               ]
@@ -1835,7 +1835,11 @@
                       "status": "CANCELED",
                       "date": "2026-09-04"
                     },
-                    null
+                    {
+                      "ref": "TDPQPPZ",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-08"
+                    }
                   ]
                 },
                 {
@@ -1875,7 +1879,11 @@
                       "status": "CANCELED",
                       "date": "2026-09-04"
                     },
-                    null
+                    {
+                      "ref": "TCTZRXV",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-08"
+                    }
                   ]
                 },
                 {
@@ -1911,7 +1919,11 @@
                       "status": "CANCELED",
                       "date": "2026-09-04"
                     },
-                    null
+                    {
+                      "ref": "T1N7EYF",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-08"
+                    }
                   ]
                 },
                 {
@@ -1931,7 +1943,11 @@
                       "status": "CANCELED",
                       "date": "2026-09-04"
                     },
-                    null
+                    {
+                      "ref": "TLBFGHF",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-08"
+                    }
                   ]
                 },
                 {
