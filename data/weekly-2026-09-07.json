@@ -3,7 +3,7 @@
   "week_end": "2026-09-13",
   "label": "September 7 – 13, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-07",
+  "generated_at": "2026-09-08",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.19,
-      "last_7": 21.58
+      "last_30": 43.26,
+      "last_7": 21.87
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 27,
-      "avg_cost_per_wo": 17.77,
-      "total_labor_cost": 343.64,
+      "wo_count": 29,
+      "avg_cost_per_wo": 19.58,
+      "total_labor_cost": 431.68,
       "avg_resident_rating": 2,
       "reviews": [
         {
@@ -156,9 +156,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 15,
-      "avg_cost_per_wo": 56.53,
-      "total_labor_cost": 570,
+      "wo_count": 19,
+      "avg_cost_per_wo": 49.72,
+      "total_labor_cost": 666.6,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -175,9 +175,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 9,
-      "avg_cost_per_wo": 58.76,
-      "total_labor_cost": 442.65,
+      "wo_count": 10,
+      "avg_cost_per_wo": 57.89,
+      "total_labor_cost": 492.7,
       "avg_resident_rating": 2.5,
       "reviews": [
         {
@@ -201,7 +201,15 @@
       "reviews": []
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-09-07",
+      "ref": null,
+      "property": null,
+      "cardholder": "Margarito Saldana",
+      "amount": 1267.2
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
@@ -221,24 +229,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 0
+      "amount": 46.85
     }
   ],
   "monthly_budget": {
     "budget": 67595.13,
-    "labor": 5499.18,
-    "materials": 932.08,
+    "labor": 6238.87,
+    "materials": 978.93,
     "invoices": 0,
-    "total_actual": 6431.26,
-    "variance": 61163.87
+    "total_actual": 7217.8,
+    "variance": 60377.33
   },
   "grounds_monthly_budget": {
     "budget": 29297.43,
     "labor": 3822.19,
-    "materials": 167.53,
+    "materials": 184.83,
     "invoices": 0,
-    "total_actual": 3989.72,
-    "variance": 25307.71
+    "total_actual": 4007.02,
+    "variance": 25290.41
   },
   "cost_by_property": [],
   "narrative": null,
@@ -294,6 +302,13 @@
       "property": "PS25",
       "ref": "TMKLRYKB",
       "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "David Sanchez",
+      "property": "K104",
+      "ref": "TJ3MGHAB",
+      "amount": 17.3
     },
     {
       "date": "2026-09-01",
