@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08",
+  "generated_at": "2026-09-09",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-17",
@@ -15,7 +15,7 @@
           "property": "KN47 K1",
           "employees": [
             {
-              "employee": "Florencia Sola",
+              "employee": "David Perez",
               "recurring": [
                 {
                   "recurring_id": 163425,
@@ -53,11 +53,7 @@
                       "status": "COMPLETED",
                       "date": "2026-08-25"
                     },
-                    {
-                      "ref": "THA8HWGB",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
-                    },
+                    null,
                     {
                       "ref": "T61WTJU",
                       "status": "CANCELED",
@@ -77,12 +73,12 @@
                       "status": "COMPLETED",
                       "date": "2026-08-26"
                     },
+                    null,
                     {
                       "ref": "TBDRVGQ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-02"
-                    },
-                    null
+                      "status": "SCHEDULED",
+                      "date": "2026-09-09"
+                    }
                   ]
                 },
                 {
@@ -94,7 +90,11 @@
                     null,
                     null,
                     null,
-                    null
+                    {
+                      "ref": "T6G5AWDB",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-09"
+                    }
                   ]
                 },
                 {
@@ -146,7 +146,11 @@
                       "date": "2026-08-27"
                     },
                     null,
-                    null
+                    {
+                      "ref": "TFY3RX7",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-09"
+                    }
                   ]
                 },
                 {
@@ -404,7 +408,7 @@
           "property": "PS17",
           "employees": [
             {
-              "employee": "Florencia Sola",
+              "employee": "David Perez",
               "recurring": [
                 {
                   "recurring_id": 163429,
@@ -420,9 +424,9 @@
                     },
                     null,
                     {
-                      "ref": "TYPILVGB",
-                      "status": "CANCELED",
-                      "date": "2026-09-07"
+                      "ref": "TGTII51",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-11"
                     }
                   ]
                 }
@@ -506,7 +510,7 @@
                     },
                     {
                       "ref": "T7XJPBH",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-08"
                     }
                   ]
@@ -519,7 +523,7 @@
           "property": "PS25",
           "employees": [
             {
-              "employee": "Florencia Sola",
+              "employee": "David Perez",
               "recurring": [
                 {
                   "recurring_id": 163427,
@@ -535,9 +539,9 @@
                     },
                     null,
                     {
-                      "ref": "T8B9Y7LB",
-                      "status": "CANCELED",
-                      "date": "2026-09-07"
+                      "ref": "T3CK9B8",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-11"
                     }
                   ]
                 }
@@ -569,7 +573,7 @@
                     },
                     {
                       "ref": "T5JHFJT",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -615,7 +619,7 @@
           "property": "PS91",
           "employees": [
             {
-              "employee": "Florencia Sola",
+              "employee": "David Perez",
               "recurring": [
                 {
                   "recurring_id": 163430,
@@ -631,9 +635,9 @@
                     },
                     null,
                     {
-                      "ref": "TLNZ4CAB",
-                      "status": "CANCELED",
-                      "date": "2026-09-07"
+                      "ref": "TTA7Y03",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-11"
                     }
                   ]
                 }
@@ -678,7 +682,7 @@
           "property": "RL16",
           "employees": [
             {
-              "employee": "Florencia Sola",
+              "employee": "David Perez",
               "recurring": [
                 {
                   "recurring_id": 163426,
@@ -694,9 +698,9 @@
                     },
                     null,
                     {
-                      "ref": "T9DJNFDB",
-                      "status": "CANCELED",
-                      "date": "2026-09-07"
+                      "ref": "T7E94LAB",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-10"
                     }
                   ]
                 }
@@ -752,7 +756,7 @@
                     },
                     {
                       "ref": "TAYCUZ3",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-09"
                     }
                   ]
@@ -780,7 +784,7 @@
                     },
                     {
                       "ref": "T2ZKYJHB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-09"
                     }
                   ]
@@ -826,7 +830,7 @@
           "property": "RL21",
           "employees": [
             {
-              "employee": "Florencia Sola",
+              "employee": "David Perez",
               "recurring": [
                 {
                   "recurring_id": 166100,
@@ -862,9 +866,9 @@
                     },
                     null,
                     {
-                      "ref": "TUP060X",
-                      "status": "OVERDUE",
-                      "date": "2026-09-07"
+                      "ref": "TJMMQPB",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-10"
                     }
                   ]
                 }
@@ -940,7 +944,7 @@
                     },
                     {
                       "ref": "TGDUCAW",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1172,7 +1176,7 @@
                     },
                     {
                       "ref": "TPF4LYQ",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-09"
                     }
                   ]
@@ -1202,7 +1206,7 @@
                     null,
                     {
                       "ref": "T93M4EL",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-09"
                     }
                   ]
@@ -1350,7 +1354,7 @@
                     },
                     {
                       "ref": "T44EK8F",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1426,7 +1430,7 @@
                     },
                     {
                       "ref": "TQ9LH0JB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1540,8 +1544,8 @@
                     },
                     {
                       "ref": "TAJM1HU",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-10"
+                      "status": "COMPLETED",
+                      "date": "2026-09-09"
                     }
                   ]
                 }
@@ -1726,7 +1730,7 @@
                     },
                     {
                       "ref": "THU015J",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-09"
                     }
                   ]
@@ -1764,7 +1768,7 @@
                     },
                     {
                       "ref": "TA7MUF8",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-09"
                     }
                   ]
@@ -1803,7 +1807,7 @@
                     },
                     {
                       "ref": "TZ6NK5IB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1837,7 +1841,7 @@
                     },
                     {
                       "ref": "TDPQPPZ",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1881,7 +1885,7 @@
                     },
                     {
                       "ref": "TCTZRXV",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1921,7 +1925,7 @@
                     },
                     {
                       "ref": "T1N7EYF",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -1945,7 +1949,7 @@
                     },
                     {
                       "ref": "TLBFGHF",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-08"
                     }
                   ]
@@ -2169,6 +2173,12 @@
       "title": "Irrigation zone adjustments",
       "property": "kn47 K1",
       "employee": "Florencia Sola"
+    },
+    {
+      "recurring_id": 153955,
+      "title": "Pressure Washing",
+      "property": "kn47 K1",
+      "employee": ""
     }
   ]
 }
