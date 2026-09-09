@@ -3,7 +3,7 @@
   "week_end": "2026-09-13",
   "label": "September 7 – 13, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-08",
+  "generated_at": "2026-09-09",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.26,
-      "last_7": 21.87
+      "last_30": 41.14,
+      "last_7": 36.82
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,6 +59,14 @@
   ],
   "top_work_orders": [
     {
+      "ref": "TMKLRYKB",
+      "property": "ps25",
+      "brief": "Fire hazard code (clone)",
+      "labor": 1143.6,
+      "materials": 209.04,
+      "cost": 1352.64
+    },
+    {
       "ref": "TCK7FJZ",
       "property": "o155",
       "brief": "Ecall bathroom leaking again",
@@ -99,6 +107,14 @@
       "cost": 144.9
     },
     {
+      "ref": "T6HJ2XKB",
+      "property": "kn47",
+      "brief": "Needs Gym and pool keys",
+      "labor": 87.08,
+      "materials": 10.86,
+      "cost": 97.94
+    },
+    {
       "ref": "TA135C5",
       "property": "p705",
       "brief": "Ecall washer issue and leaking fridge ",
@@ -121,30 +137,14 @@
       "labor": 58.2,
       "materials": 15.22,
       "cost": 73.42
-    },
-    {
-      "ref": "T6HHKMR",
-      "property": "c313",
-      "brief": "No hot water ",
-      "labor": 65.65,
-      "materials": 0,
-      "cost": 65.65
-    },
-    {
-      "ref": "TNZBTBQ",
-      "property": "rl16",
-      "brief": "Dishwasher Not Rinsing",
-      "labor": 62.5,
-      "materials": 0,
-      "cost": 62.5
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 29,
-      "avg_cost_per_wo": 19.58,
-      "total_labor_cost": 431.68,
+      "wo_count": 34,
+      "avg_cost_per_wo": 23.54,
+      "total_labor_cost": 626.2,
       "avg_resident_rating": 2,
       "reviews": [
         {
@@ -156,9 +156,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 19,
-      "avg_cost_per_wo": 49.72,
-      "total_labor_cost": 666.6,
+      "wo_count": 27,
+      "avg_cost_per_wo": 41.3,
+      "total_labor_cost": 837,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -194,9 +194,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 3,
-      "avg_cost_per_wo": 9,
-      "total_labor_cost": 27,
+      "wo_count": 6,
+      "avg_cost_per_wo": 239.84,
+      "total_labor_cost": 1230,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -208,12 +208,40 @@
       "property": null,
       "cardholder": "Margarito Saldana",
       "amount": 1267.2
+    },
+    {
+      "date": "2026-09-08",
+      "ref": "TWXN4EEB",
+      "property": "KN47",
+      "cardholder": "isaac chavez",
+      "amount": 979.2
+    },
+    {
+      "date": "2026-09-09",
+      "ref": null,
+      "property": null,
+      "cardholder": "Margarito Saldana",
+      "amount": 613.33
+    },
+    {
+      "date": "2026-09-08",
+      "ref": "TRYRJ9JB",
+      "property": "RL16",
+      "cardholder": "isaac chavez",
+      "amount": 379.71
+    },
+    {
+      "date": "2026-09-08",
+      "ref": "TFE0K3Q",
+      "property": "RL16",
+      "cardholder": "isaac chavez",
+      "amount": 379.71
     }
   ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 0
+      "amount": 29.66
     },
     {
       "category": "Supplies and Tools",
@@ -221,7 +249,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 1738.62
     },
     {
       "category": "Grounds",
@@ -229,24 +257,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 46.85
+      "amount": 84.89
     }
   ],
   "monthly_budget": {
-    "budget": 67595.13,
-    "labor": 6238.87,
-    "materials": 978.93,
+    "budget": 82636.13,
+    "labor": 7613.03,
+    "materials": 1016.97,
     "invoices": 0,
-    "total_actual": 7217.8,
-    "variance": 60377.33
+    "total_actual": 8630,
+    "variance": 74006.13
   },
   "grounds_monthly_budget": {
-    "budget": 29297.43,
-    "labor": 3822.19,
-    "materials": 184.83,
+    "budget": 37396.43,
+    "labor": 4718.9,
+    "materials": 207.83,
     "invoices": 0,
-    "total_actual": 4007.02,
-    "variance": 25290.41
+    "total_actual": 4926.73,
+    "variance": 32469.7
   },
   "cost_by_property": [],
   "narrative": null,
@@ -257,6 +285,13 @@
     {
       "date": "2026-09-04",
       "cardholder": "Jared Miller",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "isaac chavez",
       "property": "PS25",
       "ref": "TMKLRYKB",
       "amount": 23
