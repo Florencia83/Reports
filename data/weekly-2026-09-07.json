@@ -3,7 +3,7 @@
   "week_end": "2026-09-13",
   "label": "September 7 – 13, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-09",
+  "generated_at": "2026-09-10",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 41.14,
-      "last_7": 36.82
+      "last_30": 42.67,
+      "last_7": 28.41
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -67,6 +67,22 @@
       "cost": 1352.64
     },
     {
+      "ref": "TPZGMHHB",
+      "property": "kn47",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 42.45,
+      "materials": 999.87,
+      "cost": 1042.32
+    },
+    {
+      "ref": "TNKXW7N",
+      "property": "kn47",
+      "brief": "Power Wash Outside Area",
+      "labor": 168,
+      "materials": 154.46,
+      "cost": 322.46
+    },
+    {
       "ref": "TCK7FJZ",
       "property": "o155",
       "brief": "Ecall bathroom leaking again",
@@ -99,51 +115,35 @@
       "cost": 213.39
     },
     {
+      "ref": "TLXBXINB",
+      "property": "c702",
+      "brief": "Ecall half power ",
+      "labor": 0,
+      "materials": 177.97,
+      "cost": 177.97
+    },
+    {
+      "ref": "T9JR2FX",
+      "property": "m405",
+      "brief": "Lock And Keys",
+      "labor": 131.3,
+      "materials": 42.52,
+      "cost": 173.82
+    },
+    {
       "ref": "TPZ61VFB",
       "property": "kn47",
       "brief": "No Hot Water In House",
       "labor": 101.4,
       "materials": 43.5,
       "cost": 144.9
-    },
-    {
-      "ref": "T6HJ2XKB",
-      "property": "kn47",
-      "brief": "Needs Gym and pool keys",
-      "labor": 87.08,
-      "materials": 10.86,
-      "cost": 97.94
-    },
-    {
-      "ref": "TA135C5",
-      "property": "p705",
-      "brief": "Ecall washer issue and leaking fridge ",
-      "labor": 78,
-      "materials": 0,
-      "cost": 78
-    },
-    {
-      "ref": "TC6GDW",
-      "property": "c302",
-      "brief": "Tree Branches Over Hanging The Front Landing",
-      "labor": 78,
-      "materials": 0,
-      "cost": 78
-    },
-    {
-      "ref": "TDRVU1LB",
-      "property": "kn47",
-      "brief": "Stove Is Damaged (clone)",
-      "labor": 58.2,
-      "materials": 15.22,
-      "cost": 73.42
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 34,
-      "avg_cost_per_wo": 23.54,
+      "wo_count": 37,
+      "avg_cost_per_wo": 21.63,
       "total_labor_cost": 626.2,
       "avg_resident_rating": 2,
       "reviews": [
@@ -156,9 +156,9 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 27,
-      "avg_cost_per_wo": 41.3,
-      "total_labor_cost": 837,
+      "wo_count": 32,
+      "avg_cost_per_wo": 81.41,
+      "total_labor_cost": 1172.85,
       "avg_resident_rating": 5,
       "reviews": [
         {
@@ -175,9 +175,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 10,
-      "avg_cost_per_wo": 57.89,
-      "total_labor_cost": 492.7,
+      "wo_count": 17,
+      "avg_cost_per_wo": 52.46,
+      "total_labor_cost": 763.1,
       "avg_resident_rating": 2.5,
       "reviews": [
         {
@@ -220,8 +220,22 @@
       "date": "2026-09-09",
       "ref": null,
       "property": null,
+      "cardholder": "isaac chavez",
+      "amount": 855.27
+    },
+    {
+      "date": "2026-09-09",
+      "ref": null,
+      "property": null,
       "cardholder": "Margarito Saldana",
       "amount": 613.33
+    },
+    {
+      "date": "2026-09-09",
+      "ref": "TCJI66FB",
+      "property": "TC68",
+      "cardholder": "isaac chavez",
+      "amount": 434.2
     },
     {
       "date": "2026-09-08",
@@ -241,7 +255,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 29.66
+      "amount": 379.66
     },
     {
       "category": "Supplies and Tools",
@@ -253,28 +267,28 @@
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 36.25
     },
     {
       "category": "Maintenance",
-      "amount": 84.89
+      "amount": 302.45
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 7613.03,
-    "materials": 1016.97,
+    "labor": 8631.65,
+    "materials": 1806.3,
     "invoices": 0,
-    "total_actual": 8630,
-    "variance": 74006.13
+    "total_actual": 10437.95,
+    "variance": 72198.18
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 4718.9,
-    "materials": 207.83,
+    "labor": 6016,
+    "materials": 244.08,
     "invoices": 0,
-    "total_actual": 4926.73,
-    "variance": 32469.7
+    "total_actual": 6260.08,
+    "variance": 31136.35
   },
   "cost_by_property": [],
   "narrative": null,
@@ -282,6 +296,13 @@
   "priorities_next_week": null,
   "grounds_top_purchases_month": "2026-09",
   "grounds_top_purchases": [
+    {
+      "date": "2026-09-09",
+      "cardholder": "David Sanchez",
+      "property": "H731",
+      "ref": "T93M4EL",
+      "amount": 36.25
+    },
     {
       "date": "2026-09-04",
       "cardholder": "Jared Miller",
@@ -344,13 +365,6 @@
       "property": "K104",
       "ref": "TJ3MGHAB",
       "amount": 17.3
-    },
-    {
-      "date": "2026-09-01",
-      "cardholder": "David Sanchez",
-      "property": "A511",
-      "ref": "T5WEE94",
-      "amount": 6.53
     }
   ],
   "grounds_pest_control": []
