@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09",
+  "generated_at": "2026-09-10",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-17",
@@ -76,7 +76,7 @@
                     null,
                     {
                       "ref": "TBDRVGQ",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-09"
                     }
                   ]
@@ -92,7 +92,7 @@
                     null,
                     {
                       "ref": "T6G5AWDB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-09"
                     }
                   ]
@@ -148,7 +148,7 @@
                     null,
                     {
                       "ref": "TFY3RX7",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-09"
                     }
                   ]
@@ -728,7 +728,7 @@
                     null,
                     {
                       "ref": "TIGN75Q",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-09"
                     }
                   ]
@@ -1058,7 +1058,7 @@
                     },
                     {
                       "ref": "T727FHP",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-09"
                     }
                   ]
@@ -1096,7 +1096,7 @@
                     },
                     {
                       "ref": "TWI0I7K",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-10"
                     }
                   ]
@@ -1354,8 +1354,8 @@
                     },
                     {
                       "ref": "T44EK8F",
-                      "status": "OVERDUE",
-                      "date": "2026-09-08"
+                      "status": "COMPLETED",
+                      "date": "2026-09-10"
                     }
                   ]
                 }
@@ -1430,8 +1430,8 @@
                     },
                     {
                       "ref": "TQ9LH0JB",
-                      "status": "OVERDUE",
-                      "date": "2026-09-08"
+                      "status": "COMPLETED",
+                      "date": "2026-09-10"
                     }
                   ]
                 }
@@ -1506,7 +1506,7 @@
                     },
                     {
                       "ref": "TPK48ACB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-10"
                     }
                   ]
