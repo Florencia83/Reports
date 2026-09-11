@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10",
+  "generated_at": "2026-09-11",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-17",
@@ -191,7 +191,11 @@
                       "status": "COMPLETED",
                       "date": "2026-08-31"
                     },
-                    null
+                    {
+                      "ref": "T91CF18",
+                      "status": "COMPLETED",
+                      "date": "2026-09-11"
+                    }
                   ]
                 },
                 {
@@ -217,7 +221,7 @@
                     },
                     {
                       "ref": "TNEVFMW",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-11"
                     }
                   ]
@@ -245,7 +249,7 @@
                     },
                     {
                       "ref": "TUKJI5J",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-10"
                     }
                   ]
@@ -297,7 +301,7 @@
                     },
                     {
                       "ref": "TQ17EKN",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-10"
                     }
                   ]
@@ -699,7 +703,7 @@
                     null,
                     {
                       "ref": "T7E94LAB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-10"
                     }
                   ]
@@ -867,7 +871,7 @@
                     null,
                     {
                       "ref": "TJMMQPB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-10"
                     }
                   ]
@@ -1138,7 +1142,7 @@
                     null,
                     {
                       "ref": "TEQY0E3",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-10"
                     }
                   ]
@@ -1278,7 +1282,7 @@
                     },
                     {
                       "ref": "T1WC67E",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-11"
                     }
                   ]
@@ -2173,12 +2177,6 @@
       "title": "Irrigation zone adjustments",
       "property": "kn47 K1",
       "employee": "Florencia Sola"
-    },
-    {
-      "recurring_id": 153955,
-      "title": "Pressure Washing",
-      "property": "kn47 K1",
-      "employee": ""
     }
   ]
 }
