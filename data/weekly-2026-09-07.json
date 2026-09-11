@@ -3,7 +3,7 @@
   "week_end": "2026-09-13",
   "label": "September 7 – 13, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-10",
+  "generated_at": "2026-09-11",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 42.67,
-      "last_7": 28.41
+      "last_30": 42.6,
+      "last_7": 39.21
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -67,12 +67,44 @@
       "cost": 1352.64
     },
     {
+      "ref": "TWXN4EEB",
+      "property": "kn47",
+      "brief": "The Air Conditioner Isn't Cooling",
+      "labor": 113.4,
+      "materials": 979.2,
+      "cost": 1092.6
+    },
+    {
       "ref": "TPZGMHHB",
       "property": "kn47",
       "brief": "Air Conditioner Is Not Cooling",
       "labor": 42.45,
       "materials": 999.87,
       "cost": 1042.32
+    },
+    {
+      "ref": "TLXBXINB",
+      "property": "r203",
+      "brief": "Ecall half power ",
+      "labor": 0,
+      "materials": 788.28,
+      "cost": 788.28
+    },
+    {
+      "ref": "TRYRJ9JB",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Turning On",
+      "labor": 73.72,
+      "materials": 379.71,
+      "cost": 453.43
+    },
+    {
+      "ref": "TFE0K3Q",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 55.8,
+      "materials": 379.71,
+      "cost": 435.51
     },
     {
       "ref": "TNKXW7N",
@@ -99,52 +131,20 @@
       "cost": 239.79
     },
     {
-      "ref": "T2X3AYF",
-      "property": "r203",
-      "brief": "Water heater needds maintenance",
-      "labor": 0,
-      "materials": 223.25,
-      "cost": 223.25
-    },
-    {
-      "ref": "TH7E8DBB",
+      "ref": "TK0DJDGB",
       "property": "kn47",
-      "brief": "Active Flooding Or Leaking",
-      "labor": 77.25,
-      "materials": 136.14,
-      "cost": 213.39
-    },
-    {
-      "ref": "TLXBXINB",
-      "property": "c702",
-      "brief": "Ecall half power ",
-      "labor": 0,
-      "materials": 177.97,
-      "cost": 177.97
-    },
-    {
-      "ref": "T9JR2FX",
-      "property": "m405",
-      "brief": "Lock And Keys",
-      "labor": 131.3,
-      "materials": 42.52,
-      "cost": 173.82
-    },
-    {
-      "ref": "TPZ61VFB",
-      "property": "kn47",
-      "brief": "No Hot Water In House",
-      "labor": 101.4,
-      "materials": 43.5,
-      "cost": 144.9
+      "brief": "Weird smell after mold treatment and freezer has small leak ",
+      "labor": 193.8,
+      "materials": 33.71,
+      "cost": 227.51
     }
   ],
   "by_technician": [
     {
       "name": "Jared Miller",
-      "wo_count": 37,
-      "avg_cost_per_wo": 21.63,
-      "total_labor_cost": 626.2,
+      "wo_count": 39,
+      "avg_cost_per_wo": 21.58,
+      "total_labor_cost": 667.63,
       "avg_resident_rating": 2,
       "reviews": [
         {
@@ -156,11 +156,16 @@
     },
     {
       "name": "Jaxson Lakins",
-      "wo_count": 32,
-      "avg_cost_per_wo": 81.41,
-      "total_labor_cost": 1172.85,
+      "wo_count": 39,
+      "avg_cost_per_wo": 125.64,
+      "total_labor_cost": 1684.57,
       "avg_resident_rating": 5,
       "reviews": [
+        {
+          "ref": "TK0DJDGB",
+          "rating": 5,
+          "text": "Jaxson done a very good job"
+        },
         {
           "ref": "TQ1HYQW",
           "rating": 5,
@@ -175,11 +180,16 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 17,
-      "avg_cost_per_wo": 52.46,
+      "wo_count": 18,
+      "avg_cost_per_wo": 49.55,
       "total_labor_cost": 763.1,
-      "avg_resident_rating": 2.5,
+      "avg_resident_rating": 2.67,
       "reviews": [
+        {
+          "ref": "TYQBNM1",
+          "rating": 3,
+          "text": "Still no hot water. I used the bathroom tap last night and it never warmed up but normally that one takes a while so I didn't think about it. When I did the dishes this morning the sink tap did not warm up at all and that one gets quite hot fast. It also had been shooting out water right when I turn it on since yesterday afternoon and I did not notice it warming up yesterday either. I tried to take a shower and after running it for almost 10 minutes the water was still very cold."
+        },
         {
           "ref": "TU4NF4JB",
           "rating": 4,
@@ -194,9 +204,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 6,
-      "avg_cost_per_wo": 239.84,
-      "total_labor_cost": 1230,
+      "wo_count": 8,
+      "avg_cost_per_wo": 190.79,
+      "total_labor_cost": 1256.33,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -271,24 +281,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 302.45
+      "amount": 355.81
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 8631.65,
-    "materials": 1806.3,
+    "labor": 9678.14,
+    "materials": 1859.66,
     "invoices": 0,
-    "total_actual": 10437.95,
-    "variance": 72198.18
+    "total_actual": 11537.8,
+    "variance": 71098.33
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 6016,
+    "labor": 6631.68,
     "materials": 244.08,
     "invoices": 0,
-    "total_actual": 6260.08,
-    "variance": 31136.35
+    "total_actual": 6875.76,
+    "variance": 30520.67
   },
   "cost_by_property": [],
   "narrative": null,
