@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11",
+  "generated_at": "2026-09-12",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-17",
@@ -429,7 +429,7 @@
                     null,
                     {
                       "ref": "TGTII51",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-11"
                     }
                   ]
@@ -544,7 +544,7 @@
                     null,
                     {
                       "ref": "T3CK9B8",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-11"
                     }
                   ]
@@ -640,7 +640,7 @@
                     null,
                     {
                       "ref": "TTA7Y03",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-11"
                     }
                   ]
@@ -1320,7 +1320,7 @@
                     },
                     {
                       "ref": "TYEQLLY",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-11"
                     }
                   ]
@@ -1867,7 +1867,11 @@
                       "status": "OVERDUE",
                       "date": "2026-09-05"
                     },
-                    null
+                    {
+                      "ref": "TWXWVME",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-12"
+                    }
                   ]
                 },
                 {
