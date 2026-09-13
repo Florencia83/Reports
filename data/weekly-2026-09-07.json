@@ -3,16 +3,16 @@
   "week_end": "2026-09-13",
   "label": "September 7 – 13, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-12",
-  "complete": false,
+  "generated_at": "2026-09-13",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.38,
-      "last_7": 36.91
+      "last_30": 42.96,
+      "last_7": 37.39
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -301,11 +301,11 @@
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 10928.22,
+    "labor": 10989.12,
     "materials": 2001.13,
     "invoices": 0,
-    "total_actual": 12929.35,
-    "variance": 69706.78
+    "total_actual": 12990.25,
+    "variance": 69645.88
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,

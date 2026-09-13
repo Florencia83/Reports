@@ -3,8 +3,8 @@
   "week_end": "2026-09-13",
   "label": "September 7 – 13, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-12",
-  "complete": false,
+  "generated_at": "2026-09-13",
+  "complete": true,
   "source": "Property Meld + QBT (labor) + Ramp (materials) + QBO vendor bills (via LeeRoy's feed, pending Florencia's own QBO access) for Last Week/MTD actual across Repairs, Grounds, AND Turns; AppFolio for the fixed Monthly Budget numbers — automated.",
   "issues": {
     "flagged": null,
@@ -1914,10 +1914,10 @@
   "flagged": {
     "PORTFOLIO": {
       "repairs": {
-        "last_week": 6492.78,
-        "mtd": 12929.35,
+        "last_week": 6553.68,
+        "mtd": 12990.25,
         "budget": 82636.13,
-        "pct_of_budget": 15.6
+        "pct_of_budget": 15.7
       },
       "grounds": {
         "last_week": 3751.35,
@@ -1932,8 +1932,8 @@
         "pct_of_budget": 7.7
       },
       "total": {
-        "last_week": 10244.13,
-        "mtd": 20710.72,
+        "last_week": 10305.03,
+        "mtd": 20771.62,
         "budget": 120032.56,
         "pct_of_budget": 17.3
       }
