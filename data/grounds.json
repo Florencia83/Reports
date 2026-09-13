@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12",
+  "generated_at": "2026-09-13",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-17",
@@ -1869,7 +1869,7 @@
                     },
                     {
                       "ref": "TWXWVME",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-12"
                     }
                   ]
