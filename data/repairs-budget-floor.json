@@ -1,15 +1,11 @@
 {
   "source": "09/2026 tab (Google Sheet 1DTbOVhgHMc84mgVtFeOnhiVPh__LLCRZZYcBGaFVSmo), 'OVER BUDGET -- REPAIRS' summary table, built from the AppFolio Expense Distribution method (Budget vs month-to-date Subtotal). Supersedes the prior Aug 23 list below (that floor already auto-released 2026-09-01 and had gone stale).",
-  "updated_at": "2026-09-08",
-  "period_covered": "September 1-8, 2026",
+  "updated_at": "2026-09-14",
+  "period_covered": "September 1-14, 2026",
   "rule": "Properties listed in over_budget_repairs must not have NEW non-emergency/non-urgent repair melds scheduled before floor_date. This overrides every other scheduler rule (freeze windows, emergency-slot reservation, load balancing, day-blocking, etc.) EXCEPT a manual appointment placed by a human directly in Property Meld -- manual moves always stand as-is, never touched. Emergency and Urgent priority melds are ALWAYS scheduled immediately regardless of this list -- confirmed explicitly by Florencia 2026-08-20, do not defer real emergencies.",
   "floor_date": "2026-10-01",
-  "over_budget_repairs": ["c302"],
-  "pending_addition": {
-    "property": "w226",
-    "reason": "Florencia asked the same Oct 1 floor for w226 too, but 2 existing non-emergency melds she explicitly wants kept (TLFLP9T garage break-in, TUKMAQK light bulb) are scheduled 2026-09-11 -- adding w226 now would let the scheduler's proactive floor-move sweep them into October against her wishes. Add 'w226' to over_budget_repairs once both melds are completed or past 2026-09-11, whichever comes first.",
-    "melds_to_wait_for": ["TLFLP9T", "TUKMAQK"]
-  },
+  "over_budget_repairs": ["c302", "w226"],
+  "note_2026-09-14": "w226 added now that 2026-09-11 has passed (the 2 previously-held-back melds TLFLP9T and TUKMAQK's target date). Florencia confirmed the currently-kept exception melds on both c302 and w226 (the ones already deliberately left on their original dates -- fire extinguisher/garage break-in/light bulb on w226; the 2 Emergency-priority melds + Ceiling Fan on c302) should stay untouched as-is; this floor only governs NEW melds created from here forward.",
   "previous_list_2026-08-25_superseded": {
     "floor_date": "2026-09-01",
     "over_budget_repairs": ["ps25", "s129", "rl21", "k104", "j312", "p705", "c313", "a511", "ps17", "w226"],
