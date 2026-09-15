@@ -3,7 +3,7 @@
   "week_end": "2026-09-20",
   "label": "September 14 – 20, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-14",
+  "generated_at": "2026-09-15",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.07,
-      "last_7": 37.49
+      "last_30": 44.08,
+      "last_7": 29.06
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -70,17 +70,17 @@
       "ref": "TWXN4EEB",
       "property": "kn47",
       "brief": "The Air Conditioner Isn't Cooling",
-      "labor": 113.4,
+      "labor": 79.2,
       "materials": 979.2,
-      "cost": 1092.6
+      "cost": 1058.4
     },
     {
       "ref": "TPZGMHHB",
       "property": "kn47",
       "brief": "Air Conditioner Is Not Cooling",
-      "labor": 42.45,
+      "labor": 9.45,
       "materials": 999.87,
-      "cost": 1042.32
+      "cost": 1009.32
     },
     {
       "ref": "TLXBXINB",
@@ -91,28 +91,28 @@
       "cost": 788.28
     },
     {
-      "ref": "TRYRJ9JB",
-      "property": "rl16",
-      "brief": "Air Conditioner Is Not Turning On",
-      "labor": 108.53,
-      "materials": 379.71,
-      "cost": 488.23
-    },
-    {
       "ref": "TQ7F0MP",
       "property": "tc68",
       "brief": "Refrigerator Needs To Be Replaced",
       "labor": 0,
-      "materials": 440.9,
-      "cost": 440.9
+      "materials": 534.83,
+      "cost": 534.83
+    },
+    {
+      "ref": "TRYRJ9JB",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Turning On",
+      "labor": 73.72,
+      "materials": 379.71,
+      "cost": 453.43
     },
     {
       "ref": "TFE0K3Q",
       "property": "rl16",
       "brief": "Air Conditioner Is Not Cooling",
-      "labor": 55.8,
+      "labor": 29.4,
       "materials": 379.71,
-      "cost": 435.51
+      "cost": 409.11
     },
     {
       "ref": "TNKXW7N",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 47,
-      "avg_cost_per_wo": 113.79,
-      "total_labor_cost": 2124.68,
+      "wo_count": 51,
+      "avg_cost_per_wo": 109.12,
+      "total_labor_cost": 2153.48,
       "avg_resident_rating": 4.6,
       "reviews": [
         {
@@ -176,9 +176,9 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 46,
-      "avg_cost_per_wo": 26.96,
-      "total_labor_cost": 998.39,
+      "wo_count": 49,
+      "avg_cost_per_wo": 30.95,
+      "total_labor_cost": 1255.41,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -261,24 +261,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 0
+      "amount": 240.2
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 11003.87,
-    "materials": 1976.09,
+    "labor": 11838.7,
+    "materials": 2216.29,
     "invoices": 0,
-    "total_actual": 12979.96,
-    "variance": 69656.17
+    "total_actual": 14054.99,
+    "variance": 68581.14
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 7515.34,
+    "labor": 8299.15,
     "materials": 330.12,
     "invoices": 0,
-    "total_actual": 7845.46,
-    "variance": 29550.97
+    "total_actual": 8629.27,
+    "variance": 28767.16
   },
   "cost_by_property": [],
   "narrative": null,
@@ -286,6 +286,13 @@
   "priorities_next_week": null,
   "grounds_top_purchases_month": "2026-09",
   "grounds_top_purchases": [
+    {
+      "date": "2026-09-11",
+      "cardholder": "Armani Mitchell",
+      "property": "TC68",
+      "ref": "TQ7F0MP",
+      "amount": 64.01
+    },
     {
       "date": "2026-09-11",
       "cardholder": "David Sanchez",
@@ -345,13 +352,6 @@
     {
       "date": "2026-09-04",
       "cardholder": "isaac chavez",
-      "property": "PS25",
-      "ref": "TMKLRYKB",
-      "amount": 23
-    },
-    {
-      "date": "2026-09-04",
-      "cardholder": "Jared Miller",
       "property": "PS25",
       "ref": "TMKLRYKB",
       "amount": 23
