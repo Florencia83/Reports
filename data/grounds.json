@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14",
+  "generated_at": "2026-09-15",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-24",
@@ -36,7 +36,7 @@
                     },
                     {
                       "ref": "TFLHAYAB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-14"
                     }
                   ]
@@ -269,8 +269,8 @@
                     null,
                     {
                       "ref": "THIV9W",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-14"
+                      "status": "COMPLETED",
+                      "date": "2026-09-15"
                     }
                   ]
                 },
@@ -292,7 +292,7 @@
                     },
                     {
                       "ref": "TQ17EKN",
-                      "status": "OVERDUE",
+                      "status": "COMPLETED",
                       "date": "2026-09-10"
                     },
                     {
@@ -458,7 +458,7 @@
                     },
                     {
                       "ref": "TKLL3C3",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -486,7 +486,7 @@
                     },
                     {
                       "ref": "T9G0WM6",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -577,7 +577,7 @@
                     },
                     {
                       "ref": "T8KEBTMB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -673,7 +673,7 @@
                     },
                     {
                       "ref": "T1ACWNDB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -914,7 +914,7 @@
                     null,
                     {
                       "ref": "THI4L9MB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-14"
                     }
                   ]
@@ -952,7 +952,7 @@
                     },
                     {
                       "ref": "TKHX2UFB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -990,7 +990,7 @@
                     },
                     {
                       "ref": "TW3AY6MB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -1028,7 +1028,7 @@
                     },
                     {
                       "ref": "TH31387",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -1135,7 +1135,7 @@
                     {
                       "ref": "T9JFUZ2",
                       "status": "SCHEDULED",
-                      "date": "2026-09-14"
+                      "date": "2026-09-15"
                     }
                   ]
                 },
@@ -1260,7 +1260,7 @@
                     },
                     {
                       "ref": "TC20WK6",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -1374,7 +1374,7 @@
                     },
                     {
                       "ref": "T3AYWVFB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -1412,7 +1412,7 @@
                     },
                     {
                       "ref": "THLM26T",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -1450,7 +1450,7 @@
                     },
                     {
                       "ref": "T165XCB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -1488,7 +1488,7 @@
                     },
                     {
                       "ref": "T1PQFWY",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-15"
                     }
                   ]
@@ -1602,7 +1602,7 @@
                     },
                     {
                       "ref": "TKC0LQV",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-14"
                     }
                   ]
@@ -1640,8 +1640,8 @@
                     },
                     {
                       "ref": "T01579MB",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-14"
+                      "status": "COMPLETED",
+                      "date": "2026-09-15"
                     }
                   ]
                 }
@@ -1674,8 +1674,8 @@
                     },
                     {
                       "ref": "T554RTMB",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-14"
+                      "status": "COMPLETED",
+                      "date": "2026-09-15"
                     }
                   ]
                 }
@@ -1825,7 +1825,11 @@
                       "status": "OVERDUE",
                       "date": "2026-09-08"
                     },
-                    null
+                    {
+                      "ref": "TR8P70Y",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-15"
+                    }
                   ]
                 }
               ]
@@ -1855,7 +1859,11 @@
                       "status": "OVERDUE",
                       "date": "2026-09-08"
                     },
-                    null
+                    {
+                      "ref": "TJ051DIB",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-15"
+                    }
                   ]
                 },
                 {
@@ -1895,7 +1903,11 @@
                       "status": "OVERDUE",
                       "date": "2026-09-08"
                     },
-                    null
+                    {
+                      "ref": "TLQ8AWC",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-15"
+                    }
                   ]
                 },
                 {
@@ -1951,7 +1963,11 @@
                       "status": "OVERDUE",
                       "date": "2026-09-08"
                     },
-                    null
+                    {
+                      "ref": "T8XTJ3R",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-15"
+                    }
                   ]
                 },
                 {
@@ -2093,12 +2109,6 @@
       "employee": "Florencia Sola"
     },
     {
-      "recurring_id": 135424,
-      "title": "B Building - Common area carpet cleaning ",
-      "property": "rl16",
-      "employee": "Jared Miller"
-    },
-    {
       "recurring_id": 135422,
       "title": "D building - Common area carpet cleaning ",
       "property": "rl16",
@@ -2123,12 +2133,6 @@
       "employee": "Jared Miller"
     },
     {
-      "recurring_id": 114385,
-      "title": "Door lock battery inspection/ Building B",
-      "property": "rl16",
-      "employee": "Jared Miller"
-    },
-    {
       "recurring_id": 114384,
       "title": "Door lock battery inspection/ Building A",
       "property": "rl16",
@@ -2147,6 +2151,12 @@
       "employee": "Florencia Sola"
     },
     {
+      "recurring_id": 135424,
+      "title": "B Building - Common area carpet cleaning ",
+      "property": "rl16",
+      "employee": "Jared Miller"
+    },
+    {
       "recurring_id": 114389,
       "title": "laundry lock battery replacement",
       "property": "ps17",
@@ -2156,6 +2166,12 @@
       "recurring_id": 114388,
       "title": "laundry lock battery replacement",
       "property": "ps25",
+      "employee": "Jared Miller"
+    },
+    {
+      "recurring_id": 114385,
+      "title": "Door lock battery inspection/ Building B",
+      "property": "rl16",
       "employee": "Jared Miller"
     },
     {
