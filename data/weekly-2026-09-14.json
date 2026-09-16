@@ -3,7 +3,7 @@
   "week_end": "2026-09-20",
   "label": "September 14 – 20, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-15",
+  "generated_at": "2026-09-16",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 44.08,
-      "last_7": 29.06
+      "last_30": 43.03,
+      "last_7": 24.07
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,14 +59,6 @@
   ],
   "top_work_orders": [
     {
-      "ref": "TMKLRYKB",
-      "property": "ps25",
-      "brief": "Fire hazard code (clone)",
-      "labor": 1143.6,
-      "materials": 209.04,
-      "cost": 1352.64
-    },
-    {
       "ref": "TWXN4EEB",
       "property": "kn47",
       "brief": "The Air Conditioner Isn't Cooling",
@@ -91,12 +83,36 @@
       "cost": 788.28
     },
     {
+      "ref": "TMKLRYKB",
+      "property": "ps25",
+      "brief": "Fire hazard code (clone)",
+      "labor": 340.42,
+      "materials": 209.04,
+      "cost": 549.46
+    },
+    {
+      "ref": "TMD8403",
+      "property": "c702",
+      "brief": "The Washing Machine Isn't Completing A Cycle",
+      "labor": 0,
+      "materials": 544.41,
+      "cost": 544.41
+    },
+    {
       "ref": "TQ7F0MP",
       "property": "tc68",
       "brief": "Refrigerator Needs To Be Replaced",
       "labor": 0,
       "materials": 534.83,
       "cost": 534.83
+    },
+    {
+      "ref": "TAM369GB",
+      "property": "kn47",
+      "brief": "I Need My Dishwasher Replaced. Not Cleaning.",
+      "labor": 37.2,
+      "materials": 474.35,
+      "cost": 511.55
     },
     {
       "ref": "TRYRJ9JB",
@@ -121,31 +137,15 @@
       "labor": 168,
       "materials": 154.46,
       "cost": 322.46
-    },
-    {
-      "ref": "TCK7FJZ",
-      "property": "o155",
-      "brief": "Ecall bathroom leaking again",
-      "labor": 161.2,
-      "materials": 86.19,
-      "cost": 247.39
-    },
-    {
-      "ref": "TLIE66GB",
-      "property": "kn47",
-      "brief": "Garbage Disposal",
-      "labor": 69,
-      "materials": 170.79,
-      "cost": 239.79
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 51,
-      "avg_cost_per_wo": 109.12,
-      "total_labor_cost": 2153.48,
-      "avg_resident_rating": 4.6,
+      "wo_count": 54,
+      "avg_cost_per_wo": 115.33,
+      "total_labor_cost": 2298.07,
+      "avg_resident_rating": 4.67,
       "reviews": [
         {
           "ref": "T2D00VFB",
@@ -171,14 +171,19 @@
           "ref": "TXUZ68DB",
           "rating": 5,
           "text": null
+        },
+        {
+          "ref": "TPZGMHHB",
+          "rating": 5,
+          "text": "Thank you so much for taking care of my AC"
         }
       ]
     },
     {
       "name": "Jared Miller",
-      "wo_count": 49,
-      "avg_cost_per_wo": 30.95,
-      "total_labor_cost": 1255.41,
+      "wo_count": 50,
+      "avg_cost_per_wo": 28.41,
+      "total_labor_cost": 1159.41,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -201,8 +206,8 @@
     {
       "name": "Jacob Jett",
       "wo_count": 25,
-      "avg_cost_per_wo": 44.77,
-      "total_labor_cost": 990.6,
+      "avg_cost_per_wo": 38.74,
+      "total_labor_cost": 839.8,
       "avg_resident_rating": 3.6,
       "reviews": [
         {
@@ -234,18 +239,26 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 11,
-      "avg_cost_per_wo": 146.05,
-      "total_labor_cost": 1326.53,
+      "wo_count": 9,
+      "avg_cost_per_wo": 82.66,
+      "total_labor_cost": 463.95,
       "avg_resident_rating": null,
       "reviews": []
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-09-15",
+      "ref": "TAM369GB",
+      "property": "KN47",
+      "cardholder": "Jaxson Lakins",
+      "amount": 441.72
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 0
+      "amount": 63.52
     },
     {
       "category": "Supplies and Tools",
@@ -253,34 +266,43 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 441.72
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 55.86
     },
     {
       "category": "Maintenance",
-      "amount": 240.2
+      "amount": 348.96
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 11838.7,
-    "materials": 2216.29,
+    "labor": 11958.05,
+    "materials": 2360.47,
     "invoices": 0,
-    "total_actual": 14054.99,
-    "variance": 68581.14
+    "total_actual": 14318.52,
+    "variance": 68317.61
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 8299.15,
-    "materials": 330.12,
+    "labor": 9392.98,
+    "materials": 385.98,
     "invoices": 0,
-    "total_actual": 8629.27,
-    "variance": 28767.16
+    "total_actual": 9778.96,
+    "variance": 27617.47
   },
-  "cost_by_property": [],
+  "cost_by_property": [
+    {
+      "property": "W226",
+      "labor": 606.45,
+      "materials": 9.37,
+      "cost": 615.82,
+      "budget": 548.9,
+      "pct_over_budget": 12.2
+    }
+  ],
   "narrative": null,
   "narrative_2": null,
   "priorities_next_week": null,
@@ -299,6 +321,13 @@
       "property": "W225",
       "ref": "TC1XCMHB",
       "amount": 61
+    },
+    {
+      "date": "2026-09-14",
+      "cardholder": "David Sanchez",
+      "property": "W225",
+      "ref": "TC1XCMHB",
+      "amount": 41.37
     },
     {
       "date": "2026-09-09",
@@ -346,13 +375,6 @@
       "date": "2026-09-04",
       "cardholder": "Jared Miller",
       "property": "R203",
-      "ref": "TMKLRYKB",
-      "amount": 23
-    },
-    {
-      "date": "2026-09-04",
-      "cardholder": "isaac chavez",
-      "property": "PS25",
       "ref": "TMKLRYKB",
       "amount": 23
     }
