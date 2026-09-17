@@ -3,7 +3,7 @@
   "week_end": "2026-09-20",
   "label": "September 14 – 20, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-16",
+  "generated_at": "2026-09-17",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 43.03,
-      "last_7": 24.07
+      "last_30": 42.49,
+      "last_7": 39.17
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -65,6 +65,14 @@
       "labor": 79.2,
       "materials": 979.2,
       "cost": 1058.4
+    },
+    {
+      "ref": "TD8X00H",
+      "property": "kn47",
+      "brief": "Fridge starting to go out ",
+      "labor": 58.8,
+      "materials": 977.32,
+      "cost": 1036.12
     },
     {
       "ref": "TPZGMHHB",
@@ -129,24 +137,31 @@
       "labor": 29.4,
       "materials": 379.71,
       "cost": 409.11
-    },
-    {
-      "ref": "TNKXW7N",
-      "property": "kn47",
-      "brief": "Power Wash Outside Area",
-      "labor": 168,
-      "materials": 154.46,
-      "cost": 322.46
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 54,
-      "avg_cost_per_wo": 115.33,
-      "total_labor_cost": 2298.07,
-      "avg_resident_rating": 4.67,
+      "wo_count": 59,
+      "avg_cost_per_wo": 125.68,
+      "total_labor_cost": 2508.07,
+      "avg_resident_rating": 4.78,
       "reviews": [
+        {
+          "ref": "TU193HL",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T9HCAZD",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TD8X00H",
+          "rating": 5,
+          "text": "If I could I would give him a 10 jaxson"
+        },
         {
           "ref": "T2D00VFB",
           "rating": 5,
@@ -181,9 +196,9 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 50,
-      "avg_cost_per_wo": 28.41,
-      "total_labor_cost": 1159.41,
+      "wo_count": 53,
+      "avg_cost_per_wo": 31.35,
+      "total_labor_cost": 1400.39,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -205,9 +220,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 25,
-      "avg_cost_per_wo": 38.74,
-      "total_labor_cost": 839.8,
+      "wo_count": 24,
+      "avg_cost_per_wo": 40.11,
+      "total_labor_cost": 833.95,
       "avg_resident_rating": 3.6,
       "reviews": [
         {
@@ -239,14 +254,21 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 9,
-      "avg_cost_per_wo": 82.66,
+      "wo_count": 8,
+      "avg_cost_per_wo": 92.99,
       "total_labor_cost": 463.95,
       "avg_resident_rating": null,
       "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
+    {
+      "date": "2026-09-16",
+      "ref": "TD8X00H",
+      "property": "KN47",
+      "cardholder": "Jaxson Lakins",
+      "amount": 977.32
+    },
     {
       "date": "2026-09-15",
       "ref": "TAM369GB",
@@ -266,7 +288,7 @@
     },
     {
       "category": "Appliances",
-      "amount": 441.72
+      "amount": 1419.04
     },
     {
       "category": "Grounds",
@@ -274,33 +296,33 @@
     },
     {
       "category": "Maintenance",
-      "amount": 348.96
+      "amount": 367.43
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 11958.05,
-    "materials": 2360.47,
+    "labor": 13139.01,
+    "materials": 2378.94,
     "invoices": 0,
-    "total_actual": 14318.52,
-    "variance": 68317.61
+    "total_actual": 15517.95,
+    "variance": 67118.18
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 9392.98,
+    "labor": 10222.52,
     "materials": 385.98,
     "invoices": 0,
-    "total_actual": 9778.96,
-    "variance": 27617.47
+    "total_actual": 10608.5,
+    "variance": 26787.93
   },
   "cost_by_property": [
     {
       "property": "W226",
-      "labor": 606.45,
+      "labor": 677.3,
       "materials": 9.37,
-      "cost": 615.82,
+      "cost": 686.67,
       "budget": 548.9,
-      "pct_over_budget": 12.2
+      "pct_over_budget": 25.1
     }
   ],
   "narrative": null,
