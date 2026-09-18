@@ -3,7 +3,7 @@
   "week_end": "2026-09-20",
   "label": "September 14 – 20, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 42.49,
-      "last_7": 39.17
+      "last_30": 41,
+      "last_7": 41.32
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -142,9 +142,9 @@
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 59,
-      "avg_cost_per_wo": 125.68,
-      "total_labor_cost": 2508.07,
+      "wo_count": 67,
+      "avg_cost_per_wo": 116.67,
+      "total_labor_cost": 2793.07,
       "avg_resident_rating": 4.78,
       "reviews": [
         {
@@ -196,9 +196,9 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 53,
-      "avg_cost_per_wo": 31.35,
-      "total_labor_cost": 1400.39,
+      "wo_count": 54,
+      "avg_cost_per_wo": 31.24,
+      "total_labor_cost": 1425.67,
       "avg_resident_rating": 4,
       "reviews": [
         {
@@ -221,8 +221,8 @@
     {
       "name": "Jacob Jett",
       "wo_count": 24,
-      "avg_cost_per_wo": 40.11,
-      "total_labor_cost": 833.95,
+      "avg_cost_per_wo": 39.4,
+      "total_labor_cost": 801.45,
       "avg_resident_rating": 3.6,
       "reviews": [
         {
@@ -280,7 +280,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 63.52
+      "amount": 317.29
     },
     {
       "category": "Supplies and Tools",
@@ -292,28 +292,28 @@
     },
     {
       "category": "Grounds",
-      "amount": 55.86
+      "amount": 116.23
     },
     {
       "category": "Maintenance",
-      "amount": 367.43
+      "amount": 571.91
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 13139.01,
-    "materials": 2378.94,
+    "labor": 14220.58,
+    "materials": 2583.42,
     "invoices": 0,
-    "total_actual": 15517.95,
-    "variance": 67118.18
+    "total_actual": 16804,
+    "variance": 65832.13
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 10222.52,
-    "materials": 385.98,
+    "labor": 11034.3,
+    "materials": 446.35,
     "invoices": 0,
-    "total_actual": 10608.5,
-    "variance": 26787.93
+    "total_actual": 11480.65,
+    "variance": 25915.78
   },
   "cost_by_property": [
     {
@@ -323,6 +323,14 @@
       "cost": 686.67,
       "budget": 548.9,
       "pct_over_budget": 25.1
+    },
+    {
+      "property": "P705",
+      "labor": 335.4,
+      "materials": 1001.1,
+      "cost": 1336.5,
+      "budget": 1127.9,
+      "pct_over_budget": 18.5
     }
   ],
   "narrative": null,
@@ -343,6 +351,13 @@
       "property": "W225",
       "ref": "TC1XCMHB",
       "amount": 61
+    },
+    {
+      "date": "2026-09-17",
+      "cardholder": "Hannah Deckard",
+      "property": "KN47",
+      "ref": "TRCTDL2",
+      "amount": 41.84
     },
     {
       "date": "2026-09-14",
@@ -390,13 +405,6 @@
       "date": "2026-09-04",
       "cardholder": "Jared Miller",
       "property": "PS25",
-      "ref": "TMKLRYKB",
-      "amount": 23
-    },
-    {
-      "date": "2026-09-04",
-      "cardholder": "Jared Miller",
-      "property": "R203",
       "ref": "TMKLRYKB",
       "amount": 23
     }
