@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-24",
@@ -225,7 +225,7 @@
                     },
                     {
                       "ref": "TR0RN3E",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-18"
                     }
                   ]
@@ -253,8 +253,8 @@
                     },
                     {
                       "ref": "T5Y69DL",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-17"
+                      "status": "COMPLETED",
+                      "date": "2026-09-18"
                     }
                   ]
                 },
@@ -433,7 +433,7 @@
                     },
                     {
                       "ref": "T824I6DB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-18"
                     }
                   ]
@@ -648,7 +648,7 @@
                     },
                     {
                       "ref": "TW0U7XF",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-18"
                     }
                   ]
@@ -715,8 +715,8 @@
                     },
                     {
                       "ref": "T7IRQ0HB",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-17"
+                      "status": "COMPLETED",
+                      "date": "2026-09-18"
                     }
                   ]
                 }
@@ -859,7 +859,7 @@
                     },
                     {
                       "ref": "T82358P",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-17"
                     }
                   ]
@@ -883,7 +883,7 @@
                     },
                     {
                       "ref": "TUP060X",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-17"
                     }
                   ]
@@ -1112,7 +1112,7 @@
                     },
                     {
                       "ref": "TDC0DKD",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-17"
                     }
                   ]
@@ -1162,7 +1162,7 @@
                     },
                     {
                       "ref": "TCHCU5AB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-17"
                     }
                   ]
@@ -2004,11 +2004,7 @@
                   "cadence": "Monthly",
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178945/",
                   "occurrences": [
-                    {
-                      "ref": "T74C6MP",
-                      "status": "OVERDUE",
-                      "date": "2026-08-28"
-                    },
+                    null,
                     {
                       "ref": "TUJ2A9D",
                       "status": "COULD NOT COMPLETE",
