@@ -3,16 +3,16 @@
   "week_end": "2026-09-20",
   "label": "September 14 – 20, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-19",
-  "complete": false,
+  "generated_at": "2026-09-20",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 44.5,
-      "last_7": 37.45
+      "last_30": 45.31,
+      "last_7": 37.79
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -145,8 +145,18 @@
       "wo_count": 64,
       "avg_cost_per_wo": 120.37,
       "total_labor_cost": 2705.47,
-      "avg_resident_rating": 4.78,
+      "avg_resident_rating": 4.73,
       "reviews": [
+        {
+          "ref": "TTVD82Z",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TFL3IGK",
+          "rating": 5,
+          "text": "Thanks a lot it looks fresh paint looks great"
+        },
         {
           "ref": "TU193HL",
           "rating": 5,
@@ -280,7 +290,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 531.31
+      "amount": 539.55
     },
     {
       "category": "Supplies and Tools",
@@ -301,11 +311,11 @@
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 14927.71,
+    "labor": 14981.46,
     "materials": 2654.31,
     "invoices": 0,
-    "total_actual": 17582.02,
-    "variance": 65054.11
+    "total_actual": 17635.77,
+    "variance": 65000.36
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
