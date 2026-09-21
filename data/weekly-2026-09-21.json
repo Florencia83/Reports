@@ -1,0 +1,413 @@
+{
+  "week_start": "2026-09-21",
+  "week_end": "2026-09-27",
+  "label": "September 21 – 27, 2026",
+  "month_label": "September 2026",
+  "generated_at": "2026-09-21",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": 39,
+      "last_30": 44.27,
+      "last_7": 37.41
+    },
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "q1": 0.8,
+      "q2": 0.4,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "q1": 4.21,
+      "q2": 4.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "q1": 18.7,
+      "q2": 38.9,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "q1": 9.2,
+      "q2": 15.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "q1": 0.3,
+      "q2": 1.31,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "q1": 0.4,
+      "q2": 1.7,
+      "last_30": null,
+      "last_7": null
+    }
+  ],
+  "top_work_orders": [
+    {
+      "ref": "TWXN4EEB",
+      "property": "kn47",
+      "brief": "The Air Conditioner Isn't Cooling",
+      "labor": 79.2,
+      "materials": 979.2,
+      "cost": 1058.4
+    },
+    {
+      "ref": "TT85X6K",
+      "property": "tc68",
+      "brief": "The Freezer In The Kitchen Is Not Cold Enough",
+      "labor": 65.47,
+      "materials": 992.84,
+      "cost": 1058.31
+    },
+    {
+      "ref": "TD8X00H",
+      "property": "kn47",
+      "brief": "Fridge starting to go out ",
+      "labor": 58.8,
+      "materials": 977.32,
+      "cost": 1036.12
+    },
+    {
+      "ref": "TPZGMHHB",
+      "property": "kn47",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 9.45,
+      "materials": 999.87,
+      "cost": 1009.32
+    },
+    {
+      "ref": "TLXBXINB",
+      "property": "r203",
+      "brief": "Ecall half power ",
+      "labor": 0,
+      "materials": 788.28,
+      "cost": 788.28
+    },
+    {
+      "ref": "TMKLRYKB",
+      "property": "ps25",
+      "brief": "Fire hazard code (clone)",
+      "labor": 340.42,
+      "materials": 209.04,
+      "cost": 549.46
+    },
+    {
+      "ref": "TMD8403",
+      "property": "c702",
+      "brief": "The Washing Machine Isn't Completing A Cycle",
+      "labor": 0,
+      "materials": 544.41,
+      "cost": 544.41
+    },
+    {
+      "ref": "TQ7F0MP",
+      "property": "tc68",
+      "brief": "Refrigerator Needs To Be Replaced",
+      "labor": 0,
+      "materials": 534.83,
+      "cost": 534.83
+    },
+    {
+      "ref": "TAM369GB",
+      "property": "kn47",
+      "brief": "I Need My Dishwasher Replaced. Not Cleaning.",
+      "labor": 37.2,
+      "materials": 474.35,
+      "cost": 511.55
+    },
+    {
+      "ref": "TRYRJ9JB",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Turning On",
+      "labor": 73.72,
+      "materials": 379.71,
+      "cost": 453.43
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 64,
+      "avg_cost_per_wo": 120.37,
+      "total_labor_cost": 2705.47,
+      "avg_resident_rating": 4.58,
+      "reviews": [
+        {
+          "ref": "TTVD82Z",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TFL3IGK",
+          "rating": 5,
+          "text": "Thanks a lot it looks fresh paint looks great"
+        },
+        {
+          "ref": "TU193HL",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "T9HCAZD",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TD8X00H",
+          "rating": 5,
+          "text": "If I could I would give him a 10 jaxson"
+        },
+        {
+          "ref": "T2D00VFB",
+          "rating": 5,
+          "text": "The fellow who fixed the sink was right on time, nice, fixed the sink quickly, and left thank you so much."
+        },
+        {
+          "ref": "TJ8AXWY",
+          "rating": 3,
+          "text": "It took several days of contact and complaining before anyone showed up. When a real plumber finally came the problem was taken care of."
+        },
+        {
+          "ref": "TK0DJDGB",
+          "rating": 5,
+          "text": "Jaxson done a very good job"
+        },
+        {
+          "ref": "TZFMND3",
+          "rating": 3,
+          "text": "My freezer is now making a weird loud noise every now and then"
+        },
+        {
+          "ref": "TQ1HYQW",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TXUZ68DB",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TPZGMHHB",
+          "rating": 5,
+          "text": "Thank you so much for taking care of my AC"
+        }
+      ]
+    },
+    {
+      "name": "Jared Miller",
+      "wo_count": 51,
+      "avg_cost_per_wo": 29.4,
+      "total_labor_cost": 1238.17,
+      "avg_resident_rating": 3.67,
+      "reviews": [
+        {
+          "ref": "TWYLCTF",
+          "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "TNZBTBQ",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TW7K3H2",
+          "rating": 2,
+          "text": "Still isn’t set correctly. More food burned and wasted! We may just need a new oven. This is absolutely ridiculous!"
+        }
+      ]
+    },
+    {
+      "name": "Jacob Jett",
+      "wo_count": 24,
+      "avg_cost_per_wo": 42.62,
+      "total_labor_cost": 878.8,
+      "avg_resident_rating": 3.6,
+      "reviews": [
+        {
+          "ref": "TVXQ4IL",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TW6Y116",
+          "rating": 5,
+          "text": "Communicated well , dealt with the issue to the best of their ability , friendly."
+        },
+        {
+          "ref": "TYQBNM1",
+          "rating": 3,
+          "text": "Still no hot water. I used the bathroom tap last night and it never warmed up but normally that one takes a while so I didn't think about it. When I did the dishes this morning the sink tap did not warm up at all and that one gets quite hot fast. It also had been shooting out water right when I turn it on since yesterday afternoon and I did not notice it warming up yesterday either. I tried to take a shower and after running it for almost 10 minutes the water was still very cold."
+        },
+        {
+          "ref": "TU4NF4JB",
+          "rating": 4,
+          "text": "It was a missing fuse. Someone had apparently gone into the room and removed it. Quickly fixed."
+        },
+        {
+          "ref": "TCK7FJZ",
+          "rating": 1,
+          "text": "Just got up and doing water coming from the ceiling again"
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 10,
+      "avg_cost_per_wo": 78.91,
+      "total_labor_cost": 509.17,
+      "avg_resident_rating": null,
+      "reviews": []
+    }
+  ],
+  "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 0
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 0
+    },
+    {
+      "category": "Grounds",
+      "amount": 0
+    },
+    {
+      "category": "Maintenance",
+      "amount": 0
+    }
+  ],
+  "monthly_budget": {
+    "budget": 82636.13,
+    "labor": 15032.71,
+    "materials": 2654.31,
+    "invoices": 0,
+    "total_actual": 17687.02,
+    "variance": 64949.11
+  },
+  "grounds_monthly_budget": {
+    "budget": 37396.43,
+    "labor": 11902.84,
+    "materials": 501.57,
+    "invoices": 0,
+    "total_actual": 12404.41,
+    "variance": 24992.02
+  },
+  "cost_by_property": [
+    {
+      "property": "W226",
+      "labor": 677.3,
+      "materials": 9.37,
+      "cost": 686.67,
+      "budget": 548.9,
+      "pct_over_budget": 25.1
+    },
+    {
+      "property": "P705",
+      "labor": 335.4,
+      "materials": 1001.1,
+      "cost": 1336.5,
+      "budget": 1127.9,
+      "pct_over_budget": 18.5
+    }
+  ],
+  "narrative": null,
+  "narrative_2": null,
+  "priorities_next_week": null,
+  "grounds_top_purchases_month": "2026-09",
+  "grounds_top_purchases": [
+    {
+      "date": "2026-09-11",
+      "cardholder": "Armani Mitchell",
+      "property": "TC68",
+      "ref": "TQ7F0MP",
+      "amount": 64.01
+    },
+    {
+      "date": "2026-09-11",
+      "cardholder": "David Sanchez",
+      "property": "W225",
+      "ref": "TC1XCMHB",
+      "amount": 61
+    },
+    {
+      "date": "2026-09-17",
+      "cardholder": "Hannah Deckard",
+      "property": "KN47",
+      "ref": "TRCTDL2",
+      "amount": 41.84
+    },
+    {
+      "date": "2026-09-14",
+      "cardholder": "David Sanchez",
+      "property": "W225",
+      "ref": "TC1XCMHB",
+      "amount": 41.37
+    },
+    {
+      "date": "2026-09-09",
+      "cardholder": "David Sanchez",
+      "property": "H731",
+      "ref": "T93M4EL",
+      "amount": 36.25
+    },
+    {
+      "date": "2026-09-18",
+      "cardholder": "David Sanchez",
+      "property": "K104",
+      "ref": "TFA0FPL",
+      "amount": 27.61
+    },
+    {
+      "date": "2026-09-17",
+      "cardholder": "David Sanchez",
+      "property": "C313",
+      "ref": "TDC0DKD",
+      "amount": 27.61
+    },
+    {
+      "date": "2026-09-03",
+      "cardholder": "isaac chavez",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 25.04
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "Jared Miller",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    },
+    {
+      "date": "2026-09-04",
+      "cardholder": "isaac chavez",
+      "property": "PS25",
+      "ref": "TMKLRYKB",
+      "amount": 23
+    }
+  ],
+  "grounds_pest_control": []
+}
