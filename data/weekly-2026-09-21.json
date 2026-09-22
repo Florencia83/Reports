@@ -3,7 +3,7 @@
   "week_end": "2026-09-27",
   "label": "September 21 – 27, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-21",
+  "generated_at": "2026-09-22",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 44.27,
-      "last_7": 37.41
+      "last_30": 38.54,
+      "last_7": 38.49
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -83,14 +83,6 @@
       "cost": 1036.12
     },
     {
-      "ref": "TPZGMHHB",
-      "property": "kn47",
-      "brief": "Air Conditioner Is Not Cooling",
-      "labor": 9.45,
-      "materials": 999.87,
-      "cost": 1009.32
-    },
-    {
       "ref": "TLXBXINB",
       "property": "r203",
       "brief": "Ecall half power ",
@@ -107,22 +99,6 @@
       "cost": 549.46
     },
     {
-      "ref": "TMD8403",
-      "property": "c702",
-      "brief": "The Washing Machine Isn't Completing A Cycle",
-      "labor": 0,
-      "materials": 544.41,
-      "cost": 544.41
-    },
-    {
-      "ref": "TQ7F0MP",
-      "property": "tc68",
-      "brief": "Refrigerator Needs To Be Replaced",
-      "labor": 0,
-      "materials": 534.83,
-      "cost": 534.83
-    },
-    {
       "ref": "TAM369GB",
       "property": "kn47",
       "brief": "I Need My Dishwasher Replaced. Not Cleaning.",
@@ -137,15 +113,39 @@
       "labor": 73.72,
       "materials": 379.71,
       "cost": 453.43
+    },
+    {
+      "ref": "TFE0K3Q",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 29.4,
+      "materials": 379.71,
+      "cost": 409.11
+    },
+    {
+      "ref": "T4UDFBZ",
+      "property": "k104",
+      "brief": "tenant reports the stairs are loose",
+      "labor": 0,
+      "materials": 338.64,
+      "cost": 338.64
+    },
+    {
+      "ref": "TNKXW7N",
+      "property": "kn47",
+      "brief": "Power Wash Outside Area",
+      "labor": 168,
+      "materials": 154.46,
+      "cost": 322.46
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 64,
-      "avg_cost_per_wo": 120.37,
-      "total_labor_cost": 2705.47,
-      "avg_resident_rating": 4.58,
+      "wo_count": 63,
+      "avg_cost_per_wo": 106.26,
+      "total_labor_cost": 2696.02,
+      "avg_resident_rating": 4.55,
       "reviews": [
         {
           "ref": "TTVD82Z",
@@ -201,19 +201,14 @@
           "ref": "TXUZ68DB",
           "rating": 5,
           "text": null
-        },
-        {
-          "ref": "TPZGMHHB",
-          "rating": 5,
-          "text": "Thank you so much for taking care of my AC"
         }
       ]
     },
     {
       "name": "Jared Miller",
-      "wo_count": 51,
-      "avg_cost_per_wo": 29.4,
-      "total_labor_cost": 1238.17,
+      "wo_count": 54,
+      "avg_cost_per_wo": 33.3,
+      "total_labor_cost": 1536.79,
       "avg_resident_rating": 3.67,
       "reviews": [
         {
@@ -235,9 +230,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 24,
-      "avg_cost_per_wo": 42.62,
-      "total_labor_cost": 878.8,
+      "wo_count": 27,
+      "avg_cost_per_wo": 47.07,
+      "total_labor_cost": 1039.35,
       "avg_resident_rating": 3.6,
       "reviews": [
         {
@@ -296,24 +291,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 0
+      "amount": 104.8
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 15032.71,
-    "materials": 2654.31,
+    "labor": 15752.73,
+    "materials": 2759.11,
     "invoices": 0,
-    "total_actual": 17687.02,
-    "variance": 64949.11
+    "total_actual": 18511.84,
+    "variance": 64124.29
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 11902.84,
+    "labor": 12718.24,
     "materials": 501.57,
     "invoices": 0,
-    "total_actual": 12404.41,
-    "variance": 24992.02
+    "total_actual": 13219.81,
+    "variance": 24176.62
   },
   "cost_by_property": [
     {
