@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22",
+  "generated_at": "2026-09-23",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-31",
@@ -202,8 +202,32 @@
                     {
                       "ref": "TKK7MD",
                       "status": "SCHEDULED",
-                      "date": "2026-09-25"
+                      "date": "2026-09-23"
                     }
+                  ]
+                },
+                {
+                  "recurring_id": 189772,
+                  "title": "Litter pickup (Fri)",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/189772/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 189759,
+                  "title": "Litter pickup (Mon)",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/189759/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
                   ]
                 },
                 {
@@ -333,7 +357,11 @@
                     null,
                     null,
                     null,
-                    null
+                    {
+                      "ref": "TP345NJ",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-23"
+                    }
                   ]
                 },
                 {
@@ -490,7 +518,7 @@
                     },
                     {
                       "ref": "TE51CME",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-22"
                     }
                   ]
@@ -556,6 +584,18 @@
                       "status": "COMPLETED",
                       "date": "2026-09-22"
                     }
+                  ]
+                },
+                {
+                  "recurring_id": 189765,
+                  "title": "Poolside cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/189765/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
                   ]
                 }
               ]
@@ -690,6 +730,18 @@
               "employee": "Hannah Deckard",
               "recurring": [
                 {
+                  "recurring_id": 189769,
+                  "title": "Dumpster surrounds",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/189769/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
                   "recurring_id": 115088,
                   "title": "Exterior staircases",
                   "cadence": "Weekly",
@@ -705,7 +757,7 @@
                     {
                       "ref": "T7908IEB",
                       "status": "SCHEDULED",
-                      "date": "2026-09-23"
+                      "date": "2026-09-25"
                     }
                   ]
                 },
@@ -733,7 +785,7 @@
                     {
                       "ref": "TX7MZNJB",
                       "status": "SCHEDULED",
-                      "date": "2026-09-23"
+                      "date": "2026-09-25"
                     }
                   ]
                 },
@@ -761,8 +813,20 @@
                     {
                       "ref": "TD8QQCHB",
                       "status": "SCHEDULED",
-                      "date": "2026-09-23"
+                      "date": "2026-09-25"
                     }
+                  ]
+                },
+                {
+                  "recurring_id": 189767,
+                  "title": "Litter pickup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/189767/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
                   ]
                 }
               ]
@@ -842,6 +906,23 @@
                       "status": "CANCELED",
                       "date": "2026-09-21"
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "employee": "Hannah Deckard",
+              "recurring": [
+                {
+                  "recurring_id": 189771,
+                  "title": "Litter pickup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/189771/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
                   ]
                 }
               ]
@@ -1022,7 +1103,7 @@
                     },
                     {
                       "ref": "TWJVTDK",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-23"
                     }
                   ]
@@ -1093,9 +1174,9 @@
                       "date": "2026-09-15"
                     },
                     {
-                      "ref": "T7G92E4",
-                      "status": "COMPLETED",
-                      "date": "2026-09-22"
+                      "ref": "TP9FDZ",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-23"
                     }
                   ]
                 },
@@ -1121,6 +1202,18 @@
                       "status": "SCHEDULED",
                       "date": "2026-09-24"
                     }
+                  ]
+                },
+                {
+                  "recurring_id": 190270,
+                  "title": "Grounds cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/190270/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
                   ]
                 }
               ]
@@ -1516,8 +1609,8 @@
                     },
                     {
                       "ref": "TNKX5RM",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-24"
+                      "status": "COMPLETED",
+                      "date": "2026-09-23"
                     }
                   ]
                 }
@@ -1552,7 +1645,11 @@
                       "status": "OVERDUE",
                       "date": "2026-09-14"
                     },
-                    null
+                    {
+                      "ref": "TL48L6N",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-23"
+                    }
                   ]
                 }
               ]
@@ -1617,9 +1714,9 @@
                       "date": "2026-09-15"
                     },
                     {
-                      "ref": "TUMT4IR",
-                      "status": "COMPLETED",
-                      "date": "2026-09-21"
+                      "ref": "TJ5663D",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-23"
                     }
                   ]
                 }
@@ -1869,7 +1966,7 @@
                     null,
                     {
                       "ref": "THI64C6",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-22"
                     }
                   ]
@@ -2029,6 +2126,66 @@
       "employee": "Florencia Sola"
     },
     {
+      "recurring_id": 189774,
+      "title": "Towing",
+      "property": "kn47 K1",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189773,
+      "title": "Pet waste removal (Fri)",
+      "property": "kn47 K1",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189770,
+      "title": "Laundry rooms",
+      "property": "rl16",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189768,
+      "title": "Pet waste removal",
+      "property": "rl16",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189766,
+      "title": "Clean laundry room",
+      "property": "ps25",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189764,
+      "title": "Pet waste removal",
+      "property": "ps25",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189763,
+      "title": "Clean laundry room",
+      "property": "ps91",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189762,
+      "title": "Empty trash cans",
+      "property": "ps91",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189761,
+      "title": "Pet waste",
+      "property": "ps91",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189760,
+      "title": "Clean laundry room",
+      "property": "ps17",
+      "employee": "Hannah Deckard"
+    },
+    {
       "recurring_id": 135422,
       "title": "D building - Common area carpet cleaning ",
       "property": "rl16",
@@ -2043,12 +2200,6 @@
     {
       "recurring_id": 135420,
       "title": "A building - Carpet Cleaning ",
-      "property": "rl16",
-      "employee": "Jared Miller"
-    },
-    {
-      "recurring_id": 114384,
-      "title": "Door lock battery inspection/ Building A",
       "property": "rl16",
       "employee": "Jared Miller"
     },
@@ -2085,6 +2236,12 @@
     {
       "recurring_id": 114385,
       "title": "Door lock battery inspection/ Building B",
+      "property": "rl16",
+      "employee": "Jared Miller"
+    },
+    {
+      "recurring_id": 114384,
+      "title": "Door lock battery inspection/ Building A",
       "property": "rl16",
       "employee": "Jared Miller"
     },
