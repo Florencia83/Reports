@@ -3,7 +3,7 @@
   "week_end": "2026-09-27",
   "label": "September 21 – 27, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-23",
+  "generated_at": "2026-09-24",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 36.27,
-      "last_7": 31.25
+      "last_30": 41.03,
+      "last_7": 32.99
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,6 +59,14 @@
   ],
   "top_work_orders": [
     {
+      "ref": "TWXN4EEB",
+      "property": "kn47",
+      "brief": "The Air Conditioner Isn't Cooling",
+      "labor": 79.2,
+      "materials": 979.2,
+      "cost": 1058.4
+    },
+    {
       "ref": "TT85X6K",
       "property": "tc68",
       "brief": "The Freezer In The Kitchen Is Not Cold Enough",
@@ -75,12 +83,28 @@
       "cost": 1036.12
     },
     {
+      "ref": "TPZGMHHB",
+      "property": "kn47",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 9.45,
+      "materials": 999.87,
+      "cost": 1009.32
+    },
+    {
       "ref": "TLXBXINB",
       "property": "r203",
       "brief": "Ecall half power ",
       "labor": 0,
       "materials": 788.28,
       "cost": 788.28
+    },
+    {
+      "ref": "T4YL5QHB",
+      "property": "k104",
+      "brief": "Clothes Dryer",
+      "labor": 0,
+      "materials": 629.57,
+      "cost": 629.57
     },
     {
       "ref": "TYR0G10",
@@ -91,12 +115,12 @@
       "cost": 561.36
     },
     {
-      "ref": "TMKLRYKB",
-      "property": "ps25",
-      "brief": "Fire hazard code (clone)",
-      "labor": 340.42,
-      "materials": 209.04,
-      "cost": 549.46
+      "ref": "TMD8403",
+      "property": "c702",
+      "brief": "The Washing Machine Isn't Completing A Cycle",
+      "labor": 0,
+      "materials": 544.41,
+      "cost": 544.41
     },
     {
       "ref": "TAM369GB",
@@ -107,45 +131,21 @@
       "cost": 511.55
     },
     {
-      "ref": "TRYRJ9JB",
-      "property": "rl16",
-      "brief": "Air Conditioner Is Not Turning On",
-      "labor": 73.72,
-      "materials": 379.71,
-      "cost": 453.43
-    },
-    {
-      "ref": "TFE0K3Q",
-      "property": "rl16",
-      "brief": "Air Conditioner Is Not Cooling",
-      "labor": 29.4,
-      "materials": 379.71,
-      "cost": 409.11
-    },
-    {
-      "ref": "T4UDFBZ",
-      "property": "k104",
-      "brief": "tenant reports the stairs are loose",
-      "labor": 0,
-      "materials": 338.64,
-      "cost": 338.64
-    },
-    {
-      "ref": "TNKXW7N",
-      "property": "kn47",
-      "brief": "Power Wash Outside Area",
-      "labor": 168,
-      "materials": 154.46,
-      "cost": 322.46
+      "ref": "TMPQ2K8",
+      "property": "w226",
+      "brief": "Fire extinguisher service",
+      "labor": 455.65,
+      "materials": 0,
+      "cost": 455.65
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 60,
-      "avg_cost_per_wo": 93.33,
-      "total_labor_cost": 2580.22,
-      "avg_resident_rating": 4.55,
+      "wo_count": 71,
+      "avg_cost_per_wo": 111.75,
+      "total_labor_cost": 2928.07,
+      "avg_resident_rating": 4.58,
       "reviews": [
         {
           "ref": "TTVD82Z",
@@ -201,29 +201,44 @@
           "ref": "TXUZ68DB",
           "rating": 5,
           "text": null
+        },
+        {
+          "ref": "TPZGMHHB",
+          "rating": 5,
+          "text": "Thank you so much for taking care of my AC"
         }
       ]
     },
     {
       "name": "Jared Miller",
-      "wo_count": 54,
-      "avg_cost_per_wo": 29.04,
-      "total_labor_cost": 1374.57,
-      "avg_resident_rating": 4,
+      "wo_count": 63,
+      "avg_cost_per_wo": 34.55,
+      "total_labor_cost": 1842.27,
+      "avg_resident_rating": 3.67,
       "reviews": [
         {
           "ref": "TWYLCTF",
           "rating": 4,
           "text": null
+        },
+        {
+          "ref": "TNZBTBQ",
+          "rating": 5,
+          "text": null
+        },
+        {
+          "ref": "TW7K3H2",
+          "rating": 2,
+          "text": "Still isn’t set correctly. More food burned and wasted! We may just need a new oven. This is absolutely ridiculous!"
         }
       ]
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 28,
-      "avg_cost_per_wo": 57.38,
-      "total_labor_cost": 1129.05,
-      "avg_resident_rating": 4.25,
+      "wo_count": 33,
+      "avg_cost_per_wo": 75.56,
+      "total_labor_cost": 1901.25,
+      "avg_resident_rating": 3.6,
       "reviews": [
         {
           "ref": "TVXQ4IL",
@@ -244,23 +259,36 @@
           "ref": "TU4NF4JB",
           "rating": 4,
           "text": "It was a missing fuse. Someone had apparently gone into the room and removed it. Quickly fixed."
+        },
+        {
+          "ref": "TCK7FJZ",
+          "rating": 1,
+          "text": "Just got up and doing water coming from the ceiling again"
         }
       ]
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 16,
-      "avg_cost_per_wo": 69.86,
-      "total_labor_cost": 748.13,
+      "wo_count": 24,
+      "avg_cost_per_wo": 46.47,
+      "total_labor_cost": 745.5,
       "avg_resident_rating": null,
       "reviews": []
     }
   ],
-  "ramp_purchases_over_300": [],
+  "ramp_purchases_over_300": [
+    {
+      "date": "2026-09-23",
+      "ref": "TE1KA6F",
+      "property": "KN47",
+      "cardholder": "Jaxson Lakins",
+      "amount": 305.03
+    }
+  ],
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 270.31
+      "amount": 341.05
     },
     {
       "category": "Supplies and Tools",
@@ -276,33 +304,33 @@
     },
     {
       "category": "Maintenance",
-      "amount": 530.96
+      "amount": 1073.68
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 16763.45,
-    "materials": 3185.27,
+    "labor": 17931.84,
+    "materials": 3792.24,
     "invoices": 0,
-    "total_actual": 19948.72,
-    "variance": 62687.41
+    "total_actual": 21724.08,
+    "variance": 60912.05
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 13435.84,
+    "labor": 13784.09,
     "materials": 501.57,
     "invoices": 0,
-    "total_actual": 13937.41,
-    "variance": 23459.02
+    "total_actual": 14285.66,
+    "variance": 23110.77
   },
   "cost_by_property": [
     {
       "property": "W226",
-      "labor": 677.3,
-      "materials": 9.37,
-      "cost": 686.67,
+      "labor": 755.3,
+      "materials": 37.71,
+      "cost": 793.01,
       "budget": 548.9,
-      "pct_over_budget": 25.1
+      "pct_over_budget": 44.5
     },
     {
       "property": "P705",
