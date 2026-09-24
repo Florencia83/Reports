@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23",
+  "generated_at": "2026-09-24",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-31",
@@ -68,7 +68,7 @@
                     null,
                     {
                       "ref": "TY7C6MIB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-23"
                     }
                   ]
@@ -84,7 +84,7 @@
                     null,
                     {
                       "ref": "T6G5AWDB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-23"
                     }
                   ]
@@ -116,7 +116,7 @@
                     null,
                     {
                       "ref": "T91ZN7U",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-23"
                     }
                   ]
@@ -132,7 +132,7 @@
                     null,
                     {
                       "ref": "TFY3RX7",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-23"
                     }
                   ]
@@ -201,7 +201,7 @@
                     },
                     {
                       "ref": "TKK7MD",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-23"
                     }
                   ]
@@ -359,7 +359,7 @@
                     null,
                     {
                       "ref": "TP345NJ",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-23"
                     }
                   ]
@@ -718,9 +718,9 @@
                       "date": "2026-09-18"
                     },
                     {
-                      "ref": "T7E94LAB",
-                      "status": "CANCELED",
-                      "date": "2026-09-21"
+                      "ref": "T158CYMB",
+                      "status": "COMPLETED",
+                      "date": "2026-09-24"
                     }
                   ]
                 }
@@ -1174,9 +1174,9 @@
                       "date": "2026-09-15"
                     },
                     {
-                      "ref": "TP9FDZ",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-23"
+                      "ref": "T7G92E4",
+                      "status": "COMPLETED",
+                      "date": "2026-09-22"
                     }
                   ]
                 },
@@ -1209,6 +1209,18 @@
                   "title": "Grounds cleanup",
                   "cadence": "Weekly",
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/190270/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 190416,
+                  "title": "Grounds cleanup",
+                  "cadence": "Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/190416/",
                   "occurrences": [
                     null,
                     null,
@@ -1645,11 +1657,7 @@
                       "status": "OVERDUE",
                       "date": "2026-09-14"
                     },
-                    {
-                      "ref": "TL48L6N",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-23"
-                    }
+                    null
                   ]
                 }
               ]
@@ -1714,9 +1722,9 @@
                       "date": "2026-09-15"
                     },
                     {
-                      "ref": "TJ5663D",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-23"
+                      "ref": "TUMT4IR",
+                      "status": "COMPLETED",
+                      "date": "2026-09-21"
                     }
                   ]
                 }
