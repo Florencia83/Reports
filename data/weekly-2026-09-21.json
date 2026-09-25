@@ -3,7 +3,7 @@
   "week_end": "2026-09-27",
   "label": "September 21 – 27, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-24",
+  "generated_at": "2026-09-25",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 41.03,
-      "last_7": 32.99
+      "last_30": 40.23,
+      "last_7": 36.04
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -83,14 +83,6 @@
       "cost": 1036.12
     },
     {
-      "ref": "TPZGMHHB",
-      "property": "kn47",
-      "brief": "Air Conditioner Is Not Cooling",
-      "labor": 9.45,
-      "materials": 999.87,
-      "cost": 1009.32
-    },
-    {
       "ref": "TLXBXINB",
       "property": "r203",
       "brief": "Ecall half power ",
@@ -107,20 +99,20 @@
       "cost": 629.57
     },
     {
+      "ref": "TBL7AW3",
+      "property": "kn47",
+      "brief": "leak in bathroom Ceiling ",
+      "labor": 459,
+      "materials": 139,
+      "cost": 598
+    },
+    {
       "ref": "TYR0G10",
       "property": "k104",
       "brief": "In Unit Washing Machine Is Leaking",
       "labor": 0,
       "materials": 561.36,
       "cost": 561.36
-    },
-    {
-      "ref": "TMD8403",
-      "property": "c702",
-      "brief": "The Washing Machine Isn't Completing A Cycle",
-      "labor": 0,
-      "materials": 544.41,
-      "cost": 544.41
     },
     {
       "ref": "TAM369GB",
@@ -137,15 +129,23 @@
       "labor": 455.65,
       "materials": 0,
       "cost": 455.65
+    },
+    {
+      "ref": "TRYRJ9JB",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Turning On",
+      "labor": 73.72,
+      "materials": 379.71,
+      "cost": 453.43
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 71,
-      "avg_cost_per_wo": 111.75,
-      "total_labor_cost": 2928.07,
-      "avg_resident_rating": 4.58,
+      "wo_count": 76,
+      "avg_cost_per_wo": 100.87,
+      "total_labor_cost": 3496.16,
+      "avg_resident_rating": 4.55,
       "reviews": [
         {
           "ref": "TTVD82Z",
@@ -201,21 +201,21 @@
           "ref": "TXUZ68DB",
           "rating": 5,
           "text": null
-        },
-        {
-          "ref": "TPZGMHHB",
-          "rating": 5,
-          "text": "Thank you so much for taking care of my AC"
         }
       ]
     },
     {
       "name": "Jared Miller",
-      "wo_count": 63,
-      "avg_cost_per_wo": 34.55,
-      "total_labor_cost": 1842.27,
-      "avg_resident_rating": 3.67,
+      "wo_count": 68,
+      "avg_cost_per_wo": 35.6,
+      "total_labor_cost": 1982.72,
+      "avg_resident_rating": 4,
       "reviews": [
+        {
+          "ref": "TPBGZU1",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TWYLCTF",
           "rating": 4,
@@ -235,11 +235,16 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 33,
-      "avg_cost_per_wo": 75.56,
-      "total_labor_cost": 1901.25,
-      "avg_resident_rating": 3.6,
+      "wo_count": 37,
+      "avg_cost_per_wo": 72.99,
+      "total_labor_cost": 2053.35,
+      "avg_resident_rating": 4,
       "reviews": [
+        {
+          "ref": "TI8YR82",
+          "rating": 5,
+          "text": null
+        },
         {
           "ref": "TVXQ4IL",
           "rating": 5,
@@ -261,6 +266,11 @@
           "text": "It was a missing fuse. Someone had apparently gone into the room and removed it. Quickly fixed."
         },
         {
+          "ref": "T6HR8CIB",
+          "rating": 5,
+          "text": null
+        },
+        {
           "ref": "TCK7FJZ",
           "rating": 1,
           "text": "Just got up and doing water coming from the ceiling again"
@@ -269,14 +279,21 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 24,
-      "avg_cost_per_wo": 46.47,
-      "total_labor_cost": 745.5,
+      "wo_count": 26,
+      "avg_cost_per_wo": 46.05,
+      "total_labor_cost": 817.72,
       "avg_resident_rating": null,
       "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
+    {
+      "date": "2026-09-24",
+      "ref": "TAXUA4IB",
+      "property": "KN47",
+      "cardholder": "isaac chavez",
+      "amount": 999.87
+    },
     {
       "date": "2026-09-23",
       "ref": "TE1KA6F",
@@ -288,7 +305,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 341.05
+      "amount": 485.11
     },
     {
       "category": "Supplies and Tools",
@@ -296,32 +313,32 @@
     },
     {
       "category": "Appliances",
-      "amount": 0
+      "amount": 999.87
     },
     {
       "category": "Grounds",
-      "amount": 0
+      "amount": 40.32
     },
     {
       "category": "Maintenance",
-      "amount": 1073.68
+      "amount": 1456.82
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 17931.84,
-    "materials": 3792.24,
+    "labor": 19368.21,
+    "materials": 4175.38,
     "invoices": 0,
-    "total_actual": 21724.08,
-    "variance": 60912.05
+    "total_actual": 23543.59,
+    "variance": 59092.54
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 13784.09,
-    "materials": 501.57,
+    "labor": 14281.34,
+    "materials": 541.89,
     "invoices": 0,
-    "total_actual": 14285.66,
-    "variance": 23110.77
+    "total_actual": 14823.23,
+    "variance": 22573.2
   },
   "cost_by_property": [
     {
@@ -382,6 +399,13 @@
       "amount": 41.37
     },
     {
+      "date": "2026-09-24",
+      "cardholder": "David Sanchez",
+      "property": null,
+      "ref": null,
+      "amount": 40.32
+    },
+    {
       "date": "2026-09-09",
       "cardholder": "David Sanchez",
       "property": "H731",
@@ -408,13 +432,6 @@
       "property": "PS25",
       "ref": "TMKLRYKB",
       "amount": 25.04
-    },
-    {
-      "date": "2026-09-04",
-      "cardholder": "Jared Miller",
-      "property": "PS25",
-      "ref": "TMKLRYKB",
-      "amount": 23
     }
   ],
   "grounds_pest_control": []
