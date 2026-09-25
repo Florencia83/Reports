@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
   "label": "September 2026",
-  "generated_at": "2026-09-24",
+  "generated_at": "2026-09-25",
   "complete": false,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -9,9 +9,9 @@
     {
       "property": "KN47",
       "code": "kn47",
-      "appfolio_actual": 10885.42,
-      "ramp_total": 3315.01,
-      "labor_total": 4536.69,
+      "appfolio_actual": 12121.15,
+      "ramp_total": 3638.15,
+      "labor_total": 5258.2,
       "ramp_items": [
         {
           "date": "2026-09-01",
@@ -257,6 +257,41 @@
           "amount": 305.03,
           "memo": "Purchased parts for stove",
           "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Ace Hardware",
+          "amount": 48.49,
+          "memo": "Purchased texture, sanding pads, and paint roller",
+          "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "The Home Depot",
+          "amount": 197.89,
+          "memo": "R&M supplies purchase",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Ace Hardware",
+          "amount": 21.75,
+          "memo": "R&M supplies",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Ace Hardware",
+          "amount": 30,
+          "memo": "R&M supplies",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-09-25",
+          "merchant": "Ace Hardware",
+          "amount": 25.01,
+          "memo": "Purchased deadbolt",
+          "cardholder": "Jaxson Lakins"
         }
       ],
       "labor_items": [
@@ -490,15 +525,36 @@
           "hours": 8.5,
           "wage": 36,
           "cost": 306
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Isaac Chavez",
+          "hours": 4.02,
+          "wage": 40.5,
+          "cost": 162.67
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Jared Miller",
+          "hours": 6.98,
+          "wage": 42.135,
+          "cost": 294.24
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Jaxson Lakins",
+          "hours": 7.35,
+          "wage": 36,
+          "cost": 264.6
         }
       ]
     },
     {
       "property": "RL16",
       "code": "rl16",
-      "appfolio_actual": 6869.41,
-      "ramp_total": 405.24,
-      "labor_total": 2131.84,
+      "appfolio_actual": 7020.99,
+      "ramp_total": 455.24,
+      "labor_total": 2203.84,
       "ramp_items": [
         {
           "date": "2026-09-03",
@@ -569,6 +625,13 @@
           "amount": 11.41,
           "memo": "Repair and maintenance supplies",
           "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-09-23",
+          "merchant": "USPS",
+          "amount": 50,
+          "memo": "post office charge for key and lock replacement.",
+          "cardholder": "Margarito Saldana"
         },
         {
           "date": "2026-09-23",
@@ -739,75 +802,22 @@
           "hours": 2.07,
           "wage": 42.135,
           "cost": 87.08
-        }
-      ]
-    },
-    {
-      "property": "M405",
-      "code": "m405",
-      "appfolio_actual": 2940.68,
-      "ramp_total": 566.13,
-      "labor_total": 436.15,
-      "ramp_items": [
-        {
-          "date": "2026-09-08",
-          "merchant": "The Home Depot",
-          "amount": 7.2,
-          "memo": "Maintenance supplies from Home Depot",
-          "cardholder": "David Wright"
         },
         {
-          "date": "2026-09-09",
-          "merchant": "The Home Depot",
-          "amount": 42.52,
-          "memo": "Door lock for unit 10 405 maple",
-          "cardholder": "Jacob Jett"
-        },
-        {
-          "date": "2026-09-10",
-          "merchant": "The Home Depot",
-          "amount": 66.2,
-          "memo": "Maintenance supplies from Home Depot",
-          "cardholder": "David Wright"
-        },
-        {
-          "date": "2026-09-18",
-          "merchant": "Lowe's",
-          "amount": 70.89,
-          "memo": "blinds replacement",
-          "cardholder": "Jacob Jett"
-        },
-        {
-          "date": "2026-09-23",
-          "merchant": "The Home Depot",
-          "amount": 379.32,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-09-09",
-          "name": "Jacob Jett",
-          "hours": 8.65,
-          "wage": 39,
-          "cost": 337.35
-        },
-        {
-          "date": "2026-09-18",
-          "name": "Jacob Jett",
-          "hours": 2.53,
-          "wage": 39,
-          "cost": 98.8
+          "date": "2026-09-24",
+          "name": "Jaxson Lakins",
+          "hours": 2,
+          "wage": 36,
+          "cost": 72
         }
       ]
     },
     {
       "property": "O155",
       "code": "o155",
-      "appfolio_actual": 2290.72,
-      "ramp_total": 495.93,
-      "labor_total": 1094.6,
+      "appfolio_actual": 2724.09,
+      "ramp_total": 575.67,
+      "labor_total": 1356.55,
       "ramp_items": [
         {
           "date": "2026-09-04",
@@ -871,6 +881,13 @@
           "amount": 31.5,
           "memo": "Maintenance supplies from Lowe's. gravel for the whole by the back stair for compliance",
           "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Lowe's",
+          "amount": 79.74,
+          "memo": "rat traps for 0155",
+          "cardholder": "David Wright"
         }
       ],
       "labor_items": [
@@ -922,6 +939,80 @@
           "hours": 3.77,
           "wage": 39,
           "cost": 146.9
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Jacob Jett",
+          "hours": 6.72,
+          "wage": 39,
+          "cost": 261.95
+        }
+      ]
+    },
+    {
+      "property": "M405",
+      "code": "m405",
+      "appfolio_actual": 2679.35,
+      "ramp_total": 260.05,
+      "labor_total": 469.3,
+      "ramp_items": [
+        {
+          "date": "2026-09-08",
+          "merchant": "The Home Depot",
+          "amount": 7.2,
+          "memo": "Maintenance supplies from Home Depot",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-09",
+          "merchant": "The Home Depot",
+          "amount": 42.52,
+          "memo": "Door lock for unit 10 405 maple",
+          "cardholder": "Jacob Jett"
+        },
+        {
+          "date": "2026-09-10",
+          "merchant": "The Home Depot",
+          "amount": 66.2,
+          "memo": "Maintenance supplies from Home Depot",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-18",
+          "merchant": "Lowe's",
+          "amount": 70.89,
+          "memo": "blinds replacement",
+          "cardholder": "Jacob Jett"
+        },
+        {
+          "date": "2026-09-23",
+          "merchant": "The Home Depot",
+          "amount": 379.32,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-25",
+          "merchant": "The Home Depot",
+          "amount": -306.08,
+          "memo": "Refund for Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-09-09",
+          "name": "Jacob Jett",
+          "hours": 8.65,
+          "wage": 39,
+          "cost": 337.35
+        },
+        {
+          "date": "2026-09-18",
+          "name": "Jacob Jett",
+          "hours": 3.38,
+          "wage": 39,
+          "cost": 131.95
         }
       ]
     },
@@ -1593,6 +1684,94 @@
       ]
     },
     {
+      "property": "PS17",
+      "code": "ps17",
+      "appfolio_actual": 431.63,
+      "ramp_total": 70.25,
+      "labor_total": 258.27,
+      "ramp_items": [
+        {
+          "date": "2026-09-14",
+          "merchant": "Griggs Department Store",
+          "amount": 19.58,
+          "memo": "R&M supplies",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-09-22",
+          "merchant": "Amazon",
+          "amount": 40.67,
+          "memo": "R&M supplies purchase",
+          "cardholder": "Jared Miller"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "PayRange",
+          "amount": 10,
+          "memo": "Purchase for laundry equipment troubleshooting.",
+          "cardholder": "isaac chavez"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-09-02",
+          "name": "Jaxson Lakins",
+          "hours": 0.47,
+          "wage": 36,
+          "cost": 16.8
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Jared Miller",
+          "hours": 1.1,
+          "wage": 42.135,
+          "cost": 46.35
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Jaxson Lakins",
+          "hours": 0.98,
+          "wage": 36,
+          "cost": 35.4
+        },
+        {
+          "date": "2026-09-10",
+          "name": "Jaxson Lakins",
+          "hours": 0.77,
+          "wage": 36,
+          "cost": 27.6
+        },
+        {
+          "date": "2026-09-14",
+          "name": "Jared Miller",
+          "hours": 1.4,
+          "wage": 42.135,
+          "cost": 58.99
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Jared Miller",
+          "hours": 0.58,
+          "wage": 42.135,
+          "cost": 24.58
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Isaac Chavez",
+          "hours": 0.8,
+          "wage": 40.5,
+          "cost": 32.4
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Jared Miller",
+          "hours": 0.38,
+          "wage": 42.135,
+          "cost": 16.15
+        }
+      ]
+    },
+    {
       "property": "K308",
       "code": "k308",
       "appfolio_actual": 391.41,
@@ -1705,73 +1884,6 @@
           "hours": 1.42,
           "wage": 39,
           "cost": 55.25
-        }
-      ]
-    },
-    {
-      "property": "PS17",
-      "code": "ps17",
-      "appfolio_actual": 353.46,
-      "ramp_total": 60.25,
-      "labor_total": 209.72,
-      "ramp_items": [
-        {
-          "date": "2026-09-14",
-          "merchant": "Griggs Department Store",
-          "amount": 19.58,
-          "memo": "R&M supplies",
-          "cardholder": "Jared Miller"
-        },
-        {
-          "date": "2026-09-22",
-          "merchant": "Amazon",
-          "amount": 40.67,
-          "memo": "R&M supplies purchase",
-          "cardholder": "Jared Miller"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-09-02",
-          "name": "Jaxson Lakins",
-          "hours": 0.47,
-          "wage": 36,
-          "cost": 16.8
-        },
-        {
-          "date": "2026-09-07",
-          "name": "Jared Miller",
-          "hours": 1.1,
-          "wage": 42.135,
-          "cost": 46.35
-        },
-        {
-          "date": "2026-09-07",
-          "name": "Jaxson Lakins",
-          "hours": 0.98,
-          "wage": 36,
-          "cost": 35.4
-        },
-        {
-          "date": "2026-09-10",
-          "name": "Jaxson Lakins",
-          "hours": 0.77,
-          "wage": 36,
-          "cost": 27.6
-        },
-        {
-          "date": "2026-09-14",
-          "name": "Jared Miller",
-          "hours": 1.4,
-          "wage": 42.135,
-          "cost": 58.99
-        },
-        {
-          "date": "2026-09-22",
-          "name": "Jared Miller",
-          "hours": 0.58,
-          "wage": 42.135,
-          "cost": 24.58
         }
       ]
     },
@@ -2022,11 +2134,260 @@
       "labor_items": []
     },
     {
+      "property": "C702",
+      "code": "c702",
+      "appfolio_actual": null,
+      "ramp_total": 2295.29,
+      "labor_total": 865.65,
+      "ramp_items": [
+        {
+          "date": "2026-09-02",
+          "merchant": "Lowe's",
+          "amount": 544.41,
+          "memo": "new washing machine for D206",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-02",
+          "merchant": "The Home Depot",
+          "amount": 279.22,
+          "memo": "Materials for property maintenance",
+          "cardholder": "Matt Romme"
+        },
+        {
+          "date": "2026-09-04",
+          "merchant": "Lowe's",
+          "amount": 11.98,
+          "memo": "Maintenance supplies from Lowe's",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-04",
+          "merchant": "The Home Depot",
+          "amount": -58.56,
+          "memo": "Refund for Materials for property maintenance",
+          "cardholder": "Matt Romme"
+        },
+        {
+          "date": "2026-09-09",
+          "merchant": "Lowe's",
+          "amount": 137.76,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-09",
+          "merchant": "Lowe's",
+          "amount": 40.21,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-11",
+          "merchant": "Lowe's",
+          "amount": 33.8,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-15",
+          "merchant": "Lowe's",
+          "amount": 43.19,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-15",
+          "merchant": "Lowe's",
+          "amount": 92.71,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-15",
+          "merchant": "Lowe's",
+          "amount": 22.74,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-16",
+          "merchant": "The Home Depot",
+          "amount": 19.93,
+          "memo": "TZURDVAB",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-16",
+          "merchant": "The Home Depot",
+          "amount": 70.87,
+          "memo": "a burner for the stove and the floor splash pans",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-17",
+          "merchant": "Lowe's",
+          "amount": 38.8,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-18",
+          "merchant": "Lowe's",
+          "amount": 65.44,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-22",
+          "merchant": "Lowe's",
+          "amount": 199.42,
+          "memo": "Stove recepticals",
+          "cardholder": "Jacob Jett"
+        },
+        {
+          "date": "2026-09-22",
+          "merchant": "Lowe's",
+          "amount": 100.33,
+          "memo": "Smoke detectora",
+          "cardholder": "Jacob Jett"
+        },
+        {
+          "date": "2026-09-22",
+          "merchant": "Lowe's",
+          "amount": 26.12,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-22",
+          "merchant": "Lowe's",
+          "amount": 38.69,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-23",
+          "merchant": "The Home Depot",
+          "amount": 22.88,
+          "memo": "a light for the outside of e104",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-23",
+          "merchant": "Lowe's",
+          "amount": 22.87,
+          "memo": "Repair and maintenance material",
+          "cardholder": "David Sanchez"
+        },
+        {
+          "date": "2026-09-23",
+          "merchant": "Lowe's",
+          "amount": 54.53,
+          "memo": "Repair and maintenance material",
+          "cardholder": "David Sanchez"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Lowe's",
+          "amount": 71.98,
+          "memo": "a step ladder for the back of my work truck to do all these jobs.   tool",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Lowe's",
+          "amount": 79.62,
+          "memo": "a LED kitchen light for. c702 f105",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Lowe's",
+          "amount": 29.44,
+          "memo": "this is an exterior light for the outside of e104",
+          "cardholder": "David Wright"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "HD Supply Facilities Maintenance",
+          "amount": 326.21,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-24",
+          "merchant": "Lowe's",
+          "amount": 3.58,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-25",
+          "merchant": "The Home Depot",
+          "amount": -22.88,
+          "memo": "Refund for a light for the outside of e104",
+          "cardholder": "David Wright"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-09-15",
+          "name": "Jacob Jett",
+          "hours": 1.88,
+          "wage": 39,
+          "cost": 73.45
+        },
+        {
+          "date": "2026-09-18",
+          "name": "Jacob Jett",
+          "hours": 1.98,
+          "wage": 39,
+          "cost": 77.35
+        },
+        {
+          "date": "2026-09-21",
+          "name": "Jacob Jett",
+          "hours": 2.12,
+          "wage": 39,
+          "cost": 82.55
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Jacob Jett",
+          "hours": 3.52,
+          "wage": 39,
+          "cost": 137.15
+        },
+        {
+          "date": "2026-09-23",
+          "name": "David Sanchez",
+          "hours": 5.4,
+          "wage": 38.25,
+          "cost": 206.55
+        },
+        {
+          "date": "2026-09-23",
+          "name": "Jacob Jett",
+          "hours": 5.98,
+          "wage": 39,
+          "cost": 233.35
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Jacob Jett",
+          "hours": 1.42,
+          "wage": 39,
+          "cost": 55.25
+        }
+      ]
+    },
+    {
       "property": "R203",
       "code": "r203",
       "appfolio_actual": null,
-      "ramp_total": 1335.26,
-      "labor_total": 4735.59,
+      "ramp_total": 965.32,
+      "labor_total": 4979.54,
       "ramp_items": [
         {
           "date": "2026-09-01",
@@ -2047,13 +2408,6 @@
           "merchant": "HD Supply Facilities Maintenance",
           "amount": 435.31,
           "memo": "Supplies for property maintenance and repair",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-14",
-          "merchant": "HD Supply Facilities Maintenance",
-          "amount": 369.94,
-          "memo": "Supplies for property repairs and maintenance",
           "cardholder": "Edward Villa"
         },
         {
@@ -2344,206 +2698,27 @@
           "hours": 7.55,
           "wage": 15,
           "cost": 113.25
-        }
-      ]
-    },
-    {
-      "property": "C702",
-      "code": "c702",
-      "appfolio_actual": null,
-      "ramp_total": 1807.34,
-      "labor_total": 810.4,
-      "ramp_items": [
-        {
-          "date": "2026-09-02",
-          "merchant": "Lowe's",
-          "amount": 544.41,
-          "memo": "new washing machine for D206",
-          "cardholder": "David Wright"
         },
         {
-          "date": "2026-09-02",
-          "merchant": "The Home Depot",
-          "amount": 279.22,
-          "memo": "Materials for property maintenance",
-          "cardholder": "Matt Romme"
+          "date": "2026-09-24",
+          "name": "Isaac Chavez",
+          "hours": 3.23,
+          "wage": 40.5,
+          "cost": 130.95
         },
         {
-          "date": "2026-09-04",
-          "merchant": "Lowe's",
-          "amount": 11.98,
-          "memo": "Maintenance supplies from Lowe's",
-          "cardholder": "David Wright"
+          "date": "2026-09-24",
+          "name": "Maria Florencia Sola",
+          "hours": 5.7,
+          "wage": 15,
+          "cost": 85.5
         },
         {
-          "date": "2026-09-04",
-          "merchant": "The Home Depot",
-          "amount": -58.56,
-          "memo": "Refund for Materials for property maintenance",
-          "cardholder": "Matt Romme"
-        },
-        {
-          "date": "2026-09-09",
-          "merchant": "Lowe's",
-          "amount": 137.76,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-09",
-          "merchant": "Lowe's",
-          "amount": 40.21,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-11",
-          "merchant": "Lowe's",
-          "amount": 33.8,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-15",
-          "merchant": "Lowe's",
-          "amount": 43.19,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-15",
-          "merchant": "Lowe's",
-          "amount": 92.71,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-15",
-          "merchant": "Lowe's",
-          "amount": 22.74,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-16",
-          "merchant": "The Home Depot",
-          "amount": 19.93,
-          "memo": "TZURDVAB",
-          "cardholder": "David Wright"
-        },
-        {
-          "date": "2026-09-16",
-          "merchant": "The Home Depot",
-          "amount": 70.87,
-          "memo": "a burner for the stove and the floor splash pans",
-          "cardholder": "David Wright"
-        },
-        {
-          "date": "2026-09-17",
-          "merchant": "Lowe's",
-          "amount": 38.8,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-18",
-          "merchant": "Lowe's",
-          "amount": 65.44,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-22",
-          "merchant": "Lowe's",
-          "amount": 199.42,
-          "memo": "Stove recepticals",
-          "cardholder": "Jacob Jett"
-        },
-        {
-          "date": "2026-09-22",
-          "merchant": "Lowe's",
-          "amount": 100.33,
-          "memo": "Smoke detectora",
-          "cardholder": "Jacob Jett"
-        },
-        {
-          "date": "2026-09-22",
-          "merchant": "Lowe's",
-          "amount": 26.12,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-22",
-          "merchant": "Lowe's",
-          "amount": 38.69,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-23",
-          "merchant": "The Home Depot",
-          "amount": 22.88,
-          "memo": "a light for the outside of e104",
-          "cardholder": "David Wright"
-        },
-        {
-          "date": "2026-09-23",
-          "merchant": "Lowe's",
-          "amount": 22.87,
-          "memo": "Repair and maintenance material",
-          "cardholder": "David Sanchez"
-        },
-        {
-          "date": "2026-09-23",
-          "merchant": "Lowe's",
-          "amount": 54.53,
-          "memo": "Repair and maintenance material",
-          "cardholder": "David Sanchez"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-09-15",
-          "name": "Jacob Jett",
-          "hours": 1.88,
-          "wage": 39,
-          "cost": 73.45
-        },
-        {
-          "date": "2026-09-18",
-          "name": "Jacob Jett",
-          "hours": 1.98,
-          "wage": 39,
-          "cost": 77.35
-        },
-        {
-          "date": "2026-09-21",
-          "name": "Jacob Jett",
-          "hours": 2.12,
-          "wage": 39,
-          "cost": 82.55
-        },
-        {
-          "date": "2026-09-22",
-          "name": "Jacob Jett",
-          "hours": 3.52,
-          "wage": 39,
-          "cost": 137.15
-        },
-        {
-          "date": "2026-09-23",
-          "name": "David Sanchez",
-          "hours": 5.4,
-          "wage": 38.25,
-          "cost": 206.55
-        },
-        {
-          "date": "2026-09-23",
-          "name": "Jacob Jett",
-          "hours": 5.98,
-          "wage": 39,
-          "cost": 233.35
+          "date": "2026-09-25",
+          "name": "Maria Florencia Sola",
+          "hours": 1.83,
+          "wage": 15,
+          "cost": 27.5
         }
       ]
     }
@@ -4308,7 +4483,7 @@
       "code": "r203",
       "appfolio_actual": null,
       "ramp_total": 41.53,
-      "labor_total": 639.92,
+      "labor_total": 659.67,
       "ramp_items": [
         {
           "date": "2026-09-04",
@@ -4476,9 +4651,9 @@
         {
           "date": "2026-09-24",
           "name": "Maria Florencia Sola",
-          "hours": 1.72,
+          "hours": 3.03,
           "wage": 15,
-          "cost": 25.75
+          "cost": 45.5
         }
       ]
     },
@@ -4487,7 +4662,7 @@
       "code": "c702",
       "appfolio_actual": null,
       "ramp_total": 0,
-      "labor_total": 905.44,
+      "labor_total": 1402.69,
       "ramp_items": [],
       "labor_items": [
         {
@@ -4580,6 +4755,20 @@
           "hours": 0.43,
           "wage": 38.25,
           "cost": 16.58
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Alexander Overall",
+          "hours": 5.67,
+          "wage": 36,
+          "cost": 204
+        },
+        {
+          "date": "2026-09-24",
+          "name": "David Sanchez",
+          "hours": 7.67,
+          "wage": 38.25,
+          "cost": 293.25
         }
       ]
     }
