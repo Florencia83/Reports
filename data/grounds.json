@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25",
+  "generated_at": "2026-09-26",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-31",
@@ -429,7 +429,7 @@
                     },
                     {
                       "ref": "TJU9IWQ",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-25"
                     }
                   ]
@@ -552,7 +552,7 @@
                     },
                     {
                       "ref": "TZW9W53",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-25"
                     }
                   ]
@@ -756,7 +756,7 @@
                     null,
                     {
                       "ref": "T7908IEB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-25"
                     }
                   ]
@@ -784,7 +784,7 @@
                     },
                     {
                       "ref": "TX7MZNJB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-25"
                     }
                   ]
@@ -812,7 +812,7 @@
                     },
                     {
                       "ref": "TD8QQCHB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-25"
                     }
                   ]
@@ -1917,9 +1917,9 @@
                     null,
                     null,
                     {
-                      "ref": "TE9QK28",
-                      "status": "CANCELED",
-                      "date": "2026-09-22"
+                      "ref": "T2XB37E",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-26"
                     }
                   ]
                 },
