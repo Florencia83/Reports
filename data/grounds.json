@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26",
+  "generated_at": "2026-09-27",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-08-31",
@@ -1918,7 +1918,7 @@
                     null,
                     {
                       "ref": "T2XB37E",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-26"
                     }
                   ]
@@ -2116,6 +2116,12 @@
   ],
   "flagged": [
     {
+      "recurring_id": 184373,
+      "title": "Monthly Landscaping",
+      "property": "tc68",
+      "employee": "Florencia Sola"
+    },
+    {
       "recurring_id": 165582,
       "title": "Quarterly Safety Inspections",
       "property": "tc68",
@@ -2224,12 +2230,6 @@
       "employee": "Jared Miller"
     },
     {
-      "recurring_id": 184373,
-      "title": "Monthly Landscaping",
-      "property": "tc68",
-      "employee": "Florencia Sola"
-    },
-    {
       "recurring_id": 114389,
       "title": "laundry lock battery replacement",
       "property": "ps17",
@@ -2270,12 +2270,6 @@
       "title": "Irrigation zone adjustments",
       "property": "kn47 K1",
       "employee": "Florencia Sola"
-    },
-    {
-      "recurring_id": 153955,
-      "title": "Pressure Washing",
-      "property": "kn47 K1",
-      "employee": ""
     }
   ]
 }
