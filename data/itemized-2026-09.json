@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
   "label": "September 2026",
-  "generated_at": "2026-09-26",
+  "generated_at": "2026-09-27",
   "complete": false,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -9,9 +9,9 @@
     {
       "property": "KN47",
       "code": "kn47",
-      "appfolio_actual": 12863.23,
+      "appfolio_actual": 12864.07,
       "ramp_total": 3717.13,
-      "labor_total": 5685.68,
+      "labor_total": 5686.28,
       "ramp_items": [
         {
           "date": "2026-09-01",
@@ -585,9 +585,9 @@
         {
           "date": "2026-09-25",
           "name": "Jaxson Lakins",
-          "hours": 7.85,
+          "hours": 7.87,
           "wage": 36,
-          "cost": 282.6
+          "cost": 283.2
         }
       ]
     },
@@ -1276,6 +1276,66 @@
       "labor_items": []
     },
     {
+      "property": "W226",
+      "code": "w226",
+      "appfolio_actual": 1198.01,
+      "ramp_total": 28.34,
+      "labor_total": 755.3,
+      "ramp_items": [
+        {
+          "date": "2026-09-23",
+          "merchant": "Lowe's",
+          "amount": 28.34,
+          "memo": "smoke detector",
+          "cardholder": "Jacob Jett"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-09-02",
+          "name": "Jacob Jett",
+          "hours": 6.3,
+          "wage": 39,
+          "cost": 245.7
+        },
+        {
+          "date": "2026-09-08",
+          "name": "Jacob Jett",
+          "hours": 3.3,
+          "wage": 39,
+          "cost": 128.7
+        },
+        {
+          "date": "2026-09-11",
+          "name": "Jacob Jett",
+          "hours": 3.87,
+          "wage": 39,
+          "cost": 150.8
+        },
+        {
+          "date": "2026-09-15",
+          "name": "Jacob Jett",
+          "hours": 2.08,
+          "wage": 39,
+          "cost": 81.25
+        },
+        {
+          "date": "2026-09-16",
+          "name": "Jacob Jett",
+          "hours": 1.82,
+          "wage": 39,
+          "cost": 70.85
+        },
+        {
+          "date": "2026-09-23",
+          "name": "Jacob Jett",
+          "hours": 2,
+          "wage": 39,
+          "cost": 78
+        }
+      ]
+    },
+    {
       "property": "PS25",
       "code": "ps25",
       "appfolio_actual": 1071.03,
@@ -1543,62 +1603,47 @@
       ]
     },
     {
-      "property": "W226",
-      "code": "w226",
-      "appfolio_actual": 1048.01,
-      "ramp_total": 28.34,
-      "labor_total": 755.3,
-      "ramp_items": [
-        {
-          "date": "2026-09-23",
-          "merchant": "Lowe's",
-          "amount": 28.34,
-          "memo": "smoke detector",
-          "cardholder": "Jacob Jett"
-        }
-      ],
+      "property": "TC34",
+      "code": "tc34",
+      "appfolio_actual": 935.63,
+      "ramp_total": 0,
+      "labor_total": 143.11,
+      "ramp_items": [],
       "labor_items": [
         {
-          "date": "2026-09-02",
-          "name": "Jacob Jett",
-          "hours": 6.3,
-          "wage": 39,
-          "cost": 245.7
+          "date": "2026-09-01",
+          "name": "Isaac Chavez",
+          "hours": 0.58,
+          "wage": 40.5,
+          "cost": 23.63
+        },
+        {
+          "date": "2026-09-04",
+          "name": "Isaac Chavez",
+          "hours": 0.47,
+          "wage": 40.5,
+          "cost": 18.9
         },
         {
           "date": "2026-09-08",
-          "name": "Jacob Jett",
-          "hours": 3.3,
-          "wage": 39,
-          "cost": 128.7
+          "name": "Isaac Chavez",
+          "hours": 0.52,
+          "wage": 40.5,
+          "cost": 20.93
         },
         {
-          "date": "2026-09-11",
-          "name": "Jacob Jett",
-          "hours": 3.87,
-          "wage": 39,
-          "cost": 150.8
+          "date": "2026-09-09",
+          "name": "Isaac Chavez",
+          "hours": 0.33,
+          "wage": 40.5,
+          "cost": 13.5
         },
         {
-          "date": "2026-09-15",
-          "name": "Jacob Jett",
-          "hours": 2.08,
-          "wage": 39,
-          "cost": 81.25
-        },
-        {
-          "date": "2026-09-16",
-          "name": "Jacob Jett",
-          "hours": 1.82,
-          "wage": 39,
-          "cost": 70.85
-        },
-        {
-          "date": "2026-09-23",
-          "name": "Jacob Jett",
-          "hours": 2,
-          "wage": 39,
-          "cost": 78
+          "date": "2026-09-17",
+          "name": "Isaac Chavez",
+          "hours": 1.63,
+          "wage": 40.5,
+          "cost": 66.15
         }
       ]
     },
@@ -2136,6 +2181,23 @@
           "hours": 2,
           "wage": 39,
           "cost": 78
+        }
+      ]
+    },
+    {
+      "property": "A511",
+      "code": "a511",
+      "appfolio_actual": 123.06,
+      "ramp_total": 0,
+      "labor_total": 63.7,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-09-25",
+          "name": "Jacob Jett",
+          "hours": 1.63,
+          "wage": 39,
+          "cost": 63.7
         }
       ]
     },
@@ -2780,68 +2842,6 @@
           "hours": 10.32,
           "wage": 15,
           "cost": 154.75
-        }
-      ]
-    },
-    {
-      "property": "TC34",
-      "code": "tc34",
-      "appfolio_actual": null,
-      "ramp_total": 0,
-      "labor_total": 143.11,
-      "ramp_items": [],
-      "labor_items": [
-        {
-          "date": "2026-09-01",
-          "name": "Isaac Chavez",
-          "hours": 0.58,
-          "wage": 40.5,
-          "cost": 23.63
-        },
-        {
-          "date": "2026-09-04",
-          "name": "Isaac Chavez",
-          "hours": 0.47,
-          "wage": 40.5,
-          "cost": 18.9
-        },
-        {
-          "date": "2026-09-08",
-          "name": "Isaac Chavez",
-          "hours": 0.52,
-          "wage": 40.5,
-          "cost": 20.93
-        },
-        {
-          "date": "2026-09-09",
-          "name": "Isaac Chavez",
-          "hours": 0.33,
-          "wage": 40.5,
-          "cost": 13.5
-        },
-        {
-          "date": "2026-09-17",
-          "name": "Isaac Chavez",
-          "hours": 1.63,
-          "wage": 40.5,
-          "cost": 66.15
-        }
-      ]
-    },
-    {
-      "property": "A511",
-      "code": "a511",
-      "appfolio_actual": null,
-      "ramp_total": 0,
-      "labor_total": 63.7,
-      "ramp_items": [],
-      "labor_items": [
-        {
-          "date": "2026-09-25",
-          "name": "Jacob Jett",
-          "hours": 1.63,
-          "wage": 39,
-          "cost": 63.7
         }
       ]
     }
@@ -3981,6 +3981,52 @@
       ]
     },
     {
+      "property": "A511",
+      "code": "a511",
+      "appfolio_actual": 413.13,
+      "ramp_total": 6.53,
+      "labor_total": 288.83,
+      "ramp_items": [
+        {
+          "date": "2026-09-01",
+          "merchant": "The Home Depot",
+          "amount": 6.53,
+          "memo": "Grounds and maintenance materials",
+          "cardholder": "David Sanchez"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-09-01",
+          "name": "Alexander Overall",
+          "hours": 3.35,
+          "wage": 36,
+          "cost": 120.6
+        },
+        {
+          "date": "2026-09-01",
+          "name": "David Sanchez",
+          "hours": 3.2,
+          "wage": 38.25,
+          "cost": 122.4
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Alexander Overall",
+          "hours": 0.6,
+          "wage": 36,
+          "cost": 21.6
+        },
+        {
+          "date": "2026-09-22",
+          "name": "David Sanchez",
+          "hours": 0.63,
+          "wage": 38.25,
+          "cost": 24.23
+        }
+      ]
+    },
+    {
       "property": "W226",
       "code": "w226",
       "appfolio_actual": 403.09,
@@ -4910,52 +4956,6 @@
           "hours": 3.03,
           "wage": 15,
           "cost": 45.5
-        }
-      ]
-    },
-    {
-      "property": "A511",
-      "code": "a511",
-      "appfolio_actual": null,
-      "ramp_total": 6.53,
-      "labor_total": 288.83,
-      "ramp_items": [
-        {
-          "date": "2026-09-01",
-          "merchant": "The Home Depot",
-          "amount": 6.53,
-          "memo": "Grounds and maintenance materials",
-          "cardholder": "David Sanchez"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-09-01",
-          "name": "Alexander Overall",
-          "hours": 3.35,
-          "wage": 36,
-          "cost": 120.6
-        },
-        {
-          "date": "2026-09-01",
-          "name": "David Sanchez",
-          "hours": 3.2,
-          "wage": 38.25,
-          "cost": 122.4
-        },
-        {
-          "date": "2026-09-22",
-          "name": "Alexander Overall",
-          "hours": 0.6,
-          "wage": 36,
-          "cost": 21.6
-        },
-        {
-          "date": "2026-09-22",
-          "name": "David Sanchez",
-          "hours": 0.63,
-          "wage": 38.25,
-          "cost": 24.23
         }
       ]
     }
