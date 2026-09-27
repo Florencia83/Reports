@@ -1,13 +1,13 @@
 {
   "month": "2026-09",
-  "generated_at": "2026-09-26",
+  "generated_at": "2026-09-27",
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 20566.32,
+    "labor": 20566.92,
     "materials": 4254.36,
     "invoices": 0,
-    "total_actual": 24820.68,
-    "variance": 57815.45
+    "total_actual": 24821.28,
+    "variance": 57814.85
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,

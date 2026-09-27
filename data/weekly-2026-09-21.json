@@ -3,15 +3,15 @@
   "week_end": "2026-09-27",
   "label": "September 21 – 27, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-26",
-  "complete": false,
+  "generated_at": "2026-09-27",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 37.24,
+      "last_30": 37.41,
       "last_7": 36.32
     },
     {
@@ -143,10 +143,15 @@
     {
       "name": "Jaxson Lakins",
       "wo_count": 70,
-      "avg_cost_per_wo": 79.84,
-      "total_labor_cost": 3246.63,
-      "avg_resident_rating": 4.55,
+      "avg_cost_per_wo": 79.85,
+      "total_labor_cost": 3247.23,
+      "avg_resident_rating": 4.5,
       "reviews": [
+        {
+          "ref": "TU7GFUI",
+          "rating": 4,
+          "text": "Great job Jaxson. Now my bedroom can close and lock without getting stuck."
+        },
         {
           "ref": "TTVD82Z",
           "rating": 4,
@@ -209,8 +214,18 @@
       "wo_count": 65,
       "avg_cost_per_wo": 33.53,
       "total_labor_cost": 1795.22,
-      "avg_resident_rating": 4.5,
+      "avg_resident_rating": 4,
       "reviews": [
+        {
+          "ref": "T9IJBHY",
+          "rating": 3,
+          "text": "The walls still need sanded and repainted over the so it looks like no damage was done."
+        },
+        {
+          "ref": "TCX9MX6",
+          "rating": 4,
+          "text": "Great job Jared."
+        },
         {
           "ref": "TPBGZU1",
           "rating": 5,
@@ -292,7 +307,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 585.23
+      "amount": 591.07
     },
     {
       "category": "Supplies and Tools",
@@ -313,11 +328,11 @@
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 20566.32,
+    "labor": 20566.92,
     "materials": 4254.36,
     "invoices": 0,
-    "total_actual": 24820.68,
-    "variance": 57815.45
+    "total_actual": 24821.28,
+    "variance": 57814.85
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
