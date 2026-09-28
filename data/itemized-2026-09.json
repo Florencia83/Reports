@@ -1,7 +1,7 @@
 {
   "month": "2026-09",
   "label": "September 2026",
-  "generated_at": "2026-09-27",
+  "generated_at": "2026-09-28",
   "complete": false,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -9,9 +9,9 @@
     {
       "property": "KN47",
       "code": "kn47",
-      "appfolio_actual": 12864.07,
-      "ramp_total": 3717.13,
-      "labor_total": 5686.28,
+      "appfolio_actual": 13025.18,
+      "ramp_total": 3730.91,
+      "labor_total": 5788.41,
       "ramp_items": [
         {
           "date": "2026-09-01",
@@ -313,6 +313,13 @@
           "amount": 25.01,
           "memo": "Purchased deadbolt",
           "cardholder": "Jaxson Lakins"
+        },
+        {
+          "date": "2026-09-28",
+          "merchant": "The Home Depot",
+          "amount": 13.78,
+          "memo": "R&M supplies purchase",
+          "cardholder": "Jared Miller"
         }
       ],
       "labor_items": [
@@ -588,6 +595,27 @@
           "hours": 7.87,
           "wage": 36,
           "cost": 283.2
+        },
+        {
+          "date": "2026-09-27",
+          "name": "Jaxson Lakins",
+          "hours": 0.67,
+          "wage": 36,
+          "cost": 24
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Isaac Chavez",
+          "hours": 0.75,
+          "wage": 40.5,
+          "cost": 30.38
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Jared Miller",
+          "hours": 1.13,
+          "wage": 42.135,
+          "cost": 47.75
         }
       ]
     },
@@ -596,7 +624,7 @@
       "code": "rl16",
       "appfolio_actual": 7194.1,
       "ramp_total": 455.24,
-      "labor_total": 2326.54,
+      "labor_total": 2373.78,
       "ramp_items": [
         {
           "date": "2026-09-03",
@@ -865,6 +893,13 @@
           "hours": 1.83,
           "wage": 36,
           "cost": 66
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Margarito Saldana",
+          "hours": 1.11,
+          "wage": 42.599999999999994,
+          "cost": 47.24
         }
       ]
     },
@@ -1338,9 +1373,9 @@
     {
       "property": "PS25",
       "code": "ps25",
-      "appfolio_actual": 1071.03,
+      "appfolio_actual": 1123.61,
       "ramp_total": 75,
-      "labor_total": 673.38,
+      "labor_total": 710.66,
       "ramp_items": [
         {
           "date": "2026-09-01",
@@ -1360,13 +1395,6 @@
       "labor_items": [
         {
           "date": "2026-09-01",
-          "name": "Isaac Chavez",
-          "hours": 0.27,
-          "wage": 40.5,
-          "cost": 10.8
-        },
-        {
-          "date": "2026-09-01",
           "name": "Jared Miller",
           "hours": 0.53,
           "wage": 42.135,
@@ -1378,13 +1406,6 @@
           "hours": 7.47,
           "wage": 36,
           "cost": 268.8
-        },
-        {
-          "date": "2026-09-02",
-          "name": "Isaac Chavez",
-          "hours": 0.38,
-          "wage": 40.5,
-          "cost": 15.52
         },
         {
           "date": "2026-09-04",
@@ -1462,6 +1483,13 @@
           "hours": 1.07,
           "wage": 42.135,
           "cost": 44.94
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Jaxson Lakins",
+          "hours": 1.77,
+          "wage": 36,
+          "cost": 63.6
         }
       ]
     },
@@ -1470,7 +1498,7 @@
       "code": "tc68",
       "appfolio_actual": 1049.87,
       "ramp_total": 2890.97,
-      "labor_total": 346.29,
+      "labor_total": 356.42,
       "ramp_items": [
         {
           "date": "2026-09-01",
@@ -1547,9 +1575,9 @@
         {
           "date": "2026-09-09",
           "name": "Isaac Chavez",
-          "hours": 0.5,
+          "hours": 0.75,
           "wage": 40.5,
-          "cost": 20.25
+          "cost": 30.38
         },
         {
           "date": "2026-09-10",
@@ -2001,7 +2029,7 @@
       "code": "rl21",
       "appfolio_actual": 263.86,
       "ramp_total": 25.3,
-      "labor_total": 187.44,
+      "labor_total": 197.38,
       "ramp_items": [
         {
           "date": "2026-09-22",
@@ -2046,13 +2074,20 @@
           "hours": 0.63,
           "wage": 42.135,
           "cost": 26.69
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Margarito Saldana",
+          "hours": 0.23,
+          "wage": 42.599999999999994,
+          "cost": 9.94
         }
       ]
     },
     {
       "property": "S129",
       "code": "s129",
-      "appfolio_actual": 202.62,
+      "appfolio_actual": 223.29,
       "ramp_total": 57.83,
       "labor_total": 107.25,
       "ramp_items": [
@@ -2241,6 +2276,381 @@
         }
       ],
       "labor_items": []
+    },
+    {
+      "property": "R203",
+      "code": "r203",
+      "appfolio_actual": null,
+      "ramp_total": 985.99,
+      "labor_total": 5377.67,
+      "ramp_items": [
+        {
+          "date": "2026-09-01",
+          "merchant": "Sherwin-Williams",
+          "amount": 48.42,
+          "memo": "Materials for property maintenance",
+          "cardholder": "Matt Romme"
+        },
+        {
+          "date": "2026-09-09",
+          "merchant": "Ace Hardware",
+          "amount": 20.58,
+          "memo": "Key cutting",
+          "cardholder": "Hannah Deckard"
+        },
+        {
+          "date": "2026-09-10",
+          "merchant": "HD Supply Facilities Maintenance",
+          "amount": 435.31,
+          "memo": "Supplies for property maintenance and repair",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-14",
+          "merchant": "Staples",
+          "amount": 95.98,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-14",
+          "merchant": "Lowe's",
+          "amount": 229.78,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-22",
+          "merchant": "HD Supply Facilities Maintenance",
+          "amount": 98.18,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-23",
+          "merchant": "Lowe's",
+          "amount": 37.07,
+          "memo": "Supplies for property repairs and maintenance",
+          "cardholder": "Edward Villa"
+        },
+        {
+          "date": "2026-09-25",
+          "merchant": "The Home Depot",
+          "amount": 20.67,
+          "memo": "Supplies for property maintenance and repair",
+          "cardholder": "Edward Villa"
+        }
+      ],
+      "labor_items": [
+        {
+          "date": "2026-09-01",
+          "name": "Isaac Chavez",
+          "hours": 5.93,
+          "wage": 40.5,
+          "cost": 240.3
+        },
+        {
+          "date": "2026-09-01",
+          "name": "Maria Florencia Sola",
+          "hours": 11.03,
+          "wage": 15,
+          "cost": 165.5
+        },
+        {
+          "date": "2026-09-02",
+          "name": "Isaac Chavez",
+          "hours": 5.85,
+          "wage": 40.5,
+          "cost": 236.93
+        },
+        {
+          "date": "2026-09-02",
+          "name": "Maria Florencia Sola",
+          "hours": 9.93,
+          "wage": 15,
+          "cost": 149
+        },
+        {
+          "date": "2026-09-03",
+          "name": "Isaac Chavez",
+          "hours": 0.42,
+          "wage": 40.5,
+          "cost": 16.88
+        },
+        {
+          "date": "2026-09-03",
+          "name": "Maria Florencia Sola",
+          "hours": 9.25,
+          "wage": 15,
+          "cost": 138.75
+        },
+        {
+          "date": "2026-09-04",
+          "name": "Isaac Chavez",
+          "hours": 0.38,
+          "wage": 40.5,
+          "cost": 15.53
+        },
+        {
+          "date": "2026-09-04",
+          "name": "Maria Florencia Sola",
+          "hours": 8.78,
+          "wage": 15,
+          "cost": 131.75
+        },
+        {
+          "date": "2026-09-06",
+          "name": "Maria Florencia Sola",
+          "hours": 4.73,
+          "wage": 15,
+          "cost": 71
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Maria Florencia Sola",
+          "hours": 6.35,
+          "wage": 15,
+          "cost": 95.25
+        },
+        {
+          "date": "2026-09-08",
+          "name": "Isaac Chavez",
+          "hours": 4.7,
+          "wage": 40.5,
+          "cost": 190.35
+        },
+        {
+          "date": "2026-09-08",
+          "name": "Maria Florencia Sola",
+          "hours": 7.77,
+          "wage": 15,
+          "cost": 116.5
+        },
+        {
+          "date": "2026-09-09",
+          "name": "Isaac Chavez",
+          "hours": 4.3,
+          "wage": 40.5,
+          "cost": 174.15
+        },
+        {
+          "date": "2026-09-09",
+          "name": "Maria Florencia Sola",
+          "hours": 6.78,
+          "wage": 15,
+          "cost": 101.75
+        },
+        {
+          "date": "2026-09-10",
+          "name": "Isaac Chavez",
+          "hours": 3.58,
+          "wage": 40.5,
+          "cost": 145.13
+        },
+        {
+          "date": "2026-09-10",
+          "name": "Maria Florencia Sola",
+          "hours": 6.52,
+          "wage": 15,
+          "cost": 97.75
+        },
+        {
+          "date": "2026-09-11",
+          "name": "Isaac Chavez",
+          "hours": 6.08,
+          "wage": 40.5,
+          "cost": 246.38
+        },
+        {
+          "date": "2026-09-11",
+          "name": "Maria Florencia Sola",
+          "hours": 2.57,
+          "wage": 15,
+          "cost": 38.5
+        },
+        {
+          "date": "2026-09-12",
+          "name": "Maria Florencia Sola",
+          "hours": 1.9,
+          "wage": 15,
+          "cost": 28.5
+        },
+        {
+          "date": "2026-09-14",
+          "name": "Isaac Chavez",
+          "hours": 5.8,
+          "wage": 40.5,
+          "cost": 234.9
+        },
+        {
+          "date": "2026-09-14",
+          "name": "Maria Florencia Sola",
+          "hours": 6.22,
+          "wage": 15,
+          "cost": 93.25
+        },
+        {
+          "date": "2026-09-15",
+          "name": "Isaac Chavez",
+          "hours": 7.05,
+          "wage": 40.5,
+          "cost": 285.53
+        },
+        {
+          "date": "2026-09-15",
+          "name": "Maria Florencia Sola",
+          "hours": 7.03,
+          "wage": 15,
+          "cost": 105.5
+        },
+        {
+          "date": "2026-09-16",
+          "name": "Isaac Chavez",
+          "hours": 5.77,
+          "wage": 40.5,
+          "cost": 233.55
+        },
+        {
+          "date": "2026-09-16",
+          "name": "Maria Florencia Sola",
+          "hours": 8.57,
+          "wage": 15,
+          "cost": 128.5
+        },
+        {
+          "date": "2026-09-17",
+          "name": "Isaac Chavez",
+          "hours": 5.18,
+          "wage": 40.5,
+          "cost": 209.93
+        },
+        {
+          "date": "2026-09-17",
+          "name": "Maria Florencia Sola",
+          "hours": 7.37,
+          "wage": 15,
+          "cost": 110.5
+        },
+        {
+          "date": "2026-09-18",
+          "name": "Isaac Chavez",
+          "hours": 4.8,
+          "wage": 40.5,
+          "cost": 194.4
+        },
+        {
+          "date": "2026-09-18",
+          "name": "Maria Florencia Sola",
+          "hours": 6.4,
+          "wage": 15,
+          "cost": 96
+        },
+        {
+          "date": "2026-09-19",
+          "name": "Maria Florencia Sola",
+          "hours": 1.78,
+          "wage": 15,
+          "cost": 26.75
+        },
+        {
+          "date": "2026-09-20",
+          "name": "Maria Florencia Sola",
+          "hours": 0.98,
+          "wage": 15,
+          "cost": 14.75
+        },
+        {
+          "date": "2026-09-21",
+          "name": "Maria Florencia Sola",
+          "hours": 8.68,
+          "wage": 15,
+          "cost": 130.25
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Isaac Chavez",
+          "hours": 1.22,
+          "wage": 40.5,
+          "cost": 49.28
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Jared Miller",
+          "hours": 0.22,
+          "wage": 42.135,
+          "cost": 9.13
+        },
+        {
+          "date": "2026-09-22",
+          "name": "Maria Florencia Sola",
+          "hours": 9.8,
+          "wage": 15,
+          "cost": 147
+        },
+        {
+          "date": "2026-09-23",
+          "name": "Isaac Chavez",
+          "hours": 3.53,
+          "wage": 40.5,
+          "cost": 143.1
+        },
+        {
+          "date": "2026-09-23",
+          "name": "Maria Florencia Sola",
+          "hours": 7.55,
+          "wage": 15,
+          "cost": 113.25
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Isaac Chavez",
+          "hours": 3.23,
+          "wage": 40.5,
+          "cost": 130.95
+        },
+        {
+          "date": "2026-09-24",
+          "name": "Maria Florencia Sola",
+          "hours": 5.7,
+          "wage": 15,
+          "cost": 85.5
+        },
+        {
+          "date": "2026-09-25",
+          "name": "Isaac Chavez",
+          "hours": 4.67,
+          "wage": 40.5,
+          "cost": 189
+        },
+        {
+          "date": "2026-09-25",
+          "name": "Maria Florencia Sola",
+          "hours": 10.32,
+          "wage": 15,
+          "cost": 154.75
+        },
+        {
+          "date": "2026-09-27",
+          "name": "Maria Florencia Sola",
+          "hours": 2.5,
+          "wage": 15,
+          "cost": 37.5
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Isaac Chavez",
+          "hours": 0.33,
+          "wage": 40.5,
+          "cost": 13.5
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Maria Florencia Sola",
+          "hours": 2.73,
+          "wage": 15,
+          "cost": 41
+        }
+      ]
     },
     {
       "property": "C702",
@@ -2497,353 +2907,6 @@
           "cost": 83.85
         }
       ]
-    },
-    {
-      "property": "R203",
-      "code": "r203",
-      "appfolio_actual": null,
-      "ramp_total": 965.32,
-      "labor_total": 5279.59,
-      "ramp_items": [
-        {
-          "date": "2026-09-01",
-          "merchant": "Sherwin-Williams",
-          "amount": 48.42,
-          "memo": "Materials for property maintenance",
-          "cardholder": "Matt Romme"
-        },
-        {
-          "date": "2026-09-09",
-          "merchant": "Ace Hardware",
-          "amount": 20.58,
-          "memo": "Key cutting",
-          "cardholder": "Hannah Deckard"
-        },
-        {
-          "date": "2026-09-10",
-          "merchant": "HD Supply Facilities Maintenance",
-          "amount": 435.31,
-          "memo": "Supplies for property maintenance and repair",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-14",
-          "merchant": "Staples",
-          "amount": 95.98,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-14",
-          "merchant": "Lowe's",
-          "amount": 229.78,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-22",
-          "merchant": "HD Supply Facilities Maintenance",
-          "amount": 98.18,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        },
-        {
-          "date": "2026-09-23",
-          "merchant": "Lowe's",
-          "amount": 37.07,
-          "memo": "Supplies for property repairs and maintenance",
-          "cardholder": "Edward Villa"
-        }
-      ],
-      "labor_items": [
-        {
-          "date": "2026-09-01",
-          "name": "Isaac Chavez",
-          "hours": 5.93,
-          "wage": 40.5,
-          "cost": 240.3
-        },
-        {
-          "date": "2026-09-01",
-          "name": "Maria Florencia Sola",
-          "hours": 11.03,
-          "wage": 15,
-          "cost": 165.5
-        },
-        {
-          "date": "2026-09-02",
-          "name": "Isaac Chavez",
-          "hours": 5.85,
-          "wage": 40.5,
-          "cost": 236.93
-        },
-        {
-          "date": "2026-09-02",
-          "name": "Maria Florencia Sola",
-          "hours": 9.93,
-          "wage": 15,
-          "cost": 149
-        },
-        {
-          "date": "2026-09-03",
-          "name": "Isaac Chavez",
-          "hours": 0.42,
-          "wage": 40.5,
-          "cost": 16.88
-        },
-        {
-          "date": "2026-09-03",
-          "name": "Maria Florencia Sola",
-          "hours": 9.25,
-          "wage": 15,
-          "cost": 138.75
-        },
-        {
-          "date": "2026-09-04",
-          "name": "Isaac Chavez",
-          "hours": 0.38,
-          "wage": 40.5,
-          "cost": 15.53
-        },
-        {
-          "date": "2026-09-04",
-          "name": "Maria Florencia Sola",
-          "hours": 8.78,
-          "wage": 15,
-          "cost": 131.75
-        },
-        {
-          "date": "2026-09-06",
-          "name": "Maria Florencia Sola",
-          "hours": 4.73,
-          "wage": 15,
-          "cost": 71
-        },
-        {
-          "date": "2026-09-07",
-          "name": "Maria Florencia Sola",
-          "hours": 6.35,
-          "wage": 15,
-          "cost": 95.25
-        },
-        {
-          "date": "2026-09-08",
-          "name": "Isaac Chavez",
-          "hours": 4.7,
-          "wage": 40.5,
-          "cost": 190.35
-        },
-        {
-          "date": "2026-09-08",
-          "name": "Maria Florencia Sola",
-          "hours": 7.77,
-          "wage": 15,
-          "cost": 116.5
-        },
-        {
-          "date": "2026-09-09",
-          "name": "Isaac Chavez",
-          "hours": 4.55,
-          "wage": 40.5,
-          "cost": 184.27
-        },
-        {
-          "date": "2026-09-09",
-          "name": "Maria Florencia Sola",
-          "hours": 6.78,
-          "wage": 15,
-          "cost": 101.75
-        },
-        {
-          "date": "2026-09-10",
-          "name": "Isaac Chavez",
-          "hours": 3.58,
-          "wage": 40.5,
-          "cost": 145.13
-        },
-        {
-          "date": "2026-09-10",
-          "name": "Maria Florencia Sola",
-          "hours": 6.52,
-          "wage": 15,
-          "cost": 97.75
-        },
-        {
-          "date": "2026-09-11",
-          "name": "Isaac Chavez",
-          "hours": 6.08,
-          "wage": 40.5,
-          "cost": 246.38
-        },
-        {
-          "date": "2026-09-11",
-          "name": "Maria Florencia Sola",
-          "hours": 2.57,
-          "wage": 15,
-          "cost": 38.5
-        },
-        {
-          "date": "2026-09-12",
-          "name": "Maria Florencia Sola",
-          "hours": 1.9,
-          "wage": 15,
-          "cost": 28.5
-        },
-        {
-          "date": "2026-09-14",
-          "name": "Isaac Chavez",
-          "hours": 5.8,
-          "wage": 40.5,
-          "cost": 234.9
-        },
-        {
-          "date": "2026-09-14",
-          "name": "Maria Florencia Sola",
-          "hours": 6.22,
-          "wage": 15,
-          "cost": 93.25
-        },
-        {
-          "date": "2026-09-15",
-          "name": "Isaac Chavez",
-          "hours": 7.05,
-          "wage": 40.5,
-          "cost": 285.53
-        },
-        {
-          "date": "2026-09-15",
-          "name": "Maria Florencia Sola",
-          "hours": 7.03,
-          "wage": 15,
-          "cost": 105.5
-        },
-        {
-          "date": "2026-09-16",
-          "name": "Isaac Chavez",
-          "hours": 5.77,
-          "wage": 40.5,
-          "cost": 233.55
-        },
-        {
-          "date": "2026-09-16",
-          "name": "Maria Florencia Sola",
-          "hours": 8.57,
-          "wage": 15,
-          "cost": 128.5
-        },
-        {
-          "date": "2026-09-17",
-          "name": "Isaac Chavez",
-          "hours": 5.18,
-          "wage": 40.5,
-          "cost": 209.93
-        },
-        {
-          "date": "2026-09-17",
-          "name": "Maria Florencia Sola",
-          "hours": 7.37,
-          "wage": 15,
-          "cost": 110.5
-        },
-        {
-          "date": "2026-09-18",
-          "name": "Isaac Chavez",
-          "hours": 4.8,
-          "wage": 40.5,
-          "cost": 194.4
-        },
-        {
-          "date": "2026-09-18",
-          "name": "Maria Florencia Sola",
-          "hours": 6.4,
-          "wage": 15,
-          "cost": 96
-        },
-        {
-          "date": "2026-09-19",
-          "name": "Maria Florencia Sola",
-          "hours": 1.78,
-          "wage": 15,
-          "cost": 26.75
-        },
-        {
-          "date": "2026-09-20",
-          "name": "Maria Florencia Sola",
-          "hours": 0.98,
-          "wage": 15,
-          "cost": 14.75
-        },
-        {
-          "date": "2026-09-21",
-          "name": "Maria Florencia Sola",
-          "hours": 8.68,
-          "wage": 15,
-          "cost": 130.25
-        },
-        {
-          "date": "2026-09-22",
-          "name": "Isaac Chavez",
-          "hours": 1.22,
-          "wage": 40.5,
-          "cost": 49.28
-        },
-        {
-          "date": "2026-09-22",
-          "name": "Jared Miller",
-          "hours": 0.22,
-          "wage": 42.135,
-          "cost": 9.13
-        },
-        {
-          "date": "2026-09-22",
-          "name": "Maria Florencia Sola",
-          "hours": 9.8,
-          "wage": 15,
-          "cost": 147
-        },
-        {
-          "date": "2026-09-23",
-          "name": "Isaac Chavez",
-          "hours": 3.53,
-          "wage": 40.5,
-          "cost": 143.1
-        },
-        {
-          "date": "2026-09-23",
-          "name": "Maria Florencia Sola",
-          "hours": 7.55,
-          "wage": 15,
-          "cost": 113.25
-        },
-        {
-          "date": "2026-09-24",
-          "name": "Isaac Chavez",
-          "hours": 3.23,
-          "wage": 40.5,
-          "cost": 130.95
-        },
-        {
-          "date": "2026-09-24",
-          "name": "Maria Florencia Sola",
-          "hours": 5.7,
-          "wage": 15,
-          "cost": 85.5
-        },
-        {
-          "date": "2026-09-25",
-          "name": "Isaac Chavez",
-          "hours": 4.27,
-          "wage": 40.5,
-          "cost": 172.8
-        },
-        {
-          "date": "2026-09-25",
-          "name": "Maria Florencia Sola",
-          "hours": 10.32,
-          "wage": 15,
-          "cost": 154.75
-        }
-      ]
     }
   ],
   "grounds": [
@@ -3008,9 +3071,9 @@
     {
       "property": "PS25",
       "code": "ps25",
-      "appfolio_actual": 3505.29,
+      "appfolio_actual": 3542.44,
       "ramp_total": 186.04,
-      "labor_total": 2353.42,
+      "labor_total": 2379.74,
       "ramp_items": [
         {
           "date": "2026-09-03",
@@ -3079,10 +3142,24 @@
         },
         {
           "date": "2026-09-01",
+          "name": "Isaac Chavez",
+          "hours": 0.27,
+          "wage": 40.5,
+          "cost": 10.8
+        },
+        {
+          "date": "2026-09-01",
           "name": "Jared Miller",
           "hours": 0.4,
           "wage": 42.135,
           "cost": 16.85
+        },
+        {
+          "date": "2026-09-02",
+          "name": "Isaac Chavez",
+          "hours": 0.38,
+          "wage": 40.5,
+          "cost": 15.52
         },
         {
           "date": "2026-09-02",
@@ -3180,9 +3257,9 @@
     {
       "property": "RL16",
       "code": "rl16",
-      "appfolio_actual": 2701.85,
+      "appfolio_actual": 2828.04,
       "ramp_total": 0,
-      "labor_total": 1942.72,
+      "labor_total": 2033.47,
       "ramp_items": [],
       "labor_items": [
         {
@@ -3282,6 +3359,13 @@
           "hours": 3.7,
           "wage": 42.135,
           "cost": 155.9
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Hannah Deckard",
+          "hours": 2.75,
+          "wage": 33,
+          "cost": 90.75
         }
       ]
     },
@@ -4785,7 +4869,7 @@
       "code": "r203",
       "appfolio_actual": null,
       "ramp_total": 41.53,
-      "labor_total": 659.67,
+      "labor_total": 675.42,
       "ramp_items": [
         {
           "date": "2026-09-04",
@@ -4956,6 +5040,13 @@
           "hours": 3.03,
           "wage": 15,
           "cost": 45.5
+        },
+        {
+          "date": "2026-09-28",
+          "name": "Maria Florencia Sola",
+          "hours": 1.05,
+          "wage": 15,
+          "cost": 15.75
         }
       ]
     }
