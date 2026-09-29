@@ -478,7 +478,7 @@
                     },
                     {
                       "ref": "TVHTITEB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -506,7 +506,7 @@
                     },
                     {
                       "ref": "TIL6MHM",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -534,7 +534,7 @@
                     },
                     {
                       "ref": "T4MA3X8",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -601,7 +601,7 @@
                     },
                     {
                       "ref": "TY1WXL6",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -617,7 +617,7 @@
                     null,
                     {
                       "ref": "TLTGZP8",
-                      "status": "SCHEDULED",
+                      "status": "COULD NOT COMPLETE",
                       "date": "2026-09-29"
                     }
                   ]
@@ -709,7 +709,7 @@
                     },
                     {
                       "ref": "TPMWMU4",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -1495,7 +1495,7 @@
                     },
                     {
                       "ref": "T4BK62U",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -1529,7 +1529,7 @@
                     null,
                     {
                       "ref": "T3XL2DG",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -1749,8 +1749,8 @@
                     },
                     {
                       "ref": "T2XLAZQ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-28"
+                      "status": "COMPLETED",
+                      "date": "2026-09-29"
                     }
                   ]
                 }
@@ -1787,8 +1787,8 @@
                     },
                     {
                       "ref": "TJ5663D",
-                      "status": "OVERDUE",
-                      "date": "2026-09-28"
+                      "status": "COMPLETED",
+                      "date": "2026-09-29"
                     }
                   ]
                 }
@@ -1931,9 +1931,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TR8P70Y",
+                      "ref": "TZ0J23B",
                       "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "date": "2026-09-29"
                     }
                   ]
                 }
@@ -1961,9 +1961,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TJ051DIB",
+                      "ref": "T3MA0WDB",
                       "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "date": "2026-09-29"
                     }
                   ]
                 },
@@ -2001,9 +2001,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TLQ8AWC",
+                      "ref": "TPZA5QJ",
                       "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "date": "2026-09-29"
                     }
                   ]
                 },
@@ -2056,7 +2056,11 @@
                       "status": "CANCELED",
                       "date": "2026-09-22"
                     },
-                    null
+                    {
+                      "ref": "TPQ8KAE",
+                      "status": "SCHEDULED",
+                      "date": "2026-09-29"
+                    }
                   ]
                 },
                 {
@@ -2192,6 +2196,54 @@
       "employee": "Florencia Sola"
     },
     {
+      "recurring_id": 189773,
+      "title": "Pet waste removal (Fri)",
+      "property": "kn47 K1",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189770,
+      "title": "Laundry rooms",
+      "property": "rl16",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189768,
+      "title": "Pet waste removal",
+      "property": "rl16",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189766,
+      "title": "Clean laundry room",
+      "property": "ps25",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189764,
+      "title": "Pet waste removal",
+      "property": "ps25",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189762,
+      "title": "Empty trash cans",
+      "property": "ps91",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189761,
+      "title": "Pet waste",
+      "property": "ps91",
+      "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 189760,
+      "title": "Clean laundry room",
+      "property": "ps17",
+      "employee": "Hannah Deckard"
+    },
+    {
       "recurring_id": 135424,
       "title": "B Building - Common area carpet cleaning ",
       "property": "rl16",
@@ -2222,63 +2274,15 @@
       "employee": "Hannah Deckard"
     },
     {
-      "recurring_id": 189773,
-      "title": "Pet waste removal (Fri)",
-      "property": "kn47 K1",
-      "employee": "Hannah Deckard"
-    },
-    {
-      "recurring_id": 189766,
-      "title": "Clean laundry room",
-      "property": "ps25",
-      "employee": "Hannah Deckard"
-    },
-    {
-      "recurring_id": 189764,
-      "title": "Pet waste removal",
-      "property": "ps25",
-      "employee": "Hannah Deckard"
-    },
-    {
-      "recurring_id": 189763,
-      "title": "Clean laundry room",
-      "property": "ps91",
-      "employee": "Hannah Deckard"
-    },
-    {
-      "recurring_id": 189762,
-      "title": "Empty trash cans",
-      "property": "ps91",
-      "employee": "Hannah Deckard"
-    },
-    {
-      "recurring_id": 189761,
-      "title": "Pet waste",
-      "property": "ps91",
-      "employee": "Hannah Deckard"
-    },
-    {
-      "recurring_id": 189760,
-      "title": "Clean laundry room",
-      "property": "ps17",
-      "employee": "Hannah Deckard"
-    },
-    {
       "recurring_id": 113069,
       "title": "hydrojetting",
       "property": "w226",
       "employee": "Jared Miller"
     },
     {
-      "recurring_id": 189770,
-      "title": "Laundry rooms",
-      "property": "rl16",
-      "employee": "Hannah Deckard"
-    },
-    {
-      "recurring_id": 189768,
-      "title": "Pet waste removal",
-      "property": "rl16",
+      "recurring_id": 189763,
+      "title": "Clean laundry room",
+      "property": "ps91",
       "employee": "Hannah Deckard"
     },
     {
