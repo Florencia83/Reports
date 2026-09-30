@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29",
+  "generated_at": "2026-09-30",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-09-07",
@@ -60,7 +60,7 @@
                     },
                     {
                       "ref": "TY9WKTDB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-29"
                     }
                   ]
@@ -128,7 +128,7 @@
                     },
                     {
                       "ref": "T1H41EZ",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-09-30"
                     }
                   ]
@@ -997,7 +997,11 @@
                       "status": "COMPLETED",
                       "date": "2026-09-21"
                     },
-                    null
+                    {
+                      "ref": "TCK3CMB",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
+                    }
                   ]
                 }
               ]
@@ -1032,9 +1036,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TV9KL2R",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-29"
+                      "ref": "TY64I4Q",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1071,7 +1075,7 @@
                     },
                     {
                       "ref": "TUICYWG",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-29"
                     }
                   ]
@@ -1108,9 +1112,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "T3JN6CGB",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-29"
+                      "ref": "TZVFFINB",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1180,9 +1184,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TJL7G22",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-01"
+                      "ref": "TUNIGB5",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1218,9 +1222,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TP9FDZ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-28"
+                      "ref": "T7QI2Q8",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 },
@@ -1262,9 +1266,9 @@
                     null,
                     null,
                     {
-                      "ref": "TERYCHJB",
-                      "status": "OVERDUE",
-                      "date": "2026-09-28"
+                      "ref": "TY2DZ3L",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 },
@@ -1280,7 +1284,7 @@
                     {
                       "ref": "T4C5K1T",
                       "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1316,8 +1320,8 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "T4491HF",
-                      "status": "SCHEDULED",
+                      "ref": "TE1UHREB",
+                      "status": "CANCELED",
                       "date": "2026-09-30"
                     }
                   ]
@@ -1385,7 +1389,7 @@
                     },
                     {
                       "ref": "TH538BR",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-29"
                     }
                   ]
@@ -1423,8 +1427,8 @@
                     },
                     {
                       "ref": "TTPQC9LB",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1456,9 +1460,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TJP7VH0",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "ref": "TFQI6N5",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1494,9 +1498,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "T4BK62U",
-                      "status": "COMPLETED",
-                      "date": "2026-09-29"
+                      "ref": "T86HLCJB",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1566,9 +1570,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TX6X4C3",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-29"
+                      "ref": "TP8NT83",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1604,9 +1608,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "T9BEGZ0",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-29"
+                      "ref": "TY50T8W",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1642,9 +1646,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TMX6UKH",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-01"
+                      "ref": "T70ARJK",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1680,9 +1684,9 @@
                       "date": "2026-09-23"
                     },
                     {
-                      "ref": "TJCANGK",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-01"
+                      "ref": "TELUGJN",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1713,7 +1717,11 @@
                       "date": "2026-09-14"
                     },
                     null,
-                    null
+                    {
+                      "ref": "TL48L6N",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
+                    }
                   ]
                 }
               ]
@@ -1786,9 +1794,9 @@
                       "date": "2026-09-21"
                     },
                     {
-                      "ref": "TJ5663D",
-                      "status": "COMPLETED",
-                      "date": "2026-09-29"
+                      "ref": "TID64CHB",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1824,9 +1832,9 @@
                       "date": "2026-09-21"
                     },
                     {
-                      "ref": "TH8EQCLB",
-                      "status": "OVERDUE",
-                      "date": "2026-09-28"
+                      "ref": "TWPNHQZ",
+                      "status": "CANCELED",
+                      "date": "2026-09-30"
                     }
                   ]
                 }
@@ -1932,7 +1940,7 @@
                     },
                     {
                       "ref": "TZ0J23B",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-29"
                     }
                   ]
@@ -1962,7 +1970,7 @@
                     },
                     {
                       "ref": "T3MA0WDB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-29"
                     }
                   ]
@@ -2002,7 +2010,7 @@
                     },
                     {
                       "ref": "TPZA5QJ",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-29"
                     }
                   ]
@@ -2017,9 +2025,9 @@
                     null,
                     null,
                     {
-                      "ref": "TMJ4UQF",
+                      "ref": "TYWB75K",
                       "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "date": "2026-09-30"
                     }
                   ]
                 },
@@ -2058,7 +2066,7 @@
                     },
                     {
                       "ref": "TPQ8KAE",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-09-29"
                     }
                   ]
@@ -2194,6 +2202,342 @@
       "title": "Lawn service to allocate vendor bill",
       "property": "c702",
       "employee": "Florencia Sola"
+    },
+    {
+      "recurring_id": 191933,
+      "title": "Fall cleaning",
+      "property": null,
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191932,
+      "title": "Winterization",
+      "property": null,
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191931,
+      "title": "Fall cleaning",
+      "property": "j312",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191930,
+      "title": "Fall cleaning",
+      "property": "a511",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191929,
+      "title": "Fall cleaning",
+      "property": "m221",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191928,
+      "title": "Fall cleaning",
+      "property": "b101",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191927,
+      "title": "Fall cleaning",
+      "property": "o155-Elm",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191926,
+      "title": "Fall cleaning",
+      "property": null,
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191925,
+      "title": "Fall cleaning",
+      "property": "o155-Oak",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191924,
+      "title": "Fall cleaning",
+      "property": "l912 (Multi-Family)",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191923,
+      "title": "Fall cleaning",
+      "property": "w226",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191922,
+      "title": "Fall cleaning",
+      "property": "w117",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191921,
+      "title": "Fall cleaning",
+      "property": "l925",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191920,
+      "title": "Fall cleaning",
+      "property": "a210",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191919,
+      "title": "Fall cleaning",
+      "property": "p705",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191918,
+      "title": "Fall cleaning",
+      "property": "s300",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191917,
+      "title": "Fall cleaning",
+      "property": "s129",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191916,
+      "title": "Fall cleaning",
+      "property": "v202",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191914,
+      "title": "Fall cleaning",
+      "property": "m608",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191913,
+      "title": "Fall cleaning",
+      "property": "w225",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191912,
+      "title": "Fall cleaning",
+      "property": "k308",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191911,
+      "title": "Fall cleaning",
+      "property": "k104- LeFevre",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191910,
+      "title": "Fall cleaning",
+      "property": "m405",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191909,
+      "title": "Fall cleaning",
+      "property": "h731",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191907,
+      "title": "Fall cleaning",
+      "property": "e328",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191906,
+      "title": "Fall cleaning",
+      "property": "c302",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191905,
+      "title": "Fall cleaning",
+      "property": "c313",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191903,
+      "title": "Fall cleaning",
+      "property": "a916",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191902,
+      "title": "Fall cleaning",
+      "property": "c702",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191901,
+      "title": "Winterization",
+      "property": "j312",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191899,
+      "title": "Winterization",
+      "property": "a511",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191898,
+      "title": "Winterization",
+      "property": "m221",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191897,
+      "title": "Winterization",
+      "property": "b101",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191896,
+      "title": "Winterization",
+      "property": "a916",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191895,
+      "title": "Winterization",
+      "property": "o155-Elm",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191894,
+      "title": "Winterization",
+      "property": "o155-Oak",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191892,
+      "title": "Winterization",
+      "property": null,
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191891,
+      "title": "Winterization",
+      "property": "m405",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191890,
+      "title": "Winterization",
+      "property": "l912 (Multi-Family)",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191889,
+      "title": "Winterization",
+      "property": "w226",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191888,
+      "title": "Winterization",
+      "property": "w117",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191886,
+      "title": "Winterization",
+      "property": "l925",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191885,
+      "title": "Winterization",
+      "property": "a210",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191884,
+      "title": "Winterization",
+      "property": "p705",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191880,
+      "title": "Winterization",
+      "property": "s300",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191879,
+      "title": "Winterization",
+      "property": "s129",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191878,
+      "title": "Winterization",
+      "property": "v202",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191876,
+      "title": "Winterization",
+      "property": "m608",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191874,
+      "title": "Winterization",
+      "property": "c702",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191873,
+      "title": "Winterization",
+      "property": "w225",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191872,
+      "title": "Winterization",
+      "property": "k308",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191871,
+      "title": "Winterization",
+      "property": "k104- LeFevre",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191870,
+      "title": "Winterization",
+      "property": "h731",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191869,
+      "title": "Winterization",
+      "property": "e328",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191868,
+      "title": "Winterization",
+      "property": "c302",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191866,
+      "title": "Winterization",
+      "property": "c313",
+      "employee": "David Sanchez & Alexander Overall"
     },
     {
       "recurring_id": 189773,
