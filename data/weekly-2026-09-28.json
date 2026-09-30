@@ -3,7 +3,7 @@
   "week_end": "2026-10-04",
   "label": "September 28 – October 4, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-09-29",
+  "generated_at": "2026-09-30",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 36.61,
-      "last_7": 26.87
+      "last_30": 37.42,
+      "last_7": 23.84
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -115,37 +115,37 @@
       "cost": 511.55
     },
     {
-      "ref": "T8YUF9Z",
-      "property": "c702",
-      "brief": "Stove Does Not Have Power",
-      "labor": 71.5,
-      "materials": 199.42,
-      "cost": 270.92
+      "ref": "TMPQ2K8",
+      "property": "w226",
+      "brief": "Fire extinguisher service",
+      "labor": 455.65,
+      "materials": 0,
+      "cost": 455.65
     },
     {
-      "ref": "TJERI1T",
-      "property": "r203",
-      "brief": "Lawn service ",
-      "labor": 0,
-      "materials": 240.01,
-      "cost": 240.01
+      "ref": "TRYRJ9JB",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Turning On",
+      "labor": 73.72,
+      "materials": 379.71,
+      "cost": 453.43
     },
     {
-      "ref": "TLIE66GB",
-      "property": "kn47",
-      "brief": "Garbage Disposal",
-      "labor": 69,
-      "materials": 170.79,
-      "cost": 239.79
+      "ref": "TFE0K3Q",
+      "property": "rl16",
+      "brief": "Air Conditioner Is Not Cooling",
+      "labor": 29.4,
+      "materials": 379.71,
+      "cost": 409.11
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 72,
-      "avg_cost_per_wo": 79.02,
-      "total_labor_cost": 3274.83,
-      "avg_resident_rating": 4.54,
+      "wo_count": 80,
+      "avg_cost_per_wo": 89.43,
+      "total_labor_cost": 3826.16,
+      "avg_resident_rating": 4.57,
       "reviews": [
         {
           "ref": "TU7GFUI",
@@ -160,6 +160,11 @@
         {
           "ref": "TTVD82Z",
           "rating": 4,
+          "text": null
+        },
+        {
+          "ref": "T4QNZXHB",
+          "rating": 5,
           "text": null
         },
         {
@@ -216,11 +221,16 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 68,
-      "avg_cost_per_wo": 33.73,
-      "total_labor_cost": 1895.64,
-      "avg_resident_rating": 4.2,
+      "wo_count": 73,
+      "avg_cost_per_wo": 33.5,
+      "total_labor_cost": 2016.43,
+      "avg_resident_rating": 3.67,
       "reviews": [
+        {
+          "ref": "TQT9LRMB",
+          "rating": 1,
+          "text": "It was not fixed nor did some one come to try and fix it"
+        },
         {
           "ref": "T8A15FR",
           "rating": 5,
@@ -250,9 +260,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 34,
-      "avg_cost_per_wo": 58.37,
-      "total_labor_cost": 1493.05,
+      "wo_count": 39,
+      "avg_cost_per_wo": 73.38,
+      "total_labor_cost": 2282.8,
       "avg_resident_rating": 3.83,
       "reviews": [
         {
@@ -289,9 +299,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 29,
-      "avg_cost_per_wo": 45.36,
-      "total_labor_cost": 935.85,
+      "wo_count": 31,
+      "avg_cost_per_wo": 44.74,
+      "total_labor_cost": 1007.4,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -308,7 +318,7 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 284.49
+      "amount": 404.84
     },
     {
       "category": "Supplies and Tools",
@@ -324,24 +334,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 700.21
+      "amount": 1160.96
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 21981.27,
-    "materials": 5017.55,
+    "labor": 23361.54,
+    "materials": 5478.3,
     "invoices": 0,
-    "total_actual": 26998.82,
-    "variance": 55637.31
+    "total_actual": 28839.84,
+    "variance": 53796.29
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 15446.79,
+    "labor": 16211.3,
     "materials": 541.89,
     "invoices": 0,
-    "total_actual": 15988.68,
-    "variance": 21407.75
+    "total_actual": 16753.19,
+    "variance": 20643.24
   },
   "cost_by_property": [
     {
@@ -351,14 +361,6 @@
       "cost": 793.01,
       "budget": 548.9,
       "pct_over_budget": 44.5
-    },
-    {
-      "property": "P705",
-      "labor": 335.4,
-      "materials": 1001.1,
-      "cost": 1336.5,
-      "budget": 1127.9,
-      "pct_over_budget": 18.5
     }
   ],
   "narrative": null,
