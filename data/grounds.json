@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30",
+  "generated_at": "2026-10-01",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-09-07",
@@ -59,9 +59,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TY9WKTDB",
-                      "status": "COMPLETED",
-                      "date": "2026-09-29"
+                      "ref": "T5P0FUBB",
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -675,9 +675,9 @@
                       "date": "2026-09-21"
                     },
                     {
-                      "ref": "T4JL2AAB",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "ref": "T9YRQ1U",
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -747,7 +747,7 @@
                     },
                     {
                       "ref": "TZIURJV",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-10-01"
                     }
                   ]
@@ -915,7 +915,7 @@
                     },
                     {
                       "ref": "THCPD7P",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-10-01"
                     }
                   ]
@@ -938,9 +938,9 @@
                       "date": "2026-09-21"
                     },
                     {
-                      "ref": "TZXHTUL",
+                      "ref": "TAFEI9D",
                       "status": "COMPLETED",
-                      "date": "2026-09-28"
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1036,9 +1036,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TY64I4Q",
-                      "status": "CANCELED",
-                      "date": "2026-09-30"
+                      "ref": "TV9KL2R",
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1075,8 +1075,8 @@
                     },
                     {
                       "ref": "TUICYWG",
-                      "status": "OVERDUE",
-                      "date": "2026-09-29"
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1147,8 +1147,8 @@
                     },
                     {
                       "ref": "TRXV9BX",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-30"
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1189,6 +1189,18 @@
                       "date": "2026-09-30"
                     }
                   ]
+                },
+                {
+                  "recurring_id": 191992,
+                  "title": "Dumpster area cleaning",
+                  "cadence": "Bi-Weekly",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/191992/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
                 }
               ]
             }
@@ -1222,9 +1234,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "T7QI2Q8",
-                      "status": "CANCELED",
-                      "date": "2026-09-30"
+                      "ref": "TP9FDZ",
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -1266,9 +1278,9 @@
                     null,
                     null,
                     {
-                      "ref": "TY2DZ3L",
-                      "status": "CANCELED",
-                      "date": "2026-09-30"
+                      "ref": "TERYCHJB",
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -1320,9 +1332,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TE1UHREB",
-                      "status": "CANCELED",
-                      "date": "2026-09-30"
+                      "ref": "T4491HF",
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1389,8 +1401,8 @@
                     },
                     {
                       "ref": "TH538BR",
-                      "status": "OVERDUE",
-                      "date": "2026-09-29"
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1570,9 +1582,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TP8NT83",
-                      "status": "CANCELED",
-                      "date": "2026-09-30"
+                      "ref": "TX6X4C3",
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1608,9 +1620,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TY50T8W",
-                      "status": "CANCELED",
-                      "date": "2026-09-30"
+                      "ref": "T9BEGZ0",
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1832,9 +1844,9 @@
                       "date": "2026-09-21"
                     },
                     {
-                      "ref": "TWPNHQZ",
-                      "status": "CANCELED",
-                      "date": "2026-09-30"
+                      "ref": "TH8EQCLB",
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1871,8 +1883,8 @@
                     },
                     {
                       "ref": "TER320I",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-30"
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1905,8 +1917,8 @@
                     null,
                     {
                       "ref": "THKCX69",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-30"
+                      "status": "COMPLETED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1939,9 +1951,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TZ0J23B",
-                      "status": "OVERDUE",
-                      "date": "2026-09-29"
+                      "ref": "T08RNTAB",
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 }
@@ -1969,9 +1981,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "T3MA0WDB",
-                      "status": "OVERDUE",
-                      "date": "2026-09-29"
+                      "ref": "T89U2GR",
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -1984,14 +1996,14 @@
                     null,
                     null,
                     {
-                      "ref": "T2XB37E",
-                      "status": "OVERDUE",
-                      "date": "2026-09-26"
+                      "ref": "TE9QK28",
+                      "status": "CANCELED",
+                      "date": "2026-09-22"
                     },
                     {
-                      "ref": "T08GG8IB",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-02"
+                      "ref": "T2XB37E",
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -2009,9 +2021,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TPZA5QJ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-29"
+                      "ref": "TF727EK",
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -2026,8 +2038,8 @@
                     null,
                     {
                       "ref": "TYWB75K",
-                      "status": "SCHEDULED",
-                      "date": "2026-09-30"
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -2037,18 +2049,18 @@
                   "cadence": "Bi-Weekly",
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178932/",
                   "occurrences": [
-                    null,
+                    {
+                      "ref": "T1N7EYF",
+                      "status": "OVERDUE",
+                      "date": "2026-09-08"
+                    },
                     null,
                     {
                       "ref": "THI64C6",
                       "status": "OVERDUE",
                       "date": "2026-09-22"
                     },
-                    {
-                      "ref": "T1N7EYF",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-02"
-                    }
+                    null
                   ]
                 },
                 {
@@ -2065,9 +2077,9 @@
                       "date": "2026-09-22"
                     },
                     {
-                      "ref": "TPQ8KAE",
-                      "status": "OVERDUE",
-                      "date": "2026-09-29"
+                      "ref": "T5RW1AV",
+                      "status": "CANCELED",
+                      "date": "2026-10-01"
                     }
                   ]
                 },
@@ -2092,11 +2104,7 @@
                     null,
                     null,
                     null,
-                    {
-                      "ref": "T74C6MP",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-02"
-                    }
+                    null
                   ]
                 },
                 {
@@ -2182,12 +2190,6 @@
     {
       "recurring_id": 165582,
       "title": "Quarterly Safety Inspections",
-      "property": "tc68",
-      "employee": "Florencia Sola"
-    },
-    {
-      "recurring_id": 184373,
-      "title": "Monthly Landscaping",
       "property": "tc68",
       "employee": "Florencia Sola"
     },
@@ -2628,6 +2630,12 @@
       "title": "Clean laundry room",
       "property": "ps91",
       "employee": "Hannah Deckard"
+    },
+    {
+      "recurring_id": 184373,
+      "title": "Monthly Landscaping",
+      "property": "tc68",
+      "employee": "Florencia Sola"
     },
     {
       "recurring_id": 114389,
