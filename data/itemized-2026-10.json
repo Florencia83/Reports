@@ -1,0 +1,53 @@
+{
+  "month": "2026-10",
+  "label": "October 2026",
+  "generated_at": "2026-10-01",
+  "complete": false,
+  "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
+  "labor_rate_multiplier": 1.5,
+  "repairs": [
+    {
+      "property": "R203",
+      "code": "r203",
+      "appfolio_actual": null,
+      "ramp_total": 0,
+      "labor_total": 79.9,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-10-01",
+          "name": "Isaac Chavez",
+          "hours": 0.63,
+          "wage": 40.5,
+          "cost": 25.65
+        },
+        {
+          "date": "2026-10-01",
+          "name": "Maria Florencia Sola",
+          "hours": 3.62,
+          "wage": 15,
+          "cost": 54.25
+        }
+      ]
+    }
+  ],
+  "grounds": [
+    {
+      "property": "KN47",
+      "code": "kn47",
+      "appfolio_actual": 94.83,
+      "ramp_total": 0,
+      "labor_total": 68.2,
+      "ramp_items": [],
+      "labor_items": [
+        {
+          "date": "2026-10-01",
+          "name": "Hannah Deckard",
+          "hours": 2.07,
+          "wage": 33,
+          "cost": 68.2
+        }
+      ]
+    }
+  ]
+}
