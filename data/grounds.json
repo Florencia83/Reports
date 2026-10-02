@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01",
+  "generated_at": "2026-10-02",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-09-07",
@@ -160,6 +160,58 @@
                     null,
                     null
                   ]
+                },
+                {
+                  "recurring_id": 153950,
+                  "title": "Fertilization (spring/fall)",
+                  "cadence": "Bi-Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153950/",
+                  "occurrences": [
+                    null,
+                    null,
+                    {
+                      "ref": "TP345NJ",
+                      "status": "OVERDUE",
+                      "date": "2026-09-23"
+                    },
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 153951,
+                  "title": "Irrigation startup and zone adjustments",
+                  "cadence": "Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153951/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 153952,
+                  "title": "Irrigation winterization",
+                  "cadence": "Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153952/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "recurring_id": 153953,
+                  "title": "Tree pruning",
+                  "cadence": "Annual",
+                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153953/",
+                  "occurrences": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
                 }
               ]
             },
@@ -221,7 +273,7 @@
                     null,
                     {
                       "ref": "T2LJG0JB",
-                      "status": "SCHEDULED",
+                      "status": "COULD NOT COMPLETE",
                       "date": "2026-10-02"
                     }
                   ]
@@ -265,7 +317,7 @@
                     },
                     {
                       "ref": "TF0DACLB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-10-02"
                     }
                   ]
@@ -313,8 +365,8 @@
                     },
                     {
                       "ref": "TE4MIUC",
-                      "status": "SCHEDULED",
-                      "date": "2026-10-01"
+                      "status": "COMPLETED",
+                      "date": "2026-10-02"
                     }
                   ]
                 },
@@ -356,63 +408,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "employee": "Reynaldo Leonides",
-              "recurring": [
-                {
-                  "recurring_id": 153950,
-                  "title": "Fertilization (spring/fall)",
-                  "cadence": "Bi-Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153950/",
-                  "occurrences": [
-                    null,
-                    null,
-                    {
-                      "ref": "TP345NJ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-23"
-                    },
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153951,
-                  "title": "Irrigation startup and zone adjustments",
-                  "cadence": "Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153951/",
-                  "occurrences": [
-                    null,
-                    null,
-                    null,
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153952,
-                  "title": "Irrigation winterization",
-                  "cadence": "Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153952/",
-                  "occurrences": [
-                    null,
-                    null,
-                    null,
-                    null
-                  ]
-                },
-                {
-                  "recurring_id": 153953,
-                  "title": "Tree pruning",
-                  "cadence": "Annual",
-                  "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/153953/",
-                  "occurrences": [
-                    null,
-                    null,
-                    null,
-                    null
-                  ]
-                }
-              ]
             }
           ]
         },
@@ -445,7 +440,7 @@
                     },
                     {
                       "ref": "T29XYRH",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-10-02"
                     }
                   ]
@@ -572,7 +567,7 @@
                     },
                     {
                       "ref": "TNE9U3HB",
-                      "status": "SCHEDULED",
+                      "status": "COMPLETED",
                       "date": "2026-10-02"
                     }
                   ]
@@ -1263,7 +1258,7 @@
                     },
                     {
                       "ref": "T937QWGB",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-10-01"
                     }
                   ]
@@ -1295,7 +1290,7 @@
                     null,
                     {
                       "ref": "T4C5K1T",
-                      "status": "SCHEDULED",
+                      "status": "OVERDUE",
                       "date": "2026-10-01"
                     }
                   ]
@@ -2049,18 +2044,14 @@
                   "cadence": "Bi-Weekly",
                   "pm_url": "https://app.propertymeld.com/2975/m/2975/melds/recurring/178932/",
                   "occurrences": [
-                    {
-                      "ref": "T1N7EYF",
-                      "status": "OVERDUE",
-                      "date": "2026-09-08"
-                    },
+                    null,
+                    null,
                     null,
                     {
                       "ref": "THI64C6",
-                      "status": "OVERDUE",
-                      "date": "2026-09-22"
-                    },
-                    null
+                      "status": "CANCELED",
+                      "date": "2026-10-02"
+                    }
                   ]
                 },
                 {
@@ -2092,7 +2083,11 @@
                     null,
                     null,
                     null,
-                    null
+                    {
+                      "ref": "T2NGKJGB",
+                      "status": "SCHEDULED",
+                      "date": "2026-10-02"
+                    }
                   ]
                 },
                 {
@@ -2104,7 +2099,11 @@
                     null,
                     null,
                     null,
-                    null
+                    {
+                      "ref": "T74C6MP",
+                      "status": "CANCELED",
+                      "date": "2026-10-02"
+                    }
                   ]
                 },
                 {
@@ -2188,22 +2187,10 @@
   ],
   "flagged": [
     {
-      "recurring_id": 165582,
-      "title": "Quarterly Safety Inspections",
-      "property": "tc68",
-      "employee": "Florencia Sola"
-    },
-    {
       "recurring_id": 153946,
       "title": "Shrub Pruning",
       "property": "kn47 K1",
-      "employee": ""
-    },
-    {
-      "recurring_id": 187336,
-      "title": "Lawn service to allocate vendor bill",
-      "property": "c702",
-      "employee": "Florencia Sola"
+      "employee": "David Perez"
     },
     {
       "recurring_id": 191933,
@@ -2512,24 +2499,6 @@
       "employee": "David Sanchez & Alexander Overall"
     },
     {
-      "recurring_id": 191871,
-      "title": "Winterization",
-      "property": "k104- LeFevre",
-      "employee": "David Sanchez & Alexander Overall"
-    },
-    {
-      "recurring_id": 191870,
-      "title": "Winterization",
-      "property": "h731",
-      "employee": "David Sanchez & Alexander Overall"
-    },
-    {
-      "recurring_id": 191869,
-      "title": "Winterization",
-      "property": "e328",
-      "employee": "David Sanchez & Alexander Overall"
-    },
-    {
       "recurring_id": 191868,
       "title": "Winterization",
       "property": "c302",
@@ -2614,16 +2583,34 @@
       "employee": "Jared Miller"
     },
     {
-      "recurring_id": 189774,
-      "title": "Towing",
-      "property": "kn47 K1",
-      "employee": "Hannah Deckard"
-    },
-    {
       "recurring_id": 113069,
       "title": "hydrojetting",
       "property": "w226",
       "employee": "Jared Miller"
+    },
+    {
+      "recurring_id": 187336,
+      "title": "Lawn service to allocate vendor bill",
+      "property": "c702",
+      "employee": "Florencia Sola"
+    },
+    {
+      "recurring_id": 191871,
+      "title": "Winterization",
+      "property": "k104- LeFevre",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191870,
+      "title": "Winterization",
+      "property": "h731",
+      "employee": "David Sanchez & Alexander Overall"
+    },
+    {
+      "recurring_id": 191869,
+      "title": "Winterization",
+      "property": "e328",
+      "employee": "David Sanchez & Alexander Overall"
     },
     {
       "recurring_id": 189763,
@@ -2634,6 +2621,12 @@
     {
       "recurring_id": 184373,
       "title": "Monthly Landscaping",
+      "property": "tc68",
+      "employee": "Florencia Sola"
+    },
+    {
+      "recurring_id": 165582,
+      "title": "Quarterly Safety Inspections",
       "property": "tc68",
       "employee": "Florencia Sola"
     },
@@ -2665,7 +2658,7 @@
       "recurring_id": 153949,
       "title": "Quarterly safety inspections",
       "property": "kn47 K1",
-      "employee": ""
+      "employee": "David Perez"
     },
     {
       "recurring_id": 114386,
@@ -2678,6 +2671,12 @@
       "title": "Irrigation zone adjustments",
       "property": "kn47 K1",
       "employee": "Florencia Sola"
+    },
+    {
+      "recurring_id": 189774,
+      "title": "Towing",
+      "property": "kn47 K1",
+      "employee": "Hannah Deckard"
     }
   ]
 }
