@@ -3,7 +3,7 @@
   "week_end": "2026-10-04",
   "label": "September 28 – October 4, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-10-01",
+  "generated_at": "2026-10-02",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 37.94,
-      "last_7": 35.11
+      "last_30": 41.26,
+      "last_7": 32.88
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -67,6 +67,14 @@
       "cost": 1058.31
     },
     {
+      "ref": "TAXUA4IB",
+      "property": "kn47",
+      "brief": "Ac not working properly ",
+      "labor": 45.45,
+      "materials": 999.87,
+      "cost": 1045.32
+    },
+    {
       "ref": "T3X933C",
       "property": "c702",
       "brief": "Post First Notice",
@@ -91,12 +99,28 @@
       "cost": 788.28
     },
     {
+      "ref": "TBM2FW",
+      "property": "p705",
+      "brief": "Stove replacement - and Bugs spraying",
+      "labor": 0,
+      "materials": 673.6,
+      "cost": 673.6
+    },
+    {
       "ref": "T4YL5QHB",
       "property": "k104",
       "brief": "Clothes Dryer",
       "labor": 0,
       "materials": 629.57,
       "cost": 629.57
+    },
+    {
+      "ref": "T2C8KL0",
+      "property": "kn47",
+      "brief": "Dishwasher",
+      "labor": 167.63,
+      "materials": 451.17,
+      "cost": 618.8
     },
     {
       "ref": "TBL7AW3",
@@ -107,44 +131,20 @@
       "cost": 598
     },
     {
-      "ref": "T2C8KL0",
-      "property": "kn47",
-      "brief": "Dishwasher",
-      "labor": 140.03,
-      "materials": 451.17,
-      "cost": 591.2
-    },
-    {
       "ref": "TYR0G10",
       "property": "k104",
       "brief": "In Unit Washing Machine Is Leaking",
       "labor": 0,
       "materials": 578.81,
       "cost": 578.81
-    },
-    {
-      "ref": "TAM369GB",
-      "property": "kn47",
-      "brief": "I Need My Dishwasher Replaced. Not Cleaning.",
-      "labor": 37.2,
-      "materials": 474.35,
-      "cost": 511.55
-    },
-    {
-      "ref": "T4QNZXHB",
-      "property": "kn47",
-      "brief": "handicap parking signs",
-      "labor": 207.6,
-      "materials": 136.94,
-      "cost": 344.54
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 78,
-      "avg_cost_per_wo": 89.07,
-      "total_labor_cost": 3884.06,
+      "wo_count": 85,
+      "avg_cost_per_wo": 108.61,
+      "total_labor_cost": 4280.88,
       "avg_resident_rating": 4.57,
       "reviews": [
         {
@@ -221,9 +221,9 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 75,
-      "avg_cost_per_wo": 33.47,
-      "total_labor_cost": 2081.03,
+      "wo_count": 76,
+      "avg_cost_per_wo": 33.46,
+      "total_labor_cost": 2114.04,
       "avg_resident_rating": 3.67,
       "reviews": [
         {
@@ -260,9 +260,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 37,
-      "avg_cost_per_wo": 56.84,
-      "total_labor_cost": 1632.15,
+      "wo_count": 47,
+      "avg_cost_per_wo": 72.62,
+      "total_labor_cost": 2740.4,
       "avg_resident_rating": 3.83,
       "reviews": [
         {
@@ -299,9 +299,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 33,
-      "avg_cost_per_wo": 47.19,
-      "total_labor_cost": 1177.5,
+      "wo_count": 35,
+      "avg_cost_per_wo": 46.28,
+      "total_labor_cost": 1240.27,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -310,9 +310,16 @@
     {
       "date": "2026-09-28",
       "ref": null,
-      "property": null,
+      "property": "KN47",
       "cardholder": "Margarito Saldana",
       "amount": 535.45
+    },
+    {
+      "date": "2026-10-01",
+      "ref": "TWDAPTHB",
+      "property": "RL16",
+      "cardholder": "Jaxson Lakins",
+      "amount": 428.08
     },
     {
       "date": "2026-09-30",
@@ -325,11 +332,11 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 449.43
+      "amount": 719.09
     },
     {
       "category": "Supplies and Tools",
-      "amount": 0
+      "amount": 49.05
     },
     {
       "category": "Appliances",
@@ -341,26 +348,34 @@
     },
     {
       "category": "Maintenance",
-      "amount": 1340.75
+      "amount": 2103.92
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 24485.95,
-    "materials": 5658.09,
+    "labor": 25343.5,
+    "materials": 6606.68,
     "invoices": 0,
-    "total_actual": 30144.04,
-    "variance": 52492.09
+    "total_actual": 31950.18,
+    "variance": 50685.95
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 16760.68,
+    "labor": 17551.47,
     "materials": 541.89,
     "invoices": 0,
-    "total_actual": 17302.57,
-    "variance": 20093.86
+    "total_actual": 18093.36,
+    "variance": 19303.07
   },
   "cost_by_property": [
+    {
+      "property": "K308",
+      "labor": 276.9,
+      "materials": 224.65,
+      "cost": 501.55,
+      "budget": 293,
+      "pct_over_budget": 71.2
+    },
     {
       "property": "W226",
       "labor": 755.3,
