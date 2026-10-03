@@ -3,7 +3,7 @@
   "week_end": "2026-10-04",
   "label": "September 28 – October 4, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-10-02",
+  "generated_at": "2026-10-03",
   "complete": false,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
@@ -11,8 +11,8 @@
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 41.26,
-      "last_7": 32.88
+      "last_30": 42.73,
+      "last_7": 37.7
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -59,20 +59,20 @@
   ],
   "top_work_orders": [
     {
+      "ref": "TAXUA4IB",
+      "property": "kn47",
+      "brief": "Ac not working properly ",
+      "labor": 82.05,
+      "materials": 999.87,
+      "cost": 1081.92
+    },
+    {
       "ref": "TT85X6K",
       "property": "tc68",
       "brief": "The Freezer In The Kitchen Is Not Cold Enough",
       "labor": 65.47,
       "materials": 992.84,
       "cost": 1058.31
-    },
-    {
-      "ref": "TAXUA4IB",
-      "property": "kn47",
-      "brief": "Ac not working properly ",
-      "labor": 45.45,
-      "materials": 999.87,
-      "cost": 1045.32
     },
     {
       "ref": "T3X933C",
@@ -107,6 +107,14 @@
       "cost": 673.6
     },
     {
+      "ref": "T5N5PFJ",
+      "property": "kn47",
+      "brief": "The Refrigerator In Kitchen Is Not Cooling.",
+      "labor": 24.23,
+      "materials": 606.27,
+      "cost": 630.5
+    },
+    {
       "ref": "T4YL5QHB",
       "property": "k104",
       "brief": "Clothes Dryer",
@@ -129,24 +137,21 @@
       "labor": 459,
       "materials": 139,
       "cost": 598
-    },
-    {
-      "ref": "TYR0G10",
-      "property": "k104",
-      "brief": "In Unit Washing Machine Is Leaking",
-      "labor": 0,
-      "materials": 578.81,
-      "cost": 578.81
     }
   ],
   "by_technician": [
     {
       "name": "Jaxson Lakins",
-      "wo_count": 85,
-      "avg_cost_per_wo": 108.61,
-      "total_labor_cost": 4280.88,
-      "avg_resident_rating": 4.57,
+      "wo_count": 87,
+      "avg_cost_per_wo": 112.43,
+      "total_labor_cost": 4431.72,
+      "avg_resident_rating": 4.53,
       "reviews": [
+        {
+          "ref": "TB7G56W",
+          "rating": 4,
+          "text": null
+        },
         {
           "ref": "TU7GFUI",
           "rating": 4,
@@ -221,9 +226,9 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 76,
-      "avg_cost_per_wo": 33.46,
-      "total_labor_cost": 2114.04,
+      "wo_count": 78,
+      "avg_cost_per_wo": 35.41,
+      "total_labor_cost": 2276.96,
       "avg_resident_rating": 3.67,
       "reviews": [
         {
@@ -261,8 +266,8 @@
     {
       "name": "Jacob Jett",
       "wo_count": 47,
-      "avg_cost_per_wo": 72.62,
-      "total_labor_cost": 2740.4,
+      "avg_cost_per_wo": 74.91,
+      "total_labor_cost": 2816.45,
       "avg_resident_rating": 3.83,
       "reviews": [
         {
@@ -299,14 +304,21 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 35,
-      "avg_cost_per_wo": 46.28,
-      "total_labor_cost": 1240.27,
+      "wo_count": 39,
+      "avg_cost_per_wo": 47.91,
+      "total_labor_cost": 1488.67,
       "avg_resident_rating": null,
       "reviews": []
     }
   ],
   "ramp_purchases_over_300": [
+    {
+      "date": "2026-10-02",
+      "ref": "T5N5PFJ",
+      "property": "KN47",
+      "cardholder": "Jaxson Lakins",
+      "amount": 606.27
+    },
     {
       "date": "2026-09-28",
       "ref": null,
@@ -332,15 +344,15 @@
   "operational_expenses": [
     {
       "category": "Auto",
-      "amount": 719.09
+      "amount": 965.94
     },
     {
       "category": "Supplies and Tools",
-      "amount": 49.05
+      "amount": 80.93
     },
     {
       "category": "Appliances",
-      "amount": 418.54
+      "amount": 1024.81
     },
     {
       "category": "Grounds",
@@ -348,24 +360,24 @@
     },
     {
       "category": "Maintenance",
-      "amount": 2103.92
+      "amount": 2182.19
     }
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 25343.5,
-    "materials": 6606.68,
+    "labor": 26356.95,
+    "materials": 6716.83,
     "invoices": 0,
-    "total_actual": 31950.18,
-    "variance": 50685.95
+    "total_actual": 33073.78,
+    "variance": 49562.35
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
-    "labor": 17551.47,
+    "labor": 18466.16,
     "materials": 541.89,
     "invoices": 0,
-    "total_actual": 18093.36,
-    "variance": 19303.07
+    "total_actual": 19008.05,
+    "variance": 18388.38
   },
   "cost_by_property": [
     {
@@ -383,6 +395,22 @@
       "cost": 793.01,
       "budget": 548.9,
       "pct_over_budget": 44.5
+    },
+    {
+      "property": "C302",
+      "labor": 471.25,
+      "materials": 383.9,
+      "cost": 855.15,
+      "budget": 820.2,
+      "pct_over_budget": 4.3
+    },
+    {
+      "property": "J312",
+      "labor": 267.8,
+      "materials": 347.4,
+      "cost": 615.2,
+      "budget": 590.56,
+      "pct_over_budget": 4.2
     }
   ],
   "narrative": null,
