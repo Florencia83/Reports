@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03",
+  "generated_at": "2026-10-04",
   "source": "Property Meld (recurring melds only, registry reconciled against Florencia's manual tracking sheet 2026-07-14; vendor-only/unassigned series excluded) — automated",
   "weeks": [
     "2026-09-07",
@@ -169,11 +169,7 @@
                   "occurrences": [
                     null,
                     null,
-                    {
-                      "ref": "TP345NJ",
-                      "status": "OVERDUE",
-                      "date": "2026-09-23"
-                    },
+                    null,
                     null
                   ]
                 },
@@ -2493,12 +2489,6 @@
       "employee": "David Sanchez & Alexander Overall"
     },
     {
-      "recurring_id": 191872,
-      "title": "Winterization",
-      "property": "k308",
-      "employee": "David Sanchez & Alexander Overall"
-    },
-    {
       "recurring_id": 191868,
       "title": "Winterization",
       "property": "c302",
@@ -2593,6 +2583,12 @@
       "title": "Lawn service to allocate vendor bill",
       "property": "c702",
       "employee": "Florencia Sola"
+    },
+    {
+      "recurring_id": 191872,
+      "title": "Winterization",
+      "property": "k308",
+      "employee": "David Sanchez & Alexander Overall"
     },
     {
       "recurring_id": 191871,
