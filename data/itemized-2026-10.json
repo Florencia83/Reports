@@ -1,7 +1,7 @@
 {
   "month": "2026-10",
   "label": "October 2026",
-  "generated_at": "2026-10-03",
+  "generated_at": "2026-10-04",
   "complete": false,
   "source": "Ramp (card transactions) + QBT (labor hours, wage x 1.5) itemized per property, vs. AppFolio's actual (accrual) R&M - Repairs / Grounds account totals for the month.",
   "labor_rate_multiplier": 1.5,
@@ -93,9 +93,9 @@
     {
       "property": "KN47",
       "code": "kn47",
-      "appfolio_actual": 410.28,
+      "appfolio_actual": 453.24,
       "ramp_total": 0,
-      "labor_total": 291.44,
+      "labor_total": 322.34,
       "ramp_items": [],
       "labor_items": [
         {
@@ -125,6 +125,13 @@
           "hours": 3.13,
           "wage": 36,
           "cost": 112.8
+        },
+        {
+          "date": "2026-10-03",
+          "name": "Jared Miller",
+          "hours": 0.73,
+          "wage": 42.135,
+          "cost": 30.9
         }
       ]
     },
@@ -379,7 +386,7 @@
       "code": "r203",
       "appfolio_actual": null,
       "ramp_total": 0,
-      "labor_total": 507.83,
+      "labor_total": 525.88,
       "ramp_items": [],
       "labor_items": [
         {
@@ -399,9 +406,9 @@
         {
           "date": "2026-10-02",
           "name": "Isaac Chavez",
-          "hours": 3.07,
+          "hours": 3.33,
           "wage": 40.5,
-          "cost": 124.2
+          "cost": 135
         },
         {
           "date": "2026-10-02",
@@ -409,6 +416,13 @@
           "hours": 7.55,
           "wage": 15,
           "cost": 113.25
+        },
+        {
+          "date": "2026-10-03",
+          "name": "Maria Florencia Sola",
+          "hours": 0.48,
+          "wage": 15,
+          "cost": 7.25
         }
       ]
     }
