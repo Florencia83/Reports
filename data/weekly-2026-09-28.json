@@ -3,16 +3,16 @@
   "week_end": "2026-10-04",
   "label": "September 28 – October 4, 2026",
   "month_label": "September 2026",
-  "generated_at": "2026-10-03",
-  "complete": false,
+  "generated_at": "2026-10-04",
+  "complete": true,
   "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
   "kpis": [
     {
       "metric": "Average Work Order Cost",
       "q1": null,
       "q2": 39,
-      "last_30": 42.73,
-      "last_7": 37.7
+      "last_30": 41.82,
+      "last_7": 37.51
     },
     {
       "metric": "Emergency Work Order Completion Time",
@@ -92,7 +92,7 @@
     },
     {
       "ref": "TLXBXINB",
-      "property": "r203",
+      "property": "c702",
       "brief": "Ecall half power ",
       "labor": 0,
       "materials": 788.28,
@@ -226,9 +226,9 @@
     },
     {
       "name": "Jared Miller",
-      "wo_count": 78,
-      "avg_cost_per_wo": 35.41,
-      "total_labor_cost": 2276.96,
+      "wo_count": 80,
+      "avg_cost_per_wo": 34.91,
+      "total_labor_cost": 2307.86,
       "avg_resident_rating": 3.67,
       "reviews": [
         {
@@ -265,9 +265,9 @@
     },
     {
       "name": "Jacob Jett",
-      "wo_count": 47,
-      "avg_cost_per_wo": 74.91,
-      "total_labor_cost": 2816.45,
+      "wo_count": 46,
+      "avg_cost_per_wo": 66.63,
+      "total_labor_cost": 2360.8,
       "avg_resident_rating": 3.83,
       "reviews": [
         {
@@ -304,9 +304,9 @@
     },
     {
       "name": "Isaac Chavez",
-      "wo_count": 39,
-      "avg_cost_per_wo": 47.91,
-      "total_labor_cost": 1488.67,
+      "wo_count": 38,
+      "avg_cost_per_wo": 45.35,
+      "total_labor_cost": 1343.55,
       "avg_resident_rating": null,
       "reviews": []
     }
@@ -365,11 +365,11 @@
   ],
   "monthly_budget": {
     "budget": 82636.13,
-    "labor": 26356.95,
+    "labor": 26405.89,
     "materials": 6716.83,
     "invoices": 0,
-    "total_actual": 33073.78,
-    "variance": 49562.35
+    "total_actual": 33122.72,
+    "variance": 49513.41
   },
   "grounds_monthly_budget": {
     "budget": 37396.43,
