@@ -1,0 +1,228 @@
+{
+  "week_start": "2026-10-05",
+  "week_end": "2026-10-11",
+  "label": "October 5 – 11, 2026",
+  "month_label": "October 2026",
+  "generated_at": "2026-10-05",
+  "complete": false,
+  "source": "Property Meld (completed melds) + Ramp (materials/purchases) + QBT (labor) + AppFolio (budget) — automated. KPIs and narrative are authored by Florencia, never generated here.",
+  "kpis": [
+    {
+      "metric": "Average Work Order Cost",
+      "q1": null,
+      "q2": 39,
+      "last_30": 40.5,
+      "last_7": 29.18
+    },
+    {
+      "metric": "Emergency Work Order Completion Time",
+      "q1": 0.8,
+      "q2": 0.4,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Work Order Resident Satisfaction",
+      "q1": 4.21,
+      "q2": 4.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Vendor Completion Time",
+      "q1": 18.7,
+      "q2": 38.9,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Avg Speed of Repair",
+      "q1": 9.2,
+      "q2": 15.6,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Assignment",
+      "q1": 0.3,
+      "q2": 1.31,
+      "last_30": null,
+      "last_7": null
+    },
+    {
+      "metric": "Time to Schedule",
+      "q1": 0.4,
+      "q2": 1.7,
+      "last_30": null,
+      "last_7": null
+    }
+  ],
+  "top_work_orders": [
+    {
+      "ref": "TBM2FW",
+      "property": "p705",
+      "brief": "Stove replacement - and Bugs spraying",
+      "labor": 0,
+      "materials": 673.6,
+      "cost": 673.6
+    },
+    {
+      "ref": "T5N5PFJ",
+      "property": "kn47",
+      "brief": "The Refrigerator In Kitchen Is Not Cooling.",
+      "labor": 24.23,
+      "materials": 606.27,
+      "cost": 630.5
+    },
+    {
+      "ref": "TDKECNM",
+      "property": "rl16",
+      "brief": "Master Bathroom Sink Drain Is Detached",
+      "labor": 114.6,
+      "materials": 127.67,
+      "cost": 242.27
+    },
+    {
+      "ref": "TQ7L89V",
+      "property": "c302",
+      "brief": "Post notices on each unit",
+      "labor": 117.65,
+      "materials": 31.88,
+      "cost": 149.53
+    },
+    {
+      "ref": "T5MN4BY",
+      "property": "k308",
+      "brief": "Porch Light Is Not Working",
+      "labor": 76.05,
+      "materials": 65.36,
+      "cost": 141.41
+    },
+    {
+      "ref": "T3X3TWIB",
+      "property": "ps25",
+      "brief": "The Air Conditioner Is Leaking And Dripping Onto Carpet.",
+      "labor": 60.39,
+      "materials": 0,
+      "cost": 60.39
+    },
+    {
+      "ref": "TZ02TGR",
+      "property": "rl16",
+      "brief": "Check for Back Ups",
+      "labor": 51.98,
+      "materials": 0,
+      "cost": 51.98
+    },
+    {
+      "ref": "T3B0B06",
+      "property": "ps25",
+      "brief": "The Stove Grates Aren't Getting Hot",
+      "labor": 43.2,
+      "materials": 0,
+      "cost": 43.2
+    },
+    {
+      "ref": "TRPTVYW",
+      "property": "kn47",
+      "brief": "Dryer vent repair at Righthand D building laundry room",
+      "labor": 42.6,
+      "materials": 0,
+      "cost": 42.6
+    },
+    {
+      "ref": "TCA78HL",
+      "property": "ps17",
+      "brief": "The Bathroom Mirror Fell Down",
+      "labor": 36,
+      "materials": 6.49,
+      "cost": 42.49
+    }
+  ],
+  "by_technician": [
+    {
+      "name": "Jaxson Lakins",
+      "wo_count": 9,
+      "avg_cost_per_wo": 122.43,
+      "total_labor_cost": 361.43,
+      "avg_resident_rating": 4,
+      "reviews": [
+        {
+          "ref": "TB7G56W",
+          "rating": 4,
+          "text": null
+        }
+      ]
+    },
+    {
+      "name": "Isaac Chavez",
+      "wo_count": 6,
+      "avg_cost_per_wo": 29.03,
+      "total_labor_cost": 174.15,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Jared Miller",
+      "wo_count": 5,
+      "avg_cost_per_wo": 24.72,
+      "total_labor_cost": 123.6,
+      "avg_resident_rating": null,
+      "reviews": []
+    },
+    {
+      "name": "Jacob Jett",
+      "wo_count": 3,
+      "avg_cost_per_wo": 109.98,
+      "total_labor_cost": 232.7,
+      "avg_resident_rating": null,
+      "reviews": []
+    }
+  ],
+  "ramp_purchases_over_300": [],
+  "operational_expenses": [
+    {
+      "category": "Auto",
+      "amount": 127.77
+    },
+    {
+      "category": "Supplies and Tools",
+      "amount": 0
+    },
+    {
+      "category": "Appliances",
+      "amount": 0
+    },
+    {
+      "category": "Grounds",
+      "amount": 0
+    },
+    {
+      "category": "Maintenance",
+      "amount": 103.17
+    }
+  ],
+  "monthly_budget": {
+    "budget": 82837.74,
+    "labor": 2340.89,
+    "materials": 969.65,
+    "invoices": 0,
+    "total_actual": 3310.54,
+    "variance": 79527.2
+  },
+  "grounds_monthly_budget": {
+    "budget": 37487.66,
+    "labor": 1972.42,
+    "materials": 0,
+    "invoices": 0,
+    "total_actual": 1972.42,
+    "variance": 35515.24
+  },
+  "cost_by_property": [],
+  "narrative": null,
+  "narrative_2": null,
+  "priorities_next_week": null,
+  "grounds_top_purchases_month": "2026-10",
+  "grounds_top_purchases": [],
+  "grounds_pest_control": []
+}
