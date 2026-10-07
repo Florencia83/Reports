@@ -1,14 +1,23 @@
 {
-  "source": "09/2026 tab (Google Sheet 1DTbOVhgHMc84mgVtFeOnhiVPh__LLCRZZYcBGaFVSmo), 'OVER BUDGET -- REPAIRS' summary table, built from the AppFolio Expense Distribution method (Budget vs month-to-date Subtotal). Supersedes the prior Aug 23 list below (that floor already auto-released 2026-09-01 and had gone stale).",
-  "updated_at": "2026-09-14",
-  "period_covered": "September 1-14, 2026",
-  "rule": "Properties listed in over_budget_repairs must not have NEW non-emergency/non-urgent repair melds scheduled before floor_date. This overrides every other scheduler rule (freeze windows, emergency-slot reservation, load balancing, day-blocking, etc.) EXCEPT a manual appointment placed by a human directly in Property Meld -- manual moves always stand as-is, never touched. Emergency and Urgent priority melds are ALWAYS scheduled immediately regardless of this list -- confirmed explicitly by Florencia 2026-08-20, do not defer real emergencies.",
-  "floor_date": "2026-10-01",
-  "over_budget_repairs": ["c302", "w226"],
-  "note_2026-09-14": "w226 added now that 2026-09-11 has passed (the 2 previously-held-back melds TLFLP9T and TUKMAQK's target date). Florencia confirmed the currently-kept exception melds on both c302 and w226 (the ones already deliberately left on their original dates -- fire extinguisher/garage break-in/light bulb on w226; the 2 Emergency-priority melds + Ceiling Fan on c302) should stay untouched as-is; this floor only governs NEW melds created from here forward.",
-  "previous_list_2026-08-25_superseded": {
-    "floor_date": "2026-09-01",
-    "over_budget_repairs": ["ps25", "s129", "rl21", "k104", "j312", "p705", "c313", "a511", "ps17", "w226"],
-    "note": "This floor already passed and auto-released before this update -- kept here for history only, not active."
+  "source": "Florencia 2026-10-07, October MTD Repairs over budget (m5x2 Maintenance dashboard, Repairs account) plus properties she chose to defer.",
+  "updated_at": "2026-10-07",
+  "period_covered": "October 2026",
+  "rule": "Properties listed in over_budget_repairs: NEW non-emergency/non-urgent repair melds are not scheduled before floor_date. Melds already on the calendar are NOT moved (BUDGET_FLOOR_MOVE_EXISTING=false in pm_spokane_scheduler.js, Florencia 2026-10-07). Emergency and Urgent are always scheduled immediately.",
+  "floor_date": "2026-11-01",
+  "over_budget_repairs": [
+    "w117",
+    "c313",
+    "k308",
+    "j312",
+    "c302"
+  ],
+  "previous_list_2026-09-14_superseded": {
+    "floor_date": "2026-10-01",
+    "over_budget_repairs": [
+      "c302",
+      "w226"
+    ],
+    "period_covered": "September 1-14, 2026",
+    "updated_at": "2026-09-14"
   }
 }
