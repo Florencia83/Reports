@@ -1,6 +1,6 @@
 {
-  "source": "Florencia 2026-10-07, October MTD Repairs over budget (m5x2 Maintenance dashboard, Repairs account) plus properties she chose to defer.",
-  "updated_at": "2026-10-07",
+  "source": "Florencia 2026-10-07 + 2026-10-19 (m5x2 Maintenance dashboard, Oct Repairs, Accrual): over budget or near (a511 96%, m405 87%). p705 left OUT on purpose (tenant escalation, work must finish). l912/w225 not included. tc34 is Tacoma (no floor rule).",
+  "updated_at": "2026-10-19",
   "period_covered": "October 2026",
   "rule": "Properties listed in over_budget_repairs: NEW non-emergency/non-urgent repair melds are not scheduled before floor_date. Melds already on the calendar are NOT moved (BUDGET_FLOOR_MOVE_EXISTING=false in pm_spokane_scheduler.js, Florencia 2026-10-07). Emergency and Urgent are always scheduled immediately.",
   "floor_date": "2026-11-01",
@@ -9,7 +9,11 @@
     "c313",
     "k308",
     "j312",
-    "c302"
+    "c302",
+    "a210",
+    "a916",
+    "a511",
+    "m405"
   ],
   "previous_list_2026-09-14_superseded": {
     "floor_date": "2026-10-01",
