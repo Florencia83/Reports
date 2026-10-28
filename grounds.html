@@ -178,9 +178,32 @@ function other() {
   </tbody></table></div></section>`;
 }
 
+let woMonth = null; const openWo = new Set();
+function woCosts() {
+  woMonth = woMonth || D.current_month;
+  const SRC = ['Time entry', 'Ramp', 'Vendor bill'];
+  const list = (D.woCharges || []).filter(inCity).map(w => {
+    const lines = w.lines.filter(l => l.month === woMonth).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    const n = {}; SRC.forEach(s => n[s] = lines.filter(l => l.src === s).length);
+    return { ...w, lines, n, total: lines.reduce((a, l) => a + l.amount, 0) };
+  }).filter(w => w.lines.length).sort((a, b) => b.total - a.total);
+  const total = list.reduce((a, w) => a + w.total, 0);
+  const cnt = s => n => n ? `${n}` : '<span style="color:#d1d5db">0</span>';
+  let h = `<div class="chips">${D.months.map(m => `<button class="chip" data-wom="${m}" aria-pressed="${m === woMonth}">${mLabel(m, m === D.current_month)} ${m.slice(0, 4)}</button>`).join('')}</div>
+  <p class="note">Everything charged to GL 52003 R&amp;M - Grounds in AppFolio, by the work order it is charged to (bill posting date in the month). Click a row to see each time entry, Ramp expense and vendor bill. ${list.length} work orders · ${money(total)}.</p>
+  <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Property</th><th>Work order</th><th>Meld</th><th>Status</th><th class="r">Time entries</th><th class="r">Ramp</th><th class="r">Vendor bills</th><th class="r">Total</th></tr></thead><tbody>`;
+  for (const w of list) {
+    const key = w.wo || 'none', open = openWo.has(key);
+    const meld = w.meld ? `<a href="${PM}${w.meld}/summary/" target="_blank" rel="noopener">${esc(w.ref)}</a>` : esc(w.ref);
+    h += `<tr data-wo="${esc(key)}" style="cursor:pointer"><td><b>${esc(w.prop)}</b></td><td class="wrap"><span aria-hidden="true" style="color:var(--muted)">${open ? '&#9662;' : '&#9656;'}</span> ${esc(w.title || (w.wo ? '' : 'Not linked to a work order'))} <span style="color:var(--muted)">${esc(w.wo)}</span></td><td>${meld}</td><td style="color:#4b5563">${esc(w.status)}</td>${SRC.map(s => `<td class="r">${cnt(s)(w.n[s])}</td>`).join('')}<td class="r"><b>${money(w.total)}</b></td></tr>`;
+    if (open) h += w.lines.map(l => `<tr style="background:#fafafa"><td></td><td class="wrap" colspan="3" style="color:#4b5563">${dLabel(l.date)} · ${esc(l.src)} · ${esc(l.desc)}</td><td colspan="3"></td><td class="r">${money(l.amount)}</td></tr>`).join('');
+  }
+  return h + `</tbody></table></div></section>`;
+}
+
 function wo() {
   const list = D.workOrders.filter(inCity);
-  return chips() + `<p class="note">G - work orders dated in the last 30 days, newest first. ${list.length} work orders.</p>
+  return chips() + woCosts() + `<h3 style="margin:12px 0 0;font-size:15px">G - work orders, last 30 days</h3><p class="note">G - work orders dated in the last 30 days, newest first. ${list.length} work orders.</p>
   <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Date</th><th>Property</th><th>Work order</th><th>Assigned</th><th>Status</th><th>Meld</th></tr></thead><tbody>
   ${list.map(w => `<tr><td style="color:#4b5563">${dLabel(w.date)}</td><td><b>${esc(w.prop)}</b></td><td class="wrap">${esc(w.title)}</td><td>${esc(w.who)}</td><td><span class="pill sm ${cls(w.status)}">${w.status}</span></td><td><a href="${PM}${w.meld}/summary/" target="_blank" rel="noopener">${esc(w.ref)}</a></td></tr>`).join('')}
   </tbody></table></div></section>`;
@@ -207,7 +230,9 @@ function render() {
 window.addEventListener('hashchange', () => { tab = location.hash.slice(1); if (D) render(); });
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-tab]'); if (t) { tab = t.dataset.tab; history.replaceState(null, '', '#' + tab); render(); return; }
-  const c = e.target.closest('[data-city]'); if (c) { city = c.dataset.city; render(); }
+  const c = e.target.closest('[data-city]'); if (c) { city = c.dataset.city; render(); return; }
+  const m = e.target.closest('[data-wom]'); if (m) { woMonth = m.dataset.wom; render(); return; }
+  const w = e.target.closest('tr[data-wo]'); if (w && !e.target.closest('a')) { const k = w.dataset.wo; openWo.has(k) ? openWo.delete(k) : openWo.add(k); render(); }
 });
 fetch('data/grounds-dashboard.json', { cache: 'no-store' }).then(r => r.json()).then(d => {
   D = d;

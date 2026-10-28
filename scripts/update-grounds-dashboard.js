@@ -168,7 +168,8 @@ async function afFetch(url, body, attempt = 1) {
 async function afReport(name, body) {
   let j = await afFetch(`${AF_BASE}/${name}.json`, body);
   let rows = Array.isArray(j) ? j : (j.results || []);
-  while (j && j.next_page_url) { j = await afFetch(j.next_page_url); rows = rows.concat(j.results || []); }
+  // Relative next_page_url (work_order report) only answers to POST; absolute ones (general_ledger) to GET.
+  while (j && j.next_page_url) { j = await afFetch(new URL(j.next_page_url, AF_BASE).href, j.next_page_url.startsWith('/') ? {} : undefined); rows = rows.concat(j.results || []); }
   return rows;
 }
 
@@ -203,6 +204,33 @@ async function pullLedger() {
   });
 }
 
+// Every bill line on GL 52003 carries the AppFolio work order it is charged to; the work order's
+// description ends with the Property Meld reference ("Title - TMTVL0V").
+async function pullWoCharges() {
+  const lines = await afReport('bill_detail', { occurred_on_from: MONTHS[0] + '-01', occurred_on_to: TODAY, gl_account_ids: GROUNDS_GL_ID });
+  const wos = await afReport('work_order', { property_visibility: 'all', work_order_statuses: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] });
+  const woById = Object.fromEntries(wos.map(w => [w.work_order_id, w]));
+  const byWo = {};
+  for (const l of lines) {
+    if (String(l.account_number) !== GROUNDS_ACCOUNT) continue;
+    const amount = Math.round(((parseFloat(l.paid) || 0) + (parseFloat(l.unpaid) || 0)) * 100) / 100;
+    if (!amount) continue;
+    const ref = String(l.reference_number || '');
+    const src = ref.startsWith('qbt:') ? 'Time entry' : ref.startsWith('ramp:') ? 'Ramp' : 'Vendor bill';
+    // Public page: no free-text tech notes on time entries.
+    const desc = src === 'Time entry' ? 'QBT time' : src === 'Vendor bill' ? [l.payee_name, l.description].filter(Boolean).join(' - ').slice(0, 140) : String(l.description || '').slice(0, 140);
+    const key = l.work_order_id || 'none';
+    if (!byWo[key]) {
+      const w = woById[l.work_order_id] || {};
+      const first = String(w.service_request_description || w.job_description || '').split('\n')[0].trim();
+      const m = first.match(/^(.*?)\s+-\s+([A-Z0-9]{7,8})$/);
+      byWo[key] = { wo: l.work_order || '', prop: codeOf(l.property_name), area: areaOf(l.property_city), title: m ? m[1] : first.slice(0, 120), ref: m ? m[2] : '', status: w.status || '', lines: [] };
+    }
+    byWo[key].lines.push({ date: l.posting_date || l.bill_date, month: ym(l.posting_date || l.bill_date || ''), src, desc, amount });
+  }
+  return Object.values(byWo);
+}
+
 // ---------- build ----------
 async function main() {
   console.log('Today', TODAY, 'months', MONTHS.join(','));
@@ -218,6 +246,8 @@ async function main() {
   console.log('properties with grounds budget/actual', budget.length);
   const gl = await pullLedger();
   console.log('ledger lines', gl.length);
+  const woCharges = await pullWoCharges();
+  console.log('work orders with grounds charges', woCharges.length);
 
   const seriesById = Object.fromEntries(series.map(x => [x.id, x]));
   const rate = list => { const l = list.filter(o => counts(o.label)); const sc = l.reduce((a, o) => a + scoreOf(o.label), 0); return l.length ? Math.round(sc / l.length * 1000) / 10 : null; };
@@ -267,6 +297,10 @@ async function main() {
 
   const transactions = gl.filter(r => r.month === CUR).sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
+  // Link a work order to its meld when the meld is one of the G occurrences we already pulled.
+  const meldByRef = Object.fromEntries(occ.map(o => [o.ref, o.id]));
+  woCharges.forEach(w => { if (meldByRef[w.ref]) w.meld = meldByRef[w.ref]; });
+
   const out = {
     generated_at: new Date().toISOString(), today: TODAY, quarter: Q_LABEL, months: MONTHS, table_months: tableMonths, current_month: CUR,
     kpis: {
@@ -275,7 +309,7 @@ async function main() {
       overdue: { value: overdue.length, goal: 0, byArea: overdueByArea },
       vendorShare: { value: qTotal ? Math.round(qBills / qTotal * 1000) / 10 : null, goal: 25, bills: Math.round(qBills), total: Math.round(qTotal) }
     },
-    trend, properties, statusSeries, otherSeries, workOrders, transactions
+    trend, properties, statusSeries, otherSeries, workOrders, transactions, woCharges
   };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(out));
