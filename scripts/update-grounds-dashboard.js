@@ -197,10 +197,10 @@ async function pullLedger() {
   const rows = await afReport('general_ledger', { posted_on_from: MONTHS[0] + '-01', posted_on_to: TODAY, accounting_basis: 'Accrual', gl_account_ids: GROUNDS_GL_ID });
   return rows.filter(r => String(r.account_name || '').startsWith(GROUNDS_ACCOUNT)).map(r => {
     const ref = String(r.reference || '');
-    const src = ref.startsWith('qbt:') ? 'Team labor' : ref.startsWith('bill:') ? 'Vendor bill' : ref.startsWith('ramp:') ? 'Ramp' : r.party_type === 'Occupancy' ? 'Resident credit' : 'Journal entry';
+    const src = ref.startsWith('qbt:') ? 'Labor' : ref.startsWith('bill:') ? 'Vendor bill' : ref.startsWith('ramp:') ? 'Ramp' : r.party_type === 'Occupancy' ? 'Resident credit' : 'Journal entry';
     // Public page: no resident names, and no free-text tech notes (they can mention residents).
-    const memo = src === 'Vendor bill' || src === 'Ramp' ? String(r.description || '').slice(0, 140) : src === 'Resident credit' ? 'Resident credit for grounds work' : src === 'Team labor' ? 'QBT time' : String(r.description || '').slice(0, 80);
-    return { date: r.post_date, month: ym(r.post_date || ''), prop: codeOf(r.property_name), src, memo, amount: Math.round(((parseFloat(r.debit) || 0) - (parseFloat(r.credit) || 0)) * 100) / 100 };
+    const memo = src === 'Vendor bill' || src === 'Ramp' ? String(r.description || '').slice(0, 140) : src === 'Resident credit' ? 'Resident credit for grounds work' : src === 'Labor' ? 'QBT time' : /concession|credit/i.test(r.description || '') ? 'Resident concession for grounds work' : String(r.description || '').slice(0, 80);
+    return { ref, vendor: src === 'Vendor bill' ? r.party_name || '' : '', date: r.post_date, month: ym(r.post_date || ''), prop: codeOf(r.property_name), area: areaOf(r.property_city), unit: r.unit || '', src, memo, amount: Math.round(((parseFloat(r.debit) || 0) - (parseFloat(r.credit) || 0)) * 100) / 100 };
   });
 }
 
@@ -216,19 +216,51 @@ async function pullWoCharges() {
     const amount = Math.round(((parseFloat(l.paid) || 0) + (parseFloat(l.unpaid) || 0)) * 100) / 100;
     if (!amount) continue;
     const ref = String(l.reference_number || '');
-    const src = ref.startsWith('qbt:') ? 'Time entry' : ref.startsWith('ramp:') ? 'Ramp' : 'Vendor bill';
+    const src = ref.startsWith('qbt:') ? 'Labor' : ref.startsWith('ramp:') ? 'Ramp' : 'Vendor bill';
     // Public page: no free-text tech notes on time entries.
-    const desc = src === 'Time entry' ? 'QBT time' : src === 'Vendor bill' ? [l.payee_name, l.description].filter(Boolean).join(' - ').slice(0, 140) : String(l.description || '').slice(0, 140);
+    const desc = src === 'Labor' ? 'QBT time' : String(l.description || '').slice(0, 140);
     const key = l.work_order_id || 'none';
     if (!byWo[key]) {
       const w = woById[l.work_order_id] || {};
       const first = String(w.service_request_description || w.job_description || '').split('\n')[0].trim();
-      const m = first.match(/^(.*?)\s+-\s+([A-Z0-9]{7,8})$/);
-      byWo[key] = { wo: l.work_order || '', prop: codeOf(l.property_name), area: areaOf(l.property_city), title: m ? m[1] : first.slice(0, 120), ref: m ? m[2] : '', status: w.status || '', lines: [] };
+      const m = first.match(/^(.*?)\s+-\s+([A-Z0-9]{6,8})$/);
+      byWo[key] = { wo: l.work_order || '', prop: codeOf(l.property_name), area: areaOf(l.property_city), title: m ? m[1] : first.slice(0, 120), ref: m ? m[2] : '', status: w.status || '', srId: l.service_request_id || null, woId: l.work_order_id || null, lines: [] };
     }
-    byWo[key].lines.push({ date: l.posting_date || l.bill_date, month: ym(l.posting_date || l.bill_date || ''), src, desc, amount });
+    byWo[key].lines.push({ ref, date: l.posting_date || l.bill_date, month: ym(l.posting_date || l.bill_date || ''), src, desc, unit: l.unit || '', vendor: src === 'Vendor bill' ? l.payee_name || '' : '', amount });
   }
   return Object.values(byWo);
+}
+
+// Who is behind each team charge: the QBT timesheet's employee (and hours), the Ramp card holder.
+async function pullNames(refs) {
+  const out = {};
+  const qbt = [...new Set(refs.filter(r => r.startsWith('qbt:')).map(r => r.slice(4)))];
+  for (let i = 0; i < qbt.length; i += 50) {
+    try {
+      const res = await fetch('https://rest.tsheets.com/api/v1/timesheets?ids=' + qbt.slice(i, i + 50).join(','), { headers: { Authorization: 'Bearer ' + (process.env.QBT_TOKEN || '').trim() } });
+      const j = await res.json();
+      const users = (j.supplemental_data || {}).users || {};
+      for (const t of Object.values((j.results || {}).timesheets || {})) {
+        const u = users[t.user_id] || {};
+        out['qbt:' + t.id] = { who: [u.first_name, u.last_name].filter(Boolean).join(' '), hours: Math.round(t.duration / 36) / 100 };
+      }
+    } catch (e) { console.log('  QBT names fail', e.message); }
+  }
+  const ramp = [...new Set(refs.filter(r => r.startsWith('ramp:')).map(r => r.slice(5)))];
+  if (ramp.length && process.env.RAMP_CLIENT_ID) {
+    try {
+      const tok = await (await fetch('https://api.ramp.com/developer/v1/token', { method: 'POST', headers: { Authorization: 'Basic ' + Buffer.from(process.env.RAMP_CLIENT_ID.trim() + ':' + process.env.RAMP_CLIENT_SECRET.trim()).toString('base64'), 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'grant_type=client_credentials&scope=transactions:read' })).json();
+      for (let i = 0; i < ramp.length; i += 8) {
+        await Promise.all(ramp.slice(i, i + 8).map(async id => {
+          try {
+            const t = await (await fetch('https://api.ramp.com/developer/v1/transactions/' + id, { headers: { Authorization: 'Bearer ' + tok.access_token } })).json();
+            if (t.card_holder) out['ramp:' + id] = { who: [t.card_holder.first_name, t.card_holder.last_name].filter(Boolean).join(' '), merchant: t.merchant_name || '' };
+          } catch (e) {}
+        }));
+      }
+    } catch (e) { console.log('  Ramp names fail', e.message); }
+  }
+  return out;
 }
 
 // ---------- build ----------
@@ -248,6 +280,9 @@ async function main() {
   console.log('ledger lines', gl.length);
   const woCharges = await pullWoCharges();
   console.log('work orders with grounds charges', woCharges.length);
+  const names = await pullNames([...gl.map(r => r.ref), ...woCharges.flatMap(w => w.lines.map(l => l.ref))]);
+  console.log('names found', Object.keys(names).length);
+  const tag = r => { const n = names[r.ref] || {}; r.who = n.who || ''; if (n.hours != null) r.hours = n.hours; if (n.merchant) r.merchant = n.merchant; delete r.ref; };
 
   const seriesById = Object.fromEntries(series.map(x => [x.id, x]));
   const rate = list => { const l = list.filter(o => counts(o.label)); const sc = l.reduce((a, o) => a + scoreOf(o.label), 0); return l.length ? Math.round(sc / l.length * 1000) / 10 : null; };
@@ -295,7 +330,11 @@ async function main() {
     return { date: o.date, prop: x.prop, area: x.area, title: x.title, who: x.who || 'Unassigned', status: o.label, ref: o.ref, meld: o.id };
   });
 
-  const transactions = gl.filter(r => r.month === CUR).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const transactions = gl.slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  transactions.forEach(tag);
+  woCharges.forEach(w => w.lines.forEach(tag));
+  // Budget v actual per property for every month in the window (Work Orders tree).
+  const propBudget = budget.map(p => ({ code: p.code, area: p.area, months: Object.fromEntries(MONTHS.map(mo => [mo, { budget: Math.round(p.months[mo].budget * monthFrac(mo)), actual: Math.round(p.months[mo].actual) }])) }));
 
   // Link a work order to its meld when the meld is one of the G occurrences we already pulled.
   const meldByRef = Object.fromEntries(occ.map(o => [o.ref, o.id]));
@@ -309,7 +348,7 @@ async function main() {
       overdue: { value: overdue.length, goal: 0, byArea: overdueByArea },
       vendorShare: { value: qTotal ? Math.round(qBills / qTotal * 1000) / 10 : null, goal: 25, bills: Math.round(qBills), total: Math.round(qTotal) }
     },
-    trend, properties, statusSeries, otherSeries, workOrders, transactions, woCharges
+    trend, properties, statusSeries, otherSeries, workOrders, transactions, woCharges, propBudget
   };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(out));

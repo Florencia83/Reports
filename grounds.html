@@ -54,6 +54,25 @@ tbody td{border-bottom:1px solid var(--soft)}
 .ok{margin:0;font-size:13px;color:#166534;background:#f0fdf4;border-radius:6px;padding:10px 12px}
 .note{margin:0;font-size:13px;color:#4b5563}
 .red{color:#991b1b;font-weight:600}
+.ctl{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.ctl select,.dt input{font:inherit;font-size:13px;padding:7px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;color:var(--ink)}
+.dt{font-size:13px;color:var(--ink2);display:inline-flex;align-items:center;gap:8px;margin-right:14px}
+.tree{padding:0;overflow:hidden}.tree thead th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#fafafa;padding:10px 14px}
+.tree td{padding:9px 14px}.tree .bud{color:var(--muted)}
+.tree tr.tot td{font-weight:700;background:#f9fafb;border-bottom:1px solid var(--line)}
+.tree tr.l0,.tree tr.l1{cursor:pointer}.tree tr.l0:hover,.tree tr.l1:hover{background:#f5f7ff}
+.tree tr.l1 td{background:#f8f9fe}.tree tr.l1 td:first-child{padding-left:38px}
+.tree tr.l1 a{text-decoration:underline dotted;text-underline-offset:3px}
+.chev{display:inline-block;width:14px;margin-right:6px;font-size:10px;color:var(--muted);transition:transform .15s}.chev.open{transform:rotate(90deg)}
+.cnt{margin-left:10px;font-size:11px;color:var(--muted)}
+.tree tr.l2>td{padding:0 14px 10px 58px;background:#f8f9fe}
+table.inner{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:6px}
+table.inner th{font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;background:#fff}
+table.inner td{padding:4px 10px;border-bottom:1px solid var(--soft)}
+.bw{height:6px;background:#eceff3;border-radius:3px;overflow:hidden;width:90px;margin-left:auto}.bf{height:100%}
+.src{font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px}
+.src.Labor{background:#e0f2fe;color:#0369a1}.src.Ramp{background:#f3e8ff;color:#7e22ce}.src.Vendor{background:#fef3c7;color:#92400e}
+.src.Resident,.src.Journal{background:#f3f4f6;color:#4b5563}
 @media (max-width:600px){nav.top{padding:0 16px}}
 </style>
 </head>
@@ -178,44 +197,73 @@ function other() {
   </tbody></table></div></section>`;
 }
 
-let woMonth = null; const openWo = new Set();
-function woCosts() {
-  woMonth = woMonth || D.current_month;
-  const SRC = ['Time entry', 'Ramp', 'Vendor bill'];
-  const list = (D.woCharges || []).filter(inCity).map(w => {
-    const lines = w.lines.filter(l => l.month === woMonth).sort((a, b) => String(b.date).localeCompare(String(a.date)));
-    const n = {}; SRC.forEach(s => n[s] = lines.filter(l => l.src === s).length);
-    return { ...w, lines, n, total: lines.reduce((a, l) => a + l.amount, 0) };
-  }).filter(w => w.lines.length).sort((a, b) => b.total - a.total);
-  const total = list.reduce((a, w) => a + w.total, 0);
-  const cnt = s => n => n ? `${n}` : '<span style="color:#d1d5db">0</span>';
-  let h = `<div class="chips">${D.months.map(m => `<button class="chip" data-wom="${m}" aria-pressed="${m === woMonth}">${mLabel(m, m === D.current_month)} ${m.slice(0, 4)}</button>`).join('')}</div>
-  <p class="note">Everything charged to GL 52003 R&amp;M - Grounds in AppFolio, by the work order it is charged to (bill posting date in the month). Click a row to see each time entry, Ramp expense and vendor bill. ${list.length} work orders · ${money(total)}.</p>
-  <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Property</th><th>Work order</th><th>Meld</th><th>Status</th><th class="r">Time entries</th><th class="r">Ramp</th><th class="r">Vendor bills</th><th class="r">Total</th></tr></thead><tbody>`;
-  for (const w of list) {
-    const key = w.wo || 'none', open = openWo.has(key);
-    const meld = w.meld ? `<a href="${PM}${w.meld}/summary/" target="_blank" rel="noopener">${esc(w.ref)}</a>` : esc(w.ref);
-    h += `<tr data-wo="${esc(key)}" style="cursor:pointer"><td><b>${esc(w.prop)}</b></td><td class="wrap"><span aria-hidden="true" style="color:var(--muted)">${open ? '&#9662;' : '&#9656;'}</span> ${esc(w.title || (w.wo ? '' : 'Not linked to a work order'))} <span style="color:var(--muted)">${esc(w.wo)}</span></td><td>${meld}</td><td style="color:#4b5563">${esc(w.status)}</td>${SRC.map(s => `<td class="r">${cnt(s)(w.n[s])}</td>`).join('')}<td class="r"><b>${money(w.total)}</b></td></tr>`;
-    if (open) h += w.lines.map(l => `<tr style="background:#fafafa"><td></td><td class="wrap" colspan="3" style="color:#4b5563">${dLabel(l.date)} · ${esc(l.src)} · ${esc(l.desc)}</td><td colspan="3"></td><td class="r">${money(l.amount)}</td></tr>`).join('');
-  }
-  return h + `</tbody></table></div></section>`;
-}
+let woMonth = null, txFrom = null, txTo = null; const openRows = new Set();
+const AF = 'https://mckay.appfolio.com/maintenance/service_requests/';
+const tag = s => `<span class="src ${s.replace(/ .*/, '')}">${esc(s)}</span>`;
+const person = l => esc(l.who || l.vendor || l.merchant || '');
+const detail = l => esc(l.src === 'Labor' ? (l.hours != null ? l.hours + ' h' : '') : l.src === 'Ramp' ? [l.merchant, l.desc || l.memo].filter(Boolean).join(' - ') : l.desc || l.memo || '');
+const bar = p => p == null ? '' : `<div class="bw"><div class="bf" style="width:${Math.min(100, p)}%;background:${p > 100 ? 'var(--bad)' : p >= 90 ? '#f59e0b' : 'var(--good)'}"></div></div>`;
+const varc = v => `<span style="color:${v > 0 ? 'var(--bad)' : v < 0 ? 'var(--good)' : 'var(--muted)'}">${v > 0 ? '+' : v < 0 ? '-' : ''}$${Math.abs(Math.round(v)).toLocaleString('en-US')}</span>`;
 
 function wo() {
+  woMonth = woMonth || D.current_month;
+  // Property -> work order group (same title) -> every charge, like the Maintenance Budget v. Actual page.
+  const props = {};
+  for (const w of (D.woCharges || []).filter(inCity)) {
+    const lines = w.lines.filter(l => l.month === woMonth);
+    if (!lines.length) continue;
+    const p = props[w.prop] = props[w.prop] || { code: w.prop, groups: {} };
+    const title = w.title || 'Not linked to a work order';
+    const g = p.groups[title] = p.groups[title] || { title, wos: [], lines: [] };
+    g.wos.push(w); lines.forEach(l => g.lines.push({ ...l, wo: w }));
+  }
+  (D.propBudget || []).filter(inCity).forEach(b => { if (b.months[woMonth] && b.months[woMonth].budget && !props[b.code]) props[b.code] = { code: b.code, groups: {} }; });
+  const rows = Object.values(props).map(p => {
+    const b = ((D.propBudget || []).find(x => x.code === p.code) || { months: {} }).months[woMonth] || {};
+    const groups = Object.values(p.groups).map(g => ({ ...g, total: g.lines.reduce((a, l) => a + l.amount, 0) })).sort((a, b) => b.total - a.total);
+    const actual = groups.reduce((a, g) => a + g.total, 0);
+    return { ...p, groups, actual, budget: b.budget || 0 };
+  }).sort((a, b) => b.actual - a.actual);
+  const tA = rows.reduce((a, r) => a + r.actual, 0), tB = rows.reduce((a, r) => a + r.budget, 0);
+  let h = chips() + `<div class="ctl"><p class="note">Everything charged to GL 52003 R&amp;M - Grounds in AppFolio (Accrual), by property and work order. Click a property, then a work order, to see each charge.${woMonth === D.current_month ? ' Budget is month to date.' : ''}</p>
+  <select id="woMonth" aria-label="Month">${D.months.slice().reverse().map(m => `<option value="${m}"${m === woMonth ? ' selected' : ''}>${MON[+m.slice(5, 7) - 1]} ${m.slice(0, 4)}</option>`).join('')}</select></div>
+  <section class="card tree"><div class="box"><table><thead><tr><th>Property / work order</th><th class="r">Actual</th><th class="r">Budget</th><th class="r">Variance</th><th class="r" style="width:110px">% Bud</th></tr></thead><tbody>
+  <tr class="tot"><td>All properties</td><td class="r">${money(tA)}</td><td class="r bud">${money(tB)}</td><td class="r">${varc(tA - tB)}</td><td>${bar(tB ? tA / tB * 100 : null)}</td></tr>`;
+  for (const r of rows) {
+    const pk = 'p:' + r.code, po = openRows.has(pk);
+    h += `<tr class="l0" data-row="${esc(pk)}"><td><span class="chev${po ? ' open' : ''}">&#9656;</span><b>${esc(r.code)}</b></td><td class="r"><b>${r.actual ? money(r.actual) : '&mdash;'}</b></td><td class="r bud">${r.budget ? money(r.budget) : '&mdash;'}</td><td class="r">${varc(r.actual - r.budget)}</td><td>${bar(r.budget ? r.actual / r.budget * 100 : null)}</td></tr>`;
+    if (!po) continue;
+    for (const g of r.groups) {
+      const gk = pk + '|' + g.title, go = openRows.has(gk), w0 = g.wos[0];
+      const n = s => g.lines.filter(l => l.src === s).length;
+      const counts = [['Labor', 'labor'], ['Ramp', 'Ramp'], ['Vendor bill', 'bill']].map(([s, lab]) => n(s) ? n(s) + ' ' + lab + (n(s) > 1 && lab === 'bill' ? 's' : '') : '').filter(Boolean).join(' · ');
+      const link = w0.srId && w0.woId ? `<a href="${AF}${w0.srId}/work_orders/${w0.woId}" target="_blank" rel="noopener">${esc(g.title)}</a>` : esc(g.title);
+      h += `<tr class="l1" data-row="${esc(gk)}"><td><span class="chev${go ? ' open' : ''}">&#9656;</span>${link}${g.wos.length > 1 ? `<span class="badge">&times;${g.wos.length} WOs</span>` : ''}<span class="cnt">${counts}</span></td><td class="r">${money(g.total)}</td><td></td><td></td><td></td></tr>`;
+      if (!go) continue;
+      const ls = g.lines.slice().sort((a, b) => String(a.date).localeCompare(String(b.date)));
+      h += `<tr class="l2"><td colspan="5"><div class="box"><table class="inner"><thead><tr><th>Date</th><th>Type</th><th>Employee / vendor</th><th>Unit</th><th>Detail</th><th>Work order</th><th>Meld</th><th class="r">Amount</th></tr></thead><tbody>
+      ${ls.map(l => `<tr><td>${dLabel(l.date)}</td><td>${tag(l.src)}</td><td>${person(l)}</td><td>${esc(l.unit)}</td><td class="wrap">${detail(l)}</td><td style="color:var(--muted)">${esc(l.wo.wo)}</td><td>${l.wo.meld ? `<a href="${PM}${l.wo.meld}/summary/" target="_blank" rel="noopener">${esc(l.wo.ref)}</a>` : esc(l.wo.ref)}</td><td class="r">${money(l.amount)}</td></tr>`).join('')}
+      </tbody></table></div></td></tr>`;
+    }
+  }
   const list = D.workOrders.filter(inCity);
-  return chips() + woCosts() + `<h3 style="margin:12px 0 0;font-size:15px">G - work orders, last 30 days</h3><p class="note">G - work orders dated in the last 30 days, newest first. ${list.length} work orders.</p>
+  return h + `</tbody></table></div></section>
+  <h3 style="margin:12px 0 0;font-size:15px">G - work orders, last 30 days</h3><p class="note">G - work orders dated in the last 30 days, newest first. ${list.length} work orders.</p>
   <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Date</th><th>Property</th><th>Work order</th><th>Assigned</th><th>Status</th><th>Meld</th></tr></thead><tbody>
   ${list.map(w => `<tr><td style="color:#4b5563">${dLabel(w.date)}</td><td><b>${esc(w.prop)}</b></td><td class="wrap">${esc(w.title)}</td><td>${esc(w.who)}</td><td><span class="pill sm ${cls(w.status)}">${w.status}</span></td><td><a href="${PM}${w.meld}/summary/" target="_blank" rel="noopener">${esc(w.ref)}</a></td></tr>`).join('')}
   </tbody></table></div></section>`;
 }
 
 function tx() {
-  const list = D.transactions;
+  txFrom = txFrom || D.current_month + '-01'; txTo = txTo || D.today;
+  const min = D.months[0] + '-01';
+  const list = D.transactions.filter(inCity).filter(t => t.date >= txFrom && t.date <= txTo);
   const by = {}; list.forEach(t => by[t.src] = (by[t.src] || 0) + t.amount);
   const total = list.reduce((a, t) => a + t.amount, 0);
-  return `<p class="note">Everything posted to GL 52003 R&amp;M - Grounds this month (Accrual): ${Object.entries(by).map(([k, v]) => k + ' ' + money(v)).join(' · ')} · total ${money(total)}.</p>
-  <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Date</th><th>Property</th><th>Source</th><th>Memo</th><th class="r">Amount</th></tr></thead><tbody>
-  ${list.map(t => `<tr><td style="color:#4b5563">${t.date ? dLabel(t.date) : ''}</td><td><b>${esc(t.prop)}</b></td><td>${esc(t.src)}</td><td class="wrap" style="color:#4b5563">${esc(t.memo)}</td><td class="r">${money(t.amount)}</td></tr>`).join('')}
+  return chips() + `<div class="ctl"><div><label class="dt">From <input type="date" id="txFrom" value="${txFrom}" min="${min}" max="${D.today}"></label><label class="dt">To <input type="date" id="txTo" value="${txTo}" min="${min}" max="${D.today}"></label></div></div>
+  <p class="note">Everything posted to GL 52003 R&amp;M - Grounds (Accrual) between those dates: ${Object.entries(by).map(([k, v]) => k + ' ' + money(v)).join(' · ')} · total ${money(total)} · ${list.length} transactions. Data goes back to ${dLabel(min)}, ${min.slice(0, 4)}.</p>
+  <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Date</th><th>Property</th><th>Type</th><th>Employee / vendor</th><th>Unit</th><th>Detail</th><th class="r">Amount</th></tr></thead><tbody>
+  ${list.map(t => `<tr><td style="color:#4b5563">${t.date ? dLabel(t.date) : ''}</td><td><b>${esc(t.prop)}</b></td><td>${tag(t.src)}</td><td>${person(t)}</td><td>${esc(t.unit)}</td><td class="wrap" style="color:#4b5563">${detail(t)}</td><td class="r">${money(t.amount)}</td></tr>`).join('')}
   </tbody></table></div></section>`;
 }
 
@@ -231,8 +279,12 @@ window.addEventListener('hashchange', () => { tab = location.hash.slice(1); if (
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-tab]'); if (t) { tab = t.dataset.tab; history.replaceState(null, '', '#' + tab); render(); return; }
   const c = e.target.closest('[data-city]'); if (c) { city = c.dataset.city; render(); return; }
-  const m = e.target.closest('[data-wom]'); if (m) { woMonth = m.dataset.wom; render(); return; }
-  const w = e.target.closest('tr[data-wo]'); if (w && !e.target.closest('a')) { const k = w.dataset.wo; openWo.has(k) ? openWo.delete(k) : openWo.add(k); render(); }
+  const w = e.target.closest('tr[data-row]'); if (w && !e.target.closest('a')) { const k = w.dataset.row; openRows.has(k) ? openRows.delete(k) : openRows.add(k); render(); }
+});
+document.addEventListener('change', e => {
+  if (e.target.id === 'woMonth') { woMonth = e.target.value; render(); }
+  if (e.target.id === 'txFrom' && e.target.value) { txFrom = e.target.value; render(); }
+  if (e.target.id === 'txTo' && e.target.value) { txTo = e.target.value; render(); }
 });
 fetch('data/grounds-dashboard.json', { cache: 'no-store' }).then(r => r.json()).then(d => {
   D = d;
