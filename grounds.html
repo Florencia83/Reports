@@ -64,6 +64,7 @@ tbody td{border-bottom:1px solid var(--soft)}
 .tree tr.l1 td{background:#f8f9fe}.tree tr.l1 td:first-child{padding-left:38px}
 .tree tr.l1 a{text-decoration:underline dotted;text-underline-offset:3px}
 .chev{display:inline-block;width:14px;margin-right:6px;font-size:10px;color:var(--muted);transition:transform .15s}.chev.open{transform:rotate(90deg)}
+.sortable{cursor:pointer;user-select:none}.sortable[aria-sort=descending]{color:var(--ink)}
 .cnt{margin-left:10px;font-size:11px;color:var(--muted)}
 .tree tr.l2>td{padding:0 14px 10px 58px;background:#f8f9fe}
 table.inner{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:6px}
@@ -197,7 +198,7 @@ function other() {
   </tbody></table></div></section>`;
 }
 
-let woMonth = null, txFrom = null, txTo = null; const openRows = new Set();
+let woMonth = null, txFrom = null, txTo = null; const openRows = new Set(); let woSort = 'variance';
 const AF = 'https://mckay.appfolio.com/maintenance/service_requests/';
 const tag = s => `<span class="src ${s.replace(/ .*/, '')}">${esc(s)}</span>`;
 const person = l => esc(l.who || l.vendor || l.merchant || '');
@@ -223,11 +224,11 @@ function wo() {
     const groups = Object.values(p.groups).map(g => ({ ...g, total: g.lines.reduce((a, l) => a + l.amount, 0) })).sort((a, b) => b.total - a.total);
     const actual = groups.reduce((a, g) => a + g.total, 0);
     return { ...p, groups, actual, budget: b.budget || 0 };
-  }).sort((a, b) => b.actual - a.actual);
+  }).map(r => ({ ...r, variance: r.actual - r.budget, pct: r.budget ? r.actual / r.budget * 100 : (r.actual ? Infinity : -Infinity) })).sort((a, b) => b[woSort] - a[woSort] || b.actual - a.actual);
   const tA = rows.reduce((a, r) => a + r.actual, 0), tB = rows.reduce((a, r) => a + r.budget, 0);
   let h = chips() + `<div class="ctl"><p class="note">Everything charged to GL 52003 R&amp;M - Grounds in AppFolio (Accrual), by property and work order. Click a property, then a work order, to see each charge.${woMonth === D.current_month ? ' Budget is month to date.' : ''}</p>
   <select id="woMonth" aria-label="Month">${D.months.slice().reverse().map(m => `<option value="${m}"${m === woMonth ? ' selected' : ''}>${MON[+m.slice(5, 7) - 1]} ${m.slice(0, 4)}</option>`).join('')}</select></div>
-  <section class="card tree"><div class="box"><table><thead><tr><th>Property / work order</th><th class="r">Actual</th><th class="r">Budget</th><th class="r">Variance</th><th class="r" style="width:110px">% Bud</th></tr></thead><tbody>
+  <section class="card tree"><div class="box"><table><thead><tr><th>Property / work order</th>${[["actual", "Actual"], ["budget", "Budget"], ["variance", "Variance"], ["pct", "% Bud"]].map(([k, l]) => `<th class="r sortable" data-sort="${k}"${k === "pct" ? " style=\"width:110px\"" : ""} aria-sort="${woSort === k ? "descending" : "none"}">${l}${woSort === k ? " &#9660;" : ""}</th>`).join("")}</tr></thead><tbody>
   <tr class="tot"><td>All properties</td><td class="r">${money(tA)}</td><td class="r bud">${money(tB)}</td><td class="r">${varc(tA - tB)}</td><td>${bar(tB ? tA / tB * 100 : null)}</td></tr>`;
   for (const r of rows) {
     const pk = 'p:' + r.code, po = openRows.has(pk);
@@ -279,6 +280,7 @@ window.addEventListener('hashchange', () => { tab = location.hash.slice(1); if (
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-tab]'); if (t) { tab = t.dataset.tab; history.replaceState(null, '', '#' + tab); render(); return; }
   const c = e.target.closest('[data-city]'); if (c) { city = c.dataset.city; render(); return; }
+  const so = e.target.closest('th[data-sort]'); if (so) { woSort = so.dataset.sort; render(); return; }
   const w = e.target.closest('tr[data-row]'); if (w && !e.target.closest('a')) { const k = w.dataset.row; openRows.has(k) ? openRows.delete(k) : openRows.add(k); render(); }
 });
 document.addEventListener('change', e => {
