@@ -118,6 +118,8 @@ async function pullRecurring(s) {
 const STATUSES = ['COMPLETED', 'MANAGER_CANCELED', 'TENANT_CANCELED', 'VENDOR_COULD_NOT_COMPLETE', 'MAINTENANCE_COULD_NOT_COMPLETE',
   'PENDING_ASSIGNMENT', 'PENDING_MORE_MANAGEMENT_AVAILABILITY', 'PENDING_TENANT_AVAILABILITY', 'PENDING_COMPLETION', 'PENDING_VENDOR',
   'PENDING_MORE_VENDOR_AVAILABILITY'];
+// Every meld seen while paging, so work orders can link to their meld (not only G ones).
+const MELD_BY_REF = {};
 async function pullOccurrences(s, gIds, fromDate) {
   const out = [];
   for (const st of STATUSES) {
@@ -127,6 +129,7 @@ async function pullOccurrences(s, gIds, fromDate) {
       try { d = await pmGet(`/api/melds/?limit=200&offset=${off}&status=${st}&ordering=-created`, s); } catch (e) { console.log('  skip', st, e.message); break; }
       const res = d.results || d;
       for (const m of res) {
+        if (m.reference_id) MELD_BY_REF[m.reference_id] = m.id;
         if (!m.recurring_meld || !gIds.has(m.recurring_meld)) continue;
         const appts = (m.managementappointment || [])
           .filter(a => !/cancel/i.test(a.status || '') && a.availability_segment && a.availability_segment.event && a.availability_segment.event.dtstart)
@@ -200,7 +203,7 @@ async function pullLedger() {
     const src = ref.startsWith('qbt:') ? 'Labor' : ref.startsWith('bill:') ? 'Vendor bill' : ref.startsWith('ramp:') ? 'Ramp' : r.party_type === 'Occupancy' ? 'Resident credit' : 'Journal entry';
     // Public page: no resident names, and no free-text tech notes (they can mention residents).
     const memo = src === 'Vendor bill' || src === 'Ramp' ? String(r.description || '').slice(0, 140) : src === 'Resident credit' ? 'Resident credit for grounds work' : src === 'Labor' ? 'QBT time' : /concession|credit/i.test(r.description || '') ? 'Resident concession for grounds work' : String(r.description || '').slice(0, 80);
-    return { ref, vendor: src === 'Vendor bill' ? r.party_name || '' : '', date: r.post_date, month: ym(r.post_date || ''), prop: codeOf(r.property_name), area: areaOf(r.property_city), unit: r.unit || '', src, memo, amount: Math.round(((parseFloat(r.debit) || 0) - (parseFloat(r.credit) || 0)) * 100) / 100 };
+    return { ref, txn: r.txn_id || null, je: r.type === 'JE', detailId: r.txn_detail_id || null, vendor: src === 'Vendor bill' ? r.party_name || '' : '', date: r.post_date, month: ym(r.post_date || ''), prop: codeOf(r.property_name), area: areaOf(r.property_city), unit: r.unit || '', src, memo, amount: Math.round(((parseFloat(r.debit) || 0) - (parseFloat(r.credit) || 0)) * 100) / 100 };
   });
 }
 
@@ -226,7 +229,7 @@ async function pullWoCharges() {
       const m = first.match(/^(.*?)\s+-\s+([A-Z0-9]{6,8})$/);
       byWo[key] = { wo: l.work_order || '', prop: codeOf(l.property_name), area: areaOf(l.property_city), title: m ? m[1] : first.slice(0, 120), ref: m ? m[2] : '', status: w.status || '', srId: l.service_request_id || null, woId: l.work_order_id || null, lines: [] };
     }
-    byWo[key].lines.push({ ref, date: l.posting_date || l.bill_date, month: ym(l.posting_date || l.bill_date || ''), src, desc, unit: l.unit || '', vendor: src === 'Vendor bill' ? l.payee_name || '' : '', amount });
+    byWo[key].lines.push({ ref, txn: l.txn_id || null, detailId: l.payable_invoice_detail_id || null, date: l.posting_date || l.bill_date, month: ym(l.posting_date || l.bill_date || ''), src, desc, unit: l.unit || '', vendor: src === 'Vendor bill' ? l.payee_name || '' : '', amount });
   }
   return Object.values(byWo);
 }
@@ -282,7 +285,15 @@ async function main() {
   console.log('work orders with grounds charges', woCharges.length);
   const names = await pullNames([...gl.map(r => r.ref), ...woCharges.flatMap(w => w.lines.map(l => l.ref))]);
   console.log('names found', Object.keys(names).length);
-  const tag = r => { const n = names[r.ref] || {}; r.who = n.who || ''; if (n.hours != null) r.hours = n.hours; if (n.merchant) r.merchant = n.merchant; delete r.ref; };
+  // Source ids for links: Ramp transaction, QBO bill (AppFolio reference "bill:<QBO txnId>"), AppFolio bill/JE.
+  const tag = r => {
+    const n = names[r.ref] || {}; r.who = n.who || ''; if (n.hours != null) r.hours = n.hours; if (n.merchant) r.merchant = n.merchant;
+    if (r.ref.startsWith('ramp:')) r.ramp = r.ref.slice(5);
+    if (r.ref.startsWith('bill:')) r.qbo = r.ref.slice(5);
+    if (r.src === 'Resident credit') delete r.txn;
+    if (!r.je) delete r.je;
+    delete r.ref;
+  };
 
   const seriesById = Object.fromEntries(series.map(x => [x.id, x]));
   const rate = list => { const l = list.filter(o => counts(o.label)); const sc = l.reduce((a, o) => a + scoreOf(o.label), 0); return l.length ? Math.round(sc / l.length * 1000) / 10 : null; };
@@ -330,15 +341,29 @@ async function main() {
     return { date: o.date, prop: x.prop, area: x.area, title: x.title, who: x.who || 'Unassigned', status: o.label, ref: o.ref, meld: o.id };
   });
 
+  // Link a work order to its meld: every meld paged above, then a reference search for older ones.
+  const missing = [...new Set(woCharges.filter(w => w.ref && !MELD_BY_REF[w.ref]).map(w => w.ref))];
+  for (const ref of missing) {
+    try { const d = await pmGet('/api/melds/?limit=5&search=' + ref, s); const m = (d.results || d).find(x => x.reference_id === ref); if (m) MELD_BY_REF[ref] = m.id; } catch (e) {}
+    await sleep(150);
+  }
+  woCharges.forEach(w => { if (MELD_BY_REF[w.ref]) w.meld = MELD_BY_REF[w.ref]; });
+  console.log('work orders linked to a meld', woCharges.filter(w => w.meld).length, 'of', woCharges.length);
+  // Ledger lines carry the same bill detail id as the bill_detail lines: attach their work order.
+  const woByDetail = {};
+  woCharges.forEach(w => w.lines.forEach(l => { if (l.detailId) woByDetail[l.detailId] = w; }));
+  gl.forEach(r => {
+    const w = woByDetail[r.detailId];
+    if (w) Object.assign(r, { wo: w.wo, woTitle: w.title, srId: w.srId, woId: w.woId, meldRef: w.ref, meld: w.meld || null });
+    delete r.detailId;
+  });
+
   const transactions = gl.slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
   transactions.forEach(tag);
-  woCharges.forEach(w => w.lines.forEach(tag));
+  woCharges.forEach(w => w.lines.forEach(l => { tag(l); delete l.detailId; }));
   // Budget v actual per property for every month in the window (Work Orders tree).
   const propBudget = budget.map(p => ({ code: p.code, area: p.area, months: Object.fromEntries(MONTHS.map(mo => [mo, { budget: Math.round(p.months[mo].budget * monthFrac(mo)), actual: Math.round(p.months[mo].actual) }])) }));
 
-  // Link a work order to its meld when the meld is one of the G occurrences we already pulled.
-  const meldByRef = Object.fromEntries(occ.map(o => [o.ref, o.id]));
-  woCharges.forEach(w => { if (meldByRef[w.ref]) w.meld = meldByRef[w.ref]; });
 
   const out = {
     generated_at: new Date().toISOString(), today: TODAY, quarter: Q_LABEL, months: MONTHS, table_months: tableMonths, current_month: CUR,

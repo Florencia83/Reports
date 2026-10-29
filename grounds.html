@@ -74,6 +74,8 @@ table.inner td{padding:4px 10px;border-bottom:1px solid var(--soft)}
 .src{font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px}
 .src.Labor{background:#e0f2fe;color:#0369a1}.src.Ramp{background:#f3e8ff;color:#7e22ce}.src.Vendor{background:#fef3c7;color:#92400e}
 .src.Resident,.src.Journal{background:#f3f4f6;color:#4b5563}
+.lk{display:flex;flex-wrap:nowrap;gap:4px}.lk a{font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px;border:1px solid var(--line);color:var(--ink2);text-decoration:none;white-space:nowrap}
+.lk a:hover{border-color:#6366f1;color:#4338ca;background:#eef2ff}
 @media (max-width:600px){nav.top{padding:0 16px}}
 </style>
 </head>
@@ -202,6 +204,19 @@ let woMonth = null, txFrom = null, txTo = null; const openRows = new Set(); let 
 const AF = 'https://mckay.appfolio.com/maintenance/service_requests/';
 const tag = s => `<span class="src ${s.replace(/ .*/, '')}">${esc(s)}</span>`;
 const person = l => esc(l.who || l.vendor || l.merchant || '');
+// Every line opens its sources: AppFolio work order, Property Meld, Ramp transaction, QBO bill, AppFolio bill/JE.
+const AFB = 'https://mckay.appfolio.com';
+const lnk = (u, t, title) => `<a href="${u}" target="_blank" rel="noopener" title="${title}">${esc(t)}</a>`;
+function links(l, w) {
+  w = w || l; const a = [];
+  if (w.srId && w.woId) a.push(lnk(`${AF}${w.srId}/work_orders/${w.woId}`, 'WO ' + (w.wo || ''), 'AppFolio work order'));
+  if (w.meld) a.push(lnk(`${PM}${w.meld}/summary/`, 'Meld ' + (w.ref || w.meldRef || ''), 'Property Meld'));
+  else if (w.ref || w.meldRef) a.push(`<span style="font-size:11px;color:var(--muted)">${esc(w.ref || w.meldRef)}</span>`);
+  if (l.ramp) a.push(lnk('https://app.ramp.com/details/list/transactions/' + l.ramp, 'Ramp', 'Ramp transaction'));
+  if (l.qbo) a.push(lnk('https://qbo.intuit.com/app/bill?&txnId=' + l.qbo, 'QBO bill', 'QuickBooks Online bill'));
+  if (l.txn) a.push(lnk(`${AFB}/accounting/${l.je ? 'journal_entries' : 'payable_invoices'}/${l.txn}`, (l.je ? 'JE #' : 'Bill #') + l.txn, l.je ? 'AppFolio journal entry' : 'AppFolio bill'));
+  return `<div class="lk">${a.join('')}</div>`;
+}
 const detail = l => esc(l.src === 'Labor' ? (l.hours != null ? l.hours + ' h' : '') : l.src === 'Ramp' ? [l.merchant, l.desc || l.memo].filter(Boolean).join(' - ') : l.desc || l.memo || '');
 const bar = p => p == null ? '' : `<div class="bw"><div class="bf" style="width:${Math.min(100, p)}%;background:${p > 100 ? 'var(--bad)' : p >= 90 ? '#f59e0b' : 'var(--good)'}"></div></div>`;
 const varc = v => `<span style="color:${v > 0 ? 'var(--bad)' : v < 0 ? 'var(--good)' : 'var(--muted)'}">${v > 0 ? '+' : v < 0 ? '-' : ''}$${Math.abs(Math.round(v)).toLocaleString('en-US')}</span>`;
@@ -242,8 +257,8 @@ function wo() {
       h += `<tr class="l1" data-row="${esc(gk)}"><td><span class="chev${go ? ' open' : ''}">&#9656;</span>${link}${g.wos.length > 1 ? `<span class="badge">&times;${g.wos.length} WOs</span>` : ''}<span class="cnt">${counts}</span></td><td class="r">${money(g.total)}</td><td></td><td></td><td></td></tr>`;
       if (!go) continue;
       const ls = g.lines.slice().sort((a, b) => String(a.date).localeCompare(String(b.date)));
-      h += `<tr class="l2"><td colspan="5"><div class="box"><table class="inner"><thead><tr><th>Date</th><th>Type</th><th>Employee / vendor</th><th>Unit</th><th>Detail</th><th>Work order</th><th>Meld</th><th class="r">Amount</th></tr></thead><tbody>
-      ${ls.map(l => `<tr><td>${dLabel(l.date)}</td><td>${tag(l.src)}</td><td>${person(l)}</td><td>${esc(l.unit)}</td><td class="wrap">${detail(l)}</td><td style="color:var(--muted)">${esc(l.wo.wo)}</td><td>${l.wo.meld ? `<a href="${PM}${l.wo.meld}/summary/" target="_blank" rel="noopener">${esc(l.wo.ref)}</a>` : esc(l.wo.ref)}</td><td class="r">${money(l.amount)}</td></tr>`).join('')}
+      h += `<tr class="l2"><td colspan="5"><div class="box"><table class="inner"><thead><tr><th>Date</th><th>Type</th><th>Employee / vendor</th><th>Unit</th><th>Detail</th><th>Links</th><th class="r">Amount</th></tr></thead><tbody>
+      ${ls.map(l => `<tr><td>${dLabel(l.date)}</td><td>${tag(l.src)}</td><td>${person(l)}</td><td>${esc(l.unit)}</td><td class="wrap">${detail(l)}</td><td>${links(l, l.wo)}</td><td class="r">${money(l.amount)}</td></tr>`).join('')}
       </tbody></table></div></td></tr>`;
     }
   }
@@ -263,8 +278,8 @@ function tx() {
   const total = list.reduce((a, t) => a + t.amount, 0);
   return chips() + `<div class="ctl"><div><label class="dt">From <input type="date" id="txFrom" value="${txFrom}" min="${min}" max="${D.today}"></label><label class="dt">To <input type="date" id="txTo" value="${txTo}" min="${min}" max="${D.today}"></label></div></div>
   <p class="note">Everything posted to GL 52003 R&amp;M - Grounds (Accrual) between those dates: ${Object.entries(by).map(([k, v]) => k + ' ' + money(v)).join(' · ')} · total ${money(total)} · ${list.length} transactions. Data goes back to ${dLabel(min)}, ${min.slice(0, 4)}.</p>
-  <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Date</th><th>Property</th><th>Type</th><th>Employee / vendor</th><th>Unit</th><th>Detail</th><th class="r">Amount</th></tr></thead><tbody>
-  ${list.map(t => `<tr><td style="color:#4b5563">${t.date ? dLabel(t.date) : ''}</td><td><b>${esc(t.prop)}</b></td><td>${tag(t.src)}</td><td>${person(t)}</td><td>${esc(t.unit)}</td><td class="wrap" style="color:#4b5563">${detail(t)}</td><td class="r">${money(t.amount)}</td></tr>`).join('')}
+  <section class="card" style="padding:8px 12px"><div class="box"><table><thead><tr><th>Date</th><th>Property</th><th>Type</th><th>Employee / vendor</th><th>Unit</th><th>Detail</th><th>Links</th><th class="r">Amount</th></tr></thead><tbody>
+  ${list.map(t => `<tr><td style="color:#4b5563">${t.date ? dLabel(t.date) : ''}</td><td><b>${esc(t.prop)}</b></td><td>${tag(t.src)}</td><td>${person(t)}</td><td>${esc(t.unit)}</td><td class="wrap" style="color:#4b5563">${detail(t)}</td><td>${links(t)}</td><td class="r">${money(t.amount)}</td></tr>`).join('')}
   </tbody></table></div></section>`;
 }
 
